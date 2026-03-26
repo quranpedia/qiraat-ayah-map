@@ -1,6 +1,6 @@
 {
   "_version": "0.1.0",
-  "_description": "Ayah mapping: warsh (madani-last) → Hafs (kufi). Use this to find the Hafs equivalent for any warsh ayah.",
+  "_description": "Ayah mapping: warsh (madani-last) → Hafs (kufi).",
   "_rawi": "warsh",
   "_qiraa": "nafi",
   "_source": "madani-last",
@@ -7779,8 +7779,8 @@
           "status": "mapped"
         },
         "99": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 99,
+          "status": "mapped"
         }
       }
     },
@@ -13663,12 +13663,12 @@
           "status": "mapped"
         },
         "87": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 88,
+          "status": "mapped"
         },
         "88": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 88,
+          "status": "mapped"
         }
       }
     },
@@ -20832,8 +20832,8 @@
           "status": "mapped"
         },
         "99": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 96,
+          "status": "mapped"
         }
       }
     },
@@ -21686,8 +21686,8 @@
           "status": "mapped"
         },
         "31": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 30,
+          "status": "mapped"
         }
       }
     },
