@@ -1,6 +1,6 @@
 {
   "_version": "0.1.0",
-  "_description": "Ayah mapping: Kufan (Hafs) → Damascene (الدمشقي).",
+  "_description": "Pre-computed ayah mapping: Hafs (Kufan) → Damascene (الدمشقي).",
   "_source": "kufi",
   "_target": "dimashqi",
   "surahs": {
@@ -7041,7 +7041,8 @@
           "status": "split",
           "splits_into": [
             17,
-            18
+            18,
+            19
           ]
         },
         "17": {
@@ -9775,7 +9776,9 @@
           "status": "split",
           "splits_into": [
             40,
-            41
+            41,
+            42,
+            43
           ]
         },
         "41": {

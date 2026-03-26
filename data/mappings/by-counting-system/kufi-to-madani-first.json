@@ -1,6 +1,6 @@
 {
   "_version": "0.1.0",
-  "_description": "Ayah mapping: Kufan (Hafs) → First Madinan (المدني الأول).",
+  "_description": "Pre-computed ayah mapping: Hafs (Kufan) → First Madinan (المدني الأول).",
   "_source": "kufi",
   "_target": "madani-first",
   "surahs": {
