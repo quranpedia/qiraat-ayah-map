@@ -2010,8 +2010,8 @@
           "status": "mapped"
         },
         "200": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 200,
+          "status": "mapped"
         }
       }
     },
@@ -3896,8 +3896,8 @@
           "status": "mapped"
         },
         "167": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 165,
+          "status": "mapped"
         }
       }
     },
@@ -4734,8 +4734,8 @@
           "status": "mapped"
         },
         "206": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 206,
+          "status": "mapped"
         }
       }
     },
@@ -6518,8 +6518,8 @@
           "status": "mapped"
         },
         "122": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 123,
+          "status": "mapped"
         }
       }
     },
@@ -7376,16 +7376,16 @@
           "status": "mapped"
         },
         "52": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 52,
+          "status": "mapped"
         },
         "53": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 52,
+          "status": "mapped"
         },
         "54": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 52,
+          "status": "mapped"
         }
       }
     },
@@ -7790,12 +7790,12 @@
           "status": "mapped"
         },
         "98": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 99,
+          "status": "mapped"
         },
         "99": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 99,
+          "status": "mapped"
         }
       }
     },
@@ -10161,8 +10161,8 @@
           "status": "mapped"
         },
         "134": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 135,
+          "status": "mapped"
         }
       }
     },
@@ -12907,8 +12907,8 @@
           "status": "mapped"
         },
         "227": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 227,
+          "status": "mapped"
         }
       }
     },
@@ -13293,8 +13293,8 @@
           "status": "mapped"
         },
         "95": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 93,
+          "status": "mapped"
         }
       }
     },
@@ -13656,16 +13656,16 @@
           "status": "mapped"
         },
         "86": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 88,
+          "status": "mapped"
         },
         "87": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 88,
+          "status": "mapped"
         },
         "88": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 88,
+          "status": "mapped"
         }
       }
     },
@@ -14476,8 +14476,8 @@
           "status": "mapped"
         },
         "30": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 30,
+          "status": "mapped"
         }
       }
     },
@@ -16270,8 +16270,8 @@
           "status": "mapped"
         },
         "182": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 182,
+          "status": "mapped"
         }
       }
     },
@@ -17289,12 +17289,12 @@
           "status": "mapped"
         },
         "83": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 85,
+          "status": "mapped"
         },
         "84": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 85,
+          "status": "mapped"
         }
       }
     },
@@ -17519,8 +17519,8 @@
           "status": "mapped"
         },
         "53": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 54,
+          "status": "mapped"
         }
       }
     },
@@ -20447,8 +20447,8 @@
           "status": "mapped"
         },
         "77": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 78,
+          "status": "mapped"
         }
       }
     },
@@ -20857,12 +20857,12 @@
           "status": "mapped"
         },
         "98": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 96,
+          "status": "mapped"
         },
         "99": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 96,
+          "status": "mapped"
         }
       }
     },
@@ -21539,8 +21539,8 @@
           "status": "mapped"
         },
         "12": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 12,
+          "status": "mapped"
         }
       }
     },
@@ -22151,8 +22151,8 @@
           "status": "mapped"
         },
         "52": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 52,
+          "status": "mapped"
         }
       }
     },
@@ -22463,8 +22463,8 @@
           "status": "mapped"
         },
         "30": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 28,
+          "status": "mapped"
         }
       }
     },
@@ -22671,8 +22671,8 @@
           "status": "mapped"
         },
         "20": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 20,
+          "status": "mapped"
         }
       }
     },
@@ -23937,8 +23937,8 @@
           "status": "mapped"
         },
         "42": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 42,
+          "status": "mapped"
         }
       }
     },
@@ -24401,12 +24401,12 @@
           "status": "mapped"
         },
         "24": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 25,
+          "status": "mapped"
         },
         "25": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 25,
+          "status": "mapped"
         }
       }
     },
@@ -24895,16 +24895,16 @@
           "status": "covers_multiple"
         },
         "30": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 30,
+          "status": "mapped"
         },
         "31": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 30,
+          "status": "mapped"
         },
         "32": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 30,
+          "status": "mapped"
         }
       }
     },
@@ -25059,8 +25059,8 @@
           "status": "mapped"
         },
         "16": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 15,
+          "status": "mapped"
         }
       }
     },
@@ -25361,8 +25361,8 @@
           "status": "mapped"
         },
         "20": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 19,
+          "status": "mapped"
         }
       }
     },
@@ -25575,12 +25575,12 @@
           "status": "mapped"
         },
         "9": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 11,
+          "status": "mapped"
         },
         "10": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 11,
+          "status": "mapped"
         }
       }
     },
@@ -25729,8 +25729,8 @@
           "status": "mapped"
         },
         "5": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 4,
+          "status": "mapped"
         }
       }
     },
