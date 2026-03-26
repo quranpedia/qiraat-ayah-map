@@ -1,0 +1,24 @@
+{
+  "name": "qiraat-ayah-map",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Open dataset mapping Quran ayah numbers between the six canonical counting systems used by the ten Qiraat.",
+  "scripts": {
+    "generate": "node scripts/generate-mappings.mjs",
+    "test": "node tests/validate.mjs"
+  },
+  "keywords": [
+    "quran",
+    "qiraat",
+    "ayah",
+    "mapping",
+    "dataset",
+    "islamic",
+    "open-data"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quranpedia/qiraat-ayah-map.git"
+  }
+}

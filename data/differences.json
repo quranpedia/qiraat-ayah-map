@@ -1,0 +1,119 @@
+{
+  "_description": "Ayah numbering differences relative to the Kufan (Hafs) counting system. Each entry describes ONE difference. 'merge' = the target system combines hafs_ayah with the next ayah (reducing count by 1). 'split' = the target system splits a Hafs ayah into two (increasing count by 1). Data sourced from classical scholarship on 'ilm al-'add (علم العدّ).",
+  "_reference_system": "kufi",
+  "differences": [
+    {
+      "counting_system": "madani-last",
+      "items": [
+        { "surah": 1, "hafs_ayah": 1, "type": "merge", "description_ar": "البسملة لا تُعدّ آية في العدد المدني الأخير", "description_en": "Basmalah is not counted as an ayah" },
+        { "surah": 1, "hafs_ayah": 6, "type": "split", "description_ar": "تُعدّ (أَنْعَمْتَ عَلَيْهِمْ) رأس آية", "description_en": "'an'amta alayhim' marks the end of a separate ayah" },
+        { "surah": 2, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 3, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 7, "hafs_ayah": 1, "type": "merge", "description_ar": "(المص) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim Sad is not a separate ayah" },
+        { "surah": 10, "hafs_ayah": 1, "type": "merge", "description_ar": "(الر) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Ra is not a separate ayah" },
+        { "surah": 11, "hafs_ayah": 1, "type": "merge", "description_ar": "(الر) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Ra is not a separate ayah" },
+        { "surah": 12, "hafs_ayah": 1, "type": "merge", "description_ar": "(الر) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Ra is not a separate ayah" },
+        { "surah": 13, "hafs_ayah": 1, "type": "merge", "description_ar": "(المر) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim Ra is not a separate ayah" },
+        { "surah": 14, "hafs_ayah": 1, "type": "merge", "description_ar": "(الر) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Ra is not a separate ayah" },
+        { "surah": 15, "hafs_ayah": 1, "type": "merge", "description_ar": "(الر) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Ra is not a separate ayah" },
+        { "surah": 29, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 30, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 31, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 32, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 36, "hafs_ayah": 1, "type": "merge", "description_ar": "(يس) لا تُعدّ آية مستقلة", "description_en": "Ya Sin is not a separate ayah" },
+        { "surah": 38, "hafs_ayah": 1, "type": "merge", "description_ar": "(ص) لا تُعدّ آية مستقلة", "description_en": "Sad is not a separate ayah" },
+        { "surah": 40, "hafs_ayah": 1, "type": "merge", "description_ar": "(حم) لا تُعدّ آية مستقلة", "description_en": "Ha Mim is not a separate ayah" },
+        { "surah": 41, "hafs_ayah": 1, "type": "merge", "description_ar": "(حم) لا تُعدّ آية مستقلة", "description_en": "Ha Mim is not a separate ayah" },
+        { "surah": 42, "hafs_ayah": 1, "type": "merge", "description_ar": "(حم) لا تُعدّ آية مستقلة", "description_en": "Ha Mim is not a separate ayah" },
+        { "surah": 43, "hafs_ayah": 1, "type": "merge", "description_ar": "(حم) لا تُعدّ آية مستقلة", "description_en": "Ha Mim is not a separate ayah" },
+        { "surah": 44, "hafs_ayah": 1, "type": "merge", "description_ar": "(حم) لا تُعدّ آية مستقلة", "description_en": "Ha Mim is not a separate ayah" },
+        { "surah": 45, "hafs_ayah": 1, "type": "merge", "description_ar": "(حم) لا تُعدّ آية مستقلة", "description_en": "Ha Mim is not a separate ayah" },
+        { "surah": 46, "hafs_ayah": 1, "type": "merge", "description_ar": "(حم) لا تُعدّ آية مستقلة", "description_en": "Ha Mim is not a separate ayah" }
+      ]
+    },
+    {
+      "counting_system": "madani-first",
+      "items": [
+        { "surah": 1, "hafs_ayah": 1, "type": "merge", "description_ar": "البسملة لا تُعدّ آية في العدد المدني الأول", "description_en": "Basmalah is not counted as an ayah" },
+        { "surah": 1, "hafs_ayah": 6, "type": "split", "description_ar": "تُعدّ (أَنْعَمْتَ عَلَيْهِمْ) رأس آية", "description_en": "'an'amta alayhim' marks the end of a separate ayah" },
+        { "surah": 2, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 3, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 7, "hafs_ayah": 1, "type": "merge", "description_ar": "(المص) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim Sad is not a separate ayah" },
+        { "surah": 10, "hafs_ayah": 1, "type": "merge", "description_ar": "(الر) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Ra is not a separate ayah" },
+        { "surah": 11, "hafs_ayah": 1, "type": "merge", "description_ar": "(الر) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Ra is not a separate ayah" },
+        { "surah": 12, "hafs_ayah": 1, "type": "merge", "description_ar": "(الر) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Ra is not a separate ayah" },
+        { "surah": 13, "hafs_ayah": 1, "type": "merge", "description_ar": "(المر) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim Ra is not a separate ayah" },
+        { "surah": 14, "hafs_ayah": 1, "type": "merge", "description_ar": "(الر) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Ra is not a separate ayah" },
+        { "surah": 15, "hafs_ayah": 1, "type": "merge", "description_ar": "(الر) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Ra is not a separate ayah" },
+        { "surah": 29, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 30, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 31, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 32, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 36, "hafs_ayah": 1, "type": "merge", "description_ar": "(يس) لا تُعدّ آية مستقلة", "description_en": "Ya Sin is not a separate ayah" },
+        { "surah": 38, "hafs_ayah": 1, "type": "merge", "description_ar": "(ص) لا تُعدّ آية مستقلة", "description_en": "Sad is not a separate ayah" },
+        { "surah": 40, "hafs_ayah": 1, "type": "merge", "description_ar": "(حم) لا تُعدّ آية مستقلة", "description_en": "Ha Mim is not a separate ayah" },
+        { "surah": 41, "hafs_ayah": 1, "type": "merge", "description_ar": "(حم) لا تُعدّ آية مستقلة", "description_en": "Ha Mim is not a separate ayah" },
+        { "surah": 42, "hafs_ayah": 1, "type": "merge", "description_ar": "(حم) لا تُعدّ آية مستقلة", "description_en": "Ha Mim is not a separate ayah" },
+        { "surah": 43, "hafs_ayah": 1, "type": "merge", "description_ar": "(حم) لا تُعدّ آية مستقلة", "description_en": "Ha Mim is not a separate ayah" },
+        { "surah": 44, "hafs_ayah": 1, "type": "merge", "description_ar": "(حم) لا تُعدّ آية مستقلة", "description_en": "Ha Mim is not a separate ayah" },
+        { "surah": 45, "hafs_ayah": 1, "type": "merge", "description_ar": "(حم) لا تُعدّ آية مستقلة", "description_en": "Ha Mim is not a separate ayah" },
+        { "surah": 46, "hafs_ayah": 1, "type": "merge", "description_ar": "(حم) لا تُعدّ آية مستقلة", "description_en": "Ha Mim is not a separate ayah" }
+      ]
+    },
+    {
+      "counting_system": "makki",
+      "items": [
+        { "surah": 1, "hafs_ayah": 1, "type": "merge", "description_ar": "البسملة لا تُعدّ آية في العدد المكي", "description_en": "Basmalah is not counted as an ayah" },
+        { "surah": 1, "hafs_ayah": 6, "type": "split", "description_ar": "تُعدّ (أَنْعَمْتَ عَلَيْهِمْ) رأس آية", "description_en": "'an'amta alayhim' marks the end of a separate ayah" },
+        { "surah": 2, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 3, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 29, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 30, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 31, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 32, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" }
+      ]
+    },
+    {
+      "counting_system": "basri",
+      "items": [
+        { "surah": 1, "hafs_ayah": 1, "type": "merge", "description_ar": "البسملة لا تُعدّ آية في العدد البصري", "description_en": "Basmalah is not counted as an ayah" },
+        { "surah": 1, "hafs_ayah": 6, "type": "split", "description_ar": "تُعدّ (أَنْعَمْتَ عَلَيْهِمْ) رأس آية", "description_en": "'an'amta alayhim' marks the end of a separate ayah" },
+        { "surah": 2, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 3, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 7, "hafs_ayah": 1, "type": "merge", "description_ar": "(المص) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim Sad is not a separate ayah" },
+        { "surah": 10, "hafs_ayah": 1, "type": "merge", "description_ar": "(الر) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Ra is not a separate ayah" },
+        { "surah": 11, "hafs_ayah": 1, "type": "merge", "description_ar": "(الر) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Ra is not a separate ayah" },
+        { "surah": 12, "hafs_ayah": 1, "type": "merge", "description_ar": "(الر) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Ra is not a separate ayah" },
+        { "surah": 13, "hafs_ayah": 1, "type": "merge", "description_ar": "(المر) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim Ra is not a separate ayah" },
+        { "surah": 14, "hafs_ayah": 1, "type": "merge", "description_ar": "(الر) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Ra is not a separate ayah" },
+        { "surah": 15, "hafs_ayah": 1, "type": "merge", "description_ar": "(الر) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Ra is not a separate ayah" },
+        { "surah": 29, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 30, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 31, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 32, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 36, "hafs_ayah": 1, "type": "merge", "description_ar": "(يس) لا تُعدّ آية مستقلة", "description_en": "Ya Sin is not a separate ayah" },
+        { "surah": 38, "hafs_ayah": 1, "type": "merge", "description_ar": "(ص) لا تُعدّ آية مستقلة", "description_en": "Sad is not a separate ayah" },
+        { "surah": 40, "hafs_ayah": 1, "type": "merge", "description_ar": "(حم) لا تُعدّ آية مستقلة", "description_en": "Ha Mim is not a separate ayah" },
+        { "surah": 41, "hafs_ayah": 1, "type": "merge", "description_ar": "(حم) لا تُعدّ آية مستقلة", "description_en": "Ha Mim is not a separate ayah" },
+        { "surah": 42, "hafs_ayah": 1, "type": "merge", "description_ar": "(حم) لا تُعدّ آية مستقلة", "description_en": "Ha Mim is not a separate ayah" },
+        { "surah": 43, "hafs_ayah": 1, "type": "merge", "description_ar": "(حم) لا تُعدّ آية مستقلة", "description_en": "Ha Mim is not a separate ayah" },
+        { "surah": 44, "hafs_ayah": 1, "type": "merge", "description_ar": "(حم) لا تُعدّ آية مستقلة", "description_en": "Ha Mim is not a separate ayah" },
+        { "surah": 45, "hafs_ayah": 1, "type": "merge", "description_ar": "(حم) لا تُعدّ آية مستقلة", "description_en": "Ha Mim is not a separate ayah" },
+        { "surah": 46, "hafs_ayah": 1, "type": "merge", "description_ar": "(حم) لا تُعدّ آية مستقلة", "description_en": "Ha Mim is not a separate ayah" }
+      ]
+    },
+    {
+      "counting_system": "dimashqi",
+      "items": [
+        { "surah": 1, "hafs_ayah": 1, "type": "merge", "description_ar": "البسملة لا تُعدّ آية في العدد الدمشقي", "description_en": "Basmalah is not counted as an ayah" },
+        { "surah": 1, "hafs_ayah": 6, "type": "split", "description_ar": "تُعدّ (أَنْعَمْتَ عَلَيْهِمْ) رأس آية", "description_en": "'an'amta alayhim' marks the end of a separate ayah" },
+        { "surah": 2, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 3, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 29, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 30, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 31, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" },
+        { "surah": 32, "hafs_ayah": 1, "type": "merge", "description_ar": "(الم) لا تُعدّ آية مستقلة", "description_en": "Alif Lam Mim is not a separate ayah" }
+      ]
+    }
+  ]
+}
