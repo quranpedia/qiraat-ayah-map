@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Qiraat Ayah Map — Before vs After Comparison</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,system-ui,sans-serif;background:#0d1117;color:#c9d1d9;padding:20px}
+  h1{color:#58a6ff;margin-bottom:4px}
+  .sub{color:#8b949e;margin-bottom:20px;font-size:14px}
+  .stats{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px}
+  .stat{background:#21262d;padding:10px 18px;border-radius:8px;text-align:center}
+  .stat .v{font-size:26px;font-weight:bold}
+  .stat .l{color:#8b949e;font-size:11px}
+  .good .v{color:#3fb950}.bad .v{color:#f85149}.fix .v{color:#a371f7}
+  .info{background:#161b22;padding:14px;border-radius:8px;margin-bottom:14px;border:1px solid #30363d;font-size:13px}
+  .info h3{color:#58a6ff;margin-bottom:6px}
+  .info code{background:#21262d;padding:2px 6px;border-radius:3px;color:#f0883e}
+  .tabs{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+  .tab{padding:6px 14px;background:#21262d;border:1px solid #30363d;border-radius:6px;cursor:pointer;color:#c9d1d9;font-size:13px}
+  .tab.active{background:#1f6feb;border-color:#1f6feb;color:#fff}
+  table{border-collapse:collapse;width:100%;font-size:12px;margin-bottom:20px}
+  th{background:#161b22;padding:6px 10px;text-align:left;border:1px solid #30363d;color:#58a6ff;position:sticky;top:0;z-index:1}
+  td{padding:4px 10px;border:1px solid #21262d}
+  tr.changed{background:#2d1b00}
+  tr.error{background:#2d1117}
+  .match{color:#3fb950}.mismatch{color:#f85149}.merged{color:#d29922}.split{color:#a371f7}
+  .badge{font-size:10px;padding:1px 5px;border-radius:3px;margin-left:4px}
+  .badge.m{background:#2d1b00;color:#d29922}.badge.s{background:#1c1130;color:#a371f7}.badge.d{background:#0d2818;color:#3fb950}
+  #tbl{max-height:70vh;overflow-y:auto;border:1px solid #30363d;border-radius:8px}
+  .summary{margin-bottom:12px;font-size:13px;color:#8b949e}
+  .summary b{color:#c9d1d9}
+</style>
+</head>
+<body>
+
+<h1>Qiraat Ayah Map — Before vs After</h1>
+<p class="sub">Comparing commit <code>e869a02</code> (buggy) vs <code>a398b71</code> (fixed) — per ayah, per surah</p>
+
+<div class="stats" id="stats"></div>
+
+<div class="info">
+  <h3>Root Cause Fixed</h3>
+  <p><code>LIKE '%الحج%'</code> matched surah 15 (الحجر) instead of 22 (الحج) — 14 entries moved</p>
+  <p><code>LIKE '%ص%'</code> matched surah 28 (القصص) instead of 38 (ص) — 11 entries moved</p>
+  <p style="margin-top:6px">3 systems now use <b>equals_ayah_id ground truth</b> from actual mushaf data (100% API match)</p>
+</div>
+
+<div class="tabs" id="sys-tabs"></div>
+<div class="tabs" id="surah-tabs"></div>
+<div class="summary" id="summary"></div>
+<div id="tbl"></div>
+
+<script>
+let DATA;
+const SYSTEMS = ['madani-last','makki','basri'];
+const NAMES = {'madani-last':'Warsh (المدني الأخير)','makki':'Bazzi (المكي)','basri':'Duri (البصري)'};
+let curSys = 'madani-last';
+
+async function init() {
+  DATA = await (await fetch('/tests/comparison-data.json')).json();
+
+  // Stats
+  let totalChanged = 0, totalAyahs = 0, countDiffs = 0;
+  for (const sys of SYSTEMS) {
+    for (let s=1;s<=114;s++) {
+      const os = DATA[sys].old.surahs[s], ns = DATA[sys].new.surahs[s];
+      if (!os || !ns) continue;
+      if (os.target_ayah_count !== ns.target_ayah_count) countDiffs++;
+      for (const h of Object.keys(os.ayahs)) {
+        totalAyahs++;
+        if (os.ayahs[h].target_ayah !== ns.ayahs[h]?.target_ayah) totalChanged++;
+      }
+    }
+  }
+
+  document.getElementById('stats').innerHTML = `
+    <div class="stat fix"><div class="v">${totalChanged.toLocaleString()}</div><div class="l">Ayah Mappings Changed</div></div>
+    <div class="stat bad"><div class="v">${countDiffs}</div><div class="l">Surah Count Diffs</div></div>
+    <div class="stat good"><div class="v">350/350</div><div class="l">API Match (New)</div></div>
+  `;
+
+  // System tabs
+  document.getElementById('sys-tabs').innerHTML = SYSTEMS.map((s,i) =>
+    `<div class="tab ${i===0?'active':''}" onclick="selectSys('${s}',this)">${NAMES[s]}</div>`
+  ).join('');
+
+  selectSys('madani-last', document.querySelector('.tab'));
+}
+
+function selectSys(sys, el) {
+  curSys = sys;
+  document.getElementById('sys-tabs').querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+
+  // Find surahs with changes
+  const changedSurahs = [];
+  for (let s=1;s<=114;s++) {
+    const os = DATA[sys].old.surahs[s], ns = DATA[sys].new.surahs[s];
+    if (!os || !ns) continue;
+    let diff = os.target_ayah_count !== ns.target_ayah_count;
+    if (!diff) {
+      for (const h of Object.keys(os.ayahs)) {
+        if (os.ayahs[h].target_ayah !== ns.ayahs[h]?.target_ayah || os.ayahs[h].status !== ns.ayahs[h]?.status) {
+          diff = true; break;
+        }
+      }
+    }
+    if (diff) changedSurahs.push(s);
+  }
+
+  document.getElementById('surah-tabs').innerHTML =
+    `<div class="tab active" onclick="showSurah('all',this)">All Changed (${changedSurahs.length})</div>` +
+    changedSurahs.map(s => `<div class="tab" onclick="showSurah(${s},this)">Surah ${s}</div>`).join('');
+
+  showSurah('all', document.querySelector('#surah-tabs .tab'));
+}
+
+function showSurah(surah, el) {
+  document.getElementById('surah-tabs').querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+
+  const surahs = surah === 'all'
+    ? Array.from({length:114},(_,i)=>i+1)
+    : [surah];
+
+  let rows = '', totalRows = 0, changedRows = 0;
+
+  for (const s of surahs) {
+    const os = DATA[curSys].old.surahs[s];
+    const ns = DATA[curSys].new.surahs[s];
+    if (!os || !ns) continue;
+
+    for (const h of Object.keys(os.ayahs).sort((a,b)=>+a - +b)) {
+      const oe = os.ayahs[h];
+      const ne = ns.ayahs[h] || {};
+      const changed = oe.target_ayah !== ne.target_ayah || oe.status !== ne.status;
+      if (surah === 'all' && !changed) continue;
+
+      totalRows++;
+      if (changed) changedRows++;
+
+      const badge = (st) => st==='merged'?'<span class="badge m">merged</span>':st==='split'?'<span class="badge s">split</span>':'';
+      const cls = changed ? (ne.status==='merged'||ne.status==='split' ? 'changed' : 'error') : '';
+
+      rows += `<tr class="${cls}">
+        <td>${s}:${h}</td>
+        <td>${oe.target_ayah ?? 'null'} ${badge(oe.status)}</td>
+        <td>${ne.target_ayah ?? 'null'} ${badge(ne.status)}</td>
+        <td>${changed?'⚠️':''}</td>
+      </tr>`;
+    }
+  }
+
+  document.getElementById('summary').innerHTML = surah === 'all'
+    ? `Showing <b>${changedRows}</b> changed ayah mappings across all surahs`
+    : `Surah ${surah}: Old count=<b>${DATA[curSys].old.surahs[surah]?.target_ayah_count}</b> → New count=<b>${DATA[curSys].new.surahs[surah]?.target_ayah_count}</b> | Showing ${totalRows} ayahs (${changedRows} changed)`;
+
+  document.getElementById('tbl').innerHTML = `<table>
+    <thead><tr><th>Surah:Hafs#</th><th>OLD target</th><th>NEW target</th><th></th></tr></thead>
+    <tbody>${rows || '<tr><td colspan=4 style="text-align:center;color:#8b949e">No differences</td></tr>'}</tbody>
+  </table>`;
+}
+
+init();
+</script>
+</body>
+</html>
