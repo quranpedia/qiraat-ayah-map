@@ -4,7 +4,7 @@
   "private": true,
   "description": "Open dataset mapping Quran ayah numbers between the six canonical counting systems used by the ten Qiraat.",
   "scripts": {
-    "generate": "node scripts/generate-mappings.mjs",
+    "generate": "node scripts/sync-rawi-metadata.mjs && node scripts/generate-mappings.mjs && node scripts/normalize-forward-mappings.mjs && node scripts/generate-reverse-mappings.mjs",
     "test": "node tests/validate.mjs"
   },
   "keywords": [
