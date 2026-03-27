@@ -1,6 +1,6 @@
 {
   "_version": "0.1.0",
-  "_description": "Ayah mapping: qunbul (makki) → Hafs (kufi). Use this to find the Hafs equivalent for any qunbul ayah.",
+  "_description": "Ayah mapping: qunbul (makki) → Hafs (kufi).",
   "_rawi": "qunbul",
   "_qiraa": "ibn-kathir",
   "_source": "makki",
@@ -1194,8 +1194,8 @@
           "status": "mapped"
         },
         "285": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 286,
+          "status": "mapped"
         }
       }
     },
@@ -6513,8 +6513,8 @@
           "status": "covers_multiple"
         },
         "121": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 123,
+          "status": "mapped"
         }
       }
     },
@@ -10172,8 +10172,8 @@
           "status": "mapped"
         },
         "134": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 135,
+          "status": "mapped"
         }
       }
     },
@@ -13666,16 +13666,16 @@
           "status": "mapped"
         },
         "86": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 88,
+          "status": "mapped"
         },
         "87": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 88,
+          "status": "mapped"
         },
         "88": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 88,
+          "status": "mapped"
         }
       }
     },
@@ -17283,8 +17283,8 @@
           "status": "mapped"
         },
         "84": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 85,
+          "status": "mapped"
         }
       }
     },
@@ -22434,16 +22434,16 @@
           "status": "mapped"
         },
         "28": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 28,
+          "status": "mapped"
         },
         "29": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 28,
+          "status": "mapped"
         },
         "30": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 28,
+          "status": "mapped"
         }
       }
     },
@@ -22565,12 +22565,12 @@
           "status": "mapped"
         },
         "28": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 28,
+          "status": "mapped"
         },
         "29": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 28,
+          "status": "mapped"
         }
       }
     },
