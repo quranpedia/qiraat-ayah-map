@@ -1,71 +1,76 @@
 /**
  * Validate mapping data against quranpedia.net API.
  *
- * For each available mushaf, picks 50 random ayahs and compares
- * our computed target_ayah with the API's number_in_hafs field.
- *
- * The API returns { number_in_hafs } for each ayah, which tells us
- * what the Hafs equivalent is. We reverse-check: for a given target
- * system ayah, does our mapping agree with the API?
+ * For each rawi with a known public mushaf ID, pick 50 random ayahs and compare
+ * our reverse mapping against the API's number_in_hafs field.
  *
  * Usage: node tests/validate-against-api.mjs
  */
 
-import { readFileSync } from 'fs';
-import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { readFileSync, readdirSync } from 'fs';
+import { join } from 'path';
+import { distRawisDir, distPath, sourcePath } from '../scripts/lib/repo-paths.mjs';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const dataDir = join(__dirname, '..', 'data');
-
-function load(file) {
-  return JSON.parse(readFileSync(join(dataDir, file), 'utf-8'));
+function loadSource(file) {
+  return JSON.parse(readFileSync(sourcePath(file), 'utf-8'));
 }
 
-// Mushaf ID → our counting system mapping
-const MUSHAF_TO_SYSTEM = {
-  4: 'madani-last',   // Warsh
-  7: 'madani-last',   // Qalun
-  5: 'makki',         // Bazzi
-  8: 'makki',         // Qunbul
-  6: 'basri',         // Duri
-  10: 'basri',        // Susi
-  9: 'kufi',          // Shu'ba (same as Hafs — identity check)
-};
+function loadDist(file) {
+  return JSON.parse(readFileSync(distPath(file), 'utf-8'));
+}
 
-const MUSHAF_NAMES = {
-  4: 'Warsh (madani-last)',
-  7: 'Qalun (madani-last)',
-  5: 'Bazzi (makki)',
-  8: 'Qunbul (makki)',
-  6: 'Duri (basri)',
-  10: 'Susi (basri)',
-  9: "Shu'ba (kufi)",
-};
-
+const qiraat = loadSource('qiraat.json');
 const API_BASE = 'https://api.quranpedia.net/v1';
+
+function listPublicMushafs() {
+  const mushafs = [];
+
+  for (const filename of readdirSync(distRawisDir).sort()) {
+    if (!filename.endsWith('.json')) {
+      continue;
+    }
+
+    const meta = loadDist(`rawis/${filename}`);
+    if (!Number.isInteger(meta._mushaf_id)) {
+      continue;
+    }
+
+    const rawiInfo = qiraat[meta._qiraa]?.rawis?.[meta._rawi];
+    const qiraaInfo = qiraat[meta._qiraa];
+
+    mushafs.push({
+      mushafId: meta._mushaf_id,
+      rawiSlug: meta._rawi,
+      rawiName: rawiInfo?.name_en || meta._rawi,
+      qiraaName: qiraaInfo?.name_en || meta._qiraa,
+      systemId: meta._counting_system
+    });
+  }
+
+  return mushafs.sort((a, b) => a.mushafId - b.mushafId);
+}
 
 async function fetchAyah(mushafId, surahId, ayahNumber) {
   const url = `${API_BASE}/mushafs/${mushafId}/${surahId}/${ayahNumber}`;
   const res = await fetch(url);
-  if (!res.ok) return null;
-  const data = await res.json();
-  return data;
+  if (!res.ok) {
+    return null;
+  }
+
+  return res.json();
 }
 
-// Generate random test cases: 50 random (surah, ayah) pairs
 function generateTestCases(surahCounts, count) {
   const cases = [];
   const allAyahs = [];
 
   for (const [surah, ayahCount] of Object.entries(surahCounts.surahs)) {
-    for (let a = 1; a <= ayahCount; a++) {
-      allAyahs.push({ surah: parseInt(surah), ayah: a });
+    for (let ayah = 1; ayah <= ayahCount; ayah += 1) {
+      allAyahs.push({ surah: Number.parseInt(surah, 10), ayah });
     }
   }
 
-  // Shuffle and pick
-  for (let i = allAyahs.length - 1; i > 0; i--) {
+  for (let i = allAyahs.length - 1; i > 0; i -= 1) {
     const j = Math.floor(Math.random() * (i + 1));
     [allAyahs[i], allAyahs[j]] = [allAyahs[j], allAyahs[i]];
   }
@@ -77,87 +82,80 @@ async function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function normalizeApiNumberInHafs(value) {
+  if (Array.isArray(value)) {
+    return [...new Set(value.map(item => Number.parseInt(item, 10)).filter(Number.isInteger))]
+      .sort((a, b) => a - b);
+  }
+
+  if (Number.isInteger(value)) {
+    return [value];
+  }
+
+  if (typeof value === 'string') {
+    return [...new Set(
+      value
+        .split(',')
+        .map(part => Number.parseInt(part.trim(), 10))
+        .filter(Number.isInteger)
+    )].sort((a, b) => a - b);
+  }
+
+  return [];
+}
+
+function arraysEqual(a, b) {
+  return JSON.stringify(a) === JSON.stringify(b);
+}
+
 let totalPassed = 0;
 let totalFailed = 0;
 
-async function validateMushaf(mushafId) {
-  const systemId = MUSHAF_TO_SYSTEM[mushafId];
-  const name = MUSHAF_NAMES[mushafId];
+async function validateMushaf(mushaf) {
+  const label = `${mushaf.rawiName} (${mushaf.qiraaName}, ${mushaf.systemId})`;
+  console.log(`\n--- ${label} — mushaf ${mushaf.mushafId} ---`);
 
-  console.log(`\n--- ${name} (mushaf ${mushafId}) ---`);
-
-  let mapping, surahCounts;
-
-  if (systemId === 'kufi') {
-    // For Kufan, every ayah should map to itself
-    surahCounts = load('surah-counts/kufi.json');
-    mapping = null; // Identity
-  } else {
-    mapping = load(`mappings/by-counting-system/kufi-to-${systemId}.json`);
-    surahCounts = load(`surah-counts/${systemId}.json`);
-  }
-
-  // For non-Kufan: we need to test the REVERSE direction.
-  // API gives us: for a target mushaf ayah → what is number_in_hafs?
-  // Our mapping gives: for a hafs_ayah → what is target_ayah?
-  // So we build a reverse lookup from our mapping.
-
-  const reverseMap = {}; // { surah: { target_ayah: [hafs_ayahs] } }
-  if (mapping) {
-    for (const [surah, surahData] of Object.entries(mapping.surahs)) {
-      reverseMap[surah] = {};
-      for (const [hafsAyah, entry] of Object.entries(surahData.ayahs)) {
-        // Add the primary target_ayah
-        const ta = entry.target_ayah;
-        if (!reverseMap[surah][ta]) reverseMap[surah][ta] = [];
-        reverseMap[surah][ta].push(parseInt(hafsAyah));
-
-        // For splits, also add the additional target ayahs from splits_into
-        if (entry.splits_into) {
-          for (const splitTa of entry.splits_into) {
-            if (splitTa !== ta) {
-              if (!reverseMap[surah][splitTa]) reverseMap[surah][splitTa] = [];
-              reverseMap[surah][splitTa].push(parseInt(hafsAyah));
-            }
-          }
-        }
-      }
-    }
-  }
+  const surahCounts = loadDist(`surah-counts/${mushaf.systemId}.json`);
+  const reverse = mushaf.systemId === 'kufi'
+    ? null
+    : loadDist(`mappings/by-counting-system/${mushaf.systemId}-to-kufi.json`);
 
   const testCases = generateTestCases(surahCounts, 50);
   let passed = 0;
   let failed = 0;
 
   for (const tc of testCases) {
-    const apiData = await fetchAyah(mushafId, tc.surah, tc.ayah);
-    await sleep(100); // Rate limiting
+    const apiData = await fetchAyah(mushaf.mushafId, tc.surah, tc.ayah);
+    await sleep(100);
 
     if (!apiData) {
       console.log(`  SKIP: ${tc.surah}:${tc.ayah} — API returned null`);
       continue;
     }
 
-    const apiHafsNumber = parseInt(apiData.number_in_hafs);
+    const apiHafsNumbers = normalizeApiNumberInHafs(apiData.number_in_hafs);
 
-    if (systemId === 'kufi') {
-      // Identity: ayah number should equal number_in_hafs
-      if (tc.ayah === apiHafsNumber) {
-        passed++;
+    if (mushaf.systemId === 'kufi') {
+      const expectedHafs = [tc.ayah];
+      if (arraysEqual(expectedHafs, apiHafsNumbers)) {
+        passed += 1;
       } else {
-        failed++;
-        console.log(`  FAIL: ${tc.surah}:${tc.ayah} — expected hafs=${tc.ayah}, API says hafs=${apiHafsNumber}`);
+        failed += 1;
+        console.log(`  FAIL: ${tc.surah}:${tc.ayah} — expected hafs=${JSON.stringify(expectedHafs)}, API says hafs=${JSON.stringify(apiHafsNumbers)}`);
       }
+      continue;
+    }
+
+    const reverseEntry = reverse.surahs[String(tc.surah)]?.ayahs?.[String(tc.ayah)];
+    const expectedHafs = (reverseEntry?.hafs_ayahs || (reverseEntry ? [reverseEntry.hafs_ayah] : []))
+      .slice()
+      .sort((a, b) => a - b);
+
+    if (arraysEqual(expectedHafs, apiHafsNumbers)) {
+      passed += 1;
     } else {
-      // Check: our reverse map for this target ayah should include apiHafsNumber
-      const expectedHafs = reverseMap[String(tc.surah)]?.[String(tc.ayah)] || [];
-
-      if (expectedHafs.includes(apiHafsNumber)) {
-        passed++;
-      } else {
-        failed++;
-        console.log(`  FAIL: ${tc.surah}:${tc.ayah} — our mapping says hafs=${JSON.stringify(expectedHafs)}, API says hafs=${apiHafsNumber}`);
-      }
+      failed += 1;
+      console.log(`  FAIL: ${tc.surah}:${tc.ayah} — our mapping says hafs=${JSON.stringify(expectedHafs)}, API says hafs=${JSON.stringify(apiHafsNumbers)}`);
     }
   }
 
@@ -166,12 +164,12 @@ async function validateMushaf(mushafId) {
   totalFailed += failed;
 }
 
-// Run all validations
 async function main() {
   console.log('Validating mapping data against quranpedia.net API...\n');
 
-  for (const mushafId of Object.keys(MUSHAF_TO_SYSTEM)) {
-    await validateMushaf(parseInt(mushafId));
+  const mushafs = listPublicMushafs();
+  for (const mushaf of mushafs) {
+    await validateMushaf(mushaf);
   }
 
   console.log(`\n========================================`);
@@ -179,7 +177,9 @@ async function main() {
   console.log(`  TOTAL FAILED: ${totalFailed}`);
   console.log(`========================================\n`);
 
-  if (totalFailed > 0) process.exit(1);
+  if (totalFailed > 0) {
+    process.exit(1);
+  }
 }
 
 main().catch(console.error);

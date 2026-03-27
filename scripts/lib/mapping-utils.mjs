@@ -16,6 +16,19 @@ export function buildRange(start, end) {
   return Array.from({ length: end - start + 1 }, (_, index) => start + index);
 }
 
+export function getEntryTargets(entry) {
+  return Array.isArray(entry.splits_into) ? entry.splits_into : [entry.target_ayah];
+}
+
+export function entryMergesWithNext(entry, nextEntry) {
+  if (!nextEntry) {
+    return false;
+  }
+
+  const targets = getEntryTargets(entry);
+  return targets[targets.length - 1] === nextEntry.target_ayah;
+}
+
 function getExistingSplitEnd(entry) {
   if (!Array.isArray(entry.splits_into) || entry.splits_into.length === 0) {
     return null;
@@ -81,7 +94,8 @@ export function normalizeForwardSurah(surahData, surahNumber = null) {
       } else {
         const existingSplitEnd = getExistingSplitEnd(current);
         mergedAfter = current.status === 'merged'
-          || (current.status === 'split' && existingSplitEnd === nextStart);
+          || (current.status === 'split' && existingSplitEnd === nextStart)
+          || current.merges_with_next === true;
       }
 
       end = nextStart - (mergedAfter ? 0 : 1);
@@ -98,13 +112,15 @@ export function normalizeForwardSurah(surahData, surahNumber = null) {
     if (targets.length === 1) {
       normalizedAyahs[key] = {
         target_ayah: start,
-        status: mergedAfter ? 'merged' : 'mapped'
+        status: mergedAfter ? 'merged' : 'mapped',
+        ...(mergedAfter ? { merges_with_next: true } : {})
       };
     } else {
       normalizedAyahs[key] = {
         target_ayah: start,
         status: 'split',
-        splits_into: targets
+        splits_into: targets,
+        ...(mergedAfter ? { merges_with_next: true } : {})
       };
     }
   }
@@ -139,13 +155,40 @@ export function collectForwardTargetCoverage(surahData) {
   const covered = new Set();
 
   for (const entry of Object.values(surahData.ayahs)) {
-    covered.add(entry.target_ayah);
-    if (Array.isArray(entry.splits_into)) {
-      for (const target of entry.splits_into) {
-        covered.add(target);
-      }
+    for (const target of getEntryTargets(entry)) {
+      covered.add(target);
     }
   }
 
   return covered;
+}
+
+export function collectBoundaryEventsFromForwardSurah(surahData) {
+  const events = [];
+
+  for (let hafsAyah = 1; hafsAyah <= surahData.hafs_ayah_count; hafsAyah += 1) {
+    const current = surahData.ayahs[String(hafsAyah)];
+    const next = hafsAyah < surahData.hafs_ayah_count ? surahData.ayahs[String(hafsAyah + 1)] : null;
+    const targets = getEntryTargets(current);
+    const splitCount = targets.length - 1;
+    const mergeCount = entryMergesWithNext(current, next) ? 1 : 0;
+
+    if (mergeCount > 0) {
+      events.push({
+        hafs_ayah: hafsAyah,
+        type: 'merge',
+        count: mergeCount
+      });
+    }
+
+    if (splitCount > 0) {
+      events.push({
+        hafs_ayah: hafsAyah,
+        type: 'split',
+        count: splitCount
+      });
+    }
+  }
+
+  return events;
 }

@@ -1,0 +1,2092 @@
+{
+  "_version": "0.1.0",
+  "_description": "Canonical scholar-facing evidence sidecar for book-boundary-primitives.json. Each record tracks the citation and review state of one disputed ayah-boundary claim.",
+  "_paired_primitive_file": "book-boundary-primitives.json",
+  "_counting_system_order": [
+    "madani-first",
+    "madani-last",
+    "makki",
+    "basri",
+    "dimashqi",
+    "kufi"
+  ],
+  "_verification_status_descriptions": {
+    "uncited": "No supporting citation has been entered yet.",
+    "secondary_only": "Covered only by commentary, later manuals, or modern references; no primary citation entered yet.",
+    "primary_cited": "At least one primary citation has been entered, but no completed scholarly review is recorded yet.",
+    "primary_cited_and_reviewed": "At least one primary citation has been entered and a scholarly review has been recorded.",
+    "disputed": "Sources or reviewers disagree and the point remains actively disputed.",
+    "unresolved": "The point is known to need more work and should not be treated as fully settled."
+  },
+  "_evidence_tier_descriptions": {
+    "primary": "A direct primary statement in a classical counting source.",
+    "commentary": "A commentary or explanatory work tied closely to a primary counting text.",
+    "secondary": "A later specialist manual or scholarly secondary treatment.",
+    "modern-reference": "A modern reference, catalog, article, or summary used as supporting context.",
+    "api-check": "A machine-readable external consistency check such as a public API. Never sufficient on its own."
+  },
+  "surahs": {
+    "1": {
+      "1": {
+        "end": {
+          "word": "الرحيم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "7": {
+        "internal": [
+          {
+            "word": "عليهم",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "2": {
+      "1": {
+        "end": {
+          "word": "الم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "10": {
+        "internal": [
+          {
+            "word": "أليم",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "11": {
+        "end": {
+          "word": "مصلحون",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "114": {
+        "internal": [
+          {
+            "word": "خائفين",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "197": {
+        "end": {
+          "word": "الألباب",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "200": {
+        "end": {
+          "word": "خلاق",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "219": {
+        "internal": [
+          {
+            "word": "ينفقون",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ],
+        "end": {
+          "word": "تتفكرون",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "235": {
+        "internal": [
+          {
+            "word": "معروفا",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "255": {
+        "internal": [
+          {
+            "word": "القيوم",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "257": {
+        "internal": [
+          {
+            "word": "النور",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "3": {
+      "1": {
+        "end": {
+          "word": "الم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "3": {
+        "end": {
+          "word": "والإنجيل",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "4": {
+        "internal": [
+          {
+            "word": "الفرقان",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "48": {
+        "end": {
+          "word": "والإنجيل",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "49": {
+        "internal": [
+          {
+            "word": "إسرائيل",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "92": {
+        "internal": [
+          {
+            "word": "تحبون",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "97": {
+        "internal": [
+          {
+            "word": "إبراهيم",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "4": {
+      "44": {
+        "end": {
+          "word": "السبيل",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "173": {
+        "internal": [
+          {
+            "word": "أليما",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "5": {
+      "1": {
+        "internal": [
+          {
+            "word": "بالعقود",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "15": {
+        "internal": [
+          {
+            "word": "كثير",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "23": {
+        "internal": [
+          {
+            "word": "غالبون",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "6": {
+      "1": {
+        "internal": [
+          {
+            "word": "والنور",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "66": {
+        "end": {
+          "word": "بوكيل",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "73": {
+        "internal": [
+          {
+            "word": "فيكون",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "161": {
+        "internal": [
+          {
+            "word": "مستقيم",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "7": {
+      "1": {
+        "end": {
+          "word": "المص",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "29": {
+        "internal": [
+          {
+            "word": "الدين",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ],
+        "end": {
+          "word": "تعودون",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "38": {
+        "internal": [
+          {
+            "word": "النار",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "137": {
+        "internal": [
+          {
+            "word": "إسرائيل",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "8": {
+      "36": {
+        "internal": [
+          {
+            "word": "يغلبون",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "42": {
+        "internal": [
+          {
+            "word": "مفعولا",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "62": {
+        "end": {
+          "word": "وبالمؤمنين",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "9": {
+      "3": {
+        "internal": [
+          {
+            "word": "المشركين",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "39": {
+        "internal": [
+          {
+            "word": "أليما",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "70": {
+        "internal": [
+          {
+            "word": "وثمود",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "10": {
+      "22": {
+        "internal": [
+          {
+            "word": "الدين",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ],
+        "end": {
+          "word": "الشاكرين",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "57": {
+        "internal": [
+          {
+            "word": "الصدور",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "11": {
+      "54": {
+        "end": {
+          "word": "تشركون",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "74": {
+        "end": {
+          "word": "لوط",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "82": {
+        "internal": [
+          {
+            "word": "سجيل",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ],
+        "end": {
+          "word": "منضود",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "86": {
+        "internal": [
+          {
+            "word": "مؤمنين",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "118": {
+        "end": {
+          "word": "مختلفين",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "121": {
+        "end": {
+          "word": "عاملون",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "13": {
+      "5": {
+        "internal": [
+          {
+            "word": "جديد",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "16": {
+        "internal": [
+          {
+            "word": "والبصير",
+            "verification_status": "uncited",
+            "evidence": []
+          },
+          {
+            "word": "والنور",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "18": {
+        "internal": [
+          {
+            "word": "الحساب",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "23": {
+        "end": {
+          "word": "باب",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "14": {
+      "1": {
+        "internal": [
+          {
+            "word": "النور",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "5": {
+        "internal": [
+          {
+            "word": "النور",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "9": {
+        "internal": [
+          {
+            "word": "وثمود",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "19": {
+        "end": {
+          "word": "جديد",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "24": {
+        "end": {
+          "word": "السماء",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "33": {
+        "end": {
+          "word": "والنهار",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "42": {
+        "internal": [
+          {
+            "word": "الظالمون",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "17": {
+      "107": {
+        "end": {
+          "word": "سجدا",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "18": {
+      "13": {
+        "end": {
+          "word": "هدى",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "22": {
+        "internal": [
+          {
+            "word": "قليل",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "23": {
+        "end": {
+          "word": "غدا",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "32": {
+        "end": {
+          "word": "زرعا",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "35": {
+        "end": {
+          "word": "أبدا",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "84": {
+        "end": {
+          "word": "سببا",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "85": {
+        "end": {
+          "word": "سببا",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "86": {
+        "internal": [
+          {
+            "word": "قوما",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "89": {
+        "end": {
+          "word": "سببا",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "92": {
+        "end": {
+          "word": "سببا",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "103": {
+        "end": {
+          "word": "أعمالا",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "19": {
+      "1": {
+        "end": {
+          "word": "كهيعص",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "41": {
+        "internal": [
+          {
+            "word": "إبراهيم",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "75": {
+        "internal": [
+          {
+            "word": "مدا",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "20": {
+      "1": {
+        "end": {
+          "word": "طه",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "33": {
+        "end": {
+          "word": "كثيرا",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "34": {
+        "end": {
+          "word": "كثيرا",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "39": {
+        "internal": [
+          {
+            "word": "مني",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "40": {
+        "internal": [
+          {
+            "word": "تحزن",
+            "verification_status": "uncited",
+            "evidence": []
+          },
+          {
+            "word": "فتونا",
+            "verification_status": "uncited",
+            "evidence": []
+          },
+          {
+            "word": "مدين",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "41": {
+        "end": {
+          "word": "لنفسي",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "47": {
+        "internal": [
+          {
+            "word": "إسرائيل",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "77": {
+        "internal": [
+          {
+            "word": "موسى",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "78": {
+        "end": {
+          "word": "غشيهم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "86": {
+        "internal": [
+          {
+            "word": "أسفا",
+            "verification_status": "uncited",
+            "evidence": []
+          },
+          {
+            "word": "حسنا",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "87": {
+        "end": {
+          "word": "السامري",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "88": {
+        "internal": [
+          {
+            "word": "موسى",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ],
+        "end": {
+          "word": "فنسي",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "89": {
+        "internal": [
+          {
+            "word": "قولا",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "92": {
+        "end": {
+          "word": "ضلوا",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "106": {
+        "end": {
+          "word": "صفصفا",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "123": {
+        "internal": [
+          {
+            "word": "هدى",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "131": {
+        "internal": [
+          {
+            "word": "الدنيا",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "21": {
+      "66": {
+        "end": {
+          "word": "يضركم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "22": {
+      "19": {
+        "end": {
+          "word": "الحميم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "20": {
+        "end": {
+          "word": "والجلود",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "42": {
+        "end": {
+          "word": "وثمود",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "43": {
+        "end": {
+          "word": "لوط",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "78": {
+        "internal": [
+          {
+            "word": "المسلمين",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "23": {
+      "45": {
+        "internal": [
+          {
+            "word": "هارون",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "24": {
+      "36": {
+        "end": {
+          "word": "والآصال",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "43": {
+        "end": {
+          "word": "بالأبصار",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "26": {
+      "1": {
+        "end": {
+          "word": "طسم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "49": {
+        "internal": [
+          {
+            "word": "تعلمون",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "92": {
+        "end": {
+          "word": "تعبدون",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "210": {
+        "end": {
+          "word": "الشياطين",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "27": {
+      "33": {
+        "internal": [
+          {
+            "word": "شديد",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "44": {
+        "internal": [
+          {
+            "word": "قوارير",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "28": {
+      "1": {
+        "end": {
+          "word": "طسم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "23": {
+        "internal": [
+          {
+            "word": "يسقون",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "29": {
+      "1": {
+        "end": {
+          "word": "الم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "29": {
+        "internal": [
+          {
+            "word": "السبيل",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "65": {
+        "internal": [
+          {
+            "word": "الدين",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "30": {
+      "1": {
+        "end": {
+          "word": "الم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "2": {
+        "end": {
+          "word": "الروم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "4": {
+        "internal": [
+          {
+            "word": "سنين",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "55": {
+        "internal": [
+          {
+            "word": "المجرمون",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "31": {
+      "1": {
+        "end": {
+          "word": "الم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "32": {
+        "internal": [
+          {
+            "word": "الدين",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "32": {
+      "1": {
+        "end": {
+          "word": "الم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "10": {
+        "internal": [
+          {
+            "word": "جديد",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "34": {
+      "15": {
+        "internal": [
+          {
+            "word": "وشمال",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "35": {
+      "7": {
+        "internal": [
+          {
+            "word": "شديد",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "16": {
+        "end": {
+          "word": "جديد",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "19": {
+        "end": {
+          "word": "والبصير",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "20": {
+        "end": {
+          "word": "النور",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "22": {
+        "end": {
+          "word": "القبور",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "41": {
+        "internal": [
+          {
+            "word": "تزولا",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "43": {
+        "internal": [
+          {
+            "word": "تبديلا",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "36": {
+      "1": {
+        "end": {
+          "word": "يس",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "37": {
+      "22": {
+        "end": {
+          "word": "يعبدون",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "167": {
+        "end": {
+          "word": "ليقولون",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "38": {
+      "1": {
+        "end": {
+          "word": "الذكر",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "37": {
+        "end": {
+          "word": "وغواص",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "84": {
+        "end": {
+          "word": "أقول",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "39": {
+      "3": {
+        "internal": [
+          {
+            "word": "يختلفون",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "11": {
+        "end": {
+          "word": "الدين",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "14": {
+        "end": {
+          "word": "ديني",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "17": {
+        "end": {
+          "word": "عباد",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "20": {
+        "internal": [
+          {
+            "word": "الأنهار",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "36": {
+        "end": {
+          "word": "هاد",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "39": {
+        "end": {
+          "word": "تعلمون",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "40": {
+      "1": {
+        "end": {
+          "word": "حم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "15": {
+        "end": {
+          "word": "التلاق",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "16": {
+        "internal": [
+          {
+            "word": "بارزون",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "18": {
+        "internal": [
+          {
+            "word": "كاظمين",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "53": {
+        "end": {
+          "word": "الكتاب",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "58": {
+        "internal": [
+          {
+            "word": "والبصير",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "71": {
+        "end": {
+          "word": "يسحبون",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "72": {
+        "internal": [
+          {
+            "word": "الحميم",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "73": {
+        "end": {
+          "word": "تشركون",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "41": {
+      "1": {
+        "end": {
+          "word": "حم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "13": {
+        "end": {
+          "word": "وثمود",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "42": {
+      "1": {
+        "end": {
+          "word": "حم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "2": {
+        "end": {
+          "word": "عسق",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "32": {
+        "end": {
+          "word": "كالأعلام",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "43": {
+      "1": {
+        "end": {
+          "word": "حم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "52": {
+        "internal": [
+          {
+            "word": "مهين",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "44": {
+      "1": {
+        "end": {
+          "word": "حم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "34": {
+        "end": {
+          "word": "ليقولون",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "43": {
+        "end": {
+          "word": "الزقوم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "45": {
+        "end": {
+          "word": "البطون",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "45": {
+      "1": {
+        "end": {
+          "word": "حم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "46": {
+      "1": {
+        "end": {
+          "word": "حم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "47": {
+      "4": {
+        "internal": [
+          {
+            "word": "أوزارها",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "15": {
+        "internal": [
+          {
+            "word": "للشاربين",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "52": {
+      "1": {
+        "end": {
+          "word": "والطور",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "13": {
+        "end": {
+          "word": "دعا",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "53": {
+      "28": {
+        "end": {
+          "word": "شيئا",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "29": {
+        "internal": [
+          {
+            "word": "تولى",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ],
+        "end": {
+          "word": "الدنيا",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "55": {
+      "1": {
+        "end": {
+          "word": "الرحمن",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "3": {
+        "end": {
+          "word": "الإنسان",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "10": {
+        "end": {
+          "word": "للأنام",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "35": {
+        "internal": [
+          {
+            "word": "نار",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "43": {
+        "end": {
+          "word": "المجرمون",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "56": {
+      "8": {
+        "internal": [
+          {
+            "word": "الميمنة",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "9": {
+        "internal": [
+          {
+            "word": "المشأمة",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "15": {
+        "end": {
+          "word": "موضونة",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "18": {
+        "internal": [
+          {
+            "word": "وأباريق",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "22": {
+        "end": {
+          "word": "عين",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "25": {
+        "end": {
+          "word": "تأثيما",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "27": {
+        "internal": [
+          {
+            "word": "اليمين",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "35": {
+        "end": {
+          "word": "إنشاء",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "41": {
+        "internal": [
+          {
+            "word": "الشمال",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "42": {
+        "end": {
+          "word": "وحميم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "47": {
+        "internal": [
+          {
+            "word": "يقولون",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "49": {
+        "end": {
+          "word": "والآخرين",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "50": {
+        "internal": [
+          {
+            "word": "لمجموعون",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "89": {
+        "internal": [
+          {
+            "word": "وريحان",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "57": {
+      "13": {
+        "end": {
+          "word": "العذاب",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "27": {
+        "internal": [
+          {
+            "word": "الإنجيل",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "58": {
+      "20": {
+        "end": {
+          "word": "الأذلين",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "65": {
+      "2": {
+        "internal": [
+          {
+            "word": "الآخر",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ],
+        "end": {
+          "word": "مخرجا",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "10": {
+        "internal": [
+          {
+            "word": "الألباب",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "67": {
+      "9": {
+        "internal": [
+          {
+            "word": "نذير",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "69": {
+      "1": {
+        "end": {
+          "word": "الحاقة",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "25": {
+        "internal": [
+          {
+            "word": "بشماله",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "70": {
+      "4": {
+        "end": {
+          "word": "سنة",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "71": {
+      "23": {
+        "internal": [
+          {
+            "word": "سواعا",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ],
+        "end": {
+          "word": "ونسرا",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "24": {
+        "internal": [
+          {
+            "word": "كثيرا",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "25": {
+        "internal": [
+          {
+            "word": "نارا",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "72": {
+      "22": {
+        "internal": [
+          {
+            "word": "أحد",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ],
+        "end": {
+          "word": "ملتحدا",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "73": {
+      "1": {
+        "end": {
+          "word": "المزمل",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "15": {
+        "internal": [
+          {
+            "word": "رسولا",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "17": {
+        "end": {
+          "word": "شيبا",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "74": {
+      "40": {
+        "end": {
+          "word": "يتساءلون",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "41": {
+        "end": {
+          "word": "المجرمين",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "75": {
+      "16": {
+        "end": {
+          "word": "به",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "78": {
+      "40": {
+        "internal": [
+          {
+            "word": "قريبا",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "79": {
+      "33": {
+        "end": {
+          "word": "ولأنعامكم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "37": {
+        "end": {
+          "word": "طغى",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "80": {
+      "24": {
+        "end": {
+          "word": "طعامه",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "32": {
+        "end": {
+          "word": "ولأنعامكم",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "33": {
+        "end": {
+          "word": "الصاخة",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "81": {
+      "26": {
+        "end": {
+          "word": "تذهبون",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "84": {
+      "7": {
+        "end": {
+          "word": "بيمينه",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "10": {
+        "end": {
+          "word": "ظهره",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "86": {
+      "15": {
+        "end": {
+          "word": "كيدا",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "89": {
+      "15": {
+        "internal": [
+          {
+            "word": "ونعمه",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "16": {
+        "internal": [
+          {
+            "word": "رزقه",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "23": {
+        "internal": [
+          {
+            "word": "بجهنم",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      },
+      "29": {
+        "end": {
+          "word": "عبادي",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "91": {
+      "14": {
+        "internal": [
+          {
+            "word": "فعقروها",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "96": {
+      "9": {
+        "end": {
+          "word": "ينهى",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "15": {
+        "internal": [
+          {
+            "word": "ينته",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "97": {
+      "3": {
+        "internal": [
+          {
+            "word": "القدر",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "98": {
+      "5": {
+        "internal": [
+          {
+            "word": "الدين",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "99": {
+      "6": {
+        "internal": [
+          {
+            "word": "أشتاتا",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "101": {
+      "1": {
+        "end": {
+          "word": "القارعة",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "6": {
+        "end": {
+          "word": "موازينه",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "8": {
+        "end": {
+          "word": "موازينه",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "103": {
+      "1": {
+        "end": {
+          "word": "والعصر",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      },
+      "3": {
+        "internal": [
+          {
+            "word": "بالحق",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "106": {
+      "4": {
+        "internal": [
+          {
+            "word": "جوع",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "107": {
+      "6": {
+        "end": {
+          "word": "يراءون",
+          "verification_status": "uncited",
+          "evidence": []
+        }
+      }
+    },
+    "112": {
+      "3": {
+        "internal": [
+          {
+            "word": "يلد",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "114": {
+      "4": {
+        "internal": [
+          {
+            "word": "الوسواس",
+            "verification_status": "uncited",
+            "evidence": []
+          }
+        ]
+      }
+    }
+  }
+}

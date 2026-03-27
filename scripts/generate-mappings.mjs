@@ -1,23 +1,34 @@
 /**
- * Generate forward mapping files from the differences table for systems that do
- * not already ship with curated forward mappings.
+ * Generate forward mapping files directly from the canonical scholar-facing,
+ * book-aligned primitive source layer for all non-Kufan counting systems.
+ *
+ * Outputs are written to dist/ because they are generated artifacts, not the
+ * hand-maintained scholarly source of truth.
  *
  * Usage: node scripts/generate-mappings.mjs
  */
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
-import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
+import { join } from 'path';
 import { buildRange, normalizeForwardMappingDocument } from './lib/mapping-utils.mjs';
+import {
+  expandBookBoundaryPrimitivesToDifferences,
+  normalizeBookBoundaryPrimitivesDocument
+} from './lib/book-primitives-utils.mjs';
+import {
+  distMappingsByCountingSystemDir,
+  distSurahCountsDir,
+  repoDir,
+  sourcePath
+} from './lib/repo-paths.mjs';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const dataDir = join(__dirname, '..', 'data');
-
-const pkg = JSON.parse(readFileSync(join(__dirname, '..', 'package.json'), 'utf-8'));
+const pkg = JSON.parse(readFileSync(join(repoDir, 'package.json'), 'utf-8'));
 const version = pkg.version;
 
-const countingSystems = JSON.parse(readFileSync(join(dataDir, 'counting-systems.json'), 'utf-8'));
-const differencesFile = JSON.parse(readFileSync(join(dataDir, 'differences.json'), 'utf-8'));
+const countingSystems = JSON.parse(readFileSync(sourcePath('counting-systems.json'), 'utf-8'));
+const bookBoundaryPrimitives = JSON.parse(readFileSync(sourcePath('book-boundary-primitives.json'), 'utf-8'));
+const normalizedBookBoundaryPrimitives = normalizeBookBoundaryPrimitivesDocument(bookBoundaryPrimitives, countingSystems, version);
+const differencesFile = expandBookBoundaryPrimitivesToDifferences(normalizedBookBoundaryPrimitives, { version });
 
 const hafsCounts = {
   1: 7, 2: 286, 3: 200, 4: 176, 5: 120, 6: 165, 7: 206, 8: 75, 9: 129, 10: 109,
@@ -34,10 +45,10 @@ const hafsCounts = {
   111: 5, 112: 4, 113: 5, 114: 6
 };
 
-const computedSystems = ['madani-first', 'dimashqi'];
+const computedSystems = Object.keys(countingSystems).filter(systemId => systemId !== 'kufi');
 
-mkdirSync(join(dataDir, 'mappings', 'by-counting-system'), { recursive: true });
-mkdirSync(join(dataDir, 'surah-counts'), { recursive: true });
+mkdirSync(distMappingsByCountingSystemDir, { recursive: true });
+mkdirSync(distSurahCountsDir, { recursive: true });
 
 function buildDiffLookup() {
   const lookup = {};
@@ -130,9 +141,9 @@ const diffsBySystem = buildDiffLookup();
 
 for (const systemId of computedSystems) {
   const mapping = generateComputedForwardMapping(systemId, diffsBySystem[systemId] || {});
-  const outputPath = join(dataDir, 'mappings', 'by-counting-system', `kufi-to-${systemId}.json`);
+  const outputPath = join(distMappingsByCountingSystemDir, `kufi-to-${systemId}.json`);
   writeFileSync(outputPath, JSON.stringify(mapping, null, 2) + '\n');
-  console.log(`  Generated: mappings/by-counting-system/kufi-to-${systemId}.json`);
+  console.log(`  Generated: dist/mappings/by-counting-system/kufi-to-${systemId}.json`);
 }
 
 for (const [systemId, system] of Object.entries(countingSystems)) {
@@ -140,9 +151,9 @@ for (const [systemId, system] of Object.entries(countingSystems)) {
     continue;
   }
 
-  const mappingPath = join(dataDir, 'mappings', 'by-counting-system', `kufi-to-${systemId}.json`);
+  const mappingPath = join(distMappingsByCountingSystemDir, `kufi-to-${systemId}.json`);
   if (!existsSync(mappingPath)) {
-    console.error(`  SKIP surah-counts for ${systemId}: missing mapping file`);
+    console.error(`  SKIP dist/surah-counts for ${systemId}: missing mapping file`);
     continue;
   }
 
@@ -163,10 +174,10 @@ for (const [systemId, system] of Object.entries(countingSystems)) {
   }
 
   writeFileSync(
-    join(dataDir, 'surah-counts', `${systemId}.json`),
+    join(distSurahCountsDir, `${systemId}.json`),
     JSON.stringify(surahCounts, null, 2) + '\n'
   );
-  console.log(`  Generated: surah-counts/${systemId}.json (total: ${surahCounts._total_ayahs})`);
+  console.log(`  Generated: dist/surah-counts/${systemId}.json (total: ${surahCounts._total_ayahs})`);
 }
 
 const kufiCounts = {
@@ -183,5 +194,5 @@ for (let surahNumber = 1; surahNumber <= 114; surahNumber += 1) {
   kufiCounts._total_ayahs += hafsCounts[surahNumber];
 }
 
-writeFileSync(join(dataDir, 'surah-counts', 'kufi.json'), JSON.stringify(kufiCounts, null, 2) + '\n');
-console.log('  Generated: surah-counts/kufi.json');
+writeFileSync(join(distSurahCountsDir, 'kufi.json'), JSON.stringify(kufiCounts, null, 2) + '\n');
+console.log('  Generated: dist/surah-counts/kufi.json');

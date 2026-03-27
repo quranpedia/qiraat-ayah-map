@@ -1,16 +1,13 @@
 /**
- * Regenerate rawi metadata files from qiraat.json.
+ * Regenerate rawi metadata files from qiraat.json into the generated artifact
+ * tree.
  *
  * Usage: node scripts/sync-rawi-metadata.mjs
  */
 
 import { mkdirSync, readFileSync, writeFileSync } from 'fs';
-import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const dataDir = join(__dirname, '..', 'data');
-const rawisDir = join(dataDir, 'rawis');
+import { join } from 'path';
+import { distRawisDir, sourcePath } from './lib/repo-paths.mjs';
 
 const knownMushafIds = {
   hafs: 1,
@@ -23,9 +20,9 @@ const knownMushafIds = {
   susi: 10
 };
 
-const qiraat = JSON.parse(readFileSync(join(dataDir, 'qiraat.json'), 'utf-8'));
+const qiraat = JSON.parse(readFileSync(sourcePath('qiraat.json'), 'utf-8'));
 
-mkdirSync(rawisDir, { recursive: true });
+mkdirSync(distRawisDir, { recursive: true });
 
 for (const [qiraaSlug, qiraa] of Object.entries(qiraat)) {
   for (const rawiSlug of Object.keys(qiraa.rawis).sort()) {
@@ -44,7 +41,7 @@ for (const [qiraaSlug, qiraa] of Object.entries(qiraat)) {
       metadata._note = `${rawiSlug} uses the Kufan counting system, so ayah numbers are identical to Hafs.`;
     }
 
-    writeFileSync(join(rawisDir, `${rawiSlug}.json`), JSON.stringify(metadata, null, 2) + '\n');
-    console.log(`  Synced: rawis/${rawiSlug}.json`);
+    writeFileSync(join(distRawisDir, `${rawiSlug}.json`), JSON.stringify(metadata, null, 2) + '\n');
+    console.log(`  Synced: dist/rawis/${rawiSlug}.json`);
   }
 }

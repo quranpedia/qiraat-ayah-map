@@ -16,7 +16,7 @@
   "madani-last": {
     "name_ar": "المدني الأخير",
     "name_en": "Last Madinan",
-    "total_ayahs": 6213,
+    "total_ayahs": 6214,
     "is_reference": false,
     "used_by_qiraat": [
       "nafi"
@@ -38,7 +38,7 @@
   "makki": {
     "name_ar": "المكي",
     "name_en": "Makkan",
-    "total_ayahs": 6221,
+    "total_ayahs": 6219,
     "is_reference": false,
     "used_by_qiraat": [
       "ibn-kathir"
@@ -49,7 +49,7 @@
   "basri": {
     "name_ar": "البصري",
     "name_en": "Basran",
-    "total_ayahs": 6217,
+    "total_ayahs": 6204,
     "is_reference": false,
     "used_by_qiraat": [
       "abu-amr",

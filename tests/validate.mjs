@@ -5,14 +5,28 @@
  */
 
 import { readFileSync, existsSync, readdirSync } from 'fs';
-import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { join } from 'path';
+import { normalizeBookBoundaryEvidenceDocument, flattenBookBoundaryReviewRows, VERIFICATION_STATUS_ORDER } from '../scripts/lib/book-evidence-utils.mjs';
+import { buildBookBoundaryPrimitives, expandBookBoundaryPrimitivesToDifferences, getTraditionalSystemOrder, normalizeBookBoundaryPrimitivesDocument } from '../scripts/lib/book-primitives-utils.mjs';
+import {
+  distMappingsByCountingSystemDir,
+  distMappingsByRawiDir,
+  distRawisDir,
+  distReviewDir,
+  distReviewSystemsDir,
+  distSurahCountsDir,
+  distPath,
+  repoDir,
+  sourceDataDir,
+  sourcePath
+} from '../scripts/lib/repo-paths.mjs';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const dataDir = join(__dirname, '..', 'data');
+function loadSource(file) {
+  return JSON.parse(readFileSync(sourcePath(file), 'utf-8'));
+}
 
-function load(file) {
-  return JSON.parse(readFileSync(join(dataDir, file), 'utf-8'));
+function loadDist(file) {
+  return JSON.parse(readFileSync(distPath(file), 'utf-8'));
 }
 
 function buildRange(start, end) {
@@ -21,6 +35,180 @@ function buildRange(start, end) {
 
 function getTargets(entry) {
   return Array.isArray(entry.splits_into) ? entry.splits_into : [entry.target_ayah];
+}
+
+function getMergeFlag(surah, hafsAyah) {
+  if (hafsAyah >= surah.hafs_ayah_count) {
+    return false;
+  }
+
+  const current = surah.ayahs[String(hafsAyah)];
+  const next = surah.ayahs[String(hafsAyah + 1)];
+  const targets = getTargets(current);
+  return targets[targets.length - 1] === next.target_ayah;
+}
+
+function buildDifferenceAggregate(items) {
+  const bySurah = {};
+  let mergeCount = 0;
+  let splitCount = 0;
+
+  for (let surahNumber = 1; surahNumber <= 114; surahNumber += 1) {
+    bySurah[String(surahNumber)] = {};
+  }
+
+  for (const item of items) {
+    const surahKey = String(item.surah);
+    const ayahKey = String(item.hafs_ayah);
+    const count = Number.isInteger(item.count) ? item.count : 1;
+
+    if (!bySurah[surahKey][ayahKey]) {
+      bySurah[surahKey][ayahKey] = {
+        merge: 0,
+        split: 0
+      };
+    }
+
+    bySurah[surahKey][ayahKey][item.type] += count;
+
+    if (item.type === 'merge') {
+      mergeCount += count;
+    } else {
+      splitCount += count;
+    }
+  }
+
+  return {
+    bySurah,
+    mergeCount,
+    splitCount
+  };
+}
+
+function buildBoundaryAggregateFromForwardMapping(mapping) {
+  const items = [];
+
+  for (let surahNumber = 1; surahNumber <= 114; surahNumber += 1) {
+    const surah = mapping.surahs[String(surahNumber)];
+
+    for (let hafsAyah = 1; hafsAyah <= surah.hafs_ayah_count; hafsAyah += 1) {
+      const entry = surah.ayahs[String(hafsAyah)];
+      const targets = getTargets(entry);
+      const splitCount = targets.length - 1;
+      const mergeCount = getMergeFlag(surah, hafsAyah) ? 1 : 0;
+
+      if (mergeCount > 0) {
+        items.push({
+          surah: surahNumber,
+          hafs_ayah: hafsAyah,
+          type: 'merge',
+          count: mergeCount
+        });
+      }
+
+      if (splitCount > 0) {
+        items.push({
+          surah: surahNumber,
+          hafs_ayah: hafsAyah,
+          type: 'split',
+          count: splitCount
+        });
+      }
+    }
+  }
+
+  return buildDifferenceAggregate(items);
+}
+
+function buildExpectedReconciliation(wordLevelAggregate, mappingAggregate, kufiCountsFile, systemTotal) {
+  const mismatchedSurahs = [];
+
+  for (let surahNumber = 1; surahNumber <= 114; surahNumber += 1) {
+    const surahKey = String(surahNumber);
+    const hafsAyahCount = kufiCountsFile.surahs[surahKey];
+    const wordLevelByAyah = wordLevelAggregate.bySurah[surahKey];
+    const mappingByAyah = mappingAggregate.bySurah[surahKey];
+
+    let wordLevelMerge = 0;
+    let wordLevelSplit = 0;
+    let mappingMerge = 0;
+    let mappingSplit = 0;
+    const mismatchedHafsAyahs = [];
+
+    for (let hafsAyah = 1; hafsAyah <= hafsAyahCount; hafsAyah += 1) {
+      const ayahKey = String(hafsAyah);
+      const wordLevelCounts = wordLevelByAyah[ayahKey] || { merge: 0, split: 0 };
+      const mappingCounts = mappingByAyah[ayahKey] || { merge: 0, split: 0 };
+
+      wordLevelMerge += wordLevelCounts.merge;
+      wordLevelSplit += wordLevelCounts.split;
+      mappingMerge += mappingCounts.merge;
+      mappingSplit += mappingCounts.split;
+
+      if (
+        wordLevelCounts.merge !== mappingCounts.merge
+        || wordLevelCounts.split !== mappingCounts.split
+      ) {
+        mismatchedHafsAyahs.push({
+          hafs_ayah: hafsAyah,
+          word_level: {
+            merge_count: wordLevelCounts.merge,
+            split_count: wordLevelCounts.split
+          },
+          mapping: {
+            merge_count: mappingCounts.merge,
+            split_count: mappingCounts.split
+          }
+        });
+      }
+    }
+
+    if (mismatchedHafsAyahs.length > 0) {
+      mismatchedSurahs.push({
+        surah: surahNumber,
+        word_level: {
+          merge_count: wordLevelMerge,
+          split_count: wordLevelSplit,
+          target_ayah_count: hafsAyahCount - wordLevelMerge + wordLevelSplit
+        },
+        mapping: {
+          merge_count: mappingMerge,
+          split_count: mappingSplit,
+          target_ayah_count: hafsAyahCount - mappingMerge + mappingSplit
+        },
+        mismatched_hafs_ayahs: mismatchedHafsAyahs
+      });
+    }
+  }
+
+  return {
+    is_exact_match: mismatchedSurahs.length === 0,
+    word_level_merge_count: wordLevelAggregate.mergeCount,
+    word_level_split_count: wordLevelAggregate.splitCount,
+    word_level_total_ayahs: kufiCountsFile._total_ayahs - wordLevelAggregate.mergeCount + wordLevelAggregate.splitCount,
+    mapping_merge_count: mappingAggregate.mergeCount,
+    mapping_split_count: mappingAggregate.splitCount,
+    mapping_total_ayahs: systemTotal,
+    mismatched_surahs: mismatchedSurahs
+  };
+}
+
+function sortDifferenceItems(items) {
+  return items
+    .slice()
+    .sort((left, right) => left.surah - right.surah
+      || left.hafs_ayah - right.hafs_ayah
+      || left.type.localeCompare(right.type)
+      || left.word.localeCompare(right.word, 'ar'));
+}
+
+function buildCanonicalDifferenceBlockMap(document) {
+  return new Map(
+    document.differences.map(block => [
+      block.counting_system,
+      sortDifferenceItems(block.items)
+    ])
+  );
 }
 
 let passed = 0;
@@ -39,14 +227,29 @@ function section(label) {
   console.log(`\n--- ${label} ---`);
 }
 
-const countingSystems = load('counting-systems.json');
-const qiraat = load('qiraat.json');
-const differences = load('differences.json');
+const pkg = JSON.parse(readFileSync(join(repoDir, 'package.json'), 'utf-8'));
+const countingSystems = loadSource('counting-systems.json');
+const qiraat = loadSource('qiraat.json');
+const differences = loadDist('differences.json');
+const boundaryEvents = loadDist('boundary-events.json');
+const bookBoundaryPrimitives = loadSource('book-boundary-primitives.json');
+const bookBoundaryEvidence = loadSource('book-boundary-evidence.json');
+const differencesReconciliation = loadDist('differences-reconciliation.json');
+const classicalCountAttestations = loadDist('classical-count-attestations.json');
+const reviewData = loadDist('review/review-data.json');
+const masterMatrixCsv = readFileSync(distPath('review', 'master-matrix.csv'), 'utf-8');
+const openQuestionsMarkdown = readFileSync(distPath('review', 'open-questions.md'), 'utf-8');
+const totalsMarkdown = readFileSync(distPath('review', 'totals.md'), 'utf-8');
+const siteData = JSON.parse(readFileSync(join(repoDir, 'site', 'src', 'lib', 'data', 'generated', 'site-data.json'), 'utf-8'));
 
 const systemIds = Object.keys(countingSystems);
 const nonKufiIds = systemIds.filter(id => id !== 'kufi');
 const allRawis = Object.entries(qiraat)
-  .flatMap(([qiraaSlug, qiraa]) => Object.keys(qiraa.rawis).map(rawiSlug => ({ rawiSlug, qiraaSlug, countingSystem: qiraa.counting_system })));
+  .flatMap(([qiraaSlug, qiraa]) => Object.keys(qiraa.rawis).map(rawiSlug => ({
+    rawiSlug,
+    qiraaSlug,
+    countingSystem: qiraa.counting_system
+  })));
 const nonKufiRawis = allRawis.filter(item => item.countingSystem !== 'kufi');
 const knownMushafIds = new Map([
   ['hafs', 1],
@@ -58,6 +261,8 @@ const knownMushafIds = new Map([
   ['shuba', 9],
   ['susi', 10]
 ]);
+const boundaryBlocks = new Map(boundaryEvents.differences.map(block => [block.counting_system, block]));
+const differenceBlocks = new Map(differences.differences.map(block => [block.counting_system, block]));
 
 section('Structural Integrity');
 
@@ -77,6 +282,10 @@ for (const slug of Object.keys(qiraat)) {
   assert(!slug.includes('_'), `Qiraa slug "${slug}" uses hyphens only`);
 }
 
+assert(differences._reference_system === 'kufi', 'differences.json uses kufi as reference system');
+assert(typeof differences._version === 'string', 'differences.json has _version');
+assert(differences._generated_from === 'book-boundary-primitives.json', 'differences.json records book-boundary-primitives.json as its generated source');
+
 for (const block of differences.differences) {
   assert(!block.counting_system.includes('_'), `Diff system "${block.counting_system}" uses hyphens only`);
   for (const item of block.items) {
@@ -86,6 +295,50 @@ for (const block of differences.differences) {
     assert(typeof item.word === 'string' && item.word.length > 0, 'Has diff word');
   }
 }
+
+assert(boundaryEvents._reference_system === 'kufi', 'boundary-events.json uses kufi as reference system');
+assert(typeof boundaryEvents._version === 'string', 'boundary-events.json has _version');
+
+for (const block of boundaryEvents.differences) {
+  assert(!block.counting_system.includes('_'), `Boundary system "${block.counting_system}" uses hyphens only`);
+  assert(typeof block._source_mapping_file === 'string', `${block.counting_system}: boundary block has source mapping file`);
+  for (const item of block.items) {
+    assert(item.surah >= 1 && item.surah <= 114, `Boundary item has valid surah ${item.surah}`);
+    assert(item.hafs_ayah >= 1, `Boundary item has valid hafs_ayah ${item.hafs_ayah}`);
+    assert(item.type === 'merge' || item.type === 'split', `Boundary item has valid type "${item.type}"`);
+    assert(Number.isInteger(item.count) && item.count >= 1, 'Boundary item has positive integer count');
+  }
+}
+
+assert(bookBoundaryPrimitives._reference_system === 'kufi', 'book-boundary-primitives.json uses kufi as reference system');
+assert(typeof bookBoundaryPrimitives._version === 'string', 'book-boundary-primitives.json has _version');
+assert(Array.isArray(bookBoundaryPrimitives._counting_system_order), 'book-boundary-primitives.json has _counting_system_order');
+assert(bookBoundaryEvidence._paired_primitive_file === 'book-boundary-primitives.json', 'book-boundary-evidence.json records its paired primitive file');
+assert(typeof bookBoundaryEvidence._version === 'string', 'book-boundary-evidence.json has _version');
+assert(Array.isArray(bookBoundaryEvidence._counting_system_order), 'book-boundary-evidence.json has _counting_system_order');
+assert(differencesReconciliation._reference_system === 'kufi', 'differences-reconciliation.json uses kufi as reference system');
+assert(typeof differencesReconciliation._version === 'string', 'differences-reconciliation.json has _version');
+
+section('Generation Pipeline');
+
+assert(pkg.scripts.generate.includes('normalize-book-boundary-primitives.mjs'), 'generate pipeline normalizes the canonical book-boundary-primitives.json source');
+assert(pkg.scripts.generate.includes('normalize-book-boundary-evidence.mjs'), 'generate pipeline normalizes the canonical book-boundary-evidence.json sidecar');
+assert(pkg.scripts.generate.includes('clean-dist.mjs'), 'generate pipeline clears dist before rebuilding generated artifacts');
+assert(pkg.scripts.generate.includes('generate-differences-from-book-boundary-primitives.mjs'), 'generate pipeline rebuilds dist/differences.json from book-boundary-primitives.json');
+assert(pkg.scripts.generate.includes('generate-review-artifacts.mjs'), 'generate pipeline rebuilds dist/review from the source layer');
+assert(!pkg.scripts.generate.includes('generate-book-boundary-primitives.mjs'), 'generate pipeline does not rebuild book-boundary-primitives.json from differences.json');
+
+section('Generated Artifact Layout');
+
+assert(existsSync(distRawisDir), 'dist/rawis exists');
+assert(existsSync(distMappingsByCountingSystemDir), 'dist/mappings/by-counting-system exists');
+assert(existsSync(distMappingsByRawiDir), 'dist/mappings/by-rawi exists');
+assert(existsSync(distSurahCountsDir), 'dist/surah-counts exists');
+assert(existsSync(distReviewDir), 'dist/review exists');
+assert(existsSync(distReviewSystemsDir), 'dist/review/systems exists');
+
+const sourceFilesOnDisk = readdirSync(sourceDataDir).filter(filename => filename.endsWith('.json')).sort();
+assert(JSON.stringify(sourceFilesOnDisk) === JSON.stringify(['book-boundary-evidence.json', 'book-boundary-primitives.json', 'counting-systems.json', 'qiraat.json']), 'data/ contains only the 4 canonical source JSON files');
 
 section('Cross-Reference Integrity');
 
@@ -99,13 +352,120 @@ for (const [systemId, system] of Object.entries(countingSystems)) {
   }
 }
 
-for (const block of differences.differences) {
-  assert(systemIds.includes(block.counting_system), `Diff system "${block.counting_system}" exists in counting-systems.json`);
+for (const systemId of nonKufiIds) {
+  assert(differenceBlocks.has(systemId), `differences.json contains block for ${systemId}`);
+  assert(boundaryBlocks.has(systemId), `boundary-events.json contains block for ${systemId}`);
+  assert(systemId in differencesReconciliation.systems, `differences-reconciliation.json contains system ${systemId}`);
 }
+
+section('Canonical Book-Aligned Primitive File');
+
+const expectedBookOrder = getTraditionalSystemOrder(systemIds);
+assert(JSON.stringify(bookBoundaryPrimitives._counting_system_order) === JSON.stringify(expectedBookOrder), 'book-boundary-primitives.json uses the traditional system order');
+
+for (const [surahKey, ayahs] of Object.entries(bookBoundaryPrimitives.surahs)) {
+  const surahNumber = Number.parseInt(surahKey, 10);
+  assert(surahNumber >= 1 && surahNumber <= 114, `book-boundary-primitives.json: valid surah ${surahKey}`);
+
+  for (const [ayahKey, primitive] of Object.entries(ayahs)) {
+    const hafsAyah = Number.parseInt(ayahKey, 10);
+    assert(Number.isInteger(hafsAyah) && hafsAyah >= 1, `book-boundary-primitives.json: valid hafs ayah ${surahKey}:${ayahKey}`);
+    assert(primitive.end || primitive.internal, `book-boundary-primitives.json: ${surahKey}:${ayahKey} has end or internal data`);
+
+    if (primitive.end) {
+      assert(typeof primitive.end.word === 'string' && primitive.end.word.length > 0, `book-boundary-primitives.json: ${surahKey}:${ayahKey} end has word`);
+      assert(Array.isArray(primitive.end.counted_by) && primitive.end.counted_by.length >= 1, `book-boundary-primitives.json: ${surahKey}:${ayahKey} end has counted_by`);
+      assert(primitive.end.counted_by.includes('kufi'), `book-boundary-primitives.json: ${surahKey}:${ayahKey} end includes kufi`);
+      assert(primitive.end.counted_by.length < systemIds.length, `book-boundary-primitives.json: ${surahKey}:${ayahKey} end is actually disputed`);
+      for (const systemId of primitive.end.counted_by) {
+        assert(systemIds.includes(systemId), `book-boundary-primitives.json: ${surahKey}:${ayahKey} end uses known system ${systemId}`);
+      }
+    }
+
+    for (const internalPoint of primitive.internal || []) {
+      assert(typeof internalPoint.word === 'string' && internalPoint.word.length > 0, `book-boundary-primitives.json: ${surahKey}:${ayahKey} internal has word`);
+      assert(Array.isArray(internalPoint.counted_by) && internalPoint.counted_by.length >= 1, `book-boundary-primitives.json: ${surahKey}:${ayahKey} internal has counted_by`);
+      assert(!internalPoint.counted_by.includes('kufi'), `book-boundary-primitives.json: ${surahKey}:${ayahKey} internal excludes kufi`);
+      for (const systemId of internalPoint.counted_by) {
+        assert(systemIds.includes(systemId), `book-boundary-primitives.json: ${surahKey}:${ayahKey} internal uses known system ${systemId}`);
+      }
+    }
+  }
+}
+
+{
+  const expandedDifferences = expandBookBoundaryPrimitivesToDifferences(bookBoundaryPrimitives);
+  const originalBlocks = buildCanonicalDifferenceBlockMap(differences);
+  const expandedBlocks = buildCanonicalDifferenceBlockMap(expandedDifferences);
+
+  for (const systemId of nonKufiIds) {
+    assert(expandedBlocks.has(systemId), `book-boundary-primitives.json generates ${systemId}`);
+    assert(JSON.stringify(expandedBlocks.get(systemId)) === JSON.stringify(originalBlocks.get(systemId)), `book-boundary-primitives.json generates differences.json exactly for ${systemId}`);
+  }
+}
+
+{
+  const rebuiltPrimitives = buildBookBoundaryPrimitives(differences, countingSystems);
+  assert(rebuiltPrimitives._reference_system === bookBoundaryPrimitives._reference_system, 'differences.json projects back to the same primitive reference system');
+  assert(JSON.stringify(rebuiltPrimitives._counting_system_order) === JSON.stringify(bookBoundaryPrimitives._counting_system_order), 'differences.json projects back to the same primitive counting-system order');
+  assert(JSON.stringify(rebuiltPrimitives.surahs) === JSON.stringify(bookBoundaryPrimitives.surahs), 'differences.json projects back to book-boundary-primitives.json exactly');
+}
+
+
+section('Canonical Evidence Sidecar');
+
+const normalizedPrimitives = normalizeBookBoundaryPrimitivesDocument(bookBoundaryPrimitives, countingSystems, pkg.version);
+const normalizedEvidence = normalizeBookBoundaryEvidenceDocument(bookBoundaryEvidence, normalizedPrimitives, countingSystems, pkg.version);
+assert(JSON.stringify(normalizedEvidence) === JSON.stringify(bookBoundaryEvidence), 'book-boundary-evidence.json is normalized and aligned to the primitive layer');
+assert(JSON.stringify(bookBoundaryEvidence._counting_system_order) === JSON.stringify(expectedBookOrder), 'book-boundary-evidence.json uses the traditional system order');
+
+for (const [surahKey, ayahs] of Object.entries(bookBoundaryEvidence.surahs)) {
+  for (const [ayahKey, record] of Object.entries(ayahs)) {
+    const primitive = bookBoundaryPrimitives.surahs[surahKey][ayahKey];
+    assert(Boolean(primitive), `book-boundary-evidence.json: ${surahKey}:${ayahKey} exists in the primitive layer`);
+
+    if (record.end) {
+      assert(record.end.word === primitive.end.word, `book-boundary-evidence.json: ${surahKey}:${ayahKey} end word matches the primitive`);
+      assert(VERIFICATION_STATUS_ORDER.includes(record.end.verification_status), `book-boundary-evidence.json: ${surahKey}:${ayahKey} end has a valid verification status`);
+    }
+
+    for (const evidencePoint of record.internal || []) {
+      const primitivePoint = (primitive.internal || []).find(point => point.word === evidencePoint.word);
+      assert(Boolean(primitivePoint), `book-boundary-evidence.json: ${surahKey}:${ayahKey} internal ${evidencePoint.word} exists in the primitive layer`);
+      assert(VERIFICATION_STATUS_ORDER.includes(evidencePoint.verification_status), `book-boundary-evidence.json: ${surahKey}:${ayahKey} internal ${evidencePoint.word} has a valid verification status`);
+    }
+  }
+}
+
+section('Generated Review Artifacts');
+
+assert(reviewData._generated_from.includes('data/book-boundary-primitives.json'), 'review-data.json records book-boundary-primitives.json as a source');
+assert(reviewData._generated_from.includes('data/book-boundary-evidence.json'), 'review-data.json records book-boundary-evidence.json as a source');
+assert(JSON.stringify(reviewData._counting_system_order) === JSON.stringify(expectedBookOrder), 'review-data.json uses the traditional system order');
+
+const expectedReviewRows = flattenBookBoundaryReviewRows(normalizedPrimitives, normalizedEvidence);
+assert(JSON.stringify(reviewData.rows) === JSON.stringify(expectedReviewRows), 'review-data.json rows match the flattened source layer exactly');
+assert(reviewData.summary.total_points === reviewData.rows.length, 'review-data.json summary.total_points matches row count');
+assert(reviewData.summary.by_kind.end + reviewData.summary.by_kind.internal === reviewData.rows.length, 'review-data.json kind totals sum to row count');
+
+const reviewStatusSum = Object.values(reviewData.summary.by_verification_status).reduce((sum, value) => sum + value, 0);
+assert(reviewStatusSum === reviewData.rows.length, 'review-data.json verification-status totals sum to row count');
+
+const masterMatrixLines = masterMatrixCsv.trim().split('\n');
+assert(masterMatrixLines.length === reviewData.rows.length + 1, 'master-matrix.csv has one header line plus one row per disputed point');
+assert(masterMatrixLines[0].includes('verification_status'), 'master-matrix.csv header includes verification_status');
+
+const expectedSystemPacketFilenames = systemIds.map(systemId => `${systemId}.md`).sort();
+const systemPacketFilenames = readdirSync(distReviewSystemsDir).filter(filename => filename.endsWith('.md')).sort();
+assert(JSON.stringify(systemPacketFilenames) === JSON.stringify(expectedSystemPacketFilenames), 'dist/review/systems contains one packet per counting system');
+
+const outstandingRows = reviewData.rows.filter(row => row.verification_status !== 'primary_cited_and_reviewed');
+assert(openQuestionsMarkdown.includes(`Outstanding disputed-boundary claims: ${outstandingRows.length}`), 'open-questions.md reports the outstanding-point count');
+assert(totalsMarkdown.includes('Mapping total'), 'totals.md includes the totals review table');
 
 section('Kufan Total Ayah Count');
 
-const kufiCountsFile = load('surah-counts/kufi.json');
+const kufiCountsFile = loadDist('surah-counts/kufi.json');
 assert(kufiCountsFile._total_ayahs === 6236, 'Kufan total = 6236');
 
 let kufiSum = 0;
@@ -117,7 +477,7 @@ assert(kufiSum === 6236, 'Kufan surah-count sum = 6236');
 section('Counting System Totals');
 
 for (const [systemId, system] of Object.entries(countingSystems)) {
-  const surahCountsFile = load(`surah-counts/${systemId}.json`);
+  const surahCountsFile = loadDist(`surah-counts/${systemId}.json`);
   assert(surahCountsFile._counting_system === systemId, `${systemId}: surah-counts file id matches`);
   assert(surahCountsFile._total_ayahs === system.total_ayahs, `${systemId}: declared total matches counting-systems.json`);
 
@@ -131,7 +491,7 @@ for (const [systemId, system] of Object.entries(countingSystems)) {
     continue;
   }
 
-  const mapping = load(`mappings/by-counting-system/kufi-to-${systemId}.json`);
+  const mapping = loadDist(`mappings/by-counting-system/kufi-to-${systemId}.json`);
   for (let surahNumber = 1; surahNumber <= 114; surahNumber += 1) {
     const mappingCount = mapping.surahs[String(surahNumber)].target_ayah_count;
     const countFileCount = surahCountsFile.surahs[String(surahNumber)];
@@ -142,14 +502,14 @@ for (const [systemId, system] of Object.entries(countingSystems)) {
 section('Al-Fatiha — All 7 ayahs');
 
 for (const systemId of nonKufiIds) {
-  const mapping = load(`mappings/by-counting-system/kufi-to-${systemId}.json`);
+  const mapping = loadDist(`mappings/by-counting-system/kufi-to-${systemId}.json`);
   assert(mapping.surahs['1'].target_ayah_count === 7, `${systemId}: Fatiha target count = 7`);
 }
 
 section('Basmalah handling in Fatiha');
 
 for (const systemId of nonKufiIds) {
-  const mapping = load(`mappings/by-counting-system/kufi-to-${systemId}.json`);
+  const mapping = loadDist(`mappings/by-counting-system/kufi-to-${systemId}.json`);
   const fatiha = mapping.surahs['1'];
   const firstAyah = fatiha.ayahs['1'];
 
@@ -173,28 +533,109 @@ for (const systemId of nonKufiIds) {
 }
 
 for (const systemId of ['madani-first', 'madani-last', 'basri', 'dimashqi']) {
-  const mapping = load(`mappings/by-counting-system/kufi-to-${systemId}.json`);
+  const mapping = loadDist(`mappings/by-counting-system/kufi-to-${systemId}.json`);
   assert(mapping.surahs['1'].ayahs['1'].status === 'merged', `${systemId}: Basmalah merged in Fatiha`);
 }
 
 {
-  const mapping = load('mappings/by-counting-system/kufi-to-makki.json');
+  const mapping = loadDist('mappings/by-counting-system/kufi-to-makki.json');
   assert(mapping.surahs['1'].ayahs['1'].status === 'mapped', 'makki: Basmalah remains a standalone ayah in Fatiha');
 }
 
-section('Surah 2 — 285 ayahs in all non-Kufan systems');
+section('Surah 2 — per-system target counts');
+
+const expectedBaqarahCounts = {
+  'madani-first': 285,
+  'madani-last': 285,
+  makki: 285,
+  basri: 287,
+  dimashqi: 285
+};
 
 for (const systemId of nonKufiIds) {
-  const mapping = load(`mappings/by-counting-system/kufi-to-${systemId}.json`);
+  const mapping = loadDist(`mappings/by-counting-system/kufi-to-${systemId}.json`);
   const baqarah = mapping.surahs['2'];
   assert(baqarah.hafs_ayah_count === 286, `${systemId}: Surah 2 Hafs count = 286`);
-  assert(baqarah.target_ayah_count === 285, `${systemId}: Surah 2 target count = 285`);
+  assert(baqarah.target_ayah_count === expectedBaqarahCounts[systemId], `${systemId}: Surah 2 target count = ${expectedBaqarahCounts[systemId]}`);
+}
+
+section('Last Madinan scholarly totals');
+
+{
+  const counts = loadDist('surah-counts/madani-last.json');
+  const expected = {
+    16: 128,
+    67: 31,
+    91: 15
+  };
+
+  assert(counts._total_ayahs === 6214, 'madani-last: total ayahs = 6214');
+  for (const [surahNumber, targetCount] of Object.entries(expected)) {
+    assert(counts.surahs[surahNumber] === targetCount, `madani-last: Surah ${surahNumber} target count = ${targetCount}`);
+  }
+}
+
+section('Basran scholarly totals');
+
+{
+  const counts = loadDist('surah-counts/basri.json');
+  const expected = {
+    1: 7,
+    2: 287,
+    3: 200,
+    4: 175,
+    5: 123,
+    6: 166
+  };
+
+  assert(counts._total_ayahs === 6204, 'basri: total ayahs = 6204');
+  for (const [surahNumber, targetCount] of Object.entries(expected)) {
+    assert(counts.surahs[surahNumber] === targetCount, `basri: Surah ${surahNumber} target count = ${targetCount}`);
+  }
+}
+
+section('Makkan scholarly totals');
+
+{
+  const counts = loadDist('surah-counts/makki.json');
+  const mapping = loadDist('mappings/by-counting-system/kufi-to-makki.json');
+  const expected = {
+    72: 28,
+    78: 40,
+    91: 15
+  };
+
+  assert(counts._total_ayahs === 6219, 'makki: total ayahs = 6219');
+  for (const [surahNumber, targetCount] of Object.entries(expected)) {
+    assert(counts.surahs[surahNumber] === targetCount, `makki: Surah ${surahNumber} target count = ${targetCount}`);
+  }
+
+  assert(mapping.surahs['78'].ayahs['40'].status === 'mapped', 'makki: 78:40 is not counted as an extra ayah');
+  assert(mapping.surahs['91'].ayahs['14'].status === 'mapped', 'makki: 91:14 is not counted as an extra ayah');
+}
+
+section('Classical count attestation file');
+
+{
+  const makki = classicalCountAttestations.systems.makki;
+  assert(typeof classicalCountAttestations._version === 'string', 'classical-count-attestations.json: has _version');
+  assert(makki.status === 'resolved_to_primary_riwaya', 'classical-count-attestations.json: makki status resolved_to_primary_riwaya');
+  assert(makki.mapping_total_ayahs === 6219, 'classical-count-attestations.json: makki mapping total = 6219');
+  assert(makki.primary_classical_total_ayahs === 6219, 'classical-count-attestations.json: makki primary classical total = 6219');
+  assert(makki.delta_from_primary === 0, 'classical-count-attestations.json: makki delta = 0');
+  assert(Array.isArray(makki.disputed_boundaries) && makki.disputed_boundaries.length === 2, 'classical-count-attestations.json: makki has 2 disputed boundaries');
+
+  const boundaryKey = item => `${item.surah}:${item.hafs_ayah}:${item.word}`;
+  const boundaries = new Map(makki.disputed_boundaries.map(item => [boundaryKey(item), item]));
+
+  assert(boundaries.get('78:40:قريبا')?.current_mapping_decision === 'excluded', 'classical-count-attestations.json: makki 78:40 currently excluded');
+  assert(boundaries.get('91:14:فعقروها')?.current_mapping_decision === 'excluded', 'classical-count-attestations.json: makki 91:14 currently excluded');
 }
 
 section('الم surahs — الم merged in all non-Kufan systems');
 
 for (const systemId of nonKufiIds) {
-  const mapping = load(`mappings/by-counting-system/kufi-to-${systemId}.json`);
+  const mapping = loadDist(`mappings/by-counting-system/kufi-to-${systemId}.json`);
   for (const surahNumber of [2, 3, 29, 30, 31, 32]) {
     const surah = mapping.surahs[String(surahNumber)];
     const a1Merged = surah.ayahs['1'].status === 'merged';
@@ -209,7 +650,7 @@ for (const systemId of nonKufiIds) {
   const filename = `kufi-to-${systemId}.json`;
   let mapping;
   try {
-    mapping = load(`mappings/by-counting-system/${filename}`);
+    mapping = loadDist(`mappings/by-counting-system/${filename}`);
   } catch {
     assert(false, `Missing mappings/by-counting-system/${filename}`);
     continue;
@@ -225,9 +666,15 @@ for (const systemId of nonKufiIds) {
     assert(Object.keys(surah.ayahs).length === surah.hafs_ayah_count, `${filename}: Surah ${surahNumber} has one entry per Hafs ayah`);
 
     const coveredTargets = new Set();
-    for (const [hafsAyah, entry] of Object.entries(surah.ayahs)) {
+    for (const [hafsAyahStr, entry] of Object.entries(surah.ayahs)) {
+      const hafsAyah = Number.parseInt(hafsAyahStr, 10);
+      const targets = getTargets(entry);
+      const expectedMergesWithNext = getMergeFlag(surah, hafsAyah);
+
       assert(Number.isInteger(entry.target_ayah), `${filename}: ${surahNumber}:${hafsAyah} has integer target_ayah`);
       assert(entry.target_ayah >= 1 && entry.target_ayah <= surah.target_ayah_count, `${filename}: ${surahNumber}:${hafsAyah} target in range`);
+      assert(!('merges_with_next' in entry) || entry.merges_with_next === true, `${filename}: ${surahNumber}:${hafsAyah} merges_with_next is only stored as true`);
+      assert(Boolean(entry.merges_with_next) === expectedMergesWithNext, `${filename}: ${surahNumber}:${hafsAyah} merges_with_next matches target overlap`);
 
       if (entry.status === 'split') {
         assert(Array.isArray(entry.splits_into) && entry.splits_into.length >= 2, `${filename}: ${surahNumber}:${hafsAyah} split has splits_into`);
@@ -239,7 +686,12 @@ for (const systemId of nonKufiIds) {
         assert(!('splits_into' in entry), `${filename}: ${surahNumber}:${hafsAyah} non-split has no splits_into`);
       }
 
-      for (const target of getTargets(entry)) {
+      if (entry.status === 'merged') {
+        assert(targets.length === 1, `${filename}: ${surahNumber}:${hafsAyah} merged entry covers exactly one target number`);
+        assert(entry.merges_with_next === true, `${filename}: ${surahNumber}:${hafsAyah} merged entry is explicitly marked`);
+      }
+
+      for (const target of targets) {
         assert(target >= 1 && target <= surah.target_ayah_count, `${filename}: ${surahNumber}:${hafsAyah} covers target ${target} in range`);
         coveredTargets.add(target);
       }
@@ -255,13 +707,13 @@ for (const systemId of nonKufiIds) {
   const filename = `${systemId}-to-kufi.json`;
   let reverse;
   try {
-    reverse = load(`mappings/by-counting-system/${filename}`);
+    reverse = loadDist(`mappings/by-counting-system/${filename}`);
   } catch {
     assert(false, `Missing mappings/by-counting-system/${filename}`);
     continue;
   }
 
-  const forward = load(`mappings/by-counting-system/kufi-to-${systemId}.json`);
+  const forward = loadDist(`mappings/by-counting-system/kufi-to-${systemId}.json`);
 
   assert(reverse._source === systemId, `${filename}: source = ${systemId}`);
   assert(reverse._target === 'kufi', `${filename}: target = kufi`);
@@ -278,6 +730,7 @@ for (const systemId of nonKufiIds) {
 
     for (let targetAyah = 1; targetAyah <= reverseSurah.source_ayah_count; targetAyah += 1) {
       const entry = reverseSurah.ayahs[String(targetAyah)];
+
       assert(!!entry, `${filename}: Surah ${surahNumber} has entry for target ayah ${targetAyah}`);
       if (!entry) {
         continue;
@@ -300,13 +753,64 @@ for (const systemId of nonKufiIds) {
   }
 }
 
+section('Boundary Events File');
+
+for (const systemId of nonKufiIds) {
+  const block = boundaryBlocks.get(systemId);
+  const forward = loadDist(`mappings/by-counting-system/kufi-to-${systemId}.json`);
+  const aggregateFromFile = buildDifferenceAggregate(block.items);
+  const aggregateFromForward = buildBoundaryAggregateFromForwardMapping(forward);
+  const totalFromBoundaryFile = kufiCountsFile._total_ayahs - aggregateFromFile.mergeCount + aggregateFromFile.splitCount;
+
+  assert(block._source_mapping_file === `mappings/by-counting-system/kufi-to-${systemId}.json`, `${systemId}: boundary block points at the correct source mapping within dist`);
+  assert(totalFromBoundaryFile === countingSystems[systemId].total_ayahs, `${systemId}: boundary events total matches declared system total`);
+  assert(aggregateFromFile.mergeCount === aggregateFromForward.mergeCount, `${systemId}: boundary merge total matches forward mapping`);
+  assert(aggregateFromFile.splitCount === aggregateFromForward.splitCount, `${systemId}: boundary split total matches forward mapping`);
+
+  for (let surahNumber = 1; surahNumber <= 114; surahNumber += 1) {
+    const surahKey = String(surahNumber);
+    const hafsAyahCount = kufiCountsFile.surahs[surahKey];
+
+    for (let hafsAyah = 1; hafsAyah <= hafsAyahCount; hafsAyah += 1) {
+      const ayahKey = String(hafsAyah);
+      const fromFile = aggregateFromFile.bySurah[surahKey][ayahKey] || { merge: 0, split: 0 };
+      const fromForward = aggregateFromForward.bySurah[surahKey][ayahKey] || { merge: 0, split: 0 };
+      assert(fromFile.merge === fromForward.merge, `${systemId}: boundary merge count matches forward at ${surahNumber}:${hafsAyah}`);
+      assert(fromFile.split === fromForward.split, `${systemId}: boundary split count matches forward at ${surahNumber}:${hafsAyah}`);
+    }
+  }
+}
+
+section('Differences Reconciliation File');
+
+for (const systemId of nonKufiIds) {
+  const report = differencesReconciliation.systems[systemId];
+  assert(report.is_exact_match === true, `${systemId}: generated forward mapping fully reconciles with differences.json`);
+  const expected = buildExpectedReconciliation(
+    buildDifferenceAggregate(differenceBlocks.get(systemId).items),
+    buildDifferenceAggregate(boundaryBlocks.get(systemId).items),
+    kufiCountsFile,
+    countingSystems[systemId].total_ayahs
+  );
+
+  assert(report.is_exact_match === expected.is_exact_match, `${systemId}: reconciliation exact-match flag is correct`);
+  assert(report.word_level_merge_count === expected.word_level_merge_count, `${systemId}: reconciliation word-level merge total is correct`);
+  assert(report.word_level_split_count === expected.word_level_split_count, `${systemId}: reconciliation word-level split total is correct`);
+  assert(report.word_level_total_ayahs === expected.word_level_total_ayahs, `${systemId}: reconciliation word-level total is correct`);
+  assert(report.mapping_merge_count === expected.mapping_merge_count, `${systemId}: reconciliation mapping merge total is correct`);
+  assert(report.mapping_split_count === expected.mapping_split_count, `${systemId}: reconciliation mapping split total is correct`);
+  assert(report.mapping_total_ayahs === expected.mapping_total_ayahs, `${systemId}: reconciliation mapping total is correct`);
+  assert(report.mismatched_surahs.length === expected.mismatched_surahs.length, `${systemId}: reconciliation mismatch count is correct`);
+  assert(JSON.stringify(report.mismatched_surahs) === JSON.stringify(expected.mismatched_surahs), `${systemId}: reconciliation mismatch details are exact`);
+}
+
 section('Surah Counts Files');
 
 for (const systemId of systemIds) {
   const filename = `${systemId}.json`;
   let counts;
   try {
-    counts = load(`surah-counts/${filename}`);
+    counts = loadDist(`surah-counts/${filename}`);
   } catch {
     assert(false, `Missing surah-counts/${filename}`);
     continue;
@@ -320,7 +824,7 @@ for (const systemId of systemIds) {
 
 section('Rawi Files');
 
-const rawisDir = join(dataDir, 'rawis');
+const rawisDir = distRawisDir;
 const rawiFilesOnDisk = new Set(readdirSync(rawisDir).filter(filename => filename.endsWith('.json')));
 assert(rawiFilesOnDisk.size === 20, 'There are 20 rawi metadata files');
 
@@ -331,7 +835,7 @@ for (const { rawiSlug, qiraaSlug, countingSystem } of allRawis) {
     continue;
   }
 
-  const rawi = load(`rawis/${filename}`);
+  const rawi = loadDist(`rawis/${filename}`);
   assert(rawi._rawi === rawiSlug, `${filename}: _rawi matches slug`);
   assert(rawi._qiraa === qiraaSlug, `${filename}: _qiraa matches qiraat.json`);
   assert(rawi._counting_system === countingSystem, `${filename}: _counting_system matches qiraat.json`);
@@ -347,13 +851,13 @@ for (const { rawiSlug, qiraaSlug, countingSystem } of allRawis) {
   } else {
     const expectedPath = `mappings/by-counting-system/kufi-to-${countingSystem}.json`;
     assert(rawi._mapping_file === expectedPath, `${filename}: _mapping_file points at counting-system mapping`);
-    assert(existsSync(join(dataDir, rawi._mapping_file)), `${filename}: _mapping_file exists`);
+    assert(existsSync(distPath(rawi._mapping_file)), `${filename}: _mapping_file exists`);
   }
 }
 
 section('Rawi Alias Mapping Files');
 
-const rawiMappingsDir = join(dataDir, 'mappings', 'by-rawi');
+const rawiMappingsDir = distMappingsByRawiDir;
 const rawiAliasFiles = new Set(readdirSync(rawiMappingsDir).filter(filename => filename.endsWith('.json')));
 assert(rawiAliasFiles.size === nonKufiRawis.length * 2, 'There are 2 alias mapping files for every non-Kufi rawi');
 
@@ -363,23 +867,64 @@ for (const { rawiSlug, countingSystem } of nonKufiRawis) {
   assert(rawiAliasFiles.has(forwardAlias), `mappings/by-rawi/${forwardAlias} exists`);
   assert(rawiAliasFiles.has(reverseAlias), `mappings/by-rawi/${reverseAlias} exists`);
 
-  const forward = load(`mappings/by-rawi/${forwardAlias}`);
-  const reverse = load(`mappings/by-rawi/${reverseAlias}`);
+  const forward = loadDist(`mappings/by-rawi/${forwardAlias}`);
+  const reverse = loadDist(`mappings/by-rawi/${reverseAlias}`);
   assert(forward._rawi === rawiSlug, `${forwardAlias}: _rawi matches`);
   assert(forward._source === 'kufi' && forward._target === countingSystem, `${forwardAlias}: source/target are correct`);
   assert(reverse._rawi === rawiSlug, `${reverseAlias}: _rawi matches`);
   assert(reverse._source === countingSystem && reverse._target === 'kufi', `${reverseAlias}: source/target are correct`);
 }
 
+section('Site Data');
+
+assert(Array.isArray(siteData.system_order) && siteData.system_order.length === systemIds.length, 'site data includes full system order');
+assert(JSON.stringify(siteData.review_status_order) === JSON.stringify(VERIFICATION_STATUS_ORDER), 'site data preserves verification status order');
+assert(siteData.summary.total_points === reviewData.summary.total_points, 'site data summary total_points matches review data');
+assert(siteData.summary.evidence.total_items === siteData.rows.reduce((sum, row) => sum + row.evidence_count, 0), 'site data evidence total matches row evidence counts');
+assert(siteData.summary.evidence.points_uncited === siteData.summary.by_verification_status.uncited, 'site data uncited evidence summary matches verification summary');
+assert(siteData.summary.attestations.with_explicit_policy === Object.keys(siteData.attestations).length, 'site data attestation summary matches attestation records');
+assert(siteData.systems.length === systemIds.length, 'site data includes all systems');
+assert(siteData.surahs.length === 114, 'site data includes 114 surah summaries');
+assert(siteData.rows.length === reviewData.rows.length, 'site data includes every review row');
+
+const siteRowsBySurah = new Map(Array.from({ length: 114 }, (_, index) => [index + 1, []]));
+for (const row of siteData.rows) {
+  siteRowsBySurah.get(row.surah).push(row);
+  assert(row.location_label === `${row.surah}:${row.hafs_ayah}`, `site data row ${row.anchor_key} has canonical location_label`);
+  assert(row.counted_by_count === row.counted_by.length, `site data row ${row.anchor_key} counted_by_count matches counted_by length`);
+  assert(row.omitted_by_count === row.omitted_by.length, `site data row ${row.anchor_key} omitted_by_count matches omitted_by length`);
+}
+
+for (let surahNumber = 1; surahNumber <= 114; surahNumber += 1) {
+  const labels = siteRowsBySurah.get(surahNumber).map(row => row.ayah_slot_label);
+  assert(new Set(labels).size === labels.length, `site data surah ${surahNumber} has unique ayah_slot_label values`);
+}
+
+for (const system of siteData.systems) {
+  const reviewSummary = reviewData.summary.by_system[system.id];
+  const profile = siteData.system_profiles[system.id];
+  assert(!!reviewSummary, `site data: ${system.id} exists in review summary`);
+  assert(Array.isArray(profile) && profile.length === 114, `site data: ${system.id} has 114 profile rows`);
+  assert(system.counts_boundary === reviewSummary.counts_boundary, `site data: ${system.id} counts_boundary matches review data`);
+  assert(system.merge_effects === reviewSummary.merge_effects, `site data: ${system.id} merge_effects match review data`);
+}
+
 section('Cleanup');
 
-assert(!existsSync(join(dataDir, 'hafs-surah-ayah-counts.json')), 'Deprecated hafs-surah-ayah-counts.json is absent');
+assert(!existsSync(sourcePath('hafs-surah-ayah-counts.json')), 'Deprecated hafs-surah-ayah-counts.json is absent');
+assert(!existsSync(sourcePath('differences.json')), 'Source data omits generated differences.json');
+assert(!existsSync(sourcePath('boundary-events.json')), 'Source data omits generated boundary-events.json');
+assert(!existsSync(sourcePath('differences-reconciliation.json')), 'Source data omits generated differences-reconciliation.json');
+assert(!existsSync(sourcePath('classical-count-attestations.json')), 'Source data omits generated classical-count-attestations.json');
+assert(!existsSync(sourcePath('rawis')), 'Source data omits generated rawis directory');
+assert(!existsSync(sourcePath('mappings')), 'Source data omits generated mappings directory');
+assert(!existsSync(sourcePath('surah-counts')), 'Source data omits generated surah-counts directory');
 
 section('Bidirectional Consistency');
 
 for (const systemId of nonKufiIds) {
-  const forward = load(`mappings/by-counting-system/kufi-to-${systemId}.json`);
-  const reverse = load(`mappings/by-counting-system/${systemId}-to-kufi.json`);
+  const forward = loadDist(`mappings/by-counting-system/kufi-to-${systemId}.json`);
+  const reverse = loadDist(`mappings/by-counting-system/${systemId}-to-kufi.json`);
 
   for (let surahNumber = 1; surahNumber <= 114; surahNumber += 1) {
     const key = String(surahNumber);
@@ -400,8 +945,8 @@ for (const systemId of nonKufiIds) {
 section('Mapping ↔ Surah-Counts Consistency');
 
 for (const systemId of nonKufiIds) {
-  const mapping = load(`mappings/by-counting-system/kufi-to-${systemId}.json`);
-  const counts = load(`surah-counts/${systemId}.json`);
+  const mapping = loadDist(`mappings/by-counting-system/kufi-to-${systemId}.json`);
+  const counts = loadDist(`surah-counts/${systemId}.json`);
 
   let totalFromMapping = 0;
   for (let surahNumber = 1; surahNumber <= 114; surahNumber += 1) {
