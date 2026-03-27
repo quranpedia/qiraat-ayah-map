@@ -1,0 +1,34 @@
+{
+  "_version": "0.1.0",
+  "_description": "Curated classical total-count attestations and explicit repository decisions for disputed counting-system totals.",
+  "systems": {
+    "makki": {
+      "status": "resolved_to_primary_riwaya",
+      "mapping_total_ayahs": 6219,
+      "primary_classical_total_ayahs": 6219,
+      "delta_from_primary": 0,
+      "policy_en": "Prefer the primary Makki total reported by Abu Amr al-Dani when later computed variants can be reproduced only by disputed boundary positions.",
+      "policy_ar": "يُقدَّم مجموع العدد المكي الذي رواه أبو عمرو الداني إذا لم يمكن بلوغ الجمل الأخرى إلا بعدِّ مواضع مختلف فيها.",
+      "disputed_boundaries": [
+        {
+          "surah": 78,
+          "hafs_ayah": 40,
+          "word": "قريبا",
+          "primary_riwaya_decision": "excluded",
+          "note_en": "Abu Amr al-Dani reports this boundary for Basri only, not for Makki.",
+          "note_ar": "نصَّ أبو عمرو الداني على عدِّ هذا الموضع للبصري فقط دون المكي.",
+          "current_mapping_decision": "excluded"
+        },
+        {
+          "surah": 91,
+          "hafs_ayah": 14,
+          "word": "فعقروها",
+          "primary_riwaya_decision": "excluded",
+          "note_en": "Abu Amr al-Dani marks the Makki count here as disputed (بخلاف عنه); the repository excludes it to preserve the primary Makki total of 6219.",
+          "note_ar": "ذكر أبو عمرو الداني عدَّ هذا الموضع للمكي بخلاف عنه؛ واعتمد المستودع تركه محافظةً على الجملة الأصلية للعدد المكي (6219).",
+          "current_mapping_decision": "excluded"
+        }
+      ]
+    }
+  }
+}

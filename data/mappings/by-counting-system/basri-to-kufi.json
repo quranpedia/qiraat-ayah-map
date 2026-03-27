@@ -43,20 +43,20 @@
       }
     },
     "2": {
-      "source_ayah_count": 285,
+      "source_ayah_count": 287,
       "hafs_ayah_count": 286,
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3
+            1,
+            2
           ],
           "status": "covers_multiple"
+        },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
         },
         "3": {
           "hafs_ayah": 4,
@@ -924,15 +924,15 @@
         },
         "219": {
           "hafs_ayah": 219,
-          "status": "mapped"
-        },
-        "220": {
-          "hafs_ayah": 220,
           "hafs_ayahs": [
-            220,
-            221
+            219,
+            220
           ],
           "status": "covers_multiple"
+        },
+        "220": {
+          "hafs_ayah": 221,
+          "status": "mapped"
         },
         "221": {
           "hafs_ayah": 222,
@@ -1192,12 +1192,15 @@
         },
         "285": {
           "hafs_ayah": 284,
-          "hafs_ayahs": [
-            284,
-            285,
-            286
-          ],
-          "status": "covers_multiple"
+          "status": "mapped"
+        },
+        "286": {
+          "hafs_ayah": 285,
+          "status": "mapped"
+        },
+        "287": {
+          "hafs_ayah": 286,
+          "status": "mapped"
         }
       }
     },
@@ -1207,15 +1210,15 @@
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3
+            1,
+            2
           ],
           "status": "covers_multiple"
+        },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
         },
         "3": {
           "hafs_ayah": 4,
@@ -1399,614 +1402,614 @@
         },
         "48": {
           "hafs_ayah": 48,
-          "status": "mapped"
-        },
-        "49": {
-          "hafs_ayah": 49,
           "hafs_ayahs": [
-            49,
-            50
+            48,
+            49
           ],
           "status": "covers_multiple"
         },
+        "49": {
+          "hafs_ayah": 49,
+          "status": "mapped"
+        },
         "50": {
-          "hafs_ayah": 51,
+          "hafs_ayah": 50,
           "status": "mapped"
         },
         "51": {
-          "hafs_ayah": 52,
+          "hafs_ayah": 51,
           "status": "mapped"
         },
         "52": {
-          "hafs_ayah": 53,
+          "hafs_ayah": 52,
           "status": "mapped"
         },
         "53": {
-          "hafs_ayah": 54,
+          "hafs_ayah": 53,
           "status": "mapped"
         },
         "54": {
-          "hafs_ayah": 55,
+          "hafs_ayah": 54,
           "status": "mapped"
         },
         "55": {
-          "hafs_ayah": 56,
+          "hafs_ayah": 55,
           "status": "mapped"
         },
         "56": {
-          "hafs_ayah": 57,
+          "hafs_ayah": 56,
           "status": "mapped"
         },
         "57": {
-          "hafs_ayah": 58,
+          "hafs_ayah": 57,
           "status": "mapped"
         },
         "58": {
-          "hafs_ayah": 59,
+          "hafs_ayah": 58,
           "status": "mapped"
         },
         "59": {
-          "hafs_ayah": 60,
+          "hafs_ayah": 59,
           "status": "mapped"
         },
         "60": {
-          "hafs_ayah": 61,
+          "hafs_ayah": 60,
           "status": "mapped"
         },
         "61": {
-          "hafs_ayah": 62,
+          "hafs_ayah": 61,
           "status": "mapped"
         },
         "62": {
-          "hafs_ayah": 63,
+          "hafs_ayah": 62,
           "status": "mapped"
         },
         "63": {
-          "hafs_ayah": 64,
+          "hafs_ayah": 63,
           "status": "mapped"
         },
         "64": {
-          "hafs_ayah": 65,
+          "hafs_ayah": 64,
           "status": "mapped"
         },
         "65": {
-          "hafs_ayah": 66,
+          "hafs_ayah": 65,
           "status": "mapped"
         },
         "66": {
-          "hafs_ayah": 67,
+          "hafs_ayah": 66,
           "status": "mapped"
         },
         "67": {
-          "hafs_ayah": 68,
+          "hafs_ayah": 67,
           "status": "mapped"
         },
         "68": {
-          "hafs_ayah": 69,
+          "hafs_ayah": 68,
           "status": "mapped"
         },
         "69": {
-          "hafs_ayah": 70,
+          "hafs_ayah": 69,
           "status": "mapped"
         },
         "70": {
-          "hafs_ayah": 71,
+          "hafs_ayah": 70,
           "status": "mapped"
         },
         "71": {
-          "hafs_ayah": 72,
+          "hafs_ayah": 71,
           "status": "mapped"
         },
         "72": {
-          "hafs_ayah": 73,
+          "hafs_ayah": 72,
           "status": "mapped"
         },
         "73": {
-          "hafs_ayah": 74,
+          "hafs_ayah": 73,
           "status": "mapped"
         },
         "74": {
-          "hafs_ayah": 75,
+          "hafs_ayah": 74,
           "status": "mapped"
         },
         "75": {
-          "hafs_ayah": 76,
+          "hafs_ayah": 75,
           "status": "mapped"
         },
         "76": {
-          "hafs_ayah": 77,
+          "hafs_ayah": 76,
           "status": "mapped"
         },
         "77": {
-          "hafs_ayah": 78,
+          "hafs_ayah": 77,
           "status": "mapped"
         },
         "78": {
-          "hafs_ayah": 79,
+          "hafs_ayah": 78,
           "status": "mapped"
         },
         "79": {
-          "hafs_ayah": 80,
+          "hafs_ayah": 79,
           "status": "mapped"
         },
         "80": {
-          "hafs_ayah": 81,
+          "hafs_ayah": 80,
           "status": "mapped"
         },
         "81": {
-          "hafs_ayah": 82,
+          "hafs_ayah": 81,
           "status": "mapped"
         },
         "82": {
-          "hafs_ayah": 83,
+          "hafs_ayah": 82,
           "status": "mapped"
         },
         "83": {
-          "hafs_ayah": 84,
+          "hafs_ayah": 83,
           "status": "mapped"
         },
         "84": {
-          "hafs_ayah": 85,
+          "hafs_ayah": 84,
           "status": "mapped"
         },
         "85": {
-          "hafs_ayah": 86,
+          "hafs_ayah": 85,
           "status": "mapped"
         },
         "86": {
-          "hafs_ayah": 87,
+          "hafs_ayah": 86,
           "status": "mapped"
         },
         "87": {
-          "hafs_ayah": 88,
+          "hafs_ayah": 87,
           "status": "mapped"
         },
         "88": {
-          "hafs_ayah": 89,
+          "hafs_ayah": 88,
           "status": "mapped"
         },
         "89": {
-          "hafs_ayah": 90,
+          "hafs_ayah": 89,
           "status": "mapped"
         },
         "90": {
-          "hafs_ayah": 91,
+          "hafs_ayah": 90,
           "status": "mapped"
         },
         "91": {
-          "hafs_ayah": 92,
+          "hafs_ayah": 91,
           "status": "mapped"
         },
         "92": {
-          "hafs_ayah": 93,
+          "hafs_ayah": 92,
           "status": "mapped"
         },
         "93": {
-          "hafs_ayah": 94,
+          "hafs_ayah": 93,
           "status": "mapped"
         },
         "94": {
-          "hafs_ayah": 95,
+          "hafs_ayah": 94,
           "status": "mapped"
         },
         "95": {
-          "hafs_ayah": 96,
+          "hafs_ayah": 95,
           "status": "mapped"
         },
         "96": {
-          "hafs_ayah": 97,
+          "hafs_ayah": 96,
           "status": "mapped"
         },
         "97": {
-          "hafs_ayah": 98,
+          "hafs_ayah": 97,
           "status": "mapped"
         },
         "98": {
-          "hafs_ayah": 99,
+          "hafs_ayah": 98,
           "status": "mapped"
         },
         "99": {
-          "hafs_ayah": 100,
+          "hafs_ayah": 99,
           "status": "mapped"
         },
         "100": {
-          "hafs_ayah": 101,
+          "hafs_ayah": 100,
           "status": "mapped"
         },
         "101": {
-          "hafs_ayah": 102,
+          "hafs_ayah": 101,
           "status": "mapped"
         },
         "102": {
-          "hafs_ayah": 103,
+          "hafs_ayah": 102,
           "status": "mapped"
         },
         "103": {
-          "hafs_ayah": 104,
+          "hafs_ayah": 103,
           "status": "mapped"
         },
         "104": {
-          "hafs_ayah": 105,
+          "hafs_ayah": 104,
           "status": "mapped"
         },
         "105": {
-          "hafs_ayah": 106,
+          "hafs_ayah": 105,
           "status": "mapped"
         },
         "106": {
-          "hafs_ayah": 107,
+          "hafs_ayah": 106,
           "status": "mapped"
         },
         "107": {
-          "hafs_ayah": 108,
+          "hafs_ayah": 107,
           "status": "mapped"
         },
         "108": {
-          "hafs_ayah": 109,
+          "hafs_ayah": 108,
           "status": "mapped"
         },
         "109": {
-          "hafs_ayah": 110,
+          "hafs_ayah": 109,
           "status": "mapped"
         },
         "110": {
-          "hafs_ayah": 111,
+          "hafs_ayah": 110,
           "status": "mapped"
         },
         "111": {
-          "hafs_ayah": 112,
+          "hafs_ayah": 111,
           "status": "mapped"
         },
         "112": {
-          "hafs_ayah": 113,
+          "hafs_ayah": 112,
           "status": "mapped"
         },
         "113": {
-          "hafs_ayah": 114,
+          "hafs_ayah": 113,
           "status": "mapped"
         },
         "114": {
-          "hafs_ayah": 115,
+          "hafs_ayah": 114,
           "status": "mapped"
         },
         "115": {
-          "hafs_ayah": 116,
+          "hafs_ayah": 115,
           "status": "mapped"
         },
         "116": {
-          "hafs_ayah": 117,
+          "hafs_ayah": 116,
           "status": "mapped"
         },
         "117": {
-          "hafs_ayah": 118,
+          "hafs_ayah": 117,
           "status": "mapped"
         },
         "118": {
-          "hafs_ayah": 119,
+          "hafs_ayah": 118,
           "status": "mapped"
         },
         "119": {
-          "hafs_ayah": 120,
+          "hafs_ayah": 119,
           "status": "mapped"
         },
         "120": {
-          "hafs_ayah": 121,
+          "hafs_ayah": 120,
           "status": "mapped"
         },
         "121": {
-          "hafs_ayah": 122,
+          "hafs_ayah": 121,
           "status": "mapped"
         },
         "122": {
-          "hafs_ayah": 123,
+          "hafs_ayah": 122,
           "status": "mapped"
         },
         "123": {
-          "hafs_ayah": 124,
+          "hafs_ayah": 123,
           "status": "mapped"
         },
         "124": {
-          "hafs_ayah": 125,
+          "hafs_ayah": 124,
           "status": "mapped"
         },
         "125": {
-          "hafs_ayah": 126,
+          "hafs_ayah": 125,
           "status": "mapped"
         },
         "126": {
-          "hafs_ayah": 127,
+          "hafs_ayah": 126,
           "status": "mapped"
         },
         "127": {
-          "hafs_ayah": 128,
+          "hafs_ayah": 127,
           "status": "mapped"
         },
         "128": {
-          "hafs_ayah": 129,
+          "hafs_ayah": 128,
           "status": "mapped"
         },
         "129": {
-          "hafs_ayah": 130,
+          "hafs_ayah": 129,
           "status": "mapped"
         },
         "130": {
-          "hafs_ayah": 131,
+          "hafs_ayah": 130,
           "status": "mapped"
         },
         "131": {
-          "hafs_ayah": 132,
+          "hafs_ayah": 131,
           "status": "mapped"
         },
         "132": {
-          "hafs_ayah": 133,
+          "hafs_ayah": 132,
           "status": "mapped"
         },
         "133": {
-          "hafs_ayah": 134,
+          "hafs_ayah": 133,
           "status": "mapped"
         },
         "134": {
-          "hafs_ayah": 135,
+          "hafs_ayah": 134,
           "status": "mapped"
         },
         "135": {
-          "hafs_ayah": 136,
+          "hafs_ayah": 135,
           "status": "mapped"
         },
         "136": {
-          "hafs_ayah": 137,
+          "hafs_ayah": 136,
           "status": "mapped"
         },
         "137": {
-          "hafs_ayah": 138,
+          "hafs_ayah": 137,
           "status": "mapped"
         },
         "138": {
-          "hafs_ayah": 139,
+          "hafs_ayah": 138,
           "status": "mapped"
         },
         "139": {
-          "hafs_ayah": 140,
+          "hafs_ayah": 139,
           "status": "mapped"
         },
         "140": {
-          "hafs_ayah": 141,
+          "hafs_ayah": 140,
           "status": "mapped"
         },
         "141": {
-          "hafs_ayah": 142,
+          "hafs_ayah": 141,
           "status": "mapped"
         },
         "142": {
-          "hafs_ayah": 143,
+          "hafs_ayah": 142,
           "status": "mapped"
         },
         "143": {
-          "hafs_ayah": 144,
+          "hafs_ayah": 143,
           "status": "mapped"
         },
         "144": {
-          "hafs_ayah": 145,
+          "hafs_ayah": 144,
           "status": "mapped"
         },
         "145": {
-          "hafs_ayah": 146,
+          "hafs_ayah": 145,
           "status": "mapped"
         },
         "146": {
-          "hafs_ayah": 147,
+          "hafs_ayah": 146,
           "status": "mapped"
         },
         "147": {
-          "hafs_ayah": 148,
+          "hafs_ayah": 147,
           "status": "mapped"
         },
         "148": {
-          "hafs_ayah": 149,
+          "hafs_ayah": 148,
           "status": "mapped"
         },
         "149": {
-          "hafs_ayah": 150,
+          "hafs_ayah": 149,
           "status": "mapped"
         },
         "150": {
-          "hafs_ayah": 151,
+          "hafs_ayah": 150,
           "status": "mapped"
         },
         "151": {
-          "hafs_ayah": 152,
+          "hafs_ayah": 151,
           "status": "mapped"
         },
         "152": {
-          "hafs_ayah": 153,
+          "hafs_ayah": 152,
           "status": "mapped"
         },
         "153": {
-          "hafs_ayah": 154,
+          "hafs_ayah": 153,
           "status": "mapped"
         },
         "154": {
-          "hafs_ayah": 155,
+          "hafs_ayah": 154,
           "status": "mapped"
         },
         "155": {
-          "hafs_ayah": 156,
+          "hafs_ayah": 155,
           "status": "mapped"
         },
         "156": {
-          "hafs_ayah": 157,
+          "hafs_ayah": 156,
           "status": "mapped"
         },
         "157": {
-          "hafs_ayah": 158,
+          "hafs_ayah": 157,
           "status": "mapped"
         },
         "158": {
-          "hafs_ayah": 159,
+          "hafs_ayah": 158,
           "status": "mapped"
         },
         "159": {
-          "hafs_ayah": 160,
+          "hafs_ayah": 159,
           "status": "mapped"
         },
         "160": {
-          "hafs_ayah": 161,
+          "hafs_ayah": 160,
           "status": "mapped"
         },
         "161": {
-          "hafs_ayah": 162,
+          "hafs_ayah": 161,
           "status": "mapped"
         },
         "162": {
-          "hafs_ayah": 163,
+          "hafs_ayah": 162,
           "status": "mapped"
         },
         "163": {
-          "hafs_ayah": 164,
+          "hafs_ayah": 163,
           "status": "mapped"
         },
         "164": {
-          "hafs_ayah": 165,
+          "hafs_ayah": 164,
           "status": "mapped"
         },
         "165": {
-          "hafs_ayah": 166,
+          "hafs_ayah": 165,
           "status": "mapped"
         },
         "166": {
-          "hafs_ayah": 167,
+          "hafs_ayah": 166,
           "status": "mapped"
         },
         "167": {
-          "hafs_ayah": 168,
+          "hafs_ayah": 167,
           "status": "mapped"
         },
         "168": {
-          "hafs_ayah": 169,
+          "hafs_ayah": 168,
           "status": "mapped"
         },
         "169": {
-          "hafs_ayah": 170,
+          "hafs_ayah": 169,
           "status": "mapped"
         },
         "170": {
-          "hafs_ayah": 171,
+          "hafs_ayah": 170,
           "status": "mapped"
         },
         "171": {
-          "hafs_ayah": 172,
+          "hafs_ayah": 171,
           "status": "mapped"
         },
         "172": {
-          "hafs_ayah": 173,
+          "hafs_ayah": 172,
           "status": "mapped"
         },
         "173": {
-          "hafs_ayah": 174,
+          "hafs_ayah": 173,
           "status": "mapped"
         },
         "174": {
-          "hafs_ayah": 175,
+          "hafs_ayah": 174,
           "status": "mapped"
         },
         "175": {
-          "hafs_ayah": 176,
+          "hafs_ayah": 175,
           "status": "mapped"
         },
         "176": {
-          "hafs_ayah": 177,
+          "hafs_ayah": 176,
           "status": "mapped"
         },
         "177": {
-          "hafs_ayah": 178,
+          "hafs_ayah": 177,
           "status": "mapped"
         },
         "178": {
-          "hafs_ayah": 179,
+          "hafs_ayah": 178,
           "status": "mapped"
         },
         "179": {
-          "hafs_ayah": 180,
+          "hafs_ayah": 179,
           "status": "mapped"
         },
         "180": {
-          "hafs_ayah": 181,
+          "hafs_ayah": 180,
           "status": "mapped"
         },
         "181": {
-          "hafs_ayah": 182,
+          "hafs_ayah": 181,
           "status": "mapped"
         },
         "182": {
-          "hafs_ayah": 183,
+          "hafs_ayah": 182,
           "status": "mapped"
         },
         "183": {
-          "hafs_ayah": 184,
+          "hafs_ayah": 183,
           "status": "mapped"
         },
         "184": {
-          "hafs_ayah": 185,
+          "hafs_ayah": 184,
           "status": "mapped"
         },
         "185": {
-          "hafs_ayah": 186,
+          "hafs_ayah": 185,
           "status": "mapped"
         },
         "186": {
-          "hafs_ayah": 187,
+          "hafs_ayah": 186,
           "status": "mapped"
         },
         "187": {
-          "hafs_ayah": 188,
+          "hafs_ayah": 187,
           "status": "mapped"
         },
         "188": {
-          "hafs_ayah": 189,
+          "hafs_ayah": 188,
           "status": "mapped"
         },
         "189": {
-          "hafs_ayah": 190,
+          "hafs_ayah": 189,
           "status": "mapped"
         },
         "190": {
-          "hafs_ayah": 191,
+          "hafs_ayah": 190,
           "status": "mapped"
         },
         "191": {
-          "hafs_ayah": 192,
+          "hafs_ayah": 191,
           "status": "mapped"
         },
         "192": {
-          "hafs_ayah": 193,
+          "hafs_ayah": 192,
           "status": "mapped"
         },
         "193": {
-          "hafs_ayah": 194,
+          "hafs_ayah": 193,
           "status": "mapped"
         },
         "194": {
-          "hafs_ayah": 195,
+          "hafs_ayah": 194,
           "status": "mapped"
         },
         "195": {
-          "hafs_ayah": 196,
+          "hafs_ayah": 195,
           "status": "mapped"
         },
         "196": {
-          "hafs_ayah": 197,
+          "hafs_ayah": 196,
           "status": "mapped"
         },
         "197": {
-          "hafs_ayah": 198,
+          "hafs_ayah": 197,
           "status": "mapped"
         },
         "198": {
-          "hafs_ayah": 199,
+          "hafs_ayah": 198,
           "status": "mapped"
         },
         "199": {
-          "hafs_ayah": 200,
+          "hafs_ayah": 199,
           "status": "mapped"
         },
         "200": {
@@ -2193,15 +2196,15 @@
         },
         "44": {
           "hafs_ayah": 44,
-          "status": "mapped"
-        },
-        "45": {
-          "hafs_ayah": 45,
           "hafs_ayahs": [
-            45,
-            46
+            44,
+            45
           ],
           "status": "covers_multiple"
+        },
+        "45": {
+          "hafs_ayah": 46,
+          "status": "mapped"
         },
         "46": {
           "hafs_ayah": 47,
@@ -2726,7 +2729,7 @@
       }
     },
     "5": {
-      "source_ayah_count": 122,
+      "source_ayah_count": 123,
       "hafs_ayah_count": 120,
       "ayahs": {
         "1": {
@@ -3215,16 +3218,16 @@
         },
         "122": {
           "hafs_ayah": 119,
-          "hafs_ayahs": [
-            119,
-            120
-          ],
-          "status": "covers_multiple"
+          "status": "mapped"
+        },
+        "123": {
+          "hafs_ayah": 120,
+          "status": "mapped"
         }
       }
     },
     "6": {
-      "source_ayah_count": 167,
+      "source_ayah_count": 166,
       "hafs_ayah_count": 165,
       "ayahs": {
         "1": {
@@ -3489,15 +3492,15 @@
         },
         "66": {
           "hafs_ayah": 66,
-          "status": "mapped"
-        },
-        "67": {
-          "hafs_ayah": 67,
           "hafs_ayahs": [
-            67,
-            68
+            66,
+            67
           ],
           "status": "covers_multiple"
+        },
+        "67": {
+          "hafs_ayah": 68,
+          "status": "mapped"
         },
         "68": {
           "hafs_ayah": 69,
@@ -3894,28 +3897,24 @@
         "166": {
           "hafs_ayah": 165,
           "status": "mapped"
-        },
-        "167": {
-          "hafs_ayah": 165,
-          "status": "mapped"
         }
       }
     },
     "7": {
-      "source_ayah_count": 206,
+      "source_ayah_count": 205,
       "hafs_ayah_count": 206,
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3
+            1,
+            2
           ],
           "status": "covers_multiple"
+        },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
         },
         "3": {
           "hafs_ayah": 4,
@@ -4023,15 +4022,15 @@
         },
         "29": {
           "hafs_ayah": 29,
-          "status": "mapped"
-        },
-        "30": {
-          "hafs_ayah": 30,
           "hafs_ayahs": [
-            30,
-            31
+            29,
+            30
           ],
           "status": "covers_multiple"
+        },
+        "30": {
+          "hafs_ayah": 31,
+          "status": "mapped"
         },
         "31": {
           "hafs_ayah": 32,
@@ -4732,10 +4731,6 @@
         "205": {
           "hafs_ayah": 206,
           "status": "mapped"
-        },
-        "206": {
-          "hafs_ayah": 206,
-          "status": "mapped"
         }
       }
     },
@@ -4997,15 +4992,15 @@
         },
         "64": {
           "hafs_ayah": 62,
-          "status": "mapped"
-        },
-        "65": {
-          "hafs_ayah": 63,
           "hafs_ayahs": [
-            63,
-            64
+            62,
+            63
           ],
           "status": "covers_multiple"
+        },
+        "65": {
+          "hafs_ayah": 64,
+          "status": "mapped"
         },
         "66": {
           "hafs_ayah": 65,
@@ -6022,7 +6017,7 @@
       }
     },
     "11": {
-      "source_ayah_count": 122,
+      "source_ayah_count": 121,
       "hafs_ayah_count": 123,
       "ayahs": {
         "1": {
@@ -6239,15 +6234,15 @@
         },
         "54": {
           "hafs_ayah": 54,
-          "status": "mapped"
-        },
-        "55": {
-          "hafs_ayah": 55,
           "hafs_ayahs": [
-            55,
-            56
+            54,
+            55
           ],
           "status": "covers_multiple"
+        },
+        "55": {
+          "hafs_ayah": 56,
+          "status": "mapped"
         },
         "56": {
           "hafs_ayah": 57,
@@ -6319,15 +6314,15 @@
         },
         "73": {
           "hafs_ayah": 74,
-          "status": "mapped"
-        },
-        "74": {
-          "hafs_ayah": 75,
           "hafs_ayahs": [
-            75,
-            76
+            74,
+            75
           ],
           "status": "covers_multiple"
+        },
+        "74": {
+          "hafs_ayah": 76,
+          "status": "mapped"
         },
         "75": {
           "hafs_ayah": 77,
@@ -6514,10 +6509,6 @@
           "status": "mapped"
         },
         "121": {
-          "hafs_ayah": 123,
-          "status": "mapped"
-        },
-        "122": {
           "hafs_ayah": 123,
           "status": "mapped"
         }
@@ -6974,7 +6965,7 @@
       }
     },
     "13": {
-      "source_ayah_count": 44,
+      "source_ayah_count": 45,
       "hafs_ayah_count": 43,
       "ayahs": {
         "1": {
@@ -7151,16 +7142,16 @@
         },
         "44": {
           "hafs_ayah": 42,
-          "hafs_ayahs": [
-            42,
-            43
-          ],
-          "status": "covers_multiple"
+          "status": "mapped"
+        },
+        "45": {
+          "hafs_ayah": 43,
+          "status": "mapped"
         }
       }
     },
     "14": {
-      "source_ayah_count": 54,
+      "source_ayah_count": 51,
       "hafs_ayah_count": 52,
       "ayahs": {
         "1": {
@@ -7241,15 +7232,15 @@
         },
         "20": {
           "hafs_ayah": 19,
-          "status": "mapped"
-        },
-        "21": {
-          "hafs_ayah": 20,
           "hafs_ayahs": [
-            20,
-            21
+            19,
+            20
           ],
           "status": "covers_multiple"
+        },
+        "21": {
+          "hafs_ayah": 21,
+          "status": "mapped"
         },
         "22": {
           "hafs_ayah": 22,
@@ -7297,15 +7288,15 @@
         },
         "33": {
           "hafs_ayah": 33,
-          "status": "mapped"
-        },
-        "34": {
-          "hafs_ayah": 34,
           "hafs_ayahs": [
-            34,
-            35
+            33,
+            34
           ],
           "status": "covers_multiple"
+        },
+        "34": {
+          "hafs_ayah": 35,
+          "status": "mapped"
         },
         "35": {
           "hafs_ayah": 36,
@@ -7372,18 +7363,6 @@
           "status": "mapped"
         },
         "51": {
-          "hafs_ayah": 52,
-          "status": "mapped"
-        },
-        "52": {
-          "hafs_ayah": 52,
-          "status": "mapped"
-        },
-        "53": {
-          "hafs_ayah": 52,
-          "status": "mapped"
-        },
-        "54": {
           "hafs_ayah": 52,
           "status": "mapped"
         }
@@ -7471,326 +7450,318 @@
         },
         "20": {
           "hafs_ayah": 20,
-          "hafs_ayahs": [
-            20,
-            21
-          ],
-          "status": "covers_multiple"
+          "status": "mapped"
         },
         "21": {
-          "hafs_ayah": 22,
+          "hafs_ayah": 21,
           "status": "mapped"
         },
         "22": {
-          "hafs_ayah": 23,
+          "hafs_ayah": 22,
           "status": "mapped"
         },
         "23": {
-          "hafs_ayah": 24,
+          "hafs_ayah": 23,
           "status": "mapped"
         },
         "24": {
-          "hafs_ayah": 25,
+          "hafs_ayah": 24,
           "status": "mapped"
         },
         "25": {
-          "hafs_ayah": 26,
+          "hafs_ayah": 25,
           "status": "mapped"
         },
         "26": {
-          "hafs_ayah": 27,
+          "hafs_ayah": 26,
           "status": "mapped"
         },
         "27": {
-          "hafs_ayah": 28,
+          "hafs_ayah": 27,
           "status": "mapped"
         },
         "28": {
-          "hafs_ayah": 29,
+          "hafs_ayah": 28,
           "status": "mapped"
         },
         "29": {
-          "hafs_ayah": 30,
+          "hafs_ayah": 29,
           "status": "mapped"
         },
         "30": {
-          "hafs_ayah": 31,
+          "hafs_ayah": 30,
           "status": "mapped"
         },
         "31": {
-          "hafs_ayah": 32,
+          "hafs_ayah": 31,
           "status": "mapped"
         },
         "32": {
-          "hafs_ayah": 33,
+          "hafs_ayah": 32,
           "status": "mapped"
         },
         "33": {
-          "hafs_ayah": 34,
+          "hafs_ayah": 33,
           "status": "mapped"
         },
         "34": {
-          "hafs_ayah": 35,
+          "hafs_ayah": 34,
           "status": "mapped"
         },
         "35": {
-          "hafs_ayah": 36,
+          "hafs_ayah": 35,
           "status": "mapped"
         },
         "36": {
-          "hafs_ayah": 37,
+          "hafs_ayah": 36,
           "status": "mapped"
         },
         "37": {
-          "hafs_ayah": 38,
+          "hafs_ayah": 37,
           "status": "mapped"
         },
         "38": {
-          "hafs_ayah": 39,
+          "hafs_ayah": 38,
           "status": "mapped"
         },
         "39": {
-          "hafs_ayah": 40,
+          "hafs_ayah": 39,
           "status": "mapped"
         },
         "40": {
-          "hafs_ayah": 41,
+          "hafs_ayah": 40,
           "status": "mapped"
         },
         "41": {
-          "hafs_ayah": 42,
+          "hafs_ayah": 41,
           "status": "mapped"
         },
         "42": {
-          "hafs_ayah": 43,
+          "hafs_ayah": 42,
           "status": "mapped"
         },
         "43": {
-          "hafs_ayah": 44,
-          "hafs_ayahs": [
-            44,
-            45
-          ],
-          "status": "covers_multiple"
+          "hafs_ayah": 43,
+          "status": "mapped"
         },
         "44": {
-          "hafs_ayah": 46,
+          "hafs_ayah": 44,
           "status": "mapped"
         },
         "45": {
-          "hafs_ayah": 47,
+          "hafs_ayah": 45,
           "status": "mapped"
         },
         "46": {
-          "hafs_ayah": 48,
+          "hafs_ayah": 46,
           "status": "mapped"
         },
         "47": {
-          "hafs_ayah": 49,
+          "hafs_ayah": 47,
           "status": "mapped"
         },
         "48": {
-          "hafs_ayah": 50,
+          "hafs_ayah": 48,
           "status": "mapped"
         },
         "49": {
-          "hafs_ayah": 51,
+          "hafs_ayah": 49,
           "status": "mapped"
         },
         "50": {
-          "hafs_ayah": 52,
+          "hafs_ayah": 50,
           "status": "mapped"
         },
         "51": {
-          "hafs_ayah": 53,
+          "hafs_ayah": 51,
           "status": "mapped"
         },
         "52": {
-          "hafs_ayah": 54,
+          "hafs_ayah": 52,
           "status": "mapped"
         },
         "53": {
-          "hafs_ayah": 55,
+          "hafs_ayah": 53,
           "status": "mapped"
         },
         "54": {
-          "hafs_ayah": 56,
+          "hafs_ayah": 54,
           "status": "mapped"
         },
         "55": {
-          "hafs_ayah": 57,
+          "hafs_ayah": 55,
           "status": "mapped"
         },
         "56": {
-          "hafs_ayah": 58,
+          "hafs_ayah": 56,
           "status": "mapped"
         },
         "57": {
-          "hafs_ayah": 59,
+          "hafs_ayah": 57,
           "status": "mapped"
         },
         "58": {
-          "hafs_ayah": 60,
+          "hafs_ayah": 58,
           "status": "mapped"
         },
         "59": {
-          "hafs_ayah": 61,
+          "hafs_ayah": 59,
           "status": "mapped"
         },
         "60": {
-          "hafs_ayah": 62,
+          "hafs_ayah": 60,
           "status": "mapped"
         },
         "61": {
-          "hafs_ayah": 63,
+          "hafs_ayah": 61,
           "status": "mapped"
         },
         "62": {
-          "hafs_ayah": 64,
+          "hafs_ayah": 62,
           "status": "mapped"
         },
         "63": {
-          "hafs_ayah": 65,
+          "hafs_ayah": 63,
           "status": "mapped"
         },
         "64": {
-          "hafs_ayah": 66,
+          "hafs_ayah": 64,
           "status": "mapped"
         },
         "65": {
-          "hafs_ayah": 67,
+          "hafs_ayah": 65,
           "status": "mapped"
         },
         "66": {
-          "hafs_ayah": 68,
+          "hafs_ayah": 66,
           "status": "mapped"
         },
         "67": {
-          "hafs_ayah": 69,
+          "hafs_ayah": 67,
           "status": "mapped"
         },
         "68": {
-          "hafs_ayah": 70,
+          "hafs_ayah": 68,
           "status": "mapped"
         },
         "69": {
-          "hafs_ayah": 71,
+          "hafs_ayah": 69,
           "status": "mapped"
         },
         "70": {
-          "hafs_ayah": 72,
+          "hafs_ayah": 70,
           "status": "mapped"
         },
         "71": {
-          "hafs_ayah": 73,
+          "hafs_ayah": 71,
           "status": "mapped"
         },
         "72": {
-          "hafs_ayah": 74,
+          "hafs_ayah": 72,
           "status": "mapped"
         },
         "73": {
-          "hafs_ayah": 75,
+          "hafs_ayah": 73,
           "status": "mapped"
         },
         "74": {
-          "hafs_ayah": 76,
+          "hafs_ayah": 74,
           "status": "mapped"
         },
         "75": {
-          "hafs_ayah": 77,
+          "hafs_ayah": 75,
           "status": "mapped"
         },
         "76": {
-          "hafs_ayah": 78,
+          "hafs_ayah": 76,
           "status": "mapped"
         },
         "77": {
-          "hafs_ayah": 79,
+          "hafs_ayah": 77,
           "status": "mapped"
         },
         "78": {
-          "hafs_ayah": 80,
+          "hafs_ayah": 78,
           "status": "mapped"
         },
         "79": {
-          "hafs_ayah": 81,
+          "hafs_ayah": 79,
           "status": "mapped"
         },
         "80": {
-          "hafs_ayah": 82,
+          "hafs_ayah": 80,
           "status": "mapped"
         },
         "81": {
-          "hafs_ayah": 83,
+          "hafs_ayah": 81,
           "status": "mapped"
         },
         "82": {
-          "hafs_ayah": 84,
+          "hafs_ayah": 82,
           "status": "mapped"
         },
         "83": {
-          "hafs_ayah": 85,
+          "hafs_ayah": 83,
           "status": "mapped"
         },
         "84": {
-          "hafs_ayah": 86,
+          "hafs_ayah": 84,
           "status": "mapped"
         },
         "85": {
-          "hafs_ayah": 87,
+          "hafs_ayah": 85,
           "status": "mapped"
         },
         "86": {
-          "hafs_ayah": 88,
+          "hafs_ayah": 86,
           "status": "mapped"
         },
         "87": {
-          "hafs_ayah": 89,
+          "hafs_ayah": 87,
           "status": "mapped"
         },
         "88": {
-          "hafs_ayah": 90,
+          "hafs_ayah": 88,
           "status": "mapped"
         },
         "89": {
-          "hafs_ayah": 91,
+          "hafs_ayah": 89,
           "status": "mapped"
         },
         "90": {
-          "hafs_ayah": 92,
+          "hafs_ayah": 90,
           "status": "mapped"
         },
         "91": {
-          "hafs_ayah": 93,
+          "hafs_ayah": 91,
           "status": "mapped"
         },
         "92": {
-          "hafs_ayah": 94,
+          "hafs_ayah": 92,
           "status": "mapped"
         },
         "93": {
-          "hafs_ayah": 95,
+          "hafs_ayah": 93,
           "status": "mapped"
         },
         "94": {
-          "hafs_ayah": 96,
+          "hafs_ayah": 94,
           "status": "mapped"
         },
         "95": {
-          "hafs_ayah": 97,
+          "hafs_ayah": 95,
           "status": "mapped"
         },
         "96": {
-          "hafs_ayah": 98,
+          "hafs_ayah": 96,
           "status": "mapped"
         },
         "97": {
-          "hafs_ayah": 99,
+          "hafs_ayah": 97,
           "status": "mapped"
         },
         "98": {
-          "hafs_ayah": 99,
+          "hafs_ayah": 98,
           "status": "mapped"
         },
         "99": {
@@ -8747,15 +8718,15 @@
         },
         "107": {
           "hafs_ayah": 107,
-          "status": "mapped"
-        },
-        "108": {
-          "hafs_ayah": 108,
           "hafs_ayahs": [
-            108,
-            109
+            107,
+            108
           ],
           "status": "covers_multiple"
+        },
+        "108": {
+          "hafs_ayah": 109,
+          "status": "mapped"
         },
         "109": {
           "hafs_ayah": 110,
@@ -8768,7 +8739,7 @@
       }
     },
     "18": {
-      "source_ayah_count": 105,
+      "source_ayah_count": 111,
       "hafs_ayah_count": 110,
       "ayahs": {
         "1": {
@@ -9189,16 +9160,31 @@
         },
         "105": {
           "hafs_ayah": 104,
-          "hafs_ayahs": [
-            104,
-            105,
-            106,
-            107,
-            108,
-            109,
-            110
-          ],
-          "status": "covers_multiple"
+          "status": "mapped"
+        },
+        "106": {
+          "hafs_ayah": 105,
+          "status": "mapped"
+        },
+        "107": {
+          "hafs_ayah": 106,
+          "status": "mapped"
+        },
+        "108": {
+          "hafs_ayah": 107,
+          "status": "mapped"
+        },
+        "109": {
+          "hafs_ayah": 108,
+          "status": "mapped"
+        },
+        "110": {
+          "hafs_ayah": 109,
+          "status": "mapped"
+        },
+        "111": {
+          "hafs_ayah": 110,
+          "status": "mapped"
         }
       }
     },
@@ -9208,15 +9194,15 @@
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3
+            1,
+            2
           ],
           "status": "covers_multiple"
+        },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
         },
         "3": {
           "hafs_ayah": 4,
@@ -9605,20 +9591,20 @@
       }
     },
     "20": {
-      "source_ayah_count": 134,
+      "source_ayah_count": 132,
       "hafs_ayah_count": 135,
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3
+            1,
+            2
           ],
           "status": "covers_multiple"
+        },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
         },
         "3": {
           "hafs_ayah": 4,
@@ -9738,30 +9724,31 @@
         },
         "32": {
           "hafs_ayah": 33,
-          "status": "mapped"
-        },
-        "33": {
-          "hafs_ayah": 34,
           "hafs_ayahs": [
+            33,
             34,
             35
           ],
           "status": "covers_multiple"
         },
-        "34": {
+        "33": {
           "hafs_ayah": 36,
           "status": "mapped"
         },
-        "35": {
+        "34": {
           "hafs_ayah": 37,
           "status": "mapped"
         },
-        "36": {
+        "35": {
           "hafs_ayah": 38,
           "status": "mapped"
         },
-        "37": {
+        "36": {
           "hafs_ayah": 39,
+          "status": "mapped"
+        },
+        "37": {
+          "hafs_ayah": 40,
           "status": "mapped"
         },
         "38": {
@@ -9769,335 +9756,335 @@
           "status": "mapped"
         },
         "39": {
-          "hafs_ayah": 40,
-          "status": "mapped"
+          "hafs_ayah": 41,
+          "hafs_ayahs": [
+            41,
+            42
+          ],
+          "status": "covers_multiple"
         },
         "40": {
-          "hafs_ayah": 41,
+          "hafs_ayah": 43,
           "status": "mapped"
         },
         "41": {
-          "hafs_ayah": 42,
-          "hafs_ayahs": [
-            42,
-            43
-          ],
-          "status": "covers_multiple"
-        },
-        "42": {
           "hafs_ayah": 44,
           "status": "mapped"
         },
-        "43": {
+        "42": {
           "hafs_ayah": 45,
           "status": "mapped"
         },
-        "44": {
+        "43": {
           "hafs_ayah": 46,
           "status": "mapped"
         },
-        "45": {
+        "44": {
           "hafs_ayah": 47,
           "status": "mapped"
         },
-        "46": {
+        "45": {
           "hafs_ayah": 48,
           "status": "mapped"
         },
-        "47": {
+        "46": {
           "hafs_ayah": 49,
           "status": "mapped"
         },
-        "48": {
+        "47": {
           "hafs_ayah": 50,
           "status": "mapped"
         },
-        "49": {
+        "48": {
           "hafs_ayah": 51,
           "status": "mapped"
         },
-        "50": {
+        "49": {
           "hafs_ayah": 52,
           "status": "mapped"
         },
-        "51": {
+        "50": {
           "hafs_ayah": 53,
           "status": "mapped"
         },
-        "52": {
+        "51": {
           "hafs_ayah": 54,
           "status": "mapped"
         },
-        "53": {
+        "52": {
           "hafs_ayah": 55,
           "status": "mapped"
         },
-        "54": {
+        "53": {
           "hafs_ayah": 56,
           "status": "mapped"
         },
-        "55": {
+        "54": {
           "hafs_ayah": 57,
           "status": "mapped"
         },
-        "56": {
+        "55": {
           "hafs_ayah": 58,
           "status": "mapped"
         },
-        "57": {
+        "56": {
           "hafs_ayah": 59,
           "status": "mapped"
         },
-        "58": {
+        "57": {
           "hafs_ayah": 60,
           "status": "mapped"
         },
-        "59": {
+        "58": {
           "hafs_ayah": 61,
           "status": "mapped"
         },
-        "60": {
+        "59": {
           "hafs_ayah": 62,
           "status": "mapped"
         },
-        "61": {
+        "60": {
           "hafs_ayah": 63,
           "status": "mapped"
         },
-        "62": {
+        "61": {
           "hafs_ayah": 64,
           "status": "mapped"
         },
-        "63": {
+        "62": {
           "hafs_ayah": 65,
           "status": "mapped"
         },
-        "64": {
+        "63": {
           "hafs_ayah": 66,
           "status": "mapped"
         },
-        "65": {
+        "64": {
           "hafs_ayah": 67,
           "status": "mapped"
         },
-        "66": {
+        "65": {
           "hafs_ayah": 68,
           "status": "mapped"
         },
-        "67": {
+        "66": {
           "hafs_ayah": 69,
           "status": "mapped"
         },
-        "68": {
+        "67": {
           "hafs_ayah": 70,
           "status": "mapped"
         },
-        "69": {
+        "68": {
           "hafs_ayah": 71,
           "status": "mapped"
         },
-        "70": {
+        "69": {
           "hafs_ayah": 72,
           "status": "mapped"
         },
-        "71": {
+        "70": {
           "hafs_ayah": 73,
           "status": "mapped"
         },
-        "72": {
+        "71": {
           "hafs_ayah": 74,
           "status": "mapped"
         },
-        "73": {
+        "72": {
           "hafs_ayah": 75,
           "status": "mapped"
         },
-        "74": {
+        "73": {
           "hafs_ayah": 76,
           "status": "mapped"
         },
-        "75": {
+        "74": {
           "hafs_ayah": 77,
           "status": "mapped"
         },
-        "76": {
+        "75": {
           "hafs_ayah": 78,
+          "hafs_ayahs": [
+            78,
+            79
+          ],
+          "status": "covers_multiple"
+        },
+        "76": {
+          "hafs_ayah": 80,
           "status": "mapped"
         },
         "77": {
-          "hafs_ayah": 79,
-          "hafs_ayahs": [
-            79,
-            80
-          ],
-          "status": "covers_multiple"
-        },
-        "78": {
           "hafs_ayah": 81,
           "status": "mapped"
         },
-        "79": {
+        "78": {
           "hafs_ayah": 82,
           "status": "mapped"
         },
-        "80": {
+        "79": {
           "hafs_ayah": 83,
           "status": "mapped"
         },
-        "81": {
+        "80": {
           "hafs_ayah": 84,
           "status": "mapped"
         },
-        "82": {
+        "81": {
           "hafs_ayah": 85,
           "status": "mapped"
         },
-        "83": {
+        "82": {
           "hafs_ayah": 86,
           "status": "mapped"
         },
-        "84": {
+        "83": {
           "hafs_ayah": 87,
           "status": "mapped"
         },
-        "85": {
+        "84": {
           "hafs_ayah": 88,
           "status": "mapped"
         },
-        "86": {
+        "85": {
           "hafs_ayah": 89,
           "status": "mapped"
         },
-        "87": {
+        "86": {
           "hafs_ayah": 90,
           "status": "mapped"
         },
-        "88": {
+        "87": {
           "hafs_ayah": 91,
           "status": "mapped"
         },
-        "89": {
+        "88": {
           "hafs_ayah": 92,
-          "status": "mapped"
-        },
-        "90": {
-          "hafs_ayah": 93,
           "hafs_ayahs": [
-            93,
-            94
+            92,
+            93
           ],
           "status": "covers_multiple"
         },
-        "91": {
+        "89": {
+          "hafs_ayah": 94,
+          "status": "mapped"
+        },
+        "90": {
           "hafs_ayah": 95,
           "status": "mapped"
         },
-        "92": {
+        "91": {
           "hafs_ayah": 96,
           "status": "mapped"
         },
-        "93": {
+        "92": {
           "hafs_ayah": 97,
           "status": "mapped"
         },
-        "94": {
+        "93": {
           "hafs_ayah": 98,
           "status": "mapped"
         },
-        "95": {
+        "94": {
           "hafs_ayah": 99,
           "status": "mapped"
         },
-        "96": {
+        "95": {
           "hafs_ayah": 100,
           "status": "mapped"
         },
-        "97": {
+        "96": {
           "hafs_ayah": 101,
           "status": "mapped"
         },
-        "98": {
+        "97": {
           "hafs_ayah": 102,
           "status": "mapped"
         },
-        "99": {
+        "98": {
           "hafs_ayah": 103,
           "status": "mapped"
         },
-        "100": {
+        "99": {
           "hafs_ayah": 104,
           "status": "mapped"
         },
-        "101": {
+        "100": {
           "hafs_ayah": 105,
           "status": "mapped"
         },
-        "102": {
+        "101": {
           "hafs_ayah": 106,
           "status": "mapped"
         },
-        "103": {
+        "102": {
           "hafs_ayah": 107,
           "status": "mapped"
         },
-        "104": {
+        "103": {
           "hafs_ayah": 108,
           "status": "mapped"
         },
-        "105": {
+        "104": {
           "hafs_ayah": 109,
           "status": "mapped"
         },
-        "106": {
+        "105": {
           "hafs_ayah": 110,
           "status": "mapped"
         },
-        "107": {
+        "106": {
           "hafs_ayah": 111,
           "status": "mapped"
         },
-        "108": {
+        "107": {
           "hafs_ayah": 112,
           "status": "mapped"
         },
-        "109": {
+        "108": {
           "hafs_ayah": 113,
           "status": "mapped"
         },
-        "110": {
+        "109": {
           "hafs_ayah": 114,
           "status": "mapped"
         },
-        "111": {
+        "110": {
           "hafs_ayah": 115,
           "status": "mapped"
         },
-        "112": {
+        "111": {
           "hafs_ayah": 116,
           "status": "mapped"
         },
-        "113": {
+        "112": {
           "hafs_ayah": 117,
           "status": "mapped"
         },
-        "114": {
+        "113": {
           "hafs_ayah": 118,
           "status": "mapped"
         },
-        "115": {
+        "114": {
           "hafs_ayah": 119,
           "status": "mapped"
         },
-        "116": {
+        "115": {
           "hafs_ayah": 120,
           "status": "mapped"
         },
-        "117": {
+        "116": {
           "hafs_ayah": 121,
           "status": "mapped"
         },
-        "118": {
+        "117": {
           "hafs_ayah": 122,
+          "status": "mapped"
+        },
+        "118": {
+          "hafs_ayah": 123,
           "status": "mapped"
         },
         "119": {
@@ -10105,35 +10092,35 @@
           "status": "mapped"
         },
         "120": {
-          "hafs_ayah": 123,
-          "status": "mapped"
-        },
-        "121": {
           "hafs_ayah": 124,
           "status": "mapped"
         },
-        "122": {
+        "121": {
           "hafs_ayah": 125,
           "status": "mapped"
         },
-        "123": {
+        "122": {
           "hafs_ayah": 126,
           "status": "mapped"
         },
-        "124": {
+        "123": {
           "hafs_ayah": 127,
           "status": "mapped"
         },
-        "125": {
+        "124": {
           "hafs_ayah": 128,
           "status": "mapped"
         },
-        "126": {
+        "125": {
           "hafs_ayah": 129,
           "status": "mapped"
         },
-        "127": {
+        "126": {
           "hafs_ayah": 130,
+          "status": "mapped"
+        },
+        "127": {
+          "hafs_ayah": 131,
           "status": "mapped"
         },
         "128": {
@@ -10141,26 +10128,18 @@
           "status": "mapped"
         },
         "129": {
-          "hafs_ayah": 131,
-          "status": "mapped"
-        },
-        "130": {
           "hafs_ayah": 132,
           "status": "mapped"
         },
-        "131": {
+        "130": {
           "hafs_ayah": 133,
           "status": "mapped"
         },
-        "132": {
+        "131": {
           "hafs_ayah": 134,
           "status": "mapped"
         },
-        "133": {
-          "hafs_ayah": 135,
-          "status": "mapped"
-        },
-        "134": {
+        "132": {
           "hafs_ayah": 135,
           "status": "mapped"
         }
@@ -10432,15 +10411,15 @@
         },
         "66": {
           "hafs_ayah": 66,
-          "status": "mapped"
-        },
-        "67": {
-          "hafs_ayah": 67,
           "hafs_ayahs": [
-            67,
-            68
+            66,
+            67
           ],
           "status": "covers_multiple"
+        },
+        "67": {
+          "hafs_ayah": 68,
+          "status": "mapped"
         },
         "68": {
           "hafs_ayah": 69,
@@ -10621,7 +10600,7 @@
       }
     },
     "22": {
-      "source_ayah_count": 76,
+      "source_ayah_count": 75,
       "hafs_ayah_count": 78,
       "ayahs": {
         "1": {
@@ -10698,240 +10677,240 @@
         },
         "19": {
           "hafs_ayah": 19,
-          "status": "mapped"
+          "hafs_ayahs": [
+            19,
+            20,
+            21
+          ],
+          "status": "covers_multiple"
         },
         "20": {
-          "hafs_ayah": 20,
-          "status": "mapped"
-        },
-        "21": {
-          "hafs_ayah": 21,
-          "status": "mapped"
-        },
-        "22": {
           "hafs_ayah": 22,
           "status": "mapped"
         },
-        "23": {
+        "21": {
           "hafs_ayah": 23,
           "status": "mapped"
         },
-        "24": {
+        "22": {
           "hafs_ayah": 24,
           "status": "mapped"
         },
-        "25": {
+        "23": {
           "hafs_ayah": 25,
           "status": "mapped"
         },
-        "26": {
+        "24": {
           "hafs_ayah": 26,
           "status": "mapped"
         },
-        "27": {
+        "25": {
           "hafs_ayah": 27,
           "status": "mapped"
         },
-        "28": {
+        "26": {
           "hafs_ayah": 28,
           "status": "mapped"
         },
-        "29": {
+        "27": {
           "hafs_ayah": 29,
           "status": "mapped"
         },
-        "30": {
+        "28": {
           "hafs_ayah": 30,
           "status": "mapped"
         },
-        "31": {
+        "29": {
           "hafs_ayah": 31,
           "status": "mapped"
         },
-        "32": {
+        "30": {
           "hafs_ayah": 32,
           "status": "mapped"
         },
-        "33": {
+        "31": {
           "hafs_ayah": 33,
           "status": "mapped"
         },
-        "34": {
+        "32": {
           "hafs_ayah": 34,
           "status": "mapped"
         },
-        "35": {
+        "33": {
           "hafs_ayah": 35,
           "status": "mapped"
         },
-        "36": {
+        "34": {
           "hafs_ayah": 36,
           "status": "mapped"
         },
-        "37": {
+        "35": {
           "hafs_ayah": 37,
           "status": "mapped"
         },
-        "38": {
+        "36": {
           "hafs_ayah": 38,
           "status": "mapped"
         },
-        "39": {
+        "37": {
           "hafs_ayah": 39,
           "status": "mapped"
         },
-        "40": {
+        "38": {
           "hafs_ayah": 40,
           "status": "mapped"
         },
-        "41": {
+        "39": {
           "hafs_ayah": 41,
           "status": "mapped"
         },
-        "42": {
+        "40": {
           "hafs_ayah": 42,
           "status": "mapped"
         },
-        "43": {
+        "41": {
           "hafs_ayah": 43,
-          "status": "mapped"
+          "hafs_ayahs": [
+            43,
+            44
+          ],
+          "status": "covers_multiple"
         },
-        "44": {
-          "hafs_ayah": 44,
-          "status": "mapped"
-        },
-        "45": {
+        "42": {
           "hafs_ayah": 45,
           "status": "mapped"
         },
-        "46": {
+        "43": {
           "hafs_ayah": 46,
           "status": "mapped"
         },
-        "47": {
+        "44": {
           "hafs_ayah": 47,
           "status": "mapped"
         },
-        "48": {
+        "45": {
           "hafs_ayah": 48,
           "status": "mapped"
         },
-        "49": {
+        "46": {
           "hafs_ayah": 49,
           "status": "mapped"
         },
-        "50": {
+        "47": {
           "hafs_ayah": 50,
           "status": "mapped"
         },
-        "51": {
+        "48": {
           "hafs_ayah": 51,
           "status": "mapped"
         },
-        "52": {
+        "49": {
           "hafs_ayah": 52,
           "status": "mapped"
         },
-        "53": {
+        "50": {
           "hafs_ayah": 53,
           "status": "mapped"
         },
-        "54": {
+        "51": {
           "hafs_ayah": 54,
           "status": "mapped"
         },
-        "55": {
+        "52": {
           "hafs_ayah": 55,
           "status": "mapped"
         },
-        "56": {
+        "53": {
           "hafs_ayah": 56,
           "status": "mapped"
         },
-        "57": {
+        "54": {
           "hafs_ayah": 57,
           "status": "mapped"
         },
-        "58": {
+        "55": {
           "hafs_ayah": 58,
           "status": "mapped"
         },
-        "59": {
+        "56": {
           "hafs_ayah": 59,
           "status": "mapped"
         },
-        "60": {
+        "57": {
           "hafs_ayah": 60,
           "status": "mapped"
         },
-        "61": {
+        "58": {
           "hafs_ayah": 61,
           "status": "mapped"
         },
-        "62": {
+        "59": {
           "hafs_ayah": 62,
           "status": "mapped"
         },
-        "63": {
+        "60": {
           "hafs_ayah": 63,
           "status": "mapped"
         },
-        "64": {
+        "61": {
           "hafs_ayah": 64,
           "status": "mapped"
         },
-        "65": {
+        "62": {
           "hafs_ayah": 65,
           "status": "mapped"
         },
-        "66": {
+        "63": {
           "hafs_ayah": 66,
           "status": "mapped"
         },
-        "67": {
+        "64": {
           "hafs_ayah": 67,
           "status": "mapped"
         },
-        "68": {
+        "65": {
           "hafs_ayah": 68,
           "status": "mapped"
         },
-        "69": {
+        "66": {
           "hafs_ayah": 69,
           "status": "mapped"
         },
-        "70": {
+        "67": {
           "hafs_ayah": 70,
           "status": "mapped"
         },
-        "71": {
+        "68": {
           "hafs_ayah": 71,
           "status": "mapped"
         },
-        "72": {
+        "69": {
           "hafs_ayah": 72,
           "status": "mapped"
         },
-        "73": {
+        "70": {
           "hafs_ayah": 73,
           "status": "mapped"
         },
-        "74": {
+        "71": {
           "hafs_ayah": 74,
           "status": "mapped"
         },
-        "75": {
+        "72": {
           "hafs_ayah": 75,
           "status": "mapped"
         },
-        "76": {
+        "73": {
           "hafs_ayah": 76,
-          "hafs_ayahs": [
-            76,
-            77,
-            78
-          ],
-          "status": "covers_multiple"
+          "status": "mapped"
+        },
+        "74": {
+          "hafs_ayah": 77,
+          "status": "mapped"
+        },
+        "75": {
+          "hafs_ayah": 78,
+          "status": "mapped"
         }
       }
     },
@@ -11418,7 +11397,7 @@
       }
     },
     "24": {
-      "source_ayah_count": 62,
+      "source_ayah_count": 64,
       "hafs_ayah_count": 64,
       "ayahs": {
         "1": {
@@ -11667,12 +11646,15 @@
         },
         "62": {
           "hafs_ayah": 62,
-          "hafs_ayahs": [
-            62,
-            63,
-            64
-          ],
-          "status": "covers_multiple"
+          "status": "mapped"
+        },
+        "63": {
+          "hafs_ayah": 63,
+          "status": "mapped"
+        },
+        "64": {
+          "hafs_ayah": 64,
+          "status": "mapped"
         }
       }
     },
@@ -11991,20 +11973,20 @@
       }
     },
     "26": {
-      "source_ayah_count": 227,
+      "source_ayah_count": 226,
       "hafs_ayah_count": 227,
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3
+            1,
+            2
           ],
           "status": "covers_multiple"
+        },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
         },
         "3": {
           "hafs_ayah": 4,
@@ -12364,15 +12346,15 @@
         },
         "92": {
           "hafs_ayah": 92,
-          "status": "mapped"
-        },
-        "93": {
-          "hafs_ayah": 93,
           "hafs_ayahs": [
-            93,
-            94
+            92,
+            93
           ],
           "status": "covers_multiple"
+        },
+        "93": {
+          "hafs_ayah": 94,
+          "status": "mapped"
         },
         "94": {
           "hafs_ayah": 95,
@@ -12905,15 +12887,11 @@
         "226": {
           "hafs_ayah": 227,
           "status": "mapped"
-        },
-        "227": {
-          "hafs_ayah": 227,
-          "status": "mapped"
         }
       }
     },
     "27": {
-      "source_ayah_count": 95,
+      "source_ayah_count": 94,
       "hafs_ayah_count": 93,
       "ayahs": {
         "1": {
@@ -13291,10 +13269,6 @@
         "94": {
           "hafs_ayah": 93,
           "status": "mapped"
-        },
-        "95": {
-          "hafs_ayah": 93,
-          "status": "mapped"
         }
       }
     },
@@ -13304,91 +13278,90 @@
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3,
-            4
+            1,
+            2
           ],
           "status": "covers_multiple"
         },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
+        },
         "3": {
-          "hafs_ayah": 5,
+          "hafs_ayah": 4,
           "status": "mapped"
         },
         "4": {
-          "hafs_ayah": 6,
+          "hafs_ayah": 5,
           "status": "mapped"
         },
         "5": {
-          "hafs_ayah": 7,
+          "hafs_ayah": 6,
           "status": "mapped"
         },
         "6": {
-          "hafs_ayah": 8,
+          "hafs_ayah": 7,
           "status": "mapped"
         },
         "7": {
-          "hafs_ayah": 9,
+          "hafs_ayah": 8,
           "status": "mapped"
         },
         "8": {
-          "hafs_ayah": 10,
+          "hafs_ayah": 9,
           "status": "mapped"
         },
         "9": {
-          "hafs_ayah": 11,
+          "hafs_ayah": 10,
           "status": "mapped"
         },
         "10": {
-          "hafs_ayah": 12,
+          "hafs_ayah": 11,
           "status": "mapped"
         },
         "11": {
-          "hafs_ayah": 13,
+          "hafs_ayah": 12,
           "status": "mapped"
         },
         "12": {
-          "hafs_ayah": 14,
+          "hafs_ayah": 13,
           "status": "mapped"
         },
         "13": {
-          "hafs_ayah": 15,
+          "hafs_ayah": 14,
           "status": "mapped"
         },
         "14": {
-          "hafs_ayah": 16,
+          "hafs_ayah": 15,
           "status": "mapped"
         },
         "15": {
-          "hafs_ayah": 17,
+          "hafs_ayah": 16,
           "status": "mapped"
         },
         "16": {
-          "hafs_ayah": 18,
+          "hafs_ayah": 17,
           "status": "mapped"
         },
         "17": {
-          "hafs_ayah": 19,
+          "hafs_ayah": 18,
           "status": "mapped"
         },
         "18": {
-          "hafs_ayah": 20,
+          "hafs_ayah": 19,
           "status": "mapped"
         },
         "19": {
-          "hafs_ayah": 21,
+          "hafs_ayah": 20,
           "status": "mapped"
         },
         "20": {
-          "hafs_ayah": 22,
+          "hafs_ayah": 21,
           "status": "mapped"
         },
         "21": {
-          "hafs_ayah": 23,
+          "hafs_ayah": 22,
           "status": "mapped"
         },
         "22": {
@@ -13396,271 +13369,263 @@
           "status": "mapped"
         },
         "23": {
-          "hafs_ayah": 24,
+          "hafs_ayah": 23,
           "status": "mapped"
         },
         "24": {
-          "hafs_ayah": 25,
+          "hafs_ayah": 24,
           "status": "mapped"
         },
         "25": {
-          "hafs_ayah": 26,
+          "hafs_ayah": 25,
           "status": "mapped"
         },
         "26": {
-          "hafs_ayah": 27,
+          "hafs_ayah": 26,
           "status": "mapped"
         },
         "27": {
-          "hafs_ayah": 28,
+          "hafs_ayah": 27,
           "status": "mapped"
         },
         "28": {
-          "hafs_ayah": 29,
+          "hafs_ayah": 28,
           "status": "mapped"
         },
         "29": {
-          "hafs_ayah": 30,
+          "hafs_ayah": 29,
           "status": "mapped"
         },
         "30": {
-          "hafs_ayah": 31,
+          "hafs_ayah": 30,
           "status": "mapped"
         },
         "31": {
-          "hafs_ayah": 32,
+          "hafs_ayah": 31,
           "status": "mapped"
         },
         "32": {
-          "hafs_ayah": 33,
+          "hafs_ayah": 32,
           "status": "mapped"
         },
         "33": {
-          "hafs_ayah": 34,
+          "hafs_ayah": 33,
           "status": "mapped"
         },
         "34": {
-          "hafs_ayah": 35,
+          "hafs_ayah": 34,
           "status": "mapped"
         },
         "35": {
-          "hafs_ayah": 36,
+          "hafs_ayah": 35,
           "status": "mapped"
         },
         "36": {
-          "hafs_ayah": 37,
+          "hafs_ayah": 36,
           "status": "mapped"
         },
         "37": {
-          "hafs_ayah": 38,
-          "hafs_ayahs": [
-            38,
-            39
-          ],
-          "status": "covers_multiple"
+          "hafs_ayah": 37,
+          "status": "mapped"
         },
         "38": {
-          "hafs_ayah": 40,
+          "hafs_ayah": 38,
           "status": "mapped"
         },
         "39": {
-          "hafs_ayah": 41,
+          "hafs_ayah": 39,
           "status": "mapped"
         },
         "40": {
-          "hafs_ayah": 42,
+          "hafs_ayah": 40,
           "status": "mapped"
         },
         "41": {
-          "hafs_ayah": 43,
+          "hafs_ayah": 41,
           "status": "mapped"
         },
         "42": {
-          "hafs_ayah": 44,
+          "hafs_ayah": 42,
           "status": "mapped"
         },
         "43": {
-          "hafs_ayah": 45,
+          "hafs_ayah": 43,
           "status": "mapped"
         },
         "44": {
-          "hafs_ayah": 46,
+          "hafs_ayah": 44,
           "status": "mapped"
         },
         "45": {
-          "hafs_ayah": 47,
+          "hafs_ayah": 45,
           "status": "mapped"
         },
         "46": {
-          "hafs_ayah": 48,
+          "hafs_ayah": 46,
           "status": "mapped"
         },
         "47": {
-          "hafs_ayah": 49,
+          "hafs_ayah": 47,
           "status": "mapped"
         },
         "48": {
-          "hafs_ayah": 50,
+          "hafs_ayah": 48,
           "status": "mapped"
         },
         "49": {
-          "hafs_ayah": 51,
+          "hafs_ayah": 49,
           "status": "mapped"
         },
         "50": {
-          "hafs_ayah": 52,
+          "hafs_ayah": 50,
           "status": "mapped"
         },
         "51": {
-          "hafs_ayah": 53,
+          "hafs_ayah": 51,
           "status": "mapped"
         },
         "52": {
-          "hafs_ayah": 54,
+          "hafs_ayah": 52,
           "status": "mapped"
         },
         "53": {
-          "hafs_ayah": 55,
+          "hafs_ayah": 53,
           "status": "mapped"
         },
         "54": {
-          "hafs_ayah": 56,
+          "hafs_ayah": 54,
           "status": "mapped"
         },
         "55": {
-          "hafs_ayah": 57,
+          "hafs_ayah": 55,
           "status": "mapped"
         },
         "56": {
-          "hafs_ayah": 58,
+          "hafs_ayah": 56,
           "status": "mapped"
         },
         "57": {
-          "hafs_ayah": 59,
+          "hafs_ayah": 57,
           "status": "mapped"
         },
         "58": {
-          "hafs_ayah": 60,
+          "hafs_ayah": 58,
           "status": "mapped"
         },
         "59": {
-          "hafs_ayah": 61,
+          "hafs_ayah": 59,
           "status": "mapped"
         },
         "60": {
-          "hafs_ayah": 62,
+          "hafs_ayah": 60,
           "status": "mapped"
         },
         "61": {
-          "hafs_ayah": 63,
+          "hafs_ayah": 61,
           "status": "mapped"
         },
         "62": {
-          "hafs_ayah": 64,
+          "hafs_ayah": 62,
           "status": "mapped"
         },
         "63": {
-          "hafs_ayah": 65,
+          "hafs_ayah": 63,
           "status": "mapped"
         },
         "64": {
-          "hafs_ayah": 66,
+          "hafs_ayah": 64,
           "status": "mapped"
         },
         "65": {
-          "hafs_ayah": 67,
+          "hafs_ayah": 65,
           "status": "mapped"
         },
         "66": {
-          "hafs_ayah": 68,
+          "hafs_ayah": 66,
           "status": "mapped"
         },
         "67": {
-          "hafs_ayah": 69,
+          "hafs_ayah": 67,
           "status": "mapped"
         },
         "68": {
-          "hafs_ayah": 70,
+          "hafs_ayah": 68,
           "status": "mapped"
         },
         "69": {
-          "hafs_ayah": 71,
+          "hafs_ayah": 69,
           "status": "mapped"
         },
         "70": {
-          "hafs_ayah": 72,
+          "hafs_ayah": 70,
           "status": "mapped"
         },
         "71": {
-          "hafs_ayah": 73,
+          "hafs_ayah": 71,
           "status": "mapped"
         },
         "72": {
-          "hafs_ayah": 74,
+          "hafs_ayah": 72,
           "status": "mapped"
         },
         "73": {
-          "hafs_ayah": 75,
+          "hafs_ayah": 73,
           "status": "mapped"
         },
         "74": {
-          "hafs_ayah": 76,
+          "hafs_ayah": 74,
           "status": "mapped"
         },
         "75": {
-          "hafs_ayah": 77,
+          "hafs_ayah": 75,
           "status": "mapped"
         },
         "76": {
-          "hafs_ayah": 78,
+          "hafs_ayah": 76,
           "status": "mapped"
         },
         "77": {
-          "hafs_ayah": 79,
+          "hafs_ayah": 77,
           "status": "mapped"
         },
         "78": {
-          "hafs_ayah": 80,
+          "hafs_ayah": 78,
           "status": "mapped"
         },
         "79": {
-          "hafs_ayah": 81,
+          "hafs_ayah": 79,
           "status": "mapped"
         },
         "80": {
-          "hafs_ayah": 82,
+          "hafs_ayah": 80,
           "status": "mapped"
         },
         "81": {
-          "hafs_ayah": 83,
+          "hafs_ayah": 81,
           "status": "mapped"
         },
         "82": {
-          "hafs_ayah": 84,
+          "hafs_ayah": 82,
           "status": "mapped"
         },
         "83": {
-          "hafs_ayah": 85,
-          "hafs_ayahs": [
-            85,
-            86
-          ],
-          "status": "covers_multiple"
+          "hafs_ayah": 83,
+          "status": "mapped"
         },
         "84": {
-          "hafs_ayah": 87,
+          "hafs_ayah": 84,
           "status": "mapped"
         },
         "85": {
-          "hafs_ayah": 88,
+          "hafs_ayah": 85,
           "status": "mapped"
         },
         "86": {
-          "hafs_ayah": 88,
+          "hafs_ayah": 86,
           "status": "mapped"
         },
         "87": {
-          "hafs_ayah": 88,
+          "hafs_ayah": 87,
           "status": "mapped"
         },
         "88": {
@@ -13675,15 +13640,15 @@
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3
+            1,
+            2
           ],
           "status": "covers_multiple"
+        },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
         },
         "3": {
           "hafs_ayah": 4,
@@ -13961,15 +13926,15 @@
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3
+            1,
+            2
           ],
           "status": "covers_multiple"
+        },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
         },
         "3": {
           "hafs_ayah": 4,
@@ -14206,20 +14171,20 @@
       }
     },
     "31": {
-      "source_ayah_count": 33,
+      "source_ayah_count": 34,
       "hafs_ayah_count": 34,
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3
+            1,
+            2
           ],
           "status": "covers_multiple"
+        },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
         },
         "3": {
           "hafs_ayah": 4,
@@ -14343,29 +14308,29 @@
         },
         "33": {
           "hafs_ayah": 33,
-          "hafs_ayahs": [
-            33,
-            34
-          ],
-          "status": "covers_multiple"
+          "status": "mapped"
+        },
+        "34": {
+          "hafs_ayah": 34,
+          "status": "mapped"
         }
       }
     },
     "32": {
-      "source_ayah_count": 30,
+      "source_ayah_count": 29,
       "hafs_ayah_count": 30,
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3
+            1,
+            2
           ],
           "status": "covers_multiple"
+        },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
         },
         "3": {
           "hafs_ayah": 4,
@@ -14472,10 +14437,6 @@
           "status": "mapped"
         },
         "29": {
-          "hafs_ayah": 30,
-          "status": "mapped"
-        },
-        "30": {
           "hafs_ayah": 30,
           "status": "mapped"
         }
@@ -15071,102 +15032,103 @@
         },
         "17": {
           "hafs_ayah": 16,
-          "status": "mapped"
-        },
-        "18": {
-          "hafs_ayah": 17,
           "hafs_ayahs": [
-            17,
-            18
+            16,
+            17
           ],
           "status": "covers_multiple"
         },
-        "19": {
-          "hafs_ayah": 19,
+        "18": {
+          "hafs_ayah": 18,
           "status": "mapped"
         },
-        "20": {
-          "hafs_ayah": 20,
+        "19": {
+          "hafs_ayah": 19,
           "hafs_ayahs": [
+            19,
             20,
             21
           ],
           "status": "covers_multiple"
         },
-        "21": {
+        "20": {
           "hafs_ayah": 22,
           "status": "mapped"
         },
-        "22": {
+        "21": {
           "hafs_ayah": 23,
           "status": "mapped"
         },
-        "23": {
+        "22": {
           "hafs_ayah": 24,
           "status": "mapped"
         },
-        "24": {
+        "23": {
           "hafs_ayah": 25,
           "status": "mapped"
         },
-        "25": {
+        "24": {
           "hafs_ayah": 26,
           "status": "mapped"
         },
-        "26": {
+        "25": {
           "hafs_ayah": 27,
           "status": "mapped"
         },
-        "27": {
+        "26": {
           "hafs_ayah": 28,
           "status": "mapped"
         },
-        "28": {
+        "27": {
           "hafs_ayah": 29,
           "status": "mapped"
         },
-        "29": {
+        "28": {
           "hafs_ayah": 30,
           "status": "mapped"
         },
-        "30": {
+        "29": {
           "hafs_ayah": 31,
           "status": "mapped"
         },
-        "31": {
+        "30": {
           "hafs_ayah": 32,
           "status": "mapped"
         },
-        "32": {
+        "31": {
           "hafs_ayah": 33,
           "status": "mapped"
         },
-        "33": {
+        "32": {
           "hafs_ayah": 34,
           "status": "mapped"
         },
-        "34": {
+        "33": {
           "hafs_ayah": 35,
           "status": "mapped"
         },
-        "35": {
+        "34": {
           "hafs_ayah": 36,
           "status": "mapped"
         },
-        "36": {
+        "35": {
           "hafs_ayah": 37,
           "status": "mapped"
         },
-        "37": {
+        "36": {
           "hafs_ayah": 38,
           "status": "mapped"
         },
-        "38": {
+        "37": {
           "hafs_ayah": 39,
           "status": "mapped"
         },
-        "39": {
+        "38": {
           "hafs_ayah": 40,
+          "status": "mapped"
+        },
+        "39": {
+          "hafs_ayah": 41,
           "status": "mapped"
         },
         "40": {
@@ -15174,11 +15136,11 @@
           "status": "mapped"
         },
         "41": {
-          "hafs_ayah": 41,
+          "hafs_ayah": 42,
           "status": "mapped"
         },
         "42": {
-          "hafs_ayah": 42,
+          "hafs_ayah": 43,
           "status": "mapped"
         },
         "43": {
@@ -15186,16 +15148,12 @@
           "status": "mapped"
         },
         "44": {
-          "hafs_ayah": 43,
+          "hafs_ayah": 44,
           "status": "mapped"
         },
         "45": {
-          "hafs_ayah": 44,
-          "hafs_ayahs": [
-            44,
-            45
-          ],
-          "status": "covers_multiple"
+          "hafs_ayah": 45,
+          "status": "mapped"
         }
       }
     },
@@ -15205,15 +15163,15 @@
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3
+            1,
+            2
           ],
           "status": "covers_multiple"
+        },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
         },
         "3": {
           "hafs_ayah": 4,
@@ -15538,7 +15496,7 @@
       }
     },
     "37": {
-      "source_ayah_count": 182,
+      "source_ayah_count": 181,
       "hafs_ayah_count": 182,
       "ayahs": {
         "1": {
@@ -15627,15 +15585,15 @@
         },
         "22": {
           "hafs_ayah": 22,
-          "status": "mapped"
-        },
-        "23": {
-          "hafs_ayah": 23,
           "hafs_ayahs": [
-            23,
-            24
+            22,
+            23
           ],
           "status": "covers_multiple"
+        },
+        "23": {
+          "hafs_ayah": 24,
+          "status": "mapped"
         },
         "24": {
           "hafs_ayah": 25,
@@ -16268,439 +16226,76 @@
         "181": {
           "hafs_ayah": 182,
           "status": "mapped"
-        },
-        "182": {
-          "hafs_ayah": 182,
-          "status": "mapped"
         }
       }
     },
     "38": {
-      "source_ayah_count": 86,
+      "source_ayah_count": 85,
       "hafs_ayah_count": 88,
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
+          "hafs_ayahs": [
+            1,
+            2
+          ],
+          "status": "covers_multiple"
         },
         "2": {
-          "hafs_ayah": 2,
-          "status": "mapped"
-        },
-        "3": {
           "hafs_ayah": 3,
           "status": "mapped"
         },
-        "4": {
+        "3": {
           "hafs_ayah": 4,
           "status": "mapped"
         },
-        "5": {
+        "4": {
           "hafs_ayah": 5,
           "status": "mapped"
         },
-        "6": {
+        "5": {
           "hafs_ayah": 6,
           "status": "mapped"
         },
-        "7": {
+        "6": {
           "hafs_ayah": 7,
           "status": "mapped"
         },
-        "8": {
+        "7": {
           "hafs_ayah": 8,
           "status": "mapped"
         },
-        "9": {
+        "8": {
           "hafs_ayah": 9,
           "status": "mapped"
         },
-        "10": {
+        "9": {
           "hafs_ayah": 10,
           "status": "mapped"
         },
-        "11": {
+        "10": {
           "hafs_ayah": 11,
           "status": "mapped"
         },
-        "12": {
+        "11": {
           "hafs_ayah": 12,
           "status": "mapped"
         },
-        "13": {
+        "12": {
           "hafs_ayah": 13,
           "status": "mapped"
         },
-        "14": {
+        "13": {
           "hafs_ayah": 14,
           "status": "mapped"
         },
-        "15": {
+        "14": {
           "hafs_ayah": 15,
           "status": "mapped"
         },
-        "16": {
+        "15": {
           "hafs_ayah": 16,
           "status": "mapped"
-        },
-        "17": {
-          "hafs_ayah": 17,
-          "status": "mapped"
-        },
-        "18": {
-          "hafs_ayah": 18,
-          "status": "mapped"
-        },
-        "19": {
-          "hafs_ayah": 19,
-          "status": "mapped"
-        },
-        "20": {
-          "hafs_ayah": 20,
-          "status": "mapped"
-        },
-        "21": {
-          "hafs_ayah": 21,
-          "status": "mapped"
-        },
-        "22": {
-          "hafs_ayah": 22,
-          "status": "mapped"
-        },
-        "23": {
-          "hafs_ayah": 23,
-          "status": "mapped"
-        },
-        "24": {
-          "hafs_ayah": 24,
-          "status": "mapped"
-        },
-        "25": {
-          "hafs_ayah": 25,
-          "status": "mapped"
-        },
-        "26": {
-          "hafs_ayah": 26,
-          "status": "mapped"
-        },
-        "27": {
-          "hafs_ayah": 27,
-          "status": "mapped"
-        },
-        "28": {
-          "hafs_ayah": 28,
-          "status": "mapped"
-        },
-        "29": {
-          "hafs_ayah": 29,
-          "status": "mapped"
-        },
-        "30": {
-          "hafs_ayah": 30,
-          "status": "mapped"
-        },
-        "31": {
-          "hafs_ayah": 31,
-          "status": "mapped"
-        },
-        "32": {
-          "hafs_ayah": 32,
-          "status": "mapped"
-        },
-        "33": {
-          "hafs_ayah": 33,
-          "status": "mapped"
-        },
-        "34": {
-          "hafs_ayah": 34,
-          "status": "mapped"
-        },
-        "35": {
-          "hafs_ayah": 35,
-          "status": "mapped"
-        },
-        "36": {
-          "hafs_ayah": 36,
-          "status": "mapped"
-        },
-        "37": {
-          "hafs_ayah": 37,
-          "status": "mapped"
-        },
-        "38": {
-          "hafs_ayah": 38,
-          "status": "mapped"
-        },
-        "39": {
-          "hafs_ayah": 39,
-          "status": "mapped"
-        },
-        "40": {
-          "hafs_ayah": 40,
-          "status": "mapped"
-        },
-        "41": {
-          "hafs_ayah": 41,
-          "status": "mapped"
-        },
-        "42": {
-          "hafs_ayah": 42,
-          "status": "mapped"
-        },
-        "43": {
-          "hafs_ayah": 43,
-          "status": "mapped"
-        },
-        "44": {
-          "hafs_ayah": 44,
-          "status": "mapped"
-        },
-        "45": {
-          "hafs_ayah": 45,
-          "status": "mapped"
-        },
-        "46": {
-          "hafs_ayah": 46,
-          "status": "mapped"
-        },
-        "47": {
-          "hafs_ayah": 47,
-          "status": "mapped"
-        },
-        "48": {
-          "hafs_ayah": 48,
-          "status": "mapped"
-        },
-        "49": {
-          "hafs_ayah": 49,
-          "status": "mapped"
-        },
-        "50": {
-          "hafs_ayah": 50,
-          "status": "mapped"
-        },
-        "51": {
-          "hafs_ayah": 51,
-          "status": "mapped"
-        },
-        "52": {
-          "hafs_ayah": 52,
-          "status": "mapped"
-        },
-        "53": {
-          "hafs_ayah": 53,
-          "status": "mapped"
-        },
-        "54": {
-          "hafs_ayah": 54,
-          "status": "mapped"
-        },
-        "55": {
-          "hafs_ayah": 55,
-          "status": "mapped"
-        },
-        "56": {
-          "hafs_ayah": 56,
-          "status": "mapped"
-        },
-        "57": {
-          "hafs_ayah": 57,
-          "status": "mapped"
-        },
-        "58": {
-          "hafs_ayah": 58,
-          "status": "mapped"
-        },
-        "59": {
-          "hafs_ayah": 59,
-          "status": "mapped"
-        },
-        "60": {
-          "hafs_ayah": 60,
-          "status": "mapped"
-        },
-        "61": {
-          "hafs_ayah": 61,
-          "status": "mapped"
-        },
-        "62": {
-          "hafs_ayah": 62,
-          "status": "mapped"
-        },
-        "63": {
-          "hafs_ayah": 63,
-          "status": "mapped"
-        },
-        "64": {
-          "hafs_ayah": 64,
-          "status": "mapped"
-        },
-        "65": {
-          "hafs_ayah": 65,
-          "status": "mapped"
-        },
-        "66": {
-          "hafs_ayah": 66,
-          "status": "mapped"
-        },
-        "67": {
-          "hafs_ayah": 67,
-          "status": "mapped"
-        },
-        "68": {
-          "hafs_ayah": 68,
-          "status": "mapped"
-        },
-        "69": {
-          "hafs_ayah": 69,
-          "status": "mapped"
-        },
-        "70": {
-          "hafs_ayah": 70,
-          "status": "mapped"
-        },
-        "71": {
-          "hafs_ayah": 71,
-          "status": "mapped"
-        },
-        "72": {
-          "hafs_ayah": 72,
-          "status": "mapped"
-        },
-        "73": {
-          "hafs_ayah": 73,
-          "status": "mapped"
-        },
-        "74": {
-          "hafs_ayah": 74,
-          "status": "mapped"
-        },
-        "75": {
-          "hafs_ayah": 75,
-          "status": "mapped"
-        },
-        "76": {
-          "hafs_ayah": 76,
-          "status": "mapped"
-        },
-        "77": {
-          "hafs_ayah": 77,
-          "status": "mapped"
-        },
-        "78": {
-          "hafs_ayah": 78,
-          "status": "mapped"
-        },
-        "79": {
-          "hafs_ayah": 79,
-          "status": "mapped"
-        },
-        "80": {
-          "hafs_ayah": 80,
-          "status": "mapped"
-        },
-        "81": {
-          "hafs_ayah": 81,
-          "status": "mapped"
-        },
-        "82": {
-          "hafs_ayah": 82,
-          "status": "mapped"
-        },
-        "83": {
-          "hafs_ayah": 83,
-          "status": "mapped"
-        },
-        "84": {
-          "hafs_ayah": 84,
-          "status": "mapped"
-        },
-        "85": {
-          "hafs_ayah": 85,
-          "status": "mapped"
-        },
-        "86": {
-          "hafs_ayah": 86,
-          "hafs_ayahs": [
-            86,
-            87,
-            88
-          ],
-          "status": "covers_multiple"
-        }
-      }
-    },
-    "39": {
-      "source_ayah_count": 72,
-      "hafs_ayah_count": 75,
-      "ayahs": {
-        "1": {
-          "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
-          "status": "mapped"
-        },
-        "3": {
-          "hafs_ayah": 3,
-          "status": "mapped"
-        },
-        "4": {
-          "hafs_ayah": 3,
-          "status": "mapped"
-        },
-        "5": {
-          "hafs_ayah": 4,
-          "status": "mapped"
-        },
-        "6": {
-          "hafs_ayah": 5,
-          "status": "mapped"
-        },
-        "7": {
-          "hafs_ayah": 6,
-          "status": "mapped"
-        },
-        "8": {
-          "hafs_ayah": 7,
-          "status": "mapped"
-        },
-        "9": {
-          "hafs_ayah": 8,
-          "status": "mapped"
-        },
-        "10": {
-          "hafs_ayah": 9,
-          "status": "mapped"
-        },
-        "11": {
-          "hafs_ayah": 10,
-          "status": "mapped"
-        },
-        "12": {
-          "hafs_ayah": 11,
-          "status": "mapped"
-        },
-        "13": {
-          "hafs_ayah": 12,
-          "hafs_ayahs": [
-            12,
-            13
-          ],
-          "status": "covers_multiple"
-        },
-        "14": {
-          "hafs_ayah": 14,
-          "status": "mapped"
-        },
-        "15": {
-          "hafs_ayah": 15,
-          "hafs_ayahs": [
-            15,
-            16
-          ],
-          "status": "covers_multiple"
         },
         "16": {
           "hafs_ayah": 17,
@@ -16796,11 +16391,373 @@
         },
         "38": {
           "hafs_ayah": 40,
+          "status": "mapped"
+        },
+        "39": {
+          "hafs_ayah": 41,
+          "status": "mapped"
+        },
+        "40": {
+          "hafs_ayah": 42,
+          "status": "mapped"
+        },
+        "41": {
+          "hafs_ayah": 43,
+          "status": "mapped"
+        },
+        "42": {
+          "hafs_ayah": 44,
+          "status": "mapped"
+        },
+        "43": {
+          "hafs_ayah": 45,
+          "status": "mapped"
+        },
+        "44": {
+          "hafs_ayah": 46,
+          "status": "mapped"
+        },
+        "45": {
+          "hafs_ayah": 47,
+          "status": "mapped"
+        },
+        "46": {
+          "hafs_ayah": 48,
+          "status": "mapped"
+        },
+        "47": {
+          "hafs_ayah": 49,
+          "status": "mapped"
+        },
+        "48": {
+          "hafs_ayah": 50,
+          "status": "mapped"
+        },
+        "49": {
+          "hafs_ayah": 51,
+          "status": "mapped"
+        },
+        "50": {
+          "hafs_ayah": 52,
+          "status": "mapped"
+        },
+        "51": {
+          "hafs_ayah": 53,
+          "status": "mapped"
+        },
+        "52": {
+          "hafs_ayah": 54,
+          "status": "mapped"
+        },
+        "53": {
+          "hafs_ayah": 55,
+          "status": "mapped"
+        },
+        "54": {
+          "hafs_ayah": 56,
+          "status": "mapped"
+        },
+        "55": {
+          "hafs_ayah": 57,
+          "status": "mapped"
+        },
+        "56": {
+          "hafs_ayah": 58,
+          "status": "mapped"
+        },
+        "57": {
+          "hafs_ayah": 59,
+          "status": "mapped"
+        },
+        "58": {
+          "hafs_ayah": 60,
+          "status": "mapped"
+        },
+        "59": {
+          "hafs_ayah": 61,
+          "status": "mapped"
+        },
+        "60": {
+          "hafs_ayah": 62,
+          "status": "mapped"
+        },
+        "61": {
+          "hafs_ayah": 63,
+          "status": "mapped"
+        },
+        "62": {
+          "hafs_ayah": 64,
+          "status": "mapped"
+        },
+        "63": {
+          "hafs_ayah": 65,
+          "status": "mapped"
+        },
+        "64": {
+          "hafs_ayah": 66,
+          "status": "mapped"
+        },
+        "65": {
+          "hafs_ayah": 67,
+          "status": "mapped"
+        },
+        "66": {
+          "hafs_ayah": 68,
+          "status": "mapped"
+        },
+        "67": {
+          "hafs_ayah": 69,
+          "status": "mapped"
+        },
+        "68": {
+          "hafs_ayah": 70,
+          "status": "mapped"
+        },
+        "69": {
+          "hafs_ayah": 71,
+          "status": "mapped"
+        },
+        "70": {
+          "hafs_ayah": 72,
+          "status": "mapped"
+        },
+        "71": {
+          "hafs_ayah": 73,
+          "status": "mapped"
+        },
+        "72": {
+          "hafs_ayah": 74,
+          "status": "mapped"
+        },
+        "73": {
+          "hafs_ayah": 75,
+          "status": "mapped"
+        },
+        "74": {
+          "hafs_ayah": 76,
+          "status": "mapped"
+        },
+        "75": {
+          "hafs_ayah": 77,
+          "status": "mapped"
+        },
+        "76": {
+          "hafs_ayah": 78,
+          "status": "mapped"
+        },
+        "77": {
+          "hafs_ayah": 79,
+          "status": "mapped"
+        },
+        "78": {
+          "hafs_ayah": 80,
+          "status": "mapped"
+        },
+        "79": {
+          "hafs_ayah": 81,
+          "status": "mapped"
+        },
+        "80": {
+          "hafs_ayah": 82,
+          "status": "mapped"
+        },
+        "81": {
+          "hafs_ayah": 83,
+          "status": "mapped"
+        },
+        "82": {
+          "hafs_ayah": 84,
           "hafs_ayahs": [
-            40,
-            41
+            84,
+            85
           ],
           "status": "covers_multiple"
+        },
+        "83": {
+          "hafs_ayah": 86,
+          "status": "mapped"
+        },
+        "84": {
+          "hafs_ayah": 87,
+          "status": "mapped"
+        },
+        "85": {
+          "hafs_ayah": 88,
+          "status": "mapped"
+        }
+      }
+    },
+    "39": {
+      "source_ayah_count": 72,
+      "hafs_ayah_count": 75,
+      "ayahs": {
+        "1": {
+          "hafs_ayah": 1,
+          "status": "mapped"
+        },
+        "2": {
+          "hafs_ayah": 2,
+          "status": "mapped"
+        },
+        "3": {
+          "hafs_ayah": 3,
+          "status": "mapped"
+        },
+        "4": {
+          "hafs_ayah": 3,
+          "status": "mapped"
+        },
+        "5": {
+          "hafs_ayah": 4,
+          "status": "mapped"
+        },
+        "6": {
+          "hafs_ayah": 5,
+          "status": "mapped"
+        },
+        "7": {
+          "hafs_ayah": 6,
+          "status": "mapped"
+        },
+        "8": {
+          "hafs_ayah": 7,
+          "status": "mapped"
+        },
+        "9": {
+          "hafs_ayah": 8,
+          "status": "mapped"
+        },
+        "10": {
+          "hafs_ayah": 9,
+          "status": "mapped"
+        },
+        "11": {
+          "hafs_ayah": 10,
+          "status": "mapped"
+        },
+        "12": {
+          "hafs_ayah": 11,
+          "hafs_ayahs": [
+            11,
+            12
+          ],
+          "status": "covers_multiple"
+        },
+        "13": {
+          "hafs_ayah": 13,
+          "status": "mapped"
+        },
+        "14": {
+          "hafs_ayah": 14,
+          "hafs_ayahs": [
+            14,
+            15
+          ],
+          "status": "covers_multiple"
+        },
+        "15": {
+          "hafs_ayah": 16,
+          "status": "mapped"
+        },
+        "16": {
+          "hafs_ayah": 17,
+          "status": "mapped"
+        },
+        "17": {
+          "hafs_ayah": 18,
+          "status": "mapped"
+        },
+        "18": {
+          "hafs_ayah": 19,
+          "status": "mapped"
+        },
+        "19": {
+          "hafs_ayah": 20,
+          "status": "mapped"
+        },
+        "20": {
+          "hafs_ayah": 21,
+          "status": "mapped"
+        },
+        "21": {
+          "hafs_ayah": 22,
+          "status": "mapped"
+        },
+        "22": {
+          "hafs_ayah": 23,
+          "status": "mapped"
+        },
+        "23": {
+          "hafs_ayah": 24,
+          "status": "mapped"
+        },
+        "24": {
+          "hafs_ayah": 25,
+          "status": "mapped"
+        },
+        "25": {
+          "hafs_ayah": 26,
+          "status": "mapped"
+        },
+        "26": {
+          "hafs_ayah": 27,
+          "status": "mapped"
+        },
+        "27": {
+          "hafs_ayah": 28,
+          "status": "mapped"
+        },
+        "28": {
+          "hafs_ayah": 29,
+          "status": "mapped"
+        },
+        "29": {
+          "hafs_ayah": 30,
+          "status": "mapped"
+        },
+        "30": {
+          "hafs_ayah": 31,
+          "status": "mapped"
+        },
+        "31": {
+          "hafs_ayah": 32,
+          "status": "mapped"
+        },
+        "32": {
+          "hafs_ayah": 33,
+          "status": "mapped"
+        },
+        "33": {
+          "hafs_ayah": 34,
+          "status": "mapped"
+        },
+        "34": {
+          "hafs_ayah": 35,
+          "status": "mapped"
+        },
+        "35": {
+          "hafs_ayah": 36,
+          "hafs_ayahs": [
+            36,
+            37
+          ],
+          "status": "covers_multiple"
+        },
+        "36": {
+          "hafs_ayah": 38,
+          "status": "mapped"
+        },
+        "37": {
+          "hafs_ayah": 39,
+          "hafs_ayahs": [
+            39,
+            40
+          ],
+          "status": "covers_multiple"
+        },
+        "38": {
+          "hafs_ayah": 41,
+          "status": "mapped"
         },
         "39": {
           "hafs_ayah": 42,
@@ -16941,20 +16898,20 @@
       }
     },
     "40": {
-      "source_ayah_count": 84,
+      "source_ayah_count": 82,
       "hafs_ayah_count": 85,
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3
+            1,
+            2
           ],
           "status": "covers_multiple"
+        },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
         },
         "3": {
           "hafs_ayah": 4,
@@ -17158,15 +17115,15 @@
         },
         "53": {
           "hafs_ayah": 53,
-          "status": "mapped"
-        },
-        "54": {
-          "hafs_ayah": 54,
           "hafs_ayahs": [
-            54,
-            55
+            53,
+            54
           ],
           "status": "covers_multiple"
+        },
+        "54": {
+          "hafs_ayah": 55,
+          "status": "mapped"
         },
         "55": {
           "hafs_ayah": 56,
@@ -17230,23 +17187,23 @@
         },
         "70": {
           "hafs_ayah": 71,
-          "status": "mapped"
+          "hafs_ayahs": [
+            71,
+            72
+          ],
+          "status": "covers_multiple"
         },
         "71": {
-          "hafs_ayah": 72,
+          "hafs_ayah": 73,
           "hafs_ayahs": [
-            72,
-            73
+            73,
+            74
           ],
           "status": "covers_multiple"
         },
         "72": {
-          "hafs_ayah": 74,
-          "hafs_ayahs": [
-            74,
-            75
-          ],
-          "status": "covers_multiple"
+          "hafs_ayah": 75,
+          "status": "mapped"
         },
         "73": {
           "hafs_ayah": 76,
@@ -17287,32 +17244,24 @@
         "82": {
           "hafs_ayah": 85,
           "status": "mapped"
-        },
-        "83": {
-          "hafs_ayah": 85,
-          "status": "mapped"
-        },
-        "84": {
-          "hafs_ayah": 85,
-          "status": "mapped"
         }
       }
     },
     "41": {
-      "source_ayah_count": 53,
+      "source_ayah_count": 52,
       "hafs_ayah_count": 54,
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3
+            1,
+            2
           ],
           "status": "covers_multiple"
+        },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
         },
         "3": {
           "hafs_ayah": 4,
@@ -17352,15 +17301,15 @@
         },
         "12": {
           "hafs_ayah": 13,
-          "status": "mapped"
-        },
-        "13": {
-          "hafs_ayah": 14,
           "hafs_ayahs": [
-            14,
-            15
+            13,
+            14
           ],
           "status": "covers_multiple"
+        },
+        "13": {
+          "hafs_ayah": 15,
+          "status": "mapped"
         },
         "14": {
           "hafs_ayah": 16,
@@ -17517,10 +17466,6 @@
         "52": {
           "hafs_ayah": 54,
           "status": "mapped"
-        },
-        "53": {
-          "hafs_ayah": 54,
-          "status": "mapped"
         }
       }
     },
@@ -17530,215 +17475,212 @@
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
+            1,
             2,
             3
           ],
           "status": "covers_multiple"
         },
-        "3": {
+        "2": {
           "hafs_ayah": 4,
           "status": "mapped"
         },
-        "4": {
+        "3": {
           "hafs_ayah": 5,
           "status": "mapped"
         },
-        "5": {
+        "4": {
           "hafs_ayah": 6,
           "status": "mapped"
         },
-        "6": {
+        "5": {
           "hafs_ayah": 7,
           "status": "mapped"
         },
-        "7": {
+        "6": {
           "hafs_ayah": 8,
           "status": "mapped"
         },
-        "8": {
+        "7": {
           "hafs_ayah": 9,
           "status": "mapped"
         },
-        "9": {
+        "8": {
           "hafs_ayah": 10,
           "status": "mapped"
         },
-        "10": {
+        "9": {
           "hafs_ayah": 11,
           "status": "mapped"
         },
-        "11": {
+        "10": {
           "hafs_ayah": 12,
           "status": "mapped"
         },
-        "12": {
+        "11": {
           "hafs_ayah": 13,
           "status": "mapped"
         },
-        "13": {
+        "12": {
           "hafs_ayah": 14,
           "status": "mapped"
         },
-        "14": {
+        "13": {
           "hafs_ayah": 15,
           "status": "mapped"
         },
-        "15": {
+        "14": {
           "hafs_ayah": 16,
           "status": "mapped"
         },
-        "16": {
+        "15": {
           "hafs_ayah": 17,
           "status": "mapped"
         },
-        "17": {
+        "16": {
           "hafs_ayah": 18,
           "status": "mapped"
         },
-        "18": {
+        "17": {
           "hafs_ayah": 19,
           "status": "mapped"
         },
-        "19": {
+        "18": {
           "hafs_ayah": 20,
           "status": "mapped"
         },
-        "20": {
+        "19": {
           "hafs_ayah": 21,
           "status": "mapped"
         },
-        "21": {
+        "20": {
           "hafs_ayah": 22,
           "status": "mapped"
         },
-        "22": {
+        "21": {
           "hafs_ayah": 23,
           "status": "mapped"
         },
-        "23": {
+        "22": {
           "hafs_ayah": 24,
           "status": "mapped"
         },
-        "24": {
+        "23": {
           "hafs_ayah": 25,
           "status": "mapped"
         },
-        "25": {
+        "24": {
           "hafs_ayah": 26,
           "status": "mapped"
         },
-        "26": {
+        "25": {
           "hafs_ayah": 27,
           "status": "mapped"
         },
-        "27": {
+        "26": {
           "hafs_ayah": 28,
           "status": "mapped"
         },
-        "28": {
+        "27": {
           "hafs_ayah": 29,
           "status": "mapped"
         },
-        "29": {
+        "28": {
           "hafs_ayah": 30,
           "status": "mapped"
         },
-        "30": {
+        "29": {
           "hafs_ayah": 31,
           "status": "mapped"
         },
-        "31": {
+        "30": {
           "hafs_ayah": 32,
+          "hafs_ayahs": [
+            32,
+            33
+          ],
+          "status": "covers_multiple"
+        },
+        "31": {
+          "hafs_ayah": 34,
           "status": "mapped"
         },
         "32": {
-          "hafs_ayah": 33,
-          "hafs_ayahs": [
-            33,
-            34
-          ],
-          "status": "covers_multiple"
-        },
-        "33": {
           "hafs_ayah": 35,
           "status": "mapped"
         },
-        "34": {
+        "33": {
           "hafs_ayah": 36,
           "status": "mapped"
         },
-        "35": {
+        "34": {
           "hafs_ayah": 37,
           "status": "mapped"
         },
-        "36": {
+        "35": {
           "hafs_ayah": 38,
           "status": "mapped"
         },
-        "37": {
+        "36": {
           "hafs_ayah": 39,
           "status": "mapped"
         },
-        "38": {
+        "37": {
           "hafs_ayah": 40,
           "status": "mapped"
         },
-        "39": {
+        "38": {
           "hafs_ayah": 41,
           "status": "mapped"
         },
-        "40": {
+        "39": {
           "hafs_ayah": 42,
           "status": "mapped"
         },
-        "41": {
+        "40": {
           "hafs_ayah": 43,
           "status": "mapped"
         },
-        "42": {
+        "41": {
           "hafs_ayah": 44,
           "status": "mapped"
         },
-        "43": {
+        "42": {
           "hafs_ayah": 45,
           "status": "mapped"
         },
-        "44": {
+        "43": {
           "hafs_ayah": 46,
           "status": "mapped"
         },
-        "45": {
+        "44": {
           "hafs_ayah": 47,
           "status": "mapped"
         },
-        "46": {
+        "45": {
           "hafs_ayah": 48,
           "status": "mapped"
         },
-        "47": {
+        "46": {
           "hafs_ayah": 49,
           "status": "mapped"
         },
-        "48": {
+        "47": {
           "hafs_ayah": 50,
           "status": "mapped"
         },
-        "49": {
+        "48": {
           "hafs_ayah": 51,
           "status": "mapped"
         },
-        "50": {
+        "49": {
           "hafs_ayah": 52,
-          "hafs_ayahs": [
-            52,
-            53
-          ],
-          "status": "covers_multiple"
+          "status": "mapped"
+        },
+        "50": {
+          "hafs_ayah": 53,
+          "status": "mapped"
         }
       }
     },
@@ -17748,15 +17690,15 @@
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3
+            1,
+            2
           ],
           "status": "covers_multiple"
+        },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
         },
         "3": {
           "hafs_ayah": 4,
@@ -18109,20 +18051,20 @@
       }
     },
     "44": {
-      "source_ayah_count": 56,
+      "source_ayah_count": 57,
       "hafs_ayah_count": 59,
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3
+            1,
+            2
           ],
           "status": "covers_multiple"
+        },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
         },
         "3": {
           "hafs_ayah": 4,
@@ -18246,15 +18188,15 @@
         },
         "33": {
           "hafs_ayah": 34,
-          "status": "mapped"
-        },
-        "34": {
-          "hafs_ayah": 35,
           "hafs_ayahs": [
-            35,
-            36
+            34,
+            35
           ],
           "status": "covers_multiple"
+        },
+        "34": {
+          "hafs_ayah": 36,
+          "status": "mapped"
         },
         "35": {
           "hafs_ayah": 37,
@@ -18342,11 +18284,11 @@
         },
         "56": {
           "hafs_ayah": 58,
-          "hafs_ayahs": [
-            58,
-            59
-          ],
-          "status": "covers_multiple"
+          "status": "mapped"
+        },
+        "57": {
+          "hafs_ayah": 59,
+          "status": "mapped"
         }
       }
     },
@@ -18356,15 +18298,15 @@
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3
+            1,
+            2
           ],
           "status": "covers_multiple"
+        },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
         },
         "3": {
           "hafs_ayah": 4,
@@ -18510,15 +18452,15 @@
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3
+            1,
+            2
           ],
           "status": "covers_multiple"
+        },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
         },
         "3": {
           "hafs_ayah": 4,
@@ -18651,7 +18593,7 @@
       }
     },
     "47": {
-      "source_ayah_count": 39,
+      "source_ayah_count": 40,
       "hafs_ayah_count": 38,
       "ayahs": {
         "1": {
@@ -18808,11 +18750,11 @@
         },
         "39": {
           "hafs_ayah": 37,
-          "hafs_ayahs": [
-            37,
-            38
-          ],
-          "status": "covers_multiple"
+          "status": "mapped"
+        },
+        "40": {
+          "hafs_ayah": 38,
+          "status": "mapped"
         }
       }
     },
@@ -19449,7 +19391,7 @@
       }
     },
     "52": {
-      "source_ayah_count": 47,
+      "source_ayah_count": 48,
       "hafs_ayah_count": 49,
       "ayahs": {
         "1": {
@@ -19502,15 +19444,15 @@
         },
         "13": {
           "hafs_ayah": 13,
-          "status": "mapped"
-        },
-        "14": {
-          "hafs_ayah": 14,
           "hafs_ayahs": [
-            14,
-            15
+            13,
+            14
           ],
           "status": "covers_multiple"
+        },
+        "14": {
+          "hafs_ayah": 15,
+          "status": "mapped"
         },
         "15": {
           "hafs_ayah": 16,
@@ -19642,11 +19584,11 @@
         },
         "47": {
           "hafs_ayah": 48,
-          "hafs_ayahs": [
-            48,
-            49
-          ],
-          "status": "covers_multiple"
+          "status": "mapped"
+        },
+        "48": {
+          "hafs_ayah": 49,
+          "status": "mapped"
         }
       }
     },
@@ -19764,15 +19706,15 @@
         },
         "28": {
           "hafs_ayah": 28,
-          "status": "mapped"
-        },
-        "29": {
-          "hafs_ayah": 29,
           "hafs_ayahs": [
-            29,
-            30
+            28,
+            29
           ],
           "status": "covers_multiple"
+        },
+        "29": {
+          "hafs_ayah": 30,
+          "status": "mapped"
         },
         "30": {
           "hafs_ayah": 31,
@@ -20131,20 +20073,20 @@
       }
     },
     "55": {
-      "source_ayah_count": 77,
+      "source_ayah_count": 76,
       "hafs_ayah_count": 78,
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3
+            1,
+            2
           ],
           "status": "covers_multiple"
+        },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
         },
         "3": {
           "hafs_ayah": 4,
@@ -20304,15 +20246,15 @@
         },
         "42": {
           "hafs_ayah": 43,
-          "status": "mapped"
-        },
-        "43": {
-          "hafs_ayah": 44,
           "hafs_ayahs": [
-            44,
-            45
+            43,
+            44
           ],
           "status": "covers_multiple"
+        },
+        "43": {
+          "hafs_ayah": 45,
+          "status": "mapped"
         },
         "44": {
           "hafs_ayah": 46,
@@ -20445,15 +20387,11 @@
         "76": {
           "hafs_ayah": 78,
           "status": "mapped"
-        },
-        "77": {
-          "hafs_ayah": 78,
-          "status": "mapped"
         }
       }
     },
     "56": {
-      "source_ayah_count": 99,
+      "source_ayah_count": 97,
       "hafs_ayah_count": 96,
       "ayahs": {
         "1": {
@@ -20522,15 +20460,15 @@
         },
         "17": {
           "hafs_ayah": 15,
-          "status": "mapped"
-        },
-        "18": {
-          "hafs_ayah": 16,
           "hafs_ayahs": [
-            16,
-            17
+            15,
+            16
           ],
           "status": "covers_multiple"
+        },
+        "18": {
+          "hafs_ayah": 17,
+          "status": "mapped"
         },
         "19": {
           "hafs_ayah": 18,
@@ -20550,15 +20488,15 @@
         },
         "23": {
           "hafs_ayah": 22,
-          "status": "mapped"
-        },
-        "24": {
-          "hafs_ayah": 23,
           "hafs_ayahs": [
-            23,
-            24
+            22,
+            23
           ],
           "status": "covers_multiple"
+        },
+        "24": {
+          "hafs_ayah": 24,
+          "status": "mapped"
         },
         "25": {
           "hafs_ayah": 25,
@@ -20606,15 +20544,15 @@
         },
         "36": {
           "hafs_ayah": 35,
-          "status": "mapped"
-        },
-        "37": {
-          "hafs_ayah": 36,
           "hafs_ayahs": [
-            36,
-            37
+            35,
+            36
           ],
           "status": "covers_multiple"
+        },
+        "37": {
+          "hafs_ayah": 37,
+          "status": "mapped"
         },
         "38": {
           "hafs_ayah": 38,
@@ -20855,19 +20793,11 @@
         "97": {
           "hafs_ayah": 96,
           "status": "mapped"
-        },
-        "98": {
-          "hafs_ayah": 96,
-          "status": "mapped"
-        },
-        "99": {
-          "hafs_ayah": 96,
-          "status": "mapped"
         }
       }
     },
     "57": {
-      "source_ayah_count": 28,
+      "source_ayah_count": 29,
       "hafs_ayah_count": 29,
       "ayahs": {
         "1": {
@@ -20920,15 +20850,15 @@
         },
         "13": {
           "hafs_ayah": 13,
-          "status": "mapped"
-        },
-        "14": {
-          "hafs_ayah": 14,
           "hafs_ayahs": [
-            14,
-            15
+            13,
+            14
           ],
           "status": "covers_multiple"
+        },
+        "14": {
+          "hafs_ayah": 15,
+          "status": "mapped"
         },
         "15": {
           "hafs_ayah": 16,
@@ -20984,11 +20914,11 @@
         },
         "28": {
           "hafs_ayah": 28,
-          "hafs_ayahs": [
-            28,
-            29
-          ],
-          "status": "covers_multiple"
+          "status": "mapped"
+        },
+        "29": {
+          "hafs_ayah": 29,
+          "status": "mapped"
         }
       }
     },
@@ -21487,7 +21417,7 @@
       }
     },
     "65": {
-      "source_ayah_count": 12,
+      "source_ayah_count": 11,
       "hafs_ayah_count": 12,
       "ayahs": {
         "1": {
@@ -21496,15 +21426,15 @@
         },
         "2": {
           "hafs_ayah": 2,
-          "status": "mapped"
-        },
-        "3": {
-          "hafs_ayah": 3,
           "hafs_ayahs": [
-            3,
-            4
+            2,
+            3
           ],
           "status": "covers_multiple"
+        },
+        "3": {
+          "hafs_ayah": 4,
+          "status": "mapped"
         },
         "4": {
           "hafs_ayah": 5,
@@ -21535,10 +21465,6 @@
           "status": "mapped"
         },
         "11": {
-          "hafs_ayah": 12,
-          "status": "mapped"
-        },
-        "12": {
           "hafs_ayah": 12,
           "status": "mapped"
         }
@@ -21939,20 +21865,20 @@
       }
     },
     "69": {
-      "source_ayah_count": 52,
+      "source_ayah_count": 51,
       "hafs_ayah_count": 52,
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3
+            1,
+            2
           ],
           "status": "covers_multiple"
+        },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
         },
         "3": {
           "hafs_ayah": 4,
@@ -22149,10 +22075,6 @@
         "51": {
           "hafs_ayah": 52,
           "status": "mapped"
-        },
-        "52": {
-          "hafs_ayah": 52,
-          "status": "mapped"
         }
       }
     },
@@ -22339,7 +22261,7 @@
       }
     },
     "71": {
-      "source_ayah_count": 30,
+      "source_ayah_count": 29,
       "hafs_ayah_count": 28,
       "ayahs": {
         "1": {
@@ -22436,15 +22358,15 @@
         },
         "24": {
           "hafs_ayah": 23,
-          "status": "mapped"
-        },
-        "25": {
-          "hafs_ayah": 24,
           "hafs_ayahs": [
-            24,
-            25
+            23,
+            24
           ],
           "status": "covers_multiple"
+        },
+        "25": {
+          "hafs_ayah": 25,
+          "status": "mapped"
         },
         "26": {
           "hafs_ayah": 25,
@@ -22459,10 +22381,6 @@
           "status": "mapped"
         },
         "29": {
-          "hafs_ayah": 28,
-          "status": "mapped"
-        },
-        "30": {
           "hafs_ayah": 28,
           "status": "mapped"
         }
@@ -22587,20 +22505,20 @@
       }
     },
     "73": {
-      "source_ayah_count": 20,
+      "source_ayah_count": 19,
       "hafs_ayah_count": 20,
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3
+            1,
+            2
           ],
           "status": "covers_multiple"
+        },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
         },
         "3": {
           "hafs_ayah": 4,
@@ -22667,10 +22585,6 @@
           "status": "mapped"
         },
         "19": {
-          "hafs_ayah": 20,
-          "status": "mapped"
-        },
-        "20": {
           "hafs_ayah": 20,
           "status": "mapped"
         }
@@ -22972,15 +22886,15 @@
         },
         "16": {
           "hafs_ayah": 16,
-          "status": "mapped"
-        },
-        "17": {
-          "hafs_ayah": 17,
           "hafs_ayahs": [
-            17,
-            18
+            16,
+            17
           ],
           "status": "covers_multiple"
+        },
+        "17": {
+          "hafs_ayah": 18,
+          "status": "mapped"
         },
         "18": {
           "hafs_ayah": 19,
@@ -23409,7 +23323,7 @@
       }
     },
     "78": {
-      "source_ayah_count": 40,
+      "source_ayah_count": 41,
       "hafs_ayah_count": 40,
       "ayahs": {
         "1": {
@@ -23571,202 +23485,16 @@
         "40": {
           "hafs_ayah": 40,
           "status": "mapped"
+        },
+        "41": {
+          "hafs_ayah": 40,
+          "status": "mapped"
         }
       }
     },
     "79": {
       "source_ayah_count": 45,
       "hafs_ayah_count": 46,
-      "ayahs": {
-        "1": {
-          "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
-          "status": "mapped"
-        },
-        "3": {
-          "hafs_ayah": 3,
-          "status": "mapped"
-        },
-        "4": {
-          "hafs_ayah": 4,
-          "status": "mapped"
-        },
-        "5": {
-          "hafs_ayah": 5,
-          "status": "mapped"
-        },
-        "6": {
-          "hafs_ayah": 6,
-          "status": "mapped"
-        },
-        "7": {
-          "hafs_ayah": 7,
-          "status": "mapped"
-        },
-        "8": {
-          "hafs_ayah": 8,
-          "status": "mapped"
-        },
-        "9": {
-          "hafs_ayah": 9,
-          "status": "mapped"
-        },
-        "10": {
-          "hafs_ayah": 10,
-          "status": "mapped"
-        },
-        "11": {
-          "hafs_ayah": 11,
-          "status": "mapped"
-        },
-        "12": {
-          "hafs_ayah": 12,
-          "status": "mapped"
-        },
-        "13": {
-          "hafs_ayah": 13,
-          "status": "mapped"
-        },
-        "14": {
-          "hafs_ayah": 14,
-          "status": "mapped"
-        },
-        "15": {
-          "hafs_ayah": 15,
-          "status": "mapped"
-        },
-        "16": {
-          "hafs_ayah": 16,
-          "status": "mapped"
-        },
-        "17": {
-          "hafs_ayah": 17,
-          "status": "mapped"
-        },
-        "18": {
-          "hafs_ayah": 18,
-          "status": "mapped"
-        },
-        "19": {
-          "hafs_ayah": 19,
-          "status": "mapped"
-        },
-        "20": {
-          "hafs_ayah": 20,
-          "status": "mapped"
-        },
-        "21": {
-          "hafs_ayah": 21,
-          "status": "mapped"
-        },
-        "22": {
-          "hafs_ayah": 22,
-          "status": "mapped"
-        },
-        "23": {
-          "hafs_ayah": 23,
-          "status": "mapped"
-        },
-        "24": {
-          "hafs_ayah": 24,
-          "status": "mapped"
-        },
-        "25": {
-          "hafs_ayah": 25,
-          "status": "mapped"
-        },
-        "26": {
-          "hafs_ayah": 26,
-          "status": "mapped"
-        },
-        "27": {
-          "hafs_ayah": 27,
-          "status": "mapped"
-        },
-        "28": {
-          "hafs_ayah": 28,
-          "status": "mapped"
-        },
-        "29": {
-          "hafs_ayah": 29,
-          "status": "mapped"
-        },
-        "30": {
-          "hafs_ayah": 30,
-          "status": "mapped"
-        },
-        "31": {
-          "hafs_ayah": 31,
-          "status": "mapped"
-        },
-        "32": {
-          "hafs_ayah": 32,
-          "status": "mapped"
-        },
-        "33": {
-          "hafs_ayah": 33,
-          "status": "mapped"
-        },
-        "34": {
-          "hafs_ayah": 34,
-          "hafs_ayahs": [
-            34,
-            35
-          ],
-          "status": "covers_multiple"
-        },
-        "35": {
-          "hafs_ayah": 36,
-          "status": "mapped"
-        },
-        "36": {
-          "hafs_ayah": 37,
-          "status": "mapped"
-        },
-        "37": {
-          "hafs_ayah": 38,
-          "status": "mapped"
-        },
-        "38": {
-          "hafs_ayah": 39,
-          "status": "mapped"
-        },
-        "39": {
-          "hafs_ayah": 40,
-          "status": "mapped"
-        },
-        "40": {
-          "hafs_ayah": 41,
-          "status": "mapped"
-        },
-        "41": {
-          "hafs_ayah": 42,
-          "status": "mapped"
-        },
-        "42": {
-          "hafs_ayah": 43,
-          "status": "mapped"
-        },
-        "43": {
-          "hafs_ayah": 44,
-          "status": "mapped"
-        },
-        "44": {
-          "hafs_ayah": 45,
-          "status": "mapped"
-        },
-        "45": {
-          "hafs_ayah": 46,
-          "status": "mapped"
-        }
-      }
-    },
-    "80": {
-      "source_ayah_count": 42,
-      "hafs_ayah_count": 42,
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
@@ -23937,6 +23665,192 @@
           "status": "mapped"
         },
         "42": {
+          "hafs_ayah": 43,
+          "status": "mapped"
+        },
+        "43": {
+          "hafs_ayah": 44,
+          "status": "mapped"
+        },
+        "44": {
+          "hafs_ayah": 45,
+          "status": "mapped"
+        },
+        "45": {
+          "hafs_ayah": 46,
+          "status": "mapped"
+        }
+      }
+    },
+    "80": {
+      "source_ayah_count": 41,
+      "hafs_ayah_count": 42,
+      "ayahs": {
+        "1": {
+          "hafs_ayah": 1,
+          "status": "mapped"
+        },
+        "2": {
+          "hafs_ayah": 2,
+          "status": "mapped"
+        },
+        "3": {
+          "hafs_ayah": 3,
+          "status": "mapped"
+        },
+        "4": {
+          "hafs_ayah": 4,
+          "status": "mapped"
+        },
+        "5": {
+          "hafs_ayah": 5,
+          "status": "mapped"
+        },
+        "6": {
+          "hafs_ayah": 6,
+          "status": "mapped"
+        },
+        "7": {
+          "hafs_ayah": 7,
+          "status": "mapped"
+        },
+        "8": {
+          "hafs_ayah": 8,
+          "status": "mapped"
+        },
+        "9": {
+          "hafs_ayah": 9,
+          "status": "mapped"
+        },
+        "10": {
+          "hafs_ayah": 10,
+          "status": "mapped"
+        },
+        "11": {
+          "hafs_ayah": 11,
+          "status": "mapped"
+        },
+        "12": {
+          "hafs_ayah": 12,
+          "status": "mapped"
+        },
+        "13": {
+          "hafs_ayah": 13,
+          "status": "mapped"
+        },
+        "14": {
+          "hafs_ayah": 14,
+          "status": "mapped"
+        },
+        "15": {
+          "hafs_ayah": 15,
+          "status": "mapped"
+        },
+        "16": {
+          "hafs_ayah": 16,
+          "status": "mapped"
+        },
+        "17": {
+          "hafs_ayah": 17,
+          "status": "mapped"
+        },
+        "18": {
+          "hafs_ayah": 18,
+          "status": "mapped"
+        },
+        "19": {
+          "hafs_ayah": 19,
+          "status": "mapped"
+        },
+        "20": {
+          "hafs_ayah": 20,
+          "status": "mapped"
+        },
+        "21": {
+          "hafs_ayah": 21,
+          "status": "mapped"
+        },
+        "22": {
+          "hafs_ayah": 22,
+          "status": "mapped"
+        },
+        "23": {
+          "hafs_ayah": 23,
+          "status": "mapped"
+        },
+        "24": {
+          "hafs_ayah": 24,
+          "status": "mapped"
+        },
+        "25": {
+          "hafs_ayah": 25,
+          "status": "mapped"
+        },
+        "26": {
+          "hafs_ayah": 26,
+          "status": "mapped"
+        },
+        "27": {
+          "hafs_ayah": 27,
+          "status": "mapped"
+        },
+        "28": {
+          "hafs_ayah": 28,
+          "status": "mapped"
+        },
+        "29": {
+          "hafs_ayah": 29,
+          "status": "mapped"
+        },
+        "30": {
+          "hafs_ayah": 30,
+          "status": "mapped"
+        },
+        "31": {
+          "hafs_ayah": 31,
+          "status": "mapped"
+        },
+        "32": {
+          "hafs_ayah": 32,
+          "hafs_ayahs": [
+            32,
+            33
+          ],
+          "status": "covers_multiple"
+        },
+        "33": {
+          "hafs_ayah": 34,
+          "status": "mapped"
+        },
+        "34": {
+          "hafs_ayah": 35,
+          "status": "mapped"
+        },
+        "35": {
+          "hafs_ayah": 36,
+          "status": "mapped"
+        },
+        "36": {
+          "hafs_ayah": 37,
+          "status": "mapped"
+        },
+        "37": {
+          "hafs_ayah": 38,
+          "status": "mapped"
+        },
+        "38": {
+          "hafs_ayah": 39,
+          "status": "mapped"
+        },
+        "39": {
+          "hafs_ayah": 40,
+          "status": "mapped"
+        },
+        "40": {
+          "hafs_ayah": 41,
+          "status": "mapped"
+        },
+        "41": {
           "hafs_ayah": 42,
           "status": "mapped"
         }
@@ -24297,7 +24211,7 @@
       }
     },
     "84": {
-      "source_ayah_count": 25,
+      "source_ayah_count": 23,
       "hafs_ayah_count": 25,
       "ayahs": {
         "1": {
@@ -24326,27 +24240,27 @@
         },
         "7": {
           "hafs_ayah": 7,
-          "status": "mapped"
-        },
-        "8": {
-          "hafs_ayah": 8,
           "hafs_ayahs": [
-            8,
-            9
+            7,
+            8
           ],
           "status": "covers_multiple"
+        },
+        "8": {
+          "hafs_ayah": 9,
+          "status": "mapped"
         },
         "9": {
           "hafs_ayah": 10,
-          "status": "mapped"
-        },
-        "10": {
-          "hafs_ayah": 11,
           "hafs_ayahs": [
-            11,
-            12
+            10,
+            11
           ],
           "status": "covers_multiple"
+        },
+        "10": {
+          "hafs_ayah": 12,
+          "status": "mapped"
         },
         "11": {
           "hafs_ayah": 13,
@@ -24397,14 +24311,6 @@
           "status": "mapped"
         },
         "23": {
-          "hafs_ayah": 25,
-          "status": "mapped"
-        },
-        "24": {
-          "hafs_ayah": 25,
-          "status": "mapped"
-        },
-        "25": {
           "hafs_ayah": 25,
           "status": "mapped"
         }
@@ -24505,7 +24411,7 @@
       }
     },
     "86": {
-      "source_ayah_count": 16,
+      "source_ayah_count": 17,
       "hafs_ayah_count": 17,
       "ayahs": {
         "1": {
@@ -24570,11 +24476,11 @@
         },
         "16": {
           "hafs_ayah": 16,
-          "hafs_ayahs": [
-            16,
-            17
-          ],
-          "status": "covers_multiple"
+          "status": "mapped"
+        },
+        "17": {
+          "hafs_ayah": 17,
+          "status": "mapped"
         }
       }
     },
@@ -24771,7 +24677,7 @@
       }
     },
     "89": {
-      "source_ayah_count": 32,
+      "source_ayah_count": 29,
       "hafs_ayah_count": 30,
       "ayahs": {
         "1": {
@@ -24893,18 +24799,6 @@
             30
           ],
           "status": "covers_multiple"
-        },
-        "30": {
-          "hafs_ayah": 30,
-          "status": "mapped"
-        },
-        "31": {
-          "hafs_ayah": 30,
-          "status": "mapped"
-        },
-        "32": {
-          "hafs_ayah": 30,
-          "status": "mapped"
         }
       }
     },
@@ -24995,7 +24889,7 @@
       }
     },
     "91": {
-      "source_ayah_count": 16,
+      "source_ayah_count": 15,
       "hafs_ayah_count": 15,
       "ayahs": {
         "1": {
@@ -25055,10 +24949,6 @@
           "status": "mapped"
         },
         "15": {
-          "hafs_ayah": 15,
-          "status": "mapped"
-        },
-        "16": {
           "hafs_ayah": 15,
           "status": "mapped"
         }
@@ -25281,7 +25171,7 @@
       }
     },
     "96": {
-      "source_ayah_count": 20,
+      "source_ayah_count": 19,
       "hafs_ayah_count": 19,
       "ayahs": {
         "1": {
@@ -25359,10 +25249,6 @@
         "19": {
           "hafs_ayah": 19,
           "status": "mapped"
-        },
-        "20": {
-          "hafs_ayah": 19,
-          "status": "mapped"
         }
       }
     },
@@ -25393,7 +25279,7 @@
       }
     },
     "98": {
-      "source_ayah_count": 8,
+      "source_ayah_count": 9,
       "hafs_ayah_count": 8,
       "ayahs": {
         "1": {
@@ -25426,16 +25312,16 @@
         },
         "8": {
           "hafs_ayah": 7,
-          "hafs_ayahs": [
-            7,
-            8
-          ],
-          "status": "covers_multiple"
+          "status": "mapped"
+        },
+        "9": {
+          "hafs_ayah": 8,
+          "status": "mapped"
         }
       }
     },
     "99": {
-      "source_ayah_count": 8,
+      "source_ayah_count": 9,
       "hafs_ayah_count": 8,
       "ayahs": {
         "1": {
@@ -25468,11 +25354,11 @@
         },
         "8": {
           "hafs_ayah": 7,
-          "hafs_ayahs": [
-            7,
-            8
-          ],
-          "status": "covers_multiple"
+          "status": "mapped"
+        },
+        "9": {
+          "hafs_ayah": 8,
+          "status": "mapped"
         }
       }
     },
@@ -25527,20 +25413,20 @@
       }
     },
     "101": {
-      "source_ayah_count": 10,
+      "source_ayah_count": 8,
       "hafs_ayah_count": 11,
       "ayahs": {
         "1": {
           "hafs_ayah": 1,
-          "status": "mapped"
-        },
-        "2": {
-          "hafs_ayah": 2,
           "hafs_ayahs": [
-            2,
-            3
+            1,
+            2
           ],
           "status": "covers_multiple"
+        },
+        "2": {
+          "hafs_ayah": 3,
+          "status": "mapped"
         },
         "3": {
           "hafs_ayah": 4,
@@ -25552,33 +25438,25 @@
         },
         "5": {
           "hafs_ayah": 6,
-          "status": "mapped"
+          "hafs_ayahs": [
+            6,
+            7
+          ],
+          "status": "covers_multiple"
         },
         "6": {
-          "hafs_ayah": 7,
+          "hafs_ayah": 8,
           "hafs_ayahs": [
-            7,
-            8
+            8,
+            9
           ],
           "status": "covers_multiple"
         },
         "7": {
-          "hafs_ayah": 9,
-          "hafs_ayahs": [
-            9,
-            10
-          ],
-          "status": "covers_multiple"
+          "hafs_ayah": 10,
+          "status": "mapped"
         },
         "8": {
-          "hafs_ayah": 11,
-          "status": "mapped"
-        },
-        "9": {
-          "hafs_ayah": 11,
-          "status": "mapped"
-        },
-        "10": {
           "hafs_ayah": 11,
           "status": "mapped"
         }
@@ -25709,7 +25587,7 @@
       }
     },
     "106": {
-      "source_ayah_count": 5,
+      "source_ayah_count": 4,
       "hafs_ayah_count": 4,
       "ayahs": {
         "1": {
@@ -25727,15 +25605,11 @@
         "4": {
           "hafs_ayah": 4,
           "status": "mapped"
-        },
-        "5": {
-          "hafs_ayah": 4,
-          "status": "mapped"
         }
       }
     },
     "107": {
-      "source_ayah_count": 6,
+      "source_ayah_count": 7,
       "hafs_ayah_count": 7,
       "ayahs": {
         "1": {
@@ -25760,11 +25634,11 @@
         },
         "6": {
           "hafs_ayah": 6,
-          "hafs_ayahs": [
-            6,
-            7
-          ],
-          "status": "covers_multiple"
+          "status": "mapped"
+        },
+        "7": {
+          "hafs_ayah": 7,
+          "status": "mapped"
         }
       }
     },

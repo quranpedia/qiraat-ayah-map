@@ -967,14 +967,14 @@
         {
           "surah": 11,
           "hafs_ayah": 82,
-          "word": "سجيل",
-          "type": "split"
+          "word": "منضود",
+          "type": "merge"
         },
         {
           "surah": 11,
           "hafs_ayah": 82,
-          "word": "منضود",
-          "type": "merge"
+          "word": "سجيل",
+          "type": "split"
         },
         {
           "surah": 11,
@@ -1539,6 +1539,12 @@
           "hafs_ayah": 20,
           "word": "الأذلين",
           "type": "merge"
+        },
+        {
+          "surah": 67,
+          "hafs_ayah": 9,
+          "word": "نذير",
+          "type": "split"
         },
         {
           "surah": 69,
@@ -2482,12 +2488,6 @@
           "type": "merge"
         },
         {
-          "surah": 78,
-          "hafs_ayah": 40,
-          "word": "قريبا",
-          "type": "split"
-        },
-        {
           "surah": 79,
           "hafs_ayah": 37,
           "word": "طغى",
@@ -2516,12 +2516,6 @@
           "hafs_ayah": 29,
           "word": "عبادي",
           "type": "merge"
-        },
-        {
-          "surah": 91,
-          "hafs_ayah": 14,
-          "word": "فعقروها",
-          "type": "split"
         },
         {
           "surah": 96,

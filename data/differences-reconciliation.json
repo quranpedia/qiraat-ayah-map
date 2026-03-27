@@ -1,0 +1,57 @@
+{
+  "_version": "0.1.0",
+  "_description": "Reconciliation report between the scholarly word-level differences file and the authoritative mapping-derived boundary-events file.",
+  "_reference_system": "kufi",
+  "systems": {
+    "basri": {
+      "is_exact_match": true,
+      "word_level_merge_count": 80,
+      "word_level_split_count": 48,
+      "word_level_total_ayahs": 6204,
+      "mapping_merge_count": 80,
+      "mapping_split_count": 48,
+      "mapping_total_ayahs": 6204,
+      "mismatched_surahs": []
+    },
+    "dimashqi": {
+      "is_exact_match": true,
+      "word_level_merge_count": 75,
+      "word_level_split_count": 65,
+      "word_level_total_ayahs": 6226,
+      "mapping_merge_count": 75,
+      "mapping_split_count": 65,
+      "mapping_total_ayahs": 6226,
+      "mismatched_surahs": []
+    },
+    "madani-first": {
+      "is_exact_match": true,
+      "word_level_merge_count": 79,
+      "word_level_split_count": 57,
+      "word_level_total_ayahs": 6214,
+      "mapping_merge_count": 79,
+      "mapping_split_count": 57,
+      "mapping_total_ayahs": 6214,
+      "mismatched_surahs": []
+    },
+    "madani-last": {
+      "is_exact_match": true,
+      "word_level_merge_count": 81,
+      "word_level_split_count": 59,
+      "word_level_total_ayahs": 6214,
+      "mapping_merge_count": 81,
+      "mapping_split_count": 59,
+      "mapping_total_ayahs": 6214,
+      "mismatched_surahs": []
+    },
+    "makki": {
+      "is_exact_match": true,
+      "word_level_merge_count": 83,
+      "word_level_split_count": 66,
+      "word_level_total_ayahs": 6219,
+      "mapping_merge_count": 83,
+      "mapping_split_count": 66,
+      "mapping_total_ayahs": 6219,
+      "mismatched_surahs": []
+    }
+  }
+}

@@ -12,7 +12,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -50,7 +51,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -94,7 +96,8 @@
         },
         "11": {
           "target_ayah": 11,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "12": {
           "target_ayah": 11,
@@ -1204,7 +1207,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -1212,7 +1216,8 @@
         },
         "3": {
           "target_ayah": 2,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "4": {
           "target_ayah": 2,
@@ -1396,7 +1401,8 @@
         },
         "48": {
           "target_ayah": 47,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "49": {
           "target_ayah": 47,
@@ -3490,7 +3496,8 @@
         },
         "66": {
           "target_ayah": 66,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "67": {
           "target_ayah": 66,
@@ -3904,7 +3911,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -4020,7 +4028,8 @@
           "splits_into": [
             28,
             29
-          ]
+          ],
+          "merges_with_next": true
         },
         "30": {
           "target_ayah": 29,
@@ -5666,7 +5675,8 @@
           "splits_into": [
             22,
             23
-          ]
+          ],
+          "merges_with_next": true
         },
         "23": {
           "target_ayah": 23,
@@ -6240,7 +6250,8 @@
         },
         "54": {
           "target_ayah": 54,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "55": {
           "target_ayah": 54,
@@ -8737,7 +8748,8 @@
         },
         "107": {
           "target_ayah": 107,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "108": {
           "target_ayah": 107,
@@ -8811,7 +8823,8 @@
         },
         "13": {
           "target_ayah": 13,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "14": {
           "target_ayah": 13,
@@ -8899,7 +8912,8 @@
         },
         "35": {
           "target_ayah": 34,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "36": {
           "target_ayah": 34,
@@ -9099,7 +9113,8 @@
         },
         "85": {
           "target_ayah": 83,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "86": {
           "target_ayah": 83,
@@ -9119,7 +9134,8 @@
         },
         "89": {
           "target_ayah": 87,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "90": {
           "target_ayah": 87,
@@ -9131,7 +9147,8 @@
         },
         "92": {
           "target_ayah": 89,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "93": {
           "target_ayah": 89,
@@ -9213,7 +9230,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -9615,7 +9633,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -9941,7 +9960,8 @@
         },
         "78": {
           "target_ayah": 83,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "79": {
           "target_ayah": 83,
@@ -9997,7 +10017,8 @@
         },
         "92": {
           "target_ayah": 96,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "93": {
           "target_ayah": 96,
@@ -10447,7 +10468,8 @@
         },
         "66": {
           "target_ayah": 66,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "67": {
           "target_ayah": 66,
@@ -10713,11 +10735,13 @@
         },
         "19": {
           "target_ayah": 19,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "20": {
           "target_ayah": 19,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "21": {
           "target_ayah": 19,
@@ -10805,11 +10829,13 @@
         },
         "42": {
           "target_ayah": 40,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "43": {
           "target_ayah": 40,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "44": {
           "target_ayah": 40,
@@ -12017,7 +12043,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -13317,7 +13344,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -13679,7 +13707,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -13965,7 +13994,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -14215,7 +14245,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -14361,7 +14392,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -15103,7 +15135,8 @@
         },
         "22": {
           "target_ayah": 23,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "23": {
           "target_ayah": 23,
@@ -15209,7 +15242,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -16281,7 +16315,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -16613,7 +16648,8 @@
         },
         "84": {
           "target_ayah": 83,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "85": {
           "target_ayah": 83,
@@ -16695,7 +16731,8 @@
         },
         "14": {
           "target_ayah": 15,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "15": {
           "target_ayah": 15,
@@ -16783,7 +16820,8 @@
         },
         "36": {
           "target_ayah": 36,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "37": {
           "target_ayah": 36,
@@ -16795,7 +16833,8 @@
         },
         "39": {
           "target_ayah": 38,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "40": {
           "target_ayah": 38,
@@ -16949,7 +16988,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -17005,7 +17045,8 @@
         },
         "15": {
           "target_ayah": 14,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "16": {
           "target_ayah": 14,
@@ -17307,7 +17348,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -17355,7 +17397,8 @@
         },
         "13": {
           "target_ayah": 12,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "14": {
           "target_ayah": 12,
@@ -17529,11 +17572,13 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "3": {
           "target_ayah": 1,
@@ -17653,7 +17698,8 @@
         },
         "32": {
           "target_ayah": 30,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "33": {
           "target_ayah": 30,
@@ -17747,7 +17793,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -18109,7 +18156,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -18241,7 +18289,8 @@
         },
         "34": {
           "target_ayah": 33,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "35": {
           "target_ayah": 33,
@@ -18285,7 +18334,8 @@
         },
         "45": {
           "target_ayah": 43,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "46": {
           "target_ayah": 43,
@@ -18351,7 +18401,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -18505,7 +18556,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -19755,7 +19807,8 @@
         },
         "28": {
           "target_ayah": 28,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "29": {
           "target_ayah": 28,
@@ -19763,7 +19816,8 @@
           "splits_into": [
             28,
             29
-          ]
+          ],
+          "merges_with_next": true
         },
         "30": {
           "target_ayah": 29,
@@ -20513,7 +20567,8 @@
         },
         "15": {
           "target_ayah": 17,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "16": {
           "target_ayah": 17,
@@ -20541,7 +20596,8 @@
         },
         "22": {
           "target_ayah": 23,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "23": {
           "target_ayah": 23,
@@ -20657,7 +20713,8 @@
         },
         "49": {
           "target_ayah": 51,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "50": {
           "target_ayah": 51,
@@ -20911,7 +20968,8 @@
         },
         "13": {
           "target_ayah": 13,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "14": {
           "target_ayah": 13,
@@ -21487,7 +21545,8 @@
           "splits_into": [
             2,
             3
-          ]
+          ],
+          "merges_with_next": true
         },
         "3": {
           "target_ayah": 3,
@@ -21931,7 +21990,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -22157,7 +22217,8 @@
         },
         "4": {
           "target_ayah": 4,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "5": {
           "target_ayah": 4,
@@ -22419,7 +22480,8 @@
           "splits_into": [
             23,
             24
-          ]
+          ],
+          "merges_with_next": true
         },
         "24": {
           "target_ayah": 24,
@@ -22817,7 +22879,8 @@
         },
         "41": {
           "target_ayah": 41,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "42": {
           "target_ayah": 41,
@@ -22947,7 +23010,8 @@
         },
         "16": {
           "target_ayah": 16,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "17": {
           "target_ayah": 16,
@@ -23683,7 +23747,8 @@
         },
         "33": {
           "target_ayah": 33,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "34": {
           "target_ayah": 33,
@@ -23869,11 +23934,13 @@
         },
         "32": {
           "target_ayah": 32,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "33": {
           "target_ayah": 32,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "34": {
           "target_ayah": 32,
@@ -24297,7 +24364,8 @@
         },
         "7": {
           "target_ayah": 7,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "8": {
           "target_ayah": 7,
@@ -24309,7 +24377,8 @@
         },
         "10": {
           "target_ayah": 9,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "11": {
           "target_ayah": 9,
@@ -24855,7 +24924,8 @@
         },
         "29": {
           "target_ayah": 30,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "30": {
           "target_ayah": 30,
@@ -25269,7 +25339,8 @@
         },
         "9": {
           "target_ayah": 9,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "10": {
           "target_ayah": 9,
@@ -25483,7 +25554,8 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
           "target_ayah": 1,
@@ -25503,7 +25575,8 @@
         },
         "6": {
           "target_ayah": 5,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "7": {
           "target_ayah": 5,
@@ -25511,7 +25584,8 @@
         },
         "8": {
           "target_ayah": 6,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "9": {
           "target_ayah": 6,
@@ -25699,7 +25773,8 @@
         },
         "6": {
           "target_ayah": 6,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "7": {
           "target_ayah": 6,

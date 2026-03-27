@@ -23,6 +23,162 @@ function getTargets(entry) {
   return Array.isArray(entry.splits_into) ? entry.splits_into : [entry.target_ayah];
 }
 
+function getMergeFlag(surah, hafsAyah) {
+  if (hafsAyah >= surah.hafs_ayah_count) {
+    return false;
+  }
+
+  const current = surah.ayahs[String(hafsAyah)];
+  const next = surah.ayahs[String(hafsAyah + 1)];
+  const targets = getTargets(current);
+  return targets[targets.length - 1] === next.target_ayah;
+}
+
+function buildDifferenceAggregate(items) {
+  const bySurah = {};
+  let mergeCount = 0;
+  let splitCount = 0;
+
+  for (let surahNumber = 1; surahNumber <= 114; surahNumber += 1) {
+    bySurah[String(surahNumber)] = {};
+  }
+
+  for (const item of items) {
+    const surahKey = String(item.surah);
+    const ayahKey = String(item.hafs_ayah);
+    const count = Number.isInteger(item.count) ? item.count : 1;
+
+    if (!bySurah[surahKey][ayahKey]) {
+      bySurah[surahKey][ayahKey] = {
+        merge: 0,
+        split: 0
+      };
+    }
+
+    bySurah[surahKey][ayahKey][item.type] += count;
+
+    if (item.type === 'merge') {
+      mergeCount += count;
+    } else {
+      splitCount += count;
+    }
+  }
+
+  return {
+    bySurah,
+    mergeCount,
+    splitCount
+  };
+}
+
+function buildBoundaryAggregateFromForwardMapping(mapping) {
+  const items = [];
+
+  for (let surahNumber = 1; surahNumber <= 114; surahNumber += 1) {
+    const surah = mapping.surahs[String(surahNumber)];
+
+    for (let hafsAyah = 1; hafsAyah <= surah.hafs_ayah_count; hafsAyah += 1) {
+      const entry = surah.ayahs[String(hafsAyah)];
+      const targets = getTargets(entry);
+      const splitCount = targets.length - 1;
+      const mergeCount = getMergeFlag(surah, hafsAyah) ? 1 : 0;
+
+      if (mergeCount > 0) {
+        items.push({
+          surah: surahNumber,
+          hafs_ayah: hafsAyah,
+          type: 'merge',
+          count: mergeCount
+        });
+      }
+
+      if (splitCount > 0) {
+        items.push({
+          surah: surahNumber,
+          hafs_ayah: hafsAyah,
+          type: 'split',
+          count: splitCount
+        });
+      }
+    }
+  }
+
+  return buildDifferenceAggregate(items);
+}
+
+function buildExpectedReconciliation(wordLevelAggregate, mappingAggregate, kufiCountsFile, systemTotal) {
+  const mismatchedSurahs = [];
+
+  for (let surahNumber = 1; surahNumber <= 114; surahNumber += 1) {
+    const surahKey = String(surahNumber);
+    const hafsAyahCount = kufiCountsFile.surahs[surahKey];
+    const wordLevelByAyah = wordLevelAggregate.bySurah[surahKey];
+    const mappingByAyah = mappingAggregate.bySurah[surahKey];
+
+    let wordLevelMerge = 0;
+    let wordLevelSplit = 0;
+    let mappingMerge = 0;
+    let mappingSplit = 0;
+    const mismatchedHafsAyahs = [];
+
+    for (let hafsAyah = 1; hafsAyah <= hafsAyahCount; hafsAyah += 1) {
+      const ayahKey = String(hafsAyah);
+      const wordLevelCounts = wordLevelByAyah[ayahKey] || { merge: 0, split: 0 };
+      const mappingCounts = mappingByAyah[ayahKey] || { merge: 0, split: 0 };
+
+      wordLevelMerge += wordLevelCounts.merge;
+      wordLevelSplit += wordLevelCounts.split;
+      mappingMerge += mappingCounts.merge;
+      mappingSplit += mappingCounts.split;
+
+      if (
+        wordLevelCounts.merge !== mappingCounts.merge
+        || wordLevelCounts.split !== mappingCounts.split
+      ) {
+        mismatchedHafsAyahs.push({
+          hafs_ayah: hafsAyah,
+          word_level: {
+            merge_count: wordLevelCounts.merge,
+            split_count: wordLevelCounts.split
+          },
+          mapping: {
+            merge_count: mappingCounts.merge,
+            split_count: mappingCounts.split
+          }
+        });
+      }
+    }
+
+    if (mismatchedHafsAyahs.length > 0) {
+      mismatchedSurahs.push({
+        surah: surahNumber,
+        word_level: {
+          merge_count: wordLevelMerge,
+          split_count: wordLevelSplit,
+          target_ayah_count: hafsAyahCount - wordLevelMerge + wordLevelSplit
+        },
+        mapping: {
+          merge_count: mappingMerge,
+          split_count: mappingSplit,
+          target_ayah_count: hafsAyahCount - mappingMerge + mappingSplit
+        },
+        mismatched_hafs_ayahs: mismatchedHafsAyahs
+      });
+    }
+  }
+
+  return {
+    is_exact_match: mismatchedSurahs.length === 0,
+    word_level_merge_count: wordLevelAggregate.mergeCount,
+    word_level_split_count: wordLevelAggregate.splitCount,
+    word_level_total_ayahs: kufiCountsFile._total_ayahs - wordLevelAggregate.mergeCount + wordLevelAggregate.splitCount,
+    mapping_merge_count: mappingAggregate.mergeCount,
+    mapping_split_count: mappingAggregate.splitCount,
+    mapping_total_ayahs: systemTotal,
+    mismatched_surahs: mismatchedSurahs
+  };
+}
+
 let passed = 0;
 let failed = 0;
 
@@ -42,11 +198,18 @@ function section(label) {
 const countingSystems = load('counting-systems.json');
 const qiraat = load('qiraat.json');
 const differences = load('differences.json');
+const boundaryEvents = load('boundary-events.json');
+const differencesReconciliation = load('differences-reconciliation.json');
+const classicalCountAttestations = load('classical-count-attestations.json');
 
 const systemIds = Object.keys(countingSystems);
 const nonKufiIds = systemIds.filter(id => id !== 'kufi');
 const allRawis = Object.entries(qiraat)
-  .flatMap(([qiraaSlug, qiraa]) => Object.keys(qiraa.rawis).map(rawiSlug => ({ rawiSlug, qiraaSlug, countingSystem: qiraa.counting_system })));
+  .flatMap(([qiraaSlug, qiraa]) => Object.keys(qiraa.rawis).map(rawiSlug => ({
+    rawiSlug,
+    qiraaSlug,
+    countingSystem: qiraa.counting_system
+  })));
 const nonKufiRawis = allRawis.filter(item => item.countingSystem !== 'kufi');
 const knownMushafIds = new Map([
   ['hafs', 1],
@@ -58,6 +221,8 @@ const knownMushafIds = new Map([
   ['shuba', 9],
   ['susi', 10]
 ]);
+const boundaryBlocks = new Map(boundaryEvents.differences.map(block => [block.counting_system, block]));
+const differenceBlocks = new Map(differences.differences.map(block => [block.counting_system, block]));
 
 section('Structural Integrity');
 
@@ -87,6 +252,23 @@ for (const block of differences.differences) {
   }
 }
 
+assert(boundaryEvents._reference_system === 'kufi', 'boundary-events.json uses kufi as reference system');
+assert(typeof boundaryEvents._version === 'string', 'boundary-events.json has _version');
+
+for (const block of boundaryEvents.differences) {
+  assert(!block.counting_system.includes('_'), `Boundary system "${block.counting_system}" uses hyphens only`);
+  assert(typeof block._source_mapping_file === 'string', `${block.counting_system}: boundary block has source mapping file`);
+  for (const item of block.items) {
+    assert(item.surah >= 1 && item.surah <= 114, `Boundary item has valid surah ${item.surah}`);
+    assert(item.hafs_ayah >= 1, `Boundary item has valid hafs_ayah ${item.hafs_ayah}`);
+    assert(item.type === 'merge' || item.type === 'split', `Boundary item has valid type "${item.type}"`);
+    assert(Number.isInteger(item.count) && item.count >= 1, 'Boundary item has positive integer count');
+  }
+}
+
+assert(differencesReconciliation._reference_system === 'kufi', 'differences-reconciliation.json uses kufi as reference system');
+assert(typeof differencesReconciliation._version === 'string', 'differences-reconciliation.json has _version');
+
 section('Cross-Reference Integrity');
 
 for (const [slug, qiraa] of Object.entries(qiraat)) {
@@ -99,8 +281,10 @@ for (const [systemId, system] of Object.entries(countingSystems)) {
   }
 }
 
-for (const block of differences.differences) {
-  assert(systemIds.includes(block.counting_system), `Diff system "${block.counting_system}" exists in counting-systems.json`);
+for (const systemId of nonKufiIds) {
+  assert(differenceBlocks.has(systemId), `differences.json contains block for ${systemId}`);
+  assert(boundaryBlocks.has(systemId), `boundary-events.json contains block for ${systemId}`);
+  assert(systemId in differencesReconciliation.systems, `differences-reconciliation.json contains system ${systemId}`);
 }
 
 section('Kufan Total Ayah Count');
@@ -182,13 +366,94 @@ for (const systemId of ['madani-first', 'madani-last', 'basri', 'dimashqi']) {
   assert(mapping.surahs['1'].ayahs['1'].status === 'mapped', 'makki: Basmalah remains a standalone ayah in Fatiha');
 }
 
-section('Surah 2 — 285 ayahs in all non-Kufan systems');
+section('Surah 2 — per-system target counts');
+
+const expectedBaqarahCounts = {
+  'madani-first': 285,
+  'madani-last': 285,
+  makki: 285,
+  basri: 287,
+  dimashqi: 285
+};
 
 for (const systemId of nonKufiIds) {
   const mapping = load(`mappings/by-counting-system/kufi-to-${systemId}.json`);
   const baqarah = mapping.surahs['2'];
   assert(baqarah.hafs_ayah_count === 286, `${systemId}: Surah 2 Hafs count = 286`);
-  assert(baqarah.target_ayah_count === 285, `${systemId}: Surah 2 target count = 285`);
+  assert(baqarah.target_ayah_count === expectedBaqarahCounts[systemId], `${systemId}: Surah 2 target count = ${expectedBaqarahCounts[systemId]}`);
+}
+
+section('Last Madinan scholarly totals');
+
+{
+  const counts = load('surah-counts/madani-last.json');
+  const expected = {
+    16: 128,
+    67: 31,
+    91: 15
+  };
+
+  assert(counts._total_ayahs === 6214, 'madani-last: total ayahs = 6214');
+  for (const [surahNumber, targetCount] of Object.entries(expected)) {
+    assert(counts.surahs[surahNumber] === targetCount, `madani-last: Surah ${surahNumber} target count = ${targetCount}`);
+  }
+}
+
+section('Basran scholarly totals');
+
+{
+  const counts = load('surah-counts/basri.json');
+  const expected = {
+    1: 7,
+    2: 287,
+    3: 200,
+    4: 175,
+    5: 123,
+    6: 166
+  };
+
+  assert(counts._total_ayahs === 6204, 'basri: total ayahs = 6204');
+  for (const [surahNumber, targetCount] of Object.entries(expected)) {
+    assert(counts.surahs[surahNumber] === targetCount, `basri: Surah ${surahNumber} target count = ${targetCount}`);
+  }
+}
+
+section('Makkan scholarly totals');
+
+{
+  const counts = load('surah-counts/makki.json');
+  const mapping = load('mappings/by-counting-system/kufi-to-makki.json');
+  const expected = {
+    72: 28,
+    78: 40,
+    91: 15
+  };
+
+  assert(counts._total_ayahs === 6219, 'makki: total ayahs = 6219');
+  for (const [surahNumber, targetCount] of Object.entries(expected)) {
+    assert(counts.surahs[surahNumber] === targetCount, `makki: Surah ${surahNumber} target count = ${targetCount}`);
+  }
+
+  assert(mapping.surahs['78'].ayahs['40'].status === 'mapped', 'makki: 78:40 is not counted as an extra ayah');
+  assert(mapping.surahs['91'].ayahs['14'].status === 'mapped', 'makki: 91:14 is not counted as an extra ayah');
+}
+
+section('Classical count attestation file');
+
+{
+  const makki = classicalCountAttestations.systems.makki;
+  assert(typeof classicalCountAttestations._version === 'string', 'classical-count-attestations.json: has _version');
+  assert(makki.status === 'resolved_to_primary_riwaya', 'classical-count-attestations.json: makki status resolved_to_primary_riwaya');
+  assert(makki.mapping_total_ayahs === 6219, 'classical-count-attestations.json: makki mapping total = 6219');
+  assert(makki.primary_classical_total_ayahs === 6219, 'classical-count-attestations.json: makki primary classical total = 6219');
+  assert(makki.delta_from_primary === 0, 'classical-count-attestations.json: makki delta = 0');
+  assert(Array.isArray(makki.disputed_boundaries) && makki.disputed_boundaries.length === 2, 'classical-count-attestations.json: makki has 2 disputed boundaries');
+
+  const boundaryKey = item => `${item.surah}:${item.hafs_ayah}:${item.word}`;
+  const boundaries = new Map(makki.disputed_boundaries.map(item => [boundaryKey(item), item]));
+
+  assert(boundaries.get('78:40:قريبا')?.current_mapping_decision === 'excluded', 'classical-count-attestations.json: makki 78:40 currently excluded');
+  assert(boundaries.get('91:14:فعقروها')?.current_mapping_decision === 'excluded', 'classical-count-attestations.json: makki 91:14 currently excluded');
 }
 
 section('الم surahs — الم merged in all non-Kufan systems');
@@ -225,9 +490,15 @@ for (const systemId of nonKufiIds) {
     assert(Object.keys(surah.ayahs).length === surah.hafs_ayah_count, `${filename}: Surah ${surahNumber} has one entry per Hafs ayah`);
 
     const coveredTargets = new Set();
-    for (const [hafsAyah, entry] of Object.entries(surah.ayahs)) {
+    for (const [hafsAyahStr, entry] of Object.entries(surah.ayahs)) {
+      const hafsAyah = Number.parseInt(hafsAyahStr, 10);
+      const targets = getTargets(entry);
+      const expectedMergesWithNext = getMergeFlag(surah, hafsAyah);
+
       assert(Number.isInteger(entry.target_ayah), `${filename}: ${surahNumber}:${hafsAyah} has integer target_ayah`);
       assert(entry.target_ayah >= 1 && entry.target_ayah <= surah.target_ayah_count, `${filename}: ${surahNumber}:${hafsAyah} target in range`);
+      assert(!('merges_with_next' in entry) || entry.merges_with_next === true, `${filename}: ${surahNumber}:${hafsAyah} merges_with_next is only stored as true`);
+      assert(Boolean(entry.merges_with_next) === expectedMergesWithNext, `${filename}: ${surahNumber}:${hafsAyah} merges_with_next matches target overlap`);
 
       if (entry.status === 'split') {
         assert(Array.isArray(entry.splits_into) && entry.splits_into.length >= 2, `${filename}: ${surahNumber}:${hafsAyah} split has splits_into`);
@@ -239,7 +510,12 @@ for (const systemId of nonKufiIds) {
         assert(!('splits_into' in entry), `${filename}: ${surahNumber}:${hafsAyah} non-split has no splits_into`);
       }
 
-      for (const target of getTargets(entry)) {
+      if (entry.status === 'merged') {
+        assert(targets.length === 1, `${filename}: ${surahNumber}:${hafsAyah} merged entry covers exactly one target number`);
+        assert(entry.merges_with_next === true, `${filename}: ${surahNumber}:${hafsAyah} merged entry is explicitly marked`);
+      }
+
+      for (const target of targets) {
         assert(target >= 1 && target <= surah.target_ayah_count, `${filename}: ${surahNumber}:${hafsAyah} covers target ${target} in range`);
         coveredTargets.add(target);
       }
@@ -278,6 +554,7 @@ for (const systemId of nonKufiIds) {
 
     for (let targetAyah = 1; targetAyah <= reverseSurah.source_ayah_count; targetAyah += 1) {
       const entry = reverseSurah.ayahs[String(targetAyah)];
+
       assert(!!entry, `${filename}: Surah ${surahNumber} has entry for target ayah ${targetAyah}`);
       if (!entry) {
         continue;
@@ -298,6 +575,57 @@ for (const systemId of nonKufiIds) {
       }
     }
   }
+}
+
+section('Boundary Events File');
+
+for (const systemId of nonKufiIds) {
+  const block = boundaryBlocks.get(systemId);
+  const forward = load(`mappings/by-counting-system/kufi-to-${systemId}.json`);
+  const aggregateFromFile = buildDifferenceAggregate(block.items);
+  const aggregateFromForward = buildBoundaryAggregateFromForwardMapping(forward);
+  const totalFromBoundaryFile = kufiCountsFile._total_ayahs - aggregateFromFile.mergeCount + aggregateFromFile.splitCount;
+
+  assert(block._source_mapping_file === `mappings/by-counting-system/kufi-to-${systemId}.json`, `${systemId}: boundary block points at the correct source mapping`);
+  assert(totalFromBoundaryFile === countingSystems[systemId].total_ayahs, `${systemId}: boundary events total matches declared system total`);
+  assert(aggregateFromFile.mergeCount === aggregateFromForward.mergeCount, `${systemId}: boundary merge total matches forward mapping`);
+  assert(aggregateFromFile.splitCount === aggregateFromForward.splitCount, `${systemId}: boundary split total matches forward mapping`);
+
+  for (let surahNumber = 1; surahNumber <= 114; surahNumber += 1) {
+    const surahKey = String(surahNumber);
+    const hafsAyahCount = kufiCountsFile.surahs[surahKey];
+
+    for (let hafsAyah = 1; hafsAyah <= hafsAyahCount; hafsAyah += 1) {
+      const ayahKey = String(hafsAyah);
+      const fromFile = aggregateFromFile.bySurah[surahKey][ayahKey] || { merge: 0, split: 0 };
+      const fromForward = aggregateFromForward.bySurah[surahKey][ayahKey] || { merge: 0, split: 0 };
+      assert(fromFile.merge === fromForward.merge, `${systemId}: boundary merge count matches forward at ${surahNumber}:${hafsAyah}`);
+      assert(fromFile.split === fromForward.split, `${systemId}: boundary split count matches forward at ${surahNumber}:${hafsAyah}`);
+    }
+  }
+}
+
+section('Differences Reconciliation File');
+
+for (const systemId of nonKufiIds) {
+  const report = differencesReconciliation.systems[systemId];
+  assert(report.is_exact_match === true, `${systemId}: generated forward mapping fully reconciles with differences.json`);
+  const expected = buildExpectedReconciliation(
+    buildDifferenceAggregate(differenceBlocks.get(systemId).items),
+    buildDifferenceAggregate(boundaryBlocks.get(systemId).items),
+    kufiCountsFile,
+    countingSystems[systemId].total_ayahs
+  );
+
+  assert(report.is_exact_match === expected.is_exact_match, `${systemId}: reconciliation exact-match flag is correct`);
+  assert(report.word_level_merge_count === expected.word_level_merge_count, `${systemId}: reconciliation word-level merge total is correct`);
+  assert(report.word_level_split_count === expected.word_level_split_count, `${systemId}: reconciliation word-level split total is correct`);
+  assert(report.word_level_total_ayahs === expected.word_level_total_ayahs, `${systemId}: reconciliation word-level total is correct`);
+  assert(report.mapping_merge_count === expected.mapping_merge_count, `${systemId}: reconciliation mapping merge total is correct`);
+  assert(report.mapping_split_count === expected.mapping_split_count, `${systemId}: reconciliation mapping split total is correct`);
+  assert(report.mapping_total_ayahs === expected.mapping_total_ayahs, `${systemId}: reconciliation mapping total is correct`);
+  assert(report.mismatched_surahs.length === expected.mismatched_surahs.length, `${systemId}: reconciliation mismatch count is correct`);
+  assert(JSON.stringify(report.mismatched_surahs) === JSON.stringify(expected.mismatched_surahs), `${systemId}: reconciliation mismatch details are exact`);
 }
 
 section('Surah Counts Files');

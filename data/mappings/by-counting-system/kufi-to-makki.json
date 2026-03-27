@@ -1,6 +1,6 @@
 {
   "_version": "0.1.0",
-  "_description": "Ayah mapping: Kufan (Hafs) → Makkan (المكي).",
+  "_description": "Pre-computed ayah mapping: Hafs (Kufan) → Makkan (المكي).",
   "_source": "kufi",
   "_target": "makki",
   "surahs": {
@@ -44,11 +44,12 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
@@ -828,11 +829,12 @@
         },
         "197": {
           "target_ayah": 196,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "198": {
-          "target_ayah": 197,
-          "status": "merged"
+          "target_ayah": 196,
+          "status": "mapped"
         },
         "199": {
           "target_ayah": 197,
@@ -920,283 +922,280 @@
           "splits_into": [
             217,
             218
-          ]
+          ],
+          "merges_with_next": true
         },
         "220": {
-          "target_ayah": 219,
-          "status": "merged"
+          "target_ayah": 218,
+          "status": "mapped"
         },
         "221": {
           "target_ayah": 219,
-          "status": "merged"
-        },
-        "222": {
-          "target_ayah": 219,
           "status": "mapped"
         },
-        "223": {
+        "222": {
           "target_ayah": 220,
           "status": "mapped"
         },
-        "224": {
+        "223": {
           "target_ayah": 221,
           "status": "mapped"
         },
-        "225": {
+        "224": {
           "target_ayah": 222,
           "status": "mapped"
         },
-        "226": {
+        "225": {
           "target_ayah": 223,
           "status": "mapped"
         },
-        "227": {
+        "226": {
           "target_ayah": 224,
           "status": "mapped"
         },
-        "228": {
+        "227": {
           "target_ayah": 225,
           "status": "mapped"
         },
-        "229": {
+        "228": {
           "target_ayah": 226,
           "status": "mapped"
         },
-        "230": {
+        "229": {
           "target_ayah": 227,
           "status": "mapped"
         },
-        "231": {
+        "230": {
           "target_ayah": 228,
           "status": "mapped"
         },
-        "232": {
+        "231": {
           "target_ayah": 229,
           "status": "mapped"
         },
-        "233": {
+        "232": {
           "target_ayah": 230,
           "status": "mapped"
         },
-        "234": {
+        "233": {
           "target_ayah": 231,
           "status": "mapped"
         },
-        "235": {
+        "234": {
           "target_ayah": 232,
           "status": "mapped"
         },
-        "236": {
+        "235": {
           "target_ayah": 233,
           "status": "mapped"
         },
-        "237": {
+        "236": {
           "target_ayah": 234,
           "status": "mapped"
         },
-        "238": {
+        "237": {
           "target_ayah": 235,
           "status": "mapped"
         },
-        "239": {
+        "238": {
           "target_ayah": 236,
           "status": "mapped"
         },
-        "240": {
+        "239": {
           "target_ayah": 237,
           "status": "mapped"
         },
-        "241": {
+        "240": {
           "target_ayah": 238,
           "status": "mapped"
         },
-        "242": {
+        "241": {
           "target_ayah": 239,
           "status": "mapped"
         },
-        "243": {
+        "242": {
           "target_ayah": 240,
           "status": "mapped"
         },
-        "244": {
+        "243": {
           "target_ayah": 241,
           "status": "mapped"
         },
-        "245": {
+        "244": {
           "target_ayah": 242,
           "status": "mapped"
         },
-        "246": {
+        "245": {
           "target_ayah": 243,
           "status": "mapped"
         },
-        "247": {
+        "246": {
           "target_ayah": 244,
           "status": "mapped"
         },
-        "248": {
+        "247": {
           "target_ayah": 245,
           "status": "mapped"
         },
-        "249": {
+        "248": {
           "target_ayah": 246,
           "status": "mapped"
         },
-        "250": {
+        "249": {
           "target_ayah": 247,
           "status": "mapped"
         },
-        "251": {
+        "250": {
           "target_ayah": 248,
           "status": "mapped"
         },
-        "252": {
+        "251": {
           "target_ayah": 249,
           "status": "mapped"
         },
-        "253": {
+        "252": {
           "target_ayah": 250,
           "status": "mapped"
         },
-        "254": {
+        "253": {
           "target_ayah": 251,
           "status": "mapped"
         },
-        "255": {
+        "254": {
           "target_ayah": 252,
+          "status": "mapped"
+        },
+        "255": {
+          "target_ayah": 253,
           "status": "split",
           "splits_into": [
-            252,
-            253
+            253,
+            254
           ]
         },
         "256": {
-          "target_ayah": 254,
-          "status": "mapped"
-        },
-        "257": {
           "target_ayah": 255,
           "status": "mapped"
         },
-        "258": {
+        "257": {
           "target_ayah": 256,
           "status": "mapped"
         },
-        "259": {
+        "258": {
           "target_ayah": 257,
           "status": "mapped"
         },
-        "260": {
+        "259": {
           "target_ayah": 258,
           "status": "mapped"
         },
-        "261": {
+        "260": {
           "target_ayah": 259,
           "status": "mapped"
         },
-        "262": {
+        "261": {
           "target_ayah": 260,
           "status": "mapped"
         },
-        "263": {
+        "262": {
           "target_ayah": 261,
           "status": "mapped"
         },
-        "264": {
+        "263": {
           "target_ayah": 262,
           "status": "mapped"
         },
-        "265": {
+        "264": {
           "target_ayah": 263,
           "status": "mapped"
         },
-        "266": {
+        "265": {
           "target_ayah": 264,
           "status": "mapped"
         },
-        "267": {
+        "266": {
           "target_ayah": 265,
           "status": "mapped"
         },
-        "268": {
+        "267": {
           "target_ayah": 266,
           "status": "mapped"
         },
-        "269": {
+        "268": {
           "target_ayah": 267,
           "status": "mapped"
         },
-        "270": {
+        "269": {
           "target_ayah": 268,
           "status": "mapped"
         },
-        "271": {
+        "270": {
           "target_ayah": 269,
           "status": "mapped"
         },
-        "272": {
+        "271": {
           "target_ayah": 270,
           "status": "mapped"
         },
-        "273": {
+        "272": {
           "target_ayah": 271,
           "status": "mapped"
         },
-        "274": {
+        "273": {
           "target_ayah": 272,
           "status": "mapped"
         },
-        "275": {
+        "274": {
           "target_ayah": 273,
           "status": "mapped"
         },
-        "276": {
+        "275": {
           "target_ayah": 274,
           "status": "mapped"
         },
-        "277": {
+        "276": {
           "target_ayah": 275,
           "status": "mapped"
         },
-        "278": {
+        "277": {
           "target_ayah": 276,
           "status": "mapped"
         },
-        "279": {
+        "278": {
           "target_ayah": 277,
           "status": "mapped"
         },
-        "280": {
+        "279": {
           "target_ayah": 278,
           "status": "mapped"
         },
-        "281": {
+        "280": {
           "target_ayah": 279,
           "status": "mapped"
         },
-        "282": {
+        "281": {
           "target_ayah": 280,
           "status": "mapped"
         },
-        "283": {
+        "282": {
           "target_ayah": 281,
           "status": "mapped"
         },
-        "284": {
+        "283": {
           "target_ayah": 282,
           "status": "mapped"
         },
-        "285": {
+        "284": {
           "target_ayah": 283,
           "status": "mapped"
         },
-        "286": {
+        "285": {
           "target_ayah": 284,
-          "status": "split",
-          "splits_into": [
-            284,
-            285
-          ]
+          "status": "mapped"
+        },
+        "286": {
+          "target_ayah": 285,
+          "status": "mapped"
         }
       }
     },
@@ -1206,11 +1205,12 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
@@ -1398,11 +1398,12 @@
         },
         "48": {
           "target_ayah": 48,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "49": {
-          "target_ayah": 49,
-          "status": "merged"
+          "target_ayah": 48,
+          "status": "mapped"
         },
         "50": {
           "target_ayah": 49,
@@ -2192,11 +2193,12 @@
         },
         "44": {
           "target_ayah": 44,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "45": {
-          "target_ayah": 45,
-          "status": "merged"
+          "target_ayah": 44,
+          "status": "mapped"
         },
         "46": {
           "target_ayah": 45,
@@ -3488,11 +3490,12 @@
         },
         "66": {
           "target_ayah": 67,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "67": {
-          "target_ayah": 68,
-          "status": "merged"
+          "target_ayah": 67,
+          "status": "mapped"
         },
         "68": {
           "target_ayah": 68,
@@ -3902,11 +3905,12 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
@@ -4014,11 +4018,12 @@
         },
         "29": {
           "target_ayah": 28,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "30": {
-          "target_ayah": 29,
-          "status": "merged"
+          "target_ayah": 28,
+          "status": "mapped"
         },
         "31": {
           "target_ayah": 29,
@@ -6230,11 +6235,12 @@
         },
         "54": {
           "target_ayah": 54,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "55": {
-          "target_ayah": 55,
-          "status": "merged"
+          "target_ayah": 54,
+          "status": "mapped"
         },
         "56": {
           "target_ayah": 55,
@@ -6346,179 +6352,178 @@
           "splits_into": [
             81,
             82
-          ]
+          ],
+          "merges_with_next": true
         },
         "83": {
-          "target_ayah": 83,
-          "status": "merged"
+          "target_ayah": 82,
+          "status": "mapped"
         },
         "84": {
           "target_ayah": 83,
-          "status": "merged"
+          "status": "mapped"
         },
         "85": {
-          "target_ayah": 83,
+          "target_ayah": 84,
           "status": "mapped"
         },
         "86": {
-          "target_ayah": 84,
+          "target_ayah": 85,
           "status": "split",
           "splits_into": [
-            84,
-            85
+            85,
+            86
           ]
         },
         "87": {
-          "target_ayah": 86,
-          "status": "mapped"
-        },
-        "88": {
           "target_ayah": 87,
           "status": "mapped"
         },
-        "89": {
+        "88": {
           "target_ayah": 88,
           "status": "mapped"
         },
-        "90": {
+        "89": {
           "target_ayah": 89,
           "status": "mapped"
         },
-        "91": {
+        "90": {
           "target_ayah": 90,
           "status": "mapped"
         },
-        "92": {
+        "91": {
           "target_ayah": 91,
           "status": "mapped"
         },
-        "93": {
+        "92": {
           "target_ayah": 92,
           "status": "mapped"
         },
-        "94": {
+        "93": {
           "target_ayah": 93,
           "status": "mapped"
         },
-        "95": {
+        "94": {
           "target_ayah": 94,
           "status": "mapped"
         },
-        "96": {
+        "95": {
           "target_ayah": 95,
           "status": "mapped"
         },
-        "97": {
+        "96": {
           "target_ayah": 96,
           "status": "mapped"
         },
-        "98": {
+        "97": {
           "target_ayah": 97,
           "status": "mapped"
         },
-        "99": {
+        "98": {
           "target_ayah": 98,
           "status": "mapped"
         },
-        "100": {
+        "99": {
           "target_ayah": 99,
           "status": "mapped"
         },
-        "101": {
+        "100": {
           "target_ayah": 100,
           "status": "mapped"
         },
-        "102": {
+        "101": {
           "target_ayah": 101,
           "status": "mapped"
         },
-        "103": {
+        "102": {
           "target_ayah": 102,
           "status": "mapped"
         },
-        "104": {
+        "103": {
           "target_ayah": 103,
           "status": "mapped"
         },
-        "105": {
+        "104": {
           "target_ayah": 104,
           "status": "mapped"
         },
-        "106": {
+        "105": {
           "target_ayah": 105,
           "status": "mapped"
         },
-        "107": {
+        "106": {
           "target_ayah": 106,
           "status": "mapped"
         },
-        "108": {
+        "107": {
           "target_ayah": 107,
           "status": "mapped"
         },
-        "109": {
+        "108": {
           "target_ayah": 108,
           "status": "mapped"
         },
-        "110": {
+        "109": {
           "target_ayah": 109,
           "status": "mapped"
         },
-        "111": {
+        "110": {
           "target_ayah": 110,
           "status": "mapped"
         },
-        "112": {
+        "111": {
           "target_ayah": 111,
           "status": "mapped"
         },
-        "113": {
+        "112": {
           "target_ayah": 112,
           "status": "mapped"
         },
-        "114": {
+        "113": {
           "target_ayah": 113,
           "status": "mapped"
         },
-        "115": {
+        "114": {
           "target_ayah": 114,
           "status": "mapped"
         },
-        "116": {
+        "115": {
           "target_ayah": 115,
           "status": "mapped"
         },
-        "117": {
+        "116": {
           "target_ayah": 116,
           "status": "mapped"
         },
-        "118": {
+        "117": {
           "target_ayah": 117,
           "status": "mapped"
         },
-        "119": {
+        "118": {
           "target_ayah": 118,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
-        "120": {
+        "119": {
           "target_ayah": 118,
           "status": "mapped"
         },
-        "121": {
+        "120": {
           "target_ayah": 119,
           "status": "mapped"
         },
+        "121": {
+          "target_ayah": 120,
+          "status": "merged",
+          "merges_with_next": true
+        },
         "122": {
           "target_ayah": 120,
-          "status": "merged"
+          "status": "mapped"
         },
         "123": {
-          "target_ayah": 120,
-          "status": "split",
-          "splits_into": [
-            120,
-            121
-          ]
+          "target_ayah": 121,
+          "status": "mapped"
         }
       }
     },
@@ -7074,11 +7079,12 @@
         },
         "23": {
           "target_ayah": 25,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "24": {
-          "target_ayah": 26,
-          "status": "merged"
+          "target_ayah": 25,
+          "status": "mapped"
         },
         "25": {
           "target_ayah": 26,
@@ -7248,11 +7254,12 @@
         },
         "19": {
           "target_ayah": 22,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "20": {
-          "target_ayah": 23,
-          "status": "merged"
+          "target_ayah": 22,
+          "status": "mapped"
         },
         "21": {
           "target_ayah": 23,
@@ -7466,243 +7473,239 @@
         },
         "20": {
           "target_ayah": 20,
-          "status": "merged"
-        },
-        "21": {
-          "target_ayah": 20,
           "status": "mapped"
         },
-        "22": {
+        "21": {
           "target_ayah": 21,
           "status": "mapped"
         },
-        "23": {
+        "22": {
           "target_ayah": 22,
           "status": "mapped"
         },
-        "24": {
+        "23": {
           "target_ayah": 23,
           "status": "mapped"
         },
-        "25": {
+        "24": {
           "target_ayah": 24,
           "status": "mapped"
         },
-        "26": {
+        "25": {
           "target_ayah": 25,
           "status": "mapped"
         },
-        "27": {
+        "26": {
           "target_ayah": 26,
           "status": "mapped"
         },
-        "28": {
+        "27": {
           "target_ayah": 27,
           "status": "mapped"
         },
-        "29": {
+        "28": {
           "target_ayah": 28,
           "status": "mapped"
         },
-        "30": {
+        "29": {
           "target_ayah": 29,
           "status": "mapped"
         },
-        "31": {
+        "30": {
           "target_ayah": 30,
           "status": "mapped"
         },
-        "32": {
+        "31": {
           "target_ayah": 31,
           "status": "mapped"
         },
-        "33": {
+        "32": {
           "target_ayah": 32,
           "status": "mapped"
         },
-        "34": {
+        "33": {
           "target_ayah": 33,
           "status": "mapped"
         },
-        "35": {
+        "34": {
           "target_ayah": 34,
           "status": "mapped"
         },
-        "36": {
+        "35": {
           "target_ayah": 35,
           "status": "mapped"
         },
-        "37": {
+        "36": {
           "target_ayah": 36,
           "status": "mapped"
         },
-        "38": {
+        "37": {
           "target_ayah": 37,
           "status": "mapped"
         },
-        "39": {
+        "38": {
           "target_ayah": 38,
           "status": "mapped"
         },
-        "40": {
+        "39": {
           "target_ayah": 39,
           "status": "mapped"
         },
-        "41": {
+        "40": {
           "target_ayah": 40,
           "status": "mapped"
         },
-        "42": {
+        "41": {
           "target_ayah": 41,
           "status": "mapped"
         },
-        "43": {
+        "42": {
           "target_ayah": 42,
           "status": "mapped"
         },
-        "44": {
+        "43": {
           "target_ayah": 43,
           "status": "mapped"
         },
-        "45": {
+        "44": {
           "target_ayah": 44,
           "status": "mapped"
         },
-        "46": {
+        "45": {
           "target_ayah": 45,
           "status": "mapped"
         },
-        "47": {
+        "46": {
           "target_ayah": 46,
           "status": "mapped"
         },
-        "48": {
+        "47": {
           "target_ayah": 47,
           "status": "mapped"
         },
-        "49": {
+        "48": {
           "target_ayah": 48,
           "status": "mapped"
         },
-        "50": {
+        "49": {
           "target_ayah": 49,
           "status": "mapped"
         },
-        "51": {
+        "50": {
           "target_ayah": 50,
           "status": "mapped"
         },
-        "52": {
+        "51": {
           "target_ayah": 51,
           "status": "mapped"
         },
-        "53": {
+        "52": {
           "target_ayah": 52,
           "status": "mapped"
         },
-        "54": {
+        "53": {
           "target_ayah": 53,
           "status": "mapped"
         },
-        "55": {
+        "54": {
           "target_ayah": 54,
           "status": "mapped"
         },
-        "56": {
+        "55": {
           "target_ayah": 55,
           "status": "mapped"
         },
-        "57": {
+        "56": {
           "target_ayah": 56,
           "status": "mapped"
         },
-        "58": {
+        "57": {
           "target_ayah": 57,
           "status": "mapped"
         },
-        "59": {
+        "58": {
           "target_ayah": 58,
           "status": "mapped"
         },
-        "60": {
+        "59": {
           "target_ayah": 59,
           "status": "mapped"
         },
-        "61": {
+        "60": {
           "target_ayah": 60,
           "status": "mapped"
         },
-        "62": {
+        "61": {
           "target_ayah": 61,
           "status": "mapped"
         },
-        "63": {
+        "62": {
           "target_ayah": 62,
           "status": "mapped"
         },
-        "64": {
+        "63": {
           "target_ayah": 63,
           "status": "mapped"
         },
-        "65": {
+        "64": {
           "target_ayah": 64,
           "status": "mapped"
         },
-        "66": {
+        "65": {
           "target_ayah": 65,
           "status": "mapped"
         },
-        "67": {
+        "66": {
           "target_ayah": 66,
           "status": "mapped"
         },
-        "68": {
+        "67": {
           "target_ayah": 67,
           "status": "mapped"
         },
-        "69": {
+        "68": {
           "target_ayah": 68,
           "status": "mapped"
         },
-        "70": {
+        "69": {
           "target_ayah": 69,
           "status": "mapped"
         },
-        "71": {
+        "70": {
           "target_ayah": 70,
           "status": "mapped"
         },
-        "72": {
+        "71": {
           "target_ayah": 71,
           "status": "mapped"
         },
-        "73": {
+        "72": {
           "target_ayah": 72,
           "status": "mapped"
         },
-        "74": {
+        "73": {
           "target_ayah": 73,
           "status": "mapped"
         },
-        "75": {
+        "74": {
           "target_ayah": 74,
           "status": "mapped"
         },
-        "76": {
+        "75": {
           "target_ayah": 75,
           "status": "mapped"
         },
-        "77": {
+        "76": {
           "target_ayah": 76,
           "status": "mapped"
         },
-        "78": {
+        "77": {
           "target_ayah": 77,
-          "status": "split",
-          "splits_into": [
-            77,
-            78
-          ]
+          "status": "mapped"
+        },
+        "78": {
+          "target_ayah": 78,
+          "status": "mapped"
         },
         "79": {
           "target_ayah": 79,
@@ -8738,11 +8741,12 @@
         },
         "107": {
           "target_ayah": 107,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "108": {
-          "target_ayah": 108,
-          "status": "merged"
+          "target_ayah": 107,
+          "status": "mapped"
         },
         "109": {
           "target_ayah": 108,
@@ -8888,11 +8892,12 @@
         },
         "32": {
           "target_ayah": 32,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "33": {
-          "target_ayah": 33,
-          "status": "merged"
+          "target_ayah": 32,
+          "status": "mapped"
         },
         "34": {
           "target_ayah": 33,
@@ -9096,111 +9101,116 @@
         },
         "84": {
           "target_ayah": 83,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "85": {
-          "target_ayah": 84,
-          "status": "merged"
+          "target_ayah": 83,
+          "status": "merged",
+          "merges_with_next": true
         },
         "86": {
-          "target_ayah": 84,
+          "target_ayah": 83,
           "status": "split",
           "splits_into": [
-            84,
-            85
+            83,
+            84
           ]
         },
         "87": {
-          "target_ayah": 86,
+          "target_ayah": 85,
           "status": "mapped"
         },
         "88": {
-          "target_ayah": 87,
+          "target_ayah": 86,
           "status": "mapped"
         },
         "89": {
+          "target_ayah": 87,
+          "status": "merged",
+          "merges_with_next": true
+        },
+        "90": {
+          "target_ayah": 87,
+          "status": "mapped"
+        },
+        "91": {
           "target_ayah": 88,
           "status": "mapped"
         },
-        "90": {
+        "92": {
           "target_ayah": 89,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
-        "91": {
+        "93": {
           "target_ayah": 89,
           "status": "mapped"
         },
-        "92": {
+        "94": {
           "target_ayah": 90,
           "status": "mapped"
         },
-        "93": {
-          "target_ayah": 91,
-          "status": "merged"
-        },
-        "94": {
-          "target_ayah": 91,
-          "status": "mapped"
-        },
         "95": {
-          "target_ayah": 92,
+          "target_ayah": 91,
           "status": "mapped"
         },
         "96": {
-          "target_ayah": 93,
+          "target_ayah": 92,
           "status": "mapped"
         },
         "97": {
-          "target_ayah": 94,
+          "target_ayah": 93,
           "status": "mapped"
         },
         "98": {
-          "target_ayah": 95,
+          "target_ayah": 94,
           "status": "mapped"
         },
         "99": {
-          "target_ayah": 96,
+          "target_ayah": 95,
           "status": "mapped"
         },
         "100": {
-          "target_ayah": 97,
+          "target_ayah": 96,
           "status": "mapped"
         },
         "101": {
-          "target_ayah": 98,
+          "target_ayah": 97,
           "status": "mapped"
         },
         "102": {
-          "target_ayah": 99,
+          "target_ayah": 98,
           "status": "mapped"
         },
         "103": {
+          "target_ayah": 99,
+          "status": "merged",
+          "merges_with_next": true
+        },
+        "104": {
+          "target_ayah": 99,
+          "status": "mapped"
+        },
+        "105": {
           "target_ayah": 100,
           "status": "mapped"
         },
-        "104": {
-          "target_ayah": 101,
-          "status": "merged"
-        },
-        "105": {
-          "target_ayah": 101,
-          "status": "mapped"
-        },
         "106": {
-          "target_ayah": 102,
+          "target_ayah": 101,
           "status": "mapped"
         },
         "107": {
-          "target_ayah": 103,
+          "target_ayah": 102,
           "status": "mapped"
         },
         "108": {
-          "target_ayah": 104,
+          "target_ayah": 103,
           "status": "mapped"
         },
         "109": {
-          "target_ayah": 105,
-          "status": "merged"
+          "target_ayah": 104,
+          "status": "mapped"
         },
         "110": {
           "target_ayah": 105,
@@ -9214,11 +9224,12 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
@@ -9620,11 +9631,12 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
@@ -9784,11 +9796,12 @@
         },
         "41": {
           "target_ayah": 41,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "42": {
-          "target_ayah": 42,
-          "status": "merged"
+          "target_ayah": 41,
+          "status": "mapped"
         },
         "43": {
           "target_ayah": 42,
@@ -9932,11 +9945,12 @@
         },
         "78": {
           "target_ayah": 77,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "79": {
-          "target_ayah": 78,
-          "status": "merged"
+          "target_ayah": 77,
+          "status": "mapped"
         },
         "80": {
           "target_ayah": 78,
@@ -9980,207 +9994,206 @@
           "splits_into": [
             87,
             88
-          ]
+          ],
+          "merges_with_next": true
         },
         "89": {
-          "target_ayah": 89,
-          "status": "merged"
+          "target_ayah": 88,
+          "status": "mapped"
         },
         "90": {
           "target_ayah": 89,
-          "status": "merged"
-        },
-        "91": {
-          "target_ayah": 89,
           "status": "mapped"
         },
-        "92": {
+        "91": {
           "target_ayah": 90,
           "status": "mapped"
         },
-        "93": {
+        "92": {
           "target_ayah": 91,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
-        "94": {
+        "93": {
           "target_ayah": 91,
           "status": "mapped"
         },
-        "95": {
+        "94": {
           "target_ayah": 92,
           "status": "mapped"
         },
-        "96": {
+        "95": {
           "target_ayah": 93,
           "status": "mapped"
         },
-        "97": {
+        "96": {
           "target_ayah": 94,
           "status": "mapped"
         },
-        "98": {
+        "97": {
           "target_ayah": 95,
           "status": "mapped"
         },
-        "99": {
+        "98": {
           "target_ayah": 96,
           "status": "mapped"
         },
-        "100": {
+        "99": {
           "target_ayah": 97,
           "status": "mapped"
         },
-        "101": {
+        "100": {
           "target_ayah": 98,
           "status": "mapped"
         },
-        "102": {
+        "101": {
           "target_ayah": 99,
           "status": "mapped"
         },
-        "103": {
+        "102": {
           "target_ayah": 100,
           "status": "mapped"
         },
-        "104": {
+        "103": {
           "target_ayah": 101,
           "status": "mapped"
         },
-        "105": {
+        "104": {
           "target_ayah": 102,
           "status": "mapped"
         },
-        "106": {
+        "105": {
           "target_ayah": 103,
           "status": "mapped"
         },
-        "107": {
+        "106": {
           "target_ayah": 104,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
-        "108": {
+        "107": {
           "target_ayah": 104,
           "status": "mapped"
         },
-        "109": {
+        "108": {
           "target_ayah": 105,
           "status": "mapped"
         },
-        "110": {
+        "109": {
           "target_ayah": 106,
           "status": "mapped"
         },
-        "111": {
+        "110": {
           "target_ayah": 107,
           "status": "mapped"
         },
-        "112": {
+        "111": {
           "target_ayah": 108,
           "status": "mapped"
         },
-        "113": {
+        "112": {
           "target_ayah": 109,
           "status": "mapped"
         },
-        "114": {
+        "113": {
           "target_ayah": 110,
           "status": "mapped"
         },
-        "115": {
+        "114": {
           "target_ayah": 111,
           "status": "mapped"
         },
-        "116": {
+        "115": {
           "target_ayah": 112,
           "status": "mapped"
         },
-        "117": {
+        "116": {
           "target_ayah": 113,
           "status": "mapped"
         },
-        "118": {
+        "117": {
           "target_ayah": 114,
           "status": "mapped"
         },
-        "119": {
+        "118": {
           "target_ayah": 115,
           "status": "mapped"
         },
-        "120": {
+        "119": {
           "target_ayah": 116,
           "status": "mapped"
         },
-        "121": {
+        "120": {
           "target_ayah": 117,
           "status": "mapped"
         },
-        "122": {
+        "121": {
           "target_ayah": 118,
           "status": "mapped"
         },
-        "123": {
+        "122": {
           "target_ayah": 119,
+          "status": "mapped"
+        },
+        "123": {
+          "target_ayah": 120,
           "status": "split",
           "splits_into": [
-            119,
-            120
+            120,
+            121
           ]
         },
         "124": {
-          "target_ayah": 121,
-          "status": "mapped"
-        },
-        "125": {
           "target_ayah": 122,
           "status": "mapped"
         },
-        "126": {
+        "125": {
           "target_ayah": 123,
           "status": "mapped"
         },
-        "127": {
+        "126": {
           "target_ayah": 124,
           "status": "mapped"
         },
-        "128": {
+        "127": {
           "target_ayah": 125,
           "status": "mapped"
         },
-        "129": {
+        "128": {
           "target_ayah": 126,
           "status": "mapped"
         },
-        "130": {
+        "129": {
           "target_ayah": 127,
           "status": "mapped"
         },
-        "131": {
+        "130": {
           "target_ayah": 128,
+          "status": "mapped"
+        },
+        "131": {
+          "target_ayah": 129,
           "status": "split",
           "splits_into": [
-            128,
-            129
+            129,
+            130
           ]
         },
         "132": {
-          "target_ayah": 130,
-          "status": "mapped"
-        },
-        "133": {
           "target_ayah": 131,
           "status": "mapped"
         },
-        "134": {
+        "133": {
           "target_ayah": 132,
           "status": "mapped"
         },
-        "135": {
+        "134": {
           "target_ayah": 133,
-          "status": "split",
-          "splits_into": [
-            133,
-            134
-          ]
+          "status": "mapped"
+        },
+        "135": {
+          "target_ayah": 134,
+          "status": "mapped"
         }
       }
     },
@@ -10450,11 +10463,12 @@
         },
         "66": {
           "target_ayah": 66,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "67": {
-          "target_ayah": 67,
-          "status": "merged"
+          "target_ayah": 66,
+          "status": "mapped"
         },
         "68": {
           "target_ayah": 67,
@@ -10716,243 +10730,249 @@
         },
         "19": {
           "target_ayah": 19,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "20": {
-          "target_ayah": 20,
-          "status": "mapped"
+          "target_ayah": 19,
+          "status": "merged",
+          "merges_with_next": true
         },
         "21": {
-          "target_ayah": 21,
+          "target_ayah": 19,
           "status": "mapped"
         },
         "22": {
-          "target_ayah": 22,
+          "target_ayah": 20,
           "status": "mapped"
         },
         "23": {
-          "target_ayah": 23,
+          "target_ayah": 21,
           "status": "mapped"
         },
         "24": {
-          "target_ayah": 24,
+          "target_ayah": 22,
           "status": "mapped"
         },
         "25": {
-          "target_ayah": 25,
+          "target_ayah": 23,
           "status": "mapped"
         },
         "26": {
-          "target_ayah": 26,
+          "target_ayah": 24,
           "status": "mapped"
         },
         "27": {
-          "target_ayah": 27,
+          "target_ayah": 25,
           "status": "mapped"
         },
         "28": {
-          "target_ayah": 28,
+          "target_ayah": 26,
           "status": "mapped"
         },
         "29": {
-          "target_ayah": 29,
+          "target_ayah": 27,
           "status": "mapped"
         },
         "30": {
-          "target_ayah": 30,
+          "target_ayah": 28,
           "status": "mapped"
         },
         "31": {
-          "target_ayah": 31,
+          "target_ayah": 29,
           "status": "mapped"
         },
         "32": {
-          "target_ayah": 32,
+          "target_ayah": 30,
           "status": "mapped"
         },
         "33": {
-          "target_ayah": 33,
+          "target_ayah": 31,
           "status": "mapped"
         },
         "34": {
-          "target_ayah": 34,
+          "target_ayah": 32,
           "status": "mapped"
         },
         "35": {
-          "target_ayah": 35,
+          "target_ayah": 33,
           "status": "mapped"
         },
         "36": {
-          "target_ayah": 36,
+          "target_ayah": 34,
           "status": "mapped"
         },
         "37": {
-          "target_ayah": 37,
+          "target_ayah": 35,
           "status": "mapped"
         },
         "38": {
-          "target_ayah": 38,
+          "target_ayah": 36,
           "status": "mapped"
         },
         "39": {
-          "target_ayah": 39,
+          "target_ayah": 37,
           "status": "mapped"
         },
         "40": {
-          "target_ayah": 40,
+          "target_ayah": 38,
           "status": "mapped"
         },
         "41": {
-          "target_ayah": 41,
+          "target_ayah": 39,
           "status": "mapped"
         },
         "42": {
-          "target_ayah": 42,
+          "target_ayah": 40,
           "status": "mapped"
         },
         "43": {
-          "target_ayah": 43,
+          "target_ayah": 41,
           "status": "mapped"
         },
         "44": {
-          "target_ayah": 44,
+          "target_ayah": 42,
           "status": "mapped"
         },
         "45": {
-          "target_ayah": 45,
+          "target_ayah": 43,
           "status": "mapped"
         },
         "46": {
-          "target_ayah": 46,
+          "target_ayah": 44,
           "status": "mapped"
         },
         "47": {
-          "target_ayah": 47,
+          "target_ayah": 45,
           "status": "mapped"
         },
         "48": {
-          "target_ayah": 48,
+          "target_ayah": 46,
           "status": "mapped"
         },
         "49": {
-          "target_ayah": 49,
+          "target_ayah": 47,
           "status": "mapped"
         },
         "50": {
-          "target_ayah": 50,
+          "target_ayah": 48,
           "status": "mapped"
         },
         "51": {
-          "target_ayah": 51,
+          "target_ayah": 49,
           "status": "mapped"
         },
         "52": {
-          "target_ayah": 52,
+          "target_ayah": 50,
           "status": "mapped"
         },
         "53": {
-          "target_ayah": 53,
+          "target_ayah": 51,
           "status": "mapped"
         },
         "54": {
-          "target_ayah": 54,
+          "target_ayah": 52,
           "status": "mapped"
         },
         "55": {
-          "target_ayah": 55,
+          "target_ayah": 53,
           "status": "mapped"
         },
         "56": {
-          "target_ayah": 56,
+          "target_ayah": 54,
           "status": "mapped"
         },
         "57": {
-          "target_ayah": 57,
+          "target_ayah": 55,
           "status": "mapped"
         },
         "58": {
-          "target_ayah": 58,
+          "target_ayah": 56,
           "status": "mapped"
         },
         "59": {
-          "target_ayah": 59,
+          "target_ayah": 57,
           "status": "mapped"
         },
         "60": {
-          "target_ayah": 60,
+          "target_ayah": 58,
           "status": "mapped"
         },
         "61": {
-          "target_ayah": 61,
+          "target_ayah": 59,
           "status": "mapped"
         },
         "62": {
-          "target_ayah": 62,
+          "target_ayah": 60,
           "status": "mapped"
         },
         "63": {
-          "target_ayah": 63,
+          "target_ayah": 61,
           "status": "mapped"
         },
         "64": {
-          "target_ayah": 64,
+          "target_ayah": 62,
           "status": "mapped"
         },
         "65": {
-          "target_ayah": 65,
+          "target_ayah": 63,
           "status": "mapped"
         },
         "66": {
-          "target_ayah": 66,
+          "target_ayah": 64,
           "status": "mapped"
         },
         "67": {
-          "target_ayah": 67,
+          "target_ayah": 65,
           "status": "mapped"
         },
         "68": {
-          "target_ayah": 68,
+          "target_ayah": 66,
           "status": "mapped"
         },
         "69": {
-          "target_ayah": 69,
+          "target_ayah": 67,
           "status": "mapped"
         },
         "70": {
-          "target_ayah": 70,
+          "target_ayah": 68,
           "status": "mapped"
         },
         "71": {
-          "target_ayah": 71,
+          "target_ayah": 69,
           "status": "mapped"
         },
         "72": {
-          "target_ayah": 72,
+          "target_ayah": 70,
           "status": "mapped"
         },
         "73": {
-          "target_ayah": 73,
+          "target_ayah": 71,
           "status": "mapped"
         },
         "74": {
-          "target_ayah": 74,
+          "target_ayah": 72,
           "status": "mapped"
         },
         "75": {
-          "target_ayah": 75,
+          "target_ayah": 73,
           "status": "mapped"
         },
         "76": {
-          "target_ayah": 76,
+          "target_ayah": 74,
           "status": "mapped"
         },
         "77": {
-          "target_ayah": 77,
-          "status": "merged"
+          "target_ayah": 75,
+          "status": "mapped"
         },
         "78": {
-          "target_ayah": 77,
-          "status": "mapped"
+          "target_ayah": 76,
+          "status": "split",
+          "splits_into": [
+            76,
+            77
+          ]
         }
       }
     },
@@ -11584,11 +11604,12 @@
         },
         "36": {
           "target_ayah": 36,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "37": {
-          "target_ayah": 37,
-          "status": "merged"
+          "target_ayah": 36,
+          "status": "mapped"
         },
         "38": {
           "target_ayah": 37,
@@ -11612,11 +11633,12 @@
         },
         "43": {
           "target_ayah": 42,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "44": {
-          "target_ayah": 43,
-          "status": "merged"
+          "target_ayah": 42,
+          "status": "mapped"
         },
         "45": {
           "target_ayah": 43,
@@ -12020,11 +12042,12 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
@@ -12860,11 +12883,12 @@
         },
         "210": {
           "target_ayah": 210,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "211": {
-          "target_ayah": 211,
-          "status": "merged"
+          "target_ayah": 210,
+          "status": "mapped"
         },
         "212": {
           "target_ayah": 211,
@@ -13324,365 +13348,360 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
-          "status": "merged"
-        },
-        "4": {
-          "target_ayah": 2,
-          "status": "merged"
-        },
-        "5": {
-          "target_ayah": 2,
           "status": "mapped"
         },
-        "6": {
+        "4": {
           "target_ayah": 3,
           "status": "mapped"
         },
-        "7": {
+        "5": {
           "target_ayah": 4,
           "status": "mapped"
         },
-        "8": {
+        "6": {
           "target_ayah": 5,
           "status": "mapped"
         },
-        "9": {
+        "7": {
           "target_ayah": 6,
           "status": "mapped"
         },
-        "10": {
+        "8": {
           "target_ayah": 7,
           "status": "mapped"
         },
-        "11": {
+        "9": {
           "target_ayah": 8,
           "status": "mapped"
         },
-        "12": {
+        "10": {
           "target_ayah": 9,
           "status": "mapped"
         },
-        "13": {
+        "11": {
           "target_ayah": 10,
           "status": "mapped"
         },
-        "14": {
+        "12": {
           "target_ayah": 11,
           "status": "mapped"
         },
-        "15": {
+        "13": {
           "target_ayah": 12,
           "status": "mapped"
         },
-        "16": {
+        "14": {
           "target_ayah": 13,
           "status": "mapped"
         },
-        "17": {
+        "15": {
           "target_ayah": 14,
           "status": "mapped"
         },
-        "18": {
+        "16": {
           "target_ayah": 15,
           "status": "mapped"
         },
-        "19": {
+        "17": {
           "target_ayah": 16,
           "status": "mapped"
         },
-        "20": {
+        "18": {
           "target_ayah": 17,
           "status": "mapped"
         },
-        "21": {
+        "19": {
           "target_ayah": 18,
           "status": "mapped"
         },
-        "22": {
+        "20": {
           "target_ayah": 19,
           "status": "mapped"
         },
-        "23": {
+        "21": {
           "target_ayah": 20,
+          "status": "mapped"
+        },
+        "22": {
+          "target_ayah": 21,
+          "status": "mapped"
+        },
+        "23": {
+          "target_ayah": 22,
           "status": "split",
           "splits_into": [
-            20,
-            21
+            22,
+            23
           ]
         },
         "24": {
-          "target_ayah": 22,
-          "status": "mapped"
-        },
-        "25": {
-          "target_ayah": 23,
-          "status": "mapped"
-        },
-        "26": {
           "target_ayah": 24,
           "status": "mapped"
         },
-        "27": {
+        "25": {
           "target_ayah": 25,
           "status": "mapped"
         },
-        "28": {
+        "26": {
           "target_ayah": 26,
           "status": "mapped"
         },
-        "29": {
+        "27": {
           "target_ayah": 27,
           "status": "mapped"
         },
-        "30": {
+        "28": {
           "target_ayah": 28,
           "status": "mapped"
         },
-        "31": {
+        "29": {
           "target_ayah": 29,
           "status": "mapped"
         },
-        "32": {
+        "30": {
           "target_ayah": 30,
           "status": "mapped"
         },
-        "33": {
+        "31": {
           "target_ayah": 31,
           "status": "mapped"
         },
-        "34": {
+        "32": {
           "target_ayah": 32,
           "status": "mapped"
         },
-        "35": {
+        "33": {
           "target_ayah": 33,
           "status": "mapped"
         },
-        "36": {
+        "34": {
           "target_ayah": 34,
           "status": "mapped"
         },
-        "37": {
+        "35": {
           "target_ayah": 35,
           "status": "mapped"
         },
-        "38": {
+        "36": {
           "target_ayah": 36,
           "status": "mapped"
         },
-        "39": {
+        "37": {
           "target_ayah": 37,
           "status": "mapped"
         },
-        "40": {
+        "38": {
           "target_ayah": 38,
           "status": "mapped"
         },
-        "41": {
+        "39": {
           "target_ayah": 39,
           "status": "mapped"
         },
-        "42": {
+        "40": {
           "target_ayah": 40,
           "status": "mapped"
         },
-        "43": {
+        "41": {
           "target_ayah": 41,
           "status": "mapped"
         },
-        "44": {
+        "42": {
           "target_ayah": 42,
           "status": "mapped"
         },
-        "45": {
+        "43": {
           "target_ayah": 43,
           "status": "mapped"
         },
-        "46": {
+        "44": {
           "target_ayah": 44,
           "status": "mapped"
         },
-        "47": {
+        "45": {
           "target_ayah": 45,
           "status": "mapped"
         },
-        "48": {
+        "46": {
           "target_ayah": 46,
           "status": "mapped"
         },
-        "49": {
+        "47": {
           "target_ayah": 47,
           "status": "mapped"
         },
-        "50": {
+        "48": {
           "target_ayah": 48,
           "status": "mapped"
         },
-        "51": {
+        "49": {
           "target_ayah": 49,
           "status": "mapped"
         },
-        "52": {
+        "50": {
           "target_ayah": 50,
           "status": "mapped"
         },
-        "53": {
+        "51": {
           "target_ayah": 51,
           "status": "mapped"
         },
-        "54": {
+        "52": {
           "target_ayah": 52,
           "status": "mapped"
         },
-        "55": {
+        "53": {
           "target_ayah": 53,
           "status": "mapped"
         },
-        "56": {
+        "54": {
           "target_ayah": 54,
           "status": "mapped"
         },
-        "57": {
+        "55": {
           "target_ayah": 55,
           "status": "mapped"
         },
-        "58": {
+        "56": {
           "target_ayah": 56,
           "status": "mapped"
         },
-        "59": {
+        "57": {
           "target_ayah": 57,
           "status": "mapped"
         },
-        "60": {
+        "58": {
           "target_ayah": 58,
           "status": "mapped"
         },
-        "61": {
+        "59": {
           "target_ayah": 59,
           "status": "mapped"
         },
-        "62": {
+        "60": {
           "target_ayah": 60,
           "status": "mapped"
         },
-        "63": {
+        "61": {
           "target_ayah": 61,
           "status": "mapped"
         },
-        "64": {
+        "62": {
           "target_ayah": 62,
           "status": "mapped"
         },
-        "65": {
+        "63": {
           "target_ayah": 63,
           "status": "mapped"
         },
-        "66": {
+        "64": {
           "target_ayah": 64,
           "status": "mapped"
         },
-        "67": {
+        "65": {
           "target_ayah": 65,
           "status": "mapped"
         },
-        "68": {
+        "66": {
           "target_ayah": 66,
           "status": "mapped"
         },
-        "69": {
+        "67": {
           "target_ayah": 67,
           "status": "mapped"
         },
-        "70": {
+        "68": {
           "target_ayah": 68,
           "status": "mapped"
         },
-        "71": {
+        "69": {
           "target_ayah": 69,
           "status": "mapped"
         },
-        "72": {
+        "70": {
           "target_ayah": 70,
           "status": "mapped"
         },
-        "73": {
+        "71": {
           "target_ayah": 71,
           "status": "mapped"
         },
-        "74": {
+        "72": {
           "target_ayah": 72,
           "status": "mapped"
         },
-        "75": {
+        "73": {
           "target_ayah": 73,
           "status": "mapped"
         },
-        "76": {
+        "74": {
           "target_ayah": 74,
           "status": "mapped"
         },
-        "77": {
+        "75": {
           "target_ayah": 75,
           "status": "mapped"
         },
-        "78": {
+        "76": {
           "target_ayah": 76,
           "status": "mapped"
         },
-        "79": {
+        "77": {
           "target_ayah": 77,
           "status": "mapped"
         },
-        "80": {
+        "78": {
           "target_ayah": 78,
           "status": "mapped"
         },
-        "81": {
+        "79": {
           "target_ayah": 79,
           "status": "mapped"
         },
-        "82": {
+        "80": {
           "target_ayah": 80,
           "status": "mapped"
         },
-        "83": {
+        "81": {
           "target_ayah": 81,
           "status": "mapped"
         },
-        "84": {
+        "82": {
           "target_ayah": 82,
           "status": "mapped"
         },
-        "85": {
-          "target_ayah": 83,
-          "status": "merged"
-        },
-        "86": {
+        "83": {
           "target_ayah": 83,
           "status": "mapped"
         },
-        "87": {
+        "84": {
           "target_ayah": 84,
           "status": "mapped"
         },
-        "88": {
+        "85": {
           "target_ayah": 85,
-          "status": "split",
-          "splits_into": [
-            85,
-            86,
-            87,
-            88
-          ]
+          "status": "mapped"
+        },
+        "86": {
+          "target_ayah": 86,
+          "status": "mapped"
+        },
+        "87": {
+          "target_ayah": 87,
+          "status": "mapped"
+        },
+        "88": {
+          "target_ayah": 88,
+          "status": "mapped"
         }
       }
     },
@@ -13692,11 +13711,12 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
@@ -13978,243 +13998,245 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "merged",
+          "merges_with_next": true
         },
         "3": {
-          "target_ayah": 2,
+          "target_ayah": 1,
           "status": "mapped"
         },
         "4": {
-          "target_ayah": 3,
+          "target_ayah": 2,
           "status": "split",
           "splits_into": [
-            3,
-            4
+            2,
+            3
           ]
         },
         "5": {
-          "target_ayah": 5,
+          "target_ayah": 4,
           "status": "mapped"
         },
         "6": {
-          "target_ayah": 6,
+          "target_ayah": 5,
           "status": "mapped"
         },
         "7": {
-          "target_ayah": 7,
+          "target_ayah": 6,
           "status": "mapped"
         },
         "8": {
-          "target_ayah": 8,
+          "target_ayah": 7,
           "status": "mapped"
         },
         "9": {
-          "target_ayah": 9,
+          "target_ayah": 8,
           "status": "mapped"
         },
         "10": {
-          "target_ayah": 10,
+          "target_ayah": 9,
           "status": "mapped"
         },
         "11": {
-          "target_ayah": 11,
+          "target_ayah": 10,
           "status": "mapped"
         },
         "12": {
-          "target_ayah": 12,
+          "target_ayah": 11,
           "status": "mapped"
         },
         "13": {
-          "target_ayah": 13,
+          "target_ayah": 12,
           "status": "mapped"
         },
         "14": {
-          "target_ayah": 14,
+          "target_ayah": 13,
           "status": "mapped"
         },
         "15": {
-          "target_ayah": 15,
+          "target_ayah": 14,
           "status": "mapped"
         },
         "16": {
-          "target_ayah": 16,
+          "target_ayah": 15,
           "status": "mapped"
         },
         "17": {
-          "target_ayah": 17,
+          "target_ayah": 16,
           "status": "mapped"
         },
         "18": {
-          "target_ayah": 18,
+          "target_ayah": 17,
           "status": "mapped"
         },
         "19": {
-          "target_ayah": 19,
+          "target_ayah": 18,
           "status": "mapped"
         },
         "20": {
-          "target_ayah": 20,
+          "target_ayah": 19,
           "status": "mapped"
         },
         "21": {
-          "target_ayah": 21,
+          "target_ayah": 20,
           "status": "mapped"
         },
         "22": {
-          "target_ayah": 22,
+          "target_ayah": 21,
           "status": "mapped"
         },
         "23": {
-          "target_ayah": 23,
+          "target_ayah": 22,
           "status": "mapped"
         },
         "24": {
-          "target_ayah": 24,
+          "target_ayah": 23,
           "status": "mapped"
         },
         "25": {
-          "target_ayah": 25,
+          "target_ayah": 24,
           "status": "mapped"
         },
         "26": {
-          "target_ayah": 26,
+          "target_ayah": 25,
           "status": "mapped"
         },
         "27": {
-          "target_ayah": 27,
+          "target_ayah": 26,
           "status": "mapped"
         },
         "28": {
-          "target_ayah": 28,
+          "target_ayah": 27,
           "status": "mapped"
         },
         "29": {
-          "target_ayah": 29,
+          "target_ayah": 28,
           "status": "mapped"
         },
         "30": {
-          "target_ayah": 30,
+          "target_ayah": 29,
           "status": "mapped"
         },
         "31": {
-          "target_ayah": 31,
+          "target_ayah": 30,
           "status": "mapped"
         },
         "32": {
-          "target_ayah": 32,
+          "target_ayah": 31,
           "status": "mapped"
         },
         "33": {
-          "target_ayah": 33,
+          "target_ayah": 32,
           "status": "mapped"
         },
         "34": {
-          "target_ayah": 34,
+          "target_ayah": 33,
           "status": "mapped"
         },
         "35": {
-          "target_ayah": 35,
+          "target_ayah": 34,
           "status": "mapped"
         },
         "36": {
-          "target_ayah": 36,
+          "target_ayah": 35,
           "status": "mapped"
         },
         "37": {
-          "target_ayah": 37,
+          "target_ayah": 36,
           "status": "mapped"
         },
         "38": {
-          "target_ayah": 38,
+          "target_ayah": 37,
           "status": "mapped"
         },
         "39": {
-          "target_ayah": 39,
+          "target_ayah": 38,
           "status": "mapped"
         },
         "40": {
-          "target_ayah": 40,
+          "target_ayah": 39,
           "status": "mapped"
         },
         "41": {
-          "target_ayah": 41,
+          "target_ayah": 40,
           "status": "mapped"
         },
         "42": {
-          "target_ayah": 42,
+          "target_ayah": 41,
           "status": "mapped"
         },
         "43": {
-          "target_ayah": 43,
+          "target_ayah": 42,
           "status": "mapped"
         },
         "44": {
-          "target_ayah": 44,
+          "target_ayah": 43,
           "status": "mapped"
         },
         "45": {
-          "target_ayah": 45,
+          "target_ayah": 44,
           "status": "mapped"
         },
         "46": {
-          "target_ayah": 46,
+          "target_ayah": 45,
           "status": "mapped"
         },
         "47": {
-          "target_ayah": 47,
+          "target_ayah": 46,
           "status": "mapped"
         },
         "48": {
-          "target_ayah": 48,
+          "target_ayah": 47,
           "status": "mapped"
         },
         "49": {
-          "target_ayah": 49,
+          "target_ayah": 48,
           "status": "mapped"
         },
         "50": {
-          "target_ayah": 50,
+          "target_ayah": 49,
           "status": "mapped"
         },
         "51": {
-          "target_ayah": 51,
+          "target_ayah": 50,
           "status": "mapped"
         },
         "52": {
-          "target_ayah": 52,
+          "target_ayah": 51,
           "status": "mapped"
         },
         "53": {
-          "target_ayah": 53,
+          "target_ayah": 52,
           "status": "mapped"
         },
         "54": {
-          "target_ayah": 54,
+          "target_ayah": 53,
           "status": "mapped"
         },
         "55": {
-          "target_ayah": 55,
+          "target_ayah": 54,
           "status": "mapped"
         },
         "56": {
-          "target_ayah": 56,
+          "target_ayah": 55,
           "status": "mapped"
         },
         "57": {
-          "target_ayah": 57,
+          "target_ayah": 56,
           "status": "mapped"
         },
         "58": {
-          "target_ayah": 58,
+          "target_ayah": 57,
           "status": "mapped"
         },
         "59": {
-          "target_ayah": 59,
-          "status": "merged"
+          "target_ayah": 58,
+          "status": "mapped"
         },
         "60": {
           "target_ayah": 59,
@@ -14228,11 +14250,12 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
@@ -14370,11 +14393,12 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
@@ -15206,11 +15230,12 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
@@ -16278,351 +16303,353 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
+          "target_ayah": 1,
           "status": "mapped"
         },
         "3": {
-          "target_ayah": 3,
+          "target_ayah": 2,
           "status": "mapped"
         },
         "4": {
-          "target_ayah": 4,
+          "target_ayah": 3,
           "status": "mapped"
         },
         "5": {
-          "target_ayah": 5,
+          "target_ayah": 4,
           "status": "mapped"
         },
         "6": {
-          "target_ayah": 6,
+          "target_ayah": 5,
           "status": "mapped"
         },
         "7": {
-          "target_ayah": 7,
+          "target_ayah": 6,
           "status": "mapped"
         },
         "8": {
-          "target_ayah": 8,
+          "target_ayah": 7,
           "status": "mapped"
         },
         "9": {
-          "target_ayah": 9,
+          "target_ayah": 8,
           "status": "mapped"
         },
         "10": {
-          "target_ayah": 10,
+          "target_ayah": 9,
           "status": "mapped"
         },
         "11": {
-          "target_ayah": 11,
+          "target_ayah": 10,
           "status": "mapped"
         },
         "12": {
-          "target_ayah": 12,
+          "target_ayah": 11,
           "status": "mapped"
         },
         "13": {
-          "target_ayah": 13,
+          "target_ayah": 12,
           "status": "mapped"
         },
         "14": {
-          "target_ayah": 14,
+          "target_ayah": 13,
           "status": "mapped"
         },
         "15": {
-          "target_ayah": 15,
+          "target_ayah": 14,
           "status": "mapped"
         },
         "16": {
-          "target_ayah": 16,
+          "target_ayah": 15,
           "status": "mapped"
         },
         "17": {
-          "target_ayah": 17,
+          "target_ayah": 16,
           "status": "mapped"
         },
         "18": {
-          "target_ayah": 18,
+          "target_ayah": 17,
           "status": "mapped"
         },
         "19": {
-          "target_ayah": 19,
+          "target_ayah": 18,
           "status": "mapped"
         },
         "20": {
-          "target_ayah": 20,
+          "target_ayah": 19,
           "status": "mapped"
         },
         "21": {
-          "target_ayah": 21,
+          "target_ayah": 20,
           "status": "mapped"
         },
         "22": {
-          "target_ayah": 22,
+          "target_ayah": 21,
           "status": "mapped"
         },
         "23": {
-          "target_ayah": 23,
+          "target_ayah": 22,
           "status": "mapped"
         },
         "24": {
-          "target_ayah": 24,
+          "target_ayah": 23,
           "status": "mapped"
         },
         "25": {
-          "target_ayah": 25,
+          "target_ayah": 24,
           "status": "mapped"
         },
         "26": {
-          "target_ayah": 26,
+          "target_ayah": 25,
           "status": "mapped"
         },
         "27": {
-          "target_ayah": 27,
+          "target_ayah": 26,
           "status": "mapped"
         },
         "28": {
-          "target_ayah": 28,
+          "target_ayah": 27,
           "status": "mapped"
         },
         "29": {
-          "target_ayah": 29,
+          "target_ayah": 28,
           "status": "mapped"
         },
         "30": {
-          "target_ayah": 30,
+          "target_ayah": 29,
           "status": "mapped"
         },
         "31": {
-          "target_ayah": 31,
+          "target_ayah": 30,
           "status": "mapped"
         },
         "32": {
-          "target_ayah": 32,
+          "target_ayah": 31,
           "status": "mapped"
         },
         "33": {
-          "target_ayah": 33,
+          "target_ayah": 32,
           "status": "mapped"
         },
         "34": {
-          "target_ayah": 34,
+          "target_ayah": 33,
           "status": "mapped"
         },
         "35": {
-          "target_ayah": 35,
+          "target_ayah": 34,
           "status": "mapped"
         },
         "36": {
-          "target_ayah": 36,
+          "target_ayah": 35,
           "status": "mapped"
         },
         "37": {
-          "target_ayah": 37,
+          "target_ayah": 36,
           "status": "mapped"
         },
         "38": {
-          "target_ayah": 38,
+          "target_ayah": 37,
           "status": "mapped"
         },
         "39": {
-          "target_ayah": 39,
+          "target_ayah": 38,
           "status": "mapped"
         },
         "40": {
-          "target_ayah": 40,
+          "target_ayah": 39,
           "status": "mapped"
         },
         "41": {
-          "target_ayah": 41,
+          "target_ayah": 40,
           "status": "mapped"
         },
         "42": {
-          "target_ayah": 42,
+          "target_ayah": 41,
           "status": "mapped"
         },
         "43": {
-          "target_ayah": 43,
+          "target_ayah": 42,
           "status": "mapped"
         },
         "44": {
-          "target_ayah": 44,
+          "target_ayah": 43,
           "status": "mapped"
         },
         "45": {
-          "target_ayah": 45,
+          "target_ayah": 44,
           "status": "mapped"
         },
         "46": {
-          "target_ayah": 46,
+          "target_ayah": 45,
           "status": "mapped"
         },
         "47": {
-          "target_ayah": 47,
+          "target_ayah": 46,
           "status": "mapped"
         },
         "48": {
-          "target_ayah": 48,
+          "target_ayah": 47,
           "status": "mapped"
         },
         "49": {
-          "target_ayah": 49,
+          "target_ayah": 48,
           "status": "mapped"
         },
         "50": {
-          "target_ayah": 50,
+          "target_ayah": 49,
           "status": "mapped"
         },
         "51": {
-          "target_ayah": 51,
+          "target_ayah": 50,
           "status": "mapped"
         },
         "52": {
-          "target_ayah": 52,
+          "target_ayah": 51,
           "status": "mapped"
         },
         "53": {
-          "target_ayah": 53,
+          "target_ayah": 52,
           "status": "mapped"
         },
         "54": {
-          "target_ayah": 54,
+          "target_ayah": 53,
           "status": "mapped"
         },
         "55": {
-          "target_ayah": 55,
+          "target_ayah": 54,
           "status": "mapped"
         },
         "56": {
-          "target_ayah": 56,
+          "target_ayah": 55,
           "status": "mapped"
         },
         "57": {
-          "target_ayah": 57,
+          "target_ayah": 56,
           "status": "mapped"
         },
         "58": {
-          "target_ayah": 58,
+          "target_ayah": 57,
           "status": "mapped"
         },
         "59": {
-          "target_ayah": 59,
+          "target_ayah": 58,
           "status": "mapped"
         },
         "60": {
-          "target_ayah": 60,
+          "target_ayah": 59,
           "status": "mapped"
         },
         "61": {
-          "target_ayah": 61,
+          "target_ayah": 60,
           "status": "mapped"
         },
         "62": {
-          "target_ayah": 62,
+          "target_ayah": 61,
           "status": "mapped"
         },
         "63": {
-          "target_ayah": 63,
+          "target_ayah": 62,
           "status": "mapped"
         },
         "64": {
-          "target_ayah": 64,
+          "target_ayah": 63,
           "status": "mapped"
         },
         "65": {
-          "target_ayah": 65,
+          "target_ayah": 64,
           "status": "mapped"
         },
         "66": {
-          "target_ayah": 66,
+          "target_ayah": 65,
           "status": "mapped"
         },
         "67": {
-          "target_ayah": 67,
+          "target_ayah": 66,
           "status": "mapped"
         },
         "68": {
-          "target_ayah": 68,
+          "target_ayah": 67,
           "status": "mapped"
         },
         "69": {
-          "target_ayah": 69,
+          "target_ayah": 68,
           "status": "mapped"
         },
         "70": {
-          "target_ayah": 70,
+          "target_ayah": 69,
           "status": "mapped"
         },
         "71": {
-          "target_ayah": 71,
+          "target_ayah": 70,
           "status": "mapped"
         },
         "72": {
-          "target_ayah": 72,
+          "target_ayah": 71,
           "status": "mapped"
         },
         "73": {
-          "target_ayah": 73,
+          "target_ayah": 72,
           "status": "mapped"
         },
         "74": {
-          "target_ayah": 74,
+          "target_ayah": 73,
           "status": "mapped"
         },
         "75": {
-          "target_ayah": 75,
+          "target_ayah": 74,
           "status": "mapped"
         },
         "76": {
-          "target_ayah": 76,
+          "target_ayah": 75,
           "status": "mapped"
         },
         "77": {
-          "target_ayah": 77,
+          "target_ayah": 76,
           "status": "mapped"
         },
         "78": {
-          "target_ayah": 78,
+          "target_ayah": 77,
           "status": "mapped"
         },
         "79": {
-          "target_ayah": 79,
+          "target_ayah": 78,
           "status": "mapped"
         },
         "80": {
-          "target_ayah": 80,
+          "target_ayah": 79,
           "status": "mapped"
         },
         "81": {
-          "target_ayah": 81,
+          "target_ayah": 80,
           "status": "mapped"
         },
         "82": {
-          "target_ayah": 82,
+          "target_ayah": 81,
           "status": "mapped"
         },
         "83": {
-          "target_ayah": 83,
+          "target_ayah": 82,
           "status": "mapped"
         },
         "84": {
-          "target_ayah": 84,
-          "status": "mapped"
+          "target_ayah": 83,
+          "status": "merged",
+          "merges_with_next": true
         },
         "85": {
-          "target_ayah": 85,
+          "target_ayah": 83,
           "status": "mapped"
         },
         "86": {
-          "target_ayah": 86,
-          "status": "merged"
+          "target_ayah": 84,
+          "status": "mapped"
         },
         "87": {
-          "target_ayah": 86,
-          "status": "merged"
+          "target_ayah": 85,
+          "status": "mapped"
         },
         "88": {
           "target_ayah": 86,
@@ -16680,11 +16707,12 @@
         },
         "11": {
           "target_ayah": 12,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "12": {
-          "target_ayah": 13,
-          "status": "merged"
+          "target_ayah": 12,
+          "status": "mapped"
         },
         "13": {
           "target_ayah": 13,
@@ -16692,11 +16720,12 @@
         },
         "14": {
           "target_ayah": 14,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "15": {
-          "target_ayah": 15,
-          "status": "merged"
+          "target_ayah": 14,
+          "status": "mapped"
         },
         "16": {
           "target_ayah": 15,
@@ -16704,11 +16733,12 @@
         },
         "17": {
           "target_ayah": 16,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "18": {
-          "target_ayah": 17,
-          "status": "merged"
+          "target_ayah": 16,
+          "status": "mapped"
         },
         "19": {
           "target_ayah": 17,
@@ -16784,11 +16814,12 @@
         },
         "36": {
           "target_ayah": 35,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "37": {
-          "target_ayah": 36,
-          "status": "merged"
+          "target_ayah": 35,
+          "status": "mapped"
         },
         "38": {
           "target_ayah": 36,
@@ -16796,11 +16827,12 @@
         },
         "39": {
           "target_ayah": 37,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "40": {
-          "target_ayah": 38,
-          "status": "merged"
+          "target_ayah": 37,
+          "status": "mapped"
         },
         "41": {
           "target_ayah": 38,
@@ -16950,11 +16982,12 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
@@ -17234,67 +17267,69 @@
         },
         "71": {
           "target_ayah": 71,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "72": {
-          "target_ayah": 72,
-          "status": "merged"
+          "target_ayah": 71,
+          "status": "split",
+          "splits_into": [
+            71,
+            72
+          ]
         },
         "73": {
-          "target_ayah": 72,
-          "status": "mapped"
+          "target_ayah": 73,
+          "status": "merged",
+          "merges_with_next": true
         },
         "74": {
           "target_ayah": 73,
-          "status": "merged"
-        },
-        "75": {
-          "target_ayah": 73,
           "status": "mapped"
         },
-        "76": {
+        "75": {
           "target_ayah": 74,
           "status": "mapped"
         },
-        "77": {
+        "76": {
           "target_ayah": 75,
           "status": "mapped"
         },
-        "78": {
+        "77": {
           "target_ayah": 76,
           "status": "mapped"
         },
-        "79": {
+        "78": {
           "target_ayah": 77,
           "status": "mapped"
         },
-        "80": {
+        "79": {
           "target_ayah": 78,
           "status": "mapped"
         },
-        "81": {
+        "80": {
           "target_ayah": 79,
           "status": "mapped"
         },
-        "82": {
+        "81": {
           "target_ayah": 80,
           "status": "mapped"
         },
-        "83": {
+        "82": {
           "target_ayah": 81,
           "status": "mapped"
         },
-        "84": {
+        "83": {
           "target_ayah": 82,
           "status": "mapped"
         },
-        "85": {
+        "84": {
           "target_ayah": 83,
-          "status": "split",
-          "splits_into": [
-            83,
-            84
-          ]
+          "status": "mapped"
+        },
+        "85": {
+          "target_ayah": 84,
+          "status": "mapped"
         }
       }
     },
@@ -17304,11 +17339,12 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
@@ -17526,211 +17562,214 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "merged",
+          "merges_with_next": true
         },
         "3": {
-          "target_ayah": 2,
+          "target_ayah": 1,
           "status": "mapped"
         },
         "4": {
-          "target_ayah": 3,
+          "target_ayah": 2,
           "status": "mapped"
         },
         "5": {
-          "target_ayah": 4,
+          "target_ayah": 3,
           "status": "mapped"
         },
         "6": {
-          "target_ayah": 5,
+          "target_ayah": 4,
           "status": "mapped"
         },
         "7": {
-          "target_ayah": 6,
+          "target_ayah": 5,
           "status": "mapped"
         },
         "8": {
-          "target_ayah": 7,
+          "target_ayah": 6,
           "status": "mapped"
         },
         "9": {
-          "target_ayah": 8,
+          "target_ayah": 7,
           "status": "mapped"
         },
         "10": {
-          "target_ayah": 9,
+          "target_ayah": 8,
           "status": "mapped"
         },
         "11": {
-          "target_ayah": 10,
+          "target_ayah": 9,
           "status": "mapped"
         },
         "12": {
-          "target_ayah": 11,
+          "target_ayah": 10,
           "status": "mapped"
         },
         "13": {
-          "target_ayah": 12,
+          "target_ayah": 11,
           "status": "mapped"
         },
         "14": {
-          "target_ayah": 13,
+          "target_ayah": 12,
           "status": "mapped"
         },
         "15": {
-          "target_ayah": 14,
+          "target_ayah": 13,
           "status": "mapped"
         },
         "16": {
-          "target_ayah": 15,
+          "target_ayah": 14,
           "status": "mapped"
         },
         "17": {
-          "target_ayah": 16,
+          "target_ayah": 15,
           "status": "mapped"
         },
         "18": {
-          "target_ayah": 17,
+          "target_ayah": 16,
           "status": "mapped"
         },
         "19": {
-          "target_ayah": 18,
+          "target_ayah": 17,
           "status": "mapped"
         },
         "20": {
-          "target_ayah": 19,
+          "target_ayah": 18,
           "status": "mapped"
         },
         "21": {
-          "target_ayah": 20,
+          "target_ayah": 19,
           "status": "mapped"
         },
         "22": {
-          "target_ayah": 21,
+          "target_ayah": 20,
           "status": "mapped"
         },
         "23": {
-          "target_ayah": 22,
+          "target_ayah": 21,
           "status": "mapped"
         },
         "24": {
-          "target_ayah": 23,
+          "target_ayah": 22,
           "status": "mapped"
         },
         "25": {
-          "target_ayah": 24,
+          "target_ayah": 23,
           "status": "mapped"
         },
         "26": {
-          "target_ayah": 25,
+          "target_ayah": 24,
           "status": "mapped"
         },
         "27": {
-          "target_ayah": 26,
+          "target_ayah": 25,
           "status": "mapped"
         },
         "28": {
-          "target_ayah": 27,
+          "target_ayah": 26,
           "status": "mapped"
         },
         "29": {
-          "target_ayah": 28,
+          "target_ayah": 27,
           "status": "mapped"
         },
         "30": {
-          "target_ayah": 29,
+          "target_ayah": 28,
           "status": "mapped"
         },
         "31": {
-          "target_ayah": 30,
+          "target_ayah": 29,
           "status": "mapped"
         },
         "32": {
+          "target_ayah": 30,
+          "status": "merged",
+          "merges_with_next": true
+        },
+        "33": {
+          "target_ayah": 30,
+          "status": "mapped"
+        },
+        "34": {
           "target_ayah": 31,
           "status": "mapped"
         },
-        "33": {
-          "target_ayah": 32,
-          "status": "merged"
-        },
-        "34": {
-          "target_ayah": 32,
-          "status": "mapped"
-        },
         "35": {
-          "target_ayah": 33,
+          "target_ayah": 32,
           "status": "mapped"
         },
         "36": {
-          "target_ayah": 34,
+          "target_ayah": 33,
           "status": "mapped"
         },
         "37": {
-          "target_ayah": 35,
+          "target_ayah": 34,
           "status": "mapped"
         },
         "38": {
-          "target_ayah": 36,
+          "target_ayah": 35,
           "status": "mapped"
         },
         "39": {
-          "target_ayah": 37,
+          "target_ayah": 36,
           "status": "mapped"
         },
         "40": {
-          "target_ayah": 38,
+          "target_ayah": 37,
           "status": "mapped"
         },
         "41": {
-          "target_ayah": 39,
+          "target_ayah": 38,
           "status": "mapped"
         },
         "42": {
-          "target_ayah": 40,
+          "target_ayah": 39,
           "status": "mapped"
         },
         "43": {
-          "target_ayah": 41,
+          "target_ayah": 40,
           "status": "mapped"
         },
         "44": {
-          "target_ayah": 42,
+          "target_ayah": 41,
           "status": "mapped"
         },
         "45": {
-          "target_ayah": 43,
+          "target_ayah": 42,
           "status": "mapped"
         },
         "46": {
-          "target_ayah": 44,
+          "target_ayah": 43,
           "status": "mapped"
         },
         "47": {
-          "target_ayah": 45,
+          "target_ayah": 44,
           "status": "mapped"
         },
         "48": {
-          "target_ayah": 46,
+          "target_ayah": 45,
           "status": "mapped"
         },
         "49": {
-          "target_ayah": 47,
+          "target_ayah": 46,
           "status": "mapped"
         },
         "50": {
-          "target_ayah": 48,
+          "target_ayah": 47,
           "status": "mapped"
         },
         "51": {
-          "target_ayah": 49,
+          "target_ayah": 48,
           "status": "mapped"
         },
         "52": {
-          "target_ayah": 50,
-          "status": "merged"
+          "target_ayah": 49,
+          "status": "mapped"
         },
         "53": {
           "target_ayah": 50,
@@ -17744,11 +17783,12 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
@@ -18110,11 +18150,12 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
@@ -18242,11 +18283,12 @@
         },
         "34": {
           "target_ayah": 33,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "35": {
-          "target_ayah": 34,
-          "status": "merged"
+          "target_ayah": 33,
+          "status": "mapped"
         },
         "36": {
           "target_ayah": 34,
@@ -18278,11 +18320,12 @@
         },
         "43": {
           "target_ayah": 41,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "44": {
-          "target_ayah": 42,
-          "status": "merged"
+          "target_ayah": 41,
+          "status": "mapped"
         },
         "45": {
           "target_ayah": 42,
@@ -18352,11 +18395,12 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
@@ -18506,11 +18550,12 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
@@ -19446,11 +19491,12 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
@@ -19494,11 +19540,12 @@
         },
         "13": {
           "target_ayah": 12,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "14": {
-          "target_ayah": 13,
-          "status": "merged"
+          "target_ayah": 12,
+          "status": "mapped"
         },
         "15": {
           "target_ayah": 13,
@@ -19756,11 +19803,12 @@
         },
         "28": {
           "target_ayah": 28,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "29": {
-          "target_ayah": 29,
-          "status": "merged"
+          "target_ayah": 28,
+          "status": "mapped"
         },
         "30": {
           "target_ayah": 29,
@@ -20128,11 +20176,12 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
@@ -20164,11 +20213,12 @@
         },
         "10": {
           "target_ayah": 9,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "11": {
-          "target_ayah": 10,
-          "status": "merged"
+          "target_ayah": 9,
+          "status": "mapped"
         },
         "12": {
           "target_ayah": 10,
@@ -20546,11 +20596,12 @@
         },
         "22": {
           "target_ayah": 25,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "23": {
-          "target_ayah": 26,
-          "status": "merged"
+          "target_ayah": 25,
+          "status": "mapped"
         },
         "24": {
           "target_ayah": 26,
@@ -20558,11 +20609,12 @@
         },
         "25": {
           "target_ayah": 27,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "26": {
-          "target_ayah": 28,
-          "status": "merged"
+          "target_ayah": 27,
+          "status": "mapped"
         },
         "27": {
           "target_ayah": 28,
@@ -20634,11 +20686,12 @@
         },
         "42": {
           "target_ayah": 45,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "43": {
-          "target_ayah": 46,
-          "status": "merged"
+          "target_ayah": 45,
+          "status": "mapped"
         },
         "44": {
           "target_ayah": 46,
@@ -20912,11 +20965,12 @@
         },
         "13": {
           "target_ayah": 13,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "14": {
-          "target_ayah": 14,
-          "status": "merged"
+          "target_ayah": 13,
+          "status": "mapped"
         },
         "15": {
           "target_ayah": 14,
@@ -21062,11 +21116,12 @@
         },
         "20": {
           "target_ayah": 20,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "21": {
-          "target_ayah": 21,
-          "status": "merged"
+          "target_ayah": 20,
+          "status": "mapped"
         },
         "22": {
           "target_ayah": 21,
@@ -21932,11 +21987,12 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
@@ -22424,39 +22480,42 @@
           "splits_into": [
             23,
             24
-          ]
+          ],
+          "merges_with_next": true
         },
         "24": {
-          "target_ayah": 25,
-          "status": "merged"
+          "target_ayah": 24,
+          "status": "split",
+          "splits_into": [
+            24,
+            25
+          ]
         },
         "25": {
-          "target_ayah": 25,
-          "status": "merged"
+          "target_ayah": 26,
+          "status": "split",
+          "splits_into": [
+            26,
+            27
+          ]
         },
         "26": {
-          "target_ayah": 25,
+          "target_ayah": 28,
           "status": "mapped"
         },
         "27": {
-          "target_ayah": 26,
+          "target_ayah": 29,
           "status": "mapped"
         },
         "28": {
-          "target_ayah": 27,
-          "status": "split",
-          "splits_into": [
-            27,
-            28,
-            29,
-            30
-          ]
+          "target_ayah": 30,
+          "status": "mapped"
         }
       }
     },
     "72": {
       "hafs_ayah_count": 28,
-      "target_ayah_count": 29,
+      "target_ayah_count": 28,
       "ayahs": {
         "1": {
           "target_ayah": 1,
@@ -22548,36 +22607,32 @@
           "splits_into": [
             22,
             23
-          ]
+          ],
+          "merges_with_next": true
         },
         "23": {
-          "target_ayah": 24,
-          "status": "merged"
+          "target_ayah": 23,
+          "status": "mapped"
         },
         "24": {
           "target_ayah": 24,
-          "status": "merged"
-        },
-        "25": {
-          "target_ayah": 24,
           "status": "mapped"
         },
-        "26": {
+        "25": {
           "target_ayah": 25,
           "status": "mapped"
         },
-        "27": {
+        "26": {
           "target_ayah": 26,
           "status": "mapped"
         },
-        "28": {
+        "27": {
           "target_ayah": 27,
-          "status": "split",
-          "splits_into": [
-            27,
-            28,
-            29
-          ]
+          "status": "mapped"
+        },
+        "28": {
+          "target_ayah": 28,
+          "status": "mapped"
         }
       }
     },
@@ -22587,11 +22642,12 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
@@ -22837,11 +22893,12 @@
         },
         "41": {
           "target_ayah": 41,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "42": {
-          "target_ayah": 42,
-          "status": "merged"
+          "target_ayah": 41,
+          "status": "mapped"
         },
         "43": {
           "target_ayah": 42,
@@ -22967,11 +23024,12 @@
         },
         "16": {
           "target_ayah": 16,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "17": {
-          "target_ayah": 17,
-          "status": "merged"
+          "target_ayah": 16,
+          "status": "mapped"
         },
         "18": {
           "target_ayah": 17,
@@ -23405,7 +23463,7 @@
     },
     "78": {
       "hafs_ayah_count": 40,
-      "target_ayah_count": 41,
+      "target_ayah_count": 40,
       "ayahs": {
         "1": {
           "target_ayah": 1,
@@ -23565,11 +23623,7 @@
         },
         "40": {
           "target_ayah": 40,
-          "status": "split",
-          "splits_into": [
-            40,
-            41
-          ]
+          "status": "mapped"
         }
       }
     },
@@ -23723,11 +23777,12 @@
         },
         "37": {
           "target_ayah": 37,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "38": {
-          "target_ayah": 38,
-          "status": "merged"
+          "target_ayah": 37,
+          "status": "mapped"
         },
         "39": {
           "target_ayah": 38,
@@ -24887,7 +24942,8 @@
         },
         "29": {
           "target_ayah": 32,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "30": {
           "target_ayah": 32,
@@ -25039,11 +25095,7 @@
         },
         "14": {
           "target_ayah": 14,
-          "status": "split",
-          "splits_into": [
-            14,
-            15
-          ]
+          "status": "mapped"
         },
         "15": {
           "target_ayah": 15,
@@ -25519,11 +25571,12 @@
       "ayahs": {
         "1": {
           "target_ayah": 1,
-          "status": "mapped"
+          "status": "merged",
+          "merges_with_next": true
         },
         "2": {
-          "target_ayah": 2,
-          "status": "merged"
+          "target_ayah": 1,
+          "status": "mapped"
         },
         "3": {
           "target_ayah": 2,
@@ -25739,7 +25792,8 @@
         },
         "6": {
           "target_ayah": 6,
-          "status": "merged"
+          "status": "merged",
+          "merges_with_next": true
         },
         "7": {
           "target_ayah": 6,

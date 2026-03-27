@@ -1,63 +1,139 @@
 # Contributing to Qiraat Ayah Map
 
-Thank you for your interest in contributing to this project.
+Thank you for contributing.
 
-## How to Contribute
+## Understand the four data layers first
 
-### Adding or Correcting Differences Data
+This repository now has four related but distinct layers:
 
-The most valuable contribution is adding or verifying ayah numbering differences between counting systems.
+1. **Word-level scholarly notes** — `data/differences.json`
+   - includes `word`
+   - best for scholarly/source correction work
 
-1. **Edit** `data/differences.json` to add or correct entries
-2. **Regenerate** the pre-computed mappings: `node scripts/generate-mappings.mjs`
-3. **Run validation**: `node tests/validate.mjs`
-4. **Submit** a pull request with:
-   - The scholarly source for your change
-   - Which counting system and surah(s) are affected
+2. **Operational forward mappings** — `data/mappings/by-counting-system/kufi-to-*.json`
+   - these are generated artifacts
+   - they are the practical source of truth for the shipped dataset at runtime
+   - all reverse mappings, rawi aliases, surah counts, and generated audits are derived from these
 
-### Data Format for Differences
+3. **Generated reconciliation layers**
+   - `data/boundary-events.json`
+   - `data/differences-reconciliation.json`
+   - do not edit these by hand; regenerate them
 
-Each difference entry:
+4. **Curated classical-count attestations** — `data/classical-count-attestations.json`
+   - records explicit primary-riwaya total decisions for disputed aggregate counts
+   - currently used for the Makki total
+   - do not edit generated fields by hand; regenerate them
+
+## Common contribution types
+
+### 1) Scholarly word-level correction
+
+Use this path when you have a source that identifies the exact **word** where an ayah boundary differs.
+
+1. Edit `data/differences.json`
+2. Regenerate the dataset (all non-Kufan systems are generated from word-level data):
+   ```bash
+   npm run generate
+   ```
+3. Run tests:
+   ```bash
+   npm test
+   ```
+4. In your pull request, include:
+   - the scholarly source
+   - the counting system
+   - the surah and ayah range affected
+   - whether the change is a `merge` or `split`
+
+### 2) Operational mapping correction
+
+Use this path when the shipped mapping itself is wrong or incomplete, regardless of whether the word-level source file is already reconciled.
+
+1. Edit the relevant generator or normalization logic
+2. Regenerate derived files:
+   ```bash
+   npm run generate
+   ```
+3. Run tests:
+   ```bash
+   npm test
+   ```
+4. In your pull request, explain:
+   - what was wrong in the generated mapping behavior
+   - whether the correction also needs a follow-up scholarly update in `data/differences.json`
+
+## Forward mapping semantics
+
+Forward entries always keep an integer `target_ayah`.
+
+Examples:
+
+```json
+{ "target_ayah": 4, "status": "mapped" }
+{ "target_ayah": 1, "status": "merged", "merges_with_next": true }
+{ "target_ayah": 5, "status": "split", "splits_into": [5, 6] }
+```
+
+A split entry may also carry `"merges_with_next": true` in the rare case where one Hafs ayah both splits and then shares its final target ayah with the following Hafs ayah.
+
+## Word-level differences format
+
+`data/differences.json` uses items like this:
+
+```json
+{
+  "surah": 2,
+  "hafs_ayah": 1,
+  "word": "الم",
+  "type": "merge"
+}
+```
+
+Fields:
+
+- `surah` — 1 to 114
+- `hafs_ayah` — ayah number in the Kufan/Hafs reference
+- `word` — the word at which the boundary note is anchored
+- `type` — `merge` or `split`
+
+## Generated boundary-events format
+
+`data/boundary-events.json` is generated from the normalized forward mappings and uses items like this:
 
 ```json
 {
   "surah": 2,
   "hafs_ayah": 1,
   "type": "merge",
-  "description_ar": "(الم) لا تُعدّ آية مستقلة",
-  "description_en": "Alif Lam Mim is not a separate ayah"
+  "count": 1
 }
 ```
 
-- `surah` — Surah number (1-114)
-- `hafs_ayah` — The Hafs ayah number where the difference occurs
-- `type` — `"merge"` (target combines this ayah with next) or `"split"` (target splits this Hafs ayah into two)
-- `description_ar` — Arabic description
-- `description_en` — English description
+This file is count-based, not word-based.
 
-### Adding Validation Tests
-
-Add assertions to `tests/validate.mjs` for any new scholarly facts. Always cite your source in comments.
-
-### Requirements for Contributions
-
-- All data must be sourced from **established Islamic scholarship**
-- Provide references (book name, author, chapter/page if possible)
-- Both Arabic and English descriptions are required
-- All tests must pass after your changes
-
-## Development Workflow
+## Validation commands
 
 ```bash
-# Edit data/differences.json
-
-# Regenerate all mapping files
-node scripts/generate-mappings.mjs
-
-# Validate everything
-node tests/validate.mjs
+npm run generate
+npm test
+npm run test:api
 ```
 
-## Code of Conduct
+- `npm run generate` refreshes all derived data, including classical-count attestations
+- `npm test` runs the local structural and consistency checks
+- `npm run test:api` checks known public mushaf IDs against Quranpedia
 
-This is a scholarly project serving the Muslim community. Please maintain respectful, constructive communication in all interactions.
+## Pull request checklist
+
+Before opening a PR:
+
+- confirm whether your change is **scholarly**, **operational**, or both
+- regenerate the derived files
+- run the test suite
+- mention the source or rationale in the PR description
+- note any unresolved reconciliation work still left in `data/differences-reconciliation.json` or `data/classical-count-attestations.json`
+
+## Code of conduct
+
+This is a scholarly project in service of the Muslim community. Please keep discussion respectful, precise, and constructive.

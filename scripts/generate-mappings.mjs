@@ -1,6 +1,6 @@
 /**
- * Generate forward mapping files from the differences table for systems that do
- * not already ship with curated forward mappings.
+ * Generate forward mapping files from the scholarly differences table for all
+ * non-Kufan counting systems.
  *
  * Usage: node scripts/generate-mappings.mjs
  */
@@ -34,7 +34,7 @@ const hafsCounts = {
   111: 5, 112: 4, 113: 5, 114: 6
 };
 
-const computedSystems = ['madani-first', 'dimashqi'];
+const computedSystems = Object.keys(countingSystems).filter(systemId => systemId !== 'kufi');
 
 mkdirSync(join(dataDir, 'mappings', 'by-counting-system'), { recursive: true });
 mkdirSync(join(dataDir, 'surah-counts'), { recursive: true });
