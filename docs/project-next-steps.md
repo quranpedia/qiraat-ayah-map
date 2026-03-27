@@ -4,9 +4,9 @@ The project now has a strong canonical source layer, deterministic generators, r
 
 ## Immediate priority order
 
-### 1. Fill the evidence layer
+### 1. Finish the first real evidence pass
 
-This is the main blocker.
+This is the main blocker. The first primary citations have now landed for a small Madani-first slice, but the project still needs one complete system-level evidence pass.
 
 The source layer now makes explicit claims in `data/book-boundary-primitives.json`, and the evidence sidecar exists in `data/book-boundary-evidence.json`. The next real work is to populate evidence records point by point.
 
@@ -44,14 +44,16 @@ Recommended release rule:
 
 - no release marked “scholarly reviewed” unless every point is either cited, reviewed, disputed, or unresolved by explicit status
 
-### 4. Upgrade the site from atlas to working tool
+### 4. Keep pushing the site from atlas to working tool
 
-The next site phase should add tools, not just more ornament:
+The most useful comparison and review-planning views are now in place:
 
 - system distance matrix
 - verification coverage bars
-- ayah conversion stepper
+- review-workload ranking
 - cumulative surah delta timeline
+
+The next tool to add is the ayah conversion stepper.
 
 ### 5. Publish a reviewer workflow
 
@@ -93,9 +95,9 @@ They remain useful consistency checks, not the authority layer.
 
 ### Phase 12
 
-- populate evidence for one system fully
+- finish one system-level evidence pass end to end
 - upgrade release gates around evidence completeness
-- add verification coverage visuals
+- use the new comparison and workload views to choose outreach order
 
 ### Phase 13
 

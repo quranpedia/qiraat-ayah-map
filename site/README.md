@@ -27,10 +27,15 @@ The site payload intentionally carries a few UI-facing derivatives so the SPA do
 - per-system surah fingerprints
 - the full disputed-point row set
 - per-row slot labels for duplicated points inside the same Hafs ayah
+- pairwise system-distance cells
+- per-system verification profiles
+- review-workload ranking
+- per-system surah-drift series
 
 ## Routes
 
 - `/` overview and system entry points
+- `/compare` comparison and review-planning view
 - `/explorer` filterable disputed-point explorer
 - `/systems/:system` system profile and ranked fingerprint
 - `/surahs/:surah` surah matrix, table, and detail drill-down
@@ -43,13 +48,17 @@ Used for views that behave like compact analytical references:
 
 - total ayah count by system
 - disputed-point heatmap by surah
+- system distance matrix
+- verification coverage bars
 - surah boundary matrix
+- surah drift timeline
 
 ### LayerChart
 
 Used for the more interactive ranked profile view:
 
 - top surahs by counted disputed heads for a selected system
+- review-workload ranking by uncited counted points
 
 ## Run locally
 

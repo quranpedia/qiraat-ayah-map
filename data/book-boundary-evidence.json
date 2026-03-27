@@ -127,8 +127,20 @@
         "internal": [
           {
             "word": "النور",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 88، سطر 273-275، في باب ما انفرد به المدني الأول وما أسقطه",
+                "supports": [
+                  "madani-first"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، 1414هـ/1994م",
+                "note": "يسمي الداني هذه المواضع ضمن ما انفرد بعدّه المدني الأول."
+              }
+            ]
           }
         ]
       }
@@ -529,8 +541,24 @@
       "24": {
         "end": {
           "word": "السماء",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 88، سطر 273-275، في باب ما انفرد به المدني الأول وما أسقطه",
+              "supports": [
+                "madani-last",
+                "makki",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "derived",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، 1414هـ/1994م",
+              "note": "يذكرها الداني ضمن ما أسقطه المدني الأول، فيكون عدُّها عند الباقين مفهوماً من بنية الباب."
+            }
+          ]
         }
       },
       "33": {
@@ -1028,8 +1056,20 @@
         "internal": [
           {
             "word": "المجرمون",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 88، سطر 273-275، في باب ما انفرد به المدني الأول وما أسقطه",
+                "supports": [
+                  "madani-first"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، 1414هـ/1994م",
+                "note": "يسمي الداني هذه المواضع ضمن ما انفرد بعدّه المدني الأول."
+              }
+            ]
           }
         ]
       }
@@ -1679,8 +1719,20 @@
         "internal": [
           {
             "word": "الألباب",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 88، سطر 273-275، في باب ما انفرد به المدني الأول وما أسقطه",
+                "supports": [
+                  "madani-first"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، 1414هـ/1994م",
+                "note": "يسمي الداني هذه المواضع ضمن ما انفرد بعدّه المدني الأول."
+              }
+            ]
           }
         ]
       }
@@ -1902,8 +1954,24 @@
       "15": {
         "end": {
           "word": "كيدا",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 88، سطر 273-275، في باب ما انفرد به المدني الأول وما أسقطه",
+              "supports": [
+                "madani-last",
+                "makki",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "derived",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، 1414هـ/1994م",
+              "note": "يذكرها الداني ضمن ما أسقطه المدني الأول، فيكون عدُّها عند الباقين مفهوماً من بنية الباب."
+            }
+          ]
         }
       }
     },
@@ -1948,8 +2016,20 @@
         "internal": [
           {
             "word": "فعقروها",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 88، سطر 273-275، في باب ما انفرد به المدني الأول وما أسقطه",
+                "supports": [
+                  "madani-first"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، 1414هـ/1994م",
+                "note": "يسمي الداني هذه المواضع ضمن ما انفرد بعدّه المدني الأول."
+              }
+            ]
           }
         ]
       }

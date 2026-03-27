@@ -240,6 +240,9 @@ const reviewData = loadDist('review/review-data.json');
 const masterMatrixCsv = readFileSync(distPath('review', 'master-matrix.csv'), 'utf-8');
 const openQuestionsMarkdown = readFileSync(distPath('review', 'open-questions.md'), 'utf-8');
 const totalsMarkdown = readFileSync(distPath('review', 'totals.md'), 'utf-8');
+const workloadMarkdown = readFileSync(distPath('review', 'workload.md'), 'utf-8');
+const systemDistanceMarkdown = readFileSync(distPath('review', 'system-distance.md'), 'utf-8');
+const evidenceLedgerMarkdown = readFileSync(distPath('review', 'evidence-ledger.md'), 'utf-8');
 const siteData = JSON.parse(readFileSync(join(repoDir, 'site', 'src', 'lib', 'data', 'generated', 'site-data.json'), 'utf-8'));
 
 const systemIds = Object.keys(countingSystems);
@@ -462,6 +465,9 @@ assert(JSON.stringify(systemPacketFilenames) === JSON.stringify(expectedSystemPa
 const outstandingRows = reviewData.rows.filter(row => row.verification_status !== 'primary_cited_and_reviewed');
 assert(openQuestionsMarkdown.includes(`Outstanding disputed-boundary claims: ${outstandingRows.length}`), 'open-questions.md reports the outstanding-point count');
 assert(totalsMarkdown.includes('Mapping total'), 'totals.md includes the totals review table');
+assert(workloadMarkdown.includes('Counted points'), 'workload.md includes the workload table');
+assert(systemDistanceMarkdown.includes('System distance matrix'), 'system-distance.md includes the system distance heading');
+assert(evidenceLedgerMarkdown.includes('Evidence ledger'), 'evidence-ledger.md includes the evidence ledger heading');
 
 section('Kufan Total Ayah Count');
 
@@ -903,10 +909,48 @@ for (let surahNumber = 1; surahNumber <= 114; surahNumber += 1) {
 for (const system of siteData.systems) {
   const reviewSummary = reviewData.summary.by_system[system.id];
   const profile = siteData.system_profiles[system.id];
+  const verificationProfile = siteData.verification_profiles[system.id];
+  const relationship = siteData.system_relationships[system.id];
   assert(!!reviewSummary, `site data: ${system.id} exists in review summary`);
   assert(Array.isArray(profile) && profile.length === 114, `site data: ${system.id} has 114 profile rows`);
   assert(system.counts_boundary === reviewSummary.counts_boundary, `site data: ${system.id} counts_boundary matches review data`);
   assert(system.merge_effects === reviewSummary.merge_effects, `site data: ${system.id} merge_effects match review data`);
+  assert(verificationProfile.total_points === system.counts_boundary, `site data: ${system.id} verification profile total matches counted points`);
+  const verificationSum = Object.values(verificationProfile.by_status).reduce((sum, value) => sum + value, 0);
+  assert(verificationSum === verificationProfile.total_points, `site data: ${system.id} verification-status totals sum correctly`);
+  assert(relationship.nearest.right_system_id !== system.id, `site data: ${system.id} nearest system is another system`);
+  assert(relationship.farthest.right_system_id !== system.id, `site data: ${system.id} farthest system is another system`);
+}
+
+assert(siteData.system_distance_matrix.length === systemIds.length * systemIds.length, 'site data includes every pairwise system-distance cell');
+
+for (const cell of siteData.system_distance_matrix) {
+  if (cell.left_system_id === cell.right_system_id) {
+    assert(cell.differing_points === 0, `site data distance diagonal ${cell.left_system_id} = 0`);
+  }
+
+  const mirror = siteData.system_distance_matrix.find(other => other.left_system_id === cell.right_system_id && other.right_system_id === cell.left_system_id);
+  assert(Boolean(mirror), `site data distance mirror exists for ${cell.left_system_id}/${cell.right_system_id}`);
+  if (mirror) {
+    assert(cell.differing_points === mirror.differing_points, `site data distance matrix is symmetric for ${cell.left_system_id}/${cell.right_system_id}`);
+  }
+}
+
+assert(siteData.review_queue.length === systemIds.length, 'site data review queue includes every system');
+for (let index = 1; index < siteData.review_queue.length; index += 1) {
+  const previous = siteData.review_queue[index - 1];
+  const current = siteData.review_queue[index];
+  assert(previous.uncited_points <= current.uncited_points, 'site data review queue is ordered by uncited counted points');
+}
+
+for (const system of siteData.systems) {
+  const profile = siteData.system_profiles[system.id];
+  for (const entry of profile) {
+    const drift = siteData.surah_drifts[system.id][String(entry.surah)];
+    assert(Array.isArray(drift) && drift.length >= 1, `site data: ${system.id} surah ${entry.surah} has a drift profile`);
+    const finalPoint = drift[drift.length - 1];
+    assert(finalPoint.cumulative_delta === entry.delta_from_kufi, `site data: ${system.id} surah ${entry.surah} drift closes at the correct delta`);
+  }
 }
 
 section('Cleanup');

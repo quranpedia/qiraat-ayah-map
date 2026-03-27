@@ -31,12 +31,13 @@ let selected_profile = $derived(get_system_profile(selected_system_id))
         Explore disputed points
         <ArrowRightIcon class="size-4" />
       </a>
-      <a class="pill_button" href={app_href('/systems/makki')}>Open a system profile</a>
+      <a class="pill_button" href={app_href('/compare')}>Compare systems and workload</a>
     </div>
 
     <div class="mt-6 flex flex-wrap gap-2 text-sm text-ink-soft">
       <span class="stat_chip">{summary.by_kind.end} end points</span>
       <span class="stat_chip">{summary.by_kind.internal} internal points</span>
+      <span class="stat_chip">{summary.evidence.points_with_primary_evidence} with primary evidence</span>
       <span class="stat_chip">{summary.evidence.points_uncited} uncited</span>
     </div>
   </div>
@@ -52,7 +53,7 @@ let selected_profile = $derived(get_system_profile(selected_system_id))
     <MetricCard
       label="Citation coverage"
       value={`${compact_number(summary.evidence.points_with_evidence)} / ${compact_number(summary.total_points)}`}
-      note="The review scaffold is in place, but the current source layer still needs evidence transcription."
+      note="Primary citations have started to land, but most of the counted corpus still needs evidence transcription."
       tone="alert"
     />
   </div>

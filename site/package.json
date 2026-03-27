@@ -19,5 +19,6 @@
     "svelte": "^5.55.0",
     "tailwindcss": "^4.2.2",
     "vite": "^8.0.3"
-  }
+  },
+  "packageManager": "pnpm@10.18.2"
 }

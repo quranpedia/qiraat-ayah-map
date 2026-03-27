@@ -14,6 +14,11 @@ export const rows = dataset.rows
 export const summary = dataset.summary
 export const attestations = dataset.attestations
 export const review_status_order = dataset.review_status_order
+export const verification_profiles = dataset.verification_profiles
+export const system_distance_matrix = dataset.system_distance_matrix
+export const system_relationships = dataset.system_relationships
+export const review_queue = dataset.review_queue
+export const surah_drifts = dataset.surah_drifts
 
 const system_map = new Map(systems.map(system => [system.id, system]))
 export const surahs = dataset.surahs.map(entry => ({
@@ -45,6 +50,18 @@ export function get_surah_rows(surah_number) {
 
 export function get_system_profile(system_id) {
   return dataset.system_profiles[system_id] || []
+}
+
+export function get_verification_profile(system_id) {
+  return verification_profiles[system_id] || null
+}
+
+export function get_system_relationship(system_id) {
+  return system_relationships[system_id] || null
+}
+
+export function get_surah_drift(system_id, surah_number) {
+  return surah_drifts[system_id]?.[String(Number(surah_number))] || []
 }
 
 export function get_verification_tone(status) {

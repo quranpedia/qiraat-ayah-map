@@ -1,24 +1,32 @@
 <script>
-import { ArrowRightIcon, FingerprintIcon, LibraryBigIcon } from '@lucide/svelte'
+import { ArrowRightIcon, FingerprintIcon, LibraryBigIcon, MilestoneIcon } from '@lucide/svelte'
 
 import MetricCard from '~/components/MetricCard.svelte'
+import PlotSurahDrift from '~/components/charts/PlotSurahDrift.svelte'
 import SystemFingerprint from '~/components/charts/SystemFingerprint.svelte'
 import {
   attestations,
   compact_number,
   format_attestation_status,
   get_surah,
+  get_surah_drift,
   get_system,
+  get_system_name,
   get_system_profile,
+  get_system_relationship,
+  get_verification_profile,
   titleize_slug
 } from '$lib/dataset.svelte.js'
 import { app_href } from '$lib/nav.js'
 
 let { system } = $props()
 
+let selected_surah = $state(null)
 let system_info = $derived(get_system(system))
 let profile = $derived(get_system_profile(system))
 let attestation = $derived(attestations[system] || null)
+let verification = $derived(get_verification_profile(system))
+let relationship = $derived(get_system_relationship(system))
 let top_surahs = $derived.by(() =>
   profile
     .filter(entry => entry.counted_points > 0 || entry.delta_from_kufi !== 0)
@@ -31,6 +39,9 @@ let top_surahs = $derived.by(() =>
     .slice(0, 8)
     .map(entry => ({ ...entry, ...(get_surah(entry.surah) || {}) }))
 )
+let active_surah_number = $derived(selected_surah ?? top_surahs[0]?.surah ?? 1)
+let active_surah = $derived(get_surah(active_surah_number))
+let drift_points = $derived(get_surah_drift(system, active_surah_number))
 </script>
 
 {#if !system_info}
@@ -70,11 +81,101 @@ let top_surahs = $derived.by(() =>
     </div>
   </section>
 
-  <section class="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+  <section class="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
     <MetricCard label="Total ayahs" value={compact_number(system_info.total_ayahs)} note="Derived from the canonical primitive layer." />
     <MetricCard label="Vs kufi" value={`${system_info.delta_from_kufi > 0 ? '+' : ''}${system_info.delta_from_kufi}`} note="Net effect against the Kufan reference count." tone={system_info.delta_from_kufi === 0 ? 'ok' : 'accent'} />
     <MetricCard label="Counted heads" value={compact_number(system_info.counts_boundary)} note="How many disputed heads this system actively counts." tone="ok" />
+    <MetricCard label="Cited counted heads" value={compact_number(system_info.cited_points)} note="Counted disputed heads with any attached evidence." tone={system_info.cited_points > 0 ? 'accent' : 'warn'} />
     <MetricCard label="Merge effects" value={compact_number(system_info.merge_effects)} note="Places where omission collapses numbering downstream." tone="alert" />
+  </section>
+
+  <section class="mt-12 grid gap-6 xl:grid-cols-2">
+    <div class="surface p-5 sm:p-6">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <div class="rule_label">Verification posture</div>
+          <h2 class="section_title mt-4">How much of this counted corpus has evidence</h2>
+          <p class="section_text mt-3 text-sm">
+            These totals are restricted to the disputed heads that {system_info.name_en} actually counts.
+          </p>
+        </div>
+        <MilestoneIcon class="hidden size-10 text-accent-strong sm:block" />
+      </div>
+
+      <div class="mt-6 grid gap-4 sm:grid-cols-2">
+        <div class="surface surface_muted p-4">
+          <div class="metric_label">Cited</div>
+          <div class="mt-3 text-3xl font-bold text-ink">{compact_number(verification?.cited_points || 0)}</div>
+          <div class="mt-2 text-sm text-ink-soft">with any evidence attached</div>
+        </div>
+        <div class="surface surface_muted p-4">
+          <div class="metric_label">Uncited</div>
+          <div class="mt-3 text-3xl font-bold text-ink">{compact_number(verification?.uncited_points || 0)}</div>
+          <div class="mt-2 text-sm text-ink-soft">still needing source transcription</div>
+        </div>
+      </div>
+
+      <div class="mt-5 flex flex-wrap gap-2 text-sm">
+        <span class="badge" data-tone="ok">primary evidence {verification?.points_with_primary_evidence || 0}</span>
+        <span class="badge" data-tone="warn">reviewed {verification?.points_reviewed || 0}</span>
+      </div>
+    </div>
+
+    <div class="surface p-5 sm:p-6">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <div class="rule_label">Neighborhood</div>
+          <h2 class="section_title mt-4">Which systems are closest and farthest</h2>
+          <p class="section_text mt-3 text-sm">
+            Distance here means how many disputed points the two systems treat differently.
+          </p>
+        </div>
+        <MilestoneIcon class="hidden size-10 text-accent-strong sm:block" />
+      </div>
+
+      <div class="mt-6 grid gap-4 sm:grid-cols-2">
+        <div class="surface surface_muted p-4">
+          <div class="metric_label">Nearest</div>
+          <div class="mt-3 text-2xl font-bold text-ink">{get_system_name(relationship?.nearest?.right_system_id)}</div>
+          <div class="mt-2 text-sm text-ink-soft">{relationship?.nearest?.differing_points ?? 0} differing points</div>
+        </div>
+        <div class="surface surface_muted p-4">
+          <div class="metric_label">Farthest</div>
+          <div class="mt-3 text-2xl font-bold text-ink">{get_system_name(relationship?.farthest?.right_system_id)}</div>
+          <div class="mt-2 text-sm text-ink-soft">{relationship?.farthest?.differing_points ?? 0} differing points</div>
+        </div>
+      </div>
+
+      <a class="pill_button mt-6 w-full" href={app_href('/compare')}>
+        Open the comparison view
+        <ArrowRightIcon class="size-4" />
+      </a>
+    </div>
+  </section>
+
+  <section class="mt-12 surface p-5 sm:p-6">
+    <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+      <div>
+        <div class="rule_label">Within-surah drift</div>
+        <h2 class="section_title mt-4">How numbering pulls away from Kufi inside one surah</h2>
+        <p class="section_text mt-3 text-sm">
+          The line changes by +1 when this system counts an internal split point and by −1 when it omits a Kufan verse-end head.
+        </p>
+      </div>
+
+      <label class="block lg:w-72">
+        <span class="metric_label">Preview surah</span>
+        <select class="select mt-3" bind:value={selected_surah}>
+          {#each top_surahs as surah (surah.surah)}
+            <option value={surah.surah}>Surah {surah.surah} · {surah.name_en}</option>
+          {/each}
+        </select>
+      </label>
+    </div>
+
+    <div class="mt-6">
+      <PlotSurahDrift points={drift_points} system_name={system_info.name_en} surah_label={active_surah?.name_en || `Surah ${active_surah_number}`} />
+    </div>
   </section>
 
   <section class="mt-12 surface p-5 sm:p-6">

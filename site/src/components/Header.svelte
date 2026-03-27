@@ -1,5 +1,5 @@
 <script>
-import { CompassIcon, PanelsTopLeftIcon, SearchIcon } from '@lucide/svelte'
+import { CompassIcon, MilestoneIcon, PanelsTopLeftIcon, SearchIcon } from '@lucide/svelte'
 
 import { summary } from '$lib/dataset.svelte.js'
 import { app_href } from '$lib/nav.js'
@@ -8,6 +8,7 @@ const { route } = window.navgo
 
 const nav_items = [
   { href: '/', label: 'Atlas', icon: CompassIcon },
+  { href: '/compare', label: 'Compare', icon: MilestoneIcon },
   { href: '/explorer', label: 'Explorer', icon: SearchIcon }
 ]
 </script>

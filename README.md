@@ -76,6 +76,9 @@ dist/
     ├── review-data.json
     ├── master-matrix.csv
     ├── totals.md
+    ├── workload.md
+    ├── system-distance.md
+    ├── evidence-ledger.md
     ├── open-questions.md
     └── systems/*.md
 
@@ -360,7 +363,7 @@ The current dataset also tracks practical mapping compatibility with Quranpedia'
 
 ## Demo site
 
-A minimal Svelte 5 SPA lives under `site/`. It consumes the generated `site/src/lib/data/generated/site-data.json` contract, uses **Observable Plot** for summary and matrix views, and **LayerChart** for ranked interactive system fingerprints. There is no backend: the site is a hard-cutover static frontend over generated review data.
+A minimal Svelte 5 SPA lives under `site/`. It consumes the generated `site/src/lib/data/generated/site-data.json` contract, uses **Observable Plot** for summary, matrix, and drift views, and **LayerChart** for ranked fingerprints and review-workload ranking. The current routes cover the atlas, compare, explorer, system, and surah views. There is no backend: the site is a hard-cutover static frontend over generated review data.
 
 The repo also includes a minimal GitHub Pages workflow at `.github/workflows/deploy-site.yml`. It rebuilds the data contract before the site build, passes the Pages base path into Vite, and emits a `404.html` fallback so deep links still boot the SPA on Pages.
 

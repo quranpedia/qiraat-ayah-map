@@ -29,6 +29,10 @@ That generated site payload contains:
 - the full disputed-point row set
 - slot labels for duplicated disputed points inside one Hafs ayah
 - total-count attestation notes
+- pairwise system-distance cells
+- per-system verification profiles
+- review-workload ranking
+- per-system per-surah drift curves
 
 ## Current routes
 
@@ -43,6 +47,15 @@ Overview page with:
 - surah heatmap of disputed-point density
 - ranked interactive system fingerprint preview
 - quick links into each counting system
+
+### `/compare`
+
+A comparison and review-planning route with:
+
+- pairwise system-distance matrix
+- verification coverage bars restricted to counted disputed heads
+- review-workload ranking by uncited counted points
+- nearest / farthest neighbor table
 
 ### `/explorer`
 
@@ -63,8 +76,11 @@ A system profile page with:
 - total ayah count
 - delta from Kufi
 - counted disputed heads
+- cited counted heads
 - merge totals
 - total-count policy note when present
+- nearest / farthest system comparison
+- cumulative drift preview inside a chosen surah
 - LayerChart-ranked surah fingerprint
 - hotspot surahs
 
@@ -88,7 +104,9 @@ Use it for views that are fundamentally analytical and matrix-like:
 - total ayahs by system
 - heatmaps
 - surah boundary matrices
-- future verification coverage charts
+- verification coverage charts
+- system distance matrices
+- surah drift timelines
 
 ### LayerChart
 
@@ -112,10 +130,10 @@ The visual language is intentionally **editorial and manuscript-like**, not “A
 ## Next site phases
 
 1. add shareable URLs for individual disputed points
-2. render real evidence records as `book-boundary-evidence.json` fills in
-3. add mapping conversion tools based on generated mapping files
-4. add Arabic label mode and bilingual UI toggles
-5. add scholar review views keyed to reviewer status and citation coverage
+2. add mapping conversion tools based on generated mapping files
+3. add Arabic label mode and bilingual UI toggles
+4. add scholar review views keyed to reviewer status and citation coverage
+5. expand the evidence-backed corpus until comparison charts are no longer dominated by uncited work
 
 
 ## GitHub Pages deployment
