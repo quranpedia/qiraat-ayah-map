@@ -7045,8 +7045,8 @@
           "status": "mapped"
         },
         "19": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 16,
+          "status": "mapped"
         },
         "20": {
           "hafs_ayah": 17,
@@ -9783,12 +9783,12 @@
           "status": "mapped"
         },
         "42": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 40,
+          "status": "mapped"
         },
         "43": {
-          "hafs_ayah": null,
-          "status": "split_product"
+          "hafs_ayah": 40,
+          "status": "mapped"
         },
         "44": {
           "hafs_ayah": 41,
