@@ -264,4 +264,4 @@ MIT License. See [LICENSE](LICENSE).
 
 ---
 
-Built with ❤️ for the Muslim Ummah by [Quranpedia.net](https://quranpedia.net)
+Built with ❤️ for the Muslim Ummah by [Quranpedia.net](https://quranpedia.net) and [Nuqayah](https://nuqayah.com)
