@@ -1192,7 +1192,7 @@
         },
         "284": {
           "target_ayah": 285,
-          "status": "mapped"
+          "status": "merged"
         },
         "285": {
           "target_ayah": 285,
@@ -1200,7 +1200,7 @@
         },
         "286": {
           "target_ayah": 285,
-          "status": "merged"
+          "status": "mapped"
         }
       }
     },
@@ -2010,7 +2010,11 @@
         },
         "200": {
           "target_ayah": 199,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            199,
+            200
+          ]
         }
       }
     },
@@ -3214,11 +3218,11 @@
         },
         "119": {
           "target_ayah": 122,
-          "status": "mapped"
+          "status": "merged"
         },
         "120": {
           "target_ayah": 122,
-          "status": "merged"
+          "status": "mapped"
         }
       }
     },
@@ -3892,7 +3896,11 @@
         },
         "165": {
           "target_ayah": 166,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            166,
+            167
+          ]
         }
       }
     },
@@ -4726,7 +4734,11 @@
         },
         "206": {
           "target_ayah": 205,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            205,
+            206
+          ]
         }
       }
     },
@@ -6506,7 +6518,11 @@
         },
         "123": {
           "target_ayah": 121,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            121,
+            122
+          ]
         }
       }
     },
@@ -7138,11 +7154,11 @@
         },
         "42": {
           "target_ayah": 44,
-          "status": "mapped"
+          "status": "merged"
         },
         "43": {
           "target_ayah": 44,
-          "status": "merged"
+          "status": "mapped"
         }
       }
     },
@@ -7360,7 +7376,13 @@
         },
         "52": {
           "target_ayah": 51,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            51,
+            52,
+            53,
+            54
+          ]
         }
       }
     },
@@ -7762,7 +7784,12 @@
         },
         "99": {
           "target_ayah": 97,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            97,
+            98,
+            99
+          ]
         }
       }
     },
@@ -9156,7 +9183,7 @@
         },
         "104": {
           "target_ayah": 105,
-          "status": "mapped"
+          "status": "merged"
         },
         "105": {
           "target_ayah": 105,
@@ -9180,7 +9207,7 @@
         },
         "110": {
           "target_ayah": 105,
-          "status": "merged"
+          "status": "mapped"
         }
       }
     },
@@ -10140,7 +10167,11 @@
         },
         "135": {
           "target_ayah": 133,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            133,
+            134
+          ]
         }
       }
     },
@@ -10904,7 +10935,7 @@
         },
         "76": {
           "target_ayah": 76,
-          "status": "mapped"
+          "status": "merged"
         },
         "77": {
           "target_ayah": 76,
@@ -10912,7 +10943,7 @@
         },
         "78": {
           "target_ayah": 76,
-          "status": "merged"
+          "status": "mapped"
         }
       }
     },
@@ -11648,7 +11679,7 @@
         },
         "62": {
           "target_ayah": 62,
-          "status": "mapped"
+          "status": "merged"
         },
         "63": {
           "target_ayah": 62,
@@ -11656,7 +11687,7 @@
         },
         "64": {
           "target_ayah": 62,
-          "status": "merged"
+          "status": "mapped"
         }
       }
     },
@@ -12888,7 +12919,11 @@
         },
         "227": {
           "target_ayah": 226,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            226,
+            227
+          ]
         }
       }
     },
@@ -13270,7 +13305,11 @@
         },
         "93": {
           "target_ayah": 94,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            94,
+            95
+          ]
         }
       }
     },
@@ -13632,7 +13671,13 @@
         },
         "88": {
           "target_ayah": 85,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            85,
+            86,
+            87,
+            88
+          ]
         }
       }
     },
@@ -14310,11 +14355,11 @@
         },
         "33": {
           "target_ayah": 33,
-          "status": "mapped"
+          "status": "merged"
         },
         "34": {
           "target_ayah": 33,
-          "status": "merged"
+          "status": "mapped"
         }
       }
     },
@@ -14440,7 +14485,11 @@
         },
         "30": {
           "target_ayah": 29,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            29,
+            30
+          ]
         }
       }
     },
@@ -15154,11 +15203,11 @@
         },
         "44": {
           "target_ayah": 45,
-          "status": "mapped"
+          "status": "merged"
         },
         "45": {
           "target_ayah": 45,
-          "status": "merged"
+          "status": "mapped"
         }
       }
     },
@@ -16230,7 +16279,11 @@
         },
         "182": {
           "target_ayah": 181,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            181,
+            182
+          ]
         }
       }
     },
@@ -16580,7 +16633,7 @@
         },
         "86": {
           "target_ayah": 86,
-          "status": "mapped"
+          "status": "merged"
         },
         "87": {
           "target_ayah": 86,
@@ -16588,7 +16641,7 @@
         },
         "88": {
           "target_ayah": 86,
-          "status": "merged"
+          "status": "mapped"
         }
       }
     },
@@ -17248,7 +17301,12 @@
         },
         "85": {
           "target_ayah": 82,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            82,
+            83,
+            84
+          ]
         }
       }
     },
@@ -17470,7 +17528,11 @@
         },
         "54": {
           "target_ayah": 52,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            52,
+            53
+          ]
         }
       }
     },
@@ -17684,11 +17746,11 @@
         },
         "52": {
           "target_ayah": 50,
-          "status": "mapped"
+          "status": "merged"
         },
         "53": {
           "target_ayah": 50,
-          "status": "merged"
+          "status": "mapped"
         }
       }
     },
@@ -18292,11 +18354,11 @@
         },
         "58": {
           "target_ayah": 56,
-          "status": "mapped"
+          "status": "merged"
         },
         "59": {
           "target_ayah": 56,
-          "status": "merged"
+          "status": "mapped"
         }
       }
     },
@@ -18758,11 +18820,11 @@
         },
         "37": {
           "target_ayah": 39,
-          "status": "mapped"
+          "status": "merged"
         },
         "38": {
           "target_ayah": 39,
-          "status": "merged"
+          "status": "mapped"
         }
       }
     },
@@ -19592,11 +19654,11 @@
         },
         "48": {
           "target_ayah": 47,
-          "status": "mapped"
+          "status": "merged"
         },
         "49": {
           "target_ayah": 47,
-          "status": "merged"
+          "status": "mapped"
         }
       }
     },
@@ -20394,7 +20456,11 @@
         },
         "78": {
           "target_ayah": 76,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            76,
+            77
+          ]
         }
       }
     },
@@ -20800,7 +20866,12 @@
         },
         "96": {
           "target_ayah": 97,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            97,
+            98,
+            99
+          ]
         }
       }
     },
@@ -20922,11 +20993,11 @@
         },
         "28": {
           "target_ayah": 28,
-          "status": "mapped"
+          "status": "merged"
         },
         "29": {
           "target_ayah": 28,
-          "status": "merged"
+          "status": "mapped"
         }
       }
     },
@@ -21474,7 +21545,11 @@
         },
         "12": {
           "target_ayah": 11,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            11,
+            12
+          ]
         }
       }
     },
@@ -22082,7 +22157,11 @@
         },
         "52": {
           "target_ayah": 51,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            51,
+            52
+          ]
         }
       }
     },
@@ -22390,7 +22469,11 @@
         },
         "28": {
           "target_ayah": 29,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            29,
+            30
+          ]
         }
       }
     },
@@ -22594,7 +22677,11 @@
         },
         "20": {
           "target_ayah": 19,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            19,
+            20
+          ]
         }
       }
     },
@@ -23856,7 +23943,11 @@
         },
         "42": {
           "target_ayah": 41,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            41,
+            42
+          ]
         }
       }
     },
@@ -24316,7 +24407,12 @@
         },
         "25": {
           "target_ayah": 23,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            23,
+            24,
+            25
+          ]
         }
       }
     },
@@ -24480,11 +24576,11 @@
         },
         "16": {
           "target_ayah": 16,
-          "status": "mapped"
+          "status": "merged"
         },
         "17": {
           "target_ayah": 16,
-          "status": "merged"
+          "status": "mapped"
         }
       }
     },
@@ -24798,11 +24894,17 @@
         },
         "29": {
           "target_ayah": 29,
-          "status": "mapped"
+          "status": "merged"
         },
         "30": {
           "target_ayah": 29,
-          "status": "merged"
+          "status": "split",
+          "splits_into": [
+            29,
+            30,
+            31,
+            32
+          ]
         }
       }
     },
@@ -24954,7 +25056,11 @@
         },
         "15": {
           "target_ayah": 15,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            15,
+            16
+          ]
         }
       }
     },
@@ -25252,7 +25358,11 @@
         },
         "19": {
           "target_ayah": 19,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            19,
+            20
+          ]
         }
       }
     },
@@ -25316,11 +25426,11 @@
         },
         "7": {
           "target_ayah": 8,
-          "status": "mapped"
+          "status": "merged"
         },
         "8": {
           "target_ayah": 8,
-          "status": "merged"
+          "status": "mapped"
         }
       }
     },
@@ -25358,11 +25468,11 @@
         },
         "7": {
           "target_ayah": 8,
-          "status": "mapped"
+          "status": "merged"
         },
         "8": {
           "target_ayah": 8,
-          "status": "merged"
+          "status": "mapped"
         }
       }
     },
@@ -25462,7 +25572,12 @@
         },
         "11": {
           "target_ayah": 8,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            8,
+            9,
+            10
+          ]
         }
       }
     },
@@ -25608,7 +25723,11 @@
         },
         "4": {
           "target_ayah": 4,
-          "status": "mapped"
+          "status": "split",
+          "splits_into": [
+            4,
+            5
+          ]
         }
       }
     },
@@ -25638,11 +25757,11 @@
         },
         "6": {
           "target_ayah": 6,
-          "status": "mapped"
+          "status": "merged"
         },
         "7": {
           "target_ayah": 6,
-          "status": "merged"
+          "status": "mapped"
         }
       }
     },
