@@ -117,9 +117,6 @@ button {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background:
-    linear-gradient(90deg, transparent 0, transparent 8%, color-mix(in oklch, var(--accent-soft) 42%, transparent) 18%, transparent 24%),
-    linear-gradient(180deg, color-mix(in oklch, var(--paper-soft) 35%, transparent), transparent 10rem);
 }
 
 .surface {
