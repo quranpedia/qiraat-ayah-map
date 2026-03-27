@@ -1,4 +1,5 @@
 import path from 'node:path'
+import { readFileSync, writeFileSync } from 'node:fs'
 
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 import tailwindcss from '@tailwindcss/vite'
@@ -17,8 +18,34 @@ function normalize_base(value) {
   return base.replace(/\/{2,}/g, '/')
 }
 
+function merge_assets_into_index_html(base) {
+  const index_path = path.resolve('dist', 'index.html')
+  let html = readFileSync(index_path, 'utf8')
+  const to_dist_path = asset_url => {
+    let file = asset_url.split(/[?#]/, 1)[0]
+    if (base !== '/' && file.startsWith(base)) file = file.slice(base.length)
+    return path.resolve('dist', file.replace(/^\.?\//, ''))
+  }
+
+  const css_match = html.match(/<link\b[^>]*rel=["']stylesheet["'][^>]*href=["']([^"']+)["'][^>]*>/)
+  if (css_match) {
+    const css = readFileSync(to_dist_path(css_match[1]), 'utf8')
+    html = html.replace(css_match[0], () => `<style>\n${css}\n</style>`)
+  }
+
+  const js_match = html.match(/<script\b[^>]*type=["']module["'][^>]*src=["']([^"']+)["'][^>]*>\s*<\/script>/)
+  if (js_match) {
+    const js = readFileSync(to_dist_path(js_match[1]), 'utf8').replace(/<\/script/gi, '<\\/script')
+    html = html.replace(js_match[0], () => `<script type="module">\n${js}\n</script>`)
+  }
+
+  writeFileSync(index_path, html)
+}
+
+const base = normalize_base(process.env.BASE_PATH)
+
 export default defineConfig({
-  base: normalize_base(process.env.BASE_PATH),
+  base,
   resolve: {
     alias: Object.fromEntries(
       Object.entries(tsconfig.compilerOptions.paths).map(([key, value]) => [
@@ -44,6 +71,13 @@ export default defineConfig({
           handler(warning)
         }
       }
-    })
+    }),
+    {
+      name: 'merge-assets-into-index-html',
+      apply: 'build',
+      writeBundle() {
+        merge_assets_into_index_html(base)
+      }
+    }
   ]
 })
