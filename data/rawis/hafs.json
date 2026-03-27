@@ -2,6 +2,7 @@
   "_rawi": "hafs",
   "_qiraa": "asim",
   "_counting_system": "kufi",
+  "_mushaf_id": 1,
   "_mapping_file": null,
-  "_note": "Hafs is the reference system (Kufan). No mapping needed — ayah numbers are identity."
+  "_note": "hafs uses the Kufan counting system, so ayah numbers are identical to Hafs."
 }
