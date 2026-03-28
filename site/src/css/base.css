@@ -375,6 +375,52 @@ button {
   gap: 1.25rem;
 }
 
+.surah_pager_grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.surah_pager_card {
+  display: block;
+  min-height: 100%;
+  padding: 1rem 1.1rem;
+  border-radius: 1.4rem;
+  border: 1px solid color-mix(in oklch, var(--line) 78%, white 22%);
+  background: color-mix(in oklch, var(--panel) 92%, white 8%);
+  box-shadow: 0 18px 48px -40px var(--shadow);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+a.surah_pager_card:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in oklch, var(--accent) 36%, var(--line) 64%);
+  background: color-mix(in oklch, var(--accent-soft) 20%, white 80%);
+}
+
+.surah_pager_card[data-disabled='true'] {
+  opacity: 0.7;
+}
+
+.surah_pager_status {
+  text-align: center;
+  background: color-mix(in oklch, var(--paper-soft) 82%, white 18%);
+}
+
+.surah_pager_grid > :last-child {
+  text-align: right;
+}
+
+@media (min-width: 72rem) {
+  .surah_pager_grid {
+    grid-template-columns: minmax(0, 1fr) minmax(17rem, 0.9fr) minmax(0, 1fr);
+    align-items: stretch;
+  }
+}
+
+
 @media (min-width: 68rem) {
   .split_layout {
     grid-template-columns: minmax(0, 1.65fr) minmax(18rem, 0.9fr);
@@ -501,11 +547,74 @@ button {
   font: inherit;
 }
 
+
+.mushaf_pair_summary {
+  border-radius: 1.2rem;
+  border: 1px solid color-mix(in oklch, var(--line) 76%, white 24%);
+  background: color-mix(in oklch, var(--paper-soft) 82%, white 18%);
+  padding: 1rem 1.05rem;
+}
+
+.mushaf_pair_range_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.mushaf_pair_range_chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  min-width: 2.4rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in oklch, var(--line) 76%, white 24%);
+  background: color-mix(in oklch, white 90%, var(--paper-soft) 10%);
+  color: var(--ink);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    outline-color 180ms ease;
+}
+
+.mushaf_pair_range_chip:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in oklch, var(--accent) 36%, var(--line) 64%);
+}
+
+.mushaf_pair_range_chip[data-tone='ok'] {
+  background: color-mix(in oklch, var(--ok) 12%, white 88%);
+  color: color-mix(in oklch, var(--ok) 74%, black 26%);
+}
+
+.mushaf_pair_range_chip[data-tone='warn'] {
+  background: color-mix(in oklch, var(--warn) 18%, white 82%);
+  color: color-mix(in oklch, var(--warn) 76%, black 24%);
+}
+
+.mushaf_pair_range_chip[data-tone='accent'] {
+  background: color-mix(in oklch, var(--accent-soft) 48%, white 52%);
+  color: var(--accent-strong);
+}
+
+.mushaf_pair_range_chip[data-active='true'] {
+  outline: 2px solid color-mix(in oklch, var(--accent) 26%, white 74%);
+  outline-offset: 2px;
+}
+
 .mushaf_control_grid {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
 }
+
 
 .mushaf_viewer_shell {
   border-radius: 1.5rem;
@@ -651,3 +760,4 @@ button {
   font-weight: 700;
   vertical-align: middle;
 }
+

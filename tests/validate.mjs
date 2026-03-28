@@ -7,6 +7,7 @@
 import { readFileSync, existsSync, readdirSync } from 'fs';
 import { join } from 'path';
 import { decodeBoundaryHash, getBoundaryTableRowId, getBoundaryViewerAyahId, getBoundaryViewerMarkerId } from '../site/src/lib/mushaf-viewer-dom.js';
+import { buildDifferingAyahSummary } from '../site/src/lib/mushaf-viewer.js';
 import { normalizeBookBoundaryEvidenceDocument, flattenBookBoundaryReviewRows, VERIFICATION_STATUS_ORDER } from '../scripts/lib/book-evidence-utils.mjs';
 import { buildBookBoundaryPrimitives, expandBookBoundaryPrimitivesToDifferences, getTraditionalSystemOrder, normalizeBookBoundaryPrimitivesDocument } from '../scripts/lib/book-primitives-utils.mjs';
 import {
@@ -524,6 +525,35 @@ assert(alBayanCrossReferenceMarkdown.includes('Frontier exceptions'), 'al-bayan-
 assert(siteData._generated_from.includes('dist/review/al-bayan-cross-reference.json'), 'site-data.json records al-bayan-cross-reference.json as an input');
 assert(JSON.stringify(siteData.source_frontiers.al_bayan.covered_surahs) === JSON.stringify(expectedAlBayanFrontierSurahs), 'site-data.json exposes the checked-in al-Bayan frontier coverage');
 assert(siteData.summary.primary_source_frontier.al_bayan.exact_rows_missing_primary_evidence === 0, 'site-data.json exposes the al-Bayan primary frontier completeness summary');
+
+section('Mushaf pair summaries');
+
+for (const surahData of siteData.surahs) {
+  const surahRows = siteData.rows.filter(row => row.surah === surahData.surah);
+
+  for (const leftSystemId of systemIds) {
+    for (const rightSystemId of systemIds) {
+      const summary = buildDifferingAyahSummary(surahRows, leftSystemId, rightSystemId);
+      const expectedPoints = surahRows.filter(row => (row.systems[leftSystemId]?.counts_boundary ?? false) !== (row.systems[rightSystemId]?.counts_boundary ?? false));
+      const expectedAyahs = [...new Set(expectedPoints.map(row => row.hafs_ayah))].sort((left, right) => left - right);
+      const expandedRanges = summary.ranges.flatMap(range => buildRange(range.start, range.end));
+      const expectedEndPoints = expectedPoints.filter(row => row.kind === 'end').length;
+      const expectedInternalPoints = expectedPoints.filter(row => row.kind === 'internal').length;
+
+      assert(summary.total_points === expectedPoints.length, `surah ${surahData.surah} ${leftSystemId}/${rightSystemId}: pair-summary point count matches boundary rows`);
+      assert(summary.total_ayahs === expectedAyahs.length, `surah ${surahData.surah} ${leftSystemId}/${rightSystemId}: pair-summary ayah count matches boundary rows`);
+      assert(JSON.stringify(summary.ayahs.map(entry => entry.ayah)) === JSON.stringify(expectedAyahs), `surah ${surahData.surah} ${leftSystemId}/${rightSystemId}: pair-summary ayah list matches boundary rows`);
+      assert(JSON.stringify(expandedRanges) === JSON.stringify(expectedAyahs), `surah ${surahData.surah} ${leftSystemId}/${rightSystemId}: pair-summary ranges expand back to the ayah list`);
+      assert(summary.by_kind.end === expectedEndPoints, `surah ${surahData.surah} ${leftSystemId}/${rightSystemId}: pair-summary end count matches boundary rows`);
+      assert(summary.by_kind.internal === expectedInternalPoints, `surah ${surahData.surah} ${leftSystemId}/${rightSystemId}: pair-summary internal count matches boundary rows`);
+      assert(summary.range_label === summary.range_labels.join(', '), `surah ${surahData.surah} ${leftSystemId}/${rightSystemId}: pair-summary range label joins the visible ranges`);
+
+      if (leftSystemId === rightSystemId) {
+        assert(summary.total_points === 0 && summary.total_ayahs === 0, `surah ${surahData.surah} ${leftSystemId}/${rightSystemId}: identical systems yield no pair differences`);
+      }
+    }
+  }
+}
 
 section('Mushaf viewer data');
 

@@ -1,4 +1,6 @@
 <script>
+import { ArrowLeftIcon, ArrowRightIcon, LibraryBigIcon } from '@lucide/svelte'
+
 import BoundaryDetail from '~/components/BoundaryDetail.svelte'
 import SurahMushafViewer from '~/components/SurahMushafViewer.svelte'
 import PlotSurahBoundaryMap from '~/components/charts/PlotSurahBoundaryMap.svelte'
@@ -8,8 +10,10 @@ import {
   get_surah_rows,
   get_system_name,
   get_verification_tone,
+  surahs as surah_catalog,
   systems
 } from '$lib/dataset.svelte.js'
+import { app_href } from '$lib/nav.js'
 import { decodeBoundaryHash, getBoundaryTableRowId } from '$lib/mushaf-viewer-dom.js'
 import { loadSurahViewer } from '$lib/mushaf-viewer.js'
 
@@ -30,7 +34,10 @@ let selection_request = $state(
       }
     : null
 )
+let last_routed_surah = $state(null)
 let active_row = $derived(surah_rows.find(row => row.anchor_key === selected_key) || surah_rows[0] || null)
+let previous_surah = $derived(surah_info ? get_surah(surah_info.surah - 1) : null)
+let next_surah = $derived(surah_info ? get_surah(surah_info.surah + 1) : null)
 
 function setSelectedKey(anchorKey, source = 'table') {
   if (!anchorKey) {
@@ -44,6 +51,28 @@ function setSelectedKey(anchorKey, source = 'table') {
     nonce: (selection_request?.nonce || 0) + 1
   }
 }
+
+$effect(() => {
+  const currentSurahNumber = surah_info?.surah || null
+
+  if (!currentSurahNumber || currentSurahNumber === last_routed_surah) {
+    return
+  }
+
+  last_routed_surah = currentSurahNumber
+
+  const hashKey = decodeBoundaryHash(window.location.hash)
+  const nextAnchorKey = surah_rows.find(row => row.anchor_key === hashKey)?.anchor_key || surah_rows[0]?.anchor_key || null
+
+  selected_key = nextAnchorKey
+  selection_request = nextAnchorKey
+    ? {
+        anchorKey: nextAnchorKey,
+        source: 'route',
+        nonce: (selection_request?.nonce || 0) + 1
+      }
+    : null
+})
 
 $effect(() => {
   const row = active_row
@@ -61,12 +90,84 @@ $effect(() => {
 })
 </script>
 
+{#snippet surahPager(showMeta)}
+  <section aria-label="Surah navigation">
+    <div class="surah_pager_grid">
+      {#if previous_surah}
+        <a class="surah_pager_card" href={app_href('/surahs/' + previous_surah.surah)}>
+          <div class="metric_label flex items-center gap-2"><ArrowLeftIcon class="size-4" /> Previous surah</div>
+          <div class="mt-3 flex items-center gap-2 text-sm font-bold text-ink">
+            <ArrowLeftIcon class="size-4" />
+            <span>Surah {previous_surah.surah}</span>
+          </div>
+          <div class="mt-4 text-xl font-bold text-ink">{previous_surah.name_en}</div>
+          <p class="arabic_title mt-2 text-lg text-ink-soft">{previous_surah.name_ar}</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="badge" data-tone={previous_surah.disputed_points === 0 ? 'ok' : 'accent'}>
+              {previous_surah.disputed_points} disputed points
+            </span>
+          </div>
+        </a>
+      {:else}
+        <div class="surah_pager_card" data-disabled="true">
+          <div class="metric_label flex items-center gap-2"><ArrowLeftIcon class="size-4" /> Previous surah</div>
+          <div class="mt-4 text-xl font-bold text-ink">Beginning of the mushaf</div>
+          <p class="section_text mt-3 text-sm">This is the first surah in the sequence.</p>
+        </div>
+      {/if}
+
+      <div class="surah_pager_card surah_pager_status">
+        {#if showMeta}
+          <div class="metric_label">Surah navigation</div>
+          <div class="mt-4 text-2xl font-bold text-ink">Surah {surah_info.surah} of {surah_catalog.length}</div>
+          <div class="mt-3 text-lg font-bold text-ink">{surah_info.name_en}</div>
+          <p class="arabic_title mt-2 text-xl text-ink-soft">{surah_info.name_ar}</p>
+          <p class="mt-3 text-sm text-ink-soft">{surah_info.disputed_points} disputed points in this surah</p>
+        {:else}
+          <div class="metric_label">Continue browsing</div>
+          <div class="mt-4 text-lg font-bold text-ink">Move to the next or previous surah, or return to the full index.</div>
+        {/if}
+        <div class="mt-5">
+          <a class="pill_button" href={app_href('/surahs')}><LibraryBigIcon class="size-4" /> All surahs</a>
+        </div>
+      </div>
+
+      {#if next_surah}
+        <a class="surah_pager_card" href={app_href('/surahs/' + next_surah.surah)}>
+          <div class="metric_label flex items-center justify-end gap-2">Next surah <ArrowRightIcon class="size-4" /></div>
+          <div class="mt-3 flex items-center justify-end gap-2 text-sm font-bold text-ink">
+            <span>Surah {next_surah.surah}</span>
+            <ArrowRightIcon class="size-4" />
+          </div>
+          <div class="mt-4 text-xl font-bold text-ink">{next_surah.name_en}</div>
+          <p class="arabic_title mt-2 text-lg text-ink-soft">{next_surah.name_ar}</p>
+          <div class="mt-4 flex flex-wrap justify-end gap-2">
+            <span class="badge" data-tone={next_surah.disputed_points === 0 ? 'ok' : 'accent'}>
+              {next_surah.disputed_points} disputed points
+            </span>
+          </div>
+        </a>
+      {:else}
+        <div class="surah_pager_card" data-disabled="true">
+          <div class="metric_label flex items-center justify-end gap-2">Next surah <ArrowRightIcon class="size-4" /></div>
+          <div class="mt-4 text-xl font-bold text-ink">End of the mushaf</div>
+          <p class="section_text mt-3 text-sm">This is the final surah in the sequence.</p>
+        </div>
+      {/if}
+    </div>
+  </section>
+{/snippet}
+
 {#if !surah_info}
   <section class="surface p-6">
     <div class="rule_label">Surah not found</div>
     <h1 class="section_title mt-4">No surah matches “{surah}”.</h1>
   </section>
 {:else}
+  <div class="mb-6">
+    {@render surahPager(true)}
+  </div>
+
   <section class="grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(16rem,0.9fr)] lg:items-start">
     <div>
       <div class="rule_label">Surah profile</div>
@@ -180,4 +281,8 @@ $effect(() => {
       <div class="surface p-5 text-sm text-ink-soft">The mushaf viewer data could not be loaded for this surah.</div>
     {/await}
   </section>
+
+  <div class="mt-12">
+    {@render surahPager(false)}
+  </div>
 {/if}

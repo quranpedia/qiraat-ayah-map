@@ -36,6 +36,9 @@ function getShortLabel(systemId) {
   return SYSTEM_SHORT_LABELS[systemId] || systemId
 }
 
+function getBoundaryAyahNumber(row) {
+  return viewer?.boundary_positions?.[row.anchor_key]?.ayah || row.hafs_ayah
+}
 
 function getSelectedRow() {
   return selectedKey ? rows.find(row => row.anchor_key === selectedKey) || null : null
@@ -182,12 +185,118 @@ let selectedMarkerState = $derived(selectedKey ? markerStatesByKey.get(selectedK
 let selectedAyah = $derived(selectedKey && viewer ? viewer.boundary_positions[selectedKey]?.ayah || null : null)
 let selectedMarkerHidden = $derived(Boolean(selectedKey && selectedMarkerState && !selectedMarkerState.visible))
 
+function getPairAyahTone(entry) {
+  if (entry.endCount > 0 && entry.internalCount > 0) {
+    return 'warn'
+  }
+
+  if (entry.internalCount > 0) {
+    return 'accent'
+  }
+
+  return 'ok'
+}
+
+function buildPairAyahTitle(entry) {
+  const kindLabel = entry.endCount > 0 && entry.internalCount > 0
+    ? 'end and internal differences'
+    : entry.internalCount > 0
+      ? 'internal differences'
+      : 'ayah-end differences'
+  const pointLabel = entry.pointCount === 1 ? '1 differing boundary point' : `${entry.pointCount} differing boundary points`
+
+  return `Ayah ${entry.ayah}: ${kindLabel}; ${pointLabel} for this pair.`
+}
+
+function scrollAyahIntoView(ayahNumber) {
+  if (!ayahNumber) {
+    return
+  }
+
+  const ayahElement = document.getElementById(getBoundaryViewerAyahId(ayahNumber))
+
+  ayahElement?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center',
+    inline: 'nearest'
+  })
+}
+
+let pairDifferenceSummary = $derived.by(() => {
+  const ayahMap = new Map()
+  const summary = {
+    pointCount: 0,
+    ayahCount: 0,
+    endAyahCount: 0,
+    internalAyahCount: 0,
+    ayahs: []
+  }
+
+  for (const row of rows) {
+    const leftCounts = row.systems[leftSystemId]?.counts_boundary ?? false
+    const rightCounts = row.systems[rightSystemId]?.counts_boundary ?? false
+
+    if (leftCounts === rightCounts) {
+      continue
+    }
+
+    const ayahNumber = getBoundaryAyahNumber(row)
+    const entry = ayahMap.get(ayahNumber) || {
+      ayah: ayahNumber,
+      anchorKey: row.anchor_key,
+      pointCount: 0,
+      endCount: 0,
+      internalCount: 0
+    }
+
+    entry.pointCount += 1
+    entry[row.kind === 'end' ? 'endCount' : 'internalCount'] += 1
+    ayahMap.set(ayahNumber, entry)
+    summary.pointCount += 1
+  }
+
+  summary.ayahs = [...ayahMap.values()]
+    .sort((left, right) => left.ayah - right.ayah)
+    .map(entry => ({
+      ...entry,
+      tone: getPairAyahTone(entry),
+      title: buildPairAyahTitle(entry)
+    }))
+  summary.ayahCount = summary.ayahs.length
+  summary.endAyahCount = summary.ayahs.filter(entry => entry.endCount > 0).length
+  summary.internalAyahCount = summary.ayahs.filter(entry => entry.internalCount > 0).length
+
+  return summary
+})
+
+function focusPairAyah(entry) {
+  if (!entry) {
+    return
+  }
+
+  const anchorKey = entry.anchorKey || null
+  const needsReveal = !focusAyahNumbers.has(entry.ayah) || (anchorKey && !markerStatesByKey.get(anchorKey)?.visible)
+
+  if (needsReveal) {
+    boundaryKind = 'all'
+    ayahScope = 'context'
+  }
+
+  if (anchorKey) {
+    onselect?.(anchorKey)
+  }
+
+  tick().then(() => {
+    scrollAyahIntoView(entry.ayah)
+  })
+}
+
 let visibleAyahNumbers = $derived.by(() => {
   const ayahs = new Set()
 
   for (const row of rows) {
     if (markerStatesByKey.get(row.anchor_key)?.visible) {
-      ayahs.add(row.hafs_ayah)
+      ayahs.add(getBoundaryAyahNumber(row))
     }
   }
 
@@ -233,7 +342,7 @@ let focusAyahNumbers = $derived.by(() => {
     return included
   }
 
-  if (ayahScope === 'full') {
+  if (rows.length === 0 || ayahScope === 'full') {
     for (let ayah = 1; ayah <= viewer.kufi_ayah_count; ayah += 1) {
       included.add(ayah)
     }
@@ -387,6 +496,56 @@ let displayBasmala = $derived.by(() => {
           <span class="badge" data-tone="ok">both: {comparisonSummary.both}</span>
         {/if}
       </div>
+    </div>
+
+    <div class="mushaf_pair_summary mt-6">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <div class="metric_label">Current pair summary</div>
+          {#if leftSystemId === rightSystemId}
+            <p class="mt-3 text-sm text-ink-soft">
+              Both selectors are on {leftSystem?.name_en || leftSystemId}, so there are no pair differences to list in this surah.
+            </p>
+          {:else if pairDifferenceSummary.ayahCount === 0}
+            <p class="mt-3 text-sm text-ink-soft">
+              {leftSystem?.name_en || leftSystemId} and {rightSystem?.name_en || rightSystemId} do not differ at any recorded boundary in this surah.
+            </p>
+          {:else}
+            <p class="mt-3 text-sm text-ink-soft">
+              {leftSystem?.name_en || leftSystemId} and {rightSystem?.name_en || rightSystemId}
+              differ at {pairDifferenceSummary.pointCount} recorded boundary {pairDifferenceSummary.pointCount === 1 ? 'point' : 'points'}
+              across {pairDifferenceSummary.ayahCount} {pairDifferenceSummary.ayahCount === 1 ? 'ayah' : 'ayahs'} in this surah.
+            </p>
+          {/if}
+        </div>
+
+        <div class="flex flex-wrap gap-2 text-xs text-ink-soft">
+          <span class="badge" data-tone="accent">{pairDifferenceSummary.ayahCount} differing {pairDifferenceSummary.ayahCount === 1 ? 'ayah' : 'ayahs'}</span>
+          <span class="badge" data-tone="ok">{pairDifferenceSummary.endAyahCount} with end differences</span>
+          <span class="badge" data-tone="warn">{pairDifferenceSummary.internalAyahCount} with internal differences</span>
+        </div>
+      </div>
+
+      {#if pairDifferenceSummary.ayahs.length > 0}
+        <div class="mt-4 text-[0.72rem] font-bold tracking-[0.16em] text-ink-soft uppercase">Differing ayahs</div>
+        <div class="mushaf_pair_range_list mt-3">
+          {#each pairDifferenceSummary.ayahs as entry (entry.ayah)}
+            <button
+              type="button"
+              class="mushaf_pair_range_chip"
+              data-tone={entry.tone}
+              data-active={entry.ayah === selectedAyah ? 'true' : 'false'}
+              title={entry.title}
+              onclick={() => focusPairAyah(entry)}
+            >
+              {entry.ayah}
+            </button>
+          {/each}
+        </div>
+        <p class="mt-3 text-xs text-ink-soft">
+          Click an ayah number to jump there. End-only ayahs use the end tone, internal-only ayahs use the internal tone, and ayahs with both kinds use the mixed tone.
+        </p>
+      {/if}
     </div>
 
     <div class="mushaf_control_grid mt-6">

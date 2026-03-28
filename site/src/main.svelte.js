@@ -12,6 +12,7 @@ import * as NotFound from '~/routes/NotFound.svelte'
 import * as Project from '~/routes/Project.svelte'
 import * as ProjectArabic from '~/routes/ProjectArabic.svelte'
 import * as Surah from '~/routes/Surah.svelte'
+import * as Surahs from '~/routes/Surahs.svelte'
 import * as System from '~/routes/System.svelte'
 
 import App from './App.svelte'
@@ -24,6 +25,7 @@ const routes = [
   ['/project/ar', ProjectArabic],
   ['/project', Project],
   ['/systems/:system', System],
+  ['/surahs', Surahs],
   ['/surahs/:surah', Surah],
   [/^.*$/, NotFound]
 ]
