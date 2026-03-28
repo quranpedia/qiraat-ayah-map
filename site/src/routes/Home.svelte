@@ -32,6 +32,7 @@ let selected_profile = $derived(get_system_profile(selected_system_id))
         <ArrowRightIcon class="size-4" />
       </a>
       <a class="pill_button" href={app_href('/project')}>Read the project guide</a>
+      <a class="pill_button" href={app_href('/project/ar')}>المدخل العربي</a>
       <a class="pill_button" href={app_href('/developer')}>Developer usage</a>
     </div>
 

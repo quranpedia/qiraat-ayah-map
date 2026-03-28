@@ -39,6 +39,7 @@ The site payload intentionally carries a few UI-facing derivatives so the SPA do
 - `/developer` practical integration guide for app builders
 - `/explorer` filterable disputed-point explorer
 - `/project` plain-language project guide
+- `/project/ar` Arabic companion guide for scholar-facing outreach
 - `/systems/:system` system profile and ranked fingerprint
 - `/surahs/:surah` surah matrix, table, and detail drill-down
 

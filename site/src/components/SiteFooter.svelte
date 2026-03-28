@@ -14,6 +14,7 @@ import { app_href } from '$lib/nav.js'
 
       <div class="flex flex-wrap gap-2">
         <a class="stat_chip" href={app_href('/project')}>Project guide</a>
+        <a class="stat_chip" href={app_href('/project/ar')}>المدخل العربي</a>
         <a class="stat_chip" href={app_href('/developer')}>Developer usage</a>
       </div>
     </div>

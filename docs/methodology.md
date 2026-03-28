@@ -1,4 +1,4 @@
-> New here? Read [`project-introduction.md`](project-introduction.md) first. This file describes the technical model after that broader introduction.
+> New here? Read [`project-introduction.md`](project-introduction.md) first, or [`project-introduction.ar.md`](project-introduction.ar.md) for the Arabic companion. This file describes the technical model after that broader introduction.
 
 # Methodology
 

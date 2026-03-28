@@ -7,6 +7,7 @@
 New here? Start with:
 
 - [What this project does](docs/project-introduction.md)
+- [ما الذي يفعله هذا المشروع؟](docs/project-introduction.ar.md)
 - [Developer usage](docs/developer-usage.md)
 
 ---

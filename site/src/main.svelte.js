@@ -10,6 +10,7 @@ import * as Explorer from '~/routes/Explorer.svelte'
 import * as Home from '~/routes/Home.svelte'
 import * as NotFound from '~/routes/NotFound.svelte'
 import * as Project from '~/routes/Project.svelte'
+import * as ProjectArabic from '~/routes/ProjectArabic.svelte'
 import * as Surah from '~/routes/Surah.svelte'
 import * as System from '~/routes/System.svelte'
 
@@ -20,6 +21,7 @@ const routes = [
   ['/compare', Compare],
   ['/developer', Developer],
   ['/explorer', Explorer],
+  ['/project/ar', ProjectArabic],
   ['/project', Project],
   ['/systems/:system', System],
   ['/surahs/:surah', Surah],

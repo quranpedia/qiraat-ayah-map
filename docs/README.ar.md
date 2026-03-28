@@ -6,6 +6,8 @@
 
 [Read this document in English](../README.md)
 
+للمدخل غير التقني المفصل ابدأ من: [`project-introduction.ar.md`](project-introduction.ar.md)
+
 ---
 
 ## تمهيد

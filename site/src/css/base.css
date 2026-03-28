@@ -388,6 +388,60 @@ button {
 }
 
 
+
+.arabic_doc {
+  direction: rtl;
+}
+
+.arabic_doc .display_title,
+.arabic_doc .section_title {
+  font-family: var(--font-arabic);
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+.arabic_doc .section_text,
+.arabic_doc .doc_list {
+  max-width: none;
+  font-family: var(--font-arabic);
+}
+
+.arabic_doc .doc_list {
+  padding-right: 1.2rem;
+  padding-left: 0;
+}
+
+.arabic_kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-arabic);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.arabic_kicker::after {
+  content: '';
+  width: 3.1rem;
+  height: 1px;
+  background: linear-gradient(270deg, var(--accent-strong), transparent);
+}
+
+.arabic_stat_label {
+  font-family: var(--font-arabic);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.arabic_metric_value {
+  font-family: var(--font-arabic);
+  font-size: clamp(2rem, 2vw + 1.2rem, 3.1rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
 .doc_grid {
   display: grid;
   gap: 1rem;

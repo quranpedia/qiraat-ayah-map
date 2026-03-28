@@ -24,6 +24,7 @@ import { app_href } from '$lib/nav.js'
         Explore disputed points
         <ArrowRightIcon class="size-4" />
       </a>
+      <a class="pill_button" href={app_href('/project/ar')}>المدخل العربي</a>
       <a class="pill_button" href={app_href('/developer')}>Developer usage</a>
     </div>
   </div>
@@ -180,14 +181,17 @@ import { app_href } from '$lib/nav.js'
   <div class="rule_label">Next useful read</div>
   <div class="mt-4 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
     <div>
-      <h2 class="section_title">If you are building software, go straight to the developer page.</h2>
+      <h2 class="section_title">If you are introducing the project to Quranic-science experts, open the Arabic companion first.</h2>
       <p class="section_text mt-3 text-sm">
-        It shows the smallest practical way to use the generated maps for Hafs-to-target conversion, target-to-Hafs normalization, rawi lookup, and surah counts.
+        The English guide explains the structure. The Arabic companion slows down the introduction, frames the problem in the vocabulary of Qurʾanic sciences, and is a better first handoff for scholar outreach.
       </p>
     </div>
-    <a class="pill_button" data-tone="accent" href={app_href('/developer')}>
-      Open developer usage
-      <ArrowRightIcon class="size-4" />
-    </a>
+    <div class="flex flex-wrap gap-3">
+      <a class="pill_button" data-tone="accent" href={app_href('/project/ar')}>
+        Arabic companion
+        <ArrowRightIcon class="size-4" />
+      </a>
+      <a class="pill_button" href={app_href('/developer')}>Developer usage</a>
+    </div>
   </div>
 </section>

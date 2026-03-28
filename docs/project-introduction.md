@@ -2,6 +2,8 @@
 
 This document is the plain-language entry point for the repository.
 
+Arabic companion: [`project-introduction.ar.md`](project-introduction.ar.md).
+
 It is written for readers who already know the Qurʾānic sciences, especially `ʿadad al-āy`, but who do not want to start by reading generator scripts or JSON schemas.
 
 ## The problem
