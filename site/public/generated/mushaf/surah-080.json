@@ -1,0 +1,722 @@
+{
+  "_version": "0.1.0",
+  "surah": 80,
+  "kufi_ayah_count": 42,
+  "ayahs": [
+    {
+      "ayah": 1,
+      "plain_text": "عبس وتولى",
+      "plain_tokens": [
+        "عبس",
+        "وتولى"
+      ],
+      "uthmani_text": "عَبَسَ وَتَوَلَّىٰۤ",
+      "uthmani_tokens": [
+        "عَبَسَ",
+        "وَتَوَلَّىٰۤ"
+      ],
+      "uthmani_prefix": "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ"
+    },
+    {
+      "ayah": 2,
+      "plain_text": "أن جاءه الأعمى",
+      "plain_tokens": [
+        "أن",
+        "جاءه",
+        "الأعمى"
+      ],
+      "uthmani_text": "أَن جَاۤءَهُ ٱلۡأَعۡمَىٰ",
+      "uthmani_tokens": [
+        "أَن",
+        "جَاۤءَهُ",
+        "ٱلۡأَعۡمَىٰ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 3,
+      "plain_text": "وما يدريك لعله يزكى",
+      "plain_tokens": [
+        "وما",
+        "يدريك",
+        "لعله",
+        "يزكى"
+      ],
+      "uthmani_text": "وَمَا یُدۡرِیكَ لَعَلَّهُۥ یَزَّكَّىٰۤ",
+      "uthmani_tokens": [
+        "وَمَا",
+        "یُدۡرِیكَ",
+        "لَعَلَّهُۥ",
+        "یَزَّكَّىٰۤ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 4,
+      "plain_text": "أو يذكر فتنفعه الذكرى",
+      "plain_tokens": [
+        "أو",
+        "يذكر",
+        "فتنفعه",
+        "الذكرى"
+      ],
+      "uthmani_text": "أَوۡ یَذَّكَّرُ فَتَنفَعَهُ ٱلذِّكۡرَىٰۤ",
+      "uthmani_tokens": [
+        "أَوۡ",
+        "یَذَّكَّرُ",
+        "فَتَنفَعَهُ",
+        "ٱلذِّكۡرَىٰۤ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 5,
+      "plain_text": "أما من استغنى",
+      "plain_tokens": [
+        "أما",
+        "من",
+        "استغنى"
+      ],
+      "uthmani_text": "أَمَّا مَنِ ٱسۡتَغۡنَىٰ",
+      "uthmani_tokens": [
+        "أَمَّا",
+        "مَنِ",
+        "ٱسۡتَغۡنَىٰ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 6,
+      "plain_text": "فأنت له تصدى",
+      "plain_tokens": [
+        "فأنت",
+        "له",
+        "تصدى"
+      ],
+      "uthmani_text": "فَأَنتَ لَهُۥ تَصَدَّىٰ",
+      "uthmani_tokens": [
+        "فَأَنتَ",
+        "لَهُۥ",
+        "تَصَدَّىٰ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 7,
+      "plain_text": "وما عليك ألا يزكى",
+      "plain_tokens": [
+        "وما",
+        "عليك",
+        "ألا",
+        "يزكى"
+      ],
+      "uthmani_text": "وَمَا عَلَیۡكَ أَلَّا یَزَّكَّىٰ",
+      "uthmani_tokens": [
+        "وَمَا",
+        "عَلَیۡكَ",
+        "أَلَّا",
+        "یَزَّكَّىٰ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 8,
+      "plain_text": "وأما من جاءك يسعى",
+      "plain_tokens": [
+        "وأما",
+        "من",
+        "جاءك",
+        "يسعى"
+      ],
+      "uthmani_text": "وَأَمَّا مَن جَاۤءَكَ یَسۡعَىٰ",
+      "uthmani_tokens": [
+        "وَأَمَّا",
+        "مَن",
+        "جَاۤءَكَ",
+        "یَسۡعَىٰ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 9,
+      "plain_text": "وهو يخشى",
+      "plain_tokens": [
+        "وهو",
+        "يخشى"
+      ],
+      "uthmani_text": "وَهُوَ یَخۡشَىٰ",
+      "uthmani_tokens": [
+        "وَهُوَ",
+        "یَخۡشَىٰ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 10,
+      "plain_text": "فأنت عنه تلهى",
+      "plain_tokens": [
+        "فأنت",
+        "عنه",
+        "تلهى"
+      ],
+      "uthmani_text": "فَأَنتَ عَنۡهُ تَلَهَّىٰ",
+      "uthmani_tokens": [
+        "فَأَنتَ",
+        "عَنۡهُ",
+        "تَلَهَّىٰ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 11,
+      "plain_text": "كلا إنها تذكرة",
+      "plain_tokens": [
+        "كلا",
+        "إنها",
+        "تذكرة"
+      ],
+      "uthmani_text": "كَلَّاۤ إِنَّهَا تَذۡكِرَةࣱ",
+      "uthmani_tokens": [
+        "كَلَّاۤ",
+        "إِنَّهَا",
+        "تَذۡكِرَةࣱ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 12,
+      "plain_text": "فمن شاء ذكره",
+      "plain_tokens": [
+        "فمن",
+        "شاء",
+        "ذكره"
+      ],
+      "uthmani_text": "فَمَن شَاۤءَ ذَكَرَهُۥ",
+      "uthmani_tokens": [
+        "فَمَن",
+        "شَاۤءَ",
+        "ذَكَرَهُۥ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 13,
+      "plain_text": "في صحف مكرمة",
+      "plain_tokens": [
+        "في",
+        "صحف",
+        "مكرمة"
+      ],
+      "uthmani_text": "فِی صُحُفࣲ مُّكَرَّمَةࣲ",
+      "uthmani_tokens": [
+        "فِی",
+        "صُحُفࣲ",
+        "مُّكَرَّمَةࣲ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 14,
+      "plain_text": "مرفوعة مطهرة",
+      "plain_tokens": [
+        "مرفوعة",
+        "مطهرة"
+      ],
+      "uthmani_text": "مَّرۡفُوعَةࣲ مُّطَهَّرَةِۭ",
+      "uthmani_tokens": [
+        "مَّرۡفُوعَةࣲ",
+        "مُّطَهَّرَةِۭ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 15,
+      "plain_text": "بأيدي سفرة",
+      "plain_tokens": [
+        "بأيدي",
+        "سفرة"
+      ],
+      "uthmani_text": "بِأَیۡدِی سَفَرَةࣲ",
+      "uthmani_tokens": [
+        "بِأَیۡدِی",
+        "سَفَرَةࣲ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 16,
+      "plain_text": "كرام بررة",
+      "plain_tokens": [
+        "كرام",
+        "بررة"
+      ],
+      "uthmani_text": "كِرَامِۭ بَرَرَةࣲ",
+      "uthmani_tokens": [
+        "كِرَامِۭ",
+        "بَرَرَةࣲ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 17,
+      "plain_text": "قتل الإنسان ما أكفره",
+      "plain_tokens": [
+        "قتل",
+        "الإنسان",
+        "ما",
+        "أكفره"
+      ],
+      "uthmani_text": "قُتِلَ ٱلۡإِنسَـٰنُ مَاۤ أَكۡفَرَهُۥ",
+      "uthmani_tokens": [
+        "قُتِلَ",
+        "ٱلۡإِنسَـٰنُ",
+        "مَاۤ",
+        "أَكۡفَرَهُۥ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 18,
+      "plain_text": "من أي شيء خلقه",
+      "plain_tokens": [
+        "من",
+        "أي",
+        "شيء",
+        "خلقه"
+      ],
+      "uthmani_text": "مِنۡ أَیِّ شَیۡءٍ خَلَقَهُۥ",
+      "uthmani_tokens": [
+        "مِنۡ",
+        "أَیِّ",
+        "شَیۡءٍ",
+        "خَلَقَهُۥ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 19,
+      "plain_text": "من نطفة خلقه فقدره",
+      "plain_tokens": [
+        "من",
+        "نطفة",
+        "خلقه",
+        "فقدره"
+      ],
+      "uthmani_text": "مِن نُّطۡفَةٍ خَلَقَهُۥ فَقَدَّرَهُۥ",
+      "uthmani_tokens": [
+        "مِن",
+        "نُّطۡفَةٍ",
+        "خَلَقَهُۥ",
+        "فَقَدَّرَهُۥ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 20,
+      "plain_text": "ثم السبيل يسره",
+      "plain_tokens": [
+        "ثم",
+        "السبيل",
+        "يسره"
+      ],
+      "uthmani_text": "ثُمَّ ٱلسَّبِیلَ یَسَّرَهُۥ",
+      "uthmani_tokens": [
+        "ثُمَّ",
+        "ٱلسَّبِیلَ",
+        "یَسَّرَهُۥ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 21,
+      "plain_text": "ثم أماته فأقبره",
+      "plain_tokens": [
+        "ثم",
+        "أماته",
+        "فأقبره"
+      ],
+      "uthmani_text": "ثُمَّ أَمَاتَهُۥ فَأَقۡبَرَهُۥ",
+      "uthmani_tokens": [
+        "ثُمَّ",
+        "أَمَاتَهُۥ",
+        "فَأَقۡبَرَهُۥ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 22,
+      "plain_text": "ثم إذا شاء أنشره",
+      "plain_tokens": [
+        "ثم",
+        "إذا",
+        "شاء",
+        "أنشره"
+      ],
+      "uthmani_text": "ثُمَّ إِذَا شَاۤءَ أَنشَرَهُۥ",
+      "uthmani_tokens": [
+        "ثُمَّ",
+        "إِذَا",
+        "شَاۤءَ",
+        "أَنشَرَهُۥ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 23,
+      "plain_text": "كلا لما يقض ما أمره",
+      "plain_tokens": [
+        "كلا",
+        "لما",
+        "يقض",
+        "ما",
+        "أمره"
+      ],
+      "uthmani_text": "كَلَّا لَمَّا یَقۡضِ مَاۤ أَمَرَهُۥ",
+      "uthmani_tokens": [
+        "كَلَّا",
+        "لَمَّا",
+        "یَقۡضِ",
+        "مَاۤ",
+        "أَمَرَهُۥ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 24,
+      "plain_text": "فلينظر الإنسان إلى طعامه",
+      "plain_tokens": [
+        "فلينظر",
+        "الإنسان",
+        "إلى",
+        "طعامه"
+      ],
+      "uthmani_text": "فَلۡیَنظُرِ ٱلۡإِنسَـٰنُ إِلَىٰ طَعَامِهِۦۤ",
+      "uthmani_tokens": [
+        "فَلۡیَنظُرِ",
+        "ٱلۡإِنسَـٰنُ",
+        "إِلَىٰ",
+        "طَعَامِهِۦۤ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 25,
+      "plain_text": "أنا صببنا الماء صبا",
+      "plain_tokens": [
+        "أنا",
+        "صببنا",
+        "الماء",
+        "صبا"
+      ],
+      "uthmani_text": "أَنَّا صَبَبۡنَا ٱلۡمَاۤءَ صَبࣰّا",
+      "uthmani_tokens": [
+        "أَنَّا",
+        "صَبَبۡنَا",
+        "ٱلۡمَاۤءَ",
+        "صَبࣰّا"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 26,
+      "plain_text": "ثم شققنا الأرض شقا",
+      "plain_tokens": [
+        "ثم",
+        "شققنا",
+        "الأرض",
+        "شقا"
+      ],
+      "uthmani_text": "ثُمَّ شَقَقۡنَا ٱلۡأَرۡضَ شَقࣰّا",
+      "uthmani_tokens": [
+        "ثُمَّ",
+        "شَقَقۡنَا",
+        "ٱلۡأَرۡضَ",
+        "شَقࣰّا"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 27,
+      "plain_text": "فأنبتنا فيها حبا",
+      "plain_tokens": [
+        "فأنبتنا",
+        "فيها",
+        "حبا"
+      ],
+      "uthmani_text": "فَأَنۢبَتۡنَا فِیهَا حَبࣰّا",
+      "uthmani_tokens": [
+        "فَأَنۢبَتۡنَا",
+        "فِیهَا",
+        "حَبࣰّا"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 28,
+      "plain_text": "وعنبا وقضبا",
+      "plain_tokens": [
+        "وعنبا",
+        "وقضبا"
+      ],
+      "uthmani_text": "وَعِنَبࣰا وَقَضۡبࣰا",
+      "uthmani_tokens": [
+        "وَعِنَبࣰا",
+        "وَقَضۡبࣰا"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 29,
+      "plain_text": "وزيتونا ونخلا",
+      "plain_tokens": [
+        "وزيتونا",
+        "ونخلا"
+      ],
+      "uthmani_text": "وَزَیۡتُونࣰا وَنَخۡلࣰا",
+      "uthmani_tokens": [
+        "وَزَیۡتُونࣰا",
+        "وَنَخۡلࣰا"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 30,
+      "plain_text": "وحدائق غلبا",
+      "plain_tokens": [
+        "وحدائق",
+        "غلبا"
+      ],
+      "uthmani_text": "وَحَدَاۤىِٕقَ غُلۡبࣰا",
+      "uthmani_tokens": [
+        "وَحَدَاۤىِٕقَ",
+        "غُلۡبࣰا"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 31,
+      "plain_text": "وفاكهة وأبا",
+      "plain_tokens": [
+        "وفاكهة",
+        "وأبا"
+      ],
+      "uthmani_text": "وَفَـٰكِهَةࣰ وَأَبࣰّا",
+      "uthmani_tokens": [
+        "وَفَـٰكِهَةࣰ",
+        "وَأَبࣰّا"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 32,
+      "plain_text": "متاعا لكم ولأنعامكم",
+      "plain_tokens": [
+        "متاعا",
+        "لكم",
+        "ولأنعامكم"
+      ],
+      "uthmani_text": "مَّتَـٰعࣰا لَّكُمۡ وَلِأَنۡعَـٰمِكُمۡ",
+      "uthmani_tokens": [
+        "مَّتَـٰعࣰا",
+        "لَّكُمۡ",
+        "وَلِأَنۡعَـٰمِكُمۡ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 33,
+      "plain_text": "فإذا جاءت الصاخة",
+      "plain_tokens": [
+        "فإذا",
+        "جاءت",
+        "الصاخة"
+      ],
+      "uthmani_text": "فَإِذَا جَاۤءَتِ ٱلصَّاۤخَّةُ",
+      "uthmani_tokens": [
+        "فَإِذَا",
+        "جَاۤءَتِ",
+        "ٱلصَّاۤخَّةُ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 34,
+      "plain_text": "يوم يفر المرء من أخيه",
+      "plain_tokens": [
+        "يوم",
+        "يفر",
+        "المرء",
+        "من",
+        "أخيه"
+      ],
+      "uthmani_text": "یَوۡمَ یَفِرُّ ٱلۡمَرۡءُ مِنۡ أَخِیهِ",
+      "uthmani_tokens": [
+        "یَوۡمَ",
+        "یَفِرُّ",
+        "ٱلۡمَرۡءُ",
+        "مِنۡ",
+        "أَخِیهِ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 35,
+      "plain_text": "وأمه وأبيه",
+      "plain_tokens": [
+        "وأمه",
+        "وأبيه"
+      ],
+      "uthmani_text": "وَأُمِّهِۦ وَأَبِیهِ",
+      "uthmani_tokens": [
+        "وَأُمِّهِۦ",
+        "وَأَبِیهِ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 36,
+      "plain_text": "وصاحبته وبنيه",
+      "plain_tokens": [
+        "وصاحبته",
+        "وبنيه"
+      ],
+      "uthmani_text": "وَصَـٰحِبَتِهِۦ وَبَنِیهِ",
+      "uthmani_tokens": [
+        "وَصَـٰحِبَتِهِۦ",
+        "وَبَنِیهِ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 37,
+      "plain_text": "لكل امرئ منهم يومئذ شأن يغنيه",
+      "plain_tokens": [
+        "لكل",
+        "امرئ",
+        "منهم",
+        "يومئذ",
+        "شأن",
+        "يغنيه"
+      ],
+      "uthmani_text": "لِكُلِّ ٱمۡرِئࣲ مِّنۡهُمۡ یَوۡمَىِٕذࣲ شَأۡنࣱ یُغۡنِیهِ",
+      "uthmani_tokens": [
+        "لِكُلِّ",
+        "ٱمۡرِئࣲ",
+        "مِّنۡهُمۡ",
+        "یَوۡمَىِٕذࣲ",
+        "شَأۡنࣱ",
+        "یُغۡنِیهِ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 38,
+      "plain_text": "وجوه يومئذ مسفرة",
+      "plain_tokens": [
+        "وجوه",
+        "يومئذ",
+        "مسفرة"
+      ],
+      "uthmani_text": "وُجُوهࣱ یَوۡمَىِٕذࣲ مُّسۡفِرَةࣱ",
+      "uthmani_tokens": [
+        "وُجُوهࣱ",
+        "یَوۡمَىِٕذࣲ",
+        "مُّسۡفِرَةࣱ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 39,
+      "plain_text": "ضاحكة مستبشرة",
+      "plain_tokens": [
+        "ضاحكة",
+        "مستبشرة"
+      ],
+      "uthmani_text": "ضَاحِكَةࣱ مُّسۡتَبۡشِرَةࣱ",
+      "uthmani_tokens": [
+        "ضَاحِكَةࣱ",
+        "مُّسۡتَبۡشِرَةࣱ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 40,
+      "plain_text": "ووجوه يومئذ عليها غبرة",
+      "plain_tokens": [
+        "ووجوه",
+        "يومئذ",
+        "عليها",
+        "غبرة"
+      ],
+      "uthmani_text": "وَوُجُوهࣱ یَوۡمَىِٕذٍ عَلَیۡهَا غَبَرَةࣱ",
+      "uthmani_tokens": [
+        "وَوُجُوهࣱ",
+        "یَوۡمَىِٕذٍ",
+        "عَلَیۡهَا",
+        "غَبَرَةࣱ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 41,
+      "plain_text": "ترهقها قترة",
+      "plain_tokens": [
+        "ترهقها",
+        "قترة"
+      ],
+      "uthmani_text": "تَرۡهَقُهَا قَتَرَةٌ",
+      "uthmani_tokens": [
+        "تَرۡهَقُهَا",
+        "قَتَرَةٌ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 42,
+      "plain_text": "أولئك هم الكفرة الفجرة",
+      "plain_tokens": [
+        "أولئك",
+        "هم",
+        "الكفرة",
+        "الفجرة"
+      ],
+      "uthmani_text": "أُو۟لَـٰۤىِٕكَ هُمُ ٱلۡكَفَرَةُ ٱلۡفَجَرَةُ",
+      "uthmani_tokens": [
+        "أُو۟لَـٰۤىِٕكَ",
+        "هُمُ",
+        "ٱلۡكَفَرَةُ",
+        "ٱلۡفَجَرَةُ"
+      ],
+      "uthmani_prefix": null
+    }
+  ],
+  "boundary_positions": {
+    "80:24:end:طعامه": {
+      "ayah": 24,
+      "kind": "end",
+      "word": "طعامه",
+      "occurrence_index": 1,
+      "plain_after_token": 4,
+      "uthmani_after_token": 4,
+      "uthmani_resolution": "exact"
+    },
+    "80:32:end:ولأنعامكم": {
+      "ayah": 32,
+      "kind": "end",
+      "word": "ولأنعامكم",
+      "occurrence_index": 1,
+      "plain_after_token": 3,
+      "uthmani_after_token": 3,
+      "uthmani_resolution": "approximate"
+    },
+    "80:33:end:الصاخة": {
+      "ayah": 33,
+      "kind": "end",
+      "word": "الصاخة",
+      "occurrence_index": 1,
+      "plain_after_token": 3,
+      "uthmani_after_token": 3,
+      "uthmani_resolution": "exact"
+    }
+  }
+}

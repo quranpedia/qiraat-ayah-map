@@ -1,0 +1,218 @@
+{
+  "_version": "0.1.0",
+  "surah": 101,
+  "kufi_ayah_count": 11,
+  "ayahs": [
+    {
+      "ayah": 1,
+      "plain_text": "القارعة",
+      "plain_tokens": [
+        "القارعة"
+      ],
+      "uthmani_text": "ٱلۡقَارِعَةُ",
+      "uthmani_tokens": [
+        "ٱلۡقَارِعَةُ"
+      ],
+      "uthmani_prefix": "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ"
+    },
+    {
+      "ayah": 2,
+      "plain_text": "ما القارعة",
+      "plain_tokens": [
+        "ما",
+        "القارعة"
+      ],
+      "uthmani_text": "مَا ٱلۡقَارِعَةُ",
+      "uthmani_tokens": [
+        "مَا",
+        "ٱلۡقَارِعَةُ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 3,
+      "plain_text": "وما أدراك ما القارعة",
+      "plain_tokens": [
+        "وما",
+        "أدراك",
+        "ما",
+        "القارعة"
+      ],
+      "uthmani_text": "وَمَاۤ أَدۡرَىٰكَ مَا ٱلۡقَارِعَةُ",
+      "uthmani_tokens": [
+        "وَمَاۤ",
+        "أَدۡرَىٰكَ",
+        "مَا",
+        "ٱلۡقَارِعَةُ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 4,
+      "plain_text": "يوم يكون الناس كالفراش المبثوث",
+      "plain_tokens": [
+        "يوم",
+        "يكون",
+        "الناس",
+        "كالفراش",
+        "المبثوث"
+      ],
+      "uthmani_text": "یَوۡمَ یَكُونُ ٱلنَّاسُ كَٱلۡفَرَاشِ ٱلۡمَبۡثُوثِ",
+      "uthmani_tokens": [
+        "یَوۡمَ",
+        "یَكُونُ",
+        "ٱلنَّاسُ",
+        "كَٱلۡفَرَاشِ",
+        "ٱلۡمَبۡثُوثِ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 5,
+      "plain_text": "وتكون الجبال كالعهن المنفوش",
+      "plain_tokens": [
+        "وتكون",
+        "الجبال",
+        "كالعهن",
+        "المنفوش"
+      ],
+      "uthmani_text": "وَتَكُونُ ٱلۡجِبَالُ كَٱلۡعِهۡنِ ٱلۡمَنفُوشِ",
+      "uthmani_tokens": [
+        "وَتَكُونُ",
+        "ٱلۡجِبَالُ",
+        "كَٱلۡعِهۡنِ",
+        "ٱلۡمَنفُوشِ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 6,
+      "plain_text": "فأما من ثقلت موازينه",
+      "plain_tokens": [
+        "فأما",
+        "من",
+        "ثقلت",
+        "موازينه"
+      ],
+      "uthmani_text": "فَأَمَّا مَن ثَقُلَتۡ مَوَ ٰ⁠زِینُهُۥ",
+      "uthmani_tokens": [
+        "فَأَمَّا",
+        "مَن",
+        "ثَقُلَتۡ",
+        "مَوَ ٰ⁠زِینُهُۥ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 7,
+      "plain_text": "فهو في عيشة راضية",
+      "plain_tokens": [
+        "فهو",
+        "في",
+        "عيشة",
+        "راضية"
+      ],
+      "uthmani_text": "فَهُوَ فِی عِیشَةࣲ رَّاضِیَةࣲ",
+      "uthmani_tokens": [
+        "فَهُوَ",
+        "فِی",
+        "عِیشَةࣲ",
+        "رَّاضِیَةࣲ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 8,
+      "plain_text": "وأما من خفت موازينه",
+      "plain_tokens": [
+        "وأما",
+        "من",
+        "خفت",
+        "موازينه"
+      ],
+      "uthmani_text": "وَأَمَّا مَنۡ خَفَّتۡ مَوَ ٰ⁠زِینُهُۥ",
+      "uthmani_tokens": [
+        "وَأَمَّا",
+        "مَنۡ",
+        "خَفَّتۡ",
+        "مَوَ ٰ⁠زِینُهُۥ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 9,
+      "plain_text": "فأمه هاوية",
+      "plain_tokens": [
+        "فأمه",
+        "هاوية"
+      ],
+      "uthmani_text": "فَأُمُّهُۥ هَاوِیَةࣱ",
+      "uthmani_tokens": [
+        "فَأُمُّهُۥ",
+        "هَاوِیَةࣱ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 10,
+      "plain_text": "وما أدراك ما هيه",
+      "plain_tokens": [
+        "وما",
+        "أدراك",
+        "ما",
+        "هيه"
+      ],
+      "uthmani_text": "وَمَاۤ أَدۡرَىٰكَ مَا هِیَهۡ",
+      "uthmani_tokens": [
+        "وَمَاۤ",
+        "أَدۡرَىٰكَ",
+        "مَا",
+        "هِیَهۡ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 11,
+      "plain_text": "نار حامية",
+      "plain_tokens": [
+        "نار",
+        "حامية"
+      ],
+      "uthmani_text": "نَارٌ حَامِیَةُۢ",
+      "uthmani_tokens": [
+        "نَارٌ",
+        "حَامِیَةُۢ"
+      ],
+      "uthmani_prefix": null
+    }
+  ],
+  "boundary_positions": {
+    "101:1:end:القارعة": {
+      "ayah": 1,
+      "kind": "end",
+      "word": "القارعة",
+      "occurrence_index": 1,
+      "plain_after_token": 1,
+      "uthmani_after_token": 1,
+      "uthmani_resolution": "exact"
+    },
+    "101:6:end:موازينه": {
+      "ayah": 6,
+      "kind": "end",
+      "word": "موازينه",
+      "occurrence_index": 1,
+      "plain_after_token": 4,
+      "uthmani_after_token": 4,
+      "uthmani_resolution": "approximate"
+    },
+    "101:8:end:موازينه": {
+      "ayah": 8,
+      "kind": "end",
+      "word": "موازينه",
+      "occurrence_index": 1,
+      "plain_after_token": 4,
+      "uthmani_after_token": 4,
+      "uthmani_resolution": "approximate"
+    }
+  }
+}

@@ -6,6 +6,7 @@
 
 import { readFileSync, existsSync, readdirSync } from 'fs';
 import { join } from 'path';
+import { decodeBoundaryHash, getBoundaryTableRowId, getBoundaryViewerAyahId, getBoundaryViewerMarkerId } from '../site/src/lib/mushaf-viewer-dom.js';
 import { normalizeBookBoundaryEvidenceDocument, flattenBookBoundaryReviewRows, VERIFICATION_STATUS_ORDER } from '../scripts/lib/book-evidence-utils.mjs';
 import { buildBookBoundaryPrimitives, expandBookBoundaryPrimitivesToDifferences, getTraditionalSystemOrder, normalizeBookBoundaryPrimitivesDocument } from '../scripts/lib/book-primitives-utils.mjs';
 import {
@@ -246,6 +247,10 @@ const evidenceLedgerMarkdown = readFileSync(distPath('review', 'evidence-ledger.
 const alBayanCrossReference = loadDist('review/al-bayan-cross-reference.json');
 const alBayanCrossReferenceMarkdown = readFileSync(distPath('review', 'al-bayan-cross-reference.md'), 'utf-8');
 const siteData = JSON.parse(readFileSync(join(repoDir, 'site', 'src', 'lib', 'data', 'generated', 'site-data.json'), 'utf-8'));
+const mushafViewerDir = join(repoDir, 'site', 'public', 'generated', 'mushaf');
+const plainMushafLines = readFileSync(join(repoDir, 'sources', 'mushaf-text', 'quran-plain.txt'), 'utf-8').trim().split(/\r?\n/);
+const uthmaniMushafLines = readFileSync(join(repoDir, 'sources', 'mushaf-text', 'quran-uthmani.txt'), 'utf-8').trim().split(/\r?\n/);
+const UTHMANI_BASMALA = 'بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ';
 
 const systemIds = Object.keys(countingSystems);
 const nonKufiIds = systemIds.filter(id => id !== 'kufi');
@@ -519,6 +524,84 @@ assert(alBayanCrossReferenceMarkdown.includes('Frontier exceptions'), 'al-bayan-
 assert(siteData._generated_from.includes('dist/review/al-bayan-cross-reference.json'), 'site-data.json records al-bayan-cross-reference.json as an input');
 assert(JSON.stringify(siteData.source_frontiers.al_bayan.covered_surahs) === JSON.stringify(expectedAlBayanFrontierSurahs), 'site-data.json exposes the checked-in al-Bayan frontier coverage');
 assert(siteData.summary.primary_source_frontier.al_bayan.exact_rows_missing_primary_evidence === 0, 'site-data.json exposes the al-Bayan primary frontier completeness summary');
+
+section('Mushaf viewer data');
+
+assert(existsSync(mushafViewerDir), 'site/public/generated/mushaf exists');
+const mushafViewerFiles = readdirSync(mushafViewerDir).filter(filename => filename.endsWith('.json')).sort();
+assert(mushafViewerFiles.length === 114, '114 mushaf viewer surah files are generated');
+assert(plainMushafLines.length === 6236, 'attached plain mushaf has 6236 Kufi-indexed lines');
+assert(uthmaniMushafLines.length === 6236, 'attached Uthmani mushaf has 6236 Kufi-indexed lines');
+
+let mushafLineOffset = 0;
+for (const surahData of siteData.surahs) {
+  const paddedSurah = String(surahData.surah).padStart(3, '0');
+  const filename = `surah-${paddedSurah}.json`;
+  const filePath = join(mushafViewerDir, filename);
+
+  assert(existsSync(filePath), `${filename} exists`);
+
+  if (!existsSync(filePath)) {
+    mushafLineOffset += surahData.counts.kufi;
+    continue;
+  }
+
+  const viewer = JSON.parse(readFileSync(filePath, 'utf-8'));
+  const surahRows = siteData.rows.filter(row => row.surah === surahData.surah);
+
+  assert(viewer.surah === surahData.surah, `${filename}: surah number matches`);
+  assert(viewer.kufi_ayah_count === surahData.counts.kufi, `${filename}: Kufi ayah count matches site-data`);
+  assert(Array.isArray(viewer.ayahs) && viewer.ayahs.length === surahData.counts.kufi, `${filename}: ayah array length matches Kufi count`);
+  assert(Object.keys(viewer.boundary_positions).length === surahRows.length, `${filename}: boundary position count matches disputed rows in the surah`);
+
+  for (const ayahRecord of viewer.ayahs) {
+    const globalLineIndex = mushafLineOffset + ayahRecord.ayah - 1;
+    const expectedPlain = plainMushafLines[globalLineIndex];
+    const expectedUthmani = uthmaniMushafLines[globalLineIndex];
+    const combinedUthmani = ayahRecord.uthmani_prefix
+      ? `${ayahRecord.uthmani_prefix} ${ayahRecord.uthmani_text}`
+      : ayahRecord.uthmani_text;
+
+    assert(ayahRecord.plain_text === expectedPlain, `${filename}: ayah ${ayahRecord.ayah} plain text matches source`);
+    assert(combinedUthmani === expectedUthmani, `${filename}: ayah ${ayahRecord.ayah} Uthmani text matches source after optional basmala split`);
+    assert(Array.isArray(ayahRecord.plain_tokens) && ayahRecord.plain_tokens.length > 0, `${filename}: ayah ${ayahRecord.ayah} plain tokens are present`);
+    assert(Array.isArray(ayahRecord.uthmani_tokens) && ayahRecord.uthmani_tokens.length > 0, `${filename}: ayah ${ayahRecord.ayah} Uthmani tokens are present`);
+
+    if (surahData.surah > 1 && surahData.surah !== 9 && ayahRecord.ayah === 1 && expectedUthmani.startsWith(`${UTHMANI_BASMALA} `)) {
+      assert(ayahRecord.uthmani_prefix === UTHMANI_BASMALA, `${filename}: surah-opening basmala is split out for Uthmani ayah 1`);
+    } else {
+      assert(ayahRecord.uthmani_prefix === null, `${filename}: no unexpected Uthmani basmala prefix is exposed`);
+    }
+  }
+
+  for (const row of surahRows) {
+    const position = viewer.boundary_positions[row.anchor_key];
+
+    assert(Boolean(position), `${filename}: boundary position exists for ${row.anchor_key}`);
+
+    if (!position) {
+      continue;
+    }
+
+    const ayahRecord = viewer.ayahs[position.ayah - 1];
+    assert(position.ayah === row.hafs_ayah, `${filename}: ${row.anchor_key} ayah index matches`);
+    assert(position.kind === row.kind, `${filename}: ${row.anchor_key} kind matches`);
+    assert(position.word === row.word, `${filename}: ${row.anchor_key} anchor word matches`);
+    assert(position.plain_after_token >= 1 && position.plain_after_token <= ayahRecord.plain_tokens.length, `${filename}: ${row.anchor_key} plain token position is in range`);
+    assert(position.uthmani_after_token >= 1 && position.uthmani_after_token <= ayahRecord.uthmani_tokens.length, `${filename}: ${row.anchor_key} Uthmani token position is in range`);
+    assert(['exact', 'approximate'].includes(position.uthmani_resolution), `${filename}: ${row.anchor_key} Uthmani resolution uses a known value`);
+
+    if (row.kind === 'end') {
+      assert(position.plain_after_token === ayahRecord.plain_tokens.length, `${filename}: ${row.anchor_key} plain end marker lands on the ayah end`);
+      assert(position.uthmani_after_token === ayahRecord.uthmani_tokens.length, `${filename}: ${row.anchor_key} Uthmani end marker lands on the ayah end`);
+    } else {
+      assert(position.plain_after_token < ayahRecord.plain_tokens.length, `${filename}: ${row.anchor_key} plain internal marker lands before the ayah end`);
+      assert(position.uthmani_after_token < ayahRecord.uthmani_tokens.length, `${filename}: ${row.anchor_key} Uthmani internal marker lands before the ayah end`);
+    }
+  }
+
+  mushafLineOffset += surahData.counts.kufi;
+}
 
 section('Kufan Total Ayah Count');
 

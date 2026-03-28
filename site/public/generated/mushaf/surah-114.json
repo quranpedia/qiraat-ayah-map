@@ -1,0 +1,118 @@
+{
+  "_version": "0.1.0",
+  "surah": 114,
+  "kufi_ayah_count": 6,
+  "ayahs": [
+    {
+      "ayah": 1,
+      "plain_text": "قل أعوذ برب الناس",
+      "plain_tokens": [
+        "قل",
+        "أعوذ",
+        "برب",
+        "الناس"
+      ],
+      "uthmani_text": "قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ",
+      "uthmani_tokens": [
+        "قُلۡ",
+        "أَعُوذُ",
+        "بِرَبِّ",
+        "ٱلنَّاسِ"
+      ],
+      "uthmani_prefix": "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ"
+    },
+    {
+      "ayah": 2,
+      "plain_text": "ملك الناس",
+      "plain_tokens": [
+        "ملك",
+        "الناس"
+      ],
+      "uthmani_text": "مَلِكِ ٱلنَّاسِ",
+      "uthmani_tokens": [
+        "مَلِكِ",
+        "ٱلنَّاسِ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 3,
+      "plain_text": "إله الناس",
+      "plain_tokens": [
+        "إله",
+        "الناس"
+      ],
+      "uthmani_text": "إِلَـٰهِ ٱلنَّاسِ",
+      "uthmani_tokens": [
+        "إِلَـٰهِ",
+        "ٱلنَّاسِ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 4,
+      "plain_text": "من شر الوسواس الخناس",
+      "plain_tokens": [
+        "من",
+        "شر",
+        "الوسواس",
+        "الخناس"
+      ],
+      "uthmani_text": "مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ",
+      "uthmani_tokens": [
+        "مِن",
+        "شَرِّ",
+        "ٱلۡوَسۡوَاسِ",
+        "ٱلۡخَنَّاسِ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 5,
+      "plain_text": "الذي يوسوس في صدور الناس",
+      "plain_tokens": [
+        "الذي",
+        "يوسوس",
+        "في",
+        "صدور",
+        "الناس"
+      ],
+      "uthmani_text": "ٱلَّذِی یُوَسۡوِسُ فِی صُدُورِ ٱلنَّاسِ",
+      "uthmani_tokens": [
+        "ٱلَّذِی",
+        "یُوَسۡوِسُ",
+        "فِی",
+        "صُدُورِ",
+        "ٱلنَّاسِ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 6,
+      "plain_text": "من الجنة والناس",
+      "plain_tokens": [
+        "من",
+        "الجنة",
+        "والناس"
+      ],
+      "uthmani_text": "مِنَ ٱلۡجِنَّةِ وَٱلنَّاسِ",
+      "uthmani_tokens": [
+        "مِنَ",
+        "ٱلۡجِنَّةِ",
+        "وَٱلنَّاسِ"
+      ],
+      "uthmani_prefix": null
+    }
+  ],
+  "boundary_positions": {
+    "114:4:internal:الوسواس": {
+      "ayah": 4,
+      "kind": "internal",
+      "word": "الوسواس",
+      "occurrence_index": 1,
+      "plain_after_token": 3,
+      "uthmani_after_token": 3,
+      "uthmani_resolution": "exact"
+    }
+  }
+}

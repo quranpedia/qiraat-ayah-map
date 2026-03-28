@@ -1,0 +1,85 @@
+{
+  "_version": "0.1.0",
+  "surah": 103,
+  "kufi_ayah_count": 3,
+  "ayahs": [
+    {
+      "ayah": 1,
+      "plain_text": "والعصر",
+      "plain_tokens": [
+        "والعصر"
+      ],
+      "uthmani_text": "وَٱلۡعَصۡرِ",
+      "uthmani_tokens": [
+        "وَٱلۡعَصۡرِ"
+      ],
+      "uthmani_prefix": "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ"
+    },
+    {
+      "ayah": 2,
+      "plain_text": "إن الإنسان لفي خسر",
+      "plain_tokens": [
+        "إن",
+        "الإنسان",
+        "لفي",
+        "خسر"
+      ],
+      "uthmani_text": "إِنَّ ٱلۡإِنسَـٰنَ لَفِی خُسۡرٍ",
+      "uthmani_tokens": [
+        "إِنَّ",
+        "ٱلۡإِنسَـٰنَ",
+        "لَفِی",
+        "خُسۡرٍ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 3,
+      "plain_text": "إلا الذين آمنوا وعملوا الصالحات وتواصوا بالحق وتواصوا بالصبر",
+      "plain_tokens": [
+        "إلا",
+        "الذين",
+        "آمنوا",
+        "وعملوا",
+        "الصالحات",
+        "وتواصوا",
+        "بالحق",
+        "وتواصوا",
+        "بالصبر"
+      ],
+      "uthmani_text": "إِلَّا ٱلَّذِینَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ وَتَوَاصَوۡا۟ بِٱلۡحَقِّ وَتَوَاصَوۡا۟ بِٱلصَّبۡرِ",
+      "uthmani_tokens": [
+        "إِلَّا",
+        "ٱلَّذِینَ",
+        "ءَامَنُوا۟",
+        "وَعَمِلُوا۟",
+        "ٱلصَّـٰلِحَـٰتِ",
+        "وَتَوَاصَوۡا۟",
+        "بِٱلۡحَقِّ",
+        "وَتَوَاصَوۡا۟",
+        "بِٱلصَّبۡرِ"
+      ],
+      "uthmani_prefix": null
+    }
+  ],
+  "boundary_positions": {
+    "103:1:end:والعصر": {
+      "ayah": 1,
+      "kind": "end",
+      "word": "والعصر",
+      "occurrence_index": 1,
+      "plain_after_token": 1,
+      "uthmani_after_token": 1,
+      "uthmani_resolution": "exact"
+    },
+    "103:3:internal:بالحق": {
+      "ayah": 3,
+      "kind": "internal",
+      "word": "بالحق",
+      "occurrence_index": 1,
+      "plain_after_token": 7,
+      "uthmani_after_token": 7,
+      "uthmani_resolution": "exact"
+    }
+  }
+}

@@ -500,3 +500,154 @@ button {
 .code_block code {
   font: inherit;
 }
+
+.mushaf_control_grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+}
+
+.mushaf_viewer_shell {
+  border-radius: 1.5rem;
+  border: 1px solid color-mix(in oklch, var(--line) 76%, white 24%);
+  background: linear-gradient(180deg, color-mix(in oklch, white 92%, var(--paper-soft) 8%), color-mix(in oklch, var(--paper-soft) 88%, white 12%));
+  padding: 1rem;
+}
+
+.mushaf_viewer_body {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.mushaf_basmala {
+  direction: rtl;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid color-mix(in oklch, var(--line) 76%, white 24%);
+  text-align: center;
+  font-family: var(--font-arabic);
+  font-size: clamp(1.45rem, 1vw + 1rem, 2rem);
+  color: var(--ink);
+}
+
+.mushaf_gap_line {
+  margin: 0;
+  text-align: center;
+}
+
+.mushaf_gap_pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed color-mix(in oklch, var(--line) 74%, white 26%);
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  background: color-mix(in oklch, white 88%, var(--paper-soft) 12%);
+  color: var(--ink-soft);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.mushaf_ayah_line {
+  margin: 0;
+  direction: rtl;
+  border-radius: 1rem;
+  font-family: var(--font-arabic);
+  font-size: clamp(1.4rem, 0.95vw + 1.05rem, 1.95rem);
+  line-height: 2.2;
+  color: var(--ink);
+  transition: background 180ms ease, box-shadow 180ms ease;
+}
+
+.mushaf_ayah_line[data-has-visible='true'] {
+  padding-inline: 0.55rem;
+  background: color-mix(in oklch, var(--paper-soft) 26%, white 74%);
+}
+
+.mushaf_ayah_line[data-active='true'] {
+  background: color-mix(in oklch, var(--accent-soft) 20%, white 80%);
+  box-shadow: 0 0 0 2px color-mix(in oklch, var(--accent) 20%, white 80%);
+}
+
+.mushaf_word {
+  white-space: pre-wrap;
+}
+
+.mushaf_marker_group,
+.mushaf_end_marker_group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.28rem;
+  direction: ltr;
+  vertical-align: middle;
+}
+
+.mushaf_marker_group {
+  margin-inline: 0.45rem;
+}
+
+.mushaf_end_marker_group {
+  margin-inline: 0.55rem 0.35rem;
+}
+
+.mushaf_marker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in oklch, var(--line) 78%, white 22%);
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+  background: color-mix(in oklch, var(--paper-soft) 82%, white 18%);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.mushaf_marker[data-tone='ok'] {
+  background: color-mix(in oklch, var(--ok) 12%, white 88%);
+  color: color-mix(in oklch, var(--ok) 74%, black 26%);
+}
+
+.mushaf_marker[data-tone='accent'] {
+  background: color-mix(in oklch, var(--accent-soft) 48%, white 52%);
+  color: var(--accent-strong);
+}
+
+.mushaf_marker[data-tone='alert'] {
+  background: color-mix(in oklch, var(--alert) 15%, white 85%);
+  color: color-mix(in oklch, var(--alert) 74%, black 26%);
+}
+
+.mushaf_marker[data-kind='internal'] {
+  border-style: dashed;
+}
+
+.mushaf_marker[data-kind='end'] {
+  box-shadow: inset 0 0 0 1px color-mix(in oklch, currentColor 10%, transparent 90%);
+  font-size: 0.72rem;
+}
+
+.mushaf_marker[data-active='true'] {
+  outline: 2px solid color-mix(in oklch, var(--accent) 44%, white 56%);
+  outline-offset: 2px;
+}
+
+.mushaf_ayah_number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.9rem;
+  height: 1.9rem;
+  margin-inline-start: 0.55rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in oklch, var(--line) 76%, white 24%);
+  background: color-mix(in oklch, white 90%, var(--paper-soft) 10%);
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  font-weight: 700;
+  vertical-align: middle;
+}

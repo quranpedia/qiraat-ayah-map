@@ -1,0 +1,155 @@
+{
+  "_version": "0.1.0",
+  "surah": 1,
+  "kufi_ayah_count": 7,
+  "ayahs": [
+    {
+      "ayah": 1,
+      "plain_text": "بسم الله الرحمن الرحيم",
+      "plain_tokens": [
+        "بسم",
+        "الله",
+        "الرحمن",
+        "الرحيم"
+      ],
+      "uthmani_text": "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ",
+      "uthmani_tokens": [
+        "بِسۡمِ",
+        "ٱللَّهِ",
+        "ٱلرَّحۡمَـٰنِ",
+        "ٱلرَّحِیمِ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 2,
+      "plain_text": "الحمد لله رب العالمين",
+      "plain_tokens": [
+        "الحمد",
+        "لله",
+        "رب",
+        "العالمين"
+      ],
+      "uthmani_text": "ٱلۡحَمۡدُ لِلَّهِ رَبِّ ٱلۡعَـٰلَمِینَ",
+      "uthmani_tokens": [
+        "ٱلۡحَمۡدُ",
+        "لِلَّهِ",
+        "رَبِّ",
+        "ٱلۡعَـٰلَمِینَ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 3,
+      "plain_text": "الرحمن الرحيم",
+      "plain_tokens": [
+        "الرحمن",
+        "الرحيم"
+      ],
+      "uthmani_text": "ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ",
+      "uthmani_tokens": [
+        "ٱلرَّحۡمَـٰنِ",
+        "ٱلرَّحِیمِ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 4,
+      "plain_text": "مالك يوم الدين",
+      "plain_tokens": [
+        "مالك",
+        "يوم",
+        "الدين"
+      ],
+      "uthmani_text": "مَـٰلِكِ یَوۡمِ ٱلدِّینِ",
+      "uthmani_tokens": [
+        "مَـٰلِكِ",
+        "یَوۡمِ",
+        "ٱلدِّینِ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 5,
+      "plain_text": "إياك نعبد وإياك نستعين",
+      "plain_tokens": [
+        "إياك",
+        "نعبد",
+        "وإياك",
+        "نستعين"
+      ],
+      "uthmani_text": "إِیَّاكَ نَعۡبُدُ وَإِیَّاكَ نَسۡتَعِینُ",
+      "uthmani_tokens": [
+        "إِیَّاكَ",
+        "نَعۡبُدُ",
+        "وَإِیَّاكَ",
+        "نَسۡتَعِینُ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 6,
+      "plain_text": "اهدنا الصراط المستقيم",
+      "plain_tokens": [
+        "اهدنا",
+        "الصراط",
+        "المستقيم"
+      ],
+      "uthmani_text": "ٱهۡدِنَا ٱلصِّرَ ٰ⁠طَ ٱلۡمُسۡتَقِیمَ",
+      "uthmani_tokens": [
+        "ٱهۡدِنَا",
+        "ٱلصِّرَ ٰ⁠طَ",
+        "ٱلۡمُسۡتَقِیمَ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 7,
+      "plain_text": "صراط الذين أنعمت عليهم غير المغضوب عليهم ولا الضالين",
+      "plain_tokens": [
+        "صراط",
+        "الذين",
+        "أنعمت",
+        "عليهم",
+        "غير",
+        "المغضوب",
+        "عليهم",
+        "ولا",
+        "الضالين"
+      ],
+      "uthmani_text": "صِرَ ٰ⁠طَ ٱلَّذِینَ أَنۡعَمۡتَ عَلَیۡهِمۡ غَیۡرِ ٱلۡمَغۡضُوبِ عَلَیۡهِمۡ وَلَا ٱلضَّاۤلِّینَ",
+      "uthmani_tokens": [
+        "صِرَ ٰ⁠طَ",
+        "ٱلَّذِینَ",
+        "أَنۡعَمۡتَ",
+        "عَلَیۡهِمۡ",
+        "غَیۡرِ",
+        "ٱلۡمَغۡضُوبِ",
+        "عَلَیۡهِمۡ",
+        "وَلَا",
+        "ٱلضَّاۤلِّینَ"
+      ],
+      "uthmani_prefix": null
+    }
+  ],
+  "boundary_positions": {
+    "1:1:end:الرحيم": {
+      "ayah": 1,
+      "kind": "end",
+      "word": "الرحيم",
+      "occurrence_index": 1,
+      "plain_after_token": 4,
+      "uthmani_after_token": 4,
+      "uthmani_resolution": "exact"
+    },
+    "1:7:internal:عليهم": {
+      "ayah": 7,
+      "kind": "internal",
+      "word": "عليهم",
+      "occurrence_index": 1,
+      "plain_after_token": 4,
+      "uthmani_after_token": 4,
+      "uthmani_resolution": "exact"
+    }
+  }
+}

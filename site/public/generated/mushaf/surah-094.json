@@ -1,0 +1,142 @@
+{
+  "_version": "0.1.0",
+  "surah": 94,
+  "kufi_ayah_count": 8,
+  "ayahs": [
+    {
+      "ayah": 1,
+      "plain_text": "ألم نشرح لك صدرك",
+      "plain_tokens": [
+        "ألم",
+        "نشرح",
+        "لك",
+        "صدرك"
+      ],
+      "uthmani_text": "أَلَمۡ نَشۡرَحۡ لَكَ صَدۡرَكَ",
+      "uthmani_tokens": [
+        "أَلَمۡ",
+        "نَشۡرَحۡ",
+        "لَكَ",
+        "صَدۡرَكَ"
+      ],
+      "uthmani_prefix": "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ"
+    },
+    {
+      "ayah": 2,
+      "plain_text": "ووضعنا عنك وزرك",
+      "plain_tokens": [
+        "ووضعنا",
+        "عنك",
+        "وزرك"
+      ],
+      "uthmani_text": "وَوَضَعۡنَا عَنكَ وِزۡرَكَ",
+      "uthmani_tokens": [
+        "وَوَضَعۡنَا",
+        "عَنكَ",
+        "وِزۡرَكَ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 3,
+      "plain_text": "الذي أنقض ظهرك",
+      "plain_tokens": [
+        "الذي",
+        "أنقض",
+        "ظهرك"
+      ],
+      "uthmani_text": "ٱلَّذِیۤ أَنقَضَ ظَهۡرَكَ",
+      "uthmani_tokens": [
+        "ٱلَّذِیۤ",
+        "أَنقَضَ",
+        "ظَهۡرَكَ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 4,
+      "plain_text": "ورفعنا لك ذكرك",
+      "plain_tokens": [
+        "ورفعنا",
+        "لك",
+        "ذكرك"
+      ],
+      "uthmani_text": "وَرَفَعۡنَا لَكَ ذِكۡرَكَ",
+      "uthmani_tokens": [
+        "وَرَفَعۡنَا",
+        "لَكَ",
+        "ذِكۡرَكَ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 5,
+      "plain_text": "فإن مع العسر يسرا",
+      "plain_tokens": [
+        "فإن",
+        "مع",
+        "العسر",
+        "يسرا"
+      ],
+      "uthmani_text": "فَإِنَّ مَعَ ٱلۡعُسۡرِ یُسۡرًا",
+      "uthmani_tokens": [
+        "فَإِنَّ",
+        "مَعَ",
+        "ٱلۡعُسۡرِ",
+        "یُسۡرًا"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 6,
+      "plain_text": "إن مع العسر يسرا",
+      "plain_tokens": [
+        "إن",
+        "مع",
+        "العسر",
+        "يسرا"
+      ],
+      "uthmani_text": "إِنَّ مَعَ ٱلۡعُسۡرِ یُسۡرࣰا",
+      "uthmani_tokens": [
+        "إِنَّ",
+        "مَعَ",
+        "ٱلۡعُسۡرِ",
+        "یُسۡرࣰا"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 7,
+      "plain_text": "فإذا فرغت فانصب",
+      "plain_tokens": [
+        "فإذا",
+        "فرغت",
+        "فانصب"
+      ],
+      "uthmani_text": "فَإِذَا فَرَغۡتَ فَٱنصَبۡ",
+      "uthmani_tokens": [
+        "فَإِذَا",
+        "فَرَغۡتَ",
+        "فَٱنصَبۡ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 8,
+      "plain_text": "وإلى ربك فارغب",
+      "plain_tokens": [
+        "وإلى",
+        "ربك",
+        "فارغب"
+      ],
+      "uthmani_text": "وَإِلَىٰ رَبِّكَ فَٱرۡغَب",
+      "uthmani_tokens": [
+        "وَإِلَىٰ",
+        "رَبِّكَ",
+        "فَٱرۡغَب"
+      ],
+      "uthmani_prefix": null
+    }
+  ],
+  "boundary_positions": {}
+}

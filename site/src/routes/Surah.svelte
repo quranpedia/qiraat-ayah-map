@@ -1,14 +1,64 @@
 <script>
 import BoundaryDetail from '~/components/BoundaryDetail.svelte'
+import SurahMushafViewer from '~/components/SurahMushafViewer.svelte'
 import PlotSurahBoundaryMap from '~/components/charts/PlotSurahBoundaryMap.svelte'
-import { format_verification_status, get_surah, get_surah_rows, get_system_name, get_verification_tone, systems } from '$lib/dataset.svelte.js'
+import {
+  format_verification_status,
+  get_surah,
+  get_surah_rows,
+  get_system_name,
+  get_verification_tone,
+  systems
+} from '$lib/dataset.svelte.js'
+import { decodeBoundaryHash, getBoundaryTableRowId } from '$lib/mushaf-viewer-dom.js'
+import { loadSurahViewer } from '$lib/mushaf-viewer.js'
 
 let { surah } = $props()
 
+const initialHashKey = decodeBoundaryHash(window.location.hash)
+
 let surah_info = $derived(get_surah(surah))
 let surah_rows = $derived(get_surah_rows(surah))
-let selected_key = $state(null)
+let viewerPromise = $derived(surah_info ? loadSurahViewer(surah_info.surah) : Promise.resolve(null))
+let selected_key = $state(initialHashKey)
+let selection_request = $state(
+  initialHashKey
+    ? {
+        anchorKey: initialHashKey,
+        source: 'hash',
+        nonce: 1
+      }
+    : null
+)
 let active_row = $derived(surah_rows.find(row => row.anchor_key === selected_key) || surah_rows[0] || null)
+
+function setSelectedKey(anchorKey, source = 'table') {
+  if (!anchorKey) {
+    return
+  }
+
+  selected_key = anchorKey
+  selection_request = {
+    anchorKey,
+    source,
+    nonce: (selection_request?.nonce || 0) + 1
+  }
+}
+
+$effect(() => {
+  const row = active_row
+
+  if (!row) {
+    return
+  }
+
+  const nextHash = `#${encodeURIComponent(row.anchor_key)}`
+  const nextUrl = `${window.location.pathname}${window.location.search}${nextHash}`
+
+  if (window.location.hash !== nextHash) {
+    window.history.replaceState(window.history.state, '', nextUrl)
+  }
+})
 </script>
 
 {#if !surah_info}
@@ -78,7 +128,11 @@ let active_row = $derived(surah_rows.find(row => row.anchor_key === selected_key
           </thead>
           <tbody>
             {#each surah_rows as row (row.anchor_key)}
-              <tr data-active={row.anchor_key === active_row?.anchor_key ? 'true' : 'false'} onclick={() => (selected_key = row.anchor_key)}>
+              <tr
+                id={getBoundaryTableRowId(row.anchor_key)}
+                data-active={row.anchor_key === active_row?.anchor_key ? 'true' : 'false'}
+                onclick={() => setSelectedKey(row.anchor_key, 'table')}
+              >
                 <td>
                   <div class="font-bold text-ink">{row.ayah_slot_label}</div>
                   <div class="mt-2 text-xs text-ink-soft">{row.location_label}</div>
@@ -102,9 +156,28 @@ let active_row = $derived(surah_rows.find(row => row.anchor_key === selected_key
         </table>
       </div>
 
-      <div>
+      <div id="boundary-detail-panel">
         <BoundaryDetail row={active_row} />
       </div>
     </section>
   {/if}
+
+  <section class="mt-12" id="surah-mushaf-viewer">
+    {#await viewerPromise then viewer}
+      {#if viewer}
+        <SurahMushafViewer
+          {viewer}
+          rows={surah_rows}
+          {systems}
+          selectedKey={active_row?.anchor_key || null}
+          selectionRequest={selection_request}
+          onselect={anchorKey => setSelectedKey(anchorKey, 'viewer')}
+        />
+      {:else}
+        <div class="surface p-5 text-sm text-ink-soft">The mushaf viewer data for this surah is not available yet.</div>
+      {/if}
+    {:catch}
+      <div class="surface p-5 text-sm text-ink-soft">The mushaf viewer data could not be loaded for this surah.</div>
+    {/await}
+  </section>
 {/if}

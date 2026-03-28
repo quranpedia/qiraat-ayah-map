@@ -1,0 +1,88 @@
+{
+  "_version": "0.1.0",
+  "surah": 112,
+  "kufi_ayah_count": 4,
+  "ayahs": [
+    {
+      "ayah": 1,
+      "plain_text": "قل هو الله أحد",
+      "plain_tokens": [
+        "قل",
+        "هو",
+        "الله",
+        "أحد"
+      ],
+      "uthmani_text": "قُلۡ هُوَ ٱللَّهُ أَحَدٌ",
+      "uthmani_tokens": [
+        "قُلۡ",
+        "هُوَ",
+        "ٱللَّهُ",
+        "أَحَدٌ"
+      ],
+      "uthmani_prefix": "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ"
+    },
+    {
+      "ayah": 2,
+      "plain_text": "الله الصمد",
+      "plain_tokens": [
+        "الله",
+        "الصمد"
+      ],
+      "uthmani_text": "ٱللَّهُ ٱلصَّمَدُ",
+      "uthmani_tokens": [
+        "ٱللَّهُ",
+        "ٱلصَّمَدُ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 3,
+      "plain_text": "لم يلد ولم يولد",
+      "plain_tokens": [
+        "لم",
+        "يلد",
+        "ولم",
+        "يولد"
+      ],
+      "uthmani_text": "لَمۡ یَلِدۡ وَلَمۡ یُولَدۡ",
+      "uthmani_tokens": [
+        "لَمۡ",
+        "یَلِدۡ",
+        "وَلَمۡ",
+        "یُولَدۡ"
+      ],
+      "uthmani_prefix": null
+    },
+    {
+      "ayah": 4,
+      "plain_text": "ولم يكن له كفوا أحد",
+      "plain_tokens": [
+        "ولم",
+        "يكن",
+        "له",
+        "كفوا",
+        "أحد"
+      ],
+      "uthmani_text": "وَلَمۡ یَكُن لَّهُۥ كُفُوًا أَحَدُۢ",
+      "uthmani_tokens": [
+        "وَلَمۡ",
+        "یَكُن",
+        "لَّهُۥ",
+        "كُفُوًا",
+        "أَحَدُۢ"
+      ],
+      "uthmani_prefix": null
+    }
+  ],
+  "boundary_positions": {
+    "112:3:internal:يلد": {
+      "ayah": 3,
+      "kind": "internal",
+      "word": "يلد",
+      "occurrence_index": 1,
+      "plain_after_token": 2,
+      "uthmani_after_token": 2,
+      "uthmani_resolution": "exact"
+    }
+  }
+}
