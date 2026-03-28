@@ -1,0 +1,96 @@
+{
+  "schools": [
+    {
+      "code": "madani_1",
+      "arabic": "المدني الأول",
+      "english_label": "madani 1"
+    },
+    {
+      "code": "madani_2",
+      "arabic": "المدني الأخير",
+      "english_label": "madani 2"
+    },
+    {
+      "code": "makki",
+      "arabic": "المكي",
+      "english_label": "makki"
+    },
+    {
+      "code": "kufi",
+      "arabic": "الكوفي",
+      "english_label": "kufi"
+    },
+    {
+      "code": "basri",
+      "arabic": "البصري",
+      "english_label": "basri"
+    },
+    {
+      "code": "shami",
+      "arabic": "الشامي",
+      "english_label": "shami"
+    },
+    {
+      "code": "dimashqi",
+      "arabic": "الدمشقي",
+      "english_label": "dimashqi"
+    },
+    {
+      "code": "himsi",
+      "arabic": "الحمصي",
+      "english_label": "himsi"
+    },
+    {
+      "code": "hijazi",
+      "arabic": "الحجازي",
+      "english_label": "hijazi"
+    },
+    {
+      "code": "iraqi",
+      "arabic": "العراقي",
+      "english_label": "iraqi"
+    }
+  ],
+  "terms": [
+    {
+      "term_ar": "آية",
+      "preferred_english": "verse",
+      "note": "Default translation in prose."
+    },
+    {
+      "term_ar": "رأس آية / رؤوس الآي",
+      "preferred_english": "verse-head / verse-heads",
+      "note": "Retained as a technical term; do not flatten into modern verse numbering without explicit provenance."
+    },
+    {
+      "term_ar": "فاصلة",
+      "preferred_english": "verse-ending",
+      "note": "Context-sensitive; sometimes best left as fasilah in analytical notes."
+    },
+    {
+      "term_ar": "نظير / نظائر",
+      "preferred_english": "counterpart / counterparts",
+      "note": "Refers here to surahs matching another surah in verse count within a given counting tradition."
+    },
+    {
+      "term_ar": "اختلافها",
+      "preferred_english": "its points of disagreement",
+      "note": "Preferred heading formula for surah entries."
+    },
+    {
+      "term_ar": "مما يشبه الفواصل وليس بمعدود",
+      "preferred_english": "phrases resembling verse-endings but not counted as verses",
+      "note": "Should be preserved as a distinct data field, not merged into disputed verses."
+    },
+    {
+      "term_ar": "مكي / مدني",
+      "preferred_english": "Makkan / Medinan",
+      "note": "Translate classification terms directly but preserve attributed disagreement."
+    },
+    {
+      "term_ar": "خمس / عشر",
+      "preferred_english": "five-verse marker / ten-verse marker",
+      "note": "Keep Arabic terms available in annotation and schema."
+    }
+  ]
+}

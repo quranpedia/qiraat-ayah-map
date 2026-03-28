@@ -1,0 +1,30 @@
+{
+  "project": "al-Fara'id al-Hisan fi 'Add Ay al-Qur'an",
+  "scope": "Additional technical terms encountered in translation installment 02 (Surat al-Baqarah).",
+  "terms": [
+    {
+      "arabic": "حرف التهجي / حروف التهجي",
+      "transliteration": "harf al-tahajji / huruf al-tahajji",
+      "english": "alphabet letters; the disjointed opening letters",
+      "note": "In this work the phrase refers to the isolated letter-openings at the beginnings of certain surahs."
+    },
+    {
+      "arabic": "فواتح السور",
+      "transliteration": "fawatih al-suwar",
+      "english": "surah-openings; opening letter clusters",
+      "note": "Used here especially for the letter-openings such as alif lam mim and ha mim."
+    },
+    {
+      "arabic": "الوتر",
+      "transliteration": "al-watr",
+      "english": "the single-letter opening",
+      "note": "In this section the author uses it for the one-letter initials Sad, Qaf, and Nun."
+    },
+    {
+      "arabic": "ذي الرا",
+      "transliteration": "dhi al-ra'",
+      "english": "those coupled with ra'",
+      "note": "A shorthand expression in the poem for openings such as alif lam ra' and alif lam mim ra'."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "issue_id": "surah_010_ruus_opening_unnumbered_head",
+    "severity": "medium",
+    "section_id": "surah.010.ruus",
+    "description_en": "The first transmitted head, “الْحَكِيم,” appears without a displayed numeral.",
+    "local_evidence_pages": [
+      164
+    ],
+    "impact_en": "The recovered ordinal layer treats this as head 1 while preserving the witness’s lack of a displayed numeral."
+  },
+  {
+    "issue_id": "surah_010_ruus_terminal_blank_109",
+    "severity": "low",
+    "section_id": "surah.010.ruus",
+    "description_en": "The witness ends with a blank terminal display-total line written as “١٠ - ٩”.",
+    "local_evidence_pages": [
+      164
+    ],
+    "impact_en": "The terminal line is preserved as a display total only and is not treated as an additional head."
+  },
+  {
+    "issue_id": "surah_010_ruus_display_numbering_semantics",
+    "severity": "low",
+    "section_id": "surah.010.ruus",
+    "description_en": "Because the transmitted block begins with an unnumbered first head and ends with a blank terminal total line, the displayed numerals do not by themselves encode the full later-Madani 109-head sequence.",
+    "local_evidence_pages": [
+      164
+    ],
+    "impact_en": "The dataset stores recovered later-Madani ordinals together with witness display numbers where present."
+  }
+]

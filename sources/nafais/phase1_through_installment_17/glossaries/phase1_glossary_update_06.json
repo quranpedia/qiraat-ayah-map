@@ -1,0 +1,18 @@
+{
+  "project": "al-Fara'id al-Hisan fi 'Add Ay al-Qur'an",
+  "scope": "Additional technical terms encountered in translation installment 06 (Surat al-An'am and Surat al-A'raf).",
+  "terms": [
+    {
+      "arabic": "يجري عده / لا يجري",
+      "transliteration": "yajri 'adduhu / la yajri",
+      "english": "its counting applies / does not apply",
+      "note": "A recurring formula meaning that a given phrase is, or is not, recognized as a counted verse ending in a particular counting tradition."
+    },
+    {
+      "arabic": "ثالثها / ثالث مواضع",
+      "transliteration": "thalithuha / thalith mawadi'",
+      "english": "its third occurrence / the third of the occurrences",
+      "note": "A positional qualifier used when the same word or phrase appears multiple times in a surah and only one occurrence is under discussion."
+    }
+  ]
+}

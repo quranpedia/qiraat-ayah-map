@@ -1,0 +1,30 @@
+{
+  "project": "al-Fara'id al-Hisan fi 'Add Ay al-Qur'an",
+  "scope": "Additional technical terms encountered in translation installment 16 (Surat al-Mu'minun and Surat al-Nur).",
+  "terms": [
+    {
+      "arabic": "اسم الإشارة يعود على",
+      "transliteration": "ism al-isharah ya'udu ‘ala",
+      "english": "the demonstrative pronoun refers back to",
+      "note": "Used when the commentator explains which prior authorities or expressions are picked up by a shorthand pronoun in the poem."
+    },
+    {
+      "arabic": "ساقط في عدد فلان",
+      "transliteration": "saqit fi ‘adad fulan",
+      "english": "dropped from the count of a given authority",
+      "note": "A concise way of saying that a place is not counted as a verse ending in that counting tradition."
+    },
+    {
+      "arabic": "يعده من يعده، ويتركه من يتركه",
+      "transliteration": "ya'udduhu man ya'udduhu, wa yatrukuhu man yatrukuhu",
+      "english": "whoever counts the former counts this one, and whoever omits the former omits this one",
+      "note": "A dependency formula showing that one disputed place follows the same distribution as the previous place."
+    },
+    {
+      "arabic": "قيدت ... بالباء / بـ\"لأولى\" احترازا عن",
+      "transliteration": "qayyadtu ... bi-al-ba' / bi-\"li-uli\" ihtirazan ‘an",
+      "english": "I qualified ... with bi- / with \"li-uli\" as a safeguard against confusion with",
+      "note": "Marks the commentator's use of a lexical qualifier to distinguish one occurrence from another similar wording in the same surah."
+    }
+  ]
+}

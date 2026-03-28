@@ -1,0 +1,35 @@
+[
+  {
+    "issue_id": "surah_002_ruus_gap",
+    "severity": "high",
+    "section_id": "surah.002.ruus",
+    "description_en": "The parsed text for سورة البقرة / ورؤوس الآي preserves heads 1–142, then an unnumbered head before 255, and then 255–285; the stretch 143–253 is absent from the text witness used here.",
+    "local_evidence_pages": [
+      141,
+      142
+    ],
+    "impact_en": "Full ruʾūs al-āy extraction for al-Baqara must remain partial unless resolved from an image witness or another reliable text witness."
+  },
+  {
+    "issue_id": "surah_002_ruus_compressed_lines",
+    "severity": "medium",
+    "section_id": "surah.002.ruus",
+    "description_en": "Several double entries are compressed onto one line (119/120 and 256/257), one line breaks the numeral for 136 across a page boundary, and 277 is misread as 577.",
+    "local_evidence_pages": [
+      141,
+      142
+    ],
+    "impact_en": "These items can be normalized with context, but each correction must be marked as editorially restored from sequence."
+  },
+  {
+    "issue_id": "nazair_shami_embedded_in_basri_section",
+    "severity": "medium",
+    "section_id": "nazair.basri",
+    "description_en": "The table of contents surfaces nazāʾir headings only through بصري, but the body of the بصري section also contains a subheading for ذكر نظائر الشامي rather than a separate indexed section.",
+    "local_evidence_pages": [
+      86,
+      138
+    ],
+    "impact_en": "Nazāʾir extraction needs a second segmentation layer inside the basri section to isolate the Shami material."
+  }
+]

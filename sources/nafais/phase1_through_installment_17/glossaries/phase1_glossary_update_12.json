@@ -1,0 +1,24 @@
+{
+  "project": "al-Fara'id al-Hisan fi 'Add Ay al-Qur'an",
+  "scope": "Additional technical terms encountered in translation installment 12 (Surat al-Isra' and Surat al-Kahf).",
+  "terms": [
+    {
+      "arabic": "امتنع عده",
+      "transliteration": "imtana'a 'adduhu",
+      "english": "its counting is barred; it is not admitted into the verse count",
+      "note": "A technical formula used when a phrase is specifically excluded from counting for a named enumerator."
+    },
+    {
+      "arabic": "احتراز",
+      "transliteration": "ihtiraz",
+      "english": "restrictive qualification; exclusionary specification",
+      "note": "A commentator's term explaining why a phrase such as 'the first' or 'later in recitation' is added, namely to exclude other occurrences from the ruling."
+    },
+    {
+      "arabic": "فقد عدها",
+      "transliteration": "faqad 'addaha",
+      "english": "he omitted its counting",
+      "note": "In this installment the commentator explicitly glosses this expression with أهمله, showing that it functions as shorthand for leaving a phrase out of the verse count."
+    }
+  ]
+}

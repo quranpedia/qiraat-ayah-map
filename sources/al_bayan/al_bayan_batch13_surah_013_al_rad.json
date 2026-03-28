@@ -1,0 +1,533 @@
+{
+  "project_phase": "phase_1_batch_13",
+  "section_ids": {
+    "entry": "surah.013.entry",
+    "ruus": "surah.013.ruus"
+  },
+  "arabic_source": {
+    "entry": "١٣\n\nمَكِّيَّة هَذَا قَول ابْن عَبَّاس وَمُجاهد وَسَعِيد بن جُبَير وَعَطَاء وَقَالَ قَتَادَة هِيَ مَدَنِيَّة إِلَّا هَذِه الْآيَة وَهِي قَوْله تَعَالَى (﴿وَلَا يزَال الَّذين كفرُوا تصيبهم بِمَا صَنَعُوا قَارِعَة﴾)\nونظيرتها فِي الْمَدَنِيين والمكي سَأَلَ سَائل وَفِي الْبَصْرِيّ فاطر وق والنازعات وَلَا نَظِير لَهَا فِي الْكُوفِي والشامي\nوكلمها ثَمَانِي مئة وَخمْس وَخَمْسُونَ كلمة\nوحروفها ثَلَاثَة آلَاف وَخمْس مئة وَسِتَّة أحرف\nوَهِي أَرْبَعُونَ وَثَلَاث آيَات فِي الْكُوفِي وَأَرْبع فِي الْمَدَنِيين والمكي وَخمْس بَصرِي وَسبع شَامي\nاختلافها خمس آيَات (﴿لفي خلق جَدِيد﴾) لم يعدها الْكُوفِي وعدها الْبَاقُونَ (﴿قل هَل يَسْتَوِي الْأَعْمَى والبصير﴾) عدهَا الشَّامي وَلم يعدها الْبَاقُونَ (﴿أم هَل تستوي الظُّلُمَات والنور﴾) لم يعدها الْكُوفِي وعدها الْبَاقُونَ (﴿أُولَئِكَ لَهُم سوء الْحساب﴾) عدهَا الشَّامي وَلم يعدها الْبَاقُونَ (﴿من كل بَاب﴾) لم يعدها المدنيان والمكي وعدها الْبَاقُونَ\nوفيهَا مِمَّا يشبه الفواصل وَلَيْسَ معدودا بِإِجْمَاع مَوضِع وَاحِد وَهُوَ قَوْله تَعَالَى (﴿وهم يكفرون بالرحمن﴾",
+    "ruus_transmitted": "لَا يُؤمنُونَ\n١ - توقنون\n٢ - يتفكرون\n٣ - يعْقلُونَ\n٤ - جَدِيد\nالقهار\n١٦ - الْأَمْثَال\n١٧ - المهاد\n١٨ - الْأَلْبَاب\n١٩ - الْمِيثَاق\n٢٠ - الْحساب\n٢١ - الدَّار\n٢٢ - الدَّار\n٢٤ - الدَّار\n٢٥ - مَتَاع\n٢٦ - أناب\n٢٧ - الْقُلُوب\n٢٨ - مآب\n٢٩ - متاب\n٣٠ - الميعاد\n٣١ - عِقَاب\n٣٢ - هاد\n٣٣ - واق\n٣٤ - النَّار\n٣٥ - مآب\n٣٦ - واق\n٣٧ - كتاب\n٣٨ - الْكتاب\n٣٩ - الْحساب\n٤٠ - الْحساب\n٤١ - الدَّار\n٤٢ - الْكتاب\n٤ - ٣",
+    "ruus_normalized_madani_2": "1 - لَا يُؤمنُونَ\n2 - توقنون\n3 - يتفكرون\n4 - يعْقلُونَ\n5 - جَدِيد\n6 - خالدون\n7 - العقاب\n8 - هاد\n9 - بمقدار\n10 - المتعال\n11 - بالنهار\n12 - من وال\n13 - الثقال\n14 - المحال\n15 - ضلال\n16 - الآصال\n17 - والنور\n18 - القهار\n19 - الْأَمْثَال\n20 - المهاد\n21 - الْأَلْبَاب\n22 - الْمِيثَاق\n23 - الْحساب\n24 - الدَّار\n25 - الدَّار\n26 - الدَّار\n27 - مَتَاع\n28 - أناب\n29 - الْقُلُوب\n30 - مآب\n31 - متاب\n32 - الميعاد\n33 - عِقَاب\n34 - هاد\n35 - واق\n36 - النَّار\n37 - مآب\n38 - واق\n39 - كتاب\n40 - الْكتاب\n41 - الْحساب\n42 - الْحساب\n43 - الدَّار\n44 - الْكتاب"
+  },
+  "english_translation": {
+    "entry_translation": "Sūrat al-Raʿd.\n\nMakkan: this is the view of Ibn ʿAbbās, Mujāhid, Saʿīd b. Jubayr, and ʿAṭāʾ. Qatāda said that it is Medinan except for this verse, namely His saying, “wa-lā yazālu lladhīna kafarū tuṣībuhum bimā ṣanaʿū qāriʿah.”\n\nIts counterpart (naẓīrah) in the two Madani counts and the Makki count is Sūrat Saʾala Sāʾil; in the Basri count, Sūrat Fāṭir, Qāf, and al-Nāziʿāt; and it has no counterpart in the Kufi or Shami count. Its words are eight hundred and fifty-five, and its letters are three thousand five hundred and six. It is forty-three verses in the Kufi count, forty-four in the two Madani counts and the Makki count, forty-five in the Basri count, and forty-seven in the Shami count.\n\nIts points of disagreement are five verses: “lafī khalqin jadīd” is not counted by the Kufi but is counted by the rest; “qul hal yastawī l-aʿmā wa-l-baṣīr” is counted by the Shami and not counted by the rest; “am hal tastawī l-ẓulumātu wa-l-nūr” is not counted by the Kufi but is counted by the rest; “ulāʾika lahum sūʾ al-ḥisāb” is counted by the Shami and not counted by the rest; and “min kulli bāb” is not counted by the two Madani counts or the Makki count, but is counted by the rest.\n\nIn it there is, by consensus, one place that resembles a verse-ending without being counted: His saying, “wa-hum yakfurūna bi-l-raḥmān.”",
+    "ruus_note": "The ordinal_madani_2_baseline field gives the recovered later-Madani sequence. In the transmitted witness, the opening head “لَا يُؤمنُونَ” is unnumbered, the block then runs with displayed numerals 1–4, loses the early interval corresponding to “خالدون” through “الآصال”, also omits the disputed later-Madani head “والنور”, transmits “القهار” without a numeral, resumes at displayed 16 “الْأَمْثَال”, later skips displayed 23 at the position of the non-baseline disputed head “من كل بَاب”, and ends with a blank terminal display-total line rendered in the local witness as “٤ - ٣”. The structured data therefore separates recovered later-Madani ordinals from witness display numerals."
+  },
+  "structured_data": {
+    "surah_number": 13,
+    "source_title_ar": "سورة الرعد",
+    "canonical_name_ar": "الرعد",
+    "canonical_name_en": "al-Raʿd",
+    "source_pages": {
+      "entry_printed_page_start": 169,
+      "entry_printed_page_end": 169,
+      "ruus_printed_page_start": 170,
+      "ruus_printed_page_end": 170
+    },
+    "source_alignment_note_en": "The entry on printed 169 is textually stable in the uploaded witness. The transmitted رؤوس الآي block on printed 170 survives only in compressed form: it preserves the opening unnumbered “لَا يُؤمنُونَ”, displayed 1–4 through “جَدِيد”, then jumps to unnumbered “القهار” and displayed 16 “الْأَمْثَال”, later skips displayed 23 between the second and third “الدَّار”, and closes with a blank terminal display-total line rendered locally as “٤ - ٣”. The recovered later-Madani sequence therefore restores the omitted early interval explicitly, while keeping every restoration and witness anomaly visible in the structured layer.",
+    "classification_claims": [
+      {
+        "classification": "makki",
+        "claim_ar": "مَكِّيَّة",
+        "attributed_to": [
+          "ابْن عَبَّاس",
+          "مُجاهد",
+          "سَعِيد بن جُبَير",
+          "عَطَاء"
+        ],
+        "authority": "source_main_entry"
+      },
+      {
+        "classification": "madani_with_single_makki_exception",
+        "claim_ar": "هِيَ مَدَنِيَّة إِلَّا هَذِه الْآيَة وَهِي قَوْله تَعَالَى (﴿وَلَا يزَال الَّذين كفرُوا تصيبهم بِمَا صَنَعُوا قَارِعَة﴾)",
+        "exception_count": 1,
+        "exception_phrase_ar": "﴿وَلَا يزَال الَّذين كفرُوا تصيبهم بِمَا صَنَعُوا قَارِعَة﴾",
+        "attributed_to": [
+          "قَتَادَة"
+        ],
+        "authority": "source_main_entry"
+      }
+    ],
+    "nazair_by_school": {
+      "madani_1": "سَأَلَ سَائل",
+      "madani_2": "سَأَلَ سَائل",
+      "makki": "سَأَلَ سَائل",
+      "kufi": null,
+      "basri": [
+        "فاطر",
+        "ق",
+        "النازعات"
+      ],
+      "shami": null
+    },
+    "supporting_transmission_reports": null,
+    "additional_counting_notes": null,
+    "word_count": {
+      "raw_ar": "ثَمَانِي مئة وَخمْس وَخَمْسُونَ كلمة",
+      "value": 855
+    },
+    "letter_count": {
+      "raw_ar": "ثَلَاثَة آلَاف وَخمْس مئة وَسِتَّة أحرف",
+      "value": 3506
+    },
+    "verse_totals": {
+      "madani_1": 44,
+      "madani_2": 44,
+      "makki": 44,
+      "kufi": 43,
+      "basri": 45,
+      "shami": 47
+    },
+    "disputed_verse_endings": [
+      {
+        "phrase_ar": "لفي خلق جَدِيد",
+        "counted_by": [
+          "madani_1",
+          "madani_2",
+          "makki",
+          "basri",
+          "shami"
+        ],
+        "not_counted_by": [
+          "kufi"
+        ]
+      },
+      {
+        "phrase_ar": "قل هَل يَسْتَوِي الْأَعْمَى والبصير",
+        "counted_by": [
+          "shami"
+        ],
+        "not_counted_by": [
+          "madani_1",
+          "madani_2",
+          "makki",
+          "kufi",
+          "basri"
+        ]
+      },
+      {
+        "phrase_ar": "أم هَل تستوي الظُّلُمَات والنور",
+        "counted_by": [
+          "madani_1",
+          "madani_2",
+          "makki",
+          "basri",
+          "shami"
+        ],
+        "not_counted_by": [
+          "kufi"
+        ]
+      },
+      {
+        "phrase_ar": "أُولَئِكَ لَهُم سوء الْحساب",
+        "counted_by": [
+          "shami"
+        ],
+        "not_counted_by": [
+          "madani_1",
+          "madani_2",
+          "makki",
+          "kufi",
+          "basri"
+        ]
+      },
+      {
+        "phrase_ar": "من كل بَاب",
+        "counted_by": [
+          "kufi",
+          "basri",
+          "shami"
+        ],
+        "not_counted_by": [
+          "madani_1",
+          "madani_2",
+          "makki"
+        ]
+      }
+    ],
+    "pseudo_fawasil": [
+      {
+        "phrase_ar": "وهم يكفرون بالرحمن",
+        "status": "resembles_fasila_not_counted_by_consensus"
+      }
+    ],
+    "ruus_al_ayat_extraction_status": "complete_with_large_early_gap_restoration_disputed_head_restoration_display_skip_and_terminal_blank_total",
+    "ruus_al_ayat_count": 44,
+    "ruus_al_ayat_numbering_note_en": "The ordinal_madani_2_baseline field gives the recovered later-Madani sequence. In the transmitted witness, the opening head “لَا يُؤمنُونَ” is unnumbered, the block then runs with displayed numerals 1–4, loses the early interval corresponding to “خالدون” through “الآصال”, also omits the disputed later-Madani head “والنور”, transmits “القهار” without a numeral, resumes at displayed 16 “الْأَمْثَال”, later skips displayed 23 at the position of the non-baseline disputed head “من كل بَاب”, and ends with a blank terminal display-total line rendered in the local witness as “٤ - ٣”. The structured data therefore separates recovered later-Madani ordinals from witness display numerals.",
+    "ruus_al_ayat_terminal_blank_total": 43,
+    "ruus_al_ayat": [
+      {
+        "ordinal_madani_2_baseline": 1,
+        "head_ar": "لَا يُؤمنُونَ",
+        "source_printed_page": 170,
+        "source_line_raw": "لَا يُؤمنُونَ",
+        "extraction_note_en": "Opening head in the transmitted witness, written without a displayed numeral."
+      },
+      {
+        "ordinal_madani_2_baseline": 2,
+        "head_ar": "توقنون",
+        "source_printed_page": 170,
+        "source_line_raw": "١ - توقنون",
+        "display_number_in_witness": 1
+      },
+      {
+        "ordinal_madani_2_baseline": 3,
+        "head_ar": "يتفكرون",
+        "source_printed_page": 170,
+        "source_line_raw": "٢ - يتفكرون",
+        "display_number_in_witness": 2
+      },
+      {
+        "ordinal_madani_2_baseline": 4,
+        "head_ar": "يعْقلُونَ",
+        "source_printed_page": 170,
+        "source_line_raw": "٣ - يعْقلُونَ",
+        "display_number_in_witness": 3
+      },
+      {
+        "ordinal_madani_2_baseline": 5,
+        "head_ar": "جَدِيد",
+        "source_printed_page": 170,
+        "source_line_raw": "٤ - جَدِيد",
+        "display_number_in_witness": 4
+      },
+      {
+        "ordinal_madani_2_baseline": 6,
+        "head_ar": "خالدون",
+        "source_printed_page": null,
+        "source_line_raw": null,
+        "extraction_note_en": "Missing from the local transmitted block between displayed 4 “جَدِيد” and the later resumption near “القهار”; restored from the surah’s transmitted later-Madani sequence using the source entry’s اختلاف note together with a checked secondary tabulation of the same ruʾūs list."
+      },
+      {
+        "ordinal_madani_2_baseline": 7,
+        "head_ar": "العقاب",
+        "source_printed_page": null,
+        "source_line_raw": null,
+        "extraction_note_en": "Missing from the local transmitted block between displayed 4 “جَدِيد” and the later resumption near “القهار”; restored from the surah’s transmitted later-Madani sequence using the source entry’s اختلاف note together with a checked secondary tabulation of the same ruʾūs list."
+      },
+      {
+        "ordinal_madani_2_baseline": 8,
+        "head_ar": "هاد",
+        "source_printed_page": null,
+        "source_line_raw": null,
+        "extraction_note_en": "Missing from the local transmitted block between displayed 4 “جَدِيد” and the later resumption near “القهار”; restored from the surah’s transmitted later-Madani sequence using the source entry’s اختلاف note together with a checked secondary tabulation of the same ruʾūs list."
+      },
+      {
+        "ordinal_madani_2_baseline": 9,
+        "head_ar": "بمقدار",
+        "source_printed_page": null,
+        "source_line_raw": null,
+        "extraction_note_en": "Missing from the local transmitted block between displayed 4 “جَدِيد” and the later resumption near “القهار”; restored from the surah’s transmitted later-Madani sequence using the source entry’s اختلاف note together with a checked secondary tabulation of the same ruʾūs list."
+      },
+      {
+        "ordinal_madani_2_baseline": 10,
+        "head_ar": "المتعال",
+        "source_printed_page": null,
+        "source_line_raw": null,
+        "extraction_note_en": "Missing from the local transmitted block between displayed 4 “جَدِيد” and the later resumption near “القهار”; restored from the surah’s transmitted later-Madani sequence using the source entry’s اختلاف note together with a checked secondary tabulation of the same ruʾūs list."
+      },
+      {
+        "ordinal_madani_2_baseline": 11,
+        "head_ar": "بالنهار",
+        "source_printed_page": null,
+        "source_line_raw": null,
+        "extraction_note_en": "Missing from the local transmitted block between displayed 4 “جَدِيد” and the later resumption near “القهار”; restored from the surah’s transmitted later-Madani sequence using the source entry’s اختلاف note together with a checked secondary tabulation of the same ruʾūs list."
+      },
+      {
+        "ordinal_madani_2_baseline": 12,
+        "head_ar": "من وال",
+        "source_printed_page": null,
+        "source_line_raw": null,
+        "extraction_note_en": "Missing from the local transmitted block between displayed 4 “جَدِيد” and the later resumption near “القهار”; restored from the surah’s transmitted later-Madani sequence using the source entry’s اختلاف note together with a checked secondary tabulation of the same ruʾūs list."
+      },
+      {
+        "ordinal_madani_2_baseline": 13,
+        "head_ar": "الثقال",
+        "source_printed_page": null,
+        "source_line_raw": null,
+        "extraction_note_en": "Missing from the local transmitted block between displayed 4 “جَدِيد” and the later resumption near “القهار”; restored from the surah’s transmitted later-Madani sequence using the source entry’s اختلاف note together with a checked secondary tabulation of the same ruʾūs list."
+      },
+      {
+        "ordinal_madani_2_baseline": 14,
+        "head_ar": "المحال",
+        "source_printed_page": null,
+        "source_line_raw": null,
+        "extraction_note_en": "Missing from the local transmitted block between displayed 4 “جَدِيد” and the later resumption near “القهار”; restored from the surah’s transmitted later-Madani sequence using the source entry’s اختلاف note together with a checked secondary tabulation of the same ruʾūs list."
+      },
+      {
+        "ordinal_madani_2_baseline": 15,
+        "head_ar": "ضلال",
+        "source_printed_page": null,
+        "source_line_raw": null,
+        "extraction_note_en": "Missing from the local transmitted block between displayed 4 “جَدِيد” and the later resumption near “القهار”; restored from the surah’s transmitted later-Madani sequence using the source entry’s اختلاف note together with a checked secondary tabulation of the same ruʾūs list."
+      },
+      {
+        "ordinal_madani_2_baseline": 16,
+        "head_ar": "الآصال",
+        "source_printed_page": null,
+        "source_line_raw": null,
+        "extraction_note_en": "Missing from the local transmitted block between displayed 4 “جَدِيد” and the later resumption near “القهار”; restored from the surah’s transmitted later-Madani sequence using the source entry’s اختلاف note together with a checked secondary tabulation of the same ruʾūs list."
+      },
+      {
+        "ordinal_madani_2_baseline": 17,
+        "head_ar": "والنور",
+        "source_printed_page": null,
+        "source_line_raw": null,
+        "extraction_note_en": "Absent from the local transmitted block. The source entry marks this disputed head as counted by all except the Kufi, and a checked secondary tabulation places it between “الآصال” and “القهار”; it is restored here in that position."
+      },
+      {
+        "ordinal_madani_2_baseline": 18,
+        "head_ar": "القهار",
+        "source_printed_page": 170,
+        "source_line_raw": "القهار",
+        "extraction_note_en": "Appears unnumbered in the surviving witness immediately after the large early omission; preserved here at ordinal 18 in the recovered later-Madani sequence."
+      },
+      {
+        "ordinal_madani_2_baseline": 19,
+        "head_ar": "الْأَمْثَال",
+        "source_printed_page": 170,
+        "source_line_raw": "١٦ - الْأَمْثَال",
+        "display_number_in_witness": 16,
+        "extraction_note_en": "The witness resumes here at displayed 16 after the omitted early interval and the unnumbered “القهار”."
+      },
+      {
+        "ordinal_madani_2_baseline": 20,
+        "head_ar": "المهاد",
+        "source_printed_page": 170,
+        "source_line_raw": "١٧ - المهاد",
+        "display_number_in_witness": 17
+      },
+      {
+        "ordinal_madani_2_baseline": 21,
+        "head_ar": "الْأَلْبَاب",
+        "source_printed_page": 170,
+        "source_line_raw": "١٨ - الْأَلْبَاب",
+        "display_number_in_witness": 18
+      },
+      {
+        "ordinal_madani_2_baseline": 22,
+        "head_ar": "الْمِيثَاق",
+        "source_printed_page": 170,
+        "source_line_raw": "١٩ - الْمِيثَاق",
+        "display_number_in_witness": 19
+      },
+      {
+        "ordinal_madani_2_baseline": 23,
+        "head_ar": "الْحساب",
+        "source_printed_page": 170,
+        "source_line_raw": "٢٠ - الْحساب",
+        "display_number_in_witness": 20
+      },
+      {
+        "ordinal_madani_2_baseline": 24,
+        "head_ar": "الدَّار",
+        "source_printed_page": 170,
+        "source_line_raw": "٢١ - الدَّار",
+        "display_number_in_witness": 21
+      },
+      {
+        "ordinal_madani_2_baseline": 25,
+        "head_ar": "الدَّار",
+        "source_printed_page": 170,
+        "source_line_raw": "٢٢ - الدَّار",
+        "display_number_in_witness": 22
+      },
+      {
+        "ordinal_madani_2_baseline": 26,
+        "head_ar": "الدَّار",
+        "source_printed_page": 170,
+        "source_line_raw": "٢٤ - الدَّار",
+        "display_number_in_witness": 24,
+        "extraction_note_en": "The witness skips displayed 23 between the second and third occurrences of “الدَّار”; the omitted display slot corresponds to the non-baseline disputed head “من كل بَاب”."
+      },
+      {
+        "ordinal_madani_2_baseline": 27,
+        "head_ar": "مَتَاع",
+        "source_printed_page": 170,
+        "source_line_raw": "٢٥ - مَتَاع",
+        "display_number_in_witness": 25
+      },
+      {
+        "ordinal_madani_2_baseline": 28,
+        "head_ar": "أناب",
+        "source_printed_page": 170,
+        "source_line_raw": "٢٦ - أناب",
+        "display_number_in_witness": 26
+      },
+      {
+        "ordinal_madani_2_baseline": 29,
+        "head_ar": "الْقُلُوب",
+        "source_printed_page": 170,
+        "source_line_raw": "٢٧ - الْقُلُوب",
+        "display_number_in_witness": 27
+      },
+      {
+        "ordinal_madani_2_baseline": 30,
+        "head_ar": "مآب",
+        "source_printed_page": 170,
+        "source_line_raw": "٢٨ - مآب",
+        "display_number_in_witness": 28
+      },
+      {
+        "ordinal_madani_2_baseline": 31,
+        "head_ar": "متاب",
+        "source_printed_page": 170,
+        "source_line_raw": "٢٩ - متاب",
+        "display_number_in_witness": 29
+      },
+      {
+        "ordinal_madani_2_baseline": 32,
+        "head_ar": "الميعاد",
+        "source_printed_page": 170,
+        "source_line_raw": "٣٠ - الميعاد",
+        "display_number_in_witness": 30
+      },
+      {
+        "ordinal_madani_2_baseline": 33,
+        "head_ar": "عِقَاب",
+        "source_printed_page": 170,
+        "source_line_raw": "٣١ - عِقَاب",
+        "display_number_in_witness": 31
+      },
+      {
+        "ordinal_madani_2_baseline": 34,
+        "head_ar": "هاد",
+        "source_printed_page": 170,
+        "source_line_raw": "٣٢ - هاد",
+        "display_number_in_witness": 32
+      },
+      {
+        "ordinal_madani_2_baseline": 35,
+        "head_ar": "واق",
+        "source_printed_page": 170,
+        "source_line_raw": "٣٣ - واق",
+        "display_number_in_witness": 33
+      },
+      {
+        "ordinal_madani_2_baseline": 36,
+        "head_ar": "النَّار",
+        "source_printed_page": 170,
+        "source_line_raw": "٣٤ - النَّار",
+        "display_number_in_witness": 34
+      },
+      {
+        "ordinal_madani_2_baseline": 37,
+        "head_ar": "مآب",
+        "source_printed_page": 170,
+        "source_line_raw": "٣٥ - مآب",
+        "display_number_in_witness": 35
+      },
+      {
+        "ordinal_madani_2_baseline": 38,
+        "head_ar": "واق",
+        "source_printed_page": 170,
+        "source_line_raw": "٣٦ - واق",
+        "display_number_in_witness": 36
+      },
+      {
+        "ordinal_madani_2_baseline": 39,
+        "head_ar": "كتاب",
+        "source_printed_page": 170,
+        "source_line_raw": "٣٧ - كتاب",
+        "display_number_in_witness": 37
+      },
+      {
+        "ordinal_madani_2_baseline": 40,
+        "head_ar": "الْكتاب",
+        "source_printed_page": 170,
+        "source_line_raw": "٣٨ - الْكتاب",
+        "display_number_in_witness": 38
+      },
+      {
+        "ordinal_madani_2_baseline": 41,
+        "head_ar": "الْحساب",
+        "source_printed_page": 170,
+        "source_line_raw": "٣٩ - الْحساب",
+        "display_number_in_witness": 39
+      },
+      {
+        "ordinal_madani_2_baseline": 42,
+        "head_ar": "الْحساب",
+        "source_printed_page": 170,
+        "source_line_raw": "٤٠ - الْحساب",
+        "display_number_in_witness": 40
+      },
+      {
+        "ordinal_madani_2_baseline": 43,
+        "head_ar": "الدَّار",
+        "source_printed_page": 170,
+        "source_line_raw": "٤١ - الدَّار",
+        "display_number_in_witness": 41
+      },
+      {
+        "ordinal_madani_2_baseline": 44,
+        "head_ar": "الْكتاب",
+        "source_printed_page": 170,
+        "source_line_raw": "٤٢ - الْكتاب",
+        "display_number_in_witness": 42
+      }
+    ],
+    "extraction_anomalies": [
+      {
+        "issue_id": "surah_013_ruus_opening_unnumbered_head",
+        "severity": "medium",
+        "section_id": "surah.013.ruus",
+        "description_en": "The first transmitted head, “لَا يُؤمنُونَ,” appears without a displayed numeral.",
+        "local_evidence_pages": [
+          170
+        ],
+        "impact_en": "The recovered ordinal layer treats this as head 1 while preserving the witness’s lack of a displayed numeral."
+      },
+      {
+        "issue_id": "surah_013_ruus_large_early_omission_after_jadid",
+        "severity": "high",
+        "section_id": "surah.013.ruus",
+        "description_en": "After displayed 4 “جَدِيد”, the local witness omits the early interval that should run through “خالدون / العقاب / هاد / بمقدار / المتعال / بالنهار / من وال / الثقال / المحال / ضلال / الآصال”, before the sequence resumes near “القهار”.",
+        "local_evidence_pages": [
+          170
+        ],
+        "impact_en": "The recovered later-Madani sequence restores this interval explicitly with null source-line fields so that the repair remains auditable."
+      },
+      {
+        "issue_id": "surah_013_ruus_missing_walnur_and_unnumbered_alqahhar",
+        "severity": "high",
+        "section_id": "surah.013.ruus",
+        "description_en": "The local witness does not transmit the disputed later-Madani head “والنور” at all, and it gives “القهار” without a displayed numeral before resuming with displayed 16 “الْأَمْثَال”.",
+        "local_evidence_pages": [
+          170
+        ],
+        "impact_en": "The dataset restores “والنور” from the source entry’s disagreement notice and the checked secondary tabulation, and preserves “القهار” as an unnumbered transmitted head in its recovered position."
+      },
+      {
+        "issue_id": "surah_013_ruus_display_skip_23",
+        "severity": "medium",
+        "section_id": "surah.013.ruus",
+        "description_en": "Later in the block, the witness jumps from displayed 22 “الدَّار” to displayed 24 “الدَّار”.",
+        "local_evidence_pages": [
+          170
+        ],
+        "impact_en": "The omitted display slot corresponds to the non-baseline disputed head “من كل بَاب”; the later-Madani sequence therefore keeps the three transmitted “الدَّار” heads while preserving the display skip as witness metadata."
+      },
+      {
+        "issue_id": "surah_013_ruus_terminal_blank_43",
+        "severity": "medium",
+        "section_id": "surah.013.ruus",
+        "description_en": "The witness ends with a blank terminal display-total line, rendered locally as “٤ - ٣”.",
+        "local_evidence_pages": [
+          170
+        ],
+        "impact_en": "The terminal line is preserved as display metadata only and is not treated as an additional head."
+      },
+      {
+        "issue_id": "surah_013_ruus_display_numbering_semantics",
+        "severity": "low",
+        "section_id": "surah.013.ruus",
+        "description_en": "Because the transmitted block begins unnumbered, loses a long early interval, omits the disputed head “والنور”, transmits “القهار” without a numeral, skips displayed 23, and ends with a blank terminal line, the displayed numerals do not function as a reliable independent ordinal layer.",
+        "local_evidence_pages": [
+          170
+        ],
+        "impact_en": "The dataset stores recovered later-Madani ordinals separately from witness display numerals and marks every restoration explicitly."
+      }
+    ]
+  }
+}

@@ -30,16 +30,92 @@
       "1": {
         "end": {
           "word": "الرحيم",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 139",
+              "supports": [
+                "makki",
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة في الملف al_bayan_pilot_surah_001_al_hamd.json: (بسم الله الرحمن الرحيم)"
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 27",
+              "supports": [
+                "makki",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.fatiha.commentary"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 27",
+              "supports": [
+                "makki",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.fatiha.poem"
+            }
+          ]
         }
       },
       "7": {
         "internal": [
           {
             "word": "عليهم",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 139",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_pilot_surah_001_al_hamd.json: (أنعمت عليهم)"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 27",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.fatiha.commentary"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 27",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.fatiha.poem"
+              }
+            ]
           }
         ]
       }
@@ -48,69 +124,399 @@
       "1": {
         "end": {
           "word": "الم",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 140",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة في الملف al_bayan_batch2_surah_002_al_baqarah.json: (الم)"
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 28-29",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.baqarah.commentary.openings"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 28",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.baqarah.poem.openings"
+            }
+          ]
         }
       },
       "10": {
         "internal": [
           {
             "word": "أليم",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 140",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch2_surah_002_al_baqarah.json: (عذاب أليم)"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 29",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.baqarah.commentary.alim_muslihun"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 29",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.baqarah.poem.alim_muslihun"
+              }
+            ]
           }
         ]
       },
       "11": {
         "end": {
           "word": "مصلحون",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 140",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "basri",
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة في الملف al_bayan_batch2_surah_002_al_baqarah.json: (مصلحون)"
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 29",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "basri",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.baqarah.commentary.alim_muslihun"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 29",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "basri",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.baqarah.poem.alim_muslihun"
+            }
+          ]
         }
       },
       "114": {
         "internal": [
           {
             "word": "خائفين",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 140",
+                "supports": [
+                  "basri"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch2_surah_002_al_baqarah.json: (إلا خائفين)"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 29-30",
+                "supports": [
+                  "basri"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.baqarah.commentary.khaifin_albab_khalaq"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 29",
+                "supports": [
+                  "basri"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.baqarah.poem.khaifin_albab_khalaq"
+              }
+            ]
           }
         ]
       },
       "197": {
         "end": {
           "word": "الألباب",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 140",
+              "supports": [
+                "madani-last",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة في الملف al_bayan_batch2_surah_002_al_baqarah.json: (يا أولي الألباب)"
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 29-30",
+              "supports": [
+                "madani-last",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.baqarah.commentary.khaifin_albab_khalaq"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 29",
+              "supports": [
+                "madani-last",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.baqarah.poem.khaifin_albab_khalaq"
+            }
+          ]
         }
       },
       "200": {
         "end": {
           "word": "خلاق",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 140",
+              "supports": [
+                "madani-first",
+                "makki",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة في الملف al_bayan_batch2_surah_002_al_baqarah.json: (من خلاق) — second occurrence"
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 29-30",
+              "supports": [
+                "madani-first",
+                "makki",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.baqarah.commentary.khaifin_albab_khalaq"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 29",
+              "supports": [
+                "madani-first",
+                "makki",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.baqarah.poem.khaifin_albab_khalaq"
+            }
+          ]
         }
       },
       "219": {
         "internal": [
           {
             "word": "ينفقون",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 140",
+                "supports": [
+                  "madani-first",
+                  "makki"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch2_surah_002_al_baqarah.json: (ماذا ينفقون) — second occurrence"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 30",
+                "supports": [
+                  "madani-first",
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.baqarah.commentary.yunfiqun"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 30",
+                "supports": [
+                  "madani-first",
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.baqarah.poem.yunfiqun"
+              }
+            ]
           }
         ],
         "end": {
           "word": "تتفكرون",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 140",
+              "supports": [
+                "madani-last",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة في الملف al_bayan_batch2_surah_002_al_baqarah.json: (لعلكم تتفكرون) — first occurrence"
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 30",
+              "supports": [
+                "madani-last",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.baqarah.commentary.tatafakkarun"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 30",
+              "supports": [
+                "madani-last",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.baqarah.poem.tatafakkarun"
+            }
+          ]
         }
       },
       "235": {
         "internal": [
           {
             "word": "معروفا",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 140",
+                "supports": [
+                  "basri"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch2_surah_002_al_baqarah.json: (قولا معروفا)"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 31",
+                "supports": [
+                  "basri"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.baqarah.commentary.marufa_qayyum"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 31",
+                "supports": [
+                  "basri"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.baqarah.poem.marufa_qayyum"
+              }
+            ]
           }
         ]
       },
@@ -118,8 +524,46 @@
         "internal": [
           {
             "word": "القيوم",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 140",
+                "supports": [
+                  "madani-last",
+                  "makki",
+                  "basri"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch2_surah_002_al_baqarah.json: (الحي القيوم) — Counted by consensus in Āl ʿImrān; omitted by consensus in Ṭā Hā."
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 31",
+                "supports": [
+                  "madani-last",
+                  "makki",
+                  "basri"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.baqarah.commentary.marufa_qayyum"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 31",
+                "supports": [
+                  "madani-last",
+                  "makki",
+                  "basri"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.baqarah.poem.marufa_qayyum"
+              }
+            ]
           }
         ]
       },
@@ -139,6 +583,37 @@
                 "strength": "direct",
                 "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، 1414هـ/1994م",
                 "note": "يسمي الداني هذه المواضع ضمن ما انفرد بعدّه المدني الأول."
+              },
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 140",
+                "supports": [
+                  "madani-first"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch2_surah_002_al_baqarah.json: (من الظلمات إلى النور)"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 31",
+                "supports": [
+                  "madani-first"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.baqarah.commentary.ila_alnur_shahid"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 31",
+                "supports": [
+                  "madani-first"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.baqarah.poem.ila_alnur_shahid"
               }
             ]
           }
@@ -149,39 +624,223 @@
       "1": {
         "end": {
           "word": "الم",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 143",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة في الملف al_bayan_batch3_surah_003_al_imran.json: (ألم)"
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 28-29",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.baqarah.commentary.openings"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 28",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.baqarah.poem.openings"
+            }
+          ]
         }
       },
       "3": {
         "end": {
           "word": "والإنجيل",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 143",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "basri",
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة في الملف al_bayan_batch3_surah_003_al_imran.json: (الإنجيل) — first occurrence"
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 32",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "basri",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.al_imran.commentary.injil_furqan_israil"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 32",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "basri",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.al_imran.poem.injil_furqan_israil"
+            }
+          ]
         }
       },
       "4": {
         "internal": [
           {
             "word": "الفرقان",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 143",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch3_surah_003_al_imran.json: (وأنزل الفرقان)"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 32",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.al_imran.commentary.injil_furqan_israil"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 32",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.al_imran.poem.injil_furqan_israil"
+              }
+            ]
           }
         ]
       },
       "48": {
         "end": {
           "word": "والإنجيل",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 143",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة في الملف al_bayan_batch3_surah_003_al_imran.json: (الإنجيل) — second occurrence — All of them omit “الإنجيل” in al-Māʾida, al-Aʿrāf, and al-Fatḥ."
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 32",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.al_imran.commentary.injil_furqan_israil"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 32",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.al_imran.poem.injil_furqan_israil"
+            }
+          ]
         }
       },
       "49": {
         "internal": [
           {
             "word": "إسرائيل",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 143",
+                "supports": [
+                  "basri"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch3_surah_003_al_imran.json: (ورسولا إلى بني إسرائيل)"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 32",
+                "supports": [
+                  "basri"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.al_imran.commentary.injil_furqan_israil"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 32",
+                "supports": [
+                  "basri"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.al_imran.poem.injil_furqan_israil"
+              }
+            ]
           }
         ]
       },
@@ -189,8 +848,34 @@
         "internal": [
           {
             "word": "تحبون",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "disputed",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 32-33",
+                "supports": [
+                  "madani-last",
+                  "makki",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.al_imran.commentary.mimma_tuhibbun"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 32",
+                "supports": [
+                  "madani-last",
+                  "makki",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.al_imran.poem.mimma_tuhibbun"
+              }
+            ],
+            "note": "شرح نفائس البيان يثبت هذا الموضع للمكي والدمشقي وشيبة، وهو ما يوافق طبقة المدني الأخير في المشروع، بينما ملف البيان المورّد يشفّر هذا الموضع مع ملاحظة انقسام داخلي في النقل المدني هنا. يحتاج تحويل هذا النقل إلى إحدى طبقتي المدني في المشروع إلى مراجعة أولية أدق."
           }
         ]
       },
@@ -198,8 +883,32 @@
         "internal": [
           {
             "word": "إبراهيم",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 33",
+                "supports": [
+                  "madani-first",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.al_imran.commentary.maqam_ibrahim"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 33",
+                "supports": [
+                  "madani-first",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.al_imran.poem.maqam_ibrahim"
+              }
+            ],
+            "note": "شرح نفائس البيان يثبت مقام إبراهيم للشامي وأبي جعفر، وهو ما يوافق دعوى المشروع. لم يقدّم ملف البيان المورّد في هذه الدفعة مدخلا أوليا مطابقا لهذا الموضع بعد."
           }
         ]
       }
@@ -208,16 +917,83 @@
       "44": {
         "end": {
           "word": "السبيل",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 146",
+              "supports": [
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة في الملف al_bayan_batch4_surah_004_al_nisa.json: (أَن تضلوا السَّبِيل)"
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 33",
+              "supports": [
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.nisa.commentary.sabil_alim"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 33",
+              "supports": [
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.nisa.poem.sabil_alim"
+            }
+          ]
         }
       },
       "173": {
         "internal": [
           {
             "word": "أليما",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 146",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch4_surah_004_al_nisa.json: (فيعذبهم عذَابا أَلِيمًا)"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 33",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.nisa.commentary.sabil_alim"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 33",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.nisa.poem.sabil_alim"
+              }
+            ]
           }
         ]
       }
@@ -227,8 +1003,52 @@
         "internal": [
           {
             "word": "بالعقود",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 149",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch5_surah_005_al_maida.json: (أَوْفُوا بِالْعُقُودِ)"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 34",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.maidah.commentary.uqud_kathir_ghalibun"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 34",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.maidah.poem.uqud_kathir_ghalibun"
+              }
+            ]
           }
         ]
       },
@@ -236,8 +1056,52 @@
         "internal": [
           {
             "word": "كثير",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 149",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch5_surah_005_al_maida.json: (وَيَعْفُو عَن كَثِير)"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 34",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.maidah.commentary.uqud_kathir_ghalibun"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 34",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.maidah.poem.uqud_kathir_ghalibun"
+              }
+            ]
           }
         ]
       },
@@ -245,8 +1109,40 @@
         "internal": [
           {
             "word": "غالبون",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 149",
+                "supports": [
+                  "basri"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch5_surah_005_al_maida.json: (فَإِنَّكُم غَالِبُون)"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 34",
+                "supports": [
+                  "basri"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.maidah.commentary.uqud_kathir_ghalibun"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 34",
+                "supports": [
+                  "basri"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.maidah.poem.uqud_kathir_ghalibun"
+              }
+            ]
           }
         ]
       }
@@ -256,24 +1152,124 @@
         "internal": [
           {
             "word": "والنور",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 151-152",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch6_surah_006_al_anam.json: (وَجعل الظُّلُمَات والنور)"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 34",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.anam.commentary.nur"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 34",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.anam.poem.nur"
+              }
+            ]
           }
         ]
       },
       "66": {
         "end": {
           "word": "بوكيل",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 151-152",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة في الملف al_bayan_batch6_surah_006_al_anam.json: (قل لست عَلَيْكُم بوكيل)"
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 35",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.anam.commentary.biwakil_mustaqim_fayakun"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 34-35",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.anam.poem.biwakil_mustaqim_fayakun"
+            }
+          ]
         }
       },
       "73": {
         "internal": [
           {
             "word": "فيكون",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "disputed",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 35",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.anam.commentary.biwakil_mustaqim_fayakun"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 34-35",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.anam.poem.biwakil_mustaqim_fayakun"
+              }
+            ],
+            "note": "شرح نفائس البيان يثبت {فيكون} لغير الكوفي، بينما نص البيان المورّد في هذه الدفعة يذكر بعد {كن فيكون} الموضع الثاني من {إلى صراط مستقيم} مع {دينا قيما}. هذا التعارض ما يزال مفتوحا ويحتاج مراجعة مباشرة على الشاهد الأولي."
           }
         ]
       },
@@ -281,8 +1277,52 @@
         "internal": [
           {
             "word": "مستقيم",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 151-152",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch6_surah_006_al_anam.json: (إِلَى صِرَاط مُسْتَقِيم) — second occurrence after “كن فَيكون”"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 35",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.anam.commentary.biwakil_mustaqim_fayakun"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 34-35",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.anam.poem.biwakil_mustaqim_fayakun"
+              }
+            ]
           }
         ]
       }
@@ -291,30 +1331,167 @@
       "1": {
         "end": {
           "word": "المص",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 155",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة في الملف al_bayan_batch7_surah_007_al_araf.json: (المص)"
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 28-29",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.baqarah.commentary.openings"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 28",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.baqarah.poem.openings"
+            }
+          ]
         }
       },
       "29": {
         "internal": [
           {
             "word": "الدين",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 155",
+                "supports": [
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch7_surah_007_al_araf.json: (مُخلصين لَهُ الدّين)"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 35",
+                "supports": [
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.araf.commentary.din_taudun"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 35",
+                "supports": [
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.anam_araf.poem.fayakun_din_taudun"
+              }
+            ]
           }
         ],
         "end": {
           "word": "تعودون",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 155",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة في الملف al_bayan_batch7_surah_007_al_araf.json: (كَمَا بَدَأَكُمْ تعودُونَ)"
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 35",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.araf.commentary.din_taudun"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 35",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.anam_araf.poem.fayakun_din_taudun"
+            }
+          ]
         }
       },
       "38": {
         "internal": [
           {
             "word": "النار",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 155",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch7_surah_007_al_araf.json: (ضعفا من النَّار)"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 35-36",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.araf.commentary.nar_israil"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 35",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.araf.poem.nar_israil"
+              }
+            ]
           }
         ]
       },
@@ -322,8 +1499,46 @@
         "internal": [
           {
             "word": "إسرائيل",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 155",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch7_surah_007_al_araf.json: (الْحسنى على بني إِسْرَائِيل) — third occurrence"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 35-36",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.araf.commentary.nar_israil"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 35",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.araf.poem.nar_israil"
+              }
+            ]
           }
         ]
       }
@@ -333,8 +1548,43 @@
         "internal": [
           {
             "word": "يغلبون",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 158",
+                "supports": [
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch8_surah_008_al_anfal.json: (ثُمَّ يَغْلِبُونَ)"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 36",
+                "supports": [
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.anfal.commentary.yughlabun_mafulan_1"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 36",
+                "supports": [
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.anfal.poem.yughlabun_mafulan_1"
+              }
+            ]
           }
         ]
       },
@@ -342,16 +1592,104 @@
         "internal": [
           {
             "word": "مفعولا",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 158",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch8_surah_008_al_anfal.json: (لِيَقْضِيَ الله أَمْرًا كَانَ مَفْعُولًا)"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 36",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.anfal.commentary.yughlabun_mafulan_1"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 36",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.anfal.poem.yughlabun_mafulan_1"
+              }
+            ]
           }
         ]
       },
       "62": {
         "end": {
           "word": "وبالمؤمنين",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 158",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة في الملف al_bayan_batch8_surah_008_al_anfal.json: (بِنَصْرِهِ وَبِالْمُؤْمِنِينَ)"
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 36-37",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.anfal.commentary.bilmuminin"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 36",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.anfal_tawbah.poem.bilmuminin_mushrikin_thani"
+            }
+          ]
         }
       }
     },
@@ -360,8 +1698,40 @@
         "internal": [
           {
             "word": "المشركين",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 160-161",
+                "supports": [
+                  "basri"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch9_surah_009_al_tawbah.json: (أَن الله بَرِيء من الْمُشْركين)"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 37",
+                "supports": [
+                  "basri"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.tawbah.commentary.mushrikin_thani"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 36",
+                "supports": [
+                  "basri"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.anfal_tawbah.poem.bilmuminin_mushrikin_thani"
+              }
+            ]
           }
         ]
       },
@@ -369,8 +1739,40 @@
         "internal": [
           {
             "word": "أليما",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 160-161",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch9_surah_009_al_tawbah.json: (إِلَّا تنفرُوا يعذبكم عذَابا أَلِيمًا) — first occurrence"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 37",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.tawbah.commentary.qayyim_aliman_thamud"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 37",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.tawbah.poem.qayyim_aliman_thamud"
+              }
+            ]
           }
         ]
       },
@@ -378,8 +1780,46 @@
         "internal": [
           {
             "word": "وثمود",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 160-161",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch9_surah_009_al_tawbah.json: (وَعَاد وَثَمُود)"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 37",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.tawbah.commentary.qayyim_aliman_thamud"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 37",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.tawbah.poem.qayyim_aliman_thamud"
+              }
+            ]
           }
         ]
       }
@@ -389,22 +1829,130 @@
         "internal": [
           {
             "word": "الدين",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 163",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch10_surah_010_yunus.json: (مُخلصين لَهُ الدّين)"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 38",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.yunus.commentary.din_sudur_shakirin"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 38",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.yunus.poem.din_sudur_shakirin"
+              }
+            ]
           }
         ],
         "end": {
           "word": "الشاكرين",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 163",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "basri",
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة في الملف al_bayan_batch10_surah_010_yunus.json: (لنكونن من الشَّاكِرِينَ)"
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 38",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "basri",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.yunus.commentary.din_sudur_shakirin"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 38",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "basri",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.yunus.poem.din_sudur_shakirin"
+            }
+          ]
         }
       },
       "57": {
         "internal": [
           {
             "word": "الصدور",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 163",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch10_surah_010_yunus.json: (وشفاء لما فِي الصُّدُور)"
+              },
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 38",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.yunus.commentary.din_sudur_shakirin"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 38",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.yunus.poem.din_sudur_shakirin"
+              }
+            ]
           }
         ]
       }
@@ -413,52 +1961,321 @@
       "54": {
         "end": {
           "word": "تشركون",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 38",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.hud.commentary.tushrikun_lut_2"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 38",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.hud.poem.tushrikun_lut_2"
+            },
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 165",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة في الملف al_bayan_batch11_surah_011_hud.json: (إِنِّي بَرِيء مِمَّا تشركون)"
+            }
+          ]
         }
       },
       "74": {
         "end": {
           "word": "لوط",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 38",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.hud.commentary.tushrikun_lut_2"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 38",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.hud.poem.tushrikun_lut_2"
+            },
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 165",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة في الملف al_bayan_batch11_surah_011_hud.json: (يجادلنا فِي قوم لوط)"
+            }
+          ]
         }
       },
       "82": {
         "internal": [
           {
             "word": "سجيل",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 39",
+                "supports": [
+                  "madani-last",
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.hud.commentary.sijjil_mandud"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 39",
+                "supports": [
+                  "madani-last",
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.hud.poem.sijjil_mandud"
+              },
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 165",
+                "supports": [
+                  "madani-last",
+                  "makki"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch11_surah_011_hud.json: (من سجيل)"
+              }
+            ]
           }
         ],
         "end": {
           "word": "منضود",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 39",
+              "supports": [
+                "madani-first",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.hud.commentary.sijjil_mandud"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 39",
+              "supports": [
+                "madani-first",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.hud.poem.sijjil_mandud"
+            },
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 165",
+              "supports": [
+                "madani-first",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة في الملف al_bayan_batch11_surah_011_hud.json: (منضود)"
+            }
+          ]
         }
       },
       "86": {
         "internal": [
           {
             "word": "مؤمنين",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 39",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.hud.commentary.muminin_mukhtalifin_amilun"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 39",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.hud.poem.muminin_mukhtalifin_amilun"
+              },
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 165",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch11_surah_011_hud.json: (إِن كُنْتُم مُؤمنين)"
+              }
+            ]
           }
         ]
       },
       "118": {
         "end": {
           "word": "مختلفين",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 39",
+              "supports": [
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.hud.commentary.muminin_mukhtalifin_amilun"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 39",
+              "supports": [
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.hud.poem.muminin_mukhtalifin_amilun"
+            },
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 165",
+              "supports": [
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة في الملف al_bayan_batch11_surah_011_hud.json: (وَلَا يزالون مُخْتَلفين)"
+            }
+          ]
         }
       },
       "121": {
         "end": {
           "word": "عاملون",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 39",
+              "supports": [
+                "madani-first",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.hud.commentary.muminin_mukhtalifin_amilun"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 39",
+              "supports": [
+                "madani-first",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.hud.poem.muminin_mukhtalifin_amilun"
+            },
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 165",
+              "supports": [
+                "madani-first",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة في الملف al_bayan_batch11_surah_011_hud.json: (إِنَّا عاملون)"
+            }
+          ]
         }
       }
     },
@@ -467,8 +2284,52 @@
         "internal": [
           {
             "word": "جديد",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 40",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.rad.commentary.jadid_nur_basir"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 40",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.rad.poem.jadid_nur_basir"
+              },
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 169",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch13_surah_013_al_rad.json: (لفي خلق جَدِيد)"
+              }
+            ]
           }
         ]
       },
@@ -476,13 +2337,89 @@
         "internal": [
           {
             "word": "والبصير",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 40",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.rad.commentary.jadid_nur_basir"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 40",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.rad.poem.jadid_nur_basir"
+              },
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 169",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch13_surah_013_al_rad.json: (قل هَل يَسْتَوِي الْأَعْمَى والبصير)"
+              }
+            ]
           },
           {
             "word": "والنور",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 40",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.rad.commentary.jadid_nur_basir"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 40",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.rad.poem.jadid_nur_basir"
+              },
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 169",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch13_surah_013_al_rad.json: (أم هَل تستوي الظُّلُمَات والنور)"
+              }
+            ]
           }
         ]
       },
@@ -490,16 +2427,86 @@
         "internal": [
           {
             "word": "الحساب",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 40",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.rad.commentary.su_al_hisab_batil_min_kulli_bab"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 40",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.rad.poem.su_al_hisab_batil_min_kulli_bab"
+              },
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 169",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة في الملف al_bayan_batch13_surah_013_al_rad.json: (أُولَئِكَ لَهُم سوء الْحساب)"
+              }
+            ]
           }
         ]
       },
       "23": {
         "end": {
           "word": "باب",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 40",
+              "supports": [
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.rad.commentary.su_al_hisab_batil_min_kulli_bab"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 40",
+              "supports": [
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.rad.poem.su_al_hisab_batil_min_kulli_bab"
+            },
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 169",
+              "supports": [
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة في الملف al_bayan_batch13_surah_013_al_rad.json: (من كل بَاب)"
+            }
+          ]
         }
       }
     },
@@ -508,8 +2515,35 @@
         "internal": [
           {
             "word": "النور",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 41",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.ibrahim.commentary.kila_al_nur_thamud"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 41",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.ibrahim.poem.kila_al_nur_thamud"
+              }
+            ]
           }
         ]
       },
@@ -517,8 +2551,35 @@
         "internal": [
           {
             "word": "النور",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 41",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.ibrahim.commentary.kila_al_nur_thamud"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 41",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.ibrahim.poem.kila_al_nur_thamud"
+              }
+            ]
           }
         ]
       },
@@ -526,16 +2587,68 @@
         "internal": [
           {
             "word": "وثمود",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 41",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.ibrahim.commentary.kila_al_nur_thamud"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 41",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.ibrahim.poem.kila_al_nur_thamud"
+              }
+            ]
           }
         ]
       },
       "19": {
         "end": {
           "word": "جديد",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 41",
+              "supports": [
+                "madani-first",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.ibrahim.commentary.jadid_fi_al_sama_al_nahar_al_zalimun"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 41",
+              "supports": [
+                "madani-first",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.ibrahim.poem.jadid_fi_al_sama_al_nahar_al_zalimun"
+            }
+          ]
         }
       },
       "24": {
@@ -557,6 +2670,34 @@
               "strength": "derived",
               "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، 1414هـ/1994م",
               "note": "يذكرها الداني ضمن ما أسقطه المدني الأول، فيكون عدُّها عند الباقين مفهوماً من بنية الباب."
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 41",
+              "supports": [
+                "madani-last",
+                "makki",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.ibrahim.commentary.jadid_fi_al_sama_al_nahar_al_zalimun"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 41",
+              "supports": [
+                "madani-last",
+                "makki",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.ibrahim.poem.jadid_fi_al_sama_al_nahar_al_zalimun"
             }
           ]
         }
@@ -564,16 +2705,66 @@
       "33": {
         "end": {
           "word": "والنهار",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 41",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.ibrahim.commentary.jadid_fi_al_sama_al_nahar_al_zalimun"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 41",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.ibrahim.poem.jadid_fi_al_sama_al_nahar_al_zalimun"
+            }
+          ]
         }
       },
       "42": {
         "internal": [
           {
             "word": "الظالمون",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 41",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.ibrahim.commentary.jadid_fi_al_sama_al_nahar_al_zalimun"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 41",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.ibrahim.poem.jadid_fi_al_sama_al_nahar_al_zalimun"
+              }
+            ]
           }
         ]
       }
@@ -582,8 +2773,29 @@
       "107": {
         "end": {
           "word": "سجدا",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 42",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.isra_kahf.commentary.sujjadan_huda_qalil_ghadan"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 42",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.isra_kahf.poem.sujjadan_huda_qalil_ghadan"
+            }
+          ]
         }
       }
     },
@@ -591,82 +2803,363 @@
       "13": {
         "end": {
           "word": "هدى",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 42",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "basri",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.isra_kahf.commentary.sujjadan_huda_qalil_ghadan"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 42",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "basri",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.isra_kahf.poem.sujjadan_huda_qalil_ghadan"
+            }
+          ]
         }
       },
       "22": {
         "internal": [
           {
             "word": "قليل",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 42",
+                "supports": [
+                  "madani-last"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.isra_kahf.commentary.sujjadan_huda_qalil_ghadan"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 42",
+                "supports": [
+                  "madani-last"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.isra_kahf.poem.sujjadan_huda_qalil_ghadan"
+              }
+            ]
           }
         ]
       },
       "23": {
         "end": {
           "word": "غدا",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 42",
+              "supports": [
+                "madani-first",
+                "makki",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.isra_kahf.commentary.sujjadan_huda_qalil_ghadan"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 42",
+              "supports": [
+                "madani-first",
+                "makki",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.isra_kahf.poem.sujjadan_huda_qalil_ghadan"
+            }
+          ]
         }
       },
       "32": {
         "end": {
           "word": "زرعا",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 42-43",
+              "supports": [
+                "madani-last",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.kahf.commentary.zaran_abadan_sababan"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 42",
+              "supports": [
+                "madani-last",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.kahf.poem.zaran_abadan_sababan"
+            }
+          ]
         }
       },
       "35": {
         "end": {
           "word": "أبدا",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 42-43",
+              "supports": [
+                "madani-first",
+                "makki",
+                "basri",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.kahf.commentary.zaran_abadan_sababan"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 42",
+              "supports": [
+                "madani-first",
+                "makki",
+                "basri",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.kahf.poem.zaran_abadan_sababan"
+            }
+          ]
         }
       },
       "84": {
         "end": {
           "word": "سببا",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 42-43",
+              "supports": [
+                "madani-last",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.kahf.commentary.zaran_abadan_sababan"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 42",
+              "supports": [
+                "madani-last",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.kahf.poem.zaran_abadan_sababan"
+            }
+          ]
         }
       },
       "85": {
         "end": {
           "word": "سببا",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 42-43",
+              "supports": [
+                "basri",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.kahf.commentary.zaran_abadan_sababan"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 42",
+              "supports": [
+                "basri",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.kahf.poem.zaran_abadan_sababan"
+            }
+          ]
         }
       },
       "86": {
         "internal": [
           {
             "word": "قوما",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 43",
+                "supports": [
+                  "madani-first",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.kahf.commentary.qawman_amalan"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 43",
+                "supports": [
+                  "madani-first",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.kahf.poem.qawman_amalan"
+              }
+            ]
           }
         ]
       },
       "89": {
         "end": {
           "word": "سببا",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 42-43",
+              "supports": [
+                "basri",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.kahf.commentary.zaran_abadan_sababan"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 42",
+              "supports": [
+                "basri",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.kahf.poem.zaran_abadan_sababan"
+            }
+          ]
         }
       },
       "92": {
         "end": {
           "word": "سببا",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 42-43",
+              "supports": [
+                "basri",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.kahf.commentary.zaran_abadan_sababan"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 42",
+              "supports": [
+                "basri",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.kahf.poem.zaran_abadan_sababan"
+            }
+          ]
         }
       },
       "103": {
         "end": {
           "word": "أعمالا",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 43",
+              "supports": [
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.kahf.commentary.qawman_amalan"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 43",
+              "supports": [
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.kahf.poem.qawman_amalan"
+            }
+          ]
         }
       }
     },
@@ -674,16 +3167,60 @@
       "1": {
         "end": {
           "word": "كهيعص",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 28-29",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.baqarah.commentary.openings"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 28",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.baqarah.poem.openings"
+            }
+          ]
         }
       },
       "41": {
         "internal": [
           {
             "word": "إبراهيم",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 44",
+                "supports": [
+                  "madani-last",
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.maryam.commentary.ibrahim_madda"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 44",
+                "supports": [
+                  "madani-last",
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.maryam.poem.ibrahim_madda"
+              }
+            ]
           }
         ]
       },
@@ -691,8 +3228,37 @@
         "internal": [
           {
             "word": "مدا",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 44",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.maryam.commentary.ibrahim_madda"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 44",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.maryam.poem.ibrahim_madda"
+              }
+            ]
           }
         ]
       }
@@ -701,30 +3267,136 @@
       "1": {
         "end": {
           "word": "طه",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 28-29",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.baqarah.commentary.openings"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 28",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.baqarah.poem.openings"
+            }
+          ]
         }
       },
       "33": {
         "end": {
           "word": "كثيرا",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 44",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.taha.commentary.kathiran_minni"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 44",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.taha.poem.kathiran_minni"
+            }
+          ]
         }
       },
       "34": {
         "end": {
           "word": "كثيرا",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 44",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.taha.commentary.kathiran_minni"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 44",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.taha.poem.kathiran_minni"
+            }
+          ]
         }
       },
       "39": {
         "internal": [
           {
             "word": "مني",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 44",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.commentary.kathiran_minni"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 44",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.poem.kathiran_minni"
+              }
+            ]
           }
         ]
       },
@@ -732,34 +3404,143 @@
         "internal": [
           {
             "word": "تحزن",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 44-45",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.commentary.fi_al_yam_tahzan_israil_madyan_musa"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 44",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.poem.fi_al_yam_tahzan_israil_madyan_musa"
+              }
+            ]
           },
           {
             "word": "فتونا",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 45",
+                "supports": [
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.commentary.futunan_linafsi_ma_ghashiyahum_asifa"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 45",
+                "supports": [
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.poem.futunan_linafsi_ma_ghashiyahum_asifa"
+              }
+            ]
           },
           {
             "word": "مدين",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 44-45",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.commentary.fi_al_yam_tahzan_israil_madyan_musa"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 44",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.poem.fi_al_yam_tahzan_israil_madyan_musa"
+              }
+            ]
           }
         ]
       },
       "41": {
         "end": {
           "word": "لنفسي",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 45",
+              "supports": [
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.taha.commentary.futunan_linafsi_ma_ghashiyahum_asifa"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 45",
+              "supports": [
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.taha.poem.futunan_linafsi_ma_ghashiyahum_asifa"
+            }
+          ]
         }
       },
       "47": {
         "internal": [
           {
             "word": "إسرائيل",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 44-45",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.commentary.fi_al_yam_tahzan_israil_madyan_musa"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 44",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.poem.fi_al_yam_tahzan_israil_madyan_musa"
+              }
+            ]
           }
         ]
       },
@@ -767,82 +3548,343 @@
         "internal": [
           {
             "word": "موسى",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 44-45",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.commentary.fi_al_yam_tahzan_israil_madyan_musa"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 44",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.poem.fi_al_yam_tahzan_israil_madyan_musa"
+              }
+            ]
           }
         ]
       },
       "78": {
         "end": {
           "word": "غشيهم",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 45",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.taha.commentary.futunan_linafsi_ma_ghashiyahum_asifa"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 45",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.taha.poem.futunan_linafsi_ma_ghashiyahum_asifa"
+            }
+          ]
         }
       },
       "86": {
         "internal": [
           {
             "word": "أسفا",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 45",
+                "supports": [
+                  "madani-first",
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.commentary.futunan_linafsi_ma_ghashiyahum_asifa"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 45",
+                "supports": [
+                  "madani-first",
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.poem.futunan_linafsi_ma_ghashiyahum_asifa"
+              }
+            ]
           },
           {
             "word": "حسنا",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 46",
+                "supports": [
+                  "madani-last"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.commentary.alqa_al_samiri_wadan_hasanan_qawlan"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 45",
+                "supports": [
+                  "madani-last"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.poem.alqa_al_samiri_wadan_hasanan_qawlan"
+              }
+            ]
           }
         ]
       },
       "87": {
         "end": {
           "word": "السامري",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 46",
+              "supports": [
+                "madani-first",
+                "makki",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.taha.commentary.alqa_al_samiri_wadan_hasanan_qawlan"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 45",
+              "supports": [
+                "madani-first",
+                "makki",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.taha.poem.alqa_al_samiri_wadan_hasanan_qawlan"
+            }
+          ]
         }
       },
       "88": {
         "internal": [
           {
             "word": "موسى",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 46",
+                "supports": [
+                  "madani-first",
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.commentary.ilahu_musa_fanasiya"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 46",
+                "supports": [
+                  "madani-first",
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.poem.ilahu_musa_fanasiya"
+              }
+            ]
           }
         ],
         "end": {
           "word": "فنسي",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 46",
+              "supports": [
+                "madani-last",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.taha.commentary.ilahu_musa_fanasiya"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 46",
+              "supports": [
+                "madani-last",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.taha.poem.ilahu_musa_fanasiya"
+            }
+          ]
         }
       },
       "89": {
         "internal": [
           {
             "word": "قولا",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 46",
+                "supports": [
+                  "madani-last"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.commentary.alqa_al_samiri_wadan_hasanan_qawlan"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 45",
+                "supports": [
+                  "madani-last"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.poem.alqa_al_samiri_wadan_hasanan_qawlan"
+              }
+            ]
           }
         ]
       },
       "92": {
         "end": {
           "word": "ضلوا",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 46",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.taha.commentary.raaytahum_dallu_safsafa"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 46",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.taha.poem.raaytahum_dallu_safsafa"
+            }
+          ]
         }
       },
       "106": {
         "end": {
           "word": "صفصفا",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 46",
+              "supports": [
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.taha.commentary.raaytahum_dallu_safsafa"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 46",
+              "supports": [
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.taha.poem.raaytahum_dallu_safsafa"
+            }
+          ]
         }
       },
       "123": {
         "internal": [
           {
             "word": "هدى",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 47",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.commentary.minni_hudan_dunya_dankan"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 46",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.poem.minni_hudan_dunya_dankan"
+              }
+            ]
           }
         ]
       },
@@ -850,8 +3892,37 @@
         "internal": [
           {
             "word": "الدنيا",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 47",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.commentary.minni_hudan_dunya_dankan"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 46",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.taha.poem.minni_hudan_dunya_dankan"
+              }
+            ]
           }
         ]
       }
@@ -860,8 +3931,29 @@
       "66": {
         "end": {
           "word": "يضركم",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 47-48",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.anbiya_hajj.commentary.yadurrukum_hamim_julud_thamud_lut"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 47",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.anbiya_hajj.poem.yadurrukum_hamim_thamud_lut_muslimin"
+            }
+          ]
         }
       }
     },
@@ -869,37 +3961,157 @@
       "19": {
         "end": {
           "word": "الحميم",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 47-48",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.anbiya_hajj.commentary.yadurrukum_hamim_julud_thamud_lut"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 47",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.anbiya_hajj.poem.yadurrukum_hamim_thamud_lut_muslimin"
+            }
+          ]
         }
       },
       "20": {
         "end": {
           "word": "والجلود",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 47-48",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.anbiya_hajj.commentary.yadurrukum_hamim_julud_thamud_lut"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 47",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.anbiya_hajj.poem.yadurrukum_hamim_thamud_lut_muslimin"
+            }
+          ]
         }
       },
       "42": {
         "end": {
           "word": "وثمود",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 47-48",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "basri",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.anbiya_hajj.commentary.yadurrukum_hamim_julud_thamud_lut"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 47",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "basri",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.anbiya_hajj.poem.yadurrukum_hamim_thamud_lut_muslimin"
+            }
+          ]
         }
       },
       "43": {
         "end": {
           "word": "لوط",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 47-48",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.anbiya_hajj.commentary.yadurrukum_hamim_julud_thamud_lut"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 47",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.anbiya_hajj.poem.yadurrukum_hamim_thamud_lut_muslimin"
+            }
+          ]
         }
       },
       "78": {
         "internal": [
           {
             "word": "المسلمين",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 48",
+                "supports": [
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.hajj.technical_note.muslimin_makki_dispute"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 47",
+                "supports": [
+                  "makki"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.anbiya_hajj.poem.yadurrukum_hamim_thamud_lut_muslimin"
+              }
+            ],
+            "note": "الشرح يذكر خلافا منقولا عن المكي في {المسلمين} ثم يرجح العد، معللا بأن الداني جزم به في البيان. ما زال الموضع بحاجة إلى إدخال شاهد أولي مباشر عند توفره."
           }
         ]
       }
@@ -909,8 +4121,37 @@
         "internal": [
           {
             "word": "هارون",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 48",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.muminun.commentary.harun"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 48",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.muminun_nur.poem.harun_asal_absar"
+              }
+            ]
           }
         ]
       }
@@ -919,15 +4160,65 @@
       "36": {
         "end": {
           "word": "والآصال",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 48",
+              "supports": [
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.nur.commentary.asal_absar_uli_absar"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 48",
+              "supports": [
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.muminun_nur.poem.harun_asal_absar"
+            }
+          ]
         }
       },
       "43": {
         "end": {
           "word": "بالأبصار",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 48",
+              "supports": [
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.nur.commentary.asal_absar_uli_absar"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 48",
+              "supports": [
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.muminun_nur.poem.harun_asal_absar"
+            }
+          ]
         }
       }
     },
@@ -935,31 +4226,137 @@
       "1": {
         "end": {
           "word": "طسم",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 28-29",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.baqarah.commentary.openings"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 28",
+              "supports": [
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.baqarah.poem.openings"
+            }
+          ]
         }
       },
       "49": {
         "internal": [
           {
             "word": "تعلمون",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "secondary_only",
+            "evidence": [
+              {
+                "tier": "commentary",
+                "work": "نفائس البيان — شرح الفرائد الحسان",
+                "locator": "ص 49",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.shuara.commentary.talamun_tabudun_bihi_al_shayatin"
+              },
+              {
+                "tier": "secondary",
+                "work": "الفرائد الحسان في عدّ آي القرآن",
+                "locator": "ص 49",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "basri",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "note": "مقطع nfb.shuara.poem.talamun_tabudun_bihi_al_shayatin"
+              }
+            ]
           }
         ]
       },
       "92": {
         "end": {
           "word": "تعبدون",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 49",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.shuara.commentary.talamun_tabudun_bihi_al_shayatin"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 49",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.shuara.poem.talamun_tabudun_bihi_al_shayatin"
+            }
+          ]
         }
       },
       "210": {
         "end": {
           "word": "الشياطين",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "secondary_only",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 49",
+              "supports": [
+                "madani-first",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.shuara.commentary.talamun_tabudun_bihi_al_shayatin"
+            },
+            {
+              "tier": "secondary",
+              "work": "الفرائد الحسان في عدّ آي القرآن",
+              "locator": "ص 49",
+              "supports": [
+                "madani-first",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "note": "مقطع nfb.shuara.poem.talamun_tabudun_bihi_al_shayatin"
+            }
+          ]
         }
       }
     },

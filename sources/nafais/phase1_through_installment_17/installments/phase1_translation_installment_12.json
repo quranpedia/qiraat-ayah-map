@@ -1,0 +1,129 @@
+{
+  "project": "al-Fara'id al-Hisan fi 'Add Ay al-Qur'an",
+  "work": "Nafa'is al-Bayan — Commentary on al-Fara'id al-Hisan",
+  "phase": "translation_installment_12",
+  "scope": {
+    "book_pages": [
+      42,
+      43
+    ],
+    "sections": [
+      "Surat al-Isra'",
+      "Surat al-Kahf"
+    ]
+  },
+  "translation_policy": {
+    "style": "technical, literal, readable",
+    "notes": [
+      "Arabic technical labels such as basmalah, fasilah, ra's al-ayah, Shami, and Iraqi are retained where helpful.",
+      "Collective labels are translated but not yet normalized into machine codes in this file.",
+      "The title markup inherited from the source HTML has been removed as a mechanical artifact.",
+      "This source heading covers two surahs together; the shared title is preserved, while the later segments are assigned to Surat al-Kahf where the commentary is confined to it.",
+      "The opening poem/commentary unit moves from Surat al-Isra' to Surat al-Kahf in a single segment, so it is preserved as a shared segment.",
+      "The authorial footnote explaining the analogy between zar'an and abadan is preserved as a separate technical note segment.",
+      "A commentary sentence interrupted by the printed page boundary has been rejoined mechanically where the continuation is explicit."
+    ]
+  },
+  "segments": [
+    {
+      "id": "nfb.isra_kahf.title",
+      "section_ar": "سورة الإسراء والكهف",
+      "section_en": "Surat al-Isra' and Surat al-Kahf",
+      "kind": "title",
+      "book_pages": [
+        42
+      ],
+      "source_ar": "سورة الإسراء والكهف:",
+      "translation_en": "Surat al-Isra' and Surat al-Kahf."
+    },
+    {
+      "id": "nfb.isra_kahf.poem.sujjadan_huda_qalil_ghadan",
+      "section_ar": "سورة الإسراء والكهف",
+      "section_en": "Surat al-Isra' and Surat al-Kahf",
+      "kind": "poem",
+      "book_pages": [
+        42
+      ],
+      "source_ar": "سجدا الكوفي هدى للشام دع ... قليل الثاني غدا له امتنع",
+      "translation_en": "The Kufan counts sujjadan; leave huda aside for the Shami. Qalil belongs to the Last Madinan, while ghadan is barred for that same authority."
+    },
+    {
+      "id": "nfb.isra_kahf.commentary.sujjadan_huda_qalil_ghadan",
+      "section_ar": "سورة الإسراء والكهف",
+      "section_en": "Surat al-Isra' and Surat al-Kahf",
+      "kind": "commentary",
+      "book_pages": [
+        42
+      ],
+      "source_ar": "وأقول: اعلم أن في سورة الإسراء موضعا واحدا مختلفا فيه وهو قوله تعالى: ﴿يَخِرُّونَ لِلْأَذْقَانِ سُجَّدًا﴾ وقد انفرد الكوفي بعده وهذا معني قولي: \"سجدا الكوفي\" ثم أمرت بترك عد قوله تعالى -في سورة الكهف: ﴿وَزِدْنَاهُمْ هُدى﴾ للشامي فيكون معدودا للباقين، ومعنى قولي: قليل الثاني إلخ أن قوله تعالى: ﴿مَا يَعْلَمُهُمْ إِلَّا قَلِيل﴾ يعده المدني الثاني وحده وقوله تعالى: ﴿ذَلِكَ غَدًا﴾ امتنع عده للمدني الثاني فيعد لغيره، فالضمير في قوله: \"له\" يعود على المدني الثاني، والخلاصة أن من يعد \"قليل\" لا يعد \"غدا\" وبالعكس والله أعلم.",
+      "translation_en": "Know that in Surat al-Isra' there is one disputed place only, namely His statement {yakhirruna lil-adhqani sujjadan}; the Kufan alone counts it, and that is the meaning of my words 'sujjadan—the Kufan.' Then I directed that the counting of His statement in Surat al-Kahf, {wa zidnahum huda}, be omitted for the Shami, so it is counted by the rest. The meaning of my words 'qalil [belongs to] the Second...' is that His statement {ma ya'lamuhum illa qalil} is counted by the Last Madinan alone, whereas His statement {dhalika ghadan} is barred from counting for the Last Madinan and is therefore counted by the others. The pronoun in my phrase 'for him' refers to the Last Madinan. The upshot is that whoever counts qalil does not count ghadan, and vice versa. God knows best."
+    },
+    {
+      "id": "nfb.kahf.poem.zaran_abadan_sababan",
+      "section_ar": "سورة الكهف",
+      "section_en": "Surat al-Kahf",
+      "kind": "poem",
+      "book_pages": [
+        42
+      ],
+      "source_ar": "زرعا نفى الأول مع مكيهم ... كأبدا بعد لثان شامهم\nسببا الأولى كزرعا في العدد ... وعد باقيها العراقي اعتمد",
+      "translation_en": "The First Madinan, together with the Makkan, omits zar'an; and the later abadan is likewise omitted for the Last Madinan and the Shami. The first sababan follows zar'an in the count, while the Iraqi adopts the counting of its remaining occurrences."
+    },
+    {
+      "id": "nfb.kahf.commentary.zaran_abadan_sababan",
+      "section_ar": "سورة الكهف",
+      "section_en": "Surat al-Kahf",
+      "kind": "commentary",
+      "book_pages": [
+        42,
+        43
+      ],
+      "source_ar": "وأقول: أعني أن قوله تعالى: ﴿وَجَعَلْنَا بَيْنَهُمَا زَرْعًا﴾ نفى عده المدني الأول والمكي وعده الباقون. ومعنى قولي: \"كأبدا\" إلخ أن قوله تعالى: ﴿أَنْ تَبِيدَ هَذِهِ أَبَدًا﴾ انتفى عده للمدني الثاني والشامي وعد للباقين. وقيدت \"أبدا\" بكونه واقعا في التلاوة بعد زرعا المذكور للاحتراز عن المواضع الأخرى المعدودة بالإجماع، مثل: ﴿مَاكِثِينَ فِيهِ أَبَدًا﴾ و﴿وَلَنْ تُفْلِحُوا إِذًا أَبَدًا﴾ و﴿فَلَنْ يَهْتَدُوا إِذًا أَبَدًا﴾. ومعنى قولي: \"سببا الأولى\" إلخ أن كلمة \"سببا\" الأولى في قوله تعالى: ﴿وَآتَيْنَاهُ مِنْ كُلِّ شَيْءٍ سَبَبًا﴾ حكمها حكم زرعا، يعدها من يعد زرعا، ويتركها من يتركها، فيتركها المدني الأول والمكي ويعدها الباقون، كما أن زرعا كذلك. واحترزت بالأولى عن باقي المواضع، وقد بينت حكمها بقولي: \"وعد باقيها\" إلخ أي أن العراقي -البصري والكوفي- اعتمد عد باقي مواضع سببا ولم يعتمد عدها الباقون، وهي ثلاثة: ﴿فَأَتْبَعَ سَبَبًا﴾ الذي بعده ﴿حَتَّى إِذَا بَلَغَ مَغْرِبَ الشَّمْسِ﴾، و﴿ثُمَّ أَتْبَعَ سَبَبًا﴾ الذي بعده ﴿حَتَّى إِذَا بَلَغَ مَطْلِعَ الشَّمْسِ﴾، و﴿ثُمَّ أَتْبَعَ سَبَبًا﴾ الذي بعده ﴿حَتَّى إِذَا بَلَغَ بَيْنَ السَّدَّيْنِ﴾ إلى آخر الآية.",
+      "translation_en": "I mean that His statement {wa ja'alna baynahuma zar'an} is not counted by the First Madinan and the Makkan, whereas the rest count it. The meaning of my words 'like abadan' and so on is that His statement {an tabida hadhihi abadan} is not counted by the Last Madinan and the Shami, while it is counted by the others. I qualified abadan by its occurrence in recitation after the aforementioned zar'an in order to exclude the other places unanimously counted, such as {makithina fihi abadan}, {wa lan tuflihu idhan abadan}, and {fa-lan yahtadu idhan abadan}. The meaning of my words 'the first sababan' and so on is that the first occurrence of sababan in His statement {wa ataynahu min kulli shay'in sababan} takes the same ruling as zar'an: those who count zar'an count it, and those who omit zar'an omit it. Thus the First Madinan and the Makkan omit it, while the rest count it, just as with zar'an. By saying 'the first,' I excluded the remaining occurrences. I explained their ruling in my words 'the Iraqi adopted the counting of the rest of them': that is, the Iraqi—that is, the Basran and the Kufan—adopted the counting of the remaining occurrences of sababan, while the others did not. They are three: {fa-atba'a sababan}, followed by {hatta idha balagha maghriba al-shams}; {thumma atba'a sababan}, followed by {hatta idha balagha matli'a al-shams}; and {thumma atba'a sababan}, followed by {hatta idha balagha bayna al-saddayn}, to the end of the verse."
+    },
+    {
+      "id": "nfb.kahf.note.zaran_abadan_analogy",
+      "section_ar": "سورة الكهف",
+      "section_en": "Surat al-Kahf",
+      "kind": "technical_note",
+      "book_pages": [
+        42
+      ],
+      "source_ar": "ففي البيت تشبيه زرعا بأبدا في نفي العد أي انتفى عد زرعا للمدني الأول والمكي كما انتفى عد أبدا للمدني الثاني والشامي.",
+      "translation_en": "In the verse, zar'an is likened to abadan with respect to omission from the count. That is, zar'an is not counted by the First Madinan and the Makkan, just as abadan is not counted by the Last Madinan and the Shami."
+    },
+    {
+      "id": "nfb.kahf.poem.qawman_amalan",
+      "section_ar": "سورة الكهف",
+      "section_en": "Surat al-Kahf",
+      "kind": "poem",
+      "book_pages": [
+        43
+      ],
+      "source_ar": "وقوما أولى الكوف مع ثان فقد ... أعمالا الشامي مع العراق عد",
+      "translation_en": "The first qawman is omitted by the Kufan together with the Last Madinan; a'malan is counted by the Shami together with the Iraqi."
+    },
+    {
+      "id": "nfb.kahf.commentary.qawman_amalan",
+      "section_ar": "سورة الكهف",
+      "section_en": "Surat al-Kahf",
+      "kind": "commentary",
+      "book_pages": [
+        43
+      ],
+      "source_ar": "وأقول: المعنى أن كلمة قوما الأولى في قوله تعالى: ﴿وَوَجَدَ عِنْدَهَا قَوْمًا﴾ فقد عدها أي أهمله الكوفي والمدني الثاني وعدها غيرهما، والتقييد بالأولى احتراز عن الثانية وهي ﴿وَجَدَ مِنْ دُونِهِمَا قَوْمًا﴾ فلم تعد لأحد. وقوله تعالى: ﴿هَلْ نُنَبِّئُكُمْ بِالْأَخْسَرِينَ أَعْمَالًا﴾ عده الشامي والعراقي -البصري والكوفي- وتركه الحجازيون.",
+      "translation_en": "The meaning is that the first occurrence of qawman in His statement {wa wajada 'indaha qawman} is one whose counting the Kufan and the Last Madinan omit, while the others count it. The qualification 'first' excludes the second occurrence, namely {wajada min dunihima qawman}, for no one counts it. And His statement {hal nunabbi'ukum bi-al-akhsarina a'malan} is counted by the Shami and the Iraqi—that is, the Basran and the Kufan—and omitted by the Hijazis."
+    },
+    {
+      "id": "nfb.kahf.completion",
+      "section_ar": "سورة الكهف",
+      "section_en": "Surat al-Kahf",
+      "kind": "completion",
+      "book_pages": [
+        43
+      ],
+      "source_ar": "تتمة: مواضع الخلف أحد عشر موضعا: ﴿وَزِدْنَاهُمْ هُدى﴾، ﴿مَا يَعْلَمُهُمْ إِلَّا قَلِيل﴾، ﴿ذَلِكَ غَدًا﴾، ﴿زَرْعًا﴾، ﴿هَذِهِ أَبَدًا﴾، ﴿مِنْ كُلِّ شَيْءٍ سَبَبًا﴾، ﴿فَأَتْبَعَ سَبَبًا﴾، ﴿ثُمَّ أَتْبَعَ سَبَبًا﴾ معا، ﴿وَوَجَدَ عِنْدَهَا قَوْمًا﴾، ﴿أَعْمَالًا﴾، والله أعلم.",
+      "translation_en": "Completion: the disputed places are eleven: {wa zidnahum huda}; {ma ya'lamuhum illa qalil}; {dhalika ghadan}; {zar'an}; {hadhihi abadan}; {min kulli shay'in sababan}; {fa-atba'a sababan}; {thumma atba'a sababan}, in both occurrences; {wa wajada 'indaha qawman}; and {a'malan}. God knows best."
+    }
+  ]
+}

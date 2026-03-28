@@ -1,0 +1,2015 @@
+{
+  "imported_at": "2026-03-28T05:53:11.152Z",
+  "dry_run": false,
+  "sources": {
+    "al_bayan": {
+      "input": "/tmp/phase15/sources/al_bayan",
+      "resolved": "/tmp/phase15/sources/al_bayan",
+      "covered_surahs": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    "nafais": {
+      "input": "/tmp/phase15/sources/nafais",
+      "resolved": "/tmp/phase15/sources/nafais",
+      "segment_count": 138
+    }
+  },
+  "primary_import": {
+    "coveredSurahs": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "exactMatches": [
+      {
+        "anchorKey": "1:1:end:الرحيم",
+        "phrase_ar": "بسم الله الرحمن الرحيم",
+        "file": "al_bayan_pilot_surah_001_al_hamd.json"
+      },
+      {
+        "anchorKey": "1:7:internal:عليهم",
+        "phrase_ar": "أنعمت عليهم",
+        "file": "al_bayan_pilot_surah_001_al_hamd.json"
+      },
+      {
+        "anchorKey": "2:1:end:الم",
+        "phrase_ar": "الم",
+        "file": "al_bayan_batch2_surah_002_al_baqarah.json"
+      },
+      {
+        "anchorKey": "2:10:internal:أليم",
+        "phrase_ar": "عذاب أليم",
+        "file": "al_bayan_batch2_surah_002_al_baqarah.json"
+      },
+      {
+        "anchorKey": "2:11:end:مصلحون",
+        "phrase_ar": "مصلحون",
+        "file": "al_bayan_batch2_surah_002_al_baqarah.json"
+      },
+      {
+        "anchorKey": "2:114:internal:خائفين",
+        "phrase_ar": "إلا خائفين",
+        "file": "al_bayan_batch2_surah_002_al_baqarah.json"
+      },
+      {
+        "anchorKey": "2:197:end:الألباب",
+        "phrase_ar": "يا أولي الألباب",
+        "file": "al_bayan_batch2_surah_002_al_baqarah.json"
+      },
+      {
+        "anchorKey": "2:200:end:خلاق",
+        "phrase_ar": "من خلاق",
+        "file": "al_bayan_batch2_surah_002_al_baqarah.json"
+      },
+      {
+        "anchorKey": "2:219:end:تتفكرون",
+        "phrase_ar": "لعلكم تتفكرون",
+        "file": "al_bayan_batch2_surah_002_al_baqarah.json"
+      },
+      {
+        "anchorKey": "2:219:internal:ينفقون",
+        "phrase_ar": "ماذا ينفقون",
+        "file": "al_bayan_batch2_surah_002_al_baqarah.json"
+      },
+      {
+        "anchorKey": "2:235:internal:معروفا",
+        "phrase_ar": "قولا معروفا",
+        "file": "al_bayan_batch2_surah_002_al_baqarah.json"
+      },
+      {
+        "anchorKey": "2:255:internal:القيوم",
+        "phrase_ar": "الحي القيوم",
+        "file": "al_bayan_batch2_surah_002_al_baqarah.json"
+      },
+      {
+        "anchorKey": "2:257:internal:النور",
+        "phrase_ar": "من الظلمات إلى النور",
+        "file": "al_bayan_batch2_surah_002_al_baqarah.json"
+      },
+      {
+        "anchorKey": "3:1:end:الم",
+        "phrase_ar": "ألم",
+        "file": "al_bayan_batch3_surah_003_al_imran.json"
+      },
+      {
+        "anchorKey": "3:3:end:والإنجيل",
+        "phrase_ar": "الإنجيل",
+        "file": "al_bayan_batch3_surah_003_al_imran.json"
+      },
+      {
+        "anchorKey": "3:4:internal:الفرقان",
+        "phrase_ar": "وأنزل الفرقان",
+        "file": "al_bayan_batch3_surah_003_al_imran.json"
+      },
+      {
+        "anchorKey": "3:48:end:والإنجيل",
+        "phrase_ar": "الإنجيل",
+        "file": "al_bayan_batch3_surah_003_al_imran.json"
+      },
+      {
+        "anchorKey": "3:49:internal:إسرائيل",
+        "phrase_ar": "ورسولا إلى بني إسرائيل",
+        "file": "al_bayan_batch3_surah_003_al_imran.json"
+      },
+      {
+        "anchorKey": "4:44:end:السبيل",
+        "phrase_ar": "أَن تضلوا السَّبِيل",
+        "file": "al_bayan_batch4_surah_004_al_nisa.json"
+      },
+      {
+        "anchorKey": "4:173:internal:أليما",
+        "phrase_ar": "فيعذبهم عذَابا أَلِيمًا",
+        "file": "al_bayan_batch4_surah_004_al_nisa.json"
+      },
+      {
+        "anchorKey": "5:1:internal:بالعقود",
+        "phrase_ar": "أَوْفُوا بِالْعُقُودِ",
+        "file": "al_bayan_batch5_surah_005_al_maida.json"
+      },
+      {
+        "anchorKey": "5:15:internal:كثير",
+        "phrase_ar": "وَيَعْفُو عَن كَثِير",
+        "file": "al_bayan_batch5_surah_005_al_maida.json"
+      },
+      {
+        "anchorKey": "5:23:internal:غالبون",
+        "phrase_ar": "فَإِنَّكُم غَالِبُون",
+        "file": "al_bayan_batch5_surah_005_al_maida.json"
+      },
+      {
+        "anchorKey": "6:1:internal:والنور",
+        "phrase_ar": "وَجعل الظُّلُمَات والنور",
+        "file": "al_bayan_batch6_surah_006_al_anam.json"
+      },
+      {
+        "anchorKey": "6:66:end:بوكيل",
+        "phrase_ar": "قل لست عَلَيْكُم بوكيل",
+        "file": "al_bayan_batch6_surah_006_al_anam.json"
+      },
+      {
+        "anchorKey": "6:161:internal:مستقيم",
+        "phrase_ar": "إِلَى صِرَاط مُسْتَقِيم",
+        "file": "al_bayan_batch6_surah_006_al_anam.json"
+      },
+      {
+        "anchorKey": "7:1:end:المص",
+        "phrase_ar": "المص",
+        "file": "al_bayan_batch7_surah_007_al_araf.json"
+      },
+      {
+        "anchorKey": "7:29:end:تعودون",
+        "phrase_ar": "كَمَا بَدَأَكُمْ تعودُونَ",
+        "file": "al_bayan_batch7_surah_007_al_araf.json"
+      },
+      {
+        "anchorKey": "7:29:internal:الدين",
+        "phrase_ar": "مُخلصين لَهُ الدّين",
+        "file": "al_bayan_batch7_surah_007_al_araf.json"
+      },
+      {
+        "anchorKey": "7:38:internal:النار",
+        "phrase_ar": "ضعفا من النَّار",
+        "file": "al_bayan_batch7_surah_007_al_araf.json"
+      },
+      {
+        "anchorKey": "7:137:internal:إسرائيل",
+        "phrase_ar": "الْحسنى على بني إِسْرَائِيل",
+        "file": "al_bayan_batch7_surah_007_al_araf.json"
+      },
+      {
+        "anchorKey": "8:36:internal:يغلبون",
+        "phrase_ar": "ثُمَّ يَغْلِبُونَ",
+        "file": "al_bayan_batch8_surah_008_al_anfal.json"
+      },
+      {
+        "anchorKey": "8:42:internal:مفعولا",
+        "phrase_ar": "لِيَقْضِيَ الله أَمْرًا كَانَ مَفْعُولًا",
+        "file": "al_bayan_batch8_surah_008_al_anfal.json"
+      },
+      {
+        "anchorKey": "8:62:end:وبالمؤمنين",
+        "phrase_ar": "بِنَصْرِهِ وَبِالْمُؤْمِنِينَ",
+        "file": "al_bayan_batch8_surah_008_al_anfal.json"
+      },
+      {
+        "anchorKey": "9:3:internal:المشركين",
+        "phrase_ar": "أَن الله بَرِيء من الْمُشْركين",
+        "file": "al_bayan_batch9_surah_009_al_tawbah.json"
+      },
+      {
+        "anchorKey": "9:39:internal:أليما",
+        "phrase_ar": "إِلَّا تنفرُوا يعذبكم عذَابا أَلِيمًا",
+        "file": "al_bayan_batch9_surah_009_al_tawbah.json"
+      },
+      {
+        "anchorKey": "9:70:internal:وثمود",
+        "phrase_ar": "وَعَاد وَثَمُود",
+        "file": "al_bayan_batch9_surah_009_al_tawbah.json"
+      },
+      {
+        "anchorKey": "10:22:end:الشاكرين",
+        "phrase_ar": "لنكونن من الشَّاكِرِينَ",
+        "file": "al_bayan_batch10_surah_010_yunus.json"
+      },
+      {
+        "anchorKey": "10:22:internal:الدين",
+        "phrase_ar": "مُخلصين لَهُ الدّين",
+        "file": "al_bayan_batch10_surah_010_yunus.json"
+      },
+      {
+        "anchorKey": "10:57:internal:الصدور",
+        "phrase_ar": "وشفاء لما فِي الصُّدُور",
+        "file": "al_bayan_batch10_surah_010_yunus.json"
+      },
+      {
+        "anchorKey": "11:54:end:تشركون",
+        "phrase_ar": "إِنِّي بَرِيء مِمَّا تشركون",
+        "file": "al_bayan_batch11_surah_011_hud.json"
+      },
+      {
+        "anchorKey": "11:74:end:لوط",
+        "phrase_ar": "يجادلنا فِي قوم لوط",
+        "file": "al_bayan_batch11_surah_011_hud.json"
+      },
+      {
+        "anchorKey": "11:82:end:منضود",
+        "phrase_ar": "منضود",
+        "file": "al_bayan_batch11_surah_011_hud.json"
+      },
+      {
+        "anchorKey": "11:82:internal:سجيل",
+        "phrase_ar": "من سجيل",
+        "file": "al_bayan_batch11_surah_011_hud.json"
+      },
+      {
+        "anchorKey": "11:86:internal:مؤمنين",
+        "phrase_ar": "إِن كُنْتُم مُؤمنين",
+        "file": "al_bayan_batch11_surah_011_hud.json"
+      },
+      {
+        "anchorKey": "11:118:end:مختلفين",
+        "phrase_ar": "وَلَا يزالون مُخْتَلفين",
+        "file": "al_bayan_batch11_surah_011_hud.json"
+      },
+      {
+        "anchorKey": "11:121:end:عاملون",
+        "phrase_ar": "إِنَّا عاملون",
+        "file": "al_bayan_batch11_surah_011_hud.json"
+      },
+      {
+        "anchorKey": "13:5:internal:جديد",
+        "phrase_ar": "لفي خلق جَدِيد",
+        "file": "al_bayan_batch13_surah_013_al_rad.json"
+      },
+      {
+        "anchorKey": "13:16:internal:والبصير",
+        "phrase_ar": "قل هَل يَسْتَوِي الْأَعْمَى والبصير",
+        "file": "al_bayan_batch13_surah_013_al_rad.json"
+      },
+      {
+        "anchorKey": "13:16:internal:والنور",
+        "phrase_ar": "أم هَل تستوي الظُّلُمَات والنور",
+        "file": "al_bayan_batch13_surah_013_al_rad.json"
+      },
+      {
+        "anchorKey": "13:18:internal:الحساب",
+        "phrase_ar": "أُولَئِكَ لَهُم سوء الْحساب",
+        "file": "al_bayan_batch13_surah_013_al_rad.json"
+      },
+      {
+        "anchorKey": "13:23:end:باب",
+        "phrase_ar": "من كل بَاب",
+        "file": "al_bayan_batch13_surah_013_al_rad.json"
+      }
+    ],
+    "conflicts": [
+      {
+        "anchorKey": "3:92:internal:تحبون",
+        "candidates": [
+          {
+            "phrase_ar": "مما تحبون",
+            "source_counted_by": [
+              "madani-first",
+              "makki",
+              "dimashqi"
+            ],
+            "occurrence_qualifier_en": "first occurrence",
+            "school_level_note_en": "The later Madani transmission is internally split here: the source reports non-counting from Abū Jaʿfar and counting from Shayba b. Niṣāḥ.",
+            "cross_surah_note_en": null,
+            "file": "al_bayan_batch3_surah_003_al_imran.json"
+          }
+        ]
+      }
+    ],
+    "missing": [
+      {
+        "anchorKey": "3:97:internal:إبراهيم",
+        "file": "al_bayan_batch3_surah_003_al_imran.json",
+        "reason": "no_exact_primary_match"
+      },
+      {
+        "anchorKey": "6:73:internal:فيكون",
+        "file": "al_bayan_batch6_surah_006_al_anam.json",
+        "reason": "no_exact_primary_match"
+      }
+    ]
+  },
+  "commentary_import": {
+    "applied": [
+      {
+        "anchorKey": "1:1:end:الرحيم",
+        "segment_id": "nfb.fatiha.commentary",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "1:7:internal:عليهم",
+        "segment_id": "nfb.fatiha.commentary",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "2:1:end:الم",
+        "segment_id": "nfb.baqarah.commentary.openings",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "2:10:internal:أليم",
+        "segment_id": "nfb.baqarah.commentary.alim_muslihun",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "2:11:end:مصلحون",
+        "segment_id": "nfb.baqarah.commentary.alim_muslihun",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "2:114:internal:خائفين",
+        "segment_id": "nfb.baqarah.commentary.khaifin_albab_khalaq",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "2:197:end:الألباب",
+        "segment_id": "nfb.baqarah.commentary.khaifin_albab_khalaq",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "2:200:end:خلاق",
+        "segment_id": "nfb.baqarah.commentary.khaifin_albab_khalaq",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "2:219:end:تتفكرون",
+        "segment_id": "nfb.baqarah.commentary.tatafakkarun",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "2:219:internal:ينفقون",
+        "segment_id": "nfb.baqarah.commentary.yunfiqun",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "2:235:internal:معروفا",
+        "segment_id": "nfb.baqarah.commentary.marufa_qayyum",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "2:255:internal:القيوم",
+        "segment_id": "nfb.baqarah.commentary.marufa_qayyum",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "2:257:internal:النور",
+        "segment_id": "nfb.baqarah.commentary.ila_alnur_shahid",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "3:1:end:الم",
+        "segment_id": "nfb.baqarah.commentary.openings",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "3:3:end:والإنجيل",
+        "segment_id": "nfb.al_imran.commentary.injil_furqan_israil",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "3:4:internal:الفرقان",
+        "segment_id": "nfb.al_imran.commentary.injil_furqan_israil",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "3:48:end:والإنجيل",
+        "segment_id": "nfb.al_imran.commentary.injil_furqan_israil",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "3:49:internal:إسرائيل",
+        "segment_id": "nfb.al_imran.commentary.injil_furqan_israil",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "3:92:internal:تحبون",
+        "segment_id": "nfb.al_imran.commentary.mimma_tuhibbun",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "3:97:internal:إبراهيم",
+        "segment_id": "nfb.al_imran.commentary.maqam_ibrahim",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "4:44:end:السبيل",
+        "segment_id": "nfb.nisa.commentary.sabil_alim",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "4:173:internal:أليما",
+        "segment_id": "nfb.nisa.commentary.sabil_alim",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "5:1:internal:بالعقود",
+        "segment_id": "nfb.maidah.commentary.uqud_kathir_ghalibun",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "5:15:internal:كثير",
+        "segment_id": "nfb.maidah.commentary.uqud_kathir_ghalibun",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "5:23:internal:غالبون",
+        "segment_id": "nfb.maidah.commentary.uqud_kathir_ghalibun",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "6:1:internal:والنور",
+        "segment_id": "nfb.anam.commentary.nur",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "6:66:end:بوكيل",
+        "segment_id": "nfb.anam.commentary.biwakil_mustaqim_fayakun",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "6:73:internal:فيكون",
+        "segment_id": "nfb.anam.commentary.biwakil_mustaqim_fayakun",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "6:161:internal:مستقيم",
+        "segment_id": "nfb.anam.commentary.biwakil_mustaqim_fayakun",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "7:1:end:المص",
+        "segment_id": "nfb.baqarah.commentary.openings",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "7:29:end:تعودون",
+        "segment_id": "nfb.araf.commentary.din_taudun",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "7:29:internal:الدين",
+        "segment_id": "nfb.araf.commentary.din_taudun",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "7:38:internal:النار",
+        "segment_id": "nfb.araf.commentary.nar_israil",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "7:137:internal:إسرائيل",
+        "segment_id": "nfb.araf.commentary.nar_israil",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "8:36:internal:يغلبون",
+        "segment_id": "nfb.anfal.commentary.yughlabun_mafulan_1",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "8:42:internal:مفعولا",
+        "segment_id": "nfb.anfal.commentary.yughlabun_mafulan_1",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "8:62:end:وبالمؤمنين",
+        "segment_id": "nfb.anfal.commentary.bilmuminin",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "9:3:internal:المشركين",
+        "segment_id": "nfb.tawbah.commentary.mushrikin_thani",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "9:39:internal:أليما",
+        "segment_id": "nfb.tawbah.commentary.qayyim_aliman_thamud",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "9:70:internal:وثمود",
+        "segment_id": "nfb.tawbah.commentary.qayyim_aliman_thamud",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "10:22:end:الشاكرين",
+        "segment_id": "nfb.yunus.commentary.din_sudur_shakirin",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "10:22:internal:الدين",
+        "segment_id": "nfb.yunus.commentary.din_sudur_shakirin",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "10:57:internal:الصدور",
+        "segment_id": "nfb.yunus.commentary.din_sudur_shakirin",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "11:54:end:تشركون",
+        "segment_id": "nfb.hud.commentary.tushrikun_lut_2",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "11:74:end:لوط",
+        "segment_id": "nfb.hud.commentary.tushrikun_lut_2",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "11:82:end:منضود",
+        "segment_id": "nfb.hud.commentary.sijjil_mandud",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "11:82:internal:سجيل",
+        "segment_id": "nfb.hud.commentary.sijjil_mandud",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "11:86:internal:مؤمنين",
+        "segment_id": "nfb.hud.commentary.muminin_mukhtalifin_amilun",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "11:118:end:مختلفين",
+        "segment_id": "nfb.hud.commentary.muminin_mukhtalifin_amilun",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "11:121:end:عاملون",
+        "segment_id": "nfb.hud.commentary.muminin_mukhtalifin_amilun",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "13:5:internal:جديد",
+        "segment_id": "nfb.rad.commentary.jadid_nur_basir",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "13:16:internal:والبصير",
+        "segment_id": "nfb.rad.commentary.jadid_nur_basir",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "13:16:internal:والنور",
+        "segment_id": "nfb.rad.commentary.jadid_nur_basir",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "13:18:internal:الحساب",
+        "segment_id": "nfb.rad.commentary.su_al_hisab_batil_min_kulli_bab",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "13:23:end:باب",
+        "segment_id": "nfb.rad.commentary.su_al_hisab_batil_min_kulli_bab",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "14:1:internal:النور",
+        "segment_id": "nfb.ibrahim.commentary.kila_al_nur_thamud",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "14:5:internal:النور",
+        "segment_id": "nfb.ibrahim.commentary.kila_al_nur_thamud",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "14:9:internal:وثمود",
+        "segment_id": "nfb.ibrahim.commentary.kila_al_nur_thamud",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "14:19:end:جديد",
+        "segment_id": "nfb.ibrahim.commentary.jadid_fi_al_sama_al_nahar_al_zalimun",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "14:24:end:السماء",
+        "segment_id": "nfb.ibrahim.commentary.jadid_fi_al_sama_al_nahar_al_zalimun",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "14:33:end:والنهار",
+        "segment_id": "nfb.ibrahim.commentary.jadid_fi_al_sama_al_nahar_al_zalimun",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "14:42:internal:الظالمون",
+        "segment_id": "nfb.ibrahim.commentary.jadid_fi_al_sama_al_nahar_al_zalimun",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "17:107:end:سجدا",
+        "segment_id": "nfb.isra_kahf.commentary.sujjadan_huda_qalil_ghadan",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "18:13:end:هدى",
+        "segment_id": "nfb.isra_kahf.commentary.sujjadan_huda_qalil_ghadan",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "18:22:internal:قليل",
+        "segment_id": "nfb.isra_kahf.commentary.sujjadan_huda_qalil_ghadan",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "18:23:end:غدا",
+        "segment_id": "nfb.isra_kahf.commentary.sujjadan_huda_qalil_ghadan",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "18:32:end:زرعا",
+        "segment_id": "nfb.kahf.commentary.zaran_abadan_sababan",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "18:35:end:أبدا",
+        "segment_id": "nfb.kahf.commentary.zaran_abadan_sababan",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "18:84:end:سببا",
+        "segment_id": "nfb.kahf.commentary.zaran_abadan_sababan",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "18:85:end:سببا",
+        "segment_id": "nfb.kahf.commentary.zaran_abadan_sababan",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "18:86:internal:قوما",
+        "segment_id": "nfb.kahf.commentary.qawman_amalan",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "18:89:end:سببا",
+        "segment_id": "nfb.kahf.commentary.zaran_abadan_sababan",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "18:92:end:سببا",
+        "segment_id": "nfb.kahf.commentary.zaran_abadan_sababan",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "18:103:end:أعمالا",
+        "segment_id": "nfb.kahf.commentary.qawman_amalan",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "19:1:end:كهيعص",
+        "segment_id": "nfb.baqarah.commentary.openings",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "19:41:internal:إبراهيم",
+        "segment_id": "nfb.maryam.commentary.ibrahim_madda",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "19:75:internal:مدا",
+        "segment_id": "nfb.maryam.commentary.ibrahim_madda",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "20:1:end:طه",
+        "segment_id": "nfb.baqarah.commentary.openings",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "20:33:end:كثيرا",
+        "segment_id": "nfb.taha.commentary.kathiran_minni",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "20:34:end:كثيرا",
+        "segment_id": "nfb.taha.commentary.kathiran_minni",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "20:39:internal:مني",
+        "segment_id": "nfb.taha.commentary.kathiran_minni",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "20:40:internal:تحزن",
+        "segment_id": "nfb.taha.commentary.fi_al_yam_tahzan_israil_madyan_musa",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "20:40:internal:فتونا",
+        "segment_id": "nfb.taha.commentary.futunan_linafsi_ma_ghashiyahum_asifa",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "20:40:internal:مدين",
+        "segment_id": "nfb.taha.commentary.fi_al_yam_tahzan_israil_madyan_musa",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "20:41:end:لنفسي",
+        "segment_id": "nfb.taha.commentary.futunan_linafsi_ma_ghashiyahum_asifa",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "20:47:internal:إسرائيل",
+        "segment_id": "nfb.taha.commentary.fi_al_yam_tahzan_israil_madyan_musa",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "20:77:internal:موسى",
+        "segment_id": "nfb.taha.commentary.fi_al_yam_tahzan_israil_madyan_musa",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "20:78:end:غشيهم",
+        "segment_id": "nfb.taha.commentary.futunan_linafsi_ma_ghashiyahum_asifa",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "20:86:internal:أسفا",
+        "segment_id": "nfb.taha.commentary.futunan_linafsi_ma_ghashiyahum_asifa",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "20:86:internal:حسنا",
+        "segment_id": "nfb.taha.commentary.alqa_al_samiri_wadan_hasanan_qawlan",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "20:87:end:السامري",
+        "segment_id": "nfb.taha.commentary.alqa_al_samiri_wadan_hasanan_qawlan",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "20:88:end:فنسي",
+        "segment_id": "nfb.taha.commentary.ilahu_musa_fanasiya",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "20:88:internal:موسى",
+        "segment_id": "nfb.taha.commentary.ilahu_musa_fanasiya",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "20:89:internal:قولا",
+        "segment_id": "nfb.taha.commentary.alqa_al_samiri_wadan_hasanan_qawlan",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "20:92:end:ضلوا",
+        "segment_id": "nfb.taha.commentary.raaytahum_dallu_safsafa",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "20:106:end:صفصفا",
+        "segment_id": "nfb.taha.commentary.raaytahum_dallu_safsafa",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "20:123:internal:هدى",
+        "segment_id": "nfb.taha.commentary.minni_hudan_dunya_dankan",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "20:131:internal:الدنيا",
+        "segment_id": "nfb.taha.commentary.minni_hudan_dunya_dankan",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "21:66:end:يضركم",
+        "segment_id": "nfb.anbiya_hajj.commentary.yadurrukum_hamim_julud_thamud_lut",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "22:19:end:الحميم",
+        "segment_id": "nfb.anbiya_hajj.commentary.yadurrukum_hamim_julud_thamud_lut",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "22:20:end:والجلود",
+        "segment_id": "nfb.anbiya_hajj.commentary.yadurrukum_hamim_julud_thamud_lut",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "22:42:end:وثمود",
+        "segment_id": "nfb.anbiya_hajj.commentary.yadurrukum_hamim_julud_thamud_lut",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "22:43:end:لوط",
+        "segment_id": "nfb.anbiya_hajj.commentary.yadurrukum_hamim_julud_thamud_lut",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "22:78:internal:المسلمين",
+        "segment_id": "nfb.hajj.technical_note.muslimin_makki_dispute",
+        "kind": "technical_note"
+      },
+      {
+        "anchorKey": "23:45:internal:هارون",
+        "segment_id": "nfb.muminun.commentary.harun",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "24:36:end:والآصال",
+        "segment_id": "nfb.nur.commentary.asal_absar_uli_absar",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "24:43:end:بالأبصار",
+        "segment_id": "nfb.nur.commentary.asal_absar_uli_absar",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "26:1:end:طسم",
+        "segment_id": "nfb.baqarah.commentary.openings",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "26:49:internal:تعلمون",
+        "segment_id": "nfb.shuara.commentary.talamun_tabudun_bihi_al_shayatin",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "26:92:end:تعبدون",
+        "segment_id": "nfb.shuara.commentary.talamun_tabudun_bihi_al_shayatin",
+        "kind": "commentary"
+      },
+      {
+        "anchorKey": "26:210:end:الشياطين",
+        "segment_id": "nfb.shuara.commentary.talamun_tabudun_bihi_al_shayatin",
+        "kind": "commentary"
+      }
+    ],
+    "ambiguous": [],
+    "missing": [
+      {
+        "anchorKey": "27:33:internal:شديد",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "27:44:internal:قوارير",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "28:1:end:طسم",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "28:23:internal:يسقون",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "29:1:end:الم",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "29:29:internal:السبيل",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "29:65:internal:الدين",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "30:1:end:الم",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "30:2:end:الروم",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "30:4:internal:سنين",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "30:55:internal:المجرمون",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "31:1:end:الم",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "31:32:internal:الدين",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "32:1:end:الم",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "32:10:internal:جديد",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "34:15:internal:وشمال",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "35:7:internal:شديد",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "35:16:end:جديد",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "35:19:end:والبصير",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "35:20:end:النور",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "35:22:end:القبور",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "35:41:internal:تزولا",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "35:43:internal:تبديلا",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "36:1:end:يس",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "37:22:end:يعبدون",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "37:167:end:ليقولون",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "38:1:end:الذكر",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "38:37:end:وغواص",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "38:84:end:أقول",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "39:3:internal:يختلفون",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "39:11:end:الدين",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "39:14:end:ديني",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "39:17:end:عباد",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "39:20:internal:الأنهار",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "39:36:end:هاد",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "39:39:end:تعلمون",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "40:1:end:حم",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "40:15:end:التلاق",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "40:16:internal:بارزون",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "40:18:internal:كاظمين",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "40:53:end:الكتاب",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "40:58:internal:والبصير",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "40:71:end:يسحبون",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "40:72:internal:الحميم",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "40:73:end:تشركون",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "41:1:end:حم",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "41:13:end:وثمود",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "42:1:end:حم",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "42:2:end:عسق",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "42:32:end:كالأعلام",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "43:1:end:حم",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "43:52:internal:مهين",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "44:1:end:حم",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "44:34:end:ليقولون",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "44:43:end:الزقوم",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "44:45:end:البطون",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "45:1:end:حم",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "46:1:end:حم",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "47:4:internal:أوزارها",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "47:15:internal:للشاربين",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "52:1:end:والطور",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "52:13:end:دعا",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "53:28:end:شيئا",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "53:29:end:الدنيا",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "53:29:internal:تولى",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "55:1:end:الرحمن",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "55:3:end:الإنسان",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "55:10:end:للأنام",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "55:35:internal:نار",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "55:43:end:المجرمون",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "56:8:internal:الميمنة",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "56:9:internal:المشأمة",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "56:15:end:موضونة",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "56:18:internal:وأباريق",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "56:22:end:عين",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "56:25:end:تأثيما",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "56:27:internal:اليمين",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "56:35:end:إنشاء",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "56:41:internal:الشمال",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "56:42:end:وحميم",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "56:47:internal:يقولون",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "56:49:end:والآخرين",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "56:50:internal:لمجموعون",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "56:89:internal:وريحان",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "57:13:end:العذاب",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "57:27:internal:الإنجيل",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "58:20:end:الأذلين",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "65:2:end:مخرجا",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "65:2:internal:الآخر",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "65:10:internal:الألباب",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "67:9:internal:نذير",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "69:1:end:الحاقة",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "69:25:internal:بشماله",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "70:4:end:سنة",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "71:23:end:ونسرا",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "71:23:internal:سواعا",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "71:24:internal:كثيرا",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "71:25:internal:نارا",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "72:22:end:ملتحدا",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "72:22:internal:أحد",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "73:1:end:المزمل",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "73:15:internal:رسولا",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "73:17:end:شيبا",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "74:40:end:يتساءلون",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "74:41:end:المجرمين",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "75:16:end:به",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "78:40:internal:قريبا",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "79:33:end:ولأنعامكم",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "79:37:end:طغى",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "80:24:end:طعامه",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "80:32:end:ولأنعامكم",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "80:33:end:الصاخة",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "81:26:end:تذهبون",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "84:7:end:بيمينه",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "84:10:end:ظهره",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "86:15:end:كيدا",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "89:15:internal:ونعمه",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "89:16:internal:رزقه",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "89:23:internal:بجهنم",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "89:29:end:عبادي",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "91:14:internal:فعقروها",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "96:9:end:ينهى",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "96:15:internal:ينته",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "97:3:internal:القدر",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "98:5:internal:الدين",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "99:6:internal:أشتاتا",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "101:1:end:القارعة",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "101:6:end:موازينه",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "101:8:end:موازينه",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "103:1:end:والعصر",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "103:3:internal:بالحق",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "106:4:internal:جوع",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "107:6:end:يراءون",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "112:3:internal:يلد",
+        "reason": "no_commentary_match"
+      },
+      {
+        "anchorKey": "114:4:internal:الوسواس",
+        "reason": "no_commentary_match"
+      }
+    ]
+  },
+  "faraid_poem_import": {
+    "applied": [
+      {
+        "anchorKey": "1:1:end:الرحيم",
+        "segment_id": "nfb.fatiha.poem",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "1:7:internal:عليهم",
+        "segment_id": "nfb.fatiha.poem",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "2:1:end:الم",
+        "segment_id": "nfb.baqarah.poem.openings",
+        "selection_strategy": "paired_with:nfb.baqarah.commentary.openings"
+      },
+      {
+        "anchorKey": "2:10:internal:أليم",
+        "segment_id": "nfb.baqarah.poem.alim_muslihun",
+        "selection_strategy": "paired_with:nfb.baqarah.commentary.alim_muslihun"
+      },
+      {
+        "anchorKey": "2:11:end:مصلحون",
+        "segment_id": "nfb.baqarah.poem.alim_muslihun",
+        "selection_strategy": "paired_with:nfb.baqarah.commentary.alim_muslihun"
+      },
+      {
+        "anchorKey": "2:114:internal:خائفين",
+        "segment_id": "nfb.baqarah.poem.khaifin_albab_khalaq",
+        "selection_strategy": "paired_with:nfb.baqarah.commentary.khaifin_albab_khalaq"
+      },
+      {
+        "anchorKey": "2:197:end:الألباب",
+        "segment_id": "nfb.baqarah.poem.khaifin_albab_khalaq",
+        "selection_strategy": "paired_with:nfb.baqarah.commentary.khaifin_albab_khalaq"
+      },
+      {
+        "anchorKey": "2:200:end:خلاق",
+        "segment_id": "nfb.baqarah.poem.khaifin_albab_khalaq",
+        "selection_strategy": "paired_with:nfb.baqarah.commentary.khaifin_albab_khalaq"
+      },
+      {
+        "anchorKey": "2:219:end:تتفكرون",
+        "segment_id": "nfb.baqarah.poem.tatafakkarun",
+        "selection_strategy": "paired_with:nfb.baqarah.commentary.tatafakkarun"
+      },
+      {
+        "anchorKey": "2:219:internal:ينفقون",
+        "segment_id": "nfb.baqarah.poem.yunfiqun",
+        "selection_strategy": "paired_with:nfb.baqarah.commentary.yunfiqun"
+      },
+      {
+        "anchorKey": "2:235:internal:معروفا",
+        "segment_id": "nfb.baqarah.poem.marufa_qayyum",
+        "selection_strategy": "paired_with:nfb.baqarah.commentary.marufa_qayyum"
+      },
+      {
+        "anchorKey": "2:255:internal:القيوم",
+        "segment_id": "nfb.baqarah.poem.marufa_qayyum",
+        "selection_strategy": "paired_with:nfb.baqarah.commentary.marufa_qayyum"
+      },
+      {
+        "anchorKey": "2:257:internal:النور",
+        "segment_id": "nfb.baqarah.poem.ila_alnur_shahid",
+        "selection_strategy": "paired_with:nfb.baqarah.commentary.ila_alnur_shahid"
+      },
+      {
+        "anchorKey": "3:1:end:الم",
+        "segment_id": "nfb.baqarah.poem.openings",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "3:3:end:والإنجيل",
+        "segment_id": "nfb.al_imran.poem.injil_furqan_israil",
+        "selection_strategy": "paired_with:nfb.al_imran.commentary.injil_furqan_israil"
+      },
+      {
+        "anchorKey": "3:4:internal:الفرقان",
+        "segment_id": "nfb.al_imran.poem.injil_furqan_israil",
+        "selection_strategy": "paired_with:nfb.al_imran.commentary.injil_furqan_israil"
+      },
+      {
+        "anchorKey": "3:48:end:والإنجيل",
+        "segment_id": "nfb.al_imran.poem.injil_furqan_israil",
+        "selection_strategy": "paired_with:nfb.al_imran.commentary.injil_furqan_israil"
+      },
+      {
+        "anchorKey": "3:49:internal:إسرائيل",
+        "segment_id": "nfb.al_imran.poem.injil_furqan_israil",
+        "selection_strategy": "paired_with:nfb.al_imran.commentary.injil_furqan_israil"
+      },
+      {
+        "anchorKey": "3:92:internal:تحبون",
+        "segment_id": "nfb.al_imran.poem.mimma_tuhibbun",
+        "selection_strategy": "paired_with:nfb.al_imran.commentary.mimma_tuhibbun"
+      },
+      {
+        "anchorKey": "3:97:internal:إبراهيم",
+        "segment_id": "nfb.al_imran.poem.maqam_ibrahim",
+        "selection_strategy": "paired_with:nfb.al_imran.commentary.maqam_ibrahim"
+      },
+      {
+        "anchorKey": "4:44:end:السبيل",
+        "segment_id": "nfb.nisa.poem.sabil_alim",
+        "selection_strategy": "paired_with:nfb.nisa.commentary.sabil_alim"
+      },
+      {
+        "anchorKey": "4:173:internal:أليما",
+        "segment_id": "nfb.nisa.poem.sabil_alim",
+        "selection_strategy": "paired_with:nfb.nisa.commentary.sabil_alim"
+      },
+      {
+        "anchorKey": "5:1:internal:بالعقود",
+        "segment_id": "nfb.maidah.poem.uqud_kathir_ghalibun",
+        "selection_strategy": "paired_with:nfb.maidah.commentary.uqud_kathir_ghalibun"
+      },
+      {
+        "anchorKey": "5:15:internal:كثير",
+        "segment_id": "nfb.maidah.poem.uqud_kathir_ghalibun",
+        "selection_strategy": "paired_with:nfb.maidah.commentary.uqud_kathir_ghalibun"
+      },
+      {
+        "anchorKey": "5:23:internal:غالبون",
+        "segment_id": "nfb.maidah.poem.uqud_kathir_ghalibun",
+        "selection_strategy": "paired_with:nfb.maidah.commentary.uqud_kathir_ghalibun"
+      },
+      {
+        "anchorKey": "6:1:internal:والنور",
+        "segment_id": "nfb.anam.poem.nur",
+        "selection_strategy": "paired_with:nfb.anam.commentary.nur"
+      },
+      {
+        "anchorKey": "6:66:end:بوكيل",
+        "segment_id": "nfb.anam.poem.biwakil_mustaqim_fayakun",
+        "selection_strategy": "paired_with:nfb.anam.commentary.biwakil_mustaqim_fayakun"
+      },
+      {
+        "anchorKey": "6:73:internal:فيكون",
+        "segment_id": "nfb.anam.poem.biwakil_mustaqim_fayakun",
+        "selection_strategy": "paired_with:nfb.anam.commentary.biwakil_mustaqim_fayakun"
+      },
+      {
+        "anchorKey": "6:161:internal:مستقيم",
+        "segment_id": "nfb.anam.poem.biwakil_mustaqim_fayakun",
+        "selection_strategy": "paired_with:nfb.anam.commentary.biwakil_mustaqim_fayakun"
+      },
+      {
+        "anchorKey": "7:1:end:المص",
+        "segment_id": "nfb.baqarah.poem.openings",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "7:29:end:تعودون",
+        "segment_id": "nfb.anam_araf.poem.fayakun_din_taudun",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "7:29:internal:الدين",
+        "segment_id": "nfb.anam_araf.poem.fayakun_din_taudun",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "7:38:internal:النار",
+        "segment_id": "nfb.araf.poem.nar_israil",
+        "selection_strategy": "paired_with:nfb.araf.commentary.nar_israil"
+      },
+      {
+        "anchorKey": "7:137:internal:إسرائيل",
+        "segment_id": "nfb.araf.poem.nar_israil",
+        "selection_strategy": "paired_with:nfb.araf.commentary.nar_israil"
+      },
+      {
+        "anchorKey": "8:36:internal:يغلبون",
+        "segment_id": "nfb.anfal.poem.yughlabun_mafulan_1",
+        "selection_strategy": "paired_with:nfb.anfal.commentary.yughlabun_mafulan_1"
+      },
+      {
+        "anchorKey": "8:42:internal:مفعولا",
+        "segment_id": "nfb.anfal.poem.yughlabun_mafulan_1",
+        "selection_strategy": "paired_with:nfb.anfal.commentary.yughlabun_mafulan_1"
+      },
+      {
+        "anchorKey": "8:62:end:وبالمؤمنين",
+        "segment_id": "nfb.anfal_tawbah.poem.bilmuminin_mushrikin_thani",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "9:3:internal:المشركين",
+        "segment_id": "nfb.anfal_tawbah.poem.bilmuminin_mushrikin_thani",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "9:39:internal:أليما",
+        "segment_id": "nfb.tawbah.poem.qayyim_aliman_thamud",
+        "selection_strategy": "paired_with:nfb.tawbah.commentary.qayyim_aliman_thamud"
+      },
+      {
+        "anchorKey": "9:70:internal:وثمود",
+        "segment_id": "nfb.tawbah.poem.qayyim_aliman_thamud",
+        "selection_strategy": "paired_with:nfb.tawbah.commentary.qayyim_aliman_thamud"
+      },
+      {
+        "anchorKey": "10:22:end:الشاكرين",
+        "segment_id": "nfb.yunus.poem.din_sudur_shakirin",
+        "selection_strategy": "paired_with:nfb.yunus.commentary.din_sudur_shakirin"
+      },
+      {
+        "anchorKey": "10:22:internal:الدين",
+        "segment_id": "nfb.yunus.poem.din_sudur_shakirin",
+        "selection_strategy": "paired_with:nfb.yunus.commentary.din_sudur_shakirin"
+      },
+      {
+        "anchorKey": "10:57:internal:الصدور",
+        "segment_id": "nfb.yunus.poem.din_sudur_shakirin",
+        "selection_strategy": "paired_with:nfb.yunus.commentary.din_sudur_shakirin"
+      },
+      {
+        "anchorKey": "11:54:end:تشركون",
+        "segment_id": "nfb.hud.poem.tushrikun_lut_2",
+        "selection_strategy": "paired_with:nfb.hud.commentary.tushrikun_lut_2"
+      },
+      {
+        "anchorKey": "11:74:end:لوط",
+        "segment_id": "nfb.hud.poem.tushrikun_lut_2",
+        "selection_strategy": "paired_with:nfb.hud.commentary.tushrikun_lut_2"
+      },
+      {
+        "anchorKey": "11:82:end:منضود",
+        "segment_id": "nfb.hud.poem.sijjil_mandud",
+        "selection_strategy": "paired_with:nfb.hud.commentary.sijjil_mandud"
+      },
+      {
+        "anchorKey": "11:82:internal:سجيل",
+        "segment_id": "nfb.hud.poem.sijjil_mandud",
+        "selection_strategy": "paired_with:nfb.hud.commentary.sijjil_mandud"
+      },
+      {
+        "anchorKey": "11:86:internal:مؤمنين",
+        "segment_id": "nfb.hud.poem.muminin_mukhtalifin_amilun",
+        "selection_strategy": "paired_with:nfb.hud.commentary.muminin_mukhtalifin_amilun"
+      },
+      {
+        "anchorKey": "11:118:end:مختلفين",
+        "segment_id": "nfb.hud.poem.muminin_mukhtalifin_amilun",
+        "selection_strategy": "paired_with:nfb.hud.commentary.muminin_mukhtalifin_amilun"
+      },
+      {
+        "anchorKey": "11:121:end:عاملون",
+        "segment_id": "nfb.hud.poem.muminin_mukhtalifin_amilun",
+        "selection_strategy": "paired_with:nfb.hud.commentary.muminin_mukhtalifin_amilun"
+      },
+      {
+        "anchorKey": "13:5:internal:جديد",
+        "segment_id": "nfb.rad.poem.jadid_nur_basir",
+        "selection_strategy": "paired_with:nfb.rad.commentary.jadid_nur_basir"
+      },
+      {
+        "anchorKey": "13:16:internal:والبصير",
+        "segment_id": "nfb.rad.poem.jadid_nur_basir",
+        "selection_strategy": "paired_with:nfb.rad.commentary.jadid_nur_basir"
+      },
+      {
+        "anchorKey": "13:16:internal:والنور",
+        "segment_id": "nfb.rad.poem.jadid_nur_basir",
+        "selection_strategy": "paired_with:nfb.rad.commentary.jadid_nur_basir"
+      },
+      {
+        "anchorKey": "13:18:internal:الحساب",
+        "segment_id": "nfb.rad.poem.su_al_hisab_batil_min_kulli_bab",
+        "selection_strategy": "paired_with:nfb.rad.commentary.su_al_hisab_batil_min_kulli_bab"
+      },
+      {
+        "anchorKey": "13:23:end:باب",
+        "segment_id": "nfb.rad.poem.su_al_hisab_batil_min_kulli_bab",
+        "selection_strategy": "paired_with:nfb.rad.commentary.su_al_hisab_batil_min_kulli_bab"
+      },
+      {
+        "anchorKey": "14:1:internal:النور",
+        "segment_id": "nfb.ibrahim.poem.kila_al_nur_thamud",
+        "selection_strategy": "paired_with:nfb.ibrahim.commentary.kila_al_nur_thamud"
+      },
+      {
+        "anchorKey": "14:5:internal:النور",
+        "segment_id": "nfb.ibrahim.poem.kila_al_nur_thamud",
+        "selection_strategy": "paired_with:nfb.ibrahim.commentary.kila_al_nur_thamud"
+      },
+      {
+        "anchorKey": "14:9:internal:وثمود",
+        "segment_id": "nfb.ibrahim.poem.kila_al_nur_thamud",
+        "selection_strategy": "paired_with:nfb.ibrahim.commentary.kila_al_nur_thamud"
+      },
+      {
+        "anchorKey": "14:19:end:جديد",
+        "segment_id": "nfb.ibrahim.poem.jadid_fi_al_sama_al_nahar_al_zalimun",
+        "selection_strategy": "paired_with:nfb.ibrahim.commentary.jadid_fi_al_sama_al_nahar_al_zalimun"
+      },
+      {
+        "anchorKey": "14:24:end:السماء",
+        "segment_id": "nfb.ibrahim.poem.jadid_fi_al_sama_al_nahar_al_zalimun",
+        "selection_strategy": "paired_with:nfb.ibrahim.commentary.jadid_fi_al_sama_al_nahar_al_zalimun"
+      },
+      {
+        "anchorKey": "14:33:end:والنهار",
+        "segment_id": "nfb.ibrahim.poem.jadid_fi_al_sama_al_nahar_al_zalimun",
+        "selection_strategy": "paired_with:nfb.ibrahim.commentary.jadid_fi_al_sama_al_nahar_al_zalimun"
+      },
+      {
+        "anchorKey": "14:42:internal:الظالمون",
+        "segment_id": "nfb.ibrahim.poem.jadid_fi_al_sama_al_nahar_al_zalimun",
+        "selection_strategy": "paired_with:nfb.ibrahim.commentary.jadid_fi_al_sama_al_nahar_al_zalimun"
+      },
+      {
+        "anchorKey": "17:107:end:سجدا",
+        "segment_id": "nfb.isra_kahf.poem.sujjadan_huda_qalil_ghadan",
+        "selection_strategy": "paired_with:nfb.isra_kahf.commentary.sujjadan_huda_qalil_ghadan"
+      },
+      {
+        "anchorKey": "18:13:end:هدى",
+        "segment_id": "nfb.isra_kahf.poem.sujjadan_huda_qalil_ghadan",
+        "selection_strategy": "paired_with:nfb.isra_kahf.commentary.sujjadan_huda_qalil_ghadan"
+      },
+      {
+        "anchorKey": "18:22:internal:قليل",
+        "segment_id": "nfb.isra_kahf.poem.sujjadan_huda_qalil_ghadan",
+        "selection_strategy": "paired_with:nfb.isra_kahf.commentary.sujjadan_huda_qalil_ghadan"
+      },
+      {
+        "anchorKey": "18:23:end:غدا",
+        "segment_id": "nfb.isra_kahf.poem.sujjadan_huda_qalil_ghadan",
+        "selection_strategy": "paired_with:nfb.isra_kahf.commentary.sujjadan_huda_qalil_ghadan"
+      },
+      {
+        "anchorKey": "18:32:end:زرعا",
+        "segment_id": "nfb.kahf.poem.zaran_abadan_sababan",
+        "selection_strategy": "paired_with:nfb.kahf.commentary.zaran_abadan_sababan"
+      },
+      {
+        "anchorKey": "18:35:end:أبدا",
+        "segment_id": "nfb.kahf.poem.zaran_abadan_sababan",
+        "selection_strategy": "paired_with:nfb.kahf.commentary.zaran_abadan_sababan"
+      },
+      {
+        "anchorKey": "18:84:end:سببا",
+        "segment_id": "nfb.kahf.poem.zaran_abadan_sababan",
+        "selection_strategy": "paired_with:nfb.kahf.commentary.zaran_abadan_sababan"
+      },
+      {
+        "anchorKey": "18:85:end:سببا",
+        "segment_id": "nfb.kahf.poem.zaran_abadan_sababan",
+        "selection_strategy": "paired_with:nfb.kahf.commentary.zaran_abadan_sababan"
+      },
+      {
+        "anchorKey": "18:86:internal:قوما",
+        "segment_id": "nfb.kahf.poem.qawman_amalan",
+        "selection_strategy": "paired_with:nfb.kahf.commentary.qawman_amalan"
+      },
+      {
+        "anchorKey": "18:89:end:سببا",
+        "segment_id": "nfb.kahf.poem.zaran_abadan_sababan",
+        "selection_strategy": "paired_with:nfb.kahf.commentary.zaran_abadan_sababan"
+      },
+      {
+        "anchorKey": "18:92:end:سببا",
+        "segment_id": "nfb.kahf.poem.zaran_abadan_sababan",
+        "selection_strategy": "paired_with:nfb.kahf.commentary.zaran_abadan_sababan"
+      },
+      {
+        "anchorKey": "18:103:end:أعمالا",
+        "segment_id": "nfb.kahf.poem.qawman_amalan",
+        "selection_strategy": "paired_with:nfb.kahf.commentary.qawman_amalan"
+      },
+      {
+        "anchorKey": "19:1:end:كهيعص",
+        "segment_id": "nfb.baqarah.poem.openings",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "19:41:internal:إبراهيم",
+        "segment_id": "nfb.maryam.poem.ibrahim_madda",
+        "selection_strategy": "paired_with:nfb.maryam.commentary.ibrahim_madda"
+      },
+      {
+        "anchorKey": "19:75:internal:مدا",
+        "segment_id": "nfb.maryam.poem.ibrahim_madda",
+        "selection_strategy": "paired_with:nfb.maryam.commentary.ibrahim_madda"
+      },
+      {
+        "anchorKey": "20:1:end:طه",
+        "segment_id": "nfb.baqarah.poem.openings",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "20:33:end:كثيرا",
+        "segment_id": "nfb.taha.poem.kathiran_minni",
+        "selection_strategy": "paired_with:nfb.taha.commentary.kathiran_minni"
+      },
+      {
+        "anchorKey": "20:34:end:كثيرا",
+        "segment_id": "nfb.taha.poem.kathiran_minni",
+        "selection_strategy": "paired_with:nfb.taha.commentary.kathiran_minni"
+      },
+      {
+        "anchorKey": "20:39:internal:مني",
+        "segment_id": "nfb.taha.poem.kathiran_minni",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "20:40:internal:تحزن",
+        "segment_id": "nfb.taha.poem.fi_al_yam_tahzan_israil_madyan_musa",
+        "selection_strategy": "paired_with:nfb.taha.commentary.fi_al_yam_tahzan_israil_madyan_musa"
+      },
+      {
+        "anchorKey": "20:40:internal:فتونا",
+        "segment_id": "nfb.taha.poem.futunan_linafsi_ma_ghashiyahum_asifa",
+        "selection_strategy": "paired_with:nfb.taha.commentary.futunan_linafsi_ma_ghashiyahum_asifa"
+      },
+      {
+        "anchorKey": "20:40:internal:مدين",
+        "segment_id": "nfb.taha.poem.fi_al_yam_tahzan_israil_madyan_musa",
+        "selection_strategy": "paired_with:nfb.taha.commentary.fi_al_yam_tahzan_israil_madyan_musa"
+      },
+      {
+        "anchorKey": "20:41:end:لنفسي",
+        "segment_id": "nfb.taha.poem.futunan_linafsi_ma_ghashiyahum_asifa",
+        "selection_strategy": "paired_with:nfb.taha.commentary.futunan_linafsi_ma_ghashiyahum_asifa"
+      },
+      {
+        "anchorKey": "20:47:internal:إسرائيل",
+        "segment_id": "nfb.taha.poem.fi_al_yam_tahzan_israil_madyan_musa",
+        "selection_strategy": "paired_with:nfb.taha.commentary.fi_al_yam_tahzan_israil_madyan_musa"
+      },
+      {
+        "anchorKey": "20:77:internal:موسى",
+        "segment_id": "nfb.taha.poem.fi_al_yam_tahzan_israil_madyan_musa",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "20:78:end:غشيهم",
+        "segment_id": "nfb.taha.poem.futunan_linafsi_ma_ghashiyahum_asifa",
+        "selection_strategy": "paired_with:nfb.taha.commentary.futunan_linafsi_ma_ghashiyahum_asifa"
+      },
+      {
+        "anchorKey": "20:86:internal:أسفا",
+        "segment_id": "nfb.taha.poem.futunan_linafsi_ma_ghashiyahum_asifa",
+        "selection_strategy": "paired_with:nfb.taha.commentary.futunan_linafsi_ma_ghashiyahum_asifa"
+      },
+      {
+        "anchorKey": "20:86:internal:حسنا",
+        "segment_id": "nfb.taha.poem.alqa_al_samiri_wadan_hasanan_qawlan",
+        "selection_strategy": "paired_with:nfb.taha.commentary.alqa_al_samiri_wadan_hasanan_qawlan"
+      },
+      {
+        "anchorKey": "20:87:end:السامري",
+        "segment_id": "nfb.taha.poem.alqa_al_samiri_wadan_hasanan_qawlan",
+        "selection_strategy": "paired_with:nfb.taha.commentary.alqa_al_samiri_wadan_hasanan_qawlan"
+      },
+      {
+        "anchorKey": "20:88:end:فنسي",
+        "segment_id": "nfb.taha.poem.ilahu_musa_fanasiya",
+        "selection_strategy": "paired_with:nfb.taha.commentary.ilahu_musa_fanasiya"
+      },
+      {
+        "anchorKey": "20:88:internal:موسى",
+        "segment_id": "nfb.taha.poem.ilahu_musa_fanasiya",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "20:89:internal:قولا",
+        "segment_id": "nfb.taha.poem.alqa_al_samiri_wadan_hasanan_qawlan",
+        "selection_strategy": "paired_with:nfb.taha.commentary.alqa_al_samiri_wadan_hasanan_qawlan"
+      },
+      {
+        "anchorKey": "20:92:end:ضلوا",
+        "segment_id": "nfb.taha.poem.raaytahum_dallu_safsafa",
+        "selection_strategy": "paired_with:nfb.taha.commentary.raaytahum_dallu_safsafa"
+      },
+      {
+        "anchorKey": "20:106:end:صفصفا",
+        "segment_id": "nfb.taha.poem.raaytahum_dallu_safsafa",
+        "selection_strategy": "paired_with:nfb.taha.commentary.raaytahum_dallu_safsafa"
+      },
+      {
+        "anchorKey": "20:123:internal:هدى",
+        "segment_id": "nfb.taha.poem.minni_hudan_dunya_dankan",
+        "selection_strategy": "paired_with:nfb.taha.commentary.minni_hudan_dunya_dankan"
+      },
+      {
+        "anchorKey": "20:131:internal:الدنيا",
+        "segment_id": "nfb.taha.poem.minni_hudan_dunya_dankan",
+        "selection_strategy": "paired_with:nfb.taha.commentary.minni_hudan_dunya_dankan"
+      },
+      {
+        "anchorKey": "21:66:end:يضركم",
+        "segment_id": "nfb.anbiya_hajj.poem.yadurrukum_hamim_thamud_lut_muslimin",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "22:19:end:الحميم",
+        "segment_id": "nfb.anbiya_hajj.poem.yadurrukum_hamim_thamud_lut_muslimin",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "22:20:end:والجلود",
+        "segment_id": "nfb.anbiya_hajj.poem.yadurrukum_hamim_thamud_lut_muslimin",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "22:42:end:وثمود",
+        "segment_id": "nfb.anbiya_hajj.poem.yadurrukum_hamim_thamud_lut_muslimin",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "22:43:end:لوط",
+        "segment_id": "nfb.anbiya_hajj.poem.yadurrukum_hamim_thamud_lut_muslimin",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "22:78:internal:المسلمين",
+        "segment_id": "nfb.anbiya_hajj.poem.yadurrukum_hamim_thamud_lut_muslimin",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "23:45:internal:هارون",
+        "segment_id": "nfb.muminun_nur.poem.harun_asal_absar",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "24:36:end:والآصال",
+        "segment_id": "nfb.muminun_nur.poem.harun_asal_absar",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "24:43:end:بالأبصار",
+        "segment_id": "nfb.muminun_nur.poem.harun_asal_absar",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "26:1:end:طسم",
+        "segment_id": "nfb.baqarah.poem.openings",
+        "selection_strategy": "manual_override"
+      },
+      {
+        "anchorKey": "26:49:internal:تعلمون",
+        "segment_id": "nfb.shuara.poem.talamun_tabudun_bihi_al_shayatin",
+        "selection_strategy": "paired_with:nfb.shuara.commentary.talamun_tabudun_bihi_al_shayatin"
+      },
+      {
+        "anchorKey": "26:92:end:تعبدون",
+        "segment_id": "nfb.shuara.poem.talamun_tabudun_bihi_al_shayatin",
+        "selection_strategy": "paired_with:nfb.shuara.commentary.talamun_tabudun_bihi_al_shayatin"
+      },
+      {
+        "anchorKey": "26:210:end:الشياطين",
+        "segment_id": "nfb.shuara.poem.talamun_tabudun_bihi_al_shayatin",
+        "selection_strategy": "paired_with:nfb.shuara.commentary.talamun_tabudun_bihi_al_shayatin"
+      }
+    ],
+    "ambiguous": [],
+    "missing": []
+  },
+  "verification_summary_before": {
+    "disputed": 2,
+    "primary_cited": 45,
+    "secondary_only": 68,
+    "uncited": 131
+  },
+  "verification_summary_after": {
+    "disputed": 2,
+    "primary_cited": 57,
+    "secondary_only": 56,
+    "uncited": 131
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "project": "al-Fara'id al-Hisan fi 'Add Ay al-Qur'an",
+  "scope": "Additional technical terms encountered in translation installment 15 (Surat al-Anbiya' and Surat al-Hajj).",
+  "terms": [
+    {
+      "arabic": "حكى فيه العلماء الخلاف / حكى الخلاف لفلان",
+      "transliteration": "haka fihi al-'ulama' al-khilaf / haka al-khilaf li-fulan",
+      "english": "the scholars reported disagreement regarding it / disagreement was reported for a given authority",
+      "note": "Used when the commentator records a transmitted dispute over whether one counting authority counts a given place."
+    },
+    {
+      "arabic": "الراجح",
+      "transliteration": "al-rajih",
+      "english": "the preferred view; the stronger view",
+      "note": "Marks the commentator's or the tradition's preferred position when variant reports exist."
+    },
+    {
+      "arabic": "جزم بأن",
+      "transliteration": "jazama bi-anna",
+      "english": "to state decisively that; to affirm categorically that",
+      "note": "Stronger than merely transmitting a report; indicates that an authority such as al-Dani presents the matter without hesitation."
+    },
+    {
+      "arabic": "ضمن الآيات المعدودة",
+      "transliteration": "dimna al-ayat al-ma'dudah",
+      "english": "among the counted verses",
+      "note": "A phrase used to clarify whether a disputed expression is treated as one of the formally counted verse endings."
+    }
+  ]
+}

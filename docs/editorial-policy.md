@@ -161,3 +161,13 @@ A release can be called **scholarly verified** only when:
 - every primitive has evidence status tracked
 - every non-settled point is openly marked
 - reviewer packets under `dist/review/` are up to date
+
+
+## External curator bundles
+
+Optional structured source bundles may be used to accelerate evidence entry, but they must never become hidden build dependencies.
+
+- use them to propose or apply updates to `data/book-boundary-evidence.json`
+- when a single supplied bundle contains both a matn and its sharḥ, record them as separate evidence items rather than collapsing them into one witness
+- keep the final scholarly judgment in the checked-in evidence file, not in an external temporary report
+- when a bundle conflicts with the current primitive, prefer an explicit `disputed` / `unresolved` note over silent harmonization

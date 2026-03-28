@@ -1,0 +1,132 @@
+{
+  "project_phase": "phase_1_started_with_translation_pilot",
+  "section_ids": {
+    "entry": "surah.001.entry",
+    "ruus": "surah.001.ruus"
+  },
+  "arabic_source": {
+    "entry": "١\n\nمَدَنِيَّة هَذَا قَول أبي هُرَيْرَة وَمُجاهد وَعَطَاء بن يسَار وَقَالَ ابْن عَبَّاس وَقَتَادَة مَكِّيَّة ونظيرتها فِي عدد آيها فِي الْمَكِّيّ والشامي سُورَة النَّاس وَفِي الْكُوفِي والبصري سُورَة أَرَأَيْت وَلَا نَظِير لَهَا فِي الْمَدَنِيين وكلمها خمس وَعِشْرُونَ كلمة ككلم أَرَأَيْت وحروفها مئة وَعِشْرُونَ حرفا وَهِي سبع آيَات فِي جَمِيع الْعدَد\nاختلافها آيتان (﴿بِسم الله الرَّحْمَن الرَّحِيم﴾) عدهَا الْمَكِّيّ والكوفي وَلم يعدها الْبَاقُونَ (﴿أَنْعَمت عَلَيْهِم﴾) لم يعدها الْمَكِّيّ والكوفي وعدّها الْبَاقُونَ\nوفيهَا مِمَّا يشبه الفواصل وَلَيْسَ بمعدود بِإِجْمَاع مَوضِع وَاحِد وَهُوَ قَوْله تَعَالَى (﴿إياك نعْبد﴾)",
+    "ruus": "الْعَالمين\n٢ - الرَّحِيم\n٣ - الدّين\n٤ - نستعين\n٥ - الْمُسْتَقيم\n٦ - عَلَيْهِم\nالضَّالّين ٧"
+  },
+  "english_translation": {
+    "entry_translation": "Sūrat al-Ḥamd.\n\nMedinan: this is the view of Abū Hurayra, Mujāhid, and ʿAṭāʾ b. Yasār. Ibn ʿAbbās and Qatāda said that it is Makkan. Its counterpart (naẓīrah) in the number of its verses, in the Makki and Shami counts, is Sūrat al-Nās; in the Kufi and Basri counts, Sūrat Arāʾayta; and it has no counterpart in the two Madani counts. Its words are twenty-five, equal to the word-count of Arāʾayta, and its letters are one hundred and twenty. It is seven verses in all systems of counting.\n\nIts points of disagreement are two verses: “Bism Allāh al-Raḥmān al-Raḥīm” is counted by the Makki and Kufi and not counted by the others; “Anʿamta ʿalayhim” is not counted by the Makki and Kufi, but the others count it.\n\nIn it there is one place that resembles a verse-ending without being counted, by consensus: namely His saying, “Iyyāka naʿbudu.”",
+    "ruus_translation_note": "The ruʾūs al-āy are retained as Arabic verse-head tokens in the structured layer; no English gloss layer has yet been imposed on these isolated heads."
+  },
+  "structured_data": {
+    "surah_number": 1,
+    "source_title_ar": "سورة الحمد",
+    "canonical_name_ar": "الفاتحة",
+    "canonical_name_en": "Al-Fatiha",
+    "source_pages": {
+      "entry_printed_page_start": 139,
+      "entry_printed_page_end": 139,
+      "ruus_printed_page_start": 139,
+      "ruus_printed_page_end": 139
+    },
+    "classification_claims": [
+      {
+        "classification": "madani",
+        "attributed_to": [
+          "أبو هريرة",
+          "مجاهد",
+          "عطاء بن يسار"
+        ]
+      },
+      {
+        "classification": "makki",
+        "attributed_to": [
+          "ابن عباس",
+          "قتادة"
+        ]
+      }
+    ],
+    "nazair_by_school": {
+      "makki": "الناس",
+      "shami": "الناس",
+      "kufi": "أرأيت",
+      "basri": "أرأيت",
+      "madani_1": null,
+      "madani_2": null
+    },
+    "word_count": {
+      "value": 25,
+      "raw_ar": "خمس وعشرون كلمة"
+    },
+    "letter_count": {
+      "value": 120,
+      "raw_ar": "مئة وعشرون حرفا"
+    },
+    "verse_totals": {
+      "madani_1": 7,
+      "madani_2": 7,
+      "makki": 7,
+      "kufi": 7,
+      "basri": 7,
+      "shami": 7
+    },
+    "disputed_verse_endings": [
+      {
+        "phrase_ar": "بسم الله الرحمن الرحيم",
+        "counted_by": [
+          "makki",
+          "kufi"
+        ],
+        "not_counted_by": [
+          "madani_1",
+          "madani_2",
+          "basri",
+          "shami"
+        ]
+      },
+      {
+        "phrase_ar": "أنعمت عليهم",
+        "counted_by": [
+          "madani_1",
+          "madani_2",
+          "basri",
+          "shami"
+        ],
+        "not_counted_by": [
+          "makki",
+          "kufi"
+        ]
+      }
+    ],
+    "pseudo_fawasil": [
+      {
+        "phrase_ar": "إياك نعبد",
+        "status": "resembles_fasila_not_counted_by_consensus"
+      }
+    ],
+    "ruus_al_ayat": [
+      {
+        "ordinal_madani_2_baseline": 1,
+        "head_ar": "العالمين"
+      },
+      {
+        "ordinal_madani_2_baseline": 2,
+        "head_ar": "الرحيم"
+      },
+      {
+        "ordinal_madani_2_baseline": 3,
+        "head_ar": "الدين"
+      },
+      {
+        "ordinal_madani_2_baseline": 4,
+        "head_ar": "نستعين"
+      },
+      {
+        "ordinal_madani_2_baseline": 5,
+        "head_ar": "المستقيم"
+      },
+      {
+        "ordinal_madani_2_baseline": 6,
+        "head_ar": "عليهم"
+      },
+      {
+        "ordinal_madani_2_baseline": 7,
+        "head_ar": "الضالين"
+      }
+    ]
+  }
+}

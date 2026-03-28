@@ -193,6 +193,7 @@ function build_surah_drifts(rows_by_surah, system_order) {
 const counting_systems = load_json(sourcePath('counting-systems.json'))
 const review_data = load_json(distPath('review', 'review-data.json'))
 const classical_attestations = load_json(distPath('classical-count-attestations.json'))
+const al_bayan_cross_reference = load_json(distPath('review', 'al-bayan-cross-reference.json'))
 const system_order = review_data._counting_system_order
 const kufi_surah_counts = load_json(distPath('surah-counts', 'kufi.json')).surahs
 const surah_counts_by_system = Object.fromEntries(
@@ -336,6 +337,7 @@ const site_data = {
     'data/counting-systems.json',
     'dist/review/review-data.json',
     'dist/classical-count-attestations.json',
+    'dist/review/al-bayan-cross-reference.json',
     'dist/surah-counts/*.json'
   ],
   system_order,
@@ -343,7 +345,10 @@ const site_data = {
   summary: {
     ...review_data.summary,
     evidence: evidence_summary,
-    attestations: attestation_summary
+    attestations: attestation_summary,
+    primary_source_frontier: {
+      al_bayan: al_bayan_cross_reference.summary
+    }
   },
   systems,
   surahs,
@@ -354,7 +359,14 @@ const site_data = {
   review_queue,
   surah_drifts,
   rows,
-  attestations: classical_attestations.systems || {}
+  attestations: classical_attestations.systems || {},
+  source_frontiers: {
+    al_bayan: {
+      covered_surahs: al_bayan_cross_reference.covered_surahs,
+      summary: al_bayan_cross_reference.summary,
+      exceptions: al_bayan_cross_reference.exceptions
+    }
+  }
 }
 
 const target_dir = join(repoDir, 'site', 'src', 'lib', 'data', 'generated')

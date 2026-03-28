@@ -1,0 +1,150 @@
+# Phase 1 Translation — Installment 03
+
+Work: **Nafa'is al-Bayan — Commentary on al-Fara'id al-Hisan**
+
+Scope: book pages 32–33; Surat Al 'Imran.
+
+Translation register: technical, literal, readable.
+
+Source note:
+- The Arabic source in this installment has been lightly normalized where the OCR or HTML artifacts were plainly mechanical and the intended reading is fixed by the prose commentary.
+- The substantive footnote on Shaybah and Abu Ja'far is preserved as a separate technical note segment.
+
+## nfb.al_imran.title
+
+**Section (Arabic):** سورة آل عمران  
+**Section (English):** Surat Al 'Imran  
+**Kind:** title  
+**Book page(s):** 32
+
+### Arabic
+
+سورة آل عمران:
+
+### English
+
+Surat Al 'Imran.
+
+## nfb.al_imran.poem.injil_furqan_israil
+
+**Section (Arabic):** سورة آل عمران  
+**Section (English):** Surat Al 'Imran  
+**Kind:** poem  
+**Book page(s):** 32
+
+### Arabic
+
+وغير شام أول الإنجيل عد ... والثان للكوفي به قد انفرد
+وغيره الفرقان إسرائيلا ... للبصر والحمصي عند الأولى
+
+### English
+
+Everyone but the Shami counts the first occurrence of al-injil; in the second occurrence the Kufan alone stands apart. Everyone but him counts al-furqan; and the first Isra'ila is counted by the Basran and the Himsi.
+
+## nfb.al_imran.commentary.injil_furqan_israil
+
+**Section (Arabic):** سورة آل عمران  
+**Section (English):** Surat Al 'Imran  
+**Kind:** commentary  
+**Book page(s):** 32
+
+### Arabic
+
+وأقول: أفاد البيت الأول أن غير الشامي من علماء العدد عد لفظ الإنجيل في الموضع الأول، وأعني به قوله تعالى: ﴿وَأَنْزَلَ التَّوْرَاةَ وَالْإِنْجِيلَ﴾ أول السورة، فالشامي لا يعده، والتقييد بالأول لإخراج الموضع الثاني. وقد ذكرته بقولي: "والثان للكوفي به قد انفرد" أي أن الكوفي قد انفرد بعد لفظ الإنجيل في الموضع الثاني، وهو قوله تعالى: ﴿وَيُعَلِّمُهُ الْكِتَابَ وَالْحِكْمَةَ وَالتَّوْرَاةَ وَالْإِنْجِيلَ﴾، فيكون هذا الموضع متروكًا لغير الكوفي من أهل العدد.
+وقولي: "وغيره الفرقان" الضمير فيه يعود على الكوفي، والمعنى أن غير الكوفي يعد قوله تعالى: ﴿وَأَنْزَلَ الْفُرْقَانَ﴾، فيكون غير معدود للكوفي. ثم بينت أن كلمة "إسرائيل" الأولى تعد للحمصي والبصري ولا تعد لغيرهما، والمراد بها قوله تعالى: ﴿وَرَسُولًا إِلَى بَنِي إِسْرَائِيلَ﴾، والتقييد بالأولى لإخراج غيرها من المواضع المتروكة إجماعًا، وهما موضعان في آية ﴿كُلُّ الطَّعَامِ كَانَ حِلًّا لِبَنِي إِسْرَائِيلَ إِلَّا مَا حَرَّمَ إِسْرَائِيلُ﴾.
+
+### English
+
+In the first line I indicated that everyone other than the Shami among the verse-counting authorities counts the word {al-injil} in its first occurrence, by which I mean His statement {wa anzala al-tawrata wa al-injil} at the beginning of the surah; the Shami does not count it. The qualification 'first' excludes the second occurrence. I referred to that by my words 'and in the second the Kufan alone stands apart,' meaning that the Kufan alone counts after the word {al-injil} in the second occurrence, namely His statement {wa yu'allimuhu al-kitab wa al-hikmah wa al-tawrata wa al-injil}. This place is therefore omitted by the other verse-counting authorities.
+
+By my words 'everyone but him counts al-furqan,' the pronoun refers back to the Kufan. The meaning is that everyone other than the Kufan counts His statement {wa anzala al-furqan}; it is therefore uncounted for the Kufan. I then explained that the first occurrence of the word {Isra'ila} is counted by the Himsi and the Basran, and not by anyone else. What is meant is His statement {wa rasulan ila bani Isra'ila}. The qualification 'first' excludes the other occurrences, which are unanimously left uncounted. These are the two occurrences in the verse {kullu al-ta'ami kana hillan li-bani Isra'ila illa ma harrama Isra'ilu}.
+
+## nfb.al_imran.poem.mimma_tuhibbun
+
+**Section (Arabic):** سورة آل عمران  
+**Section (English):** Surat Al 'Imran  
+**Kind:** poem  
+**Book page(s):** 32
+
+### Arabic
+
+مما تحبون لمك أثبت ... وللدمشقي كذا مع شيبة
+
+### English
+
+Affirm mimma tuhibbun for the Makkan; likewise for the Dimashqi, together with Shaybah.
+
+## nfb.al_imran.commentary.mimma_tuhibbun
+
+**Section (Arabic):** سورة آل عمران  
+**Section (English):** Surat Al 'Imran  
+**Kind:** commentary  
+**Book page(s):** 32, 33
+
+### Arabic
+
+وأقول: أمر الناظم -عفا الله عنه- بإثبات عد قوله تعالى: ﴿حَتَّى تُنْفِقُوا مِمَّا تُحِبُّونَ﴾ للمكي والدمشقي وشيبة بن نصاح من أهل المدينة. فيكون غير معدود للبصري والكوفي والحمصي وأبي جعفر من أهل المدينة. وتقييد هذا الموضع بكلمة ﴿مِمَّا﴾ لإخراج الموضعين الآخرين في السورة، وهما ﴿قُلْ إِنْ كُنْتُمْ تُحِبُّونَ اللَّهَ﴾ و﴿مِنْ بَعْدِ مَا أَرَاكُمْ مَا تُحِبُّونَ﴾، فإنهما متروكان بالاتفاق.
+
+### English
+
+The author—may God pardon him—directed that the counting of His statement {hatta tunfiqu mimma tuhibbun} be affirmed for the Makkan, the Dimashqi, and Shaybah ibn Nissah from among the people of Madinah. It is therefore not counted by the Basran, the Kufan, the Himsi, or Abu Ja'far from among the people of Madinah. The qualification of this place by the word {mimma} excludes the other two occurrences in the surah, namely {qul in kuntum tuhibbuna Allah} and {min ba'di ma arakum ma tuhibbun}, for both are omitted by agreement.
+
+## nfb.al_imran.poem.maqam_ibrahim
+
+**Section (Arabic):** سورة آل عمران  
+**Section (English):** Surat Al 'Imran  
+**Kind:** poem  
+**Book page(s):** 33
+
+### Arabic
+
+مقام إبراهيم للشامي ورد ... كذا أبو جعفر أيضا في العدد
+
+### English
+
+The counting of maqam Ibrahim is transmitted for the Shami; likewise for Abu Ja'far in the count.
+
+## nfb.al_imran.commentary.maqam_ibrahim
+
+**Section (Arabic):** سورة آل عمران  
+**Section (English):** Surat Al 'Imran  
+**Kind:** commentary  
+**Book page(s):** 33
+
+### Arabic
+
+وأقول: قوله تعالى: ﴿فِيهِ آيَاتٌ بَيِّنَاتٌ مَقَامُ إِبْرَاهِيمَ﴾ ورد عده للشامي وأبي جعفر، فيكون متروكًا للباقين.
+
+### English
+
+His statement {fihi ayatun bayyinatun maqamu Ibrahim} is transmitted as counted by the Shami and Abu Ja'far, and is therefore omitted by the rest.
+
+## nfb.al_imran.completion
+
+**Section (Arabic):** سورة آل عمران  
+**Section (English):** Surat Al 'Imran  
+**Kind:** completion  
+**Book page(s):** 33
+
+### Arabic
+
+تتمة: أماكن الخلاف في هذه السورة سبعة: ﴿الم﴾ و﴿وَأَنْزَلَ التَّوْرَاةَ وَالْإِنْجِيلَ﴾ و﴿أَنْزَلَ الْفُرْقَانَ﴾ و﴿وَالْحِكْمَةَ وَالتَّوْرَاةَ وَالْإِنْجِيلَ﴾ و﴿وَرَسُولًا إِلَى بَنِي إِسْرَائِيلَ﴾ و﴿حَتَّى تُنْفِقُوا مِمَّا تُحِبُّونَ﴾ و﴿مَقَامُ إِبْرَاهِيمَ﴾. ولا يخفى عليك العادون والتاركون في كل موضع من هذه المواضع، والله أعلم.
+
+### English
+
+Completion note: the disputed places in this surah are seven: {alif lam mim}; {wa anzala al-tawrata wa al-injil}; {anzala al-furqan}; {wa al-hikmata wa al-tawrata wa al-injil}; {wa rasulan ila bani Isra'ila}; {hatta tunfiqu mimma tuhibbun}; and {maqamu Ibrahim}. It is already clear to you who counts and who omits each of these places. God knows best.
+
+## nfb.al_imran.note.shaybah_abu_jafar
+
+**Section (Arabic):** سورة آل عمران  
+**Section (English):** Surat Al 'Imran  
+**Kind:** technical_note  
+**Book page(s):** 33
+
+### Arabic
+
+وهذا أول المواضع التي اختلف فيها شيبة وأبو جعفر، وهي ست وهذا أولها. والثاني: مقام إبراهيم، والثالث: وإن كانوا ليقولون في الصافات، والرابع: قد جاءنا نذير في الملك، والخامس: إلى طعامه في سورة عبس، والسادس: فأين تذهبون في التكوير. وقد عدها شيبة إلا الموضع الثاني فتركه، وترك عدها أبو جعفر إلا الموضع الثاني فعده.
+
+### English
+
+This is the first of the places in which Shaybah and Abu Ja'far differ. They are six in total, and this is the first of them. The second is {maqamu Ibrahim}; the third is {wa in kanu layaqulun} in al-Saffat; the fourth is {qad ja'ana nadhir} in al-Mulk; the fifth is {ila ta'amihi} in Surat 'Abasa; and the sixth is {fa-ayna tadhhabun} in al-Takwir. Shaybah counted all of them except the second, which he omitted; Abu Ja'far omitted all of them except the second, which he counted.

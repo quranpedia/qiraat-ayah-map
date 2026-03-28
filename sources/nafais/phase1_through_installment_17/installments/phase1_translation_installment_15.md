@@ -1,0 +1,98 @@
+# Phase 1 Translation — Installment 15
+
+Work: **Nafa'is al-Bayan — Commentary on al-Fara'id al-Hisan**
+
+Scope: book pages 47–48; Surat al-Anbiya'; Surat al-Hajj.
+
+Translation register: technical, literal, readable.
+
+Source note:
+- Arabic technical labels such as basmalah, fasilah, ra's al-ayah, Shami, and Iraqi are retained where helpful.
+- Collective labels are translated but not yet normalized into machine codes in this file.
+- The title markup inherited from the source HTML has been removed as a mechanical artifact.
+- This installment resumes on the same printed page where the Taha material ended in the previous batch.
+- The shared source heading covers Surat al-Anbiya' and Surat al-Hajj together, so the title and poem are preserved as shared segments.
+- In the second hemistich of the poem, the commentary page drops the lam in للمكي; the earlier running matn page in the same source preserves that reading, and it is adopted here.
+- A commentary sentence interrupted by the printed page boundary between book pages 47 and 48 is mechanically rejoined where the continuation is explicit.
+- The Makkan disagreement over {huwa sammakumu al-muslimin} is preserved as a separate technical note segment because it affects later structured extraction.
+- The closing sentence listing the five disputed places in Surat al-Hajj is preserved as a completion segment.
+
+## nfb.anbiya_hajj.title
+
+**Section (Arabic):** سورة الأنبياء والحج  
+**Section (English):** Surat al-Anbiya' and Surat al-Hajj  
+**Kind:** title  
+**Book page(s):** 47
+
+### Arabic
+
+سورة الأنبياء والحج:
+
+### English
+
+Surat al-Anbiya' and Surat al-Hajj.
+
+
+## nfb.anbiya_hajj.poem.yadurrukum_hamim_thamud_lut_muslimin
+
+**Section (Arabic):** سورة الأنبياء والحج  
+**Section (English):** Surat al-Anbiya' and Surat al-Hajj  
+**Kind:** poem  
+**Book page(s):** 47
+
+### Arabic
+
+يضركم كوف مع الحميم مع ... ما بعده ثمود للشامي دع
+لوط لشامي مع البصري اترك ... والمسلمين الخلف للمكي حكي
+
+### English
+
+The Kufan counts yadurrukum together with al-hamim and what follows it; as for Thamud, omit it for the Shami. Omit Lut for the Shami together with the Basran; and regarding al-muslimin, disagreement is reported for the Makkan.
+
+
+## nfb.anbiya_hajj.commentary.yadurrukum_hamim_julud_thamud_lut
+
+**Section (Arabic):** سورة الأنبياء والحج  
+**Section (English):** Surat al-Anbiya' and Surat al-Hajj  
+**Kind:** commentary  
+**Book page(s):** 47, 48
+
+### Arabic
+
+وأقول: في سورة الأنبياء موضع واحد مختلف فيه وهو قوله تعالى: ﴿مَا لا يَنْفَعُكُمْ شَيْئًا وَلا يَضُرُّكُمْ﴾ وقد أخبرت أن الكوفي وحده يعده. وكذا يعد قوله تعالى في سورة الحج: ﴿يُصَبُّ مِنْ فَوْقِ رُؤُوسِهِمُ الْحَمِيمُ﴾ وقوله تعالى فيها أيضا: ﴿يُصْهَرُ بِهِ مَا فِي بُطُونِهِمْ وَالْجُلُودُ﴾ وهذا الموضع هو المراد بقولي: "مع ما بعده" فالكوفي يعد هذه المواضع الثلاثة وغيره يتركها، ثم أمرت بترك عد قوله تعالى: ﴿وَعَادٌ وَثَمُود﴾ للشامي فيكون معدودا لسواه من علماء العدد. كما أمرت بترك عد قوله تعالى: ﴿وَقَوْمُ لُوط﴾ للشامي والبصري فيكون معدودا للحجازيين والكوفي، فالشامي يترك عد الموضعين معا والبصري يترك عد الثاني فقط.
+
+### English
+
+What I mean is that in Surat al-Anbiya' there is one disputed place only, namely His statement {ma la yanfa'ukum shay'an wa la yadurrukum}; I stated that the Kufan alone counts it. Likewise, in Surat al-Hajj he counts His statement {yusabbu min fawqi ru'usihim al-hamim}, and also His statement {yusharu bihi ma fi butunihim wa al-julud}; this latter place is what I intended by my phrase 'together with what follows it.' Thus the Kufan counts these three places and everyone else omits them. Then I directed that the counting of His statement {wa 'Adun wa Thamud} be omitted for the Shami, so it is counted by the other verse-counting authorities. I likewise directed that the counting of His statement {wa qawmu Lut} be omitted for the Shami and the Basran, so it is counted by the Hijazis and the Kufan. Thus the Shami omits the counting of both places together, whereas the Basran omits only the second of them.
+
+
+## nfb.hajj.technical_note.muslimin_makki_dispute
+
+**Section (Arabic):** سورة الحج  
+**Section (English):** Surat al-Hajj  
+**Kind:** technical_note  
+**Book page(s):** 48
+
+### Arabic
+
+ثم ذكرت أن قوله تعالى: ﴿هُوَ سَمَّاكُمُ الْمُسْلِمِين﴾ حكى فيه العلماء الخلاف للمكي فذهب بعضهم إلى أن المكي ما كان يعد هذا الموضع ضمن الآيات المعدودة، وذهب البعض إلى أنه كان يعده وهذا هو الراجح؛ لأن الإمام الداني في كتابه "البيان" لم يذكر خلافا عن المكي في هذا الموضع بل جزم بأن المكي كان يعده.
+
+### English
+
+Then I mentioned that, concerning His statement {huwa sammakumu al-muslimin}, the scholars reported disagreement for the Makkan. Some held that the Makkan did not count this place among the counted verses, while others held that he did count it; and this latter view is the preferred one, because Imam al-Dani, in his book al-Bayan, did not mention any disagreement from the Makkan at this place, but rather stated decisively that the Makkan did count it.
+
+
+## nfb.hajj.completion
+
+**Section (Arabic):** سورة الحج  
+**Section (English):** Surat al-Hajj  
+**Kind:** completion  
+**Book page(s):** 48
+
+### Arabic
+
+ومواضع الخلاف في سورة الحج خمسة ﴿الْحَمِيم﴾ ﴿وَالْجُلُود﴾ ﴿وَثَمُود﴾ ﴿وَقَوْمُ لُوط﴾ و﴿سَمَّاكُمُ الْمُسْلِمِين﴾ والله تعالى أعلم.
+
+### English
+
+Completion: the disputed places in Surat al-Hajj are five: {al-hamim}, {wa al-julud}, {Thamud}, {wa qawmu Lut}, and {sammakumu al-muslimin}. God Most High knows best.

@@ -1,0 +1,30 @@
+{
+  "project": "al-Fara'id al-Hisan fi 'Add Ay al-Qur'an",
+  "scope": "Additional technical terms encountered in translation installment 11 (Surat Ibrahim).",
+  "terms": [
+    {
+      "arabic": "منع عد",
+      "transliteration": "man'a 'add",
+      "english": "to withhold from the count; to omit from the verse count",
+      "note": "A technical formulation meaning that a phrase is not treated as a counted verse ending in a given counting tradition."
+    },
+    {
+      "arabic": "كلا موضعيه",
+      "transliteration": "kila mawdi'ayhi",
+      "english": "both of its occurrences; both places where it occurs",
+      "note": "Used when a disputed phrase appears twice in the surah and the ruling covers both occurrences together."
+    },
+    {
+      "arabic": "وعى",
+      "transliteration": "wa'a",
+      "english": "retained; grasped; kept in mind",
+      "note": "A poetic summary verb in the matn, glossed by the commentator with حفظ, meaning that the reader should remember the ruling."
+    },
+    {
+      "arabic": "تكميل",
+      "transliteration": "takmil",
+      "english": "completion; supplementary summation",
+      "note": "A brief closing notice that gathers the disputed places of a surah after the detailed commentary."
+    }
+  ]
+}

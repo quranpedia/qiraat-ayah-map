@@ -1,0 +1,18 @@
+{
+  "project": "al-Fara'id al-Hisan fi 'Add Ay al-Qur'an",
+  "scope": "Additional technical terms encountered in translation installment 07 (Surat al-Anfal and Surat al-Tawbah).",
+  "terms": [
+    {
+      "arabic": "متفق على عده / متفق على تركه",
+      "transliteration": "muttafaq 'ala 'addihi / muttafaq 'ala tarkihi",
+      "english": "unanimously counted / unanimously omitted",
+      "note": "A stock formula used to mark places where all counting authorities agree either to count a phrase as a verse ending or to omit it from the count."
+    },
+    {
+      "arabic": "في ضمن عدد آي القرآن الكريم",
+      "transliteration": "fi dimn 'adad ay al-Qur'an al-karim",
+      "english": "within the transmitted verse count of the Noble Qur'an",
+      "note": "Used when the author says that a particular reader or regional counting tradition included a phrase in the formal transmitted enumeration of Qur'anic verse endings."
+    }
+  ]
+}

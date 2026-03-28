@@ -1,0 +1,48 @@
+{
+  "prefix_before_first_heading": "الْبَيَان فِي عد آي الْقُرْآن",
+  "internal_page_1_printed_page": 19,
+  "inline_or_missing_ruus_cases": [
+    {
+      "surah_number": 7,
+      "source_title_ar": "سورة الأعراف",
+      "canonical_name_ar": "الأعراف",
+      "canonical_name_en": "Al-Araf",
+      "ruus_mode": "inline_or_missing_heading"
+    },
+    {
+      "surah_number": 17,
+      "source_title_ar": "سورة الإسراء",
+      "canonical_name_ar": "الإسراء",
+      "canonical_name_en": "Al-Isra",
+      "ruus_mode": "inline_marker"
+    },
+    {
+      "surah_number": 51,
+      "source_title_ar": "سورة والذاريات",
+      "canonical_name_ar": "الذاريات",
+      "canonical_name_en": "Adh-Dhariyat",
+      "ruus_mode": "inline_marker"
+    },
+    {
+      "surah_number": 58,
+      "source_title_ar": "سورة المجادلة",
+      "canonical_name_ar": "المجادلة",
+      "canonical_name_en": "Al-Mujadila",
+      "ruus_mode": "inline_marker"
+    },
+    {
+      "surah_number": 61,
+      "source_title_ar": "سورة الصف",
+      "canonical_name_ar": "الصف",
+      "canonical_name_en": "As-Saff",
+      "ruus_mode": "inline_marker"
+    }
+  ],
+  "title_normalization_flags": [
+    {
+      "toc_id": 85,
+      "title": "مرؤوس الآي",
+      "normalized_title": "ورؤوس الآي"
+    }
+  ]
+}

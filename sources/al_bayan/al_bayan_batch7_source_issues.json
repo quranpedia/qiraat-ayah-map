@@ -1,0 +1,85 @@
+[
+  {
+    "issue_id": "surah_007_entry_pseudo_fawasil_serialized",
+    "severity": "medium",
+    "section_id": "surah.007.entry",
+    "description_en": "The four pseudo-fawasil in سورة الأعراف are serialized into two paired clusters rather than four neatly itemized lines.",
+    "local_evidence_pages": [
+      155
+    ],
+    "impact_en": "The four-item extraction is reliable, but it requires editorial splitting of the serialized phrasing."
+  },
+  {
+    "issue_id": "surah_007_ruus_inline_without_heading",
+    "severity": "medium",
+    "section_id": "surah.007.ruus_inline",
+    "description_en": "The رؤوس الآي layer for سورة الأعراف is embedded directly after the entry prose and is not introduced by a separate heading node in the uploaded witness.",
+    "local_evidence_pages": [
+      155,
+      156
+    ],
+    "impact_en": "The batch must split the inline ruʾūs logically from the entry before translation and structured extraction."
+  },
+  {
+    "issue_id": "surah_007_ruus_opening_unnumbered_head",
+    "severity": "medium",
+    "section_id": "surah.007.ruus_inline",
+    "description_en": "The first transmitted head, “للمؤمنين,” appears without a displayed numeral.",
+    "local_evidence_pages": [
+      156
+    ],
+    "impact_en": "The recovered ordinal layer treats this as verse-head 1 while preserving the witness’s lack of a displayed numeral."
+  },
+  {
+    "issue_id": "surah_007_ruus_display_skip_29",
+    "severity": "medium",
+    "section_id": "surah.007.ruus_inline",
+    "description_en": "The witness jumps from displayed 28 “مهتدون” to displayed 30 “المسرفين,” with no displayed 29 line.",
+    "local_evidence_pages": [
+      156
+    ],
+    "impact_en": "The recovered ordinal layer assigns “المسرفين” to ordinal 29 and records the displayed skip as a witness feature."
+  },
+  {
+    "issue_id": "surah_007_ruus_inserted_unnum_after_37",
+    "severity": "medium",
+    "section_id": "surah.007.ruus_inline",
+    "description_en": "After displayed 37 “من النار,” the witness inserts an unnumbered “لا تعلمون” before displayed 38.",
+    "local_evidence_pages": [
+      156
+    ],
+    "impact_en": "The inserted head must be preserved explicitly as ordinal 37 in the recovered later-Madani sequence."
+  },
+  {
+    "issue_id": "surah_007_ruus_page_break_136_and_inserted_yarishun",
+    "severity": "high",
+    "section_id": "surah.007.ruus_inline",
+    "description_en": "Displayed 136 breaks across the page boundary as a blank numeral fragment on printed 156, with the carried head “بني إسرائيل” at the top of printed 157; an unnumbered “يعرشون” then follows before displayed 137.",
+    "local_evidence_pages": [
+      156,
+      157
+    ],
+    "impact_en": "The carried 136 head and the inserted “يعرشون” must be represented as two separate ordinals in the structured sequence."
+  },
+  {
+    "issue_id": "surah_007_ruus_terminal_blank_206",
+    "severity": "low",
+    "section_id": "surah.007.ruus_inline",
+    "description_en": "The witness ends with a blank “٢٠٦” total line before the next sura begins.",
+    "local_evidence_pages": [
+      157
+    ],
+    "impact_en": "The terminal line is preserved as a display total only and is not treated as an additional head."
+  },
+  {
+    "issue_id": "surah_007_ruus_display_numbering_semantics",
+    "severity": "low",
+    "section_id": "surah.007.ruus_inline",
+    "description_en": "Because the inline witness begins unnumbered, skips displayed 29, inserts unnumbered heads after displayed 37 and after the carried 136 head, and ends with a blank total line, the displayed numerals do not function as a clean independent ordinal layer.",
+    "local_evidence_pages": [
+      156,
+      157
+    ],
+    "impact_en": "The dataset stores recovered later-Madani ordinals together with witness display numbers where present."
+  }
+]

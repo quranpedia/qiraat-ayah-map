@@ -1,0 +1,73 @@
+[
+  {
+    "issue_id": "surah_005_entry_pseudo_fawasil_serialized",
+    "severity": "medium",
+    "section_id": "surah.005.entry",
+    "description_en": "The five pseudo-fawasil in سورة المائدة are serialized inside one running sentence rather than as a neatly itemized list.",
+    "local_evidence_pages": [
+      149
+    ],
+    "impact_en": "The five-item extraction is reliable, but it requires editorial splitting of the serialized phrasing."
+  },
+  {
+    "issue_id": "surah_005_ruus_initial_gap",
+    "severity": "high",
+    "section_id": "surah.005.ruus",
+    "description_en": "The local ruʾūs witness preserves the opening extra head “بالعقود”, then resumes only at “مبين / ١٥ مستقيم ...”. The whole early block through “يصنعون” is absent.",
+    "local_evidence_pages": [
+      150
+    ],
+    "impact_en": "Ordinals 2–15 must be reconstructed explicitly rather than treated as present in the witness."
+  },
+  {
+    "issue_id": "surah_005_ruus_missing_extra_head_16",
+    "severity": "high",
+    "section_id": "surah.005.ruus",
+    "description_en": "The disputed non-Kufi head “ويعفو عن كثير”, stated in the entry itself, is absent from the surviving ruʾūs page between “يصنعون” and “مبين”.",
+    "local_evidence_pages": [
+      149,
+      150
+    ],
+    "impact_en": "The normalized later-Madani sequence must restore this head explicitly at ordinal 16."
+  },
+  {
+    "issue_id": "surah_005_ruus_missing_display_14_before_mubin",
+    "severity": "medium",
+    "section_id": "surah.005.ruus",
+    "description_en": "At the point where the witness resumes, “مبين” survives without its expected display numeral, after which the page continues “١٥ مستقيم، ١٦ قدير ...”.",
+    "local_evidence_pages": [
+      150
+    ],
+    "impact_en": "The surviving witness must be treated as resuming mid-display layer rather than as a clean start of sequence."
+  },
+  {
+    "issue_id": "surah_005_ruus_cross_page_compressions",
+    "severity": "medium",
+    "section_id": "surah.005.ruus",
+    "description_en": "The checked parallel PDF witness compresses several adjacent lines across page boundaries, including “٤٤ الظالمون٤٥ للمتقين”, “٧٧ يعتدون٧٨ يفعلون”, and “١١٠ مسلمون١١١ مؤمنين”.",
+    "local_evidence_pages": [
+      150
+    ],
+    "impact_en": "The ordered list remains recoverable, but those boundary joins should not be re-imported as single heads."
+  },
+  {
+    "issue_id": "surah_005_ruus_terminal_blank_120",
+    "severity": "low",
+    "section_id": "surah.005.ruus",
+    "description_en": "After the final surviving head “قدير”, the witness carries a standalone blank “١٢٠” line.",
+    "local_evidence_pages": [
+      150
+    ],
+    "impact_en": "This terminal line functions as a display total and must not be treated as an additional head."
+  },
+  {
+    "issue_id": "surah_005_ruus_display_numbering_semantics",
+    "severity": "low",
+    "section_id": "surah.005.ruus",
+    "description_en": "The surviving display numerals are not a second normalized ordinal layer. They reflect the printed witness’s own running display scheme, while extra disputed heads appear without numerals.",
+    "local_evidence_pages": [
+      150
+    ],
+    "impact_en": "The dataset preserves the ordered later-Madani sequence 1–122 rather than reproducing the defective witness numbering as a primary key."
+  }
+]

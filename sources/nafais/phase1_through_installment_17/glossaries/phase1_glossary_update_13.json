@@ -1,0 +1,24 @@
+{
+  "project": "al-Fara'id al-Hisan fi 'Add Ay al-Qur'an",
+  "scope": "Additional technical terms encountered in translation installment 13 (Surat Maryam).",
+  "terms": [
+    {
+      "arabic": "ضمها للآيات المعدودة",
+      "transliteration": "dammuha lil-ayat al-ma'dudah",
+      "english": "to include it among the counted verses",
+      "note": "A technical phrasing used when the commentator explains that a given enumerator treats a phrase as part of the recognized verse count."
+    },
+    {
+      "arabic": "بالإجماع",
+      "transliteration": "bi-al-ijma'",
+      "english": "by consensus; unanimously",
+      "note": "Used to mark that all the counting authorities agree on the ruling for a given occurrence."
+    },
+    {
+      "arabic": "مواضع الخلاف",
+      "transliteration": "mawadi' al-khilaf",
+      "english": "the disputed places; the loci of disagreement",
+      "note": "The standard phrase for the words or phrase-endings in a surah over which the counting traditions differ."
+    }
+  ]
+}

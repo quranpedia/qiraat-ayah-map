@@ -36,7 +36,9 @@ The site payload intentionally carries a few UI-facing derivatives so the SPA do
 
 - `/` overview and system entry points
 - `/compare` comparison and review-planning view
+- `/developer` practical integration guide for app builders
 - `/explorer` filterable disputed-point explorer
+- `/project` plain-language project guide
 - `/systems/:system` system profile and ranked fingerprint
 - `/surahs/:surah` surah matrix, table, and detail drill-down
 

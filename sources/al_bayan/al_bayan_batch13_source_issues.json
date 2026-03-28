@@ -1,0 +1,62 @@
+[
+  {
+    "issue_id": "surah_013_ruus_opening_unnumbered_head",
+    "severity": "medium",
+    "section_id": "surah.013.ruus",
+    "description_en": "The first transmitted head, “لَا يُؤمنُونَ,” appears without a displayed numeral.",
+    "local_evidence_pages": [
+      170
+    ],
+    "impact_en": "The recovered ordinal layer treats this as head 1 while preserving the witness’s lack of a displayed numeral."
+  },
+  {
+    "issue_id": "surah_013_ruus_large_early_omission_after_jadid",
+    "severity": "high",
+    "section_id": "surah.013.ruus",
+    "description_en": "After displayed 4 “جَدِيد”, the local witness omits the early interval that should run through “خالدون / العقاب / هاد / بمقدار / المتعال / بالنهار / من وال / الثقال / المحال / ضلال / الآصال”, before the sequence resumes near “القهار”.",
+    "local_evidence_pages": [
+      170
+    ],
+    "impact_en": "The recovered later-Madani sequence restores this interval explicitly with null source-line fields so that the repair remains auditable."
+  },
+  {
+    "issue_id": "surah_013_ruus_missing_walnur_and_unnumbered_alqahhar",
+    "severity": "high",
+    "section_id": "surah.013.ruus",
+    "description_en": "The local witness does not transmit the disputed later-Madani head “والنور” at all, and it gives “القهار” without a displayed numeral before resuming with displayed 16 “الْأَمْثَال”.",
+    "local_evidence_pages": [
+      170
+    ],
+    "impact_en": "The dataset restores “والنور” from the source entry’s disagreement notice and the checked secondary tabulation, and preserves “القهار” as an unnumbered transmitted head in its recovered position."
+  },
+  {
+    "issue_id": "surah_013_ruus_display_skip_23",
+    "severity": "medium",
+    "section_id": "surah.013.ruus",
+    "description_en": "Later in the block, the witness jumps from displayed 22 “الدَّار” to displayed 24 “الدَّار”.",
+    "local_evidence_pages": [
+      170
+    ],
+    "impact_en": "The omitted display slot corresponds to the non-baseline disputed head “من كل بَاب”; the later-Madani sequence therefore keeps the three transmitted “الدَّار” heads while preserving the display skip as witness metadata."
+  },
+  {
+    "issue_id": "surah_013_ruus_terminal_blank_43",
+    "severity": "medium",
+    "section_id": "surah.013.ruus",
+    "description_en": "The witness ends with a blank terminal display-total line, rendered locally as “٤ - ٣”.",
+    "local_evidence_pages": [
+      170
+    ],
+    "impact_en": "The terminal line is preserved as display metadata only and is not treated as an additional head."
+  },
+  {
+    "issue_id": "surah_013_ruus_display_numbering_semantics",
+    "severity": "low",
+    "section_id": "surah.013.ruus",
+    "description_en": "Because the transmitted block begins unnumbered, loses a long early interval, omits the disputed head “والنور”, transmits “القهار” without a numeral, skips displayed 23, and ends with a blank terminal line, the displayed numerals do not function as a reliable independent ordinal layer.",
+    "local_evidence_pages": [
+      170
+    ],
+    "impact_en": "The dataset stores recovered later-Madani ordinals separately from witness display numerals and marks every restoration explicitly."
+  }
+]

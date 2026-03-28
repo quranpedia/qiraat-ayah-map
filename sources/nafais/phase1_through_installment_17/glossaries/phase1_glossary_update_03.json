@@ -1,0 +1,36 @@
+{
+  "project": "al-Fara'id al-Hisan fi 'Add Ay al-Qur'an",
+  "scope": "Additional technical terms encountered in translation installment 03 (Surat Al 'Imran).",
+  "terms": [
+    {
+      "arabic": "الأول / الأولى / الثاني / الثانية",
+      "transliteration": "al-awwal / al-ula / al-thani / al-thaniyah",
+      "english": "the first occurrence / the second occurrence",
+      "note": "These qualifiers are crucial in 'add al-ayy because the same word may recur in a surah while only one occurrence is disputed."
+    },
+    {
+      "arabic": "انفرد",
+      "transliteration": "infarada",
+      "english": "to stand alone; to be unique in the count",
+      "note": "A formula used when one counting authority alone counts or omits a given place."
+    },
+    {
+      "arabic": "أثبت / إثبات",
+      "transliteration": "athbata / ithbat",
+      "english": "to affirm; affirmation of counting",
+      "note": "In this work it often means to confirm that a place is to be counted as a verse ending for a named authority."
+    },
+    {
+      "arabic": "ورد / ورد عده",
+      "transliteration": "warada / warada 'adduhu",
+      "english": "to be transmitted; its counting is reported",
+      "note": "Used for a transmitted verse-counting judgment rather than a purely deductive one."
+    },
+    {
+      "arabic": "متروك / متروكان / متروكة",
+      "transliteration": "matruk / matrukan / matrukah",
+      "english": "left uncounted; omitted in the count",
+      "note": "The opposite of affirming a place as a counted fasilah."
+    }
+  ]
+}

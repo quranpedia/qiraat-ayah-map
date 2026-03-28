@@ -1,0 +1,208 @@
+{
+  "project": "al-Fara'id al-Hisan fi 'Add Ay al-Qur'an",
+  "work": "Nafa'is al-Bayan — Commentary on al-Fara'id al-Hisan",
+  "phase": "translation_installment_14",
+  "scope": {
+    "book_pages": [
+      44,
+      45,
+      46,
+      47
+    ],
+    "sections": [
+      "Surat Taha"
+    ]
+  },
+  "translation_policy": {
+    "style": "technical, literal, readable",
+    "notes": [
+      "Arabic technical labels such as basmalah, fasilah, ra's al-ayah, Shami, and Iraqi are retained where helpful.",
+      "Collective labels are translated but not yet normalized into machine codes in this file.",
+      "The title markup inherited from the source HTML has been removed as a mechanical artifact.",
+      "This installment resumes on the same printed page where the Maryam material ended in the previous batch.",
+      "Two plain OCR disturbances are normalized here: تخزن is corrected to تحزن, and للاحتزاز is corrected to للاحتراز.",
+      "A commentary sentence interrupted by the page break between book pages 44 and 45 is mechanically rejoined where the continuation is explicit.",
+      "The closing takmil is preserved as its own completion segment and explicitly adds {Ta Ha} as the twenty-second disputed place omitted from the poem.",
+      "The next titled source block, Surat al-Anbiya' wa al-Hajj, begins on the same printed page after the Taha completion; this installment stops cleanly at the end of Surat Taha."
+    ]
+  },
+  "segments": [
+    {
+      "id": "nfb.taha.title",
+      "section_ar": "سورة طه",
+      "section_en": "Surat Taha",
+      "kind": "title",
+      "book_pages": [
+        44
+      ],
+      "source_ar": "سورة طه:",
+      "translation_en": "Surat Taha."
+    },
+    {
+      "id": "nfb.taha.poem.kathiran_minni",
+      "section_ar": "سورة طه",
+      "section_en": "Surat Taha",
+      "kind": "poem",
+      "book_pages": [
+        44
+      ],
+      "source_ar": "معا كثيرا عند بصر أهملا ... مني دمشقي حجازي تلا",
+      "translation_en": "Omit both occurrences of kathiran for the Basran; minni is counted by the Dimashqi and the Hijazi."
+    },
+    {
+      "id": "nfb.taha.commentary.kathiran_minni",
+      "section_ar": "سورة طه",
+      "section_en": "Surat Taha",
+      "kind": "commentary",
+      "book_pages": [
+        44
+      ],
+      "source_ar": "وأقول: أعني أن كثيرا في الموضعين في قوله تعالى: ﴿كَيْ نُسَبِّحَكَ كَثِيرًا، وَنَذْكُرَكَ كَثِيرًا﴾ أهمل عدهما عند البصري واعتبر عند الباقين، ومني في قوله تعالى: ﴿وَأَلْقَيْتُ عَلَيْكَ مَحَبَّةً مِنِّي﴾ عده الدمشقي والحجازي: المدنيان والمكي. ولم يعده البصري والحمصي والكوفي.",
+      "translation_en": "What I mean is that kathiran in the two places in His statement {kay nusabbihaka kathiran, wa nadhkuraka kathiran} is omitted from the count by the Basran and counted by the rest. As for minni in His statement {wa alqaytu 'alayka mahabbatan minni}, it is counted by the Dimashqi and the Hijazi—that is, the two Madinans and the Makkan. The Basran, the Himsi, and the Kufan do not count it."
+    },
+    {
+      "id": "nfb.taha.poem.fi_al_yam_tahzan_israil_madyan_musa",
+      "section_ar": "سورة طه",
+      "section_en": "Surat Taha",
+      "kind": "poem",
+      "book_pages": [
+        44
+      ],
+      "source_ar": "في اليم حمص تحزن إسرائيل مع ... مدين موسى أن لشامي تقع",
+      "translation_en": "Fi al-yam belongs to the Himsi; and tahzan, Isra'il, together with Madyan and Musa before an, belong to the Shami."
+    },
+    {
+      "id": "nfb.taha.commentary.fi_al_yam_tahzan_israil_madyan_musa",
+      "section_ar": "سورة طه",
+      "section_en": "Surat Taha",
+      "kind": "commentary",
+      "book_pages": [
+        44,
+        45
+      ],
+      "source_ar": "وأقول: ذكرت في هذا البيت أن قوله تعالى: ﴿فَاقْذِفِيهِ فِي الْيَمِّ﴾ معدود للحمصي ومتروك لغيره، وتقييد اليم بكلمة في لإخراج الخالي منها، وهو ﴿فَلْيُلْقِهِ الْيَمُّ﴾ و﴿فَغَشِيَهُمْ مِنَ الْيَمِّ﴾ فليس شيء منهما رأس آية إجماعا. ثم نبهت على أن في السورة أربعة مواضع تقع في عد الشامي ولا تقع في عد غيره: الموضع الأول تحزن في قوله تعالى: ﴿كَيْ تَقَرَّ عَيْنُهَا وَلا تَحْزَنَ﴾. الثاني إسرائيل في قوله تعالى: ﴿فَأَرْسِلْ مَعَنَا بَنِي إِسْرائيلَ﴾ ولم أقيد هذا الموضع اكتفاء بقرينة ذكره عقب تحزن وقبل موسى، مع ملاحظة أن ﴿يَا بَنِي إِسْرائيلَ﴾ لا يتوهم كونه فاصلة لشدة قصره، وعدم مساواته لفواصل السورة. الثالث مدين في قوله تعالى: ﴿فَلَبِثْتَ سِنِينَ فِي أَهْلِ مَدْيَنَ﴾. الرابع ﴿مُوسَى﴾ في ﴿وَلَقَدْ أَوْحَيْنَا إِلَى مُوسَى أَنْ أَسْرِ﴾، وقيد موسى بكونه واقعا قبل كلمة أن لإخراج غيره مما اتفق على عده، أو على تركه، أو اختلف فيه، ولا تخفى الأمثلة على المتأمل.",
+      "translation_en": "In this line I mentioned that His statement {faqdhifihi fi al-yammi} is counted by the Himsi and left uncounted by the others. The qualification of al-yamm by the word fi excludes the occurrences without it, namely {falyulqihi al-yammu} and {faghashiyahum mina al-yammi}; neither of them is a verse ending by consensus. Then I pointed out that in this surah there are four places that fall within the Shami count and do not fall within any other count. The first is tahzan in His statement {kay taqarra 'aynuha wa la tahzana}. The second is Isra'il in His statement {fa-arsil ma'ana bani Isra'ila}. I did not qualify this place, relying on the contextual clue of mentioning it after tahzan and before Musa, while noting that {ya bani Isra'ila} cannot plausibly be taken as a fasilah because of its marked brevity and its lack of correspondence to the surah's other verse endings. The third is Madyan in His statement {falabithta sinina fi ahli Madyana}. The fourth is Musa in {wa laqad awhayna ila Musa an asri}. I qualified Musa by its occurrence before the word an in order to exclude other occurrences that are agreed to be counted, agreed to be omitted, or themselves disputed. The examples are clear to anyone who reflects."
+    },
+    {
+      "id": "nfb.taha.poem.futunan_linafsi_ma_ghashiyahum_asifa",
+      "section_ar": "سورة طه",
+      "section_en": "Surat Taha",
+      "kind": "poem",
+      "book_pages": [
+        45
+      ],
+      "source_ar": "فتونا البصري وشام أتبعا ... كوف لنفسي معه شامي وعى\nغشيهم في الثان كوف أسفا ... للمدني الأول والمكي اعرفا",
+      "translation_en": "Futunan is followed by the Basran and the Shami; the Kufan, together with the Shami, retained linafsi. In the second occurrence of ghashiyahum the Kufan counts; asifa, take note, belongs to the First Madinan and the Makkan."
+    },
+    {
+      "id": "nfb.taha.commentary.futunan_linafsi_ma_ghashiyahum_asifa",
+      "section_ar": "سورة طه",
+      "section_en": "Surat Taha",
+      "kind": "commentary",
+      "book_pages": [
+        45
+      ],
+      "source_ar": "وأقول: ذكرت أن قوله تعالى: ﴿وَفَتَنَّاكَ فُتُونًا﴾ معدود للبصري والشامي ومتروك لغيرهما وأن الكوفي ومعه الشامي قد حفظا عد لنفسي في قوله تعالى: ﴿وَاصْطَنَعْتُكَ لِنَفْسِي﴾ ولم يعده الباقون. وأن غشيهم في الموضع الثاني وهو قوله تعالى: ﴿مَا غَشِيَهُمْ﴾ معدود للكوفي وحده. وتقييده بالموضع الثاني لإخراج الأول وهو ﴿فَغَشِيَهُم﴾ فليس معدودا لأحد. وأن أسفا في قوله تعالى: ﴿غَضْبَانَ أَسِفًا﴾ معدود للمدني الأول والمكي ومتروك لغيرهما.",
+      "translation_en": "I stated that His statement {wa fatannaka futunan} is counted by the Basran and the Shami and omitted by the others; that the Kufan, together with the Shami, retained the counting of linafsi in His statement {wa-istana'tuka linafsi}; and that the others do not count it. And ghashiyahum in the second place—namely His statement {ma ghashiyahum}—is counted by the Kufan alone. I qualified it as the second occurrence to exclude the first, namely {faghashiyahum}, for that is counted by no one. And asifa in His statement {ghadbana asifa} is counted by the First Madinan and the Makkan and omitted by the others."
+    },
+    {
+      "id": "nfb.taha.poem.alqa_al_samiri_wadan_hasanan_qawlan",
+      "section_ar": "سورة طه",
+      "section_en": "Surat Taha",
+      "kind": "poem",
+      "book_pages": [
+        45
+      ],
+      "source_ar": "للثان ألقى السامري فارددا ... وحسنا قولا ولا له اعددا",
+      "translation_en": "For the Last Madinan, reject {alqa al-Samiri}; and count for him {wa'dan hasanan} and the qawlan before la."
+    },
+    {
+      "id": "nfb.taha.commentary.alqa_al_samiri_wadan_hasanan_qawlan",
+      "section_ar": "سورة طه",
+      "section_en": "Surat Taha",
+      "kind": "commentary",
+      "book_pages": [
+        46
+      ],
+      "source_ar": "وأقول: أمرت في هذا البيت برد أي بعدم عد قوله تعالى: ﴿فَكَذَلِكَ أَلْقَى السَّامِرِيُّ﴾ للمدني الثاني فيكون معدودا للباقين. وتقييد لفظ السامري بألقى للاحتراز عن غيره وهو ﴿وَأَضَلَّهُمُ السَّامِرِي﴾ و﴿قَالَ فَمَا خَطْبُكَ يَا سَامِرِيُّ﴾ فهذان الموضعان معدودان اتفاقا. ثم أمرت بعد قوله تعالى: ﴿وَعْدًا حَسَنًا﴾ وقوله \"قولا\" الذي بعده \"ولا\" وهو ﴿أَلَّا يَرْجِعُ إِلَيْهِمْ قَوْلًا﴾ للمدني الثاني فيكون هذان الموضعان متروكين لغيره، فالضمير في قولي: \"له\" يعود على المدني الثاني. وتقييد \"قولا\" بوقوعه قبل ولا للاحتراز عن قوله تعالى: ﴿وَرَضِيَ لَهُ قَوْلًا﴾ فإنه معدود إجماعا.",
+      "translation_en": "In this line I instructed that His statement {fakadhalika alqa al-Samiriyyu} be rejected—that is, not counted—for the Last Madinan, and thus counted by the rest. The qualification of al-Samiri by alqa is to exclude the other occurrences, namely {wa adallahumu al-Samiri} and {qala fama khatbuka ya Samiriyyu}; both of these are counted by agreement. Then I directed that, for the Last Madinan, the place after His statement {wa'dan hasanan} and the qawlan that comes before la—namely {alla yarji'a ilayhim qawlan}—be counted, so these two places are omitted by the others. The pronoun in my words 'for him' refers to the Last Madinan. I qualified qawlan by its occurrence before la in order to exclude His statement {wa radiya lahu qawlan}, for that is counted by consensus."
+    },
+    {
+      "id": "nfb.taha.poem.ilahu_musa_fanasiya",
+      "section_ar": "سورة طه",
+      "section_en": "Surat Taha",
+      "kind": "poem",
+      "book_pages": [
+        46
+      ],
+      "source_ar": "إله موسى عند مك رويا ... مع أول ولهما اترك نسيا",
+      "translation_en": "Ilahu Musa is narrated for the Makkan together with the First Madinan; and for those two omit fanasiya."
+    },
+    {
+      "id": "nfb.taha.commentary.ilahu_musa_fanasiya",
+      "section_ar": "سورة طه",
+      "section_en": "Surat Taha",
+      "kind": "commentary",
+      "book_pages": [
+        46
+      ],
+      "source_ar": "وأقول: بينت أن قوله تعالى: ﴿وَإِلَهُ مُوسَى﴾ روى عده عن المكي والمدني الأول فيكون متروكا للباقين. وتقييد موسى بوقوعه بعد لفظ \"إله\" للاحتراز عن غيره كما سبق. ثم أمرت بترك عد قوله تعالى: ﴿فَنَسِي﴾ للمكي والمدني الأول. فيكون معدودا للباقين فمن يعد ﴿وَإِلَهُ مُوسَى﴾ لا يعد ﴿فَنَسِي﴾ وبالعكس.",
+      "translation_en": "I explained that His statement {wa ilahu Musa} is narrated as counted by the Makkan and the First Madinan, and is therefore omitted by the others. I qualified Musa by its occurrence after the word ilahu in order to exclude the other occurrences, as mentioned before. Then I instructed that His statement {fanasiya} be left uncounted for the Makkan and the First Madinan; it is therefore counted by the rest. Thus, whoever counts {wa ilahu Musa} does not count {fanasiya}, and vice versa."
+    },
+    {
+      "id": "nfb.taha.poem.raaytahum_dallu_safsafa",
+      "section_ar": "سورة طه",
+      "section_en": "Surat Taha",
+      "kind": "poem",
+      "book_pages": [
+        46
+      ],
+      "source_ar": "رأيتهم ضلوا لكوف اعددا ... وصفصفا عن الحجازي ارددا",
+      "translation_en": "Count {ra'aytahum dallu} for the Kufan; and reject safsafa for the Hijazi."
+    },
+    {
+      "id": "nfb.taha.commentary.raaytahum_dallu_safsafa",
+      "section_ar": "سورة طه",
+      "section_en": "Surat Taha",
+      "kind": "commentary",
+      "book_pages": [
+        46
+      ],
+      "source_ar": "وأقول: أمرت بعد قوله تعالى: ﴿إِذْ رَأَيْتَهُمْ ضَلُّوا﴾ للكوفي فيكون متروكا للباقين، وبعدم عد ﴿قَاعًا صَفْصَفًا﴾ للحجازي -المدنيين والمكي- فيكون معدودا للعراقيين والشامي.",
+      "translation_en": "I instructed that after His statement {idh ra'aytahum dallu} it be counted for the Kufan, and so omitted by the others; and that {qa'an safsafan} be left uncounted for the Hijazi—that is, the two Madinans and the Makkan—so it is counted by the Iraqis and the Shami."
+    },
+    {
+      "id": "nfb.taha.poem.minni_hudan_dunya_dankan",
+      "section_ar": "سورة طه",
+      "section_en": "Surat Taha",
+      "kind": "poem",
+      "book_pages": [
+        46
+      ],
+      "source_ar": "مني هدى وثاني الدنيا يرد ... كوف وحمصي وضنكا عنه عد",
+      "translation_en": "{minni hudan} and the second al-dunya are rejected by the Kufan and the Himsi; and count dankan for the latter."
+    },
+    {
+      "id": "nfb.taha.commentary.minni_hudan_dunya_dankan",
+      "section_ar": "سورة طه",
+      "section_en": "Surat Taha",
+      "kind": "commentary",
+      "book_pages": [
+        47
+      ],
+      "source_ar": "وأقول: المعنى أن قوله تعالى: ﴿فَإِمَّا يَأْتِيَنَّكُمْ مِنِّي هُدًى﴾ وقوله تعالى: ﴿زَهْرَةَ الْحَيَاةِ الدُّنْيَا﴾ وهو المراد بقولي ثاني الدنيا يرد عدهما الكوفي والحمصي ويعدهما الباقون. وتقييد هدى بوقوعه بعد كلمة مني للاحتراز عن قوله تعالى: ﴿أَوْ أَجِدُ عَلَى النَّارِ هُدى﴾ فمتفق على عده. وتقييد الدنيا بالثاني للاحتراز عن الموضع الأول وهو ﴿إِنَّمَا تَقْضِي هَذِهِ الْحَيَاةَ الدُّنْيَا﴾ فإنه معدود اتفاقا أيضا. وقوله تعالى: ﴿فَإِنَّ لَهُ مَعِيشَةً ضَنْكًا﴾ عد عن الحمصي دون غيره. فالضمير في عنه يعود على الحمصي.",
+      "translation_en": "The meaning is that His statement {fa-imma ya'tiyannakum minni hudan} and His statement {zahrata al-hayati al-dunya}—which is what I mean by 'the second al-dunya'—have their counting rejected by the Kufan and the Himsi, while the others count them. I qualified hudan by its occurrence after the word minni in order to exclude His statement {aw ajidu 'ala al-nari hudan}, which is counted by agreement. I qualified al-dunya as the second occurrence to exclude the first, namely {innama taqdi hadhihi al-hayata al-dunya}, for that too is counted by consensus. And His statement {fa-inna lahu ma'ishatan dankan} is counted by the Himsi alone. The pronoun in 'for him' refers to the Himsi."
+    },
+    {
+      "id": "nfb.taha.completion",
+      "section_ar": "سورة طه",
+      "section_en": "Surat Taha",
+      "kind": "completion",
+      "book_pages": [
+        47
+      ],
+      "source_ar": "تكميل: مواضع الخلف في هذه السورة اثنان وعشرون موضعا، وقد اشتمل النظم على بيان واحد وعشرين فقط، فالثاني والعشرون هو قوله تعالى: ﴿طه﴾. وقد انفرد الكوفي بعده كما سبق والله أعلم.",
+      "translation_en": "Completion: the disputed places in this surah are twenty-two. The poem contains the explanation of only twenty-one of them; the twenty-second is His statement {Ta Ha}. The Kufan alone counts it, as mentioned earlier. God knows best."
+    }
+  ]
+}

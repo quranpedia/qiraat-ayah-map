@@ -1,0 +1,1123 @@
+{
+  "project_phase": "phase_1_batch_11",
+  "section_ids": {
+    "entry": "surah.011.entry",
+    "ruus": "surah.011.ruus"
+  },
+  "arabic_source": {
+    "entry": "١١\n\nمَكِّيَّة وَقد ذكر نظيرتها فِي الْمدنِي الأول والشامي وَلَا نَظِير لَهَا فِي غَيرهمَا\nوكلمها ألف وتسع مئة وَخمْس عشرَة كلمة\nوحروفها سَبْعَة آلَاف وَخمْس مئة وَسَبْعَة وَسَبْعُونَ وَسِتُّونَ حرفا كحروف يُونُس\nوَهِي مئة وَإِحْدَى وَعِشْرُونَ آيَة فِي الْمدنِي الْأَخير والمكي والبصري وَاثْنَتَانِ فِي الْمدنِي الأول والشامي وَثَلَاث فِي الْكُوفِي\nاختلافها سبع آيَات (﴿إِنِّي بَرِيء مِمَّا تشركون﴾) عدهَا الْكُوفِي وَلم يعدها الْبَاقُونَ (﴿يجادلنا فِي قوم لوط﴾) وَهُوَ الثَّانِي لم يعدها الْبَصْرِيّ وعدها الْبَاقُونَ وَكلهمْ عد (﴿إِلَى قوم لوط﴾) وَهُوَ الأول (﴿من سجيل﴾) عدهَا الْمدنِي الْأَخير والمكي وَلم يعدها الْبَاقُونَ (﴿منضود﴾) لم يعدها الْمدنِي الْأَخير والمكي وعدها الْبَاقُونَ (﴿إِن كُنْتُم مُؤمنين﴾) عدهَا المدنيان والمكي وَلم يعدها الْبَاقُونَ (﴿وَلَا يزالون مُخْتَلفين﴾) لم يعدها المدنيان والمكي وعدها الْبَاقُونَ (﴿إِنَّا عاملون﴾) لم يعدها الْمدنِي الْأَخير والمكي وعدها الْبَاقُونَ\nوفيهَا مِمَّا يشبه الفواصل وَلَيْسَ معدودا بِإِجْمَاع سِتَّة مَوَاضِع (﴿يعلم مَا يسرون وَمَا يعلنون﴾ فَسَوف تعلمُونَ) الأول (﴿وفار التَّنور﴾ فِينَا ضَعِيفا) (﴿سَوف تعلمُونَ﴾) الثَّانِي (﴿ذَلِك يَوْم مَجْمُوع لَهُ النَّاس﴾)",
+    "ruus_transmitted": "خَبِير\n١ - وَبشير\n٢ - كَبِير\n٣ - قدير\n٤ - الصُّدُور\n٥ - مُبين\n٦ - مُبين\n٧ - يستهزئون\n٨ - كفور\n٩ - فخور\n١٠ - كَبِير\n١١ - وَكيل\n١٢ - صَادِقين\n١٣ - مُسلمُونَ\n١٤ - لَا يبخسون\n١٥ - يعْملُونَ\n١٦ - لَا يُؤمنُونَ\n١٧ - الظَّالِمين\n١٨ - كافرون\n١٩ - يبصرون\n٢٠ - يفترون\n٢١ - الأخسرون\n٢٢ - خَالدُونَ\n٢٣ - تذكرُونَ\n٢٤ - مُبين\n٢٥ - أَلِيم\n٢٦ - كاذبين\n٢٧ - كَارِهُون\n٢٨ - تجهلون\n٢٩ - تذكرُونَ\n٣٠ - الظَّالِمين\n٣١ - الصَّادِقين\n٣٢ - بمعجزين\n٣٣ - ترجعون\n٣٤ - تجرمون\n٣٥ - يَفْعَلُونَ\n٣٦ - مغرقون\n٣٧ - تسخرون\n٣٨ - مُقيم\n٣٩ - إِلَّا قَلِيل\n٤٠ - رَحِيم\n٤١ - الْكَافرين\n٤٢ - المغرقين\n٤٣ - الظَّالِمين\n٤٤ - الْحَاكِمين\n٤٥ - الْجَاهِلين\n٤٦ - الخاسرين\n٤٧ - أَلِيم\n٤٨ - لِلْمُتقين\n٤٩ - مفترون\n٥٠ - تعقلون\n٥١ - مجرمين\n٥٢ - بمؤمنين\n٥٣ - لَا تنْظرُون\n٥٥ - مُسْتَقِيم\n٥٦ - حفيظ\n٥٧ - غليظ\n٥٨ - عنيد\n٥٩ - قوم هود\n٦٠ - مُجيب\n٦١ - مريب\n٦٢ - تخسير\n٦٣ - قريب\n٦٤ - مَكْذُوب\n٦٥ - الْعَزِيز\n٦٦ - جاثمين\n٦٧ - لثمود\n٦٨ - حنيذ\n٦٩ - قوم لوط\n٧٠ - يَعْقُوب\n٧١ - عَجِيب\n٧٢ - مجيد\n٧٣ - قوم لوط\n٧٤ - منيب\n٧٥ - مَرْدُود\n٧٦ - عصيب\n٧٧ - رشيد\n٧٨ - مَا نُرِيد\n٧٩ - شَدِيد\n٨٠ - بقريب\n٨١ - سجيل\nبحفيظ\n٨٦ - الرشيد\n٨٧ - أنيب\n٨٨ - بِبَعِيد\n٨٩ - ودود\n٩٠ - بعزيز\n٩١ - مُحِيط\n٩٢ - رَقِيب\n٩٣ - جاثمين\n٩٤ - ثَمُود\n٩٥ - مُبين\n٩٦ - برشيد\n٩٧ - المورود\n٩٨ - المرفود\n٩٩ - وحصيد\n١٠٠ - تتبيب\n١٠١ - شَدِيد\n١٠٢ - مشهود\n١٠٣ - مَعْدُود\n١٠٤ - وَسَعِيد\n١٠٥ - وشهيق\n١٠٦ - لما يُرِيد\n١٠٧ - مجذوذ\n١٠٨ - مَنْقُوص\n١٠٩ - مريب\n١١٠ - خَبِير\n١١١ - بَصِير\n١١٢ - لَا تنْصرُونَ\n١١٣ - لِلذَّاكِرِينَ\n١١٤ - الْمُحْسِنِينَ\n١١٥ - مجرمين\n١١٦ - مصلحون\n١١٧ - أَجْمَعِينَ\n١١٩ - للْمُؤْمِنين\n١٢٠ - منتظرون\n١٢٢ - تَعْمَلُونَ\n١٢ - ٣",
+    "ruus_normalized_madani_2": "1 - خَبِير\n2 - وَبشير\n3 - كَبِير\n4 - قدير\n5 - الصُّدُور\n6 - مُبين\n7 - مُبين\n8 - يستهزئون\n9 - كفور\n10 - فخور\n11 - كَبِير\n12 - وَكيل\n13 - صَادِقين\n14 - مُسلمُونَ\n15 - لَا يبخسون\n16 - يعْملُونَ\n17 - لَا يُؤمنُونَ\n18 - الظَّالِمين\n19 - كافرون\n20 - يبصرون\n21 - يفترون\n22 - الأخسرون\n23 - خَالدُونَ\n24 - تذكرُونَ\n25 - مُبين\n26 - أَلِيم\n27 - كاذبين\n28 - كَارِهُون\n29 - تجهلون\n30 - تذكرُونَ\n31 - الظَّالِمين\n32 - الصَّادِقين\n33 - بمعجزين\n34 - ترجعون\n35 - تجرمون\n36 - يَفْعَلُونَ\n37 - مغرقون\n38 - تسخرون\n39 - مُقيم\n40 - إِلَّا قَلِيل\n41 - رَحِيم\n42 - الْكَافرين\n43 - المغرقين\n44 - الظَّالِمين\n45 - الْحَاكِمين\n46 - الْجَاهِلين\n47 - الخاسرين\n48 - أَلِيم\n49 - لِلْمُتقين\n50 - مفترون\n51 - تعقلون\n52 - مجرمين\n53 - بمؤمنين\n54 - لَا تنْظرُون\n55 - مُسْتَقِيم\n56 - حفيظ\n57 - غليظ\n58 - عنيد\n59 - قوم هود\n60 - مُجيب\n61 - مريب\n62 - تخسير\n63 - قريب\n64 - مَكْذُوب\n65 - الْعَزِيز\n66 - جاثمين\n67 - لثمود\n68 - حنيذ\n69 - قوم لوط\n70 - يَعْقُوب\n71 - عَجِيب\n72 - مجيد\n73 - قوم لوط\n74 - منيب\n75 - مَرْدُود\n76 - عصيب\n77 - رشيد\n78 - مَا نُرِيد\n79 - شَدِيد\n80 - بقريب\n81 - سجيل\n82 - بِبَعِيد\n83 - مُحِيط\n84 - مفسدين\n85 - مُؤمنين\n86 - بحفيظ\n87 - الرشيد\n88 - أنيب\n89 - بِبَعِيد\n90 - ودود\n91 - بعزيز\n92 - مُحِيط\n93 - رَقِيب\n94 - جاثمين\n95 - ثَمُود\n96 - مُبين\n97 - برشيد\n98 - المورود\n99 - المرفود\n100 - وحصيد\n101 - تتبيب\n102 - شَدِيد\n103 - مشهود\n104 - مَعْدُود\n105 - وَسَعِيد\n106 - وشهيق\n107 - لما يُرِيد\n108 - مجذوذ\n109 - مَنْقُوص\n110 - مريب\n111 - خَبِير\n112 - بَصِير\n113 - لَا تنْصرُونَ\n114 - لِلذَّاكِرِينَ\n115 - الْمُحْسِنِينَ\n116 - مجرمين\n117 - مصلحون\n118 - أَجْمَعِينَ\n119 - للْمُؤْمِنين\n120 - منتظرون\n121 - تَعْمَلُونَ"
+  },
+  "english_translation": {
+    "entry_translation": "Sūrat Hūd.\n\nMakkan. Its counterpart has already been mentioned in the Madani First and Shami counts, and it has no counterpart in the others. Its words are one thousand nine hundred and fifteen, and its letters are seven thousand five hundred and sixty-seven, the same as the letters of Yūnus. It is one hundred and twenty-one verses in the later-Madani, Makki, and Basri counts; one hundred and twenty-two in the Madani First and Shami counts; and one hundred and twenty-three in the Kufi count.\n\nIts points of disagreement are seven verse-endings: “innī barīʾun mimmā tushrikūn” is counted by the Kufi and not counted by the others; “yujādilunā fī qawmi Lūṭ,” this being the second occurrence, is not counted by the Basri but counted by the others; all of them count “ilā qawmi Lūṭ,” which is the first occurrence; “min sijjīl” is counted by the later-Madani and the Makki and not counted by the others; “manḍūd” is not counted by the later-Madani and the Makki but counted by the others; “in kuntum muʾminīn” is counted by the two Madani counts and the Makki and not counted by the others; “wa-lā yazālūna mukhtalifīn” is not counted by the two Madani counts and the Makki but counted by the others; and “innā ʿāmilūn” is not counted by the later-Madani and the Makki but counted by the others.\n\nIn it there are, by consensus, six places that resemble verse-endings without being counted: “yaʿlamu mā yusirrūna wa-mā yuʿlinūna”; the first occurrence of “fa-sawfa taʿlamūn”; “wa-fāra l-tannūr”; “fīnā ḍaʿīfan”; the second occurrence of “sawfa taʿlamūn”; and “dhālika yawmun majmūʿun lahu l-nās.”",
+    "ruus_note": "The ordinal_madani_2_baseline field gives the recovered later-Madani sequence. In the transmitted witness, the opening head “خَبِير” is unnumbered, the block then runs with displayed numerals 1–53, skips displayed 54, continues through 81, loses four heads between “سجيل” and unnumbered “بحفيظ”, resumes at displayed 86 “الرشيد”, later skips displayed 118 and 121, and ends with a blank terminal display-total line “١٢ - ٣”. The structured data therefore treats displayed numerals as witness metadata rather than as the primary ordinal layer."
+  },
+  "structured_data": {
+    "surah_number": 11,
+    "source_title_ar": "سورة هود",
+    "canonical_name_ar": "هود",
+    "canonical_name_en": "Hūd",
+    "source_pages": {
+      "entry_printed_page_start": 165,
+      "entry_printed_page_end": 165,
+      "ruus_printed_page_start": 166,
+      "ruus_printed_page_end": 166
+    },
+    "source_alignment_note_en": "The entry on printed 165 is textually stable, but its six pseudo-fawasil are compressed into a single running sentence with embedded “first” and “second” occurrence notes. The transmitted ruʾūs block on printed 166 preserves most of the later-Madani sequence, but after “سجيل” it jumps directly to unnumbered “بحفيظ” and resumes at displayed 86 “الرشيد”. The recovered ordered list therefore restores the omitted interval explicitly as “بِبَعِيد / مُحِيط / مفسدين / مُؤمنين” while keeping the witness gap visible in the data.",
+    "classification_claims": [
+      {
+        "authority": "source_main_entry",
+        "claim_ar": "مَكِّيَّة",
+        "classification": "makki"
+      }
+    ],
+    "nazair_by_school": {
+      "madani_1": "المائدة",
+      "madani_2": null,
+      "makki": null,
+      "kufi": null,
+      "basri": null,
+      "shami": "المائدة"
+    },
+    "supporting_transmission_reports": null,
+    "additional_counting_notes": [
+      {
+        "note_type": "nazira_back_reference",
+        "raw_ar": "وَقد ذكر نظيرتها فِي الْمدنِي الأول والشامي",
+        "resolved_target_surah_ar": "المائدة",
+        "resolved_target_surah_en": "al-Māʾida",
+        "summary_en": "The entry refers back to a previously named counterpart rather than restating it; the earlier reciprocal pairing identifies Sūrat al-Māʾida as its naẓīrah in the Madani First and Shami counts."
+      },
+      {
+        "note_type": "letter_count_equivalence",
+        "raw_ar": "كحروف يُونُس",
+        "comparison_target_surah_ar": "يونس",
+        "comparison_target_surah_en": "Yūnus",
+        "summary_en": "Its letter count is stated to be the same as that of Sūrat Yūnus."
+      },
+      {
+        "note_type": "paired_occurrence_note",
+        "raw_ar": "وَكلهمْ عد (﴿إِلَى قوم لوط﴾) وَهُوَ الأول",
+        "related_phrase_ar": "يجادلنا فِي قوم لوط",
+        "summary_en": "The entry distinguishes two Lūṭ-related clauses: all counters count the first, “إِلَى قوم لوط,” whereas the disputed item is the second occurrence, “يجادلنا فِي قوم لوط,” which the Basri alone does not count."
+      }
+    ],
+    "word_count": {
+      "raw_ar": "ألف وتسع مئة وَخمْس عشرَة كلمة",
+      "value": 1915
+    },
+    "letter_count": {
+      "raw_ar": "سَبْعَة آلَاف وَخمْس مئة وَسَبْعَة وَسَبْعُونَ وَسِتُّونَ حرفا",
+      "value": 7567
+    },
+    "verse_totals": {
+      "madani_1": 122,
+      "madani_2": 121,
+      "makki": 121,
+      "kufi": 123,
+      "basri": 121,
+      "shami": 122
+    },
+    "disputed_verse_endings": [
+      {
+        "phrase_ar": "إِنِّي بَرِيء مِمَّا تشركون",
+        "counted_by": [
+          "kufi"
+        ],
+        "not_counted_by": [
+          "madani_1",
+          "madani_2",
+          "makki",
+          "basri",
+          "shami"
+        ]
+      },
+      {
+        "phrase_ar": "يجادلنا فِي قوم لوط",
+        "counted_by": [
+          "madani_1",
+          "madani_2",
+          "makki",
+          "kufi",
+          "shami"
+        ],
+        "not_counted_by": [
+          "basri"
+        ],
+        "occurrence_note_ar": "وَهُوَ الثَّانِي"
+      },
+      {
+        "phrase_ar": "من سجيل",
+        "counted_by": [
+          "madani_2",
+          "makki"
+        ],
+        "not_counted_by": [
+          "madani_1",
+          "kufi",
+          "basri",
+          "shami"
+        ]
+      },
+      {
+        "phrase_ar": "منضود",
+        "counted_by": [
+          "madani_1",
+          "kufi",
+          "basri",
+          "shami"
+        ],
+        "not_counted_by": [
+          "madani_2",
+          "makki"
+        ]
+      },
+      {
+        "phrase_ar": "إِن كُنْتُم مُؤمنين",
+        "counted_by": [
+          "madani_1",
+          "madani_2",
+          "makki"
+        ],
+        "not_counted_by": [
+          "kufi",
+          "basri",
+          "shami"
+        ]
+      },
+      {
+        "phrase_ar": "وَلَا يزالون مُخْتَلفين",
+        "counted_by": [
+          "kufi",
+          "basri",
+          "shami"
+        ],
+        "not_counted_by": [
+          "madani_1",
+          "madani_2",
+          "makki"
+        ]
+      },
+      {
+        "phrase_ar": "إِنَّا عاملون",
+        "counted_by": [
+          "madani_1",
+          "kufi",
+          "basri",
+          "shami"
+        ],
+        "not_counted_by": [
+          "madani_2",
+          "makki"
+        ]
+      }
+    ],
+    "pseudo_fawasil": [
+      {
+        "phrase_ar": "يعلم مَا يسرون وَمَا يعلنون",
+        "status": "resembles_fasila_not_counted_by_consensus"
+      },
+      {
+        "phrase_ar": "فَسَوف تعلمُونَ",
+        "status": "resembles_fasila_not_counted_by_consensus",
+        "occurrence_note_ar": "الأول"
+      },
+      {
+        "phrase_ar": "وفار التَّنور",
+        "status": "resembles_fasila_not_counted_by_consensus"
+      },
+      {
+        "phrase_ar": "فِينَا ضَعِيفا",
+        "status": "resembles_fasila_not_counted_by_consensus"
+      },
+      {
+        "phrase_ar": "سَوف تعلمُونَ",
+        "status": "resembles_fasila_not_counted_by_consensus",
+        "occurrence_note_ar": "الثَّانِي"
+      },
+      {
+        "phrase_ar": "ذَلِك يَوْم مَجْمُوع لَهُ النَّاس",
+        "status": "resembles_fasila_not_counted_by_consensus"
+      }
+    ],
+    "ruus_al_ayat_extraction_status": "complete_with_gap_reconstruction_and_mixed_display_numbering",
+    "ruus_al_ayat_count": 121,
+    "ruus_al_ayat_numbering_note_en": "The ordinal_madani_2_baseline field gives the recovered later-Madani sequence. In the transmitted witness, the opening head “خَبِير” is unnumbered, the block then runs with displayed numerals 1–53, skips displayed 54, continues through 81, loses four heads between “سجيل” and unnumbered “بحفيظ”, resumes at displayed 86 “الرشيد”, later skips displayed 118 and 121, and ends with a blank terminal display-total line “١٢ - ٣”. The structured data therefore treats displayed numerals as witness metadata rather than as the primary ordinal layer.",
+    "ruus_al_ayat_terminal_blank_total": 123,
+    "ruus_al_ayat": [
+      {
+        "ordinal_madani_2_baseline": 1,
+        "head_ar": "خَبِير",
+        "source_printed_page": 166,
+        "source_line_raw": "خَبِير",
+        "extraction_note_en": "Unnumbered first head in the transmitted witness; treated as ordinal 1 in the recovered later-Madani sequence."
+      },
+      {
+        "ordinal_madani_2_baseline": 2,
+        "head_ar": "وَبشير",
+        "source_printed_page": 166,
+        "source_line_raw": "١ - وَبشير",
+        "display_number_in_witness": 1
+      },
+      {
+        "ordinal_madani_2_baseline": 3,
+        "head_ar": "كَبِير",
+        "source_printed_page": 166,
+        "source_line_raw": "٢ - كَبِير",
+        "display_number_in_witness": 2
+      },
+      {
+        "ordinal_madani_2_baseline": 4,
+        "head_ar": "قدير",
+        "source_printed_page": 166,
+        "source_line_raw": "٣ - قدير",
+        "display_number_in_witness": 3
+      },
+      {
+        "ordinal_madani_2_baseline": 5,
+        "head_ar": "الصُّدُور",
+        "source_printed_page": 166,
+        "source_line_raw": "٤ - الصُّدُور",
+        "display_number_in_witness": 4
+      },
+      {
+        "ordinal_madani_2_baseline": 6,
+        "head_ar": "مُبين",
+        "source_printed_page": 166,
+        "source_line_raw": "٥ - مُبين",
+        "display_number_in_witness": 5
+      },
+      {
+        "ordinal_madani_2_baseline": 7,
+        "head_ar": "مُبين",
+        "source_printed_page": 166,
+        "source_line_raw": "٦ - مُبين",
+        "display_number_in_witness": 6
+      },
+      {
+        "ordinal_madani_2_baseline": 8,
+        "head_ar": "يستهزئون",
+        "source_printed_page": 166,
+        "source_line_raw": "٧ - يستهزئون",
+        "display_number_in_witness": 7
+      },
+      {
+        "ordinal_madani_2_baseline": 9,
+        "head_ar": "كفور",
+        "source_printed_page": 166,
+        "source_line_raw": "٨ - كفور",
+        "display_number_in_witness": 8
+      },
+      {
+        "ordinal_madani_2_baseline": 10,
+        "head_ar": "فخور",
+        "source_printed_page": 166,
+        "source_line_raw": "٩ - فخور",
+        "display_number_in_witness": 9
+      },
+      {
+        "ordinal_madani_2_baseline": 11,
+        "head_ar": "كَبِير",
+        "source_printed_page": 166,
+        "source_line_raw": "١٠ - كَبِير",
+        "display_number_in_witness": 10
+      },
+      {
+        "ordinal_madani_2_baseline": 12,
+        "head_ar": "وَكيل",
+        "source_printed_page": 166,
+        "source_line_raw": "١١ - وَكيل",
+        "display_number_in_witness": 11
+      },
+      {
+        "ordinal_madani_2_baseline": 13,
+        "head_ar": "صَادِقين",
+        "source_printed_page": 166,
+        "source_line_raw": "١٢ - صَادِقين",
+        "display_number_in_witness": 12
+      },
+      {
+        "ordinal_madani_2_baseline": 14,
+        "head_ar": "مُسلمُونَ",
+        "source_printed_page": 166,
+        "source_line_raw": "١٣ - مُسلمُونَ",
+        "display_number_in_witness": 13
+      },
+      {
+        "ordinal_madani_2_baseline": 15,
+        "head_ar": "لَا يبخسون",
+        "source_printed_page": 166,
+        "source_line_raw": "١٤ - لَا يبخسون",
+        "display_number_in_witness": 14
+      },
+      {
+        "ordinal_madani_2_baseline": 16,
+        "head_ar": "يعْملُونَ",
+        "source_printed_page": 166,
+        "source_line_raw": "١٥ - يعْملُونَ",
+        "display_number_in_witness": 15
+      },
+      {
+        "ordinal_madani_2_baseline": 17,
+        "head_ar": "لَا يُؤمنُونَ",
+        "source_printed_page": 166,
+        "source_line_raw": "١٦ - لَا يُؤمنُونَ",
+        "display_number_in_witness": 16
+      },
+      {
+        "ordinal_madani_2_baseline": 18,
+        "head_ar": "الظَّالِمين",
+        "source_printed_page": 166,
+        "source_line_raw": "١٧ - الظَّالِمين",
+        "display_number_in_witness": 17
+      },
+      {
+        "ordinal_madani_2_baseline": 19,
+        "head_ar": "كافرون",
+        "source_printed_page": 166,
+        "source_line_raw": "١٨ - كافرون",
+        "display_number_in_witness": 18
+      },
+      {
+        "ordinal_madani_2_baseline": 20,
+        "head_ar": "يبصرون",
+        "source_printed_page": 166,
+        "source_line_raw": "١٩ - يبصرون",
+        "display_number_in_witness": 19
+      },
+      {
+        "ordinal_madani_2_baseline": 21,
+        "head_ar": "يفترون",
+        "source_printed_page": 166,
+        "source_line_raw": "٢٠ - يفترون",
+        "display_number_in_witness": 20
+      },
+      {
+        "ordinal_madani_2_baseline": 22,
+        "head_ar": "الأخسرون",
+        "source_printed_page": 166,
+        "source_line_raw": "٢١ - الأخسرون",
+        "display_number_in_witness": 21
+      },
+      {
+        "ordinal_madani_2_baseline": 23,
+        "head_ar": "خَالدُونَ",
+        "source_printed_page": 166,
+        "source_line_raw": "٢٢ - خَالدُونَ",
+        "display_number_in_witness": 22
+      },
+      {
+        "ordinal_madani_2_baseline": 24,
+        "head_ar": "تذكرُونَ",
+        "source_printed_page": 166,
+        "source_line_raw": "٢٣ - تذكرُونَ",
+        "display_number_in_witness": 23
+      },
+      {
+        "ordinal_madani_2_baseline": 25,
+        "head_ar": "مُبين",
+        "source_printed_page": 166,
+        "source_line_raw": "٢٤ - مُبين",
+        "display_number_in_witness": 24
+      },
+      {
+        "ordinal_madani_2_baseline": 26,
+        "head_ar": "أَلِيم",
+        "source_printed_page": 166,
+        "source_line_raw": "٢٥ - أَلِيم",
+        "display_number_in_witness": 25
+      },
+      {
+        "ordinal_madani_2_baseline": 27,
+        "head_ar": "كاذبين",
+        "source_printed_page": 166,
+        "source_line_raw": "٢٦ - كاذبين",
+        "display_number_in_witness": 26
+      },
+      {
+        "ordinal_madani_2_baseline": 28,
+        "head_ar": "كَارِهُون",
+        "source_printed_page": 166,
+        "source_line_raw": "٢٧ - كَارِهُون",
+        "display_number_in_witness": 27
+      },
+      {
+        "ordinal_madani_2_baseline": 29,
+        "head_ar": "تجهلون",
+        "source_printed_page": 166,
+        "source_line_raw": "٢٨ - تجهلون",
+        "display_number_in_witness": 28
+      },
+      {
+        "ordinal_madani_2_baseline": 30,
+        "head_ar": "تذكرُونَ",
+        "source_printed_page": 166,
+        "source_line_raw": "٢٩ - تذكرُونَ",
+        "display_number_in_witness": 29
+      },
+      {
+        "ordinal_madani_2_baseline": 31,
+        "head_ar": "الظَّالِمين",
+        "source_printed_page": 166,
+        "source_line_raw": "٣٠ - الظَّالِمين",
+        "display_number_in_witness": 30
+      },
+      {
+        "ordinal_madani_2_baseline": 32,
+        "head_ar": "الصَّادِقين",
+        "source_printed_page": 166,
+        "source_line_raw": "٣١ - الصَّادِقين",
+        "display_number_in_witness": 31
+      },
+      {
+        "ordinal_madani_2_baseline": 33,
+        "head_ar": "بمعجزين",
+        "source_printed_page": 166,
+        "source_line_raw": "٣٢ - بمعجزين",
+        "display_number_in_witness": 32
+      },
+      {
+        "ordinal_madani_2_baseline": 34,
+        "head_ar": "ترجعون",
+        "source_printed_page": 166,
+        "source_line_raw": "٣٣ - ترجعون",
+        "display_number_in_witness": 33
+      },
+      {
+        "ordinal_madani_2_baseline": 35,
+        "head_ar": "تجرمون",
+        "source_printed_page": 166,
+        "source_line_raw": "٣٤ - تجرمون",
+        "display_number_in_witness": 34
+      },
+      {
+        "ordinal_madani_2_baseline": 36,
+        "head_ar": "يَفْعَلُونَ",
+        "source_printed_page": 166,
+        "source_line_raw": "٣٥ - يَفْعَلُونَ",
+        "display_number_in_witness": 35
+      },
+      {
+        "ordinal_madani_2_baseline": 37,
+        "head_ar": "مغرقون",
+        "source_printed_page": 166,
+        "source_line_raw": "٣٦ - مغرقون",
+        "display_number_in_witness": 36
+      },
+      {
+        "ordinal_madani_2_baseline": 38,
+        "head_ar": "تسخرون",
+        "source_printed_page": 166,
+        "source_line_raw": "٣٧ - تسخرون",
+        "display_number_in_witness": 37
+      },
+      {
+        "ordinal_madani_2_baseline": 39,
+        "head_ar": "مُقيم",
+        "source_printed_page": 166,
+        "source_line_raw": "٣٨ - مُقيم",
+        "display_number_in_witness": 38
+      },
+      {
+        "ordinal_madani_2_baseline": 40,
+        "head_ar": "إِلَّا قَلِيل",
+        "source_printed_page": 166,
+        "source_line_raw": "٣٩ - إِلَّا قَلِيل",
+        "display_number_in_witness": 39
+      },
+      {
+        "ordinal_madani_2_baseline": 41,
+        "head_ar": "رَحِيم",
+        "source_printed_page": 166,
+        "source_line_raw": "٤٠ - رَحِيم",
+        "display_number_in_witness": 40
+      },
+      {
+        "ordinal_madani_2_baseline": 42,
+        "head_ar": "الْكَافرين",
+        "source_printed_page": 166,
+        "source_line_raw": "٤١ - الْكَافرين",
+        "display_number_in_witness": 41
+      },
+      {
+        "ordinal_madani_2_baseline": 43,
+        "head_ar": "المغرقين",
+        "source_printed_page": 166,
+        "source_line_raw": "٤٢ - المغرقين",
+        "display_number_in_witness": 42
+      },
+      {
+        "ordinal_madani_2_baseline": 44,
+        "head_ar": "الظَّالِمين",
+        "source_printed_page": 166,
+        "source_line_raw": "٤٣ - الظَّالِمين",
+        "display_number_in_witness": 43
+      },
+      {
+        "ordinal_madani_2_baseline": 45,
+        "head_ar": "الْحَاكِمين",
+        "source_printed_page": 166,
+        "source_line_raw": "٤٤ - الْحَاكِمين",
+        "display_number_in_witness": 44
+      },
+      {
+        "ordinal_madani_2_baseline": 46,
+        "head_ar": "الْجَاهِلين",
+        "source_printed_page": 166,
+        "source_line_raw": "٤٥ - الْجَاهِلين",
+        "display_number_in_witness": 45
+      },
+      {
+        "ordinal_madani_2_baseline": 47,
+        "head_ar": "الخاسرين",
+        "source_printed_page": 166,
+        "source_line_raw": "٤٦ - الخاسرين",
+        "display_number_in_witness": 46
+      },
+      {
+        "ordinal_madani_2_baseline": 48,
+        "head_ar": "أَلِيم",
+        "source_printed_page": 166,
+        "source_line_raw": "٤٧ - أَلِيم",
+        "display_number_in_witness": 47
+      },
+      {
+        "ordinal_madani_2_baseline": 49,
+        "head_ar": "لِلْمُتقين",
+        "source_printed_page": 166,
+        "source_line_raw": "٤٨ - لِلْمُتقين",
+        "display_number_in_witness": 48
+      },
+      {
+        "ordinal_madani_2_baseline": 50,
+        "head_ar": "مفترون",
+        "source_printed_page": 166,
+        "source_line_raw": "٤٩ - مفترون",
+        "display_number_in_witness": 49
+      },
+      {
+        "ordinal_madani_2_baseline": 51,
+        "head_ar": "تعقلون",
+        "source_printed_page": 166,
+        "source_line_raw": "٥٠ - تعقلون",
+        "display_number_in_witness": 50
+      },
+      {
+        "ordinal_madani_2_baseline": 52,
+        "head_ar": "مجرمين",
+        "source_printed_page": 166,
+        "source_line_raw": "٥١ - مجرمين",
+        "display_number_in_witness": 51
+      },
+      {
+        "ordinal_madani_2_baseline": 53,
+        "head_ar": "بمؤمنين",
+        "source_printed_page": 166,
+        "source_line_raw": "٥٢ - بمؤمنين",
+        "display_number_in_witness": 52
+      },
+      {
+        "ordinal_madani_2_baseline": 54,
+        "head_ar": "لَا تنْظرُون",
+        "source_printed_page": 166,
+        "source_line_raw": "٥٣ - لَا تنْظرُون",
+        "display_number_in_witness": 53
+      },
+      {
+        "ordinal_madani_2_baseline": 55,
+        "head_ar": "مُسْتَقِيم",
+        "source_printed_page": 166,
+        "source_line_raw": "٥٥ - مُسْتَقِيم",
+        "display_number_in_witness": 55,
+        "extraction_note_en": "The witness jumps from displayed 53 “لَا تنْظرُون” to displayed 55 “مُسْتَقِيم”; the omitted displayed 54 corresponds to the Kufi-only disputed head “تشركون”, which is not part of the later-Madani sequence."
+      },
+      {
+        "ordinal_madani_2_baseline": 56,
+        "head_ar": "حفيظ",
+        "source_printed_page": 166,
+        "source_line_raw": "٥٦ - حفيظ",
+        "display_number_in_witness": 56
+      },
+      {
+        "ordinal_madani_2_baseline": 57,
+        "head_ar": "غليظ",
+        "source_printed_page": 166,
+        "source_line_raw": "٥٧ - غليظ",
+        "display_number_in_witness": 57
+      },
+      {
+        "ordinal_madani_2_baseline": 58,
+        "head_ar": "عنيد",
+        "source_printed_page": 166,
+        "source_line_raw": "٥٨ - عنيد",
+        "display_number_in_witness": 58
+      },
+      {
+        "ordinal_madani_2_baseline": 59,
+        "head_ar": "قوم هود",
+        "source_printed_page": 166,
+        "source_line_raw": "٥٩ - قوم هود",
+        "display_number_in_witness": 59
+      },
+      {
+        "ordinal_madani_2_baseline": 60,
+        "head_ar": "مُجيب",
+        "source_printed_page": 166,
+        "source_line_raw": "٦٠ - مُجيب",
+        "display_number_in_witness": 60
+      },
+      {
+        "ordinal_madani_2_baseline": 61,
+        "head_ar": "مريب",
+        "source_printed_page": 166,
+        "source_line_raw": "٦١ - مريب",
+        "display_number_in_witness": 61
+      },
+      {
+        "ordinal_madani_2_baseline": 62,
+        "head_ar": "تخسير",
+        "source_printed_page": 166,
+        "source_line_raw": "٦٢ - تخسير",
+        "display_number_in_witness": 62
+      },
+      {
+        "ordinal_madani_2_baseline": 63,
+        "head_ar": "قريب",
+        "source_printed_page": 166,
+        "source_line_raw": "٦٣ - قريب",
+        "display_number_in_witness": 63
+      },
+      {
+        "ordinal_madani_2_baseline": 64,
+        "head_ar": "مَكْذُوب",
+        "source_printed_page": 166,
+        "source_line_raw": "٦٤ - مَكْذُوب",
+        "display_number_in_witness": 64
+      },
+      {
+        "ordinal_madani_2_baseline": 65,
+        "head_ar": "الْعَزِيز",
+        "source_printed_page": 166,
+        "source_line_raw": "٦٥ - الْعَزِيز",
+        "display_number_in_witness": 65
+      },
+      {
+        "ordinal_madani_2_baseline": 66,
+        "head_ar": "جاثمين",
+        "source_printed_page": 166,
+        "source_line_raw": "٦٦ - جاثمين",
+        "display_number_in_witness": 66
+      },
+      {
+        "ordinal_madani_2_baseline": 67,
+        "head_ar": "لثمود",
+        "source_printed_page": 166,
+        "source_line_raw": "٦٧ - لثمود",
+        "display_number_in_witness": 67
+      },
+      {
+        "ordinal_madani_2_baseline": 68,
+        "head_ar": "حنيذ",
+        "source_printed_page": 166,
+        "source_line_raw": "٦٨ - حنيذ",
+        "display_number_in_witness": 68
+      },
+      {
+        "ordinal_madani_2_baseline": 69,
+        "head_ar": "قوم لوط",
+        "source_printed_page": 166,
+        "source_line_raw": "٦٩ - قوم لوط",
+        "display_number_in_witness": 69
+      },
+      {
+        "ordinal_madani_2_baseline": 70,
+        "head_ar": "يَعْقُوب",
+        "source_printed_page": 166,
+        "source_line_raw": "٧٠ - يَعْقُوب",
+        "display_number_in_witness": 70
+      },
+      {
+        "ordinal_madani_2_baseline": 71,
+        "head_ar": "عَجِيب",
+        "source_printed_page": 166,
+        "source_line_raw": "٧١ - عَجِيب",
+        "display_number_in_witness": 71
+      },
+      {
+        "ordinal_madani_2_baseline": 72,
+        "head_ar": "مجيد",
+        "source_printed_page": 166,
+        "source_line_raw": "٧٢ - مجيد",
+        "display_number_in_witness": 72
+      },
+      {
+        "ordinal_madani_2_baseline": 73,
+        "head_ar": "قوم لوط",
+        "source_printed_page": 166,
+        "source_line_raw": "٧٣ - قوم لوط",
+        "display_number_in_witness": 73
+      },
+      {
+        "ordinal_madani_2_baseline": 74,
+        "head_ar": "منيب",
+        "source_printed_page": 166,
+        "source_line_raw": "٧٤ - منيب",
+        "display_number_in_witness": 74
+      },
+      {
+        "ordinal_madani_2_baseline": 75,
+        "head_ar": "مَرْدُود",
+        "source_printed_page": 166,
+        "source_line_raw": "٧٥ - مَرْدُود",
+        "display_number_in_witness": 75
+      },
+      {
+        "ordinal_madani_2_baseline": 76,
+        "head_ar": "عصيب",
+        "source_printed_page": 166,
+        "source_line_raw": "٧٦ - عصيب",
+        "display_number_in_witness": 76
+      },
+      {
+        "ordinal_madani_2_baseline": 77,
+        "head_ar": "رشيد",
+        "source_printed_page": 166,
+        "source_line_raw": "٧٧ - رشيد",
+        "display_number_in_witness": 77
+      },
+      {
+        "ordinal_madani_2_baseline": 78,
+        "head_ar": "مَا نُرِيد",
+        "source_printed_page": 166,
+        "source_line_raw": "٧٨ - مَا نُرِيد",
+        "display_number_in_witness": 78
+      },
+      {
+        "ordinal_madani_2_baseline": 79,
+        "head_ar": "شَدِيد",
+        "source_printed_page": 166,
+        "source_line_raw": "٧٩ - شَدِيد",
+        "display_number_in_witness": 79
+      },
+      {
+        "ordinal_madani_2_baseline": 80,
+        "head_ar": "بقريب",
+        "source_printed_page": 166,
+        "source_line_raw": "٨٠ - بقريب",
+        "display_number_in_witness": 80
+      },
+      {
+        "ordinal_madani_2_baseline": 81,
+        "head_ar": "سجيل",
+        "source_printed_page": 166,
+        "source_line_raw": "٨١ - سجيل",
+        "display_number_in_witness": 81
+      },
+      {
+        "ordinal_madani_2_baseline": 82,
+        "head_ar": "بِبَعِيد",
+        "source_printed_page": null,
+        "source_line_raw": null,
+        "extraction_note_en": "Missing from the local transmitted block between “سجيل” and unnumbered “بحفيظ”; restored from the checked secondary ruʾūs tabulation of the surah’s agreed heads."
+      },
+      {
+        "ordinal_madani_2_baseline": 83,
+        "head_ar": "مُحِيط",
+        "source_printed_page": null,
+        "source_line_raw": null,
+        "extraction_note_en": "Missing from the local transmitted block between “سجيل” and unnumbered “بحفيظ”; restored from the checked secondary ruʾūs tabulation of the surah’s agreed heads."
+      },
+      {
+        "ordinal_madani_2_baseline": 84,
+        "head_ar": "مفسدين",
+        "source_printed_page": null,
+        "source_line_raw": null,
+        "extraction_note_en": "Missing from the local transmitted block between “سجيل” and unnumbered “بحفيظ”; restored from the checked secondary ruʾūs tabulation of the surah’s agreed heads."
+      },
+      {
+        "ordinal_madani_2_baseline": 85,
+        "head_ar": "مُؤمنين",
+        "source_printed_page": null,
+        "source_line_raw": null,
+        "extraction_note_en": "Absent from the local transmitted block, but the source entry marks this disputed head as counted by the two Madani counts and the Makki; it is restored here in its expected position before “بحفيظ”."
+      },
+      {
+        "ordinal_madani_2_baseline": 86,
+        "head_ar": "بحفيظ",
+        "source_printed_page": 166,
+        "source_line_raw": "بحفيظ",
+        "extraction_note_en": "Appears unnumbered in the transmitted witness after the four-head omission following “سجيل”; preserved here as ordinal 86 in the recovered later-Madani sequence."
+      },
+      {
+        "ordinal_madani_2_baseline": 87,
+        "head_ar": "الرشيد",
+        "source_printed_page": 166,
+        "source_line_raw": "٨٦ - الرشيد",
+        "display_number_in_witness": 86
+      },
+      {
+        "ordinal_madani_2_baseline": 88,
+        "head_ar": "أنيب",
+        "source_printed_page": 166,
+        "source_line_raw": "٨٧ - أنيب",
+        "display_number_in_witness": 87
+      },
+      {
+        "ordinal_madani_2_baseline": 89,
+        "head_ar": "بِبَعِيد",
+        "source_printed_page": 166,
+        "source_line_raw": "٨٨ - بِبَعِيد",
+        "display_number_in_witness": 88
+      },
+      {
+        "ordinal_madani_2_baseline": 90,
+        "head_ar": "ودود",
+        "source_printed_page": 166,
+        "source_line_raw": "٨٩ - ودود",
+        "display_number_in_witness": 89
+      },
+      {
+        "ordinal_madani_2_baseline": 91,
+        "head_ar": "بعزيز",
+        "source_printed_page": 166,
+        "source_line_raw": "٩٠ - بعزيز",
+        "display_number_in_witness": 90
+      },
+      {
+        "ordinal_madani_2_baseline": 92,
+        "head_ar": "مُحِيط",
+        "source_printed_page": 166,
+        "source_line_raw": "٩١ - مُحِيط",
+        "display_number_in_witness": 91
+      },
+      {
+        "ordinal_madani_2_baseline": 93,
+        "head_ar": "رَقِيب",
+        "source_printed_page": 166,
+        "source_line_raw": "٩٢ - رَقِيب",
+        "display_number_in_witness": 92
+      },
+      {
+        "ordinal_madani_2_baseline": 94,
+        "head_ar": "جاثمين",
+        "source_printed_page": 166,
+        "source_line_raw": "٩٣ - جاثمين",
+        "display_number_in_witness": 93
+      },
+      {
+        "ordinal_madani_2_baseline": 95,
+        "head_ar": "ثَمُود",
+        "source_printed_page": 166,
+        "source_line_raw": "٩٤ - ثَمُود",
+        "display_number_in_witness": 94
+      },
+      {
+        "ordinal_madani_2_baseline": 96,
+        "head_ar": "مُبين",
+        "source_printed_page": 166,
+        "source_line_raw": "٩٥ - مُبين",
+        "display_number_in_witness": 95
+      },
+      {
+        "ordinal_madani_2_baseline": 97,
+        "head_ar": "برشيد",
+        "source_printed_page": 166,
+        "source_line_raw": "٩٦ - برشيد",
+        "display_number_in_witness": 96
+      },
+      {
+        "ordinal_madani_2_baseline": 98,
+        "head_ar": "المورود",
+        "source_printed_page": 166,
+        "source_line_raw": "٩٧ - المورود",
+        "display_number_in_witness": 97
+      },
+      {
+        "ordinal_madani_2_baseline": 99,
+        "head_ar": "المرفود",
+        "source_printed_page": 166,
+        "source_line_raw": "٩٨ - المرفود",
+        "display_number_in_witness": 98
+      },
+      {
+        "ordinal_madani_2_baseline": 100,
+        "head_ar": "وحصيد",
+        "source_printed_page": 166,
+        "source_line_raw": "٩٩ - وحصيد",
+        "display_number_in_witness": 99
+      },
+      {
+        "ordinal_madani_2_baseline": 101,
+        "head_ar": "تتبيب",
+        "source_printed_page": 166,
+        "source_line_raw": "١٠٠ - تتبيب",
+        "display_number_in_witness": 100
+      },
+      {
+        "ordinal_madani_2_baseline": 102,
+        "head_ar": "شَدِيد",
+        "source_printed_page": 166,
+        "source_line_raw": "١٠١ - شَدِيد",
+        "display_number_in_witness": 101
+      },
+      {
+        "ordinal_madani_2_baseline": 103,
+        "head_ar": "مشهود",
+        "source_printed_page": 166,
+        "source_line_raw": "١٠٢ - مشهود",
+        "display_number_in_witness": 102
+      },
+      {
+        "ordinal_madani_2_baseline": 104,
+        "head_ar": "مَعْدُود",
+        "source_printed_page": 166,
+        "source_line_raw": "١٠٣ - مَعْدُود",
+        "display_number_in_witness": 103
+      },
+      {
+        "ordinal_madani_2_baseline": 105,
+        "head_ar": "وَسَعِيد",
+        "source_printed_page": 166,
+        "source_line_raw": "١٠٤ - وَسَعِيد",
+        "display_number_in_witness": 104
+      },
+      {
+        "ordinal_madani_2_baseline": 106,
+        "head_ar": "وشهيق",
+        "source_printed_page": 166,
+        "source_line_raw": "١٠٥ - وشهيق",
+        "display_number_in_witness": 105
+      },
+      {
+        "ordinal_madani_2_baseline": 107,
+        "head_ar": "لما يُرِيد",
+        "source_printed_page": 166,
+        "source_line_raw": "١٠٦ - لما يُرِيد",
+        "display_number_in_witness": 106
+      },
+      {
+        "ordinal_madani_2_baseline": 108,
+        "head_ar": "مجذوذ",
+        "source_printed_page": 166,
+        "source_line_raw": "١٠٧ - مجذوذ",
+        "display_number_in_witness": 107
+      },
+      {
+        "ordinal_madani_2_baseline": 109,
+        "head_ar": "مَنْقُوص",
+        "source_printed_page": 166,
+        "source_line_raw": "١٠٨ - مَنْقُوص",
+        "display_number_in_witness": 108
+      },
+      {
+        "ordinal_madani_2_baseline": 110,
+        "head_ar": "مريب",
+        "source_printed_page": 166,
+        "source_line_raw": "١٠٩ - مريب",
+        "display_number_in_witness": 109
+      },
+      {
+        "ordinal_madani_2_baseline": 111,
+        "head_ar": "خَبِير",
+        "source_printed_page": 166,
+        "source_line_raw": "١١٠ - خَبِير",
+        "display_number_in_witness": 110
+      },
+      {
+        "ordinal_madani_2_baseline": 112,
+        "head_ar": "بَصِير",
+        "source_printed_page": 166,
+        "source_line_raw": "١١١ - بَصِير",
+        "display_number_in_witness": 111
+      },
+      {
+        "ordinal_madani_2_baseline": 113,
+        "head_ar": "لَا تنْصرُونَ",
+        "source_printed_page": 166,
+        "source_line_raw": "١١٢ - لَا تنْصرُونَ",
+        "display_number_in_witness": 112
+      },
+      {
+        "ordinal_madani_2_baseline": 114,
+        "head_ar": "لِلذَّاكِرِينَ",
+        "source_printed_page": 166,
+        "source_line_raw": "١١٣ - لِلذَّاكِرِينَ",
+        "display_number_in_witness": 113
+      },
+      {
+        "ordinal_madani_2_baseline": 115,
+        "head_ar": "الْمُحْسِنِينَ",
+        "source_printed_page": 166,
+        "source_line_raw": "١١٤ - الْمُحْسِنِينَ",
+        "display_number_in_witness": 114
+      },
+      {
+        "ordinal_madani_2_baseline": 116,
+        "head_ar": "مجرمين",
+        "source_printed_page": 166,
+        "source_line_raw": "١١٥ - مجرمين",
+        "display_number_in_witness": 115
+      },
+      {
+        "ordinal_madani_2_baseline": 117,
+        "head_ar": "مصلحون",
+        "source_printed_page": 166,
+        "source_line_raw": "١١٦ - مصلحون",
+        "display_number_in_witness": 116
+      },
+      {
+        "ordinal_madani_2_baseline": 118,
+        "head_ar": "أَجْمَعِينَ",
+        "source_printed_page": 166,
+        "source_line_raw": "١١٧ - أَجْمَعِينَ",
+        "display_number_in_witness": 117
+      },
+      {
+        "ordinal_madani_2_baseline": 119,
+        "head_ar": "للْمُؤْمِنين",
+        "source_printed_page": 166,
+        "source_line_raw": "١١٩ - للْمُؤْمِنين",
+        "display_number_in_witness": 119,
+        "extraction_note_en": "The witness resumes here at displayed 119 after displayed 117 “أَجْمَعِينَ”; the missing displayed 118 corresponds to the disputed head “مختلفين”, which is not counted in the later-Madani sequence."
+      },
+      {
+        "ordinal_madani_2_baseline": 120,
+        "head_ar": "منتظرون",
+        "source_printed_page": 166,
+        "source_line_raw": "١٢٠ - منتظرون",
+        "display_number_in_witness": 120
+      },
+      {
+        "ordinal_madani_2_baseline": 121,
+        "head_ar": "تَعْمَلُونَ",
+        "source_printed_page": 166,
+        "source_line_raw": "١٢٢ - تَعْمَلُونَ",
+        "display_number_in_witness": 122,
+        "extraction_note_en": "The witness displays this final head as 122 and then ends with a blank terminal line “١٢ - ٣”; the missing displayed 121 corresponds to the disputed head “إِنَّا عاملون”, which is not counted in the later-Madani sequence."
+      }
+    ],
+    "extraction_anomalies": [
+      {
+        "issue_id": "surah_011_entry_pseudo_fawasil_serialized",
+        "severity": "medium",
+        "section_id": "surah.011.entry",
+        "description_en": "The six pseudo-fawasil in سورة هود are serialized into one compact sentence, with the first and second occurrence labels embedded inside the running prose rather than set out as separate items.",
+        "local_evidence_pages": [
+          165
+        ],
+        "impact_en": "The extraction is reliable, but it requires editorial separation of the six phrases and of the occurrence notes attached to the two “سوف تعلمون” items."
+      },
+      {
+        "issue_id": "surah_011_ruus_opening_unnumbered_head",
+        "severity": "medium",
+        "section_id": "surah.011.ruus",
+        "description_en": "The first transmitted head, “خَبِير,” appears without a displayed numeral.",
+        "local_evidence_pages": [
+          166
+        ],
+        "impact_en": "The recovered ordinal layer treats this as head 1 while preserving the witness’s lack of a displayed numeral."
+      },
+      {
+        "issue_id": "surah_011_ruus_display_skip_54",
+        "severity": "medium",
+        "section_id": "surah.011.ruus",
+        "description_en": "The witness jumps from displayed 53 “لَا تنْظرُون” to displayed 55 “مُسْتَقِيم”.",
+        "local_evidence_pages": [
+          166
+        ],
+        "impact_en": "The missing displayed 54 corresponds to the Kufi-only disputed head “تشركون”, which is not part of the later-Madani sequence."
+      },
+      {
+        "issue_id": "surah_011_ruus_four_head_omission_before_bihafiz",
+        "severity": "high",
+        "section_id": "surah.011.ruus",
+        "description_en": "After displayed 81 “سجيل”, the local witness omits four heads and resumes with an unnumbered “بحفيظ” before displayed 86 “الرشيد”.",
+        "local_evidence_pages": [
+          166
+        ],
+        "impact_en": "The recovered later-Madani sequence restores the omitted interval explicitly as “بِبَعِيد / مُحِيط / مفسدين / مُؤمنين”, with the gap kept visible through null source-line fields."
+      },
+      {
+        "issue_id": "surah_011_ruus_terminal_skips_and_blank_123",
+        "severity": "medium",
+        "section_id": "surah.011.ruus",
+        "description_en": "Near the end of the block, the witness runs “١١٧ - أَجْمَعِينَ / ١١٩ - للْمُؤْمِنين / ١٢٠ - منتظرون / ١٢٢ - تَعْمَلُونَ” and then ends with a blank terminal line “١٢ - ٣”.",
+        "local_evidence_pages": [
+          166
+        ],
+        "impact_en": "The missing displayed 118 and 121 correspond to the disputed heads “مختلفين” and “إِنَّا عاملون”, neither of which belongs to the later-Madani sequence; the final blank line is preserved as display metadata only."
+      },
+      {
+        "issue_id": "surah_011_ruus_display_numbering_semantics",
+        "severity": "low",
+        "section_id": "surah.011.ruus",
+        "description_en": "Because the transmitted block begins unnumbered, skips displayed 54, loses a four-head interval before unnumbered “بحفيظ”, later skips displayed 118 and 121, and ends with a blank terminal line, the displayed numerals do not function as a clean independent ordinal layer.",
+        "local_evidence_pages": [
+          166
+        ],
+        "impact_en": "The dataset stores recovered later-Madani ordinals together with witness display numbers where present, and records the restored heads explicitly."
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "issue_id": "surah_003_entry_pseudo_fawasil_serialized",
+    "severity": "medium",
+    "section_id": "surah.003.entry",
+    "description_en": "In the local text witness, the pseudo-fawasil list for سورة آل عمران is serialized as paired phrasing and ends with an open parenthesis after “متاع قليل”, rather than as nine neatly separated items.",
+    "local_evidence_pages": [
+      143
+    ],
+    "impact_en": "The nine-item extraction is reliable, but it requires editorial normalization of the paired phrasing instead of blind line splitting."
+  },
+  {
+    "issue_id": "surah_003_ruus_unnumbered_and_compressed_lines",
+    "severity": "medium",
+    "section_id": "surah.003.ruus",
+    "description_en": "The local text witness contains an unnumbered standalone head (ذو انتقام) and one compressed double head at “٩١ - مما تحبون به عليم”.",
+    "local_evidence_pages": [
+      144
+    ],
+    "impact_en": "The ruʾūs list is still recoverable as a full sequence, but these local lines must be normalized explicitly."
+  },
+  {
+    "issue_id": "surah_003_ruus_page_break_140",
+    "severity": "medium",
+    "section_id": "surah.003.ruus",
+    "description_en": "The numeral 140 breaks across the page boundary as “١٤ - ٠”, with the head “الكافرين” appearing alone at the top of the next page.",
+    "local_evidence_pages": [
+      144,
+      145
+    ],
+    "impact_en": "The head can be restored confidently from sequence, but the break must be recorded as an editorial repair."
+  },
+  {
+    "issue_id": "surah_003_ruus_source_numbering_semantics",
+    "severity": "low",
+    "section_id": "surah.003.ruus",
+    "description_en": "The printed witness mixes carried numerals, plain head lines, and end-of-page totals. Those display numerals are not reconstructed here as an independent numbering layer.",
+    "local_evidence_pages": [
+      144,
+      145
+    ],
+    "impact_en": "The dataset preserves the ordered later-Madani head sequence (1–200) rather than a second field for the printed display numerals."
+  }
+]

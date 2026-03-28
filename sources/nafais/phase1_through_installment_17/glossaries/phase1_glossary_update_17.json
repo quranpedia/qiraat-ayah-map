@@ -1,0 +1,18 @@
+{
+  "project": "al-Fara'id al-Hisan fi 'Add Ay al-Qur'an",
+  "scope": "Additional technical terms encountered in translation installment 17 (Surat al-Shu'ara').",
+  "terms": [
+    {
+      "arabic": "حظل / حظله",
+      "transliteration": "hazala / hazalahu",
+      "english": "to bar its counting; to withhold it from the count",
+      "note": "A compact poetic verb glossed by the commentator himself as منع عده, i.e. not treating the phrase as a separate verse ending in that counting tradition."
+    },
+    {
+      "arabic": "دل النظم على",
+      "transliteration": "dalla al-nazm 'ala",
+      "english": "the poem indicates; the versified text shows",
+      "note": "Used when the commentator infers the number or identity of disputed places from what the matn includes, even when one item is then added separately in prose."
+    }
+  ]
+}

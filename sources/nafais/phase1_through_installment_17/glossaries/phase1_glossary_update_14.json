@@ -1,0 +1,36 @@
+{
+  "project": "al-Fara'id al-Hisan fi 'Add Ay al-Qur'an",
+  "scope": "Additional technical terms encountered in translation installment 14 (Surat Taha).",
+  "terms": [
+    {
+      "arabic": "يقع في عد",
+      "transliteration": "yaqa'u fi 'add",
+      "english": "to fall within a given verse-count; to be counted in that tradition",
+      "note": "Used when the commentator says a phrase belongs to one counting system and not to the others."
+    },
+    {
+      "arabic": "يرد عده / يرد عدهما",
+      "transliteration": "yaruddu 'addahu / 'addahuma",
+      "english": "to reject its counting / their counting; to omit it or them from the count",
+      "note": "A technical expression for refusing to treat a phrase as a separate verse ending in a given counting tradition."
+    },
+    {
+      "arabic": "أهمل عد / أهمل عدهما",
+      "transliteration": "ahmala 'adda / ahmala 'addahuma",
+      "english": "to omit the count / to omit counting the two of them",
+      "note": "Close in function to radd al-'add, but phrased as neglecting or leaving out the count of a disputed phrase."
+    },
+    {
+      "arabic": "انفرد بعده",
+      "transliteration": "infarada bi-'addihi",
+      "english": "he alone counts it; he is unique in counting it",
+      "note": "Used when one counting authority is singled out as the sole one to treat a place as a verse ending."
+    },
+    {
+      "arabic": "للاحتراز",
+      "transliteration": "lil-ihtiraz",
+      "english": "as a restrictive qualification; for the sake of excluding another occurrence",
+      "note": "A common authorial signal that a descriptor such as first, second, before, or after is being used to isolate one occurrence from other similar ones."
+    }
+  ]
+}

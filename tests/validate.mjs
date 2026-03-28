@@ -243,6 +243,8 @@ const totalsMarkdown = readFileSync(distPath('review', 'totals.md'), 'utf-8');
 const workloadMarkdown = readFileSync(distPath('review', 'workload.md'), 'utf-8');
 const systemDistanceMarkdown = readFileSync(distPath('review', 'system-distance.md'), 'utf-8');
 const evidenceLedgerMarkdown = readFileSync(distPath('review', 'evidence-ledger.md'), 'utf-8');
+const alBayanCrossReference = loadDist('review/al-bayan-cross-reference.json');
+const alBayanCrossReferenceMarkdown = readFileSync(distPath('review', 'al-bayan-cross-reference.md'), 'utf-8');
 const siteData = JSON.parse(readFileSync(join(repoDir, 'site', 'src', 'lib', 'data', 'generated', 'site-data.json'), 'utf-8'));
 
 const systemIds = Object.keys(countingSystems);
@@ -326,6 +328,7 @@ section('Generation Pipeline');
 
 assert(pkg.scripts.generate.includes('normalize-book-boundary-primitives.mjs'), 'generate pipeline normalizes the canonical book-boundary-primitives.json source');
 assert(pkg.scripts.generate.includes('normalize-book-boundary-evidence.mjs'), 'generate pipeline normalizes the canonical book-boundary-evidence.json sidecar');
+assert(pkg.scripts.generate.includes('generate-source-cross-references.mjs'), 'generate pipeline builds the al-Bayan cross-reference artifacts');
 assert(pkg.scripts.generate.includes('clean-dist.mjs'), 'generate pipeline clears dist before rebuilding generated artifacts');
 assert(pkg.scripts.generate.includes('generate-differences-from-book-boundary-primitives.mjs'), 'generate pipeline rebuilds dist/differences.json from book-boundary-primitives.json');
 assert(pkg.scripts.generate.includes('generate-review-artifacts.mjs'), 'generate pipeline rebuilds dist/review from the source layer');
@@ -440,6 +443,34 @@ for (const [surahKey, ayahs] of Object.entries(bookBoundaryEvidence.surahs)) {
   }
 }
 
+const faraidWork = 'الفرائد الحسان في عدّ آي القرآن';
+const nafaisWork = 'نفائس البيان — شرح الفرائد الحسان';
+
+for (const [surahKey, ayahs] of Object.entries(bookBoundaryEvidence.surahs)) {
+  const surahNumber = Number.parseInt(surahKey, 10);
+
+  if (surahNumber > 26) {
+    continue;
+  }
+
+  for (const record of Object.values(ayahs)) {
+    const evidencePoints = [];
+
+    if (record.end) {
+      evidencePoints.push(record.end);
+    }
+
+    evidencePoints.push(...(record.internal || []));
+
+    for (const point of evidencePoints) {
+      const works = new Set(point.evidence.map(item => item.work));
+      assert(point.verification_status !== 'uncited', `book-boundary-evidence.json: ${surahKey}:${point.word} is cited within the current bundle frontier`);
+      assert(works.has(faraidWork), `book-boundary-evidence.json: ${surahKey}:${point.word} includes الفرائد الحسان support within the current bundle frontier`);
+      assert(works.has(nafaisWork), `book-boundary-evidence.json: ${surahKey}:${point.word} includes نفائس البيان support within the current bundle frontier`);
+    }
+  }
+}
+
 section('Generated Review Artifacts');
 
 assert(reviewData._generated_from.includes('data/book-boundary-primitives.json'), 'review-data.json records book-boundary-primitives.json as a source');
@@ -468,6 +499,26 @@ assert(totalsMarkdown.includes('Mapping total'), 'totals.md includes the totals 
 assert(workloadMarkdown.includes('Counted points'), 'workload.md includes the workload table');
 assert(systemDistanceMarkdown.includes('System distance matrix'), 'system-distance.md includes the system distance heading');
 assert(evidenceLedgerMarkdown.includes('Evidence ledger'), 'evidence-ledger.md includes the evidence ledger heading');
+
+const expectedAlBayanFrontierSurahs = Array.from({ length: 13 }, (_, index) => index + 1);
+const expectedAlBayanExceptionAnchors = [
+  '3:92:internal:تحبون',
+  '3:97:internal:إبراهيم',
+  '6:73:internal:فيكون'
+].sort();
+
+assert(alBayanCrossReference._generated_from.includes('sources/al_bayan'), 'al-bayan-cross-reference.json records the checked-in al-Bayan source bundle');
+assert(JSON.stringify(alBayanCrossReference.covered_surahs) === JSON.stringify(expectedAlBayanFrontierSurahs), 'al-bayan-cross-reference.json covers the structured al-Bayan frontier through surah 13');
+assert(alBayanCrossReference.summary.frontier_point_count === 55, 'al-bayan-cross-reference.json reports the full project frontier point count');
+assert(alBayanCrossReference.summary.exact_primary_match_count === 52, 'al-bayan-cross-reference.json reports exact primary matches across the current frontier');
+assert(alBayanCrossReference.summary.exception_count === expectedAlBayanExceptionAnchors.length, 'al-bayan-cross-reference.json reports the expected frontier exception count');
+assert(alBayanCrossReference.summary.exact_rows_missing_primary_evidence === 0, 'every exact al-Bayan frontier match is represented in the canonical evidence layer');
+assert(JSON.stringify(alBayanCrossReference.exceptions.map(row => row.anchor_key).sort()) === JSON.stringify(expectedAlBayanExceptionAnchors), 'al-bayan-cross-reference.json records the three frontier exceptions explicitly');
+assert(alBayanCrossReferenceMarkdown.includes('al-Bayān cross-reference'), 'al-bayan-cross-reference.md includes the heading');
+assert(alBayanCrossReferenceMarkdown.includes('Frontier exceptions'), 'al-bayan-cross-reference.md includes the exception table');
+assert(siteData._generated_from.includes('dist/review/al-bayan-cross-reference.json'), 'site-data.json records al-bayan-cross-reference.json as an input');
+assert(JSON.stringify(siteData.source_frontiers.al_bayan.covered_surahs) === JSON.stringify(expectedAlBayanFrontierSurahs), 'site-data.json exposes the checked-in al-Bayan frontier coverage');
+assert(siteData.summary.primary_source_frontier.al_bayan.exact_rows_missing_primary_evidence === 0, 'site-data.json exposes the al-Bayan primary frontier completeness summary');
 
 section('Kufan Total Ayah Count');
 

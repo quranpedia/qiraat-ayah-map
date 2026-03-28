@@ -1,5 +1,5 @@
 <script>
-import { ArrowRightIcon, BookOpenCheckIcon, FilesIcon, SigmaIcon } from '@lucide/svelte'
+import { BookOpenCheckIcon, ArrowRightIcon, FilesIcon, SigmaIcon } from '@lucide/svelte'
 
 import MetricCard from '~/components/MetricCard.svelte'
 import SystemCard from '~/components/SystemCard.svelte'
@@ -31,7 +31,8 @@ let selected_profile = $derived(get_system_profile(selected_system_id))
         Explore disputed points
         <ArrowRightIcon class="size-4" />
       </a>
-      <a class="pill_button" href={app_href('/compare')}>Compare systems and workload</a>
+      <a class="pill_button" href={app_href('/project')}>Read the project guide</a>
+      <a class="pill_button" href={app_href('/developer')}>Developer usage</a>
     </div>
 
     <div class="mt-6 flex flex-wrap gap-2 text-sm text-ink-soft">

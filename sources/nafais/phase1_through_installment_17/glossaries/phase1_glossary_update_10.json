@@ -1,0 +1,24 @@
+{
+  "project": "al-Fara'id al-Hisan fi 'Add Ay al-Qur'an",
+  "scope": "Additional technical terms encountered in translation installment 10 (Surat al-Ra'd).",
+  "terms": [
+    {
+      "arabic": "قيد للاحتراز",
+      "transliteration": "qayd lil-ihtiraz",
+      "english": "restrictive qualifier; exclusionary qualification",
+      "note": "Used when the commentator specifies 'the first,' 'the second,' and similar labels in order to exclude other occurrences from the disputed verse-ending under discussion."
+    },
+    {
+      "arabic": "لبيان الواقع",
+      "transliteration": "li-bayan al-waqi'",
+      "english": "to describe the actual sequence; merely to state the textual occurrence",
+      "note": "The commentator uses this to explain that a phrase like 'before it' reports order in recitation and is not functioning as an exclusionary qualifier."
+    },
+    {
+      "arabic": "انجلا",
+      "transliteration": "injala",
+      "english": "became clear; stood manifest",
+      "note": "A poetic verb in the matn signaling that the assignment of a disputed place to a given counting authority is clear or established."
+    }
+  ]
+}

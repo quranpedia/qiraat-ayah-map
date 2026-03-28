@@ -1,0 +1,62 @@
+[
+  {
+    "issue_id": "surah_011_entry_pseudo_fawasil_serialized",
+    "severity": "medium",
+    "section_id": "surah.011.entry",
+    "description_en": "The six pseudo-fawasil in سورة هود are serialized into one compact sentence, with the first and second occurrence labels embedded inside the running prose rather than set out as separate items.",
+    "local_evidence_pages": [
+      165
+    ],
+    "impact_en": "The extraction is reliable, but it requires editorial separation of the six phrases and of the occurrence notes attached to the two “سوف تعلمون” items."
+  },
+  {
+    "issue_id": "surah_011_ruus_opening_unnumbered_head",
+    "severity": "medium",
+    "section_id": "surah.011.ruus",
+    "description_en": "The first transmitted head, “خَبِير,” appears without a displayed numeral.",
+    "local_evidence_pages": [
+      166
+    ],
+    "impact_en": "The recovered ordinal layer treats this as head 1 while preserving the witness’s lack of a displayed numeral."
+  },
+  {
+    "issue_id": "surah_011_ruus_display_skip_54",
+    "severity": "medium",
+    "section_id": "surah.011.ruus",
+    "description_en": "The witness jumps from displayed 53 “لَا تنْظرُون” to displayed 55 “مُسْتَقِيم”.",
+    "local_evidence_pages": [
+      166
+    ],
+    "impact_en": "The missing displayed 54 corresponds to the Kufi-only disputed head “تشركون”, which is not part of the later-Madani sequence."
+  },
+  {
+    "issue_id": "surah_011_ruus_four_head_omission_before_bihafiz",
+    "severity": "high",
+    "section_id": "surah.011.ruus",
+    "description_en": "After displayed 81 “سجيل”, the local witness omits four heads and resumes with an unnumbered “بحفيظ” before displayed 86 “الرشيد”.",
+    "local_evidence_pages": [
+      166
+    ],
+    "impact_en": "The recovered later-Madani sequence restores the omitted interval explicitly as “بِبَعِيد / مُحِيط / مفسدين / مُؤمنين”, with the gap kept visible through null source-line fields."
+  },
+  {
+    "issue_id": "surah_011_ruus_terminal_skips_and_blank_123",
+    "severity": "medium",
+    "section_id": "surah.011.ruus",
+    "description_en": "Near the end of the block, the witness runs “١١٧ - أَجْمَعِينَ / ١١٩ - للْمُؤْمِنين / ١٢٠ - منتظرون / ١٢٢ - تَعْمَلُونَ” and then ends with a blank terminal line “١٢ - ٣”.",
+    "local_evidence_pages": [
+      166
+    ],
+    "impact_en": "The missing displayed 118 and 121 correspond to the disputed heads “مختلفين” and “إِنَّا عاملون”, neither of which belongs to the later-Madani sequence; the final blank line is preserved as display metadata only."
+  },
+  {
+    "issue_id": "surah_011_ruus_display_numbering_semantics",
+    "severity": "low",
+    "section_id": "surah.011.ruus",
+    "description_en": "Because the transmitted block begins unnumbered, skips displayed 54, loses a four-head interval before unnumbered “بحفيظ”, later skips displayed 118 and 121, and ends with a blank terminal line, the displayed numerals do not function as a clean independent ordinal layer.",
+    "local_evidence_pages": [
+      166
+    ],
+    "impact_en": "The dataset stores recovered later-Madani ordinals together with witness display numbers where present, and records the restored heads explicitly."
+  }
+]

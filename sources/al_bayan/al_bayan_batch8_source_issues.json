@@ -1,0 +1,62 @@
+[
+  {
+    "issue_id": "surah_008_entry_pseudo_fawasil_serialized",
+    "severity": "medium",
+    "section_id": "surah.008.entry",
+    "description_en": "The eight pseudo-fawasil in سورة الأنفال are serialized into paired clusters, and the final “أمرا كان مفعولا” is identified only by an occurrence note (“الثاني بعده”).",
+    "local_evidence_pages": [
+      158
+    ],
+    "impact_en": "The eight-item extraction is reliable, but it requires editorial disaggregation of the running phrasing."
+  },
+  {
+    "issue_id": "surah_008_entry_final_quote_closure_truncated",
+    "severity": "low",
+    "section_id": "surah.008.entry",
+    "description_en": "The uploaded text witness drops the final closure after “وَإِلَى الله ترجع الْأُمُور” at the end of the pseudo-fawasil sentence.",
+    "local_evidence_pages": [
+      158
+    ],
+    "impact_en": "The translation and structured extraction rely on the internal count and the checked parallel witness to understand the final identifying phrase."
+  },
+  {
+    "issue_id": "surah_008_ruus_opening_unnumbered_head",
+    "severity": "medium",
+    "section_id": "surah.008.ruus",
+    "description_en": "The first transmitted head, “مؤمنين,” appears without a displayed numeral.",
+    "local_evidence_pages": [
+      159
+    ],
+    "impact_en": "The recovered ordinal layer treats this as head 1 while preserving the witness’s lack of a displayed numeral."
+  },
+  {
+    "issue_id": "surah_008_ruus_inserted_unnum_alim_after_41",
+    "severity": "medium",
+    "section_id": "surah.008.ruus",
+    "description_en": "After displayed 41 “مفعولا,” the witness inserts an unnumbered “عليم” before the line displayed as 42 “الصدور.”",
+    "local_evidence_pages": [
+      159
+    ],
+    "impact_en": "The inserted head must be preserved explicitly as ordinal 43 in the recovered later-Madani sequence."
+  },
+  {
+    "issue_id": "surah_008_ruus_terminal_blank_75",
+    "severity": "low",
+    "section_id": "surah.008.ruus",
+    "description_en": "The witness ends with a blank “٧٥” line before سورة التوبة begins.",
+    "local_evidence_pages": [
+      159
+    ],
+    "impact_en": "The terminal line is preserved as a display total only and is not treated as an additional head."
+  },
+  {
+    "issue_id": "surah_008_ruus_display_numbering_semantics",
+    "severity": "low",
+    "section_id": "surah.008.ruus",
+    "description_en": "Because the transmitted ruʾūs begin with an unnumbered first head, omit the expected numeral on the inserted “عليم” after displayed 41, and end with a blank total line, the displayed numerals do not independently encode the full later-Madani 76-head sequence.",
+    "local_evidence_pages": [
+      159
+    ],
+    "impact_en": "The dataset stores recovered later-Madani ordinals together with witness display numbers where present."
+  }
+]

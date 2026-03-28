@@ -1,0 +1,114 @@
+{
+  "project": "al-Fara'id al-Hisan fi 'Add Ay al-Qur'an",
+  "work": "Nafa'is al-Bayan — Commentary on al-Fara'id al-Hisan",
+  "phase": "translation_installment_09",
+  "scope": {
+    "book_pages": [
+      38,
+      39
+    ],
+    "sections": [
+      "Surat Hud"
+    ]
+  },
+  "translation_policy": {
+    "style": "technical, literal, readable",
+    "notes": [
+      "Arabic technical labels such as basmalah, fasilah, ra's al-ayah, Shami, and Iraqi are retained where helpful.",
+      "Collective labels are translated but not yet normalized into machine codes in this file.",
+      "The title markup inherited from the source HTML has been removed as a mechanical artifact.",
+      "The Hud material contains a likely OCR disturbance in the third poem line and the matching prose gloss; the earlier matn page in the same source supports the reading شاميهم / الشامي rather than دمشقهم / الدمشقي, and that internally supported reading is adopted here.",
+      "The closing summary of disputed places is separated as its own completion segment for easier later extraction."
+    ]
+  },
+  "segments": [
+    {
+      "id": "nfb.hud.title",
+      "section_ar": "سورة هود",
+      "section_en": "Surat Hud",
+      "kind": "title",
+      "book_pages": [
+        38
+      ],
+      "source_ar": "سورة هود:",
+      "translation_en": "Surat Hud."
+    },
+    {
+      "id": "nfb.hud.poem.tushrikun_lut_2",
+      "section_ar": "سورة هود",
+      "section_en": "Surat Hud",
+      "kind": "poem",
+      "book_pages": [
+        38
+      ],
+      "source_ar": "للكوف والحمصي تشركون عد ... ثاني لوط عنه كالبصري رد",
+      "translation_en": "For the Kufan and the Himsi, count tushrikun; as for the second [occurrence of] Lut, omit it for the Himsi together with the Basran."
+    },
+    {
+      "id": "nfb.hud.commentary.tushrikun_lut_2",
+      "section_ar": "سورة هود",
+      "section_en": "Surat Hud",
+      "kind": "commentary",
+      "book_pages": [
+        38
+      ],
+      "source_ar": "وأقول: أمرت في هذا البيت بعد تشركون من قوله تعالى: ﴿وَاشْهَدُوا أَنِّي بَرِيءٌ مِمَّا تُشْرِكُونَ﴾ للكوفي والحمصي فتكون متروكة لغيرهما ثم أمرت برد لوط الثاني أي بعدم عده عن الحمصي والبصري فيكون معدودا لغيرهما، فالضمير في قولي: \"عنه\" يعود على الحمصي. والمراد بلوط الثاني قوله تعالى: ﴿يُجَادِلُنَا فِي قَوْمِ لُوط﴾ وخرج بقيد الثاني الموضع الأول وهو قوله تعالى: ﴿إِنَّا أُرْسِلْنَا إِلَى قَوْمِ لُوطٍ﴾ فمتفق على عده.",
+      "translation_en": "In this line I directed that one count after tushrikun from His statement {washhadu anni bari'un mimma tushrikun} for the Kufan and the Himsi, so it is omitted by the others. Then I directed that the second occurrence of Lut be rejected—that is, not counted—for the Himsi and the Basran, and thus counted by the others. The pronoun in my words 'from him' refers back to the Himsi. What is meant by the second Lut is His statement {yujadiluna fi qawmi Lut}. Excluded by my qualification 'the second' is the first occurrence, namely His statement {inna ursilna ila qawmi Lutin}, for that one is unanimously counted."
+    },
+    {
+      "id": "nfb.hud.poem.sijjil_mandud",
+      "section_ar": "سورة هود",
+      "section_en": "Surat Hud",
+      "kind": "poem",
+      "book_pages": [
+        39
+      ],
+      "source_ar": "سجيل المكي مع الثاني انتمى ... وعد منضود لدى سواهما",
+      "translation_en": "Sijjil is ascribed to the Makkan together with the Last Madinan; as for mandud, its counting belongs to the others."
+    },
+    {
+      "id": "nfb.hud.commentary.sijjil_mandud",
+      "section_ar": "سورة هود",
+      "section_en": "Surat Hud",
+      "kind": "commentary",
+      "book_pages": [
+        39
+      ],
+      "source_ar": "وأقول: تضمن هذا البيت بيان الخلاف في موضعين من مواضع الخلاف في هذه السورة. فأفاد أن \"سجيل\" من قوله تعالى: ﴿وَأَمْطَرْنَا عَلَيْهَا حِجَارَةً مِنْ سِجِّيلٍ﴾ معدود للمكي مع المدني الثاني. ومتروك لغيرهما. ومعنى انتمى انتسب أي انتسب عد هذا اللفظ للمكي والمدني الثاني. ثم أفاد أيضا أن \"منضود\" من قوله تعالى: ﴿مِنْ سِجِّيلٍ مَنْضُودٍ﴾ معدود عند غير المكي والمدني والثاني فيكون متروكا عندهما. وقولي: \"عد\" يحتمل أن يكون فعلا ماضيا، وأن يكون فعل أمر.",
+      "translation_en": "This line contains the disagreement over two of the disputed places in this surah. It indicates that {sijjil} in His statement {wa amtarna 'alayha hijaratan min sijjil} is counted by the Makkan together with the Last Madinan, and omitted by the others. The meaning of intama is 'it was ascribed'—that is, the counting of this word was ascribed to the Makkan and the Last Madinan. It also indicates that {mandud} in His statement {min sijjilin mandud} is counted by everyone other than the Makkan and the Last Madinan, and is thus omitted by those two. My word 'count' here may be understood either as a past-tense verb or as an imperative."
+    },
+    {
+      "id": "nfb.hud.poem.muminin_mukhtalifin_amilun",
+      "section_ar": "سورة هود",
+      "section_en": "Surat Hud",
+      "kind": "poem",
+      "book_pages": [
+        39
+      ],
+      "source_ar": "ومؤمنين الحمص مع حجازهم ... مختلفين اعدده عن شاميهم\nكذا العراقي وعاملونا ... هم مع الأول ناقلونا",
+      "translation_en": "Mu'minin is counted by the Himsi together with the Hijazis; and as for mukhtalifin, count it for the Shami, likewise for the Iraqi. As for 'amilun, those same ones have transmitted it, together with the First Madinan."
+    },
+    {
+      "id": "nfb.hud.commentary.muminin_mukhtalifin_amilun",
+      "section_ar": "سورة هود",
+      "section_en": "Surat Hud",
+      "kind": "commentary",
+      "book_pages": [
+        39
+      ],
+      "source_ar": "وأقول: أخبرت أن قوله تعالى: ﴿بَقِيَّتُ اللَّهِ خَيْرٌ لَكُمْ إِنْ كُنْتُمْ مُؤْمِنِينَ﴾ معدود للحمصي مع الحجازي أي المدنيين والمكي ومتروك لغيرهم ثم أمرت بعد قوله تعالى: ﴿وَلا يَزَالُونَ مُخْتَلِفِين﴾ عن الشامي والعراقي أي البصري والكوفي فلا يكون معدودا للحجازيين ثم أخبرت أن قوله تعالى: ﴿إِنَّا عَامِلُون﴾ قد نقل عده أيضا الشامي والعراقي، ويشاركهم في عده المدني الأول. فالضمير في قولي: \"هم\" يعود على المذكورين قبل وهم الشامي والعراقي. وإذا كان هؤلاء يعدونه فالباقي لا يعده وهما المكي والمدني الثاني والضمير في حجازهم، وشاميهم، يعود على علماء العدد. وإضافة الحجازي والشامي إليهم لأدنى ملابسة؛ لأن الحجازيين والشامي من ضمن علماء العدد.",
+      "translation_en": "I stated that His statement {baqiyyatu Allahi khayrun lakum in kuntum mu'minin} is counted by the Himsi together with the Hijazi—that is, the two Madinans and the Makkan—and omitted by the others. Then I directed, after His statement {wa la yazaluna mukhtalifin}, that it be counted for the Shami and the Iraqi; here Iraqi means the Basran and the Kufan, so it is not counted by the Hijazis. Then I stated that His statement {inna 'amilun} has likewise been transmitted as counted by the Shami and the Iraqi, and the First Madinan shares with them in counting it. The pronoun in my words 'they' refers back to those mentioned immediately before—namely the Shami and the Iraqi. If these count it, then the remaining authorities do not count it, namely the Makkan and the Last Madinan. The pronouns in 'their Hijazi' and 'their Shami' refer back to the verse-counting authorities. The ascription of the Hijazi and the Shami to them is only for the slightest relation, since the Hijazis and the Shami are among the verse-counting authorities."
+    },
+    {
+      "id": "nfb.hud.completion",
+      "section_ar": "سورة هود",
+      "section_en": "Surat Hud",
+      "kind": "completion",
+      "book_pages": [
+        39
+      ],
+      "source_ar": "ومواضع الخلاف في هذه السورة سبعة: تشركون، لوط \"الثاني\"، سجيل، منضود، مؤمنين، مختلفين، عاملون.",
+      "translation_en": "The disputed places in this surah are seven: tushrikun, the second Lut, sijjil, mandud, mu'minin, mukhtalifin, and 'amilun."
+    }
+  ]
+}

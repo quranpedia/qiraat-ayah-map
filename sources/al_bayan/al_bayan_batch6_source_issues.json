@@ -1,0 +1,75 @@
+[
+  {
+    "issue_id": "surah_006_entry_pseudo_fawasil_serialized",
+    "severity": "medium",
+    "section_id": "surah.006.entry",
+    "description_en": "The five pseudo-fawasil in سورة الأنعام are serialized inside one running sentence rather than as a neatly itemized list.",
+    "local_evidence_pages": [
+      151,
+      152
+    ],
+    "impact_en": "The five-item extraction is reliable, but it requires editorial splitting of the serialized phrasing."
+  },
+  {
+    "issue_id": "surah_006_ruus_missing_opening_display_interval",
+    "severity": "high",
+    "section_id": "surah.006.ruus",
+    "description_en": "The surviving ruʾūs witness begins with two unnumbered heads and then resumes only at displayed 73. No displayed lines 1–72 survive in either the uploaded witness or the checked parallel PDF witness.",
+    "local_evidence_pages": [
+      153
+    ],
+    "impact_en": "A full ordinal reconstruction cannot be forced from this witness alone; the dataset preserves only the transmitted segment."
+  },
+  {
+    "issue_id": "surah_006_ruus_opening_unnumbered_heads",
+    "severity": "medium",
+    "section_id": "surah.006.ruus",
+    "description_en": "At the top of the block, “والنور” and “الخبير” appear as standalone unnumbered heads before displayed 73.",
+    "local_evidence_pages": [
+      153
+    ],
+    "impact_en": "The witness numbering cannot be treated as a simple continuous ordinal layer."
+  },
+  {
+    "issue_id": "surah_006_ruus_page_break_134",
+    "severity": "medium",
+    "section_id": "surah.006.ruus",
+    "description_en": "Displayed 134 breaks across the page boundary as “١٣ - ٤الظالمون”, with the numeral fragment closing printed page 153 and the head continuing on printed page 154.",
+    "local_evidence_pages": [
+      153,
+      154
+    ],
+    "impact_en": "The head can be repaired confidently, but the page-break corruption must remain explicit in the data."
+  },
+  {
+    "issue_id": "surah_006_ruus_unnumbered_mushrikin_after_160",
+    "severity": "medium",
+    "section_id": "surah.006.ruus",
+    "description_en": "Near the surah close, an unnumbered “المشركين” appears between displayed 160 “مستقيم” and displayed 161 “العالمين”.",
+    "local_evidence_pages": [
+      154
+    ],
+    "impact_en": "The witness’s display numerals and transmitted head order diverge in the closing disputed cluster, so full ordinal backfilling would be overconfident."
+  },
+  {
+    "issue_id": "surah_006_ruus_terminal_blank_165",
+    "severity": "low",
+    "section_id": "surah.006.ruus",
+    "description_en": "After the final surviving head “رحيم”, the witness carries a blank “١٦٥” line before the next sura begins.",
+    "local_evidence_pages": [
+      154
+    ],
+    "impact_en": "The terminal line functions as a display total and must not be treated as an additional head."
+  },
+  {
+    "issue_id": "surah_006_ruus_display_numbering_semantics",
+    "severity": "low",
+    "section_id": "surah.006.ruus",
+    "description_en": "Because the block opens after a missing display interval, includes unnumbered inserted heads, and ends with a blank total line, the surviving display numerals do not transparently encode a complete later-Madani ordinal layer.",
+    "local_evidence_pages": [
+      153,
+      154
+    ],
+    "impact_en": "The dataset stores source_sequence_index and display_number_in_witness for the transmitted segment rather than synthesizing full ordinals 1–167."
+  }
+]

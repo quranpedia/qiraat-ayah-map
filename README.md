@@ -4,6 +4,11 @@
 
 [اقرأ هذا المستند بالعربية](docs/README.ar.md)
 
+New here? Start with:
+
+- [What this project does](docs/project-introduction.md)
+- [Developer usage](docs/developer-usage.md)
+
 ---
 
 ## Background
@@ -374,3 +379,32 @@ cd site
 pnpm install
 pnpm dev
 ```
+
+## Source witnesses and evidence import
+
+The repo now checks in two structured witness families under `sources/`:
+
+- `sources/al_bayan` — the current structured `البيان في عدّ آي القرآن` frontier, now covering the pilot plus surahs **2–13**
+- `sources/nafais` — the current `الفرائد الحسان` / `نفائس البيان` cumulative bundle frontier
+
+`npm run generate` uses the checked-in `sources/al_bayan` witness to build a scholar-facing cross-reference report at:
+
+- `dist/review/al-bayan-cross-reference.json`
+- `dist/review/al-bayan-cross-reference.md`
+
+The evidence importer also defaults to those checked-in sources, so the normal curator command is now just:
+
+```bash
+node scripts/source-bundles/import-evidence-from-supplied-bundles.mjs --apply
+```
+
+Override paths only when testing a newer external bundle:
+
+```bash
+node scripts/source-bundles/import-evidence-from-supplied-bundles.mjs \
+  --al-bayan /path/to/al_bayan_cumulative_through_batch13.zip \
+  --nafais /path/to/phase1_data_through_installment_17.zip \
+  --apply
+```
+
+The current workflow treats `البيان` as the primary-ingestion layer, the embedded `الفرائد الحسان` poem segments inside the القاضي bundle as a direct `secondary` witness, and the bundled `نفائس البيان` commentary segments as the explanatory/adjudication layer. See `docs/source-bundle-workflow.md`.

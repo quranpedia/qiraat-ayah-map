@@ -1,0 +1,70 @@
+{
+  "project": "al-Fara'id al-Hisan fi 'Add Ay al-Qur'an",
+  "work": "Nafa'is al-Bayan — Commentary on al-Fara'id al-Hisan",
+  "phase": "translation_installment_17",
+  "scope": {
+    "book_pages": [
+      49
+    ],
+    "sections": [
+      "Surat al-Shu'ara'"
+    ]
+  },
+  "translation_policy": {
+    "style": "technical, literal, readable",
+    "notes": [
+      "Arabic technical labels such as basmalah, fasilah, ra's al-ayah, Shami, and Iraqi are retained where helpful.",
+      "Collective labels are translated but not yet normalized into machine codes in this file.",
+      "The title markup inherited from the source HTML has been removed as a mechanical artifact.",
+      "The restrictive qualifiers 'first' and 'third' are preserved explicitly because the commentator uses them to distinguish repeated occurrences of the same terminal word within the surah.",
+      "The phrase bihi al-shayatin is preserved with its prefixed bi-, because the commentator explicitly uses that preposition to distinguish it from the other shayatin occurrence in the surah.",
+      "The closing tanbih that adds {Ta Sin Mim} as a fourth disputed place is separated as a technical note segment for easier later extraction."
+    ]
+  },
+  "segments": [
+    {
+      "id": "nfb.shuara.title",
+      "section_ar": "سورة الشعراء",
+      "section_en": "Surat al-Shu'ara'",
+      "kind": "title",
+      "book_pages": [
+        49
+      ],
+      "source_ar": "سورة الشعراء:",
+      "translation_en": "Surat al-Shu'ara'."
+    },
+    {
+      "id": "nfb.shuara.poem.talamun_tabudun_bihi_al_shayatin",
+      "section_ar": "سورة الشعراء",
+      "section_en": "Surat al-Shu'ara'",
+      "kind": "poem",
+      "book_pages": [
+        49
+      ],
+      "source_ar": "أول تعلمون كوف أهمله ... ثالث تعبدون بصر حظله\nبه الشياطين اعددن لكلهم ... لا المدني الأخير مع مكيهم",
+      "translation_en": "The Kufan omits the first ta'lamun; the Basran withholds the third ta'budun. Count bihi al-shayatin for them all, except the Last Madinan together with the Makkan."
+    },
+    {
+      "id": "nfb.shuara.commentary.talamun_tabudun_bihi_al_shayatin",
+      "section_ar": "سورة الشعراء",
+      "section_en": "Surat al-Shu'ara'",
+      "kind": "commentary",
+      "book_pages": [
+        49
+      ],
+      "source_ar": "وأقول: اشتمل البيت الأول على بيان أن لفظ تعلمون الأول وهو قوله تعالى: ﴿فَلَسَوْفَ تَعْلَمُون﴾ أهمله الكوفي وعده غيره والتقييد بالأول للاحتراز عن الموضع الثاني وهو قوله تعالى: ﴿أَمَدَّكُمْ بِمَا تَعْلَمُون﴾ فإنه معدود إجماعا وأن لفظ تعبدون في ثلث مواضعه وهو قوله تعالى: ﴿وَقِيلَ لَهُمْ أَيْنَ مَا كُنْتُمْ تَعْبُدُونَ﴾ حظل أي منع عده البصري وعده الباقون. وتقييده بالثالث لإخراج الموضعين قبله وهما ﴿إِذْ قَالَ لِأَبِيهِ وَقَوْمِهِ مَا تَعْبُدُونَ﴾ و﴿قَالَ أَفَرَأَيْتُمْ مَا كُنْتُمْ تَعْبُدُون﴾ فلا خلاف في عدهما واشتمل البيت الثاني على الأمر بعد قوله تعالى: ﴿وَمَا تَنَزَّلَتْ بِهِ الشَّيَاطِينُ﴾ لكل أئمة العدد إلا المدني الأخير والمكي فلا يعدانه. وتقييد لفظ الشياطين بكلمة \"به\" للاحتراز عن قوله تعالى: ﴿عَلَى مَنْ تَنَزَّلُ الشَّيَاطِين﴾ فإنه متفق على عده.",
+      "translation_en": "What I mean is that the first line states that the first occurrence of the word ta'lamun—namely His statement {fa-lasawfa ta'lamun}—is omitted by the Kufan and counted by the others. The qualification 'first' is there to exclude the second occurrence, namely {amaddakum bima ta'lamun}, for that is counted by consensus. And the word ta'budun, in the third of its occurrences—namely His statement {wa qila lahum ayna ma kuntum ta'budun}—is withheld from the count by the Basran, while the rest count it. Restricting it to the third excludes the two occurrences before it, namely {idh qala li-abihi wa qawmihi ma ta'budun} and {qala a-fa-ra'aytum ma kuntum ta'budun}, for there is no disagreement over counting those two. The second line contains the instruction to count, after His statement {wa ma tanazzalat bihi al-shayatin}, for all the verse-counting authorities except the Last Madinan and the Makkan, who therefore do not count it. The qualification of al-shayatin by the word bihi excludes His statement {ala man tanazzalu al-shayatin}, for that is agreed upon as counted."
+    },
+    {
+      "id": "nfb.shuara.note.tasm",
+      "section_ar": "سورة الشعراء",
+      "section_en": "Surat al-Shu'ara'",
+      "kind": "technical_note",
+      "book_pages": [
+        49
+      ],
+      "source_ar": "تنبيه: دل النظم على أن مواضع الخلاف في هذه السورة ثلاثة \"تعلمون\" و\"تعبدون\" و\"به الشياطين\" ويزاد رابع وهو طسم، فالكوفي يعده وغيره يتركه كما علمت والله أعلم.",
+      "translation_en": "Note: the poem indicates that the disputed places in this surah are three: ta'lamun, ta'budun, and bihi al-shayatin. A fourth is added, namely Ta Sin Mim; the Kufan counts it and the others leave it, as you already know. And God knows best."
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+> New here? Read [`project-introduction.md`](project-introduction.md) first. This file describes the technical model after that broader introduction.
+
 # Methodology
 
 ## Core model
@@ -32,7 +34,8 @@ Everything else is generated.
 8. generate rawi metadata and surah counts
 9. generate classical total attestation notes
 10. generate scholar-review packets under `dist/review/`
-11. generate the SPA UI contract under `site/src/lib/data/generated/`
+11. generate the checked-in `البيان` cross-reference report under `dist/review/`
+12. generate the SPA UI contract under `site/src/lib/data/generated/`
 
 ## Why this model is reviewable
 
@@ -80,8 +83,19 @@ The generated review layer under `dist/review/` is intended for scholar outreach
 - `systems/*.md` — system-by-system packets
 - `totals.md` — totals sheet
 - `open-questions.md` — unresolved or unreviewed claims
+- `al-bayan-cross-reference.{json,md}` — exact-match and exception tracking against the checked-in structured `البيان` witness
 
 
 ## Site deployment note
 
 The SPA is deployed as a static GitHub Pages artifact. The frontend build must receive the Pages base path, and the built output must include a `404.html` fallback so client-side routes can recover on direct loads.
+
+
+## Source-witness pass
+
+The repo now checks in its current structured witness frontier under `sources/`.
+
+- `sources/al_bayan` provides the current primary structured frontier for `البيان`
+- `sources/nafais` provides the current poem/commentary frontier for `الفرائد الحسان` and `نفائس البيان`
+
+These witnesses still do not replace the canonical authored claim layer in `data/`, but they are now first-class curator aids. The al-Dānī witness feeds `primary` entries and also generates a cross-reference report under `dist/review/`; the embedded `الفرائد الحسان` poem segments from the al-Qāḍī bundle feed direct `secondary` entries; and the bundled `نفائس البيان` commentary segments feed `commentary` entries. The full curator workflow is documented in `docs/source-bundle-workflow.md`.

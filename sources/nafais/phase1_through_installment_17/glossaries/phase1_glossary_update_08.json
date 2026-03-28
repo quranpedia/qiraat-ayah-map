@@ -1,0 +1,18 @@
+{
+  "project": "al-Fara'id al-Hisan fi 'Add Ay al-Qur'an",
+  "scope": "Additional technical terms encountered in translation installment 08 (Surat Yunus).",
+  "terms": [
+    {
+      "arabic": "لفظ",
+      "transliteration": "lafz",
+      "english": "the wording; the cue word",
+      "note": "In the poem this often points to the salient word at the end of the Qur'anic phrase under discussion, not merely to an isolated lexical item in abstraction."
+    },
+    {
+      "arabic": "يعتمد / اعتمد عده",
+      "transliteration": "yu'tamadu / i'tumida 'adduhu",
+      "english": "is relied upon; its counting is adopted",
+      "note": "Used when the author marks a given place as the accepted or operative counted place for a specified group of verse-counting authorities."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "project": "al-Fara'id al-Hisan fi 'Add Ay al-Qur'an",
+  "scope": "Additional technical terms encountered in translation installment 05 (Surat al-Ma'idah).",
+  "terms": [
+    {
+      "arabic": "أهمل / أهمل عد",
+      "transliteration": "ahmala / ahmala 'adda",
+      "english": "to leave out; to omit counting",
+      "note": "A standard formula in this work for not treating a phrase as a counted verse ending in a given counting tradition."
+    },
+    {
+      "arabic": "نقل / نقل عد",
+      "transliteration": "naqala / naqala 'adda",
+      "english": "to transmit; to transmit the counting",
+      "note": "Used when a verse-counting judgment is explicitly presented as a transmitted report for a named authority."
+    }
+  ]
+}

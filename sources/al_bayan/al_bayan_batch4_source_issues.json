@@ -1,0 +1,54 @@
+[
+  {
+    "issue_id": "surah_004_entry_pseudo_fawasil_serialized",
+    "severity": "medium",
+    "section_id": "surah.004.entry",
+    "description_en": "The six pseudo-fawasil in سورة النساء are serialized as paired phrasing inside one running sentence rather than as six separately delimited items.",
+    "local_evidence_pages": [
+      146
+    ],
+    "impact_en": "The six-item extraction is reliable, but it requires editorial splitting of the serialized phrasing instead of blind tokenization."
+  },
+  {
+    "issue_id": "surah_004_ruus_display_gap_after_43",
+    "severity": "medium",
+    "section_id": "surah.004.ruus",
+    "description_en": "The printed witness jumps from displayed 43 (نصيرا) to displayed 45 (إلا قليلا). This gap corresponds to the disputed head “أن تضلوا السبيل”, which the Kufi and Shami count but the later Madani baseline omits.",
+    "local_evidence_pages": [
+      147
+    ],
+    "impact_en": "The normalized dataset should preserve the ordered later-Madani sequence 1–175 by actual head order rather than by the witness's display numerals."
+  },
+  {
+    "issue_id": "surah_004_ruus_page_break_131",
+    "severity": "medium",
+    "section_id": "surah.004.ruus",
+    "description_en": "Displayed 131 breaks across the page boundary as “١٣ - ١” at the end of printed page 147, with the head “وكيلا” continuing at the top of printed page 148.",
+    "local_evidence_pages": [
+      147,
+      148
+    ],
+    "impact_en": "The head is recoverable with high confidence, but the repair must remain explicit in the data."
+  },
+  {
+    "issue_id": "surah_004_ruus_terminal_blank_176",
+    "severity": "low",
+    "section_id": "surah.004.ruus",
+    "description_en": "After the final head “عليم”, the printed witness carries a standalone blank “١٧٦” line.",
+    "local_evidence_pages": [
+      148
+    ],
+    "impact_en": "This terminal display numeral should not be treated as an additional head; the ordered later-Madani sequence still contains 175 heads."
+  },
+  {
+    "issue_id": "surah_004_ruus_source_numbering_semantics",
+    "severity": "low",
+    "section_id": "surah.004.ruus",
+    "description_en": "The printed witness mixes an unnumbered first head, carried display numerals, a gap for a non-baseline disputed head, and a terminal blank total line.",
+    "local_evidence_pages": [
+      147,
+      148
+    ],
+    "impact_en": "The dataset preserves the ordered later-Madani head sequence rather than a second diplomatic numbering layer."
+  }
+]

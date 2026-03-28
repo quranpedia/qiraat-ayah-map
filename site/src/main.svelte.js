@@ -5,9 +5,11 @@ import Navgo from 'navgo'
 import { mount } from 'svelte'
 
 import * as Compare from '~/routes/Compare.svelte'
+import * as Developer from '~/routes/Developer.svelte'
 import * as Explorer from '~/routes/Explorer.svelte'
 import * as Home from '~/routes/Home.svelte'
 import * as NotFound from '~/routes/NotFound.svelte'
+import * as Project from '~/routes/Project.svelte'
 import * as Surah from '~/routes/Surah.svelte'
 import * as System from '~/routes/System.svelte'
 
@@ -16,7 +18,9 @@ import App from './App.svelte'
 const routes = [
   ['/', Home],
   ['/compare', Compare],
+  ['/developer', Developer],
   ['/explorer', Explorer],
+  ['/project', Project],
   ['/systems/:system', System],
   ['/surahs/:surah', Surah],
   [/^.*$/, NotFound]

@@ -1,0 +1,52 @@
+[
+  {
+    "issue_id": "surah_012_entry_pseudo_fawasil_compressed_pairs",
+    "severity": "medium",
+    "section_id": "surah.012.entry",
+    "description_en": "The source states that there are four pseudo-fawasil, but it transmits them as two parenthetical clusters, each containing two phrases.",
+    "local_evidence_pages": [
+      167
+    ],
+    "impact_en": "The structured extraction splits the four places explicitly as separate phrases while preserving the compressed source wording in the raw entry block."
+  },
+  {
+    "issue_id": "surah_012_ruus_opening_unnumbered_head",
+    "severity": "medium",
+    "section_id": "surah.012.ruus",
+    "description_en": "The first transmitted head, “الْمُبين,” appears without a displayed numeral.",
+    "local_evidence_pages": [
+      168
+    ],
+    "impact_en": "The recovered ordinal layer treats this as head 1 while preserving the witness’s lack of a displayed numeral."
+  },
+  {
+    "issue_id": "surah_012_ruus_parser_spacing_at_68",
+    "severity": "low",
+    "section_id": "surah.012.ruus",
+    "description_en": "Displayed 68 is transmitted in the parsed witness as “يعْمل ون”, with an internal space splitting the final letters.",
+    "local_evidence_pages": [
+      168
+    ],
+    "impact_en": "The recovered head normalizes only the internal spacing to “يعْملون”, while the raw source line is preserved unchanged for auditability."
+  },
+  {
+    "issue_id": "surah_012_ruus_terminal_blank_111",
+    "severity": "low",
+    "section_id": "surah.012.ruus",
+    "description_en": "The witness ends with a blank terminal display-total line written as “١١ - ١”.",
+    "local_evidence_pages": [
+      168
+    ],
+    "impact_en": "The terminal line is preserved as a display total only and is not treated as an additional head."
+  },
+  {
+    "issue_id": "surah_012_ruus_display_numbering_semantics",
+    "severity": "low",
+    "section_id": "surah.012.ruus",
+    "description_en": "Because the transmitted block begins with an unnumbered first head and ends with a blank terminal total line, the displayed numerals do not by themselves encode the full later-Madani 111-head sequence.",
+    "local_evidence_pages": [
+      168
+    ],
+    "impact_en": "The dataset stores recovered later-Madani ordinals together with witness display numbers where present."
+  }
+]

@@ -1,0 +1,63 @@
+[
+  {
+    "issue_id": "surah_009_entry_pseudo_fawasil_interrupted_by_basri_note",
+    "severity": "high",
+    "section_id": "surah.009.entry",
+    "description_en": "The sixteen pseudo-fawasil are not transmitted as a neat continuous list: after the first item, the source interrupts the sequence with a prose discussion of conflicting Basri reports before resuming the remaining clusters.",
+    "local_evidence_pages": [
+      160,
+      161
+    ],
+    "impact_en": "The sixteen-item extraction is recoverable, but it requires editorial disaggregation and an explicit note about the intervening Basri counting discussion."
+  },
+  {
+    "issue_id": "surah_009_entry_basri_variant_reports",
+    "severity": "medium",
+    "section_id": "surah.009.entry",
+    "description_en": "The source records conflicting Basri transmissions involving the location after “إِلَّا الَّذين عاهدتم من الْمُشْركين” and the phrase “بَرِيء من الْمُشْركين”, while also stating that the sound Basri position is the one already presented earlier.",
+    "local_evidence_pages": [
+      161
+    ],
+    "impact_en": "The translation and structured data preserve the raw note but avoid over-resolving every internal variant beyond the source’s own preferred summary."
+  },
+  {
+    "issue_id": "surah_009_ruus_opening_unnumbered_head",
+    "severity": "medium",
+    "section_id": "surah.009.ruus",
+    "description_en": "The first transmitted head, “من الْمُشْركين,” appears without a displayed numeral.",
+    "local_evidence_pages": [
+      162
+    ],
+    "impact_en": "The recovered ordinal layer treats this as head 1 while preserving the witness’s lack of a displayed numeral."
+  },
+  {
+    "issue_id": "surah_009_ruus_inserted_unnum_yazlimun_after_69",
+    "severity": "medium",
+    "section_id": "surah.009.ruus",
+    "description_en": "After displayed 69 “وَثَمُود”, the witness inserts an unnumbered “يظْلمُونَ” before resuming at displayed 70 “حَكِيم”.",
+    "local_evidence_pages": [
+      162
+    ],
+    "impact_en": "The inserted head must be preserved explicitly as a separate ordinal in the recovered later-Madani sequence."
+  },
+  {
+    "issue_id": "surah_009_ruus_terminal_blank_129",
+    "severity": "low",
+    "section_id": "surah.009.ruus",
+    "description_en": "The witness ends with a blank terminal display-total line written as “١٢ - ٩”.",
+    "local_evidence_pages": [
+      162
+    ],
+    "impact_en": "The terminal line is preserved as a display total only and is not treated as an additional head."
+  },
+  {
+    "issue_id": "surah_009_ruus_display_numbering_semantics",
+    "severity": "low",
+    "section_id": "surah.009.ruus",
+    "description_en": "Because the transmitted block begins unnumbered, inserts an additional unnumbered head after displayed 69, and ends with a blank terminal total line, the displayed numerals do not function as a clean independent ordinal layer.",
+    "local_evidence_pages": [
+      162
+    ],
+    "impact_en": "The dataset stores recovered later-Madani ordinals together with witness display numbers where present."
+  }
+]

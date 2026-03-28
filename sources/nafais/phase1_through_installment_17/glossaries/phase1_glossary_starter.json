@@ -1,0 +1,101 @@
+{
+  "project": "al-Fara'id al-Hisan fi 'Add Ay al-Qur'an",
+  "scope": "starter glossary for installment 01",
+  "terms": [
+    {
+      "arabic": "الفاصلة",
+      "transliteration": "fasilah",
+      "english": "verse-ending; the final word of a verse",
+      "note": "The author explicitly treats it as synonymous with ra's al-ayah."
+    },
+    {
+      "arabic": "رأس الآية",
+      "transliteration": "ra's al-ayah",
+      "english": "verse ending; verse head",
+      "note": "Used synonymously with fasilah in this work."
+    },
+    {
+      "arabic": "البسملة",
+      "transliteration": "basmalah",
+      "english": "the formula 'In the name of God, the Most Compassionate, the Most Merciful'",
+      "note": "In verse-counting discussions this is typically treated as a named textual unit rather than expanded every time."
+    },
+    {
+      "arabic": "علم الفواصل",
+      "transliteration": "'ilm al-fawasil",
+      "english": "the science of verse-endings",
+      "note": "Closely tied in this work to verse-counting."
+    },
+    {
+      "arabic": "علماء العدد",
+      "transliteration": "'ulama' al-'adad",
+      "english": "verse-counting authorities",
+      "note": "Also usable later as 'authorities of verse enumeration.'"
+    },
+    {
+      "arabic": "المدني الأول",
+      "transliteration": "al-madani al-awwal",
+      "english": "the First Madinan count"
+    },
+    {
+      "arabic": "المدني الأخير",
+      "transliteration": "al-madani al-akhir",
+      "english": "the Last Madinan count"
+    },
+    {
+      "arabic": "المكي",
+      "transliteration": "al-makki",
+      "english": "the Makkan count"
+    },
+    {
+      "arabic": "البصري",
+      "transliteration": "al-basri",
+      "english": "the Basran count"
+    },
+    {
+      "arabic": "الدمشقي",
+      "transliteration": "al-dimashqi",
+      "english": "the Dimashqi count"
+    },
+    {
+      "arabic": "الحمصي",
+      "transliteration": "al-himsi",
+      "english": "the Himsi count"
+    },
+    {
+      "arabic": "الكوفي",
+      "transliteration": "al-kufi",
+      "english": "the Kufan count"
+    },
+    {
+      "arabic": "الحجازي",
+      "transliteration": "al-hijazi",
+      "english": "Hijazi",
+      "note": "Collective label covering the two Madinan counts plus the Makkan count."
+    },
+    {
+      "arabic": "الشامي",
+      "transliteration": "al-shami",
+      "english": "Shami",
+      "note": "Collective label covering the Dimashqi and Himsi counts."
+    },
+    {
+      "arabic": "العراقي",
+      "transliteration": "al-'iraqi",
+      "english": "Iraqi",
+      "note": "Collective label covering the Basran and Kufan counts."
+    },
+    {
+      "arabic": "الإمالة",
+      "transliteration": "imalah",
+      "english": "vowel inclining / imalah",
+      "note": "Left partially untranslated because it is a technical qira'at term."
+    },
+    {
+      "arabic": "التقليل",
+      "transliteration": "taqlil",
+      "english": "taqlil",
+      "note": "Kept as a technical qira'at term; can later receive a glossary note in the edition front matter."
+    }
+  ]
+}

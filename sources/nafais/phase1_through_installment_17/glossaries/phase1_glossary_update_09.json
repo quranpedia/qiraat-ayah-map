@@ -1,0 +1,24 @@
+{
+  "project": "al-Fara'id al-Hisan fi 'Add Ay al-Qur'an",
+  "scope": "Additional technical terms encountered in translation installment 09 (Surat Hud).",
+  "terms": [
+    {
+      "arabic": "انتمى / انتسب",
+      "transliteration": "intama / intasaba",
+      "english": "is ascribed; is attributed",
+      "note": "Used by the commentator to explain that the counting of a given cue word belongs by transmitted attribution to a specified counting authority or authorities."
+    },
+    {
+      "arabic": "رد / عدم عده",
+      "transliteration": "radda / 'adam 'addihi",
+      "english": "to reject its count; not to count it",
+      "note": "In this context the author uses 'rejecting' a place to mean omitting it from the verse count for a specified authority."
+    },
+    {
+      "arabic": "ناقلونا / قد نقل عده",
+      "transliteration": "naqiluna / qad nuqila 'adduhu",
+      "english": "they have transmitted it; its counting has been reported",
+      "note": "Signals a transmitted report that a given counting authority includes a place in the verse count, sometimes with a slightly weaker evidentiary tone than a bare direct assertion."
+    }
+  ]
+}

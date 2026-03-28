@@ -1,0 +1,24 @@
+{
+  "project": "al-Fara'id al-Hisan fi 'Add Ay al-Qur'an",
+  "scope": "Additional technical terms encountered in translation installment 04 (Surat al-Nisa').",
+  "terms": [
+    {
+      "arabic": "الآخر / آخرا / آخر المواضع",
+      "transliteration": "al-akhir / akhiran / akhir al-mawadi'",
+      "english": "the last occurrence; the final place",
+      "note": "A qualifier used to distinguish one repeated word or phrase from earlier occurrences in the same surah."
+    },
+    {
+      "arabic": "اسم الإشارة يعود على",
+      "transliteration": "ism al-isharah ya'udu 'ala",
+      "english": "the demonstrative refers back to",
+      "note": "An exegetical clarification identifying the antecedent of a pronoun or demonstrative in the poem."
+    },
+    {
+      "arabic": "احترازا عن",
+      "transliteration": "ihtirazan 'an",
+      "english": "so as to exclude; by way of excluding",
+      "note": "A technical explanatory formula used to show that a qualifier has been added in order to prevent confusion with other occurrences."
+    }
+  ]
+}

@@ -1,0 +1,1250 @@
+{
+  "project_phase": "phase_1_batch_4",
+  "section_ids": {
+    "entry": "surah.004.entry",
+    "ruus": "surah.004.ruus"
+  },
+  "arabic_source": {
+    "entry": "٤\n\nمَدَنِيَّة وَلَا نَظِير لَهَا فِي عَددهَا وكلمها ثَلَاثَة آلَاف وتسع مائَة وَخمْس وَأَرْبَعُونَ كلمة وحروفها سِتَّة عشر ألف حرف وَثَلَاثُونَ حرفا وَهِي مئة وَسَبْعُونَ وَخمْس آيَات فِي الْمَدَنِيين والمكي والبصري وست فِي الْكُوفِي وَسبع فِي الشَّامي\nاختلافها آيتان (﴿أَن تضلوا السَّبِيل﴾) عدهَا الْكُوفِي والشامي وَلم يعدها الْبَاقُونَ (﴿فيعذبهم عذَابا أَلِيمًا﴾) عدهَا الشَّامي وَلم يعدها الْبَاقُونَ\nحَدثنَا أَبُو الْفَتْح شَيخنَا قَالَ أَنا أَحْمد بن مُحَمَّد قَالَ أَنا أَحْمد بن شبيب قَالَ أَنا الْفضل قَالَ أَنا خَلاد عَن عِيسَى عَن حَمْزَة عَن الْأَعْمَش عَن إِبْرَاهِيم عَن عَلْقَمَة أَنه عد فِي النِّسَاء (﴿أَن تضلوا السَّبِيل﴾) رَأس أَربع وَأَرْبَعين آيَة\nوفيهَا مِمَّا يشبه الفواصل وَلَيْسَ معدودا بِإِجْمَاع سِتَّة مَوَاضِع\n(﴿فَلَا تَبْغُوا عَلَيْهِنَّ سَبِيلا﴾ لَوْلَا أخرتنا إِلَى أجل قريب) و(﴿للنَّاس رَسُولا﴾ وَالله يكْتب مَا يبيتُونَ) (﴿وَاتبع مِلَّة إِبْرَاهِيم حَنِيفا﴾ وَلَا الْمَلَائِكَة المقربون)",
+    "ruus_normalized": "1 - رقيبا\n2 - كَبِيرا\n3 - تعولُوا\n4 - مريئا\n5 - مَعْرُوفا\n6 - حسيبا\n7 - مَفْرُوضًا\n8 - مَعْرُوفا\n9 - سديدا\n10 - سعيرا\n11 - حكيما\n12 - حَلِيم\n13 - الْعَظِيم\n14 - مهين\n15 - سَبِيلا\n16 - رحِيما\n17 - حكيما\n18 - أَلِيمًا\n19 - كثيرا\n20 - مُبينًا\n21 - غليظا\n22 - سَبِيلا\n23 - رحِيما\n24 - حكيما\n25 - رَحِيم\n26 - حَكِيم\n27 - عَظِيما\n28 - ضَعِيفا\n29 - رحِيما\n30 - يَسِيرا\n31 - كَرِيمًا\n32 - عليما\n33 - شَهِيدا\n34 - كَبِيرا\n35 - خَبِيرا\n36 - فخورا\n37 - مهينا\n38 - قرينا\n39 - عليما\n40 - عَظِيما\n41 - شَهِيدا\n42 - حَدِيثا\n43 - غَفُورًا\n44 - نَصِيرًا\n45 - إِلَّا قَلِيلا\n46 - مَفْعُولا\n47 - عَظِيما\n48 - فتيلا\n49 - مُبينًا\n50 - سَبِيلا\n51 - نَصِيرًا\n52 - نقيرا\n53 - عَظِيما\n54 - سعيرا\n55 - حكيما\n56 - ظليلا\n57 - بَصيرًا\n58 - تَأْوِيلا\n59 - بَعيدا\n60 - صدودا\n61 - وتوفيقا\n62 - بليغا\n63 - رحِيما\n64 - تَسْلِيمًا\n65 - تثبيتا\n66 - عَظِيما\n67 - مُسْتَقِيمًا\n68 - رَفِيقًا\n69 - عليما\n70 - جَمِيعًا\n71 - شَهِيدا\n72 - عَظِيما\n73 - عَظِيما\n74 - نَصِيرًا\n75 - ضَعِيفا\n76 - فتيلا\n77 - حَدِيثا\n78 - شَهِيدا\n79 - حفيظا\n80 - وَكيلا\n81 - كثيرا\n82 - قَلِيلا\n83 - تنكيلا\n84 - مقيتا\n85 - حسيبا\n86 - حَدِيثا\n87 - سَبِيلا\n88 - نَصِيرًا\n89 - سَبِيلا\n90 - مُبينًا\n91 - حكيما\n92 - عَظِيما\n93 - خَبِيرا\n94 - عَظِيما\n95 - رحِيما\n96 - مصيرا\n97 - سَبِيلا\n98 - غَفُورًا\n99 - رحِيما\n100 - مُبينًا\n101 - مهينا\n102 - موقوتا\n103 - حكيما\n104 - خصيما\n105 - رحِيما\n106 - أَثِيمًا\n107 - محيطا\n108 - وَكيلا\n109 - رحِيما\n110 - حكيما\n111 - مُبينًا\n112 - عَظِيما\n113 - عَظِيما\n114 - مصيرا\n115 - بَعيدا\n116 - مرِيدا\n117 - مَفْرُوضًا\n118 - مُبينًا\n119 - غرُورًا\n120 - محيطا\n121 - قيلا\n122 - نَصِيرًا\n123 - نقيرا\n124 - خَلِيلًا\n125 - محيطا\n126 - عليما\n127 - خَبِيرا\n128 - رحِيما\n129 - حكيما\n130 - حميدا\n131 - وكيلا\n132 - قَدِيرًا\n133 - بَصيرًا\n134 - خَبِيرا\n135 - بَعيدا\n136 - سَبِيلا\n137 - أَلِيمًا\n138 - جَمِيعًا\n139 - جَمِيعًا\n140 - سَبِيلا\n141 - إِلَّا قَلِيلا\n142 - سَبِيلا\n143 - مُبينًا\n144 - نَصِيرًا\n145 - عَظِيما\n146 - عليما\n147 - عليما\n148 - قَدِيرًا\n149 - سَبِيلا\n150 - مهينا\n151 - رحِيما\n152 - مُبينًا\n153 - غليظا\n154 - قَلِيلا\n155 - عَظِيما\n156 - يَقِينا\n157 - حكيما\n158 - شَهِيدا\n159 - كثيرا\n160 - أَلِيمًا\n161 - عَظِيما\n162 - زبورا\n163 - تكليما\n164 - حكيما\n165 - شَهِيدا\n166 - بَعيدا\n167 - طَرِيقا\n168 - يَسِيرا\n169 - حكيما\n170 - وَكيلا\n171 - جَمِيعًا\n172 - نَصِيرًا\n173 - مُبينًا\n174 - مُسْتَقِيمًا\n175 - عليم"
+  },
+  "english_translation": {
+    "entry_translation": "Sūrat al-Nisāʾ.\n\nMedinan. It has no counterpart (naẓīrah) in its verse-count. Its words are three thousand nine hundred and forty-five, and its letters are sixteen thousand and thirty. It is one hundred and seventy-five verses in the two Madani counts, the Makki, and the Basri; one hundred and seventy-six in the Kufi; and one hundred and seventy-seven in the Shami.\n\nIts points of disagreement are two verse-endings: “an taḍillū al-sabīl” is counted by the Kufi and the Shami, and the rest do not count it; “fa-yuʿadhdhibahum ʿadhāban alīman” is counted by the Shami, and the rest do not count it.\n\nAbū al-Fatḥ, our shaykh, related to us; he said: Aḥmad b. Muḥammad related to us; he said: Aḥmad b. Shabīb related to us; he said: al-Faḍl related to us; he said: Khallād related to us, from ʿĪsā, from Ḥamza, from al-Aʿmash, from Ibrāhīm, from ʿAlqama, that he counted in Sūrat al-Nisāʾ “an taḍillū al-sabīl” as the head of verse forty-four.\n\nIn it there are six places that resemble verse-endings without being counted, by consensus: “falā tabghū ʿalayhinna sabīlan”; “lawlā akhkhartanā ilā ajalin qarīb”; “li-l-nāsi rasūlan”; “wa-Allāhu yaktubu mā yubayyitūn”; “wa-ittabiʿ millata Ibrāhīma ḥanīfan”; and “wa-lā al-malāʾikatu al-muqarrabūn.”",
+    "ruus_translation_note": "The running رؤوس الآي are represented here as an ordered Arabic sequence on the later Madani baseline. The printed witness preserves external display numerals rather than a clean 1–175 later-Madani sequence: it skips the disputed Kufi/Shami head after displayed 43, breaks 131 across the 147/148 page boundary, and ends with a terminal blank 176 line. The normalized list below preserves the actual ordered head sequence and logs those source phenomena explicitly."
+  },
+  "structured_data": {
+    "surah_number": 4,
+    "source_title_ar": "سورة النساء",
+    "canonical_name_ar": "النساء",
+    "canonical_name_en": "al-Nisāʾ",
+    "source_pages": {
+      "entry_printed_page_start": 146,
+      "entry_printed_page_end": 146,
+      "ruus_printed_page_start": 147,
+      "ruus_printed_page_end": 148
+    },
+    "source_alignment_note_en": "The entry text was normalized from the uploaded witness, with the six-item pseudo-fawasil list and the ʿAlqama report checked against a parallel 1994 printed PDF witness. The ruʾūs layer is represented here as the ordered later-Madani sequence rather than as a diplomatic reconstruction of the printed display numerals.",
+    "classification_claims": [
+      {
+        "classification": "madani",
+        "claim_ar": "مَدَنِيَّة",
+        "authority": "source_main_entry"
+      }
+    ],
+    "nazair_by_school": {
+      "madani_1": null,
+      "madani_2": null,
+      "makki": null,
+      "kufi": null,
+      "basri": null,
+      "shami": null
+    },
+    "word_count": {
+      "value": 3945,
+      "raw_ar": "ثَلَاثَة آلَاف وتسع مائَة وَخمْس وَأَرْبَعُونَ كلمة"
+    },
+    "letter_count": {
+      "value": 16030,
+      "raw_ar": "سِتَّة عشر ألف حرف وَثَلَاثُونَ حرفا"
+    },
+    "verse_totals": {
+      "madani_1": 175,
+      "madani_2": 175,
+      "makki": 175,
+      "kufi": 176,
+      "basri": 175,
+      "shami": 177
+    },
+    "disputed_verse_endings": [
+      {
+        "phrase_ar": "أَن تضلوا السَّبِيل",
+        "counted_by": [
+          "kufi",
+          "shami"
+        ],
+        "not_counted_by": [
+          "madani_1",
+          "madani_2",
+          "makki",
+          "basri"
+        ]
+      },
+      {
+        "phrase_ar": "فيعذبهم عذَابا أَلِيمًا",
+        "counted_by": [
+          "shami"
+        ],
+        "not_counted_by": [
+          "madani_1",
+          "madani_2",
+          "makki",
+          "kufi",
+          "basri"
+        ]
+      }
+    ],
+    "supporting_transmission_reports": [
+      {
+        "report_type": "isnad_report",
+        "raw_ar": "حَدثنَا أَبُو الْفَتْح شَيخنَا قَالَ أَنا أَحْمد بن مُحَمَّد قَالَ أَنا أَحْمد بن شبيب قَالَ أَنا الْفضل قَالَ أَنا خَلاد عَن عِيسَى عَن حَمْزَة عَن الْأَعْمَش عَن إِبْرَاهِيم عَن عَلْقَمَة أَنه عد فِي النِّسَاء (﴿أَن تضلوا السَّبِيل﴾) رَأس أَربع وَأَرْبَعين آيَة",
+        "summary_en": "ʿAlqama counted “أن تضلوا السبيل” in Sūrat al-Nisāʾ as the head of verse forty-four.",
+        "claim_phrase_ar": "أَن تضلوا السَّبِيل",
+        "claimed_head_number": 44,
+        "chain_ar": "أَبُو الْفَتْح شيخنا ← أَحْمد بن مُحَمَّد ← أَحْمد بن شبيب ← الْفضل ← خَلاد ← عِيسَى ← حَمْزَة ← الْأَعْمَش ← إِبْرَاهِيم ← عَلْقَمَة",
+        "named_transmitters": [
+          "أَبُو الْفَتْح شيخنا",
+          "أَحْمد بن مُحَمَّد",
+          "أَحْمد بن شبيب",
+          "الْفضل",
+          "خَلاد",
+          "عِيسَى",
+          "حَمْزَة",
+          "الْأَعْمَش",
+          "إِبْرَاهِيم",
+          "عَلْقَمَة"
+        ]
+      }
+    ],
+    "pseudo_fawasil": [
+      {
+        "phrase_ar": "فَلَا تَبْغُوا عَلَيْهِنَّ سَبِيلا",
+        "status": "resembles_fasila_not_counted_by_consensus"
+      },
+      {
+        "phrase_ar": "لَوْلَا أَخَّرْتَنَا إِلَى أَجَلٍ قَرِيب",
+        "status": "resembles_fasila_not_counted_by_consensus"
+      },
+      {
+        "phrase_ar": "لِلنَّاسِ رَسُولًا",
+        "status": "resembles_fasila_not_counted_by_consensus"
+      },
+      {
+        "phrase_ar": "وَاللَّهُ يَكْتُبُ مَا يُبَيِّتُونَ",
+        "status": "resembles_fasila_not_counted_by_consensus"
+      },
+      {
+        "phrase_ar": "وَاتَّبِعْ مِلَّةَ إِبْرَاهِيمَ حَنِيفًا",
+        "status": "resembles_fasila_not_counted_by_consensus"
+      },
+      {
+        "phrase_ar": "وَلَا الْمَلَائِكَةُ الْمُقَرَّبُونَ",
+        "status": "resembles_fasila_not_counted_by_consensus"
+      }
+    ],
+    "ruus_al_ayat_extraction_status": "complete_with_display_number_gap_and_page_break_repair",
+    "ruus_al_ayat_count": 175,
+    "ruus_al_ayat_numbering_note_en": "The ordered list is represented here as positions 1–175 on the later Madani baseline. The printed witness carries wider display numerals: it jumps from 43 to 45 because the disputed Kufi/Shami head “أن تضلوا السبيل” is omitted on the later Madani baseline, breaks 131 across the 147/148 page boundary, and ends with a terminal blank 176 line that functions as a display total rather than an additional head.",
+    "ruus_al_ayat": [
+      {
+        "ordinal_madani_2_baseline": 1,
+        "head_ar": "رقيبا",
+        "source_printed_page": 147,
+        "source_line_raw": "رقيبا",
+        "extraction_note_en": "Unnumbered first item in the local text witness; preserved as ordinal 1 on the later Madani baseline."
+      },
+      {
+        "ordinal_madani_2_baseline": 2,
+        "head_ar": "كَبِيرا",
+        "source_printed_page": 147,
+        "source_line_raw": "١ - كَبِيرا"
+      },
+      {
+        "ordinal_madani_2_baseline": 3,
+        "head_ar": "تعولُوا",
+        "source_printed_page": 147,
+        "source_line_raw": "٢ - تعولُوا"
+      },
+      {
+        "ordinal_madani_2_baseline": 4,
+        "head_ar": "مريئا",
+        "source_printed_page": 147,
+        "source_line_raw": "٣ - مريئا"
+      },
+      {
+        "ordinal_madani_2_baseline": 5,
+        "head_ar": "مَعْرُوفا",
+        "source_printed_page": 147,
+        "source_line_raw": "٤ - مَعْرُوفا"
+      },
+      {
+        "ordinal_madani_2_baseline": 6,
+        "head_ar": "حسيبا",
+        "source_printed_page": 147,
+        "source_line_raw": "٥ - حسيبا"
+      },
+      {
+        "ordinal_madani_2_baseline": 7,
+        "head_ar": "مَفْرُوضًا",
+        "source_printed_page": 147,
+        "source_line_raw": "٦ - مَفْرُوضًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 8,
+        "head_ar": "مَعْرُوفا",
+        "source_printed_page": 147,
+        "source_line_raw": "٧ - مَعْرُوفا"
+      },
+      {
+        "ordinal_madani_2_baseline": 9,
+        "head_ar": "سديدا",
+        "source_printed_page": 147,
+        "source_line_raw": "٨ - سديدا"
+      },
+      {
+        "ordinal_madani_2_baseline": 10,
+        "head_ar": "سعيرا",
+        "source_printed_page": 147,
+        "source_line_raw": "٩ - سعيرا"
+      },
+      {
+        "ordinal_madani_2_baseline": 11,
+        "head_ar": "حكيما",
+        "source_printed_page": 147,
+        "source_line_raw": "١٠ - حكيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 12,
+        "head_ar": "حَلِيم",
+        "source_printed_page": 147,
+        "source_line_raw": "١١ - حَلِيم"
+      },
+      {
+        "ordinal_madani_2_baseline": 13,
+        "head_ar": "الْعَظِيم",
+        "source_printed_page": 147,
+        "source_line_raw": "١٢ - الْعَظِيم"
+      },
+      {
+        "ordinal_madani_2_baseline": 14,
+        "head_ar": "مهين",
+        "source_printed_page": 147,
+        "source_line_raw": "١٣ - مهين"
+      },
+      {
+        "ordinal_madani_2_baseline": 15,
+        "head_ar": "سَبِيلا",
+        "source_printed_page": 147,
+        "source_line_raw": "١٤ - سَبِيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 16,
+        "head_ar": "رحِيما",
+        "source_printed_page": 147,
+        "source_line_raw": "١٥ - رحِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 17,
+        "head_ar": "حكيما",
+        "source_printed_page": 147,
+        "source_line_raw": "١٦ - حكيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 18,
+        "head_ar": "أَلِيمًا",
+        "source_printed_page": 147,
+        "source_line_raw": "١٧ - أَلِيمًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 19,
+        "head_ar": "كثيرا",
+        "source_printed_page": 147,
+        "source_line_raw": "١٨ - كثيرا"
+      },
+      {
+        "ordinal_madani_2_baseline": 20,
+        "head_ar": "مُبينًا",
+        "source_printed_page": 147,
+        "source_line_raw": "١٩ - مُبينًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 21,
+        "head_ar": "غليظا",
+        "source_printed_page": 147,
+        "source_line_raw": "٢٠ - غليظا"
+      },
+      {
+        "ordinal_madani_2_baseline": 22,
+        "head_ar": "سَبِيلا",
+        "source_printed_page": 147,
+        "source_line_raw": "٢١ - سَبِيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 23,
+        "head_ar": "رحِيما",
+        "source_printed_page": 147,
+        "source_line_raw": "٢٢ - رحِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 24,
+        "head_ar": "حكيما",
+        "source_printed_page": 147,
+        "source_line_raw": "٢٣ - حكيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 25,
+        "head_ar": "رَحِيم",
+        "source_printed_page": 147,
+        "source_line_raw": "٢٤ - رَحِيم"
+      },
+      {
+        "ordinal_madani_2_baseline": 26,
+        "head_ar": "حَكِيم",
+        "source_printed_page": 147,
+        "source_line_raw": "٢٥ - حَكِيم"
+      },
+      {
+        "ordinal_madani_2_baseline": 27,
+        "head_ar": "عَظِيما",
+        "source_printed_page": 147,
+        "source_line_raw": "٢٦ - عَظِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 28,
+        "head_ar": "ضَعِيفا",
+        "source_printed_page": 147,
+        "source_line_raw": "٢٧ - ضَعِيفا"
+      },
+      {
+        "ordinal_madani_2_baseline": 29,
+        "head_ar": "رحِيما",
+        "source_printed_page": 147,
+        "source_line_raw": "٢٨ - رحِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 30,
+        "head_ar": "يَسِيرا",
+        "source_printed_page": 147,
+        "source_line_raw": "٢٩ - يَسِيرا"
+      },
+      {
+        "ordinal_madani_2_baseline": 31,
+        "head_ar": "كَرِيمًا",
+        "source_printed_page": 147,
+        "source_line_raw": "٣٠ - كَرِيمًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 32,
+        "head_ar": "عليما",
+        "source_printed_page": 147,
+        "source_line_raw": "٣١ - عليما"
+      },
+      {
+        "ordinal_madani_2_baseline": 33,
+        "head_ar": "شَهِيدا",
+        "source_printed_page": 147,
+        "source_line_raw": "٣٢ - شَهِيدا"
+      },
+      {
+        "ordinal_madani_2_baseline": 34,
+        "head_ar": "كَبِيرا",
+        "source_printed_page": 147,
+        "source_line_raw": "٣٣ - كَبِيرا"
+      },
+      {
+        "ordinal_madani_2_baseline": 35,
+        "head_ar": "خَبِيرا",
+        "source_printed_page": 147,
+        "source_line_raw": "٣٤ - خَبِيرا"
+      },
+      {
+        "ordinal_madani_2_baseline": 36,
+        "head_ar": "فخورا",
+        "source_printed_page": 147,
+        "source_line_raw": "٣٥ - فخورا"
+      },
+      {
+        "ordinal_madani_2_baseline": 37,
+        "head_ar": "مهينا",
+        "source_printed_page": 147,
+        "source_line_raw": "٣٦ - مهينا"
+      },
+      {
+        "ordinal_madani_2_baseline": 38,
+        "head_ar": "قرينا",
+        "source_printed_page": 147,
+        "source_line_raw": "٣٧ - قرينا"
+      },
+      {
+        "ordinal_madani_2_baseline": 39,
+        "head_ar": "عليما",
+        "source_printed_page": 147,
+        "source_line_raw": "٣٨ - عليما"
+      },
+      {
+        "ordinal_madani_2_baseline": 40,
+        "head_ar": "عَظِيما",
+        "source_printed_page": 147,
+        "source_line_raw": "٣٩ - عَظِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 41,
+        "head_ar": "شَهِيدا",
+        "source_printed_page": 147,
+        "source_line_raw": "٤٠ - شَهِيدا"
+      },
+      {
+        "ordinal_madani_2_baseline": 42,
+        "head_ar": "حَدِيثا",
+        "source_printed_page": 147,
+        "source_line_raw": "٤١ - حَدِيثا"
+      },
+      {
+        "ordinal_madani_2_baseline": 43,
+        "head_ar": "غَفُورًا",
+        "source_printed_page": 147,
+        "source_line_raw": "٤٢ - غَفُورًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 44,
+        "head_ar": "نَصِيرًا",
+        "source_printed_page": 147,
+        "source_line_raw": "٤٣ - نَصِيرًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 45,
+        "head_ar": "إِلَّا قَلِيلا",
+        "source_printed_page": 147,
+        "source_line_raw": "٤٥ - إِلَّا قَلِيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 46,
+        "head_ar": "مَفْعُولا",
+        "source_printed_page": 147,
+        "source_line_raw": "٤٦ - مَفْعُولا"
+      },
+      {
+        "ordinal_madani_2_baseline": 47,
+        "head_ar": "عَظِيما",
+        "source_printed_page": 147,
+        "source_line_raw": "٤٧ - عَظِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 48,
+        "head_ar": "فتيلا",
+        "source_printed_page": 147,
+        "source_line_raw": "٤٨ - فتيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 49,
+        "head_ar": "مُبينًا",
+        "source_printed_page": 147,
+        "source_line_raw": "٤٩ - مُبينًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 50,
+        "head_ar": "سَبِيلا",
+        "source_printed_page": 147,
+        "source_line_raw": "٥٠ - سَبِيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 51,
+        "head_ar": "نَصِيرًا",
+        "source_printed_page": 147,
+        "source_line_raw": "٥١ - نَصِيرًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 52,
+        "head_ar": "نقيرا",
+        "source_printed_page": 147,
+        "source_line_raw": "٥٢ - نقيرا"
+      },
+      {
+        "ordinal_madani_2_baseline": 53,
+        "head_ar": "عَظِيما",
+        "source_printed_page": 147,
+        "source_line_raw": "٥٣ - عَظِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 54,
+        "head_ar": "سعيرا",
+        "source_printed_page": 147,
+        "source_line_raw": "٥٤ - سعيرا"
+      },
+      {
+        "ordinal_madani_2_baseline": 55,
+        "head_ar": "حكيما",
+        "source_printed_page": 147,
+        "source_line_raw": "٥٥ - حكيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 56,
+        "head_ar": "ظليلا",
+        "source_printed_page": 147,
+        "source_line_raw": "٥٦ - ظليلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 57,
+        "head_ar": "بَصيرًا",
+        "source_printed_page": 147,
+        "source_line_raw": "٥٧ - بَصيرًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 58,
+        "head_ar": "تَأْوِيلا",
+        "source_printed_page": 147,
+        "source_line_raw": "٥٨ - تَأْوِيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 59,
+        "head_ar": "بَعيدا",
+        "source_printed_page": 147,
+        "source_line_raw": "٥٩ - بَعيدا"
+      },
+      {
+        "ordinal_madani_2_baseline": 60,
+        "head_ar": "صدودا",
+        "source_printed_page": 147,
+        "source_line_raw": "٦٠ - صدودا"
+      },
+      {
+        "ordinal_madani_2_baseline": 61,
+        "head_ar": "وتوفيقا",
+        "source_printed_page": 147,
+        "source_line_raw": "٦١ - وتوفيقا"
+      },
+      {
+        "ordinal_madani_2_baseline": 62,
+        "head_ar": "بليغا",
+        "source_printed_page": 147,
+        "source_line_raw": "٦٢ - بليغا"
+      },
+      {
+        "ordinal_madani_2_baseline": 63,
+        "head_ar": "رحِيما",
+        "source_printed_page": 147,
+        "source_line_raw": "٦٣ - رحِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 64,
+        "head_ar": "تَسْلِيمًا",
+        "source_printed_page": 147,
+        "source_line_raw": "٦٤ - تَسْلِيمًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 65,
+        "head_ar": "تثبيتا",
+        "source_printed_page": 147,
+        "source_line_raw": "٦٥ - تثبيتا"
+      },
+      {
+        "ordinal_madani_2_baseline": 66,
+        "head_ar": "عَظِيما",
+        "source_printed_page": 147,
+        "source_line_raw": "٦٦ - عَظِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 67,
+        "head_ar": "مُسْتَقِيمًا",
+        "source_printed_page": 147,
+        "source_line_raw": "٦٧ - مُسْتَقِيمًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 68,
+        "head_ar": "رَفِيقًا",
+        "source_printed_page": 147,
+        "source_line_raw": "٦٨ - رَفِيقًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 69,
+        "head_ar": "عليما",
+        "source_printed_page": 147,
+        "source_line_raw": "٦٩ - عليما"
+      },
+      {
+        "ordinal_madani_2_baseline": 70,
+        "head_ar": "جَمِيعًا",
+        "source_printed_page": 147,
+        "source_line_raw": "٧٠ - جَمِيعًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 71,
+        "head_ar": "شَهِيدا",
+        "source_printed_page": 147,
+        "source_line_raw": "٧١ - شَهِيدا"
+      },
+      {
+        "ordinal_madani_2_baseline": 72,
+        "head_ar": "عَظِيما",
+        "source_printed_page": 147,
+        "source_line_raw": "٧٢ - عَظِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 73,
+        "head_ar": "عَظِيما",
+        "source_printed_page": 147,
+        "source_line_raw": "٧٣ - عَظِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 74,
+        "head_ar": "نَصِيرًا",
+        "source_printed_page": 147,
+        "source_line_raw": "٧٤ - نَصِيرًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 75,
+        "head_ar": "ضَعِيفا",
+        "source_printed_page": 147,
+        "source_line_raw": "٧٥ - ضَعِيفا"
+      },
+      {
+        "ordinal_madani_2_baseline": 76,
+        "head_ar": "فتيلا",
+        "source_printed_page": 147,
+        "source_line_raw": "٧٦ - فتيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 77,
+        "head_ar": "حَدِيثا",
+        "source_printed_page": 147,
+        "source_line_raw": "٧٧ - حَدِيثا"
+      },
+      {
+        "ordinal_madani_2_baseline": 78,
+        "head_ar": "شَهِيدا",
+        "source_printed_page": 147,
+        "source_line_raw": "٧٨ - شَهِيدا"
+      },
+      {
+        "ordinal_madani_2_baseline": 79,
+        "head_ar": "حفيظا",
+        "source_printed_page": 147,
+        "source_line_raw": "٧٩ - حفيظا"
+      },
+      {
+        "ordinal_madani_2_baseline": 80,
+        "head_ar": "وَكيلا",
+        "source_printed_page": 147,
+        "source_line_raw": "٨٠ - وَكيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 81,
+        "head_ar": "كثيرا",
+        "source_printed_page": 147,
+        "source_line_raw": "٨١ - كثيرا"
+      },
+      {
+        "ordinal_madani_2_baseline": 82,
+        "head_ar": "قَلِيلا",
+        "source_printed_page": 147,
+        "source_line_raw": "٨٢ - قَلِيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 83,
+        "head_ar": "تنكيلا",
+        "source_printed_page": 147,
+        "source_line_raw": "٨٣ - تنكيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 84,
+        "head_ar": "مقيتا",
+        "source_printed_page": 147,
+        "source_line_raw": "٨٤ - مقيتا"
+      },
+      {
+        "ordinal_madani_2_baseline": 85,
+        "head_ar": "حسيبا",
+        "source_printed_page": 147,
+        "source_line_raw": "٨٥ - حسيبا"
+      },
+      {
+        "ordinal_madani_2_baseline": 86,
+        "head_ar": "حَدِيثا",
+        "source_printed_page": 147,
+        "source_line_raw": "٨٦ - حَدِيثا"
+      },
+      {
+        "ordinal_madani_2_baseline": 87,
+        "head_ar": "سَبِيلا",
+        "source_printed_page": 147,
+        "source_line_raw": "٨٧ - سَبِيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 88,
+        "head_ar": "نَصِيرًا",
+        "source_printed_page": 147,
+        "source_line_raw": "٨٨ - نَصِيرًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 89,
+        "head_ar": "سَبِيلا",
+        "source_printed_page": 147,
+        "source_line_raw": "٨٩ - سَبِيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 90,
+        "head_ar": "مُبينًا",
+        "source_printed_page": 147,
+        "source_line_raw": "٩٠ - مُبينًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 91,
+        "head_ar": "حكيما",
+        "source_printed_page": 147,
+        "source_line_raw": "٩١ - حكيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 92,
+        "head_ar": "عَظِيما",
+        "source_printed_page": 147,
+        "source_line_raw": "٩٢ - عَظِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 93,
+        "head_ar": "خَبِيرا",
+        "source_printed_page": 147,
+        "source_line_raw": "٩٣ - خَبِيرا"
+      },
+      {
+        "ordinal_madani_2_baseline": 94,
+        "head_ar": "عَظِيما",
+        "source_printed_page": 147,
+        "source_line_raw": "٩٤ - عَظِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 95,
+        "head_ar": "رحِيما",
+        "source_printed_page": 147,
+        "source_line_raw": "٩٥ - رحِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 96,
+        "head_ar": "مصيرا",
+        "source_printed_page": 147,
+        "source_line_raw": "٩٦ - مصيرا"
+      },
+      {
+        "ordinal_madani_2_baseline": 97,
+        "head_ar": "سَبِيلا",
+        "source_printed_page": 147,
+        "source_line_raw": "٩٧ - سَبِيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 98,
+        "head_ar": "غَفُورًا",
+        "source_printed_page": 147,
+        "source_line_raw": "٩٨ - غَفُورًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 99,
+        "head_ar": "رحِيما",
+        "source_printed_page": 147,
+        "source_line_raw": "٩٩ - رحِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 100,
+        "head_ar": "مُبينًا",
+        "source_printed_page": 147,
+        "source_line_raw": "١٠٠ - مُبينًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 101,
+        "head_ar": "مهينا",
+        "source_printed_page": 147,
+        "source_line_raw": "١٠١ - مهينا"
+      },
+      {
+        "ordinal_madani_2_baseline": 102,
+        "head_ar": "موقوتا",
+        "source_printed_page": 147,
+        "source_line_raw": "١٠٢ - موقوتا"
+      },
+      {
+        "ordinal_madani_2_baseline": 103,
+        "head_ar": "حكيما",
+        "source_printed_page": 147,
+        "source_line_raw": "١٠٣ - حكيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 104,
+        "head_ar": "خصيما",
+        "source_printed_page": 147,
+        "source_line_raw": "١٠٤ - خصيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 105,
+        "head_ar": "رحِيما",
+        "source_printed_page": 147,
+        "source_line_raw": "١٠٥ - رحِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 106,
+        "head_ar": "أَثِيمًا",
+        "source_printed_page": 147,
+        "source_line_raw": "١٠٦ - أَثِيمًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 107,
+        "head_ar": "محيطا",
+        "source_printed_page": 147,
+        "source_line_raw": "١٠٧ - محيطا"
+      },
+      {
+        "ordinal_madani_2_baseline": 108,
+        "head_ar": "وَكيلا",
+        "source_printed_page": 147,
+        "source_line_raw": "١٠٨ - وَكيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 109,
+        "head_ar": "رحِيما",
+        "source_printed_page": 147,
+        "source_line_raw": "١٠٩ - رحِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 110,
+        "head_ar": "حكيما",
+        "source_printed_page": 147,
+        "source_line_raw": "١١٠ - حكيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 111,
+        "head_ar": "مُبينًا",
+        "source_printed_page": 147,
+        "source_line_raw": "١١١ - مُبينًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 112,
+        "head_ar": "عَظِيما",
+        "source_printed_page": 147,
+        "source_line_raw": "١١٢ - عَظِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 113,
+        "head_ar": "عَظِيما",
+        "source_printed_page": 147,
+        "source_line_raw": "١١٣ - عَظِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 114,
+        "head_ar": "مصيرا",
+        "source_printed_page": 147,
+        "source_line_raw": "١١٤ - مصيرا"
+      },
+      {
+        "ordinal_madani_2_baseline": 115,
+        "head_ar": "بَعيدا",
+        "source_printed_page": 147,
+        "source_line_raw": "١١٥ - بَعيدا"
+      },
+      {
+        "ordinal_madani_2_baseline": 116,
+        "head_ar": "مرِيدا",
+        "source_printed_page": 147,
+        "source_line_raw": "١١٦ - مرِيدا"
+      },
+      {
+        "ordinal_madani_2_baseline": 117,
+        "head_ar": "مَفْرُوضًا",
+        "source_printed_page": 147,
+        "source_line_raw": "١١٧ - مَفْرُوضًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 118,
+        "head_ar": "مُبينًا",
+        "source_printed_page": 147,
+        "source_line_raw": "١١٨ - مُبينًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 119,
+        "head_ar": "غرُورًا",
+        "source_printed_page": 147,
+        "source_line_raw": "١١٩ - غرُورًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 120,
+        "head_ar": "محيطا",
+        "source_printed_page": 147,
+        "source_line_raw": "١٢٠ - محيطا"
+      },
+      {
+        "ordinal_madani_2_baseline": 121,
+        "head_ar": "قيلا",
+        "source_printed_page": 147,
+        "source_line_raw": "١٢١ - قيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 122,
+        "head_ar": "نَصِيرًا",
+        "source_printed_page": 147,
+        "source_line_raw": "١٢٢ - نَصِيرًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 123,
+        "head_ar": "نقيرا",
+        "source_printed_page": 147,
+        "source_line_raw": "١٢٣ - نقيرا"
+      },
+      {
+        "ordinal_madani_2_baseline": 124,
+        "head_ar": "خَلِيلًا",
+        "source_printed_page": 147,
+        "source_line_raw": "١٢٤ - خَلِيلًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 125,
+        "head_ar": "محيطا",
+        "source_printed_page": 147,
+        "source_line_raw": "١٢٥ - محيطا"
+      },
+      {
+        "ordinal_madani_2_baseline": 126,
+        "head_ar": "عليما",
+        "source_printed_page": 147,
+        "source_line_raw": "١٢٦ - عليما"
+      },
+      {
+        "ordinal_madani_2_baseline": 127,
+        "head_ar": "خَبِيرا",
+        "source_printed_page": 147,
+        "source_line_raw": "١٢٧ - خَبِيرا"
+      },
+      {
+        "ordinal_madani_2_baseline": 128,
+        "head_ar": "رحِيما",
+        "source_printed_page": 147,
+        "source_line_raw": "١٢٨ - رحِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 129,
+        "head_ar": "حكيما",
+        "source_printed_page": 147,
+        "source_line_raw": "١٢٩ - حكيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 130,
+        "head_ar": "حميدا",
+        "source_printed_page": 147,
+        "source_line_raw": "١٣٠ - حميدا"
+      },
+      {
+        "ordinal_madani_2_baseline": 131,
+        "head_ar": "وكيلا",
+        "source_printed_page": 147,
+        "source_page_span": [
+          147,
+          148
+        ],
+        "source_line_raw": "١٣ - ١وَكيلا",
+        "extraction_note_en": "Repaired from a page-break split: the numeral fragment appears at the end of printed page 147 and the head word opens printed page 148."
+      },
+      {
+        "ordinal_madani_2_baseline": 132,
+        "head_ar": "قَدِيرًا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٣٢ - قَدِيرًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 133,
+        "head_ar": "بَصيرًا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٣٣ - بَصيرًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 134,
+        "head_ar": "خَبِيرا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٣٤ - خَبِيرا"
+      },
+      {
+        "ordinal_madani_2_baseline": 135,
+        "head_ar": "بَعيدا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٣٥ - بَعيدا"
+      },
+      {
+        "ordinal_madani_2_baseline": 136,
+        "head_ar": "سَبِيلا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٣٦ - سَبِيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 137,
+        "head_ar": "أَلِيمًا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٣٧ - أَلِيمًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 138,
+        "head_ar": "جَمِيعًا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٣٨ - جَمِيعًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 139,
+        "head_ar": "جَمِيعًا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٣٩ - جَمِيعًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 140,
+        "head_ar": "سَبِيلا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٤٠ - سَبِيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 141,
+        "head_ar": "إِلَّا قَلِيلا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٤١ - إِلَّا قَلِيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 142,
+        "head_ar": "سَبِيلا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٤٢ - سَبِيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 143,
+        "head_ar": "مُبينًا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٤٣ - مُبينًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 144,
+        "head_ar": "نَصِيرًا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٤٤ - نَصِيرًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 145,
+        "head_ar": "عَظِيما",
+        "source_printed_page": 148,
+        "source_line_raw": "١٤٥ - عَظِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 146,
+        "head_ar": "عليما",
+        "source_printed_page": 148,
+        "source_line_raw": "١٤٦ - عليما"
+      },
+      {
+        "ordinal_madani_2_baseline": 147,
+        "head_ar": "عليما",
+        "source_printed_page": 148,
+        "source_line_raw": "١٤٧ - عليما"
+      },
+      {
+        "ordinal_madani_2_baseline": 148,
+        "head_ar": "قَدِيرًا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٤٨ - قَدِيرًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 149,
+        "head_ar": "سَبِيلا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٤٩ - سَبِيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 150,
+        "head_ar": "مهينا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٥٠ - مهينا"
+      },
+      {
+        "ordinal_madani_2_baseline": 151,
+        "head_ar": "رحِيما",
+        "source_printed_page": 148,
+        "source_line_raw": "١٥١ - رحِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 152,
+        "head_ar": "مُبينًا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٥٢ - مُبينًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 153,
+        "head_ar": "غليظا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٥٣ - غليظا"
+      },
+      {
+        "ordinal_madani_2_baseline": 154,
+        "head_ar": "قَلِيلا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٥٤ - قَلِيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 155,
+        "head_ar": "عَظِيما",
+        "source_printed_page": 148,
+        "source_line_raw": "١٥٥ - عَظِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 156,
+        "head_ar": "يَقِينا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٥٦ - يَقِينا"
+      },
+      {
+        "ordinal_madani_2_baseline": 157,
+        "head_ar": "حكيما",
+        "source_printed_page": 148,
+        "source_line_raw": "١٥٧ - حكيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 158,
+        "head_ar": "شَهِيدا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٥٨ - شَهِيدا"
+      },
+      {
+        "ordinal_madani_2_baseline": 159,
+        "head_ar": "كثيرا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٥٩ - كثيرا"
+      },
+      {
+        "ordinal_madani_2_baseline": 160,
+        "head_ar": "أَلِيمًا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٦٠ - أَلِيمًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 161,
+        "head_ar": "عَظِيما",
+        "source_printed_page": 148,
+        "source_line_raw": "١٦١ - عَظِيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 162,
+        "head_ar": "زبورا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٦٢ - زبورا"
+      },
+      {
+        "ordinal_madani_2_baseline": 163,
+        "head_ar": "تكليما",
+        "source_printed_page": 148,
+        "source_line_raw": "١٦٣ - تكليما"
+      },
+      {
+        "ordinal_madani_2_baseline": 164,
+        "head_ar": "حكيما",
+        "source_printed_page": 148,
+        "source_line_raw": "١٦٤ - حكيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 165,
+        "head_ar": "شَهِيدا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٦٥ - شَهِيدا"
+      },
+      {
+        "ordinal_madani_2_baseline": 166,
+        "head_ar": "بَعيدا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٦٦ - بَعيدا"
+      },
+      {
+        "ordinal_madani_2_baseline": 167,
+        "head_ar": "طَرِيقا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٦٧ - طَرِيقا"
+      },
+      {
+        "ordinal_madani_2_baseline": 168,
+        "head_ar": "يَسِيرا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٦٨ - يَسِيرا"
+      },
+      {
+        "ordinal_madani_2_baseline": 169,
+        "head_ar": "حكيما",
+        "source_printed_page": 148,
+        "source_line_raw": "١٦٩ - حكيما"
+      },
+      {
+        "ordinal_madani_2_baseline": 170,
+        "head_ar": "وَكيلا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٧٠ - وَكيلا"
+      },
+      {
+        "ordinal_madani_2_baseline": 171,
+        "head_ar": "جَمِيعًا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٧١ - جَمِيعًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 172,
+        "head_ar": "نَصِيرًا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٧٢ - نَصِيرًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 173,
+        "head_ar": "مُبينًا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٧٣ - مُبينًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 174,
+        "head_ar": "مُسْتَقِيمًا",
+        "source_printed_page": 148,
+        "source_line_raw": "١٧٤ - مُسْتَقِيمًا"
+      },
+      {
+        "ordinal_madani_2_baseline": 175,
+        "head_ar": "عليم",
+        "source_printed_page": 148,
+        "source_line_raw": "١٧٥ - عليم"
+      }
+    ],
+    "extraction_anomalies": [
+      {
+        "issue_id": "surah_004_entry_pseudo_fawasil_serialized",
+        "severity": "medium",
+        "section_id": "surah.004.entry",
+        "description_en": "The six pseudo-fawasil in سورة النساء are serialized as paired phrasing inside one running sentence rather than as six separately delimited items.",
+        "local_evidence_pages": [
+          146
+        ],
+        "impact_en": "The six-item extraction is reliable, but it requires editorial splitting of the serialized phrasing instead of blind tokenization."
+      },
+      {
+        "issue_id": "surah_004_ruus_display_gap_after_43",
+        "severity": "medium",
+        "section_id": "surah.004.ruus",
+        "description_en": "The printed witness jumps from displayed 43 (نصيرا) to displayed 45 (إلا قليلا). This gap corresponds to the disputed head “أن تضلوا السبيل”, which the Kufi and Shami count but the later Madani baseline omits.",
+        "local_evidence_pages": [
+          147
+        ],
+        "impact_en": "The normalized dataset should preserve the ordered later-Madani sequence 1–175 by actual head order rather than by the witness's display numerals."
+      },
+      {
+        "issue_id": "surah_004_ruus_page_break_131",
+        "severity": "medium",
+        "section_id": "surah.004.ruus",
+        "description_en": "Displayed 131 breaks across the page boundary as “١٣ - ١” at the end of printed page 147, with the head “وكيلا” continuing at the top of printed page 148.",
+        "local_evidence_pages": [
+          147,
+          148
+        ],
+        "impact_en": "The head is recoverable with high confidence, but the repair must remain explicit in the data."
+      },
+      {
+        "issue_id": "surah_004_ruus_terminal_blank_176",
+        "severity": "low",
+        "section_id": "surah.004.ruus",
+        "description_en": "After the final head “عليم”, the printed witness carries a standalone blank “١٧٦” line.",
+        "local_evidence_pages": [
+          148
+        ],
+        "impact_en": "This terminal display numeral should not be treated as an additional head; the ordered later-Madani sequence still contains 175 heads."
+      },
+      {
+        "issue_id": "surah_004_ruus_source_numbering_semantics",
+        "severity": "low",
+        "section_id": "surah.004.ruus",
+        "description_en": "The printed witness mixes an unnumbered first head, carried display numerals, a gap for a non-baseline disputed head, and a terminal blank total line.",
+        "local_evidence_pages": [
+          147,
+          148
+        ],
+        "impact_en": "The dataset preserves the ordered later-Madani head sequence rather than a second diplomatic numbering layer."
+      }
+    ]
+  }
+}
