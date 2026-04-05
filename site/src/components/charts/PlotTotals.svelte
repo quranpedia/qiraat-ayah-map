@@ -1,7 +1,16 @@
 <script>
+import { compact_number, get_system_name } from '$lib/dataset.svelte.js'
+
 import PlotFrame from './PlotFrame.svelte'
 
 let { systems } = $props()
+
+let chart_rows = $derived.by(() =>
+  systems.map(system => ({
+    ...system,
+    display_name: get_system_name(system)
+  }))
+)
 
 function build_plot({ Plot, width }) {
   return Plot.plot({
@@ -21,21 +30,21 @@ function build_plot({ Plot, width }) {
     },
     y: {
       grid: true,
-      label: 'Total ayahs'
+      label: 'مجموع الآيات'
     },
     marks: [
       Plot.ruleY([0], { stroke: 'var(--line)' }),
-      Plot.barY(systems, {
-        x: 'name_en',
+      Plot.barY(chart_rows, {
+        x: 'display_name',
         y: 'total_ayahs',
         fill: 'var(--accent-strong)',
-        title: d => `${d.name_en}: ${d.total_ayahs.toLocaleString()} ayahs`
+        title: d => `${d.display_name}: ${`${compact_number(d.total_ayahs)} آية`}`
       }),
-      Plot.text(systems, {
-        x: 'name_en',
+      Plot.text(chart_rows, {
+        x: 'display_name',
         y: 'total_ayahs',
         dy: -8,
-        text: d => d.total_ayahs.toLocaleString(),
+        text: d => compact_number(d.total_ayahs),
         fontSize: 11,
         fill: 'var(--ink)'
       })
@@ -44,4 +53,4 @@ function build_plot({ Plot, width }) {
 }
 </script>
 
-<PlotFrame {build_plot} watch={systems} aria_label="Total ayah count by counting system" />
+<PlotFrame {build_plot} watch={chart_rows} aria_label="مجموع الآيات حسب نظام العد" />

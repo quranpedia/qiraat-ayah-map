@@ -5,15 +5,21 @@ import BoundaryDetail from '~/components/BoundaryDetail.svelte'
 import SurahMushafViewer from '~/components/SurahMushafViewer.svelte'
 import PlotSurahBoundaryMap from '~/components/charts/PlotSurahBoundaryMap.svelte'
 import {
+  compact_number,
+  format_boundary_kind,
+  format_signed_delta,
+  format_surah_reference,
   format_verification_status,
   get_surah,
+  get_surah_name,
   get_surah_rows,
+  get_surah_secondary_name,
   get_system_name,
+  get_system_secondary_name,
   get_verification_tone,
   surahs as surah_catalog,
   systems
 } from '$lib/dataset.svelte.js'
-import { app_href } from '$lib/nav.js'
 import { decodeBoundaryHash, getBoundaryTableRowId } from '$lib/mushaf-viewer-dom.js'
 import { loadSurahViewer } from '$lib/mushaf-viewer.js'
 
@@ -91,67 +97,73 @@ $effect(() => {
 </script>
 
 {#snippet surahPager(showMeta)}
-  <section aria-label="Surah navigation">
+  <section aria-label="التنقل بين السور">
     <div class="surah_pager_grid">
       {#if previous_surah}
-        <a class="surah_pager_card" href={app_href('/surahs/' + previous_surah.surah)}>
-          <div class="metric_label flex items-center gap-2"><ArrowLeftIcon class="size-4" /> Previous surah</div>
+        <a class="surah_pager_card" href={'/surahs/' + previous_surah.surah}>
+          <div class="metric_label flex items-center gap-2"><ArrowLeftIcon class="size-4" /> السورة السابقة</div>
           <div class="mt-3 flex items-center gap-2 text-sm font-bold text-ink">
             <ArrowLeftIcon class="size-4" />
-            <span>Surah {previous_surah.surah}</span>
+            <span>{format_surah_reference(previous_surah.surah)}</span>
           </div>
-          <div class="mt-4 text-xl font-bold text-ink">{previous_surah.name_en}</div>
-          <p class="arabic_title mt-2 text-lg text-ink-soft">{previous_surah.name_ar}</p>
+          <div class="mt-4 text-xl font-bold text-ink">{get_surah_name(previous_surah)}</div>
+          {#if get_surah_secondary_name(previous_surah)}
+            <p class="mt-2 text-lg text-ink-soft">{get_surah_secondary_name(previous_surah)}</p>
+          {/if}
           <div class="mt-4 flex flex-wrap gap-2">
             <span class="badge" data-tone={previous_surah.disputed_points === 0 ? 'ok' : 'accent'}>
-              {previous_surah.disputed_points} disputed points
+              {`${compact_number(previous_surah.disputed_points)} موضعًا مختلفًا`}
             </span>
           </div>
         </a>
       {:else}
         <div class="surah_pager_card" data-disabled="true">
-          <div class="metric_label flex items-center gap-2"><ArrowLeftIcon class="size-4" /> Previous surah</div>
-          <div class="mt-4 text-xl font-bold text-ink">Beginning of the mushaf</div>
-          <p class="section_text mt-3 text-sm">This is the first surah in the sequence.</p>
+          <div class="metric_label flex items-center gap-2"><ArrowLeftIcon class="size-4" /> السورة السابقة</div>
+          <div class="mt-4 text-xl font-bold text-ink">بداية المصحف</div>
+          <p class="section_text mt-3 text-sm">هذه أول سورة في التسلسل.</p>
         </div>
       {/if}
 
       <div class="surah_pager_card surah_pager_status">
         {#if showMeta}
-          <div class="metric_label">Surah navigation</div>
-          <div class="mt-4 text-2xl font-bold text-ink">Surah {surah_info.surah} of {surah_catalog.length}</div>
-          <div class="mt-3 text-lg font-bold text-ink">{surah_info.name_en}</div>
-          <p class="arabic_title mt-2 text-xl text-ink-soft">{surah_info.name_ar}</p>
-          <p class="mt-3 text-sm text-ink-soft">{surah_info.disputed_points} disputed points in this surah</p>
+          <div class="metric_label">التنقل بين السور</div>
+          <div class="mt-4 text-2xl font-bold text-ink">{`${format_surah_reference(surah_info.surah)} من ${compact_number(surah_catalog.length)}`}</div>
+          <div class="mt-3 text-lg font-bold text-ink">{get_surah_name(surah_info)}</div>
+          {#if get_surah_secondary_name(surah_info)}
+            <p class="mt-2 text-xl text-ink-soft">{get_surah_secondary_name(surah_info)}</p>
+          {/if}
+          <p class="mt-3 text-sm text-ink-soft">{`${compact_number(surah_info.disputed_points)} موضعًا مختلفًا في هذه السورة`}</p>
         {:else}
-          <div class="metric_label">Continue browsing</div>
-          <div class="mt-4 text-lg font-bold text-ink">Move to the next or previous surah, or return to the full index.</div>
+          <div class="metric_label">واصل التصفح</div>
+          <div class="mt-4 text-lg font-bold text-ink">انتقل إلى السورة التالية أو السابقة، أو ارجع إلى الفهرس الكامل.</div>
         {/if}
         <div class="mt-5">
-          <a class="pill_button" href={app_href('/surahs')}><LibraryBigIcon class="size-4" /> All surahs</a>
+          <a class="pill_button" href="/surahs"><LibraryBigIcon class="size-4" /> جميع السور</a>
         </div>
       </div>
 
       {#if next_surah}
-        <a class="surah_pager_card" href={app_href('/surahs/' + next_surah.surah)}>
-          <div class="metric_label flex items-center justify-end gap-2">Next surah <ArrowRightIcon class="size-4" /></div>
+        <a class="surah_pager_card" href={'/surahs/' + next_surah.surah}>
+          <div class="metric_label flex items-center justify-end gap-2">السورة التالية <ArrowRightIcon class="size-4" /></div>
           <div class="mt-3 flex items-center justify-end gap-2 text-sm font-bold text-ink">
-            <span>Surah {next_surah.surah}</span>
+            <span>{format_surah_reference(next_surah.surah)}</span>
             <ArrowRightIcon class="size-4" />
           </div>
-          <div class="mt-4 text-xl font-bold text-ink">{next_surah.name_en}</div>
-          <p class="arabic_title mt-2 text-lg text-ink-soft">{next_surah.name_ar}</p>
+          <div class="mt-4 text-xl font-bold text-ink">{get_surah_name(next_surah)}</div>
+          {#if get_surah_secondary_name(next_surah)}
+            <p class="mt-2 text-lg text-ink-soft">{get_surah_secondary_name(next_surah)}</p>
+          {/if}
           <div class="mt-4 flex flex-wrap justify-end gap-2">
             <span class="badge" data-tone={next_surah.disputed_points === 0 ? 'ok' : 'accent'}>
-              {next_surah.disputed_points} disputed points
+              {`${compact_number(next_surah.disputed_points)} موضعًا مختلفًا`}
             </span>
           </div>
         </a>
       {:else}
         <div class="surah_pager_card" data-disabled="true">
-          <div class="metric_label flex items-center justify-end gap-2">Next surah <ArrowRightIcon class="size-4" /></div>
-          <div class="mt-4 text-xl font-bold text-ink">End of the mushaf</div>
-          <p class="section_text mt-3 text-sm">This is the final surah in the sequence.</p>
+          <div class="metric_label flex items-center justify-end gap-2">السورة التالية <ArrowRightIcon class="size-4" /></div>
+          <div class="mt-4 text-xl font-bold text-ink">نهاية المصحف</div>
+          <p class="section_text mt-3 text-sm">هذه آخر سورة في التسلسل.</p>
         </div>
       {/if}
     </div>
@@ -160,8 +172,8 @@ $effect(() => {
 
 {#if !surah_info}
   <section class="surface p-6">
-    <div class="rule_label">Surah not found</div>
-    <h1 class="section_title mt-4">No surah matches “{surah}”.</h1>
+    <div class="rule_label">السورة غير موجودة</div>
+    <h1 class="section_title mt-4">{`لا توجد سورة تطابق “${surah}”.`}</h1>
   </section>
 {:else}
   <div class="mb-6">
@@ -170,26 +182,30 @@ $effect(() => {
 
   <section class="grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(16rem,0.9fr)] lg:items-start">
     <div>
-      <div class="rule_label">Surah profile</div>
-      <h1 class="display_title mt-5 text-ink">Surah {surah_info.surah}</h1>
-      <h2 class="mt-4 text-3xl font-bold text-ink">{surah_info.name_en}</h2>
-      <p class="arabic_title mt-3 text-3xl text-ink-soft">{surah_info.name_ar}</p>
+      <div class="rule_label">ملف السورة</div>
+      <h1 class="display_title mt-5 text-ink">{format_surah_reference(surah_info.surah)}</h1>
+      <h2 class="mt-4 text-3xl font-bold text-ink">{get_surah_name(surah_info)}</h2>
+      {#if get_surah_secondary_name(surah_info)}
+        <p class="mt-3 text-3xl text-ink-soft">{get_surah_secondary_name(surah_info)}</p>
+      {/if}
       <p class="section_text mt-5">
-        {surah_info.disputed_points} disputed points appear in this surah: {surah_info.by_kind.end} end boundaries and {surah_info.by_kind.internal} internal breakpoints.
+        {`${compact_number(surah_info.disputed_points)} موضعًا مختلفًا في هذه السورة: ${compact_number(surah_info.by_kind.end)} من النهايات و${compact_number(surah_info.by_kind.internal)} من الفواصل الداخلية.`}
       </p>
     </div>
 
     <div class="surface surface_muted p-5">
-      <div class="metric_label">Per-system ayah counts</div>
+      <div class="metric_label">عدد الآيات حسب النظام</div>
       <div class="mt-4 space-y-3 text-sm">
         {#each systems as system (system.id)}
           <div class="flex items-center justify-between gap-3 border-b border-line/60 pb-3 last:border-b-0 last:pb-0">
             <div>
-              <div class="font-bold text-ink">{system.name_en}</div>
-              <div class="arabic_title text-base text-ink-soft">{system.name_ar}</div>
+              <div class="font-bold text-ink">{get_system_name(system)}</div>
+              {#if get_system_secondary_name(system)}
+                <div class="text-base text-ink-soft">{get_system_secondary_name(system)}</div>
+              {/if}
             </div>
             <span class="badge" data-tone={surah_info.deltas_from_kufi[system.id] === 0 ? 'ok' : 'warn'}>
-              {surah_info.counts[system.id]} · {surah_info.deltas_from_kufi[system.id] > 0 ? '+' : ''}{surah_info.deltas_from_kufi[system.id]}
+              {compact_number(surah_info.counts[system.id])} · {format_signed_delta(surah_info.deltas_from_kufi[system.id])}
             </span>
           </div>
         {/each}
@@ -199,16 +215,16 @@ $effect(() => {
 
   {#if surah_rows.length === 0}
     <section class="mt-12 surface p-6 sm:p-8">
-      <div class="rule_label">No disputed points</div>
-      <h2 class="section_title mt-4">This surah has no recorded disputed boundary points.</h2>
-      <p class="section_text mt-3">The canonical primitive layer does not place any scholar-reviewable boundary differences inside this surah.</p>
+      <div class="rule_label">لا مواضع خلاف</div>
+      <h2 class="section_title mt-4">لا توجد في هذه السورة مواضع حدودية مختلف فيها مسجلة.</h2>
+      <p class="section_text mt-3">طبقة الأصول المعيارية لا تسجل داخل هذه السورة أي فرق حدودي صالحًا للمراجعة.</p>
     </section>
   {:else}
     <section class="mt-12 surface p-5 sm:p-6">
-      <div class="rule_label">Boundary matrix</div>
-      <h2 class="section_title mt-4">Which systems split, merge, or match Kufi at each point</h2>
+      <div class="rule_label">مصفوفة المواضع</div>
+      <h2 class="section_title mt-4">أين يفصل كل نظام أو يدمج أو يوافق الكوفي عند كل موضع</h2>
       <p class="section_text mt-3 text-sm">
-        Observable Plot is used here as a matrix. If more than one disputed point falls inside the same Hafs ayah, the chart uses slot labels such as 40a and 40b instead of stacking them on top of each other.
+        تُعرض المواضع هنا على هيئة مصفوفة. وإذا وقع أكثر من موضع مختلف فيه داخل الآية نفسها استُعملت لواحق مثل 40a و40b بدل تكديس العلامات فوق بعضها.
       </p>
       <div class="mt-6">
         <PlotSurahBoundaryMap rows={surah_rows} {systems} />
@@ -220,11 +236,11 @@ $effect(() => {
         <table class="data_table">
           <thead>
             <tr>
-              <th>Ayah</th>
-              <th>Anchor</th>
-              <th>Kind</th>
-              <th>Verification</th>
-              <th>Counted by</th>
+              <th>الآية</th>
+              <th>الارتكاز</th>
+              <th>النوع</th>
+              <th>التوثيق</th>
+              <th>يعده</th>
             </tr>
           </thead>
           <tbody>
@@ -242,7 +258,7 @@ $effect(() => {
                   <div class="arabic_title text-xl text-ink">{row.word}</div>
                   <div class="mt-2 text-xs text-ink-soft">{row.anchor_key}</div>
                 </td>
-                <td><span class="badge" data-tone={row.kind === 'internal' ? 'accent' : 'ok'}>{row.kind}</span></td>
+                <td><span class="badge" data-tone={row.kind === 'internal' ? 'accent' : 'ok'}>{format_boundary_kind(row.kind)}</span></td>
                 <td><span class="badge" data-tone={get_verification_tone(row.verification_status)}>{format_verification_status(row.verification_status)}</span></td>
                 <td>
                   <div class="flex flex-wrap gap-2">
@@ -275,10 +291,10 @@ $effect(() => {
           onselect={anchorKey => setSelectedKey(anchorKey, 'viewer')}
         />
       {:else}
-        <div class="surface p-5 text-sm text-ink-soft">The mushaf viewer data for this surah is not available yet.</div>
+        <div class="surface p-5 text-sm text-ink-soft">بيانات عارض المصحف لهذه السورة غير متاحة بعد.</div>
       {/if}
     {:catch}
-      <div class="surface p-5 text-sm text-ink-soft">The mushaf viewer data could not be loaded for this surah.</div>
+      <div class="surface p-5 text-sm text-ink-soft">تعذر تحميل بيانات عارض المصحف لهذه السورة.</div>
     {/await}
   </section>
 

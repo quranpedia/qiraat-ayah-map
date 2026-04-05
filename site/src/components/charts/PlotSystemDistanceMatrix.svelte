@@ -1,9 +1,19 @@
 <script>
+import { compact_number, get_system_name } from '$lib/dataset.svelte.js'
+
 import PlotFrame from './PlotFrame.svelte'
 
 let { cells, systems } = $props()
 
-const system_names = $derived(systems.map(system => system.name_en))
+const localized_cells = $derived.by(() =>
+  cells.map(cell => ({
+    ...cell,
+    left_name: get_system_name(cell.left_system_id),
+    right_name: get_system_name(cell.right_system_id)
+  }))
+)
+
+const system_names = $derived(systems.map(system => get_system_name(system)))
 
 function text_fill_for(difference_ratio) {
   return difference_ratio > 0.52 ? 'white' : 'var(--ink)'
@@ -35,17 +45,17 @@ function build_plot({ Plot, width }) {
       domain: system_names
     },
     marks: [
-      Plot.cell(cells, {
+      Plot.cell(localized_cells, {
         x: 'left_name',
         y: 'right_name',
         fill: 'differing_points',
         inset: 1,
-        title: d => `${d.left_name} ↔ ${d.right_name} · ${d.differing_points} differing points`
+        title: d => `${d.left_name} ↔ ${d.right_name} · ${`${compact_number(d.differing_points)} موضعًا مختلفًا`}`
       }),
-      Plot.text(cells, {
+      Plot.text(localized_cells, {
         x: 'left_name',
         y: 'right_name',
-        text: d => String(d.differing_points),
+        text: d => compact_number(d.differing_points),
         fill: d => text_fill_for(d.difference_ratio),
         fontSize: 12,
         fontWeight: 700
@@ -55,4 +65,4 @@ function build_plot({ Plot, width }) {
 }
 </script>
 
-<PlotFrame {build_plot} watch={cells} aria_label="Pairwise disagreement matrix between counting systems" />
+<PlotFrame {build_plot} watch={localized_cells} aria_label="مصفوفة التباين بين أنظمة العد" />

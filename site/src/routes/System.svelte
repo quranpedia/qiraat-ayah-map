@@ -8,16 +8,22 @@ import {
   attestations,
   compact_number,
   format_attestation_status,
+  format_primary_total,
+  format_signed_delta,
+  format_surah_reference,
   get_surah,
   get_surah_drift,
+  get_surah_name,
+  get_surah_secondary_name,
   get_system,
   get_system_name,
   get_system_profile,
   get_system_relationship,
+  get_system_secondary_name,
   get_verification_profile,
   titleize_slug
 } from '$lib/dataset.svelte.js'
-import { app_href } from '$lib/nav.js'
+import { get_current_language } from '$lib/i18n.js'
 
 let { system } = $props()
 
@@ -42,20 +48,29 @@ let top_surahs = $derived.by(() =>
 let active_surah_number = $derived(selected_surah ?? top_surahs[0]?.surah ?? 1)
 let active_surah = $derived(get_surah(active_surah_number))
 let drift_points = $derived(get_surah_drift(system, active_surah_number))
+let attestation_policy = $derived(
+  attestation
+    ? get_current_language() === 'en'
+      ? attestation.policy_en || attestation.policy_ar || ''
+      : attestation.policy_ar || attestation.policy_en || ''
+    : ''
+)
 </script>
 
 {#if !system_info}
   <section class="surface p-6">
-    <div class="rule_label">System not found</div>
-    <h1 class="section_title mt-4">No counting system matches “{system}”.</h1>
+    <div class="rule_label">النظام غير موجود</div>
+    <h1 class="section_title mt-4">{`لا يوجد نظام عد يطابق “${system}”.`}</h1>
   </section>
 {:else}
   <section class="grid gap-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(16rem,0.85fr)] lg:items-start">
     <div>
-      <div class="rule_label">System profile</div>
-      <h1 class="display_title mt-5 text-ink">{system_info.name_en}</h1>
-      <p class="arabic_title mt-4 text-2xl text-ink-soft">{system_info.name_ar}</p>
-      <p class="section_text mt-5">The current registry maps these qirāʾāt to this counting tradition.</p>
+      <div class="rule_label">ملف النظام</div>
+      <h1 class="display_title mt-5 text-ink">{get_system_name(system_info)}</h1>
+      {#if get_system_secondary_name(system_info)}
+        <p class="mt-4 text-2xl text-ink-soft">{get_system_secondary_name(system_info)}</p>
+      {/if}
+      <p class="section_text mt-5">يربط السجل الحالي هذه القراءات بهذا التقليد العددي.</p>
       <div class="mt-4 flex flex-wrap gap-2">
         {#each system_info.used_by_qiraat as qiraa (qiraa)}
           <span class="badge" data-tone="accent">{titleize_slug(qiraa)}</span>
@@ -64,39 +79,39 @@ let drift_points = $derived(get_surah_drift(system, active_surah_number))
     </div>
 
     <div class="surface surface_muted p-5">
-      <div class="metric_label">Total-count policy</div>
+      <div class="metric_label">سياسة المجموع الكلي</div>
       {#if attestation}
         <div class="mt-3 flex flex-wrap items-center gap-2">
           <span class="badge" data-tone={attestation.delta_from_primary === 0 ? 'ok' : 'warn'}>{format_attestation_status(attestation.status)}</span>
           {#if attestation.primary_classical_total_ayahs}
-            <span class="badge" data-tone="ok">primary total {compact_number(attestation.primary_classical_total_ayahs)}</span>
+            <span class="badge" data-tone="ok">{format_primary_total(attestation.primary_classical_total_ayahs)}</span>
           {/if}
         </div>
-        {#if attestation.policy_en}
-          <p class="mt-4 text-sm text-ink-soft">{attestation.policy_en}</p>
+        {#if attestation_policy}
+          <p class="mt-4 text-sm text-ink-soft">{attestation_policy}</p>
         {/if}
       {:else}
-        <p class="mt-3 text-sm text-ink-soft">No explicit total-count policy note is stored for this system yet.</p>
+        <p class="mt-3 text-sm text-ink-soft">لا توجد ملاحظة صريحة محفوظة بعد عن سياسة المجموع الكلي لهذا النظام.</p>
       {/if}
     </div>
   </section>
 
   <section class="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
-    <MetricCard label="Total ayahs" value={compact_number(system_info.total_ayahs)} note="Derived from the canonical primitive layer." />
-    <MetricCard label="Vs kufi" value={`${system_info.delta_from_kufi > 0 ? '+' : ''}${system_info.delta_from_kufi}`} note="Net effect against the Kufan reference count." tone={system_info.delta_from_kufi === 0 ? 'ok' : 'accent'} />
-    <MetricCard label="Counted heads" value={compact_number(system_info.counts_boundary)} note="How many disputed heads this system actively counts." tone="ok" />
-    <MetricCard label="Cited counted heads" value={compact_number(system_info.cited_points)} note="Counted disputed heads with any attached evidence." tone={system_info.cited_points > 0 ? 'accent' : 'warn'} />
-    <MetricCard label="Merge effects" value={compact_number(system_info.merge_effects)} note="Places where omission collapses numbering downstream." tone="alert" />
+    <MetricCard label="مجموع الآيات" value={compact_number(system_info.total_ayahs)} note="مشتق من طبقة الأصول المعيارية." />
+    <MetricCard label="عن الكوفي" value={format_signed_delta(system_info.delta_from_kufi)} note="الأثر الصافي بالنسبة إلى العدد الكوفي المرجعي." tone={system_info.delta_from_kufi === 0 ? 'ok' : 'accent'} />
+    <MetricCard label="الرؤوس المعدودة" value={compact_number(system_info.counts_boundary)} note="عدد الرؤوس المختلف فيها التي يعدها هذا النظام فعلًا." tone="ok" />
+    <MetricCard label="الرؤوس المعدودة الموثقة" value={compact_number(system_info.cited_points)} note="عدد الرؤوس المعدودة المختلف فيها التي لحقها أي شاهد." tone={system_info.cited_points > 0 ? 'accent' : 'warn'} />
+    <MetricCard label="آثار الدمج" value={compact_number(system_info.merge_effects)} note="المواضع التي يؤدي فيها الإسقاط إلى دمج الترقيم بعد ذلك." tone="alert" />
   </section>
 
   <section class="mt-12 grid gap-6 xl:grid-cols-2">
     <div class="surface p-5 sm:p-6">
       <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
         <div>
-          <div class="rule_label">Verification posture</div>
-          <h2 class="section_title mt-4">How much of this counted corpus has evidence</h2>
+          <div class="rule_label">هيئة التوثيق</div>
+          <h2 class="section_title mt-4">كم من المادة المعدودة في هذا النظام لها شواهد</h2>
           <p class="section_text mt-3 text-sm">
-            These totals are restricted to the disputed heads that {system_info.name_en} actually counts.
+            {`تقتصر هذه المجاميع على الرؤوس المختلف فيها التي يعدها ${get_system_name(system_info)} فعلًا.`}
           </p>
         </div>
         <MilestoneIcon class="hidden size-10 text-accent-strong sm:block" />
@@ -104,30 +119,30 @@ let drift_points = $derived(get_surah_drift(system, active_surah_number))
 
       <div class="mt-6 grid gap-4 sm:grid-cols-2">
         <div class="surface surface_muted p-4">
-          <div class="metric_label">Cited</div>
+          <div class="metric_label">موثق</div>
           <div class="mt-3 text-3xl font-bold text-ink">{compact_number(verification?.cited_points || 0)}</div>
-          <div class="mt-2 text-sm text-ink-soft">with any evidence attached</div>
+          <div class="mt-2 text-sm text-ink-soft">له أي شاهد مرفق</div>
         </div>
         <div class="surface surface_muted p-4">
-          <div class="metric_label">Uncited</div>
+          <div class="metric_label">غير موثق</div>
           <div class="mt-3 text-3xl font-bold text-ink">{compact_number(verification?.uncited_points || 0)}</div>
-          <div class="mt-2 text-sm text-ink-soft">still needing source transcription</div>
+          <div class="mt-2 text-sm text-ink-soft">ما يزال يحتاج إلى تفريغ من المصادر</div>
         </div>
       </div>
 
       <div class="mt-5 flex flex-wrap gap-2 text-sm">
-        <span class="badge" data-tone="ok">primary evidence {verification?.points_with_primary_evidence || 0}</span>
-        <span class="badge" data-tone="warn">reviewed {verification?.points_reviewed || 0}</span>
+        <span class="badge" data-tone="ok">{`الشواهد الأصلية ${compact_number(verification?.points_with_primary_evidence || 0)}`}</span>
+        <span class="badge" data-tone="warn">{`المواضع المراجعة ${compact_number(verification?.points_reviewed || 0)}`}</span>
       </div>
     </div>
 
     <div class="surface p-5 sm:p-6">
       <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
         <div>
-          <div class="rule_label">Neighborhood</div>
-          <h2 class="section_title mt-4">Which systems are closest and farthest</h2>
+          <div class="rule_label">الجوار</div>
+          <h2 class="section_title mt-4">أي الأنظمة أقرب وأيها أبعد</h2>
           <p class="section_text mt-3 text-sm">
-            Distance here means how many disputed points the two systems treat differently.
+            تعني المسافة هنا عدد المواضع المختلف فيها التي يعاملها النظامان على وجه مختلف.
           </p>
         </div>
         <MilestoneIcon class="hidden size-10 text-accent-strong sm:block" />
@@ -135,19 +150,19 @@ let drift_points = $derived(get_surah_drift(system, active_surah_number))
 
       <div class="mt-6 grid gap-4 sm:grid-cols-2">
         <div class="surface surface_muted p-4">
-          <div class="metric_label">Nearest</div>
+          <div class="metric_label">الأقرب</div>
           <div class="mt-3 text-2xl font-bold text-ink">{get_system_name(relationship?.nearest?.right_system_id)}</div>
-          <div class="mt-2 text-sm text-ink-soft">{relationship?.nearest?.differing_points ?? 0} differing points</div>
+          <div class="mt-2 text-sm text-ink-soft">{`${compact_number(relationship?.nearest?.differing_points ?? 0)} موضعًا مختلفًا`}</div>
         </div>
         <div class="surface surface_muted p-4">
-          <div class="metric_label">Farthest</div>
+          <div class="metric_label">الأبعد</div>
           <div class="mt-3 text-2xl font-bold text-ink">{get_system_name(relationship?.farthest?.right_system_id)}</div>
-          <div class="mt-2 text-sm text-ink-soft">{relationship?.farthest?.differing_points ?? 0} differing points</div>
+          <div class="mt-2 text-sm text-ink-soft">{`${compact_number(relationship?.farthest?.differing_points ?? 0)} موضعًا مختلفًا`}</div>
         </div>
       </div>
 
-      <a class="pill_button mt-6 w-full" href={app_href('/compare')}>
-        Open the comparison view
+      <a class="pill_button mt-6 w-full" href="/compare">
+        افتح عرض المقارنة
         <ArrowRightIcon class="size-4" />
       </a>
     </div>
@@ -156,35 +171,35 @@ let drift_points = $derived(get_surah_drift(system, active_surah_number))
   <section class="mt-12 surface p-5 sm:p-6">
     <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
       <div>
-        <div class="rule_label">Within-surah drift</div>
-        <h2 class="section_title mt-4">How numbering pulls away from Kufi inside one surah</h2>
+        <div class="rule_label">الانجراف داخل السورة</div>
+        <h2 class="section_title mt-4">كيف يبتعد الترقيم عن الكوفي داخل السورة</h2>
         <p class="section_text mt-3 text-sm">
-          The line changes by +1 when this system counts an internal split point and by −1 when it omits a Kufan verse-end head.
+          يرتفع الخط بمقدار +1 حين يعد هذا النظام موضع فصل داخلي، وينخفض بمقدار −1 حين يسقط رأسًا كوفيًا في نهاية آية.
         </p>
       </div>
 
       <label class="block lg:w-72">
-        <span class="metric_label">Preview surah</span>
+        <span class="metric_label">سورة المعاينة</span>
         <select class="select mt-3" bind:value={selected_surah}>
           {#each top_surahs as surah (surah.surah)}
-            <option value={surah.surah}>Surah {surah.surah} · {surah.name_en}</option>
+            <option value={surah.surah}>{format_surah_reference(surah.surah)} · {get_surah_name(surah)}</option>
           {/each}
         </select>
       </label>
     </div>
 
     <div class="mt-6">
-      <PlotSurahDrift points={drift_points} system_name={system_info.name_en} surah_label={active_surah?.name_en || `Surah ${active_surah_number}`} />
+      <PlotSurahDrift points={drift_points} system_name={get_system_name(system_info)} surah_label={get_surah_name(active_surah) || format_surah_reference(active_surah_number)} />
     </div>
   </section>
 
   <section class="mt-12 surface p-5 sm:p-6">
     <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
       <div>
-        <div class="rule_label">Interactive fingerprint</div>
-        <h2 class="section_title mt-4">Top surahs by counted disputed heads</h2>
+        <div class="rule_label">البصمة التفاعلية</div>
+        <h2 class="section_title mt-4">أعلى السور بحسب الرؤوس المختلف فيها التي يعدها النظام</h2>
         <p class="section_text mt-3 text-sm">
-          LayerChart is used here for a ranked read of the system signature: the chart pulls forward the surahs where this count tradition actively counts the most disputed heads.
+          يعطي هذا الترتيب قراءة سريعة لبصمة النظام، فيقدّم السور التي يظهر فيها أثر هذا التقليد العددي بأوضح صورة.
         </p>
       </div>
       <FingerprintIcon class="hidden size-10 text-accent-strong sm:block" />
@@ -198,24 +213,26 @@ let drift_points = $derived(get_surah_drift(system, active_surah_number))
   <section class="mt-12 surface p-5 sm:p-6">
     <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
       <div>
-        <div class="rule_label">Surah hotspots</div>
-        <h2 class="section_title mt-4">Where {system_info.name_en} shows its strongest signature</h2>
+        <div class="rule_label">بؤر السور</div>
+        <h2 class="section_title mt-4">{`أين تظهر بصمة ${get_system_name(system_info)} بأقوى صورة`}</h2>
       </div>
       <LibraryBigIcon class="hidden size-10 text-accent-strong sm:block" />
     </div>
 
     <div class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
       {#each top_surahs as surah (surah.surah)}
-        <a class="surface block p-4 transition-transform duration-200 hover:-translate-y-0.5" href={app_href('/surahs/' + surah.surah)}>
-          <div class="metric_label">Surah {surah.surah}</div>
-          <div class="mt-3 text-xl font-bold text-ink">{surah.name_en}</div>
-          <div class="arabic_title mt-2 text-lg text-ink-soft">{surah.name_ar}</div>
+        <a class="surface block p-4 transition-transform duration-200 hover:-translate-y-0.5" href={'/surahs/' + surah.surah}>
+          <div class="metric_label">{format_surah_reference(surah.surah)}</div>
+          <div class="mt-3 text-xl font-bold text-ink">{get_surah_name(surah)}</div>
+          {#if get_surah_secondary_name(surah)}
+            <div class="mt-2 text-lg text-ink-soft">{get_surah_secondary_name(surah)}</div>
+          {/if}
           <div class="mt-4 flex flex-wrap gap-2 text-xs">
-            <span class="badge" data-tone="ok">counts {surah.counted_points}</span>
-            <span class="badge" data-tone={surah.delta_from_kufi === 0 ? 'ok' : 'warn'}>{surah.delta_from_kufi > 0 ? '+' : ''}{surah.delta_from_kufi} vs kufi</span>
+            <span class="badge" data-tone="ok">{`يعد ${compact_number(surah.counted_points)}`}</span>
+            <span class="badge" data-tone={surah.delta_from_kufi === 0 ? 'ok' : 'warn'}>{format_signed_delta(surah.delta_from_kufi)}</span>
           </div>
           <div class="mt-4 flex items-center gap-2 font-bold text-accent-strong">
-            <span>Open surah</span>
+            <span>افتح السورة</span>
             <ArrowRightIcon class="size-4" />
           </div>
         </a>

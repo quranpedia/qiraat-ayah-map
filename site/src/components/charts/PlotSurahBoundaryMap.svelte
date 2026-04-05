@@ -1,9 +1,11 @@
 <script>
+import { format_boundary_decision, format_numbering_effect, get_system_name } from '$lib/dataset.svelte.js'
+
 import PlotFrame from './PlotFrame.svelte'
 
 let { rows, systems } = $props()
 
-let system_names = $derived(systems.map(system => system.name_en))
+let system_names = $derived(systems.map(system => get_system_name(system)))
 let slot_labels = $derived(rows.map(row => row.ayah_slot_label))
 let points = $derived.by(() =>
   rows.flatMap(row =>
@@ -11,7 +13,7 @@ let points = $derived.by(() =>
       slot_label: row.ayah_slot_label,
       location_label: row.location_label,
       word: row.word,
-      system: system.name_en,
+      system: get_system_name(system),
       counts_boundary: row.systems[system.id].counts_boundary,
       numbering_effect: row.systems[system.id].numbering_effect,
       symbol:
@@ -47,7 +49,7 @@ function build_plot({ Plot, width }) {
       color: 'var(--ink)'
     },
     x: {
-      label: 'Disputed boundary slot in reading order',
+      label: 'موضع الخلاف في ترتيب القراءة',
       domain: slot_labels,
       tickRotate: -35
     },
@@ -61,7 +63,7 @@ function build_plot({ Plot, width }) {
         y: 'system',
         fill: d => fill_for(d.numbering_effect),
         inset: 1,
-        title: d => `${d.system} · ${d.location_label} · ${d.word} · ${d.counts_boundary ? 'counts' : 'omits'} · ${d.numbering_effect === 'none' ? 'same as kufi' : d.numbering_effect}`
+        title: d => `${d.system} · ${d.location_label} · ${d.word} · ${format_boundary_decision(d.counts_boundary)} · ${format_numbering_effect(d.numbering_effect)}`
       }),
       Plot.text(points, {
         x: 'slot_label',
@@ -76,4 +78,4 @@ function build_plot({ Plot, width }) {
 }
 </script>
 
-<PlotFrame {build_plot} watch={points} aria_label="Boundary matrix for the selected surah" />
+<PlotFrame {build_plot} watch={points} aria_label="مصفوفة المواضع في السورة المختارة" />

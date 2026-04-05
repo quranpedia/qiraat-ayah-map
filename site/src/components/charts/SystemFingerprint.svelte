@@ -1,7 +1,7 @@
 <script>
 import { BarChart, defaultChartPadding } from 'layerchart'
 
-import { get_surah } from '$lib/dataset.svelte.js'
+import { format_surah_reference, get_surah, get_surah_name } from '$lib/dataset.svelte.js'
 
 let { profile, limit = 12 } = $props()
 
@@ -12,7 +12,7 @@ let ranked_profile = $derived.by(() =>
       const surah = get_surah(entry.surah)
       return {
         ...entry,
-        surah_label: `${entry.surah} · ${surah?.name_en || `Surah ${entry.surah}`}`
+        surah_label: `${format_surah_reference(entry.surah)} · ${get_surah_name(surah) || format_surah_reference(entry.surah)}`
       }
     })
     .sort(
@@ -40,7 +40,7 @@ let chart_height = $derived(Math.max(280, ranked_profile.length * 34 + 28))
     />
   {:else}
     <div class="flex h-56 items-center justify-center text-sm text-ink-soft">
-      No surah-level differences are available for this system.
+      لا توجد فروق على مستوى السور لهذا النظام.
     </div>
   {/if}
 </div>

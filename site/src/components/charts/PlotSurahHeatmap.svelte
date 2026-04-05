@@ -1,12 +1,16 @@
 <script>
+import { compact_number, format_boundary_kind, format_surah_reference } from '$lib/dataset.svelte.js'
+
 import PlotFrame from './PlotFrame.svelte'
 
 let { surahs } = $props()
 
-const cells = surahs.flatMap(surah => [
-  { surah: surah.surah, kind: 'end', count: surah.by_kind.end },
-  { surah: surah.surah, kind: 'internal', count: surah.by_kind.internal }
-])
+let cells = $derived(
+  surahs.flatMap(surah => [
+    { surah: surah.surah, kind: 'end', count: surah.by_kind.end },
+    { surah: surah.surah, kind: 'internal', count: surah.by_kind.internal }
+  ])
+)
 
 function build_plot({ Plot, width }) {
   return Plot.plot({
@@ -25,7 +29,7 @@ function build_plot({ Plot, width }) {
       range: ['#f7efe1', '#3f7059']
     },
     x: {
-      label: 'Surah',
+      label: 'السورة',
       ticks: 12
     },
     y: {
@@ -38,12 +42,12 @@ function build_plot({ Plot, width }) {
         y: 'kind',
         fill: 'count',
         inset: 0.7,
-        title: d => `Surah ${d.surah} · ${d.kind} boundaries: ${d.count}`
+        title: d => `${format_surah_reference(d.surah)} · ${`${format_boundary_kind(d.kind)} مختلفة: ${compact_number(d.count)}`}`
       }),
       Plot.text(cells, {
         x: 'surah',
         y: 'kind',
-        text: d => (d.count > 0 ? String(d.count) : ''),
+        text: d => (d.count > 0 ? compact_number(d.count) : ''),
         fontSize: 10,
         fill: d => (d.count > 3 ? 'white' : 'var(--ink)')
       })
@@ -52,4 +56,4 @@ function build_plot({ Plot, width }) {
 }
 </script>
 
-<PlotFrame {build_plot} watch={surahs} aria_label="Heatmap of disputed boundary kinds by surah" />
+<PlotFrame {build_plot} watch={surahs} aria_label="خريطة حرارية لمواضع الخلاف حسب السورة والنوع" />

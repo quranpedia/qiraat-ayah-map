@@ -4,6 +4,7 @@ import { readFileSync, writeFileSync } from 'node:fs'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'vite'
+import {wuchale} from 'wuchale/vite'
 
 import tsconfig from './tsconfig.json' with { type: 'json' }
 
@@ -47,18 +48,23 @@ const base = normalize_base(process.env.BASE_PATH)
 export default defineConfig({
   base,
   resolve: {
-    alias: Object.fromEntries(
-      Object.entries(tsconfig.compilerOptions.paths).map(([key, value]) => [
-        key.replace('/*', ''),
-        path.resolve(value[0].replace('/*', ''))
-      ])
-    )
+    alias: [
+      ...Object.entries(tsconfig.compilerOptions.paths).map(([key, value]) => ({
+        find: key.replace('/*', ''),
+        replacement: path.resolve(value[0].replace('/*', ''))
+      })),
+      {
+        find: /\.\/\.wuchale\/main\.proxy\.js$/,
+        replacement: path.resolve('src/locales/.wuchale/main.proxy.sync.js')
+      }
+    ]
   },
   css: {
     transformer: 'lightningcss'
   },
   plugins: [
     tailwindcss(),
+    wuchale(),
     svelte({
       onwarn(warning, handler) {
         const ignored = [

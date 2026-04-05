@@ -1,15 +1,23 @@
 <script>
 import { tick } from 'svelte'
 
+import {
+  compact_number,
+  format_ayah_reference,
+  format_boundary_action,
+  format_boundary_kind,
+  format_difference_count,
+  get_system_name
+} from '$lib/dataset.svelte.js'
 import { getBoundaryViewerAyahId, getBoundaryViewerMarkerId } from '$lib/mushaf-viewer-dom.js'
 
 const SYSTEM_SHORT_LABELS = {
-  'madani-first': 'M1',
-  'madani-last': 'M2',
-  makki: 'Makki',
-  basri: 'Basri',
-  dimashqi: 'Dim.',
-  kufi: 'Kufi'
+  'madani-first': 'مد١',
+  'madani-last': 'مد٢',
+  makki: 'مك',
+  basri: 'بص',
+  dimashqi: 'دم',
+  kufi: 'كو'
 }
 
 let {
@@ -115,13 +123,13 @@ $effect(() => {
 })
 
 function buildMarkerTitle(row, leftCounts, rightCounts) {
-  const leftName = leftSystem?.name_en || leftSystemId
-  const rightName = rightSystem?.name_en || rightSystemId
-  const pointType = row.kind === 'end' ? 'ayah end' : 'internal breakpoint'
-  const leftStatus = leftCounts ? 'counts this boundary' : 'continues through it'
-  const rightStatus = rightCounts ? 'counts this boundary' : 'continues through it'
+  const leftName = get_system_name(leftSystem) || leftSystemId
+  const rightName = get_system_name(rightSystem) || rightSystemId
+  const pointType = format_boundary_kind(row.kind, 'viewer')
+  const leftStatus = format_boundary_action(leftCounts)
+  const rightStatus = format_boundary_action(rightCounts)
 
-  return `${row.location_label} · ${row.word} · ${pointType} — ${leftName} ${leftStatus}; ${rightName} ${rightStatus}.`
+  return `${row.location_label} · ${row.word} · ${pointType} — ${`${leftName} ${leftStatus}؛ ${rightName} ${rightStatus}.`}`
 }
 
 function getMarkerTone(leftCounts, rightCounts) {
@@ -199,13 +207,13 @@ function getPairAyahTone(entry) {
 
 function buildPairAyahTitle(entry) {
   const kindLabel = entry.endCount > 0 && entry.internalCount > 0
-    ? 'end and internal differences'
+    ? 'فروق نهايات وداخلية'
     : entry.internalCount > 0
-      ? 'internal differences'
-      : 'ayah-end differences'
-  const pointLabel = entry.pointCount === 1 ? '1 differing boundary point' : `${entry.pointCount} differing boundary points`
+      ? 'فروق داخلية'
+      : 'فروق في نهايات الآيات'
+  const pointLabel = format_difference_count(entry.pointCount, 'موضع مختلف', 'مواضع مختلفة')
 
-  return `Ayah ${entry.ayah}: ${kindLabel}; ${pointLabel} for this pair.`
+  return `${format_ayah_reference(entry.ayah)}: ${kindLabel}؛ ${`لهذا الزوج ${pointLabel}`}`
 }
 
 function scrollAyahIntoView(ayahNumber) {
@@ -482,18 +490,18 @@ let displayBasmala = $derived.by(() => {
   <section class="surface p-5 sm:p-6">
     <div class="flex flex-wrap items-start justify-between gap-4">
       <div>
-        <div class="rule_label">Mushaf viewer</div>
-        <h2 class="section_title mt-4">Inline boundary markers inside the surah text</h2>
+        <div class="rule_label">عارض المصحف</div>
+        <h2 class="section_title mt-4">علامات الحدود داخل نص السورة</h2>
         <p class="section_text mt-3 text-sm">
-          Internal breakpoints stay inline after their anchor word. Ayah-end differences sit beside the ayah number so you can read the surah normally while still seeing where the selected systems do or do not stop.
+          تبقى الفواصل الداخلية مضمّنة بعد كلمة الارتكاز، بينما تظهر فروق نهايات الآيات بجوار رقم الآية حتى تتمكن من قراءة السورة قراءة طبيعية مع بقاء مواضع الوقف المختلفة ظاهرة.
         </p>
       </div>
 
       <div class="flex flex-wrap gap-2 text-xs text-ink-soft">
-        <span class="badge" data-tone="accent">{getShortLabel(leftSystemId)} only: {comparisonSummary.left_only}</span>
-        <span class="badge" data-tone="alert">{getShortLabel(rightSystemId)} only: {comparisonSummary.right_only}</span>
+        <span class="badge" data-tone="accent">{`${getShortLabel(leftSystemId)} فقط: ${compact_number(comparisonSummary.left_only)}`}</span>
+        <span class="badge" data-tone="alert">{`${getShortLabel(rightSystemId)} فقط: ${compact_number(comparisonSummary.right_only)}`}</span>
         {#if markerScope === 'either'}
-          <span class="badge" data-tone="ok">both: {comparisonSummary.both}</span>
+          <span class="badge" data-tone="ok">{`كلاهما: ${compact_number(comparisonSummary.both)}`}</span>
         {/if}
       </div>
     </div>
@@ -501,33 +509,31 @@ let displayBasmala = $derived.by(() => {
     <div class="mushaf_pair_summary mt-6">
       <div class="flex flex-wrap items-start justify-between gap-4">
         <div>
-          <div class="metric_label">Current pair summary</div>
+          <div class="metric_label">ملخص الزوج الحالي</div>
           {#if leftSystemId === rightSystemId}
             <p class="mt-3 text-sm text-ink-soft">
-              Both selectors are on {leftSystem?.name_en || leftSystemId}, so there are no pair differences to list in this surah.
+              {`المحددان كلاهما على ${get_system_name(leftSystem) || leftSystemId}، لذلك لا توجد فروق زوجية تُذكر في هذه السورة.`}
             </p>
           {:else if pairDifferenceSummary.ayahCount === 0}
             <p class="mt-3 text-sm text-ink-soft">
-              {leftSystem?.name_en || leftSystemId} and {rightSystem?.name_en || rightSystemId} do not differ at any recorded boundary in this surah.
+              {`لا يختلف ${get_system_name(leftSystem) || leftSystemId} و${get_system_name(rightSystem) || rightSystemId} في أي موضع مسجل داخل هذه السورة.`}
             </p>
           {:else}
             <p class="mt-3 text-sm text-ink-soft">
-              {leftSystem?.name_en || leftSystemId} and {rightSystem?.name_en || rightSystemId}
-              differ at {pairDifferenceSummary.pointCount} recorded boundary {pairDifferenceSummary.pointCount === 1 ? 'point' : 'points'}
-              across {pairDifferenceSummary.ayahCount} {pairDifferenceSummary.ayahCount === 1 ? 'ayah' : 'ayahs'} in this surah.
+              {`يختلف ${get_system_name(leftSystem) || leftSystemId} و${get_system_name(rightSystem) || rightSystemId} في ${format_difference_count(pairDifferenceSummary.pointCount, 'موضع مسجل', 'مواضع مسجلة')} عبر ${format_difference_count(pairDifferenceSummary.ayahCount, 'آية', 'آيات')} داخل هذه السورة.`}
             </p>
           {/if}
         </div>
 
         <div class="flex flex-wrap gap-2 text-xs text-ink-soft">
-          <span class="badge" data-tone="accent">{pairDifferenceSummary.ayahCount} differing {pairDifferenceSummary.ayahCount === 1 ? 'ayah' : 'ayahs'}</span>
-          <span class="badge" data-tone="ok">{pairDifferenceSummary.endAyahCount} with end differences</span>
-          <span class="badge" data-tone="warn">{pairDifferenceSummary.internalAyahCount} with internal differences</span>
+          <span class="badge" data-tone="accent">{format_difference_count(pairDifferenceSummary.ayahCount, 'آية مختلفة', 'آيات مختلفة')}</span>
+          <span class="badge" data-tone="ok">{`${compact_number(pairDifferenceSummary.endAyahCount)} مع فروق في النهايات`}</span>
+          <span class="badge" data-tone="warn">{`${compact_number(pairDifferenceSummary.internalAyahCount)} مع فروق داخلية`}</span>
         </div>
       </div>
 
       {#if pairDifferenceSummary.ayahs.length > 0}
-        <div class="mt-4 text-[0.72rem] font-bold tracking-[0.16em] text-ink-soft uppercase">Differing ayahs</div>
+        <div class="mt-4 text-[0.72rem] font-bold tracking-[0.16em] text-ink-soft uppercase">الآيات المختلفة</div>
         <div class="mushaf_pair_range_list mt-3">
           {#each pairDifferenceSummary.ayahs as entry (entry.ayah)}
             <button
@@ -538,94 +544,94 @@ let displayBasmala = $derived.by(() => {
               title={entry.title}
               onclick={() => focusPairAyah(entry)}
             >
-              {entry.ayah}
+              {compact_number(entry.ayah)}
             </button>
           {/each}
         </div>
         <p class="mt-3 text-xs text-ink-soft">
-          Click an ayah number to jump there. End-only ayahs use the end tone, internal-only ayahs use the internal tone, and ayahs with both kinds use the mixed tone.
+          اضغط رقم الآية للانتقال إليها. وتستعمل الآيات ذات فروق النهايات لون النهاية، والآيات ذات الفروق الداخلية لون الداخل، والآيات التي تجمع النوعين لونًا مركبًا.
         </p>
       {/if}
     </div>
 
     <div class="mushaf_control_grid mt-6">
       <label>
-        <div class="metric_label">Script</div>
+        <div class="metric_label">الرسم</div>
         <select class="select mt-2" bind:value={script}>
-          <option value="plain">Plain</option>
-          <option value="uthmani">Uthmani</option>
+          <option value="plain">إملائي</option>
+          <option value="uthmani">عثماني</option>
         </select>
       </label>
 
       <label>
-        <div class="metric_label">Left system</div>
+        <div class="metric_label">النظام الأيسر</div>
         <select class="select mt-2" bind:value={leftSystemId}>
           {#each systems as system (system.id)}
-            <option value={system.id}>{system.name_en}</option>
+            <option value={system.id}>{get_system_name(system)}</option>
           {/each}
         </select>
       </label>
 
       <label>
-        <div class="metric_label">Right system</div>
+        <div class="metric_label">النظام الأيمن</div>
         <select class="select mt-2" bind:value={rightSystemId}>
           {#each systems as system (system.id)}
-            <option value={system.id}>{system.name_en}</option>
+            <option value={system.id}>{get_system_name(system)}</option>
           {/each}
         </select>
       </label>
 
       <label>
-        <div class="metric_label">Boundaries</div>
+        <div class="metric_label">المواضع</div>
         <select class="select mt-2" bind:value={boundaryKind}>
-          <option value="all">All disputed points</option>
-          <option value="end">Ayah ends only</option>
-          <option value="internal">Internal only</option>
+          <option value="all">جميع مواضع الخلاف</option>
+          <option value="end">نهايات الآيات فقط</option>
+          <option value="internal">الداخلية فقط</option>
         </select>
       </label>
 
       <label>
-        <div class="metric_label">Ayahs shown</div>
+        <div class="metric_label">الآيات المعروضة</div>
         <select class="select mt-2" bind:value={ayahScope}>
-          <option value="context">Changed ayahs + neighbors</option>
-          <option value="changed">Changed ayahs only</option>
-          <option value="full">Full surah</option>
+          <option value="context">الآيات المتغيرة مع الجوار</option>
+          <option value="changed">الآيات المتغيرة فقط</option>
+          <option value="full">السورة كاملة</option>
         </select>
       </label>
 
       <label>
-        <div class="metric_label">Markers</div>
+        <div class="metric_label">العلامات</div>
         <select class="select mt-2" bind:value={markerScope}>
-          <option value="differences">Differences only</option>
-          <option value="either">Any point counted by either system</option>
+          <option value="differences">مواضع الاختلاف فقط</option>
+          <option value="either">أي موضع يعده أحد النظامين</option>
         </select>
       </label>
     </div>
 
     <div class="mt-5 flex flex-wrap gap-2 text-xs text-ink-soft">
-      <span class="badge" data-tone="accent">{getShortLabel(leftSystemId)} = {leftSystem?.name_en || leftSystemId}</span>
-      <span class="badge" data-tone="alert">{getShortLabel(rightSystemId)} = {rightSystem?.name_en || rightSystemId}</span>
+      <span class="badge" data-tone="accent">{getShortLabel(leftSystemId)} = {get_system_name(leftSystem) || leftSystemId}</span>
+      <span class="badge" data-tone="alert">{getShortLabel(rightSystemId)} = {get_system_name(rightSystem) || rightSystemId}</span>
       {#if script === 'uthmani'}
-        <span class="badge" data-tone="warn">Surah-opening basmala is shown separately when the source file prefixes it onto the first ayah.</span>
+        <span class="badge" data-tone="warn">تُعرض بسملة افتتاح السورة مستقلة إذا كان ملف المصدر يسبق بها الآية الأولى.</span>
       {/if}
     </div>
 
     <p class="mt-4 text-sm text-ink-soft">
-      Showing {displaySummary.shownAyahs} of {viewer.kufi_ayah_count} ayahs. Visible points in this filter: {comparisonSummary.visible} total, with {comparisonSummary.end} ayah ends and {comparisonSummary.internal} internal breakpoints.
+      {`يظهر ${compact_number(displaySummary.shownAyahs)} من أصل ${compact_number(viewer.kufi_ayah_count)} آية. والمواضع الظاهرة في هذا الترشيح هي ${compact_number(comparisonSummary.visible)} موضعًا: منها ${compact_number(comparisonSummary.end)} من نهايات الآيات و${compact_number(comparisonSummary.internal)} من الفواصل الداخلية.`}
     </p>
 
     {#if selectedMarkerHidden}
       <div class="mt-3 flex flex-wrap items-center gap-3 text-sm text-ink-soft">
-        <p>The currently selected boundary is hidden by this viewer filter or by the current system pair.</p>
+        <p>الموضع المحدد حاليًا مخفي بهذا الترشيح أو بهذا الزوج من الأنظمة.</p>
         <button type="button" class="pill_button" data-tone="accent" onclick={revealSelectedBoundary}>
-          Adjust viewer to show it
+          اضبط العارض لإظهاره
         </button>
       </div>
     {/if}
 
     {#if comparisonSummary.visible === 0 && rows.length > 0}
       <p class="mt-4 text-sm text-ink-soft">
-        With this pair and filter, no recorded disputed boundary is currently visible in this surah.
+        مع هذا الزوج وهذا الترشيح لا يظهر الآن أي موضع خلاف مسجل في هذه السورة.
       </p>
     {/if}
 
@@ -639,7 +645,7 @@ let displayBasmala = $derived.by(() => {
           {#if item.type === 'gap'}
             <p class="mushaf_gap_line" dir="ltr">
               <span class="mushaf_gap_pill">
-                {item.count === 1 ? '1 ayah hidden' : `${item.count} ayahs hidden`} · {item.from}–{item.to}
+                {item.count === 1 ? 'آية واحدة مخفية' : `${compact_number(item.count)} آيات مخفية`} · {compact_number(item.from)}–{compact_number(item.to)}
               </span>
             </p>
           {:else}
@@ -695,7 +701,7 @@ let displayBasmala = $derived.by(() => {
                 </span>
               {/if}
 
-              <span class="mushaf_ayah_number">{item.ayah}</span>
+              <span class="mushaf_ayah_number">{compact_number(item.ayah)}</span>
             </p>
           {/if}
         {/each}

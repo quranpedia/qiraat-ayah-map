@@ -1,4 +1,6 @@
 <script>
+import { compact_number, format_numbering_effect } from '$lib/dataset.svelte.js'
+
 import PlotFrame from './PlotFrame.svelte'
 
 let { points, system_name, surah_label } = $props()
@@ -22,11 +24,11 @@ function build_plot({ Plot, width }) {
       color: 'var(--ink)'
     },
     x: {
-      label: 'Disputed boundary slot in reading order'
+      label: 'موضع الخلاف في ترتيب القراءة'
     },
     y: {
       grid: true,
-      label: 'Cumulative delta vs. Kufi'
+      label: 'التغير التراكمي عن الكوفي'
     },
     marks: [
       Plot.ruleY([0], { stroke: 'var(--line)' }),
@@ -36,18 +38,18 @@ function build_plot({ Plot, width }) {
         curve: 'step-after',
         stroke: 'var(--accent-strong)',
         strokeWidth: 2,
-        title: d => `${system_name} · ${surah_label} · slot ${d.slot_label} · ${d.location_label} · ${d.word || 'start'} · cumulative ${d.cumulative_delta > 0 ? '+' : ''}${d.cumulative_delta}`
+        title: d => `${system_name} · ${surah_label} · ${`الموضع ${d.slot_label}`} · ${d.location_label} · ${d.word || 'البداية'} · ${`التراكم ${`${d.cumulative_delta > 0 ? '+' : ''}${compact_number(d.cumulative_delta)}`}`}`
       }),
       Plot.dot(points.filter(point => point.step > 0), {
         x: 'step',
         y: 'cumulative_delta',
         r: 4,
         fill: d => stroke_for(d.numbering_effect),
-        title: d => `${d.location_label} · ${d.word} · ${d.numbering_effect === 'none' ? 'same as Kufi' : d.numbering_effect} · cumulative ${d.cumulative_delta > 0 ? '+' : ''}${d.cumulative_delta}`
+        title: d => `${d.location_label} · ${d.word} · ${format_numbering_effect(d.numbering_effect)} · ${`التراكم ${`${d.cumulative_delta > 0 ? '+' : ''}${compact_number(d.cumulative_delta)}`}`}`
       })
     ]
   })
 }
 </script>
 
-<PlotFrame {build_plot} watch={points} aria_label="Cumulative numbering drift within the selected surah" />
+<PlotFrame {build_plot} watch={points} aria_label="انجراف الترقيم التراكمي داخل السورة المختارة" />

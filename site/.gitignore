@@ -1,2 +1,7 @@
 node_modules/
 dist/
+
+src/locales/.wuchale/
+src/locales/*.js
+src/locales/confUpdate.json
+

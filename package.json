@@ -22,5 +22,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/quranpedia/qiraat-ayah-map.git"
+  },
+  "devDependencies": {
+    "@wuchale/svelte": "^0.19.3",
+    "wuchale": "^0.22.8"
   }
 }

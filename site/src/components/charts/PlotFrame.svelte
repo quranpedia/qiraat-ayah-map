@@ -2,7 +2,8 @@
 import * as Plot from '@observablehq/plot'
 import { onMount } from 'svelte'
 
-let { build_plot, aria_label = 'Chart', watch = null } = $props()
+
+let { build_plot, aria_label = 'مخطط', watch = null } = $props()
 
 let container
 let resize_observer = null

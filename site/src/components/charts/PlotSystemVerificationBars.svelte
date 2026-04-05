@@ -1,5 +1,5 @@
 <script>
-import { review_status_order, systems, verification_profiles } from '$lib/dataset.svelte.js'
+import { compact_number, format_verification_status, get_system_name, review_status_order, systems, verification_profiles } from '$lib/dataset.svelte.js'
 
 import PlotFrame from './PlotFrame.svelte'
 
@@ -17,7 +17,7 @@ let stacked_rows = $derived.by(() =>
     review_status_order
       .filter(status => (verification_profiles[system.id]?.by_status?.[status] || 0) > 0)
       .map(status => ({
-        system_name: system.name_en,
+        system_name: get_system_name(system),
         status,
         count: verification_profiles[system.id].by_status[status]
       }))
@@ -26,7 +26,7 @@ let stacked_rows = $derived.by(() =>
 
 let total_rows = $derived.by(() =>
   systems.map(system => ({
-    system_name: system.name_en,
+    system_name: get_system_name(system),
     total_points: verification_profiles[system.id].total_points
   }))
 )
@@ -49,11 +49,11 @@ function build_plot({ Plot, width }) {
     },
     x: {
       grid: true,
-      label: 'Counted disputed points'
+      label: 'الرؤوس المختلف فيها التي يعدها النظام'
     },
     y: {
       label: null,
-      domain: systems.map(system => system.name_en)
+      domain: systems.map(system => get_system_name(system))
     },
     marks: [
       Plot.ruleX([0], { stroke: 'var(--line)' }),
@@ -61,13 +61,13 @@ function build_plot({ Plot, width }) {
         x: 'count',
         y: 'system_name',
         fill: 'status',
-        title: d => `${d.system_name} · ${d.status.replaceAll('_', ' ')}: ${d.count}`
+        title: d => `${d.system_name} · ${format_verification_status(d.status)}: ${compact_number(d.count)}`
       }),
       Plot.text(total_rows, {
         x: 'total_points',
         y: 'system_name',
         dx: 12,
-        text: d => String(d.total_points),
+        text: d => compact_number(d.total_points),
         fontSize: 11,
         fill: 'var(--ink)'
       })
@@ -76,4 +76,4 @@ function build_plot({ Plot, width }) {
 }
 </script>
 
-<PlotFrame {build_plot} watch={stacked_rows} aria_label="Verification status of counted disputed points by system" />
+<PlotFrame {build_plot} watch={stacked_rows} aria_label="حالة التوثيق في الرؤوس المختلف فيها التي يعدها كل نظام" />

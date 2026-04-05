@@ -129,7 +129,7 @@ Rules:
 - `counted_by` names the systems that count that point as a ra's ayah
 - ordinary undisputed Kufan ends are implicit and omitted
 
-See `docs/schema/book-boundary-primitives-v1.md` for the full schema contract.
+See the in-site schema doc at `https://quranpedia.github.io/qiraat-ayah-map/docs/schema-book-boundary-primitives-v1` for the full schema contract.
 
 ## Word-level compatibility format
 
@@ -211,7 +211,7 @@ When sources conflict or remain unclear, use `disputed` or `unresolved` instead 
 
 See also:
 
-- `docs/editorial-policy.md`
-- `docs/methodology.md`
-- `docs/source-catalog.md`
-- `docs/reviewer-guide.ar.md`
+- `https://quranpedia.github.io/qiraat-ayah-map/docs/editorial-policy`
+- `https://quranpedia.github.io/qiraat-ayah-map/docs/methodology`
+- `https://quranpedia.github.io/qiraat-ayah-map/docs/source-catalog`
+- `https://quranpedia.github.io/qiraat-ayah-map/docs/reviewer-guide-ar`

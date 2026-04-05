@@ -1,12 +1,14 @@
 <script>
 import { BarChart, defaultChartPadding } from 'layerchart'
 
+import { get_system_name } from '$lib/dataset.svelte.js'
+
 let { queue } = $props()
 
 let chart_rows = $derived.by(() =>
   queue.map(entry => ({
     ...entry,
-    system_label: `${entry.name_en}`
+    system_label: get_system_name(entry)
   }))
 )
 
@@ -26,7 +28,7 @@ let chart_height = $derived(Math.max(280, chart_rows.length * 42 + 28))
     />
   {:else}
     <div class="flex h-56 items-center justify-center text-sm text-ink-soft">
-      No review workload is available.
+      لا يوجد عبء مراجعة معروض حاليًا.
     </div>
   {/if}
 </div>

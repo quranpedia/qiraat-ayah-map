@@ -13,12 +13,14 @@
     "@observablehq/plot": "^0.6.17",
     "@sveltejs/vite-plugin-svelte": "^7.0.0",
     "@tailwindcss/vite": "^4.2.2",
+    "@wuchale/svelte": "^0.19.3",
     "layerchart": "2.0.0-next.46",
     "lightningcss": "^1.32.0",
     "navgo": "^6.0.8",
     "svelte": "^5.55.0",
     "tailwindcss": "^4.2.2",
-    "vite": "^8.0.3"
+    "vite": "^8.0.3",
+    "wuchale": "^0.22.8"
   },
   "packageManager": "pnpm@10.18.2"
 }

@@ -508,6 +508,93 @@ a.surah_pager_card:hover {
   gap: 1rem;
 }
 
+.markdown_doc {
+  color: var(--ink);
+}
+
+.markdown_doc > :first-child {
+  margin-top: 0;
+}
+
+.markdown_doc h1,
+.markdown_doc h2,
+.markdown_doc h3,
+.markdown_doc h4 {
+  scroll-margin-top: 8rem;
+  color: var(--ink);
+}
+
+.markdown_doc h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw + 1rem, 3.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  margin: 0 0 1rem;
+}
+
+.markdown_doc h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 2vw + 1rem, 2.4rem);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  margin: 2.2rem 0 0.85rem;
+}
+
+.markdown_doc h3 {
+  font-size: 1.18rem;
+  margin: 1.7rem 0 0.7rem;
+}
+
+.markdown_doc h4 {
+  font-size: 1rem;
+  margin: 1.4rem 0 0.65rem;
+}
+
+.markdown_doc p,
+.markdown_doc li,
+.markdown_doc blockquote {
+  color: var(--ink-soft);
+}
+
+.markdown_doc p,
+.markdown_doc ul,
+.markdown_doc ol,
+.markdown_doc pre,
+.markdown_doc table,
+.markdown_doc blockquote,
+.markdown_doc hr {
+  margin: 1rem 0 0;
+}
+
+.markdown_doc a {
+  color: var(--accent-strong);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in oklch, var(--accent) 60%, transparent 40%);
+  text-underline-offset: 0.18em;
+}
+
+.markdown_doc blockquote {
+  margin-inline: 0;
+  padding: 0.9rem 1rem;
+  border-inline-start: 3px solid color-mix(in oklch, var(--accent) 40%, var(--line) 60%);
+  border-radius: 1rem;
+  background: color-mix(in oklch, var(--paper-soft) 82%, white 18%);
+}
+
+.markdown_doc hr {
+  border: 0;
+  border-top: 1px solid color-mix(in oklch, var(--line) 75%, white 25%);
+}
+
+.markdown_doc table {
+  width: 100%;
+}
+
+.markdown_doc img {
+  max-width: 100%;
+  height: auto;
+}
+
 .doc_list {
   margin: 0;
   padding-left: 1.2rem;
