@@ -59,6 +59,13 @@ export default defineConfig({
       }
     ]
   },
+  build: {
+    rolldownOptions: {
+      output: {
+        codeSplitting: false,
+      },
+    },
+  },
   css: {
     transformer: 'lightningcss'
   },
