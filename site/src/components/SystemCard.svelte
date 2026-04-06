@@ -6,7 +6,7 @@ import { compact_number, format_signed_delta, get_system_name, get_system_second
 let { system } = $props()
 </script>
 
-<a class="surface block p-5 transition-transform duration-200 hover:-translate-y-0.5" href="/systems/{system.id}">
+<a class="surface block p-5 transition-transform duration-200 hover:-translate-y-0.5" href={window.navgo.href('/systems/' + system.id)}>
   <div class="flex items-start justify-between gap-4">
     <div>
       <div class="rule_label">{get_system_name(system)}</div>

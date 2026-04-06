@@ -17,14 +17,14 @@ let same_language_as_ui = $derived(doc ? doc.language === current_language : fal
     <div class="rule_label">الوثيقة غير موجودة</div>
     <h1 class="section_title mt-4">لا توجد وثيقة بهذا المعرّف داخل المكتبة.</h1>
     <div class="flex flex-wrap gap-3 pt-2">
-      <a class="pill_button" href="/docs">ارجع إلى مكتبة الوثائق</a>
-      <a class="pill_button" href="/project">دليل المشروع</a>
+      <a class="pill_button" href={window.navgo.href('/docs')}>ارجع إلى مكتبة الوثائق</a>
+      <a class="pill_button" href={window.navgo.href('/project')}>دليل المشروع</a>
     </div>
   </section>
 {:else}
   <section class="grid gap-6">
     <div class="flex flex-wrap items-center gap-3">
-      <a class="pill_button" href="/docs">العودة إلى الوثائق</a>
+      <a class="pill_button" href={window.navgo.href('/docs')}>العودة إلى الوثائق</a>
       {#if group}
         <span class="stat_chip">{group.title}</span>
       {/if}
@@ -39,7 +39,7 @@ let same_language_as_ui = $derived(doc ? doc.language === current_language : fal
 
       <div class="mt-5 flex flex-wrap gap-3">
         {#if alternate_doc}
-          <a class="pill_button" href="/docs/{alternate_doc.slug}">
+          <a class="pill_button" href={window.navgo.href('/docs/' + alternate_doc.slug)}>
             {alternate_doc.language === 'ar' ? 'افتح النسخة العربية' : 'Open the English version'}
           </a>
         {/if}
@@ -70,14 +70,14 @@ let same_language_as_ui = $derived(doc ? doc.language === current_language : fal
 
     <section class="doc_grid" data-columns="2">
       {#if neighbors.previous}
-        <a class="surface surface_muted h-full p-5 sm:p-6" href="/docs/{neighbors.previous.slug}">
+        <a class="surface surface_muted h-full p-5 sm:p-6" href={window.navgo.href('/docs/' + neighbors.previous.slug)}>
           <div class="metric_label">الوثيقة السابقة</div>
           <div class="mt-3 text-xl font-bold text-ink" dir={neighbors.previous.direction}>{neighbors.previous.title}</div>
         </a>
       {/if}
 
       {#if neighbors.next}
-        <a class="surface surface_muted h-full p-5 sm:p-6" href="/docs/{neighbors.next.slug}">
+        <a class="surface surface_muted h-full p-5 sm:p-6" href={window.navgo.href('/docs/' + neighbors.next.slug)}>
           <div class="metric_label">الوثيقة التالية</div>
           <div class="mt-3 text-xl font-bold text-ink" dir={neighbors.next.direction}>{neighbors.next.title}</div>
         </a>

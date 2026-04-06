@@ -60,11 +60,11 @@ const al_baqarah_count = counts.surahs['2']
     </p>
 
     <div class="mt-8 flex flex-wrap gap-3">
-      <a class="pill_button" data-tone="accent" href="/project">
+      <a class="pill_button" data-tone="accent" href={window.navgo.href('/project')}>
         اقرأ دليل المشروع
         <ArrowRightIcon class="size-4" />
       </a>
-      <a class="pill_button" href="/explorer">شاهد أمثلة حية في المستكشف</a>
+      <a class="pill_button" href={window.navgo.href('/explorer')}>شاهد أمثلة حية في المستكشف</a>
     </div>
   </div>
 
@@ -225,8 +225,8 @@ const al_baqarah_count = counts.surahs['2']
       هي تخبرك فقط كيف يتحول ترقيم الآيات. أما الكلمات والرسوم فخذها من مصدر النص أو بيانات المصحف أو الواجهة البرمجية التي تعتمدها.
     </p>
     <div class="mt-6 flex flex-wrap gap-3">
-      <a class="pill_button" href="/project">لماذا بُني المشروع بهذه الصورة</a>
-      <a class="pill_button" data-tone="accent" href="/compare">
+      <a class="pill_button" href={window.navgo.href('/project')}>لماذا بُني المشروع بهذه الصورة</a>
+      <a class="pill_button" data-tone="accent" href={window.navgo.href('/compare')}>
         قارن بين الأنظمة مباشرة
         <ArrowRightIcon class="size-4" />
       </a>
@@ -283,4 +283,3 @@ pnpm build</code></pre>
     </ul>
   </div>
 </section>
-

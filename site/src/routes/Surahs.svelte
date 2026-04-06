@@ -121,7 +121,7 @@ function clear_filters() {
 {:else}
   <section class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
     {#each visible_surahs as surah (surah.surah)}
-      <a class="surface block p-5 transition-transform duration-200 hover:-translate-y-0.5" href="/surahs/{surah.surah}">
+      <a class="surface block p-5 transition-transform duration-200 hover:-translate-y-0.5" href={window.navgo.href('/surahs/' + surah.surah)}>
         <div class="flex items-start justify-between gap-4">
           <div>
             <div class="metric_label">{format_surah_reference(surah.surah)}</div>

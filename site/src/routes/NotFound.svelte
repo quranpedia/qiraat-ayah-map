@@ -4,6 +4,6 @@
   <h1 class="section_title mt-4">هذه الصفحة غير موجودة في الأطلس.</h1>
   <p class="section_text mt-3">يمكنك الرجوع إلى الواجهة الرئيسة أو إلى المستكشف بدلًا من ذلك.</p>
   <div class="mt-6">
-    <a class="pill_button" data-tone="accent" href="/">العودة إلى الأطلس</a>
+    <a class="pill_button" data-tone="accent" href={window.navgo.href('/')}>العودة إلى الأطلس</a>
   </div>
 </section>

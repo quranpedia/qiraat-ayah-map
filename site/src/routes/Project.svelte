@@ -14,11 +14,11 @@ import { compact_number, summary, systems } from '$lib/dataset.svelte.js'
     </p>
 
     <div class="mt-8 flex flex-wrap gap-3">
-      <a class="pill_button" data-tone="accent" href="/explorer">
+      <a class="pill_button" data-tone="accent" href={window.navgo.href('/explorer')}>
         استكشف مواضع الخلاف
         <ArrowRightIcon class="size-4" />
       </a>
-      <a class="pill_button" href="/developer">استخدام المطور</a>
+      <a class="pill_button" href={window.navgo.href('/developer')}>استخدام المطور</a>
     </div>
   </div>
 
@@ -156,8 +156,8 @@ import { compact_number, summary, systems } from '$lib/dataset.svelte.js'
       <li>سجل الشاهد في الملف الجانبي للشواهد، أو علّم الموضع مختلفًا فيه أو غير محسوم إذا لم تنطبق المصادر على صورة واحدة.</li>
     </ol>
     <div class="mt-6 flex flex-wrap gap-3">
-      <a class="pill_button" href="/compare">افتح عرض المقارنة</a>
-      <a class="pill_button" href="/explorer">افتح المستكشف</a>
+      <a class="pill_button" href={window.navgo.href('/compare')}>افتح عرض المقارنة</a>
+      <a class="pill_button" href={window.navgo.href('/explorer')}>افتح المستكشف</a>
     </div>
   </div>
 </section>
@@ -171,7 +171,7 @@ import { compact_number, summary, systems } from '$lib/dataset.svelte.js'
         تعرض صفحة المطور الطريق العملي الأبسط: ثبّت محورًا ترقيميًا واحدًا، ثم استعمل الخرائط الأمامية والعكسية المولدة فقط عند الحاجة إلى تغيير الترقيم.
       </p>
     </div>
-    <a class="pill_button" data-tone="accent" href="/developer">
+    <a class="pill_button" data-tone="accent" href={window.navgo.href('/developer')}>
       افتح صفحة المطور
       <ArrowRightIcon class="size-4" />
     </a>

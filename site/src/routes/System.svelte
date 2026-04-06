@@ -161,7 +161,7 @@ let attestation_policy = $derived(
         </div>
       </div>
 
-      <a class="pill_button mt-6 w-full" href="/compare">
+      <a class="pill_button mt-6 w-full" href={window.navgo.href('/compare')}>
         افتح عرض المقارنة
         <ArrowRightIcon class="size-4" />
       </a>
@@ -221,7 +221,7 @@ let attestation_policy = $derived(
 
     <div class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
       {#each top_surahs as surah (surah.surah)}
-        <a class="surface block p-4 transition-transform duration-200 hover:-translate-y-0.5" href="/surahs/{surah.surah}">
+        <a class="surface block p-4 transition-transform duration-200 hover:-translate-y-0.5" href={window.navgo.href('/surahs/' + surah.surah)}>
           <div class="metric_label">{format_surah_reference(surah.surah)}</div>
           <div class="mt-3 text-xl font-bold text-ink">{get_surah_name(surah)}</div>
           {#if get_surah_secondary_name(surah)}

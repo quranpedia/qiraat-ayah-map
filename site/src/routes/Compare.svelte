@@ -50,7 +50,7 @@ let relationship_rows = $derived.by(() =>
       <p>
         تقيس المصفوفة أدناه مقدار التباين بين كل زوج من الأنظمة عبر مادة الخلاف، بينما يرتب مخطط العمل الأنظمة بحسب الرؤوس المعدودة غير الموثقة.
       </p>
-      <a class="pill_button w-full" href="/explorer">
+      <a class="pill_button w-full" href={window.navgo.href('/explorer')}>
         افحص المواضع الموثقة
         <ArrowRightIcon class="size-4" />
       </a>

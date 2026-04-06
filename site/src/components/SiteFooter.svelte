@@ -12,10 +12,10 @@
       </div>
 
       <div class="flex flex-wrap gap-2">
-        <a class="stat_chip" href="/project">دليل المشروع</a>
-        <a class="stat_chip" href="/docs">الوثائق</a>
-        <a class="stat_chip" href="/explorer">المستكشف</a>
-        <a class="stat_chip" href="/developer">استخدام المطور</a>
+        <a class="stat_chip" href={window.navgo.href('/project')}>دليل المشروع</a>
+        <a class="stat_chip" href={window.navgo.href('/docs')}>الوثائق</a>
+        <a class="stat_chip" href={window.navgo.href('/explorer')}>المستكشف</a>
+        <a class="stat_chip" href={window.navgo.href('/developer')}>استخدام المطور</a>
       </div>
     </div>
   </div>

@@ -31,12 +31,12 @@ let selected_profile = $derived(get_system_profile(selected_system_id))
     </p>
 
     <div class="mt-8 flex flex-wrap gap-3">
-      <a class="pill_button" data-tone="accent" href="/explorer">
+      <a class="pill_button" data-tone="accent" href={window.navgo.href('/explorer')}>
         استكشف مواضع الخلاف
         <ArrowRightIcon class="size-4" />
       </a>
-      <a class="pill_button" href="/project">اقرأ دليل المشروع</a>
-      <a class="pill_button" href="/developer">استخدام المطور</a>
+      <a class="pill_button" href={window.navgo.href('/project')}>اقرأ دليل المشروع</a>
+      <a class="pill_button" href={window.navgo.href('/developer')}>استخدام المطور</a>
     </div>
 
     <div class="mt-6 flex flex-wrap gap-2 text-sm text-ink-soft">
@@ -163,7 +163,7 @@ let selected_profile = $derived(get_system_profile(selected_system_id))
           <div class="text-ink-soft">آثار الدمج</div>
         </div>
       </div>
-      <a class="pill_button mt-6 w-full" href="/systems/{selected_system.id}">
+      <a class="pill_button mt-6 w-full" href={window.navgo.href('/systems/' + selected_system.id)}>
         افتح ملف النظام الكامل
         <ArrowRightIcon class="size-4" />
       </a>

@@ -45,7 +45,7 @@ function is_active(item) {
 <header class="sticky top-0 z-40 px-3 pt-3 sm:px-5 sm:pt-5">
   <div class="editorial_shell page_shell px-5 py-4 sm:px-7">
     <div class="flex items-center justify-between gap-6">
-      <a class="flex items-center gap-3" href="/">
+      <a class="flex items-center gap-3" href={window.navgo.href('/')}>
         <div class="flex size-11 items-center justify-center rounded-full border border-accent/20 bg-accent-soft/70 text-accent-strong">
           <PanelsTopLeftIcon class="size-5" />
         </div>
@@ -62,7 +62,7 @@ function is_active(item) {
 
       <nav class="hidden items-center gap-6 md:flex">
         {#each nav_items as item (item.href)}
-          <a class="nav_link flex items-center gap-2" data-active={is_active(item) ? 'true' : 'false'} href="{item.href}">
+          <a class="nav_link flex items-center gap-2" data-active={is_active(item) ? 'true' : 'false'} href={window.navgo.href(item.href)}>
             <item.icon class="size-4" />
             <span>{item.label}</span>
           </a>
@@ -101,7 +101,7 @@ function is_active(item) {
 
     <nav class="mt-4 flex gap-4 overflow-x-auto border-t border-line/60 pt-4 md:hidden">
       {#each nav_items as item (item.href)}
-        <a class="nav_link flex shrink-0 items-center gap-2" data-active={is_active(item) ? 'true' : 'false'} href="{item.href}">
+        <a class="nav_link flex shrink-0 items-center gap-2" data-active={is_active(item) ? 'true' : 'false'} href={window.navgo.href(item.href)}>
           <item.icon class="size-4" />
           <span>{item.label}</span>
         </a>

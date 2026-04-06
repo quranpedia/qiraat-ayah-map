@@ -183,7 +183,7 @@ let active_row = $derived(filtered_rows.find(row => row.anchor_key === selected_
             {#each filtered_rows as row (row.anchor_key)}
               <tr data-active={row.anchor_key === active_row?.anchor_key ? 'true' : 'false'} onclick={() => (selected_key = row.anchor_key)}>
                 <td>
-                  <a class="font-bold text-ink underline decoration-line decoration-1 underline-offset-4" href="/surahs/{row.surah}">{row.location_label}</a>
+                  <a class="font-bold text-ink underline decoration-line decoration-1 underline-offset-4" href={window.navgo.href('/surahs/' + row.surah)}>{row.location_label}</a>
                 </td>
                 <td>
                   <div class="arabic_title text-xl text-ink">{row.word}</div>

@@ -100,7 +100,7 @@ $effect(() => {
   <section aria-label="التنقل بين السور">
     <div class="surah_pager_grid">
       {#if previous_surah}
-        <a class="surah_pager_card" href="/surahs/{previous_surah.surah}">
+        <a class="surah_pager_card" href={window.navgo.href('/surahs/' + previous_surah.surah)}>
           <div class="metric_label flex items-center gap-2"><ArrowLeftIcon class="size-4" /> السورة السابقة</div>
           <div class="mt-3 flex items-center gap-2 text-sm font-bold text-ink">
             <ArrowLeftIcon class="size-4" />
@@ -138,12 +138,12 @@ $effect(() => {
           <div class="mt-4 text-lg font-bold text-ink">انتقل إلى السورة التالية أو السابقة، أو ارجع إلى الفهرس الكامل.</div>
         {/if}
         <div class="mt-5">
-          <a class="pill_button" href="/surahs"><LibraryBigIcon class="size-4" /> جميع السور</a>
+          <a class="pill_button" href={window.navgo.href('/surahs')}><LibraryBigIcon class="size-4" /> جميع السور</a>
         </div>
       </div>
 
       {#if next_surah}
-        <a class="surah_pager_card" href="/surahs/{next_surah.surah}">
+        <a class="surah_pager_card" href={window.navgo.href('/surahs/' + next_surah.surah)}>
           <div class="metric_label flex items-center justify-end gap-2">السورة التالية <ArrowRightIcon class="size-4" /></div>
           <div class="mt-3 flex items-center justify-end gap-2 text-sm font-bold text-ink">
             <span>{format_surah_reference(next_surah.surah)}</span>
