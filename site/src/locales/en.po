@@ -1411,11 +1411,6 @@ msgstr "Counted by {0}. Omitted by {1}."
 msgid "الطبعة: {0}"
 msgstr "Edition: {0}"
 
-#. 0: pointLabel
-#: src/components/SurahMushafViewer.svelte
-msgid "لهذا الزوج {0}"
-msgstr "For this pair: {0}"
-
 #. 0: compact_number(comparisonSummary.both)
 #: src/components/SurahMushafViewer.svelte
 msgid "كلاهما: {0}"
@@ -1480,18 +1475,6 @@ msgstr "Where does {0} leave its clearest fingerprint?"
 #: src/routes/System.svelte
 msgid "يعد {0}"
 msgstr "Counts {0}"
-
-#. 0: d.slot_label
-#: src/components/charts/PlotSurahDrift.svelte
-msgid "الموضع {0}"
-msgstr "Point {0}"
-
-#. 0: `${d.cumulative_delta > 0 ? '+' \\: ''}${compact_number(d.cumulative_delta)}`
-#. 0: `${d.cumulative_delta > 0 ? '+' \\: ''}${compact_number(d.cumulative_delta)}`
-#: src/components/charts/PlotSurahDrift.svelte
-#: src/components/charts/PlotSurahDrift.svelte
-msgid "التراكم {0}"
-msgstr "Cumulative {0}"
 
 #: src/routes/Developer.svelte
 msgid "حول موقع العرض"
@@ -1825,3 +1808,150 @@ msgstr "Open the developer page <0/>"
 #: src/routes/System.svelte
 msgid "افتح عرض المقارنة <0/>"
 msgstr "Open the comparison view <0/>"
+
+#. 0: compact_number(row.primary_evidence_count)
+#: src/components/BoundaryDetail.svelte
+msgid "{0} أصلي"
+msgstr "{0} primary"
+
+#. 0: compact_number(row.evidence_count)
+#: src/components/BoundaryDetail.svelte
+msgid "{0} جميع الشواهد"
+msgstr "{0} all evidence"
+
+#. 0: compact_number(row.reviewer_count)
+#: src/components/BoundaryDetail.svelte
+msgid "{0} من المراجعين"
+msgstr "{0} from reviewers"
+
+#. 0: compact_number(summary.by_system ? Object.keys(summary.by_system).length \\: 0)
+#: src/components/Header.svelte
+msgid "{0} نظام عدّ"
+msgstr "{0} counting systems"
+
+#. 0: compact_number(summary.total_points)
+#. 0: compact_number(summary.total_points)
+#: src/components/Header.svelte
+#: src/routes/Compare.svelte
+msgid "{0} موضع مختلف فيه"
+msgstr "{0} disputed points"
+
+#. 0: compact_number(summary.evidence.points_with_primary_evidence)
+#. 0: compact_number(summary.evidence.points_with_primary_evidence)
+#: src/routes/Compare.svelte
+#: src/routes/Home.svelte
+msgid "{0} مع شاهد أصلي"
+msgstr "{0} with primary evidence"
+
+#. 0: compact_number(summary.evidence.points_uncited)
+#: src/routes/Compare.svelte
+msgid "{0} ما يزال غير موثق"
+msgstr "{0} still uncited"
+
+#. 0: compact_number(entry.uncited_points)
+#: src/routes/Compare.svelte
+msgid "{0} رأسًا معدودًا غير موثق"
+msgstr "{0} counted heads still uncited"
+
+#. 0: getShortLabel(leftSystemId); 1: compact_number(comparisonSummary.left_only)
+#. 0: getShortLabel(rightSystemId); 1: compact_number(comparisonSummary.right_only)
+#: src/components/SurahMushafViewer.svelte
+#: src/components/SurahMushafViewer.svelte
+msgid "{0} فقط: {1}"
+msgstr "{0} only: {1}"
+
+#. 0: compact_number(pairDifferenceSummary.endAyahCount)
+#: src/components/SurahMushafViewer.svelte
+msgid "{0} مع فروق في النهايات"
+msgstr "{0} with end differences"
+
+#. 0: compact_number(pairDifferenceSummary.internalAyahCount)
+#: src/components/SurahMushafViewer.svelte
+msgid "{0} مع فروق داخلية"
+msgstr "{0} with internal differences"
+
+#. 0: compact_number(filtered_rows.length)
+#: src/routes/Explorer.svelte
+msgid "{0} سطرًا ظاهرًا"
+msgstr "{0} visible rows"
+
+#. 0: compact_number(filtered_summary.by_kind.end)
+#: src/routes/Explorer.svelte
+msgid "{0} نهاية"
+msgstr "{0} end"
+
+#. 0: compact_number(filtered_summary.by_kind.internal)
+#: src/routes/Explorer.svelte
+msgid "{0} داخلي"
+msgstr "{0} internal"
+
+#. 0: compact_number(row.counted_by_count); 1: compact_number(system_order.length)
+#: src/routes/Explorer.svelte
+msgid "{0} من {1} يعده"
+msgstr "{0} of {1} count it"
+
+#. 0: compact_number(row.omitted_by_count)
+#: src/routes/Explorer.svelte
+msgid "{0} يسقطه"
+msgstr "{0} omit it"
+
+#. 0: compact_number(summary.by_kind.end)
+#: src/routes/Home.svelte
+msgid "{0} موضع نهاية"
+msgstr "{0} end points"
+
+#. 0: compact_number(summary.by_kind.internal)
+#: src/routes/Home.svelte
+msgid "{0} موضع داخلي"
+msgstr "{0} internal points"
+
+#. 0: compact_number(summary.evidence.points_uncited)
+#: src/routes/Home.svelte
+msgid "{0} غير موثق"
+msgstr "{0} uncited"
+
+#. 0: compact_number(previous_surah.disputed_points)
+#. 0: compact_number(next_surah.disputed_points)
+#. 0: compact_number(relationship?.nearest?.differing_points ?? 0)
+#. 0: compact_number(relationship?.farthest?.differing_points ?? 0)
+#: src/routes/Surah.svelte
+#: src/routes/Surah.svelte
+#: src/routes/System.svelte
+#: src/routes/System.svelte
+msgid "{0} موضعًا مختلفًا"
+msgstr "{0} disputed points"
+
+#. 0: format_surah_reference(surah_info.surah); 1: compact_number(surah_catalog.length)
+#: src/routes/Surah.svelte
+msgid "{0} من {1}"
+msgstr "{0} of {1}"
+
+#. 0: compact_number(surah_info.disputed_points)
+#: src/routes/Surah.svelte
+msgid "{0} موضعًا مختلفًا في هذه السورة"
+msgstr "{0} disputed points in this surah"
+
+#. 0: compact_number(surah_info.disputed_points); 1: compact_number(surah_info.by_kind.end); 2: compact_number(surah_info.by_kind.internal)
+#: src/routes/Surah.svelte
+msgid "{0} موضعًا مختلفًا في هذه السورة: {1} من النهايات و{2} من الفواصل الداخلية."
+msgstr "{0} disputed points in this surah: {1} are end points and {2} are internal separators."
+
+#. 0: compact_number(visible_surahs.length)
+#: src/routes/Surahs.svelte
+msgid "{0} سورة ظاهرة"
+msgstr "{0} visible surahs"
+
+#. 0: compact_number(114)
+#: src/routes/Surahs.svelte
+msgid "{0} سورة"
+msgstr "{0} surahs"
+
+#. 0: compact_number(disputed_surah_count)
+#: src/routes/Surahs.svelte
+msgid "{0} فيها خلاف"
+msgstr "{0} with disputes"
+
+#. 0: compact_number(summary.total_points)
+#: src/routes/Surahs.svelte
+msgid "{0} مجموع المواضع المختلف فيها"
+msgstr "{0} total disputed points"
