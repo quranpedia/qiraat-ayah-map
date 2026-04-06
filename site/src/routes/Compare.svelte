@@ -38,9 +38,9 @@ let relationship_rows = $derived.by(() =>
       تجيب هذه الصفحة عن الأسئلة العملية للمشروع: ما الأنظمة الأقرب، وأيها أسهل للوصول به إلى مراجعة كاملة، وكم بقي من المادة المعدودة بلا شاهد.
     </p>
     <div class="mt-6 flex flex-wrap gap-2 text-sm text-ink-soft">
-      <span class="stat_chip">{`${compact_number(summary.total_points)} موضع مختلف فيه`}</span>
-      <span class="stat_chip">{`${compact_number(summary.evidence.points_with_primary_evidence)} مع شاهد أصلي`}</span>
-      <span class="stat_chip">{`${compact_number(summary.evidence.points_uncited)} ما يزال غير موثق`}</span>
+      <span class="stat_chip">{compact_number(summary.total_points)} موضع مختلف فيه</span>
+      <span class="stat_chip">{compact_number(summary.evidence.points_with_primary_evidence)} مع شاهد أصلي</span>
+      <span class="stat_chip">{compact_number(summary.evidence.points_uncited)} ما يزال غير موثق</span>
     </div>
   </div>
 
@@ -110,7 +110,7 @@ let relationship_rows = $derived.by(() =>
         <div class="surface surface_muted p-4">
           <div class="metric_label">{entry.system_id}</div>
           <div class="mt-3 text-xl font-bold text-ink">{get_system_name(entry)}</div>
-          <div class="mt-2 text-sm text-ink-soft">{`${compact_number(entry.uncited_points)} رأسًا معدودًا غير موثق`}</div>
+          <div class="mt-2 text-sm text-ink-soft">{compact_number(entry.uncited_points)} رأسًا معدودًا غير موثق</div>
         </div>
       {/each}
     </div>

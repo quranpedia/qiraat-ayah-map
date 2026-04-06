@@ -38,7 +38,7 @@ function build_plot({ Plot, width }) {
         x: 'display_name',
         y: 'total_ayahs',
         fill: 'var(--accent-strong)',
-        title: d => `${d.display_name}: ${`${compact_number(d.total_ayahs)} آية`}`
+        title: d => `${d.display_name}: ${compact_number(d.total_ayahs)} آية`
       }),
       Plot.text(chart_rows, {
         x: 'display_name',

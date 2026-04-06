@@ -100,7 +100,7 @@ $effect(() => {
   <section aria-label="التنقل بين السور">
     <div class="surah_pager_grid">
       {#if previous_surah}
-        <a class="surah_pager_card" href={'/surahs/' + previous_surah.surah}>
+        <a class="surah_pager_card" href="/surahs/{previous_surah.surah}">
           <div class="metric_label flex items-center gap-2"><ArrowLeftIcon class="size-4" /> السورة السابقة</div>
           <div class="mt-3 flex items-center gap-2 text-sm font-bold text-ink">
             <ArrowLeftIcon class="size-4" />
@@ -112,7 +112,7 @@ $effect(() => {
           {/if}
           <div class="mt-4 flex flex-wrap gap-2">
             <span class="badge" data-tone={previous_surah.disputed_points === 0 ? 'ok' : 'accent'}>
-              {`${compact_number(previous_surah.disputed_points)} موضعًا مختلفًا`}
+              {compact_number(previous_surah.disputed_points)} موضعًا مختلفًا
             </span>
           </div>
         </a>
@@ -127,12 +127,12 @@ $effect(() => {
       <div class="surah_pager_card surah_pager_status">
         {#if showMeta}
           <div class="metric_label">التنقل بين السور</div>
-          <div class="mt-4 text-2xl font-bold text-ink">{`${format_surah_reference(surah_info.surah)} من ${compact_number(surah_catalog.length)}`}</div>
+          <div class="mt-4 text-2xl font-bold text-ink">{format_surah_reference(surah_info.surah)} من {compact_number(surah_catalog.length)}</div>
           <div class="mt-3 text-lg font-bold text-ink">{get_surah_name(surah_info)}</div>
           {#if get_surah_secondary_name(surah_info)}
             <p class="mt-2 text-xl text-ink-soft">{get_surah_secondary_name(surah_info)}</p>
           {/if}
-          <p class="mt-3 text-sm text-ink-soft">{`${compact_number(surah_info.disputed_points)} موضعًا مختلفًا في هذه السورة`}</p>
+          <p class="mt-3 text-sm text-ink-soft">{compact_number(surah_info.disputed_points)} موضعًا مختلفًا في هذه السورة</p>
         {:else}
           <div class="metric_label">واصل التصفح</div>
           <div class="mt-4 text-lg font-bold text-ink">انتقل إلى السورة التالية أو السابقة، أو ارجع إلى الفهرس الكامل.</div>
@@ -143,7 +143,7 @@ $effect(() => {
       </div>
 
       {#if next_surah}
-        <a class="surah_pager_card" href={'/surahs/' + next_surah.surah}>
+        <a class="surah_pager_card" href="/surahs/{next_surah.surah}">
           <div class="metric_label flex items-center justify-end gap-2">السورة التالية <ArrowRightIcon class="size-4" /></div>
           <div class="mt-3 flex items-center justify-end gap-2 text-sm font-bold text-ink">
             <span>{format_surah_reference(next_surah.surah)}</span>
@@ -155,7 +155,7 @@ $effect(() => {
           {/if}
           <div class="mt-4 flex flex-wrap justify-end gap-2">
             <span class="badge" data-tone={next_surah.disputed_points === 0 ? 'ok' : 'accent'}>
-              {`${compact_number(next_surah.disputed_points)} موضعًا مختلفًا`}
+              {compact_number(next_surah.disputed_points)} موضعًا مختلفًا
             </span>
           </div>
         </a>
@@ -173,7 +173,7 @@ $effect(() => {
 {#if !surah_info}
   <section class="surface p-6">
     <div class="rule_label">السورة غير موجودة</div>
-    <h1 class="section_title mt-4">{`لا توجد سورة تطابق “${surah}”.`}</h1>
+    <h1 class="section_title mt-4">لا توجد سورة تطابق “{surah}”.</h1>
   </section>
 {:else}
   <div class="mb-6">
@@ -189,7 +189,7 @@ $effect(() => {
         <p class="mt-3 text-3xl text-ink-soft">{get_surah_secondary_name(surah_info)}</p>
       {/if}
       <p class="section_text mt-5">
-        {`${compact_number(surah_info.disputed_points)} موضعًا مختلفًا في هذه السورة: ${compact_number(surah_info.by_kind.end)} من النهايات و${compact_number(surah_info.by_kind.internal)} من الفواصل الداخلية.`}
+        {compact_number(surah_info.disputed_points)} موضعًا مختلفًا في هذه السورة: {compact_number(surah_info.by_kind.end)} من النهايات و{compact_number(surah_info.by_kind.internal)} من الفواصل الداخلية.
       </p>
     </div>
 

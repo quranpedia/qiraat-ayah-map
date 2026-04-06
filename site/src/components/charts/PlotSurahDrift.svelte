@@ -38,14 +38,14 @@ function build_plot({ Plot, width }) {
         curve: 'step-after',
         stroke: 'var(--accent-strong)',
         strokeWidth: 2,
-        title: d => `${system_name} · ${surah_label} · ${`الموضع ${d.slot_label}`} · ${d.location_label} · ${d.word || 'البداية'} · ${`التراكم ${`${d.cumulative_delta > 0 ? '+' : ''}${compact_number(d.cumulative_delta)}`}`}`
+        title: d => `${system_name} · ${surah_label} · الموضع ${d.slot_label} · ${d.location_label} · ${d.word || 'البداية'} · التراكم ${d.cumulative_delta > 0 ? '+' : ''}${compact_number(d.cumulative_delta)}`
       }),
       Plot.dot(points.filter(point => point.step > 0), {
         x: 'step',
         y: 'cumulative_delta',
         r: 4,
         fill: d => stroke_for(d.numbering_effect),
-        title: d => `${d.location_label} · ${d.word} · ${format_numbering_effect(d.numbering_effect)} · ${`التراكم ${`${d.cumulative_delta > 0 ? '+' : ''}${compact_number(d.cumulative_delta)}`}`}`
+        title: d => `${d.location_label} · ${d.word} · ${format_numbering_effect(d.numbering_effect)} · التراكم ${d.cumulative_delta > 0 ? '+' : ''}${compact_number(d.cumulative_delta)}`
       })
     ]
   })

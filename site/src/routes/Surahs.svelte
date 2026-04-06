@@ -64,13 +64,13 @@ function clear_filters() {
         تفتح كل سورة صفحة واحدة تجمع مصفوفة المواضع المختلف فيها، ولوحة التفصيل الموثقة بالشواهد، ومرئي المصحف المضمن.
       </p>
     </div>
-    <div class="stat_chip">{`${compact_number(visible_surahs.length)} سورة ظاهرة`}</div>
+    <div class="stat_chip">{compact_number(visible_surahs.length)} سورة ظاهرة</div>
   </div>
 
   <div class="mt-4 flex flex-wrap gap-2 text-sm text-ink-soft">
-    <span class="stat_chip">{`${compact_number(114)} سورة`}</span>
-    <span class="stat_chip">{`${compact_number(disputed_surah_count)} فيها خلاف`}</span>
-    <span class="stat_chip">{`${compact_number(summary.total_points)} مجموع المواضع المختلف فيها`}</span>
+    <span class="stat_chip">{compact_number(114)} سورة</span>
+    <span class="stat_chip">{compact_number(disputed_surah_count)} فيها خلاف</span>
+    <span class="stat_chip">{compact_number(summary.total_points)} مجموع المواضع المختلف فيها</span>
   </div>
 </section>
 
@@ -121,7 +121,7 @@ function clear_filters() {
 {:else}
   <section class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
     {#each visible_surahs as surah (surah.surah)}
-      <a class="surface block p-5 transition-transform duration-200 hover:-translate-y-0.5" href={'/surahs/' + surah.surah}>
+      <a class="surface block p-5 transition-transform duration-200 hover:-translate-y-0.5" href="/surahs/{surah.surah}">
         <div class="flex items-start justify-between gap-4">
           <div>
             <div class="metric_label">{format_surah_reference(surah.surah)}</div>
@@ -138,7 +138,7 @@ function clear_filters() {
         <div class="mt-5 flex flex-wrap gap-2 text-xs">
           <span class="badge" data-tone="ok">{compact_number(surah.by_kind.end)} {format_boundary_kind('end')}</span>
           <span class="badge" data-tone="accent">{compact_number(surah.by_kind.internal)} {format_boundary_kind('internal')}</span>
-          <span class="badge" data-tone="warn">{`الكوفي ${compact_number(surah.counts.kufi)}`}</span>
+          <span class="badge" data-tone="warn">الكوفي {compact_number(surah.counts.kufi)}</span>
         </div>
 
         <div class="mt-5 flex items-center gap-2 font-bold text-accent-strong">

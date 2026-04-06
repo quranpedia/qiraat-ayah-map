@@ -42,7 +42,7 @@ function build_plot({ Plot, width }) {
         y: 'kind',
         fill: 'count',
         inset: 0.7,
-        title: d => `${format_surah_reference(d.surah)} · ${`${format_boundary_kind(d.kind)} مختلفة: ${compact_number(d.count)}`}`
+        title: d => `${format_surah_reference(d.surah)} · ${format_boundary_kind(d.kind)} مختلفة: ${compact_number(d.count)}`
       }),
       Plot.text(cells, {
         x: 'surah',

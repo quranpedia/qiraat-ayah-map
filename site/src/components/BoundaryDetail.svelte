@@ -31,7 +31,7 @@ let { row } = $props()
     </div>
 
     <p class="section_text mt-5 text-sm">
-      {`يعده ${row.counted_by.length > 0 ? row.counted_by.map(get_system_name).join('، ') : 'لا أحد'}. ويسقطه ${row.omitted_by.length > 0 ? row.omitted_by.map(get_system_name).join('، ') : 'لا أحد'}.`}
+      يعده {row.counted_by.length > 0 ? row.counted_by.map(get_system_name).join('، ') : 'لا أحد'}. ويسقطه {row.omitted_by.length > 0 ? row.omitted_by.map(get_system_name).join('، ') : 'لا أحد'}.
     </p>
 
     <div class="mt-5 grid gap-4 lg:grid-cols-2">
@@ -77,9 +77,9 @@ let { row } = $props()
       <div class="flex flex-wrap items-center justify-between gap-3 text-ink">
         <div class="flex items-center gap-2"><BookOpenTextIcon class="size-4" /> هيكل الشواهد</div>
         <div class="flex flex-wrap gap-2">
-          <span class="badge" data-tone={row.primary_evidence_count > 0 ? 'ok' : 'warn'}>{`${compact_number(row.primary_evidence_count)} أصلي`}</span>
-          <span class="badge" data-tone={row.evidence_count > 0 ? 'accent' : 'warn'}>{`${compact_number(row.evidence_count)} جميع الشواهد`}</span>
-          <span class="badge" data-tone={row.reviewer_count > 0 ? 'ok' : 'warn'}>{`${compact_number(row.reviewer_count)} من المراجعين`}</span>
+          <span class="badge" data-tone={row.primary_evidence_count > 0 ? 'ok' : 'warn'}>{compact_number(row.primary_evidence_count)} أصلي</span>
+          <span class="badge" data-tone={row.evidence_count > 0 ? 'accent' : 'warn'}>{compact_number(row.evidence_count)} جميع الشواهد</span>
+          <span class="badge" data-tone={row.reviewer_count > 0 ? 'ok' : 'warn'}>{compact_number(row.reviewer_count)} من المراجعين</span>
         </div>
       </div>
 
@@ -94,7 +94,7 @@ let { row } = $props()
               <div class="mt-3 font-bold text-ink">{item.work}</div>
               <div class="mt-1 text-ink-soft">{item.locator}</div>
               {#if item.edition}
-                <div class="mt-1 text-xs">{`الطبعة: ${item.edition}`}</div>
+                <div class="mt-1 text-xs">الطبعة: {item.edition}</div>
               {/if}
               <div class="mt-3 flex flex-wrap gap-2">
                 {#each item.supports as system_id (system_id)}

@@ -40,10 +40,10 @@ let selected_profile = $derived(get_system_profile(selected_system_id))
     </div>
 
     <div class="mt-6 flex flex-wrap gap-2 text-sm text-ink-soft">
-      <span class="stat_chip">{`${compact_number(summary.by_kind.end)} موضع نهاية`}</span>
-      <span class="stat_chip">{`${compact_number(summary.by_kind.internal)} موضع داخلي`}</span>
-      <span class="stat_chip">{`${compact_number(summary.evidence.points_with_primary_evidence)} مع شاهد أصلي`}</span>
-      <span class="stat_chip">{`${compact_number(summary.evidence.points_uncited)} غير موثق`}</span>
+      <span class="stat_chip">{compact_number(summary.by_kind.end)} موضع نهاية</span>
+      <span class="stat_chip">{compact_number(summary.by_kind.internal)} موضع داخلي</span>
+      <span class="stat_chip">{compact_number(summary.evidence.points_with_primary_evidence)} مع شاهد أصلي</span>
+      <span class="stat_chip">{compact_number(summary.evidence.points_uncited)} غير موثق</span>
     </div>
   </div>
 
@@ -51,13 +51,13 @@ let selected_profile = $derived(get_system_profile(selected_system_id))
     <MetricCard label="المواضع المختلف فيها" value={compact_number(summary.total_points)} note="كل سطر هنا قرار حدودي صالح للمراجعة العلمية." />
     <MetricCard
       label="النهايات / الداخلية"
-      value={`${compact_number(summary.by_kind.end)} · ${compact_number(summary.by_kind.internal)}`}
+      value={compact_number(summary.by_kind.end) + ' · ' + compact_number(summary.by_kind.internal)}
       note="تنقسم مادة الخلاف إلى رؤوس آي في آخر الآية ومواضع فصل داخلية."
       tone="ok"
     />
     <MetricCard
       label="تغطية الشواهد"
-      value={`${compact_number(summary.evidence.points_with_evidence)} / ${compact_number(summary.total_points)}`}
+      value={compact_number(summary.evidence.points_with_evidence) + ' / ' + compact_number(summary.total_points)}
       note="بدأت الشواهد الأصلية تهبط موضعًا موضعًا، لكن أكثر المادة المعدودة لا يزال يحتاج إلى تفريغ من المصادر."
       tone="alert"
     />
@@ -163,7 +163,7 @@ let selected_profile = $derived(get_system_profile(selected_system_id))
           <div class="text-ink-soft">آثار الدمج</div>
         </div>
       </div>
-      <a class="pill_button mt-6 w-full" href={'/systems/' + selected_system.id}>
+      <a class="pill_button mt-6 w-full" href="/systems/{selected_system.id}">
         افتح ملف النظام الكامل
         <ArrowRightIcon class="size-4" />
       </a>

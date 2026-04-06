@@ -4,10 +4,6 @@ import { get_current_language } from '$lib/i18n.js'
 
 const { slug } = $props()
 
-function format_language(language) {
-  return language === 'ar' ? 'عربي' : 'English'
-}
-
 let current_language = $derived(get_current_language())
 let doc = $derived(get_doc(slug))
 let group = $derived(doc ? get_doc_group(doc.group) : null)
@@ -32,7 +28,7 @@ let same_language_as_ui = $derived(doc ? doc.language === current_language : fal
       {#if group}
         <span class="stat_chip">{group.title}</span>
       {/if}
-      <span class="stat_chip">{format_language(doc.language)}</span>
+      <span class="stat_chip">{doc.language === 'ar' ? 'عربي' : 'English'}</span>
       <span class="stat_chip">{doc.headers.length} عنوانًا فرعيًا</span>
     </div>
 
@@ -43,7 +39,7 @@ let same_language_as_ui = $derived(doc ? doc.language === current_language : fal
 
       <div class="mt-5 flex flex-wrap gap-3">
         {#if alternate_doc}
-          <a class="pill_button" href={`/docs/${alternate_doc.slug}`}>
+          <a class="pill_button" href="/docs/{alternate_doc.slug}">
             {alternate_doc.language === 'ar' ? 'افتح النسخة العربية' : 'Open the English version'}
           </a>
         {/if}
@@ -59,7 +55,7 @@ let same_language_as_ui = $derived(doc ? doc.language === current_language : fal
         <div class="rule_label">في هذه الصفحة</div>
         <div class="doc_grid mt-5" data-columns="3">
           {#each doc.headers as header (header.id)}
-            <a class="surface surface_muted block p-4" href={`#${header.id}`}>
+            <a class="surface surface_muted block p-4" href="#{header.id}">
               <div class="metric_label">H{header.level}</div>
               <div class="mt-2 text-sm font-bold text-ink" dir={doc.direction}>{header.title}</div>
             </a>
@@ -74,14 +70,14 @@ let same_language_as_ui = $derived(doc ? doc.language === current_language : fal
 
     <section class="doc_grid" data-columns="2">
       {#if neighbors.previous}
-        <a class="surface surface_muted h-full p-5 sm:p-6" href={`/docs/${neighbors.previous.slug}`}>
+        <a class="surface surface_muted h-full p-5 sm:p-6" href="/docs/{neighbors.previous.slug}">
           <div class="metric_label">الوثيقة السابقة</div>
           <div class="mt-3 text-xl font-bold text-ink" dir={neighbors.previous.direction}>{neighbors.previous.title}</div>
         </a>
       {/if}
 
       {#if neighbors.next}
-        <a class="surface surface_muted h-full p-5 sm:p-6" href={`/docs/${neighbors.next.slug}`}>
+        <a class="surface surface_muted h-full p-5 sm:p-6" href="/docs/{neighbors.next.slug}">
           <div class="metric_label">الوثيقة التالية</div>
           <div class="mt-3 text-xl font-bold text-ink" dir={neighbors.next.direction}>{neighbors.next.title}</div>
         </a>

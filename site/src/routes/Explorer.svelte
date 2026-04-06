@@ -96,12 +96,12 @@ let active_row = $derived(filtered_rows.find(row => row.anchor_key === selected_
         رشِّح المادة بحسب النظام أو نوع الموضع أو حالة المراجعة أو كلمة الارتكاز. وتحافظ اللوحة الجانبية على ربط الموضع الحالي بأثره في الترقيم.
       </p>
     </div>
-    <div class="stat_chip">{`${compact_number(filtered_rows.length)} سطرًا ظاهرًا`}</div>
+    <div class="stat_chip">{compact_number(filtered_rows.length)} سطرًا ظاهرًا</div>
   </div>
 
   <div class="mt-4 flex flex-wrap gap-2 text-sm text-ink-soft">
-    <span class="stat_chip">{`${compact_number(filtered_summary.by_kind.end)} نهاية`}</span>
-    <span class="stat_chip">{`${compact_number(filtered_summary.by_kind.internal)} داخلي`}</span>
+    <span class="stat_chip">{compact_number(filtered_summary.by_kind.end)} نهاية</span>
+    <span class="stat_chip">{compact_number(filtered_summary.by_kind.internal)} داخلي</span>
     {#each review_status_order as status (status)}
       {#if filtered_summary.by_status[status] > 0}
         <span class="stat_chip">{compact_number(filtered_summary.by_status[status])} {format_verification_status(status)}</span>
@@ -183,7 +183,7 @@ let active_row = $derived(filtered_rows.find(row => row.anchor_key === selected_
             {#each filtered_rows as row (row.anchor_key)}
               <tr data-active={row.anchor_key === active_row?.anchor_key ? 'true' : 'false'} onclick={() => (selected_key = row.anchor_key)}>
                 <td>
-                  <a class="font-bold text-ink underline decoration-line decoration-1 underline-offset-4" href={'/surahs/' + row.surah}>{row.location_label}</a>
+                  <a class="font-bold text-ink underline decoration-line decoration-1 underline-offset-4" href="/surahs/{row.surah}">{row.location_label}</a>
                 </td>
                 <td>
                   <div class="arabic_title text-xl text-ink">{row.word}</div>
@@ -193,8 +193,8 @@ let active_row = $derived(filtered_rows.find(row => row.anchor_key === selected_
                 <td><span class="badge" data-tone={get_verification_tone(row.verification_status)}>{format_verification_status(row.verification_status)}</span></td>
                 <td>
                   <div class="flex flex-wrap gap-2">
-                    <span class="badge" data-tone="ok">{`${compact_number(row.counted_by_count)} من ${compact_number(system_order.length)} يعده`}</span>
-                    <span class="badge" data-tone="warn">{`${compact_number(row.omitted_by_count)} يسقطه`}</span>
+                    <span class="badge" data-tone="ok">{compact_number(row.counted_by_count)} من {compact_number(system_order.length)} يعده</span>
+                    <span class="badge" data-tone="warn">{compact_number(row.omitted_by_count)} يسقطه</span>
                   </div>
                   <div class="mt-2 text-xs text-ink-soft">{row.counted_by.map(get_system_name).join('، ')}</div>
                 </td>

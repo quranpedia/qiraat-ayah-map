@@ -62,7 +62,7 @@ function is_active(item) {
 
       <nav class="hidden items-center gap-6 md:flex">
         {#each nav_items as item (item.href)}
-          <a class="nav_link flex items-center gap-2" data-active={is_active(item) ? 'true' : 'false'} href={item.href}>
+          <a class="nav_link flex items-center gap-2" data-active={is_active(item) ? 'true' : 'false'} href="{item.href}">
             <item.icon class="size-4" />
             <span>{item.label}</span>
           </a>
@@ -70,8 +70,8 @@ function is_active(item) {
       </nav>
 
       <div class="hidden items-center gap-2 lg:flex">
-        <span class="stat_chip">{`${compact_number(summary.by_system ? Object.keys(summary.by_system).length : 0)} نظام عدّ`}</span>
-        <span class="stat_chip">{`${compact_number(summary.total_points)} موضع مختلف فيه`}</span>
+        <span class="stat_chip">{compact_number(summary.by_system ? Object.keys(summary.by_system).length : 0)} نظام عدّ</span>
+        <span class="stat_chip">{compact_number(summary.total_points)} موضع مختلف فيه</span>
       </div>
 
       <div class="flex items-center gap-2" role="group" aria-label="تبديل اللغة">
@@ -101,7 +101,7 @@ function is_active(item) {
 
     <nav class="mt-4 flex gap-4 overflow-x-auto border-t border-line/60 pt-4 md:hidden">
       {#each nav_items as item (item.href)}
-        <a class="nav_link flex shrink-0 items-center gap-2" data-active={is_active(item) ? 'true' : 'false'} href={item.href}>
+        <a class="nav_link flex shrink-0 items-center gap-2" data-active={is_active(item) ? 'true' : 'false'} href="{item.href}">
           <item.icon class="size-4" />
           <span>{item.label}</span>
         </a>

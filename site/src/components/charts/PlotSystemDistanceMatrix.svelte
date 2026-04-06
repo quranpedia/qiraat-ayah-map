@@ -50,7 +50,7 @@ function build_plot({ Plot, width }) {
         y: 'right_name',
         fill: 'differing_points',
         inset: 1,
-        title: d => `${d.left_name} ↔ ${d.right_name} · ${`${compact_number(d.differing_points)} موضعًا مختلفًا`}`
+        title: d => `${d.left_name} ↔ ${d.right_name} · ${compact_number(d.differing_points)} موضعًا مختلفًا`
       }),
       Plot.text(localized_cells, {
         x: 'left_name',

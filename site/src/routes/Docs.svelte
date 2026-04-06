@@ -28,10 +28,6 @@ function get_quick_links() {
   ]
 }
 
-function format_language(language) {
-  return language === 'ar' ? 'عربي' : 'English'
-}
-
 let current_language = $derived(get_current_language())
 let quick_links = $derived(get_quick_links())
 let grouped_docs = $derived(get_grouped_docs(current_language))
@@ -50,7 +46,7 @@ let total_docs = $derived(docs.length)
 
   <section class="doc_grid" data-columns="3">
     {#each quick_links as item (item.href)}
-      <a class="surface surface_muted flex h-full flex-col gap-4 p-5 sm:p-6" href={item.href}>
+      <a class="surface surface_muted flex h-full flex-col gap-4 p-5 sm:p-6" href="{item.href}">
         <div class="flex items-center gap-3 text-accent-strong">
           <item.icon class="size-5" />
           <span class="metric_label">مسار سريع</span>
@@ -80,9 +76,9 @@ let total_docs = $derived(docs.length)
 
       <div class="doc_grid" data-columns="3">
         {#each group.docs as doc (doc.slug)}
-          <a class="surface flex h-full flex-col gap-4 p-5 sm:p-6" href={`/docs/${doc.slug}`}>
+          <a class="surface flex h-full flex-col gap-4 p-5 sm:p-6" href="/docs/{doc.slug}">
             <div class="flex flex-wrap items-center gap-2">
-              <span class="stat_chip">{format_language(doc.language)}</span>
+              <span class="stat_chip">{doc.language === 'ar' ? 'عربي' : 'English'}</span>
               <span class="stat_chip">{doc.title}</span>
             </div>
 

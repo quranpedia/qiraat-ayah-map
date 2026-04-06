@@ -60,7 +60,7 @@ let attestation_policy = $derived(
 {#if !system_info}
   <section class="surface p-6">
     <div class="rule_label">النظام غير موجود</div>
-    <h1 class="section_title mt-4">{`لا يوجد نظام عد يطابق “${system}”.`}</h1>
+    <h1 class="section_title mt-4">لا يوجد نظام عد يطابق “{system}”.</h1>
   </section>
 {:else}
   <section class="grid gap-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(16rem,0.85fr)] lg:items-start">
@@ -111,7 +111,7 @@ let attestation_policy = $derived(
           <div class="rule_label">هيئة التوثيق</div>
           <h2 class="section_title mt-4">كم من المادة المعدودة في هذا النظام لها شواهد</h2>
           <p class="section_text mt-3 text-sm">
-            {`تقتصر هذه المجاميع على الرؤوس المختلف فيها التي يعدها ${get_system_name(system_info)} فعلًا.`}
+            تقتصر هذه المجاميع على الرؤوس المختلف فيها التي يعدها {get_system_name(system_info)} فعلًا.
           </p>
         </div>
         <MilestoneIcon class="hidden size-10 text-accent-strong sm:block" />
@@ -131,8 +131,8 @@ let attestation_policy = $derived(
       </div>
 
       <div class="mt-5 flex flex-wrap gap-2 text-sm">
-        <span class="badge" data-tone="ok">{`الشواهد الأصلية ${compact_number(verification?.points_with_primary_evidence || 0)}`}</span>
-        <span class="badge" data-tone="warn">{`المواضع المراجعة ${compact_number(verification?.points_reviewed || 0)}`}</span>
+        <span class="badge" data-tone="ok">الشواهد الأصلية {compact_number(verification?.points_with_primary_evidence || 0)}</span>
+        <span class="badge" data-tone="warn">المواضع المراجعة {compact_number(verification?.points_reviewed || 0)}</span>
       </div>
     </div>
 
@@ -152,12 +152,12 @@ let attestation_policy = $derived(
         <div class="surface surface_muted p-4">
           <div class="metric_label">الأقرب</div>
           <div class="mt-3 text-2xl font-bold text-ink">{get_system_name(relationship?.nearest?.right_system_id)}</div>
-          <div class="mt-2 text-sm text-ink-soft">{`${compact_number(relationship?.nearest?.differing_points ?? 0)} موضعًا مختلفًا`}</div>
+          <div class="mt-2 text-sm text-ink-soft">{compact_number(relationship?.nearest?.differing_points ?? 0)} موضعًا مختلفًا</div>
         </div>
         <div class="surface surface_muted p-4">
           <div class="metric_label">الأبعد</div>
           <div class="mt-3 text-2xl font-bold text-ink">{get_system_name(relationship?.farthest?.right_system_id)}</div>
-          <div class="mt-2 text-sm text-ink-soft">{`${compact_number(relationship?.farthest?.differing_points ?? 0)} موضعًا مختلفًا`}</div>
+          <div class="mt-2 text-sm text-ink-soft">{compact_number(relationship?.farthest?.differing_points ?? 0)} موضعًا مختلفًا</div>
         </div>
       </div>
 
@@ -214,21 +214,21 @@ let attestation_policy = $derived(
     <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
       <div>
         <div class="rule_label">بؤر السور</div>
-        <h2 class="section_title mt-4">{`أين تظهر بصمة ${get_system_name(system_info)} بأقوى صورة`}</h2>
+        <h2 class="section_title mt-4">أين تظهر بصمة {get_system_name(system_info)} بأقوى صورة</h2>
       </div>
       <LibraryBigIcon class="hidden size-10 text-accent-strong sm:block" />
     </div>
 
     <div class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
       {#each top_surahs as surah (surah.surah)}
-        <a class="surface block p-4 transition-transform duration-200 hover:-translate-y-0.5" href={'/surahs/' + surah.surah}>
+        <a class="surface block p-4 transition-transform duration-200 hover:-translate-y-0.5" href="/surahs/{surah.surah}">
           <div class="metric_label">{format_surah_reference(surah.surah)}</div>
           <div class="mt-3 text-xl font-bold text-ink">{get_surah_name(surah)}</div>
           {#if get_surah_secondary_name(surah)}
             <div class="mt-2 text-lg text-ink-soft">{get_surah_secondary_name(surah)}</div>
           {/if}
           <div class="mt-4 flex flex-wrap gap-2 text-xs">
-            <span class="badge" data-tone="ok">{`يعد ${compact_number(surah.counted_points)}`}</span>
+            <span class="badge" data-tone="ok">يعد {compact_number(surah.counted_points)}</span>
             <span class="badge" data-tone={surah.delta_from_kufi === 0 ? 'ok' : 'warn'}>{format_signed_delta(surah.delta_from_kufi)}</span>
           </div>
           <div class="mt-4 flex items-center gap-2 font-bold text-accent-strong">

@@ -129,7 +129,7 @@ function buildMarkerTitle(row, leftCounts, rightCounts) {
   const leftStatus = format_boundary_action(leftCounts)
   const rightStatus = format_boundary_action(rightCounts)
 
-  return `${row.location_label} · ${row.word} · ${pointType} — ${`${leftName} ${leftStatus}؛ ${rightName} ${rightStatus}.`}`
+  return `${row.location_label} · ${row.word} · ${pointType} — ${leftName} ${leftStatus}؛ ${rightName} ${rightStatus}.`
 }
 
 function getMarkerTone(leftCounts, rightCounts) {
@@ -213,7 +213,7 @@ function buildPairAyahTitle(entry) {
       : 'فروق في نهايات الآيات'
   const pointLabel = format_difference_count(entry.pointCount, 'موضع مختلف', 'مواضع مختلفة')
 
-  return `${format_ayah_reference(entry.ayah)}: ${kindLabel}؛ ${`لهذا الزوج ${pointLabel}`}`
+  return `${format_ayah_reference(entry.ayah)}: ${kindLabel}؛ لهذا الزوج ${pointLabel}`
 }
 
 function scrollAyahIntoView(ayahNumber) {
@@ -498,10 +498,10 @@ let displayBasmala = $derived.by(() => {
       </div>
 
       <div class="flex flex-wrap gap-2 text-xs text-ink-soft">
-        <span class="badge" data-tone="accent">{`${getShortLabel(leftSystemId)} فقط: ${compact_number(comparisonSummary.left_only)}`}</span>
-        <span class="badge" data-tone="alert">{`${getShortLabel(rightSystemId)} فقط: ${compact_number(comparisonSummary.right_only)}`}</span>
+        <span class="badge" data-tone="accent">{getShortLabel(leftSystemId)} فقط: {compact_number(comparisonSummary.left_only)}</span>
+        <span class="badge" data-tone="alert">{getShortLabel(rightSystemId)} فقط: {compact_number(comparisonSummary.right_only)}</span>
         {#if markerScope === 'either'}
-          <span class="badge" data-tone="ok">{`كلاهما: ${compact_number(comparisonSummary.both)}`}</span>
+          <span class="badge" data-tone="ok">كلاهما: {compact_number(comparisonSummary.both)}</span>
         {/if}
       </div>
     </div>
@@ -512,23 +512,23 @@ let displayBasmala = $derived.by(() => {
           <div class="metric_label">ملخص الزوج الحالي</div>
           {#if leftSystemId === rightSystemId}
             <p class="mt-3 text-sm text-ink-soft">
-              {`المحددان كلاهما على ${get_system_name(leftSystem) || leftSystemId}، لذلك لا توجد فروق زوجية تُذكر في هذه السورة.`}
+              المحددان كلاهما على {get_system_name(leftSystem) || leftSystemId}، لذلك لا توجد فروق زوجية تُذكر في هذه السورة.
             </p>
           {:else if pairDifferenceSummary.ayahCount === 0}
             <p class="mt-3 text-sm text-ink-soft">
-              {`لا يختلف ${get_system_name(leftSystem) || leftSystemId} و${get_system_name(rightSystem) || rightSystemId} في أي موضع مسجل داخل هذه السورة.`}
+              لا يختلف {get_system_name(leftSystem) || leftSystemId} و{get_system_name(rightSystem) || rightSystemId} في أي موضع مسجل داخل هذه السورة.
             </p>
           {:else}
             <p class="mt-3 text-sm text-ink-soft">
-              {`يختلف ${get_system_name(leftSystem) || leftSystemId} و${get_system_name(rightSystem) || rightSystemId} في ${format_difference_count(pairDifferenceSummary.pointCount, 'موضع مسجل', 'مواضع مسجلة')} عبر ${format_difference_count(pairDifferenceSummary.ayahCount, 'آية', 'آيات')} داخل هذه السورة.`}
+              يختلف {get_system_name(leftSystem) || leftSystemId} و{get_system_name(rightSystem) || rightSystemId} في {format_difference_count(pairDifferenceSummary.pointCount, 'موضع مسجل', 'مواضع مسجلة')} عبر {format_difference_count(pairDifferenceSummary.ayahCount, 'آية', 'آيات')} داخل هذه السورة.
             </p>
           {/if}
         </div>
 
         <div class="flex flex-wrap gap-2 text-xs text-ink-soft">
           <span class="badge" data-tone="accent">{format_difference_count(pairDifferenceSummary.ayahCount, 'آية مختلفة', 'آيات مختلفة')}</span>
-          <span class="badge" data-tone="ok">{`${compact_number(pairDifferenceSummary.endAyahCount)} مع فروق في النهايات`}</span>
-          <span class="badge" data-tone="warn">{`${compact_number(pairDifferenceSummary.internalAyahCount)} مع فروق داخلية`}</span>
+          <span class="badge" data-tone="ok">{compact_number(pairDifferenceSummary.endAyahCount)} مع فروق في النهايات</span>
+          <span class="badge" data-tone="warn">{compact_number(pairDifferenceSummary.internalAyahCount)} مع فروق داخلية</span>
         </div>
       </div>
 
@@ -617,7 +617,7 @@ let displayBasmala = $derived.by(() => {
     </div>
 
     <p class="mt-4 text-sm text-ink-soft">
-      {`يظهر ${compact_number(displaySummary.shownAyahs)} من أصل ${compact_number(viewer.kufi_ayah_count)} آية. والمواضع الظاهرة في هذا الترشيح هي ${compact_number(comparisonSummary.visible)} موضعًا: منها ${compact_number(comparisonSummary.end)} من نهايات الآيات و${compact_number(comparisonSummary.internal)} من الفواصل الداخلية.`}
+      يظهر {compact_number(displaySummary.shownAyahs)} من أصل {compact_number(viewer.kufi_ayah_count)} آية. والمواضع الظاهرة في هذا الترشيح هي {compact_number(comparisonSummary.visible)} موضعًا: منها {compact_number(comparisonSummary.end)} من نهايات الآيات و{compact_number(comparisonSummary.internal)} من الفواصل الداخلية.
     </p>
 
     {#if selectedMarkerHidden}
