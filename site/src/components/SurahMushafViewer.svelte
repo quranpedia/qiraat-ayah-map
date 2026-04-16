@@ -493,7 +493,7 @@ let displayBasmala = $derived.by(() => {
         <div class="rule_label">عارض المصحف</div>
         <h2 class="section_title mt-4">علامات الحدود داخل نص السورة</h2>
         <p class="section_text mt-3 text-sm">
-          تبقى الفواصل الداخلية مضمّنة بعد كلمة الارتكاز، بينما تظهر فروق نهايات الآيات بجوار رقم الآية حتى تتمكن من قراءة السورة قراءة طبيعية مع بقاء مواضع الوقف المختلفة ظاهرة.
+          تظهر الفواصل الداخلية بعد كلمة الارتكاز، وتظهر فروق النهايات بجوار رقم الآية.
         </p>
       </div>
 
@@ -509,18 +509,18 @@ let displayBasmala = $derived.by(() => {
     <div class="mushaf_pair_summary mt-6">
       <div class="flex flex-wrap items-start justify-between gap-4">
         <div>
-          <div class="metric_label">ملخص الزوج الحالي</div>
+          <div class="metric_label">الزوج الحالي</div>
           {#if leftSystemId === rightSystemId}
             <p class="mt-3 text-sm text-ink-soft">
-              المحددان كلاهما على {get_system_name(leftSystem) || leftSystemId}، لذلك لا توجد فروق زوجية تُذكر في هذه السورة.
+              كلا المحددين على {get_system_name(leftSystem) || leftSystemId}، لذلك لا فرق زوجيًا هنا.
             </p>
           {:else if pairDifferenceSummary.ayahCount === 0}
             <p class="mt-3 text-sm text-ink-soft">
-              لا يختلف {get_system_name(leftSystem) || leftSystemId} و{get_system_name(rightSystem) || rightSystemId} في أي موضع مسجل داخل هذه السورة.
+              لا يختلف {get_system_name(leftSystem) || leftSystemId} و{get_system_name(rightSystem) || rightSystemId} في أي موضع مسجل هنا.
             </p>
           {:else}
             <p class="mt-3 text-sm text-ink-soft">
-              يختلف {get_system_name(leftSystem) || leftSystemId} و{get_system_name(rightSystem) || rightSystemId} في {format_difference_count(pairDifferenceSummary.pointCount, 'موضع مسجل', 'مواضع مسجلة')} عبر {format_difference_count(pairDifferenceSummary.ayahCount, 'آية', 'آيات')} داخل هذه السورة.
+              يختلف {get_system_name(leftSystem) || leftSystemId} و{get_system_name(rightSystem) || rightSystemId} في {format_difference_count(pairDifferenceSummary.pointCount, 'موضع مسجل', 'مواضع مسجلة')} عبر {format_difference_count(pairDifferenceSummary.ayahCount, 'آية', 'آيات')}.
             </p>
           {/if}
         </div>
@@ -549,7 +549,7 @@ let displayBasmala = $derived.by(() => {
           {/each}
         </div>
         <p class="mt-3 text-xs text-ink-soft">
-          اضغط رقم الآية للانتقال إليها. وتستعمل الآيات ذات فروق النهايات لون النهاية، والآيات ذات الفروق الداخلية لون الداخل، والآيات التي تجمع النوعين لونًا مركبًا.
+          اضغط رقم الآية للانتقال إليها. لون النهاية لفروق النهايات، ولون الداخل للفروق الداخلية، واللون المركب لما يجمعهما.
         </p>
       {/if}
     </div>
@@ -612,17 +612,17 @@ let displayBasmala = $derived.by(() => {
       <span class="badge" data-tone="accent">{getShortLabel(leftSystemId)} = {get_system_name(leftSystem) || leftSystemId}</span>
       <span class="badge" data-tone="alert">{getShortLabel(rightSystemId)} = {get_system_name(rightSystem) || rightSystemId}</span>
       {#if script === 'uthmani'}
-        <span class="badge" data-tone="warn">تُعرض بسملة افتتاح السورة مستقلة إذا كان ملف المصدر يسبق بها الآية الأولى.</span>
+        <span class="badge" data-tone="warn">قد تظهر البسملة مستقلة إذا سبق بها المصدر الآية الأولى.</span>
       {/if}
     </div>
 
     <p class="mt-4 text-sm text-ink-soft">
-      يظهر {compact_number(displaySummary.shownAyahs)} من أصل {compact_number(viewer.kufi_ayah_count)} آية. والمواضع الظاهرة في هذا الترشيح هي {compact_number(comparisonSummary.visible)} موضعًا: منها {compact_number(comparisonSummary.end)} من نهايات الآيات و{compact_number(comparisonSummary.internal)} من الفواصل الداخلية.
+      يظهر {compact_number(displaySummary.shownAyahs)} من أصل {compact_number(viewer.kufi_ayah_count)} آية. والظاهر في هذا الترشيح {compact_number(comparisonSummary.visible)} موضعًا: {compact_number(comparisonSummary.end)} نهايات و{compact_number(comparisonSummary.internal)} فواصل داخلية.
     </p>
 
     {#if selectedMarkerHidden}
       <div class="mt-3 flex flex-wrap items-center gap-3 text-sm text-ink-soft">
-        <p>الموضع المحدد حاليًا مخفي بهذا الترشيح أو بهذا الزوج من الأنظمة.</p>
+        <p>الموضع المحدد مخفي بهذا الترشيح أو بهذا الزوج.</p>
         <button type="button" class="pill_button" data-tone="accent" onclick={revealSelectedBoundary}>
           اضبط العارض لإظهاره
         </button>
@@ -631,7 +631,7 @@ let displayBasmala = $derived.by(() => {
 
     {#if comparisonSummary.visible === 0 && rows.length > 0}
       <p class="mt-4 text-sm text-ink-soft">
-        مع هذا الزوج وهذا الترشيح لا يظهر الآن أي موضع خلاف مسجل في هذه السورة.
+        لا يظهر مع هذا الزوج وهذا الترشيح أي موضع خلاف مسجل.
       </p>
     {/if}
 

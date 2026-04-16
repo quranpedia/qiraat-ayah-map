@@ -1,9 +1,11 @@
 <script>
-import { compact_number, get_system_name } from '$lib/dataset.svelte.js'
+import { compact_number, format_difference_count, get_system_name } from '$lib/dataset.svelte.js'
+import { get_current_language } from '$lib/i18n.js'
 
 import PlotFrame from './PlotFrame.svelte'
 
 let { systems } = $props()
+const is_english = get_current_language() === 'en'
 
 let chart_rows = $derived.by(() =>
   systems.map(system => ({
@@ -30,7 +32,7 @@ function build_plot({ Plot, width }) {
     },
     y: {
       grid: true,
-      label: 'مجموع الآيات'
+      label: is_english ? 'Total ayahs' : 'مجموع الآيات'
     },
     marks: [
       Plot.ruleY([0], { stroke: 'var(--line)' }),
@@ -38,7 +40,7 @@ function build_plot({ Plot, width }) {
         x: 'display_name',
         y: 'total_ayahs',
         fill: 'var(--accent-strong)',
-        title: d => `${d.display_name}: ${compact_number(d.total_ayahs)} آية`
+        title: d => `${d.display_name}: ${format_difference_count(d.total_ayahs, 'آية', 'آيات')}`
       }),
       Plot.text(chart_rows, {
         x: 'display_name',

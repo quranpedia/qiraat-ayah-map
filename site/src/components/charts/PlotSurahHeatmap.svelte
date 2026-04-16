@@ -1,9 +1,19 @@
 <script>
-import { compact_number, format_boundary_kind, format_surah_reference } from '$lib/dataset.svelte.js'
+import { compact_number, format_boundary_kind, format_difference_count, format_surah_reference } from '$lib/dataset.svelte.js'
+import { get_current_language } from '$lib/i18n.js'
 
 import PlotFrame from './PlotFrame.svelte'
 
 let { surahs } = $props()
+const is_english = get_current_language() === 'en'
+
+function heatmap_kind_label(kind) {
+  if (is_english) {
+    return kind === 'end' ? 'End' : 'Internal'
+  }
+
+  return format_boundary_kind(kind)
+}
 
 let cells = $derived(
   surahs.flatMap(surah => [
@@ -29,12 +39,13 @@ function build_plot({ Plot, width }) {
       range: ['#f7efe1', '#3f7059']
     },
     x: {
-      label: 'السورة',
+      label: is_english ? 'Surah' : 'السورة',
       ticks: 12
     },
     y: {
       label: null,
-      domain: ['end', 'internal']
+      domain: ['end', 'internal'],
+      tickFormat: d => heatmap_kind_label(d)
     },
     marks: [
       Plot.cell(cells, {
@@ -42,7 +53,7 @@ function build_plot({ Plot, width }) {
         y: 'kind',
         fill: 'count',
         inset: 0.7,
-        title: d => `${format_surah_reference(d.surah)} · ${format_boundary_kind(d.kind)} مختلفة: ${compact_number(d.count)}`
+        title: d => `${format_surah_reference(d.surah)} · ${heatmap_kind_label(d.kind)}: ${format_difference_count(d.count, 'موضع مختلف', 'مواضع مختلفة')}`
       }),
       Plot.text(cells, {
         x: 'surah',

@@ -10,12 +10,19 @@ import {
   rows,
   system_order
 } from '$lib/dataset.svelte.js'
+import { get_current_language } from '$lib/i18n.js'
 
 let search = $state('')
 let system_filter = $state('all')
 let kind_filter = $state('all')
 let status_filter = $state('all')
 let selected_key = $state(null)
+let current_language = $derived(get_current_language())
+
+function join_system_names(list) {
+  const separator = current_language === 'en' ? ', ' : '، '
+  return list.map(get_system_name).join(separator)
+}
 
 function clear_filters() {
   search = ''
@@ -93,10 +100,10 @@ let active_row = $derived(filtered_rows.find(row => row.anchor_key === selected_
     <div>
       <h1 class="section_title">افحص طبقة مواضع الخلاف</h1>
       <p class="section_text mt-3">
-        رشِّح المادة بحسب النظام أو نوع الموضع أو حالة المراجعة أو كلمة الارتكاز. وتحافظ اللوحة الجانبية على ربط الموضع الحالي بأثره في الترقيم.
+        رشِّح بحسب النظام أو النوع أو حالة التوثيق أو كلمة الارتكاز، ثم افحص الموضع المختار في اللوحة الجانبية.
       </p>
     </div>
-    <div class="stat_chip">{compact_number(filtered_rows.length)} سطرًا ظاهرًا</div>
+    <div class="stat_chip">{compact_number(filtered_rows.length)} نتيجة ظاهرة</div>
   </div>
 
   <div class="mt-4 flex flex-wrap gap-2 text-sm text-ink-soft">
@@ -116,7 +123,7 @@ let active_row = $derived(filtered_rows.find(row => row.anchor_key === selected_
       <div class="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
         <label>
           <span class="metric_label">البحث</span>
-          <input class="search mt-3" bind:value={search} placeholder="كلمة أو مفتاح ارتكاز أو 2:219" />
+          <input class="search mt-3" bind:value={search} placeholder="كلمة، مفتاح، أو 2:219" />
         </label>
 
         <label>
@@ -182,21 +189,21 @@ let active_row = $derived(filtered_rows.find(row => row.anchor_key === selected_
           <tbody>
             {#each filtered_rows as row (row.anchor_key)}
               <tr data-active={row.anchor_key === active_row?.anchor_key ? 'true' : 'false'} onclick={() => (selected_key = row.anchor_key)}>
-                <td>
+                <td data-label="الموضع">
                   <a class="font-bold text-ink underline decoration-line decoration-1 underline-offset-4" href={window.navgo.href('/surahs/' + row.surah)}>{row.location_label}</a>
                 </td>
-                <td>
+                <td data-label="الارتكاز">
                   <div class="arabic_title text-xl text-ink">{row.word}</div>
                   <div class="mt-2 text-xs text-ink-soft">{row.anchor_key}</div>
                 </td>
-                <td><span class="badge" data-tone={row.kind === 'internal' ? 'accent' : 'ok'}>{format_boundary_kind(row.kind)}</span></td>
-                <td><span class="badge" data-tone={get_verification_tone(row.verification_status)}>{format_verification_status(row.verification_status)}</span></td>
-                <td>
+                <td data-label="النوع"><span class="badge" data-tone={row.kind === 'internal' ? 'accent' : 'ok'}>{format_boundary_kind(row.kind)}</span></td>
+                <td data-label="الحالة"><span class="badge" data-tone={get_verification_tone(row.verification_status)}>{format_verification_status(row.verification_status)}</span></td>
+                <td data-label="يعده">
                   <div class="flex flex-wrap gap-2">
                     <span class="badge" data-tone="ok">{compact_number(row.counted_by_count)} من {compact_number(system_order.length)} يعده</span>
                     <span class="badge" data-tone="warn">{compact_number(row.omitted_by_count)} يسقطه</span>
                   </div>
-                  <div class="mt-2 text-xs text-ink-soft">{row.counted_by.map(get_system_name).join('، ')}</div>
+                  <div class="mt-2 text-xs text-ink-soft">{join_system_names(row.counted_by)}</div>
                 </td>
               </tr>
             {/each}

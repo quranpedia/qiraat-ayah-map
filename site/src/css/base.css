@@ -236,6 +236,30 @@ button {
   color: var(--ink);
 }
 
+.mobile_nav_link {
+  display: flex;
+  min-height: 4.4rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  border: 1px solid color-mix(in oklch, var(--line) 80%, white 20%);
+  border-radius: 1rem;
+  background: color-mix(in oklch, var(--panel) 92%, white 8%);
+  color: var(--ink-soft);
+  text-align: center;
+  font-size: 0.76rem;
+  font-weight: 800;
+  line-height: 1.2;
+  padding: 0.65rem 0.5rem;
+}
+
+.mobile_nav_link[data-active='true'] {
+  background: color-mix(in oklch, var(--accent-soft) 40%, white 60%);
+  border-color: color-mix(in oklch, var(--accent) 38%, var(--line) 62%);
+  color: var(--ink);
+}
+
 .pill_button {
   display: inline-flex;
   align-items: center;
@@ -350,8 +374,8 @@ button {
 }
 
 .badge[data-tone='warn'] {
-  background: color-mix(in oklch, var(--warn) 18%, white 82%);
-  color: color-mix(in oklch, var(--warn) 76%, black 24%);
+  background: color-mix(in oklch, var(--warn) 24%, white 76%);
+  color: color-mix(in oklch, var(--warn) 92%, black 40%);
 }
 
 .badge[data-tone='alert'] {
@@ -428,8 +452,65 @@ a.surah_pager_card:hover {
 }
 
 @media (max-width: 52rem) {
+  .display_title {
+    font-size: clamp(2.1rem, 8vw, 3.4rem);
+  }
+
+  .section_title {
+    font-size: clamp(1.45rem, 6vw, 2.1rem);
+  }
+
   .data_table {
-    min-width: 48rem;
+    min-width: 0;
+  }
+
+  .table_shell {
+    overflow: visible;
+    border: 0;
+    background: transparent;
+  }
+
+  .data_table thead {
+    display: none;
+  }
+
+  .data_table,
+  .data_table tbody,
+  .data_table tr,
+  .data_table td {
+    display: block;
+    width: 100%;
+  }
+
+  .data_table tbody {
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .data_table tbody tr {
+    border: 1px solid color-mix(in oklch, var(--line) 78%, white 22%);
+    border-radius: 1.25rem;
+    background: color-mix(in oklch, var(--panel) 92%, white 8%);
+    box-shadow: 0 18px 48px -40px var(--shadow);
+  }
+
+  .data_table td {
+    padding: 0.8rem 1rem;
+  }
+
+  .data_table td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .data_table td:last-child {
+    border-bottom: 0;
   }
 }
 
@@ -847,4 +928,3 @@ a.surah_pager_card:hover {
   font-weight: 700;
   vertical-align: middle;
 }
-

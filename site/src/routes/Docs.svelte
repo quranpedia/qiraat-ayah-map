@@ -1,7 +1,6 @@
 <script>
 import { BookOpenCheckIcon, FilesIcon, LibraryBigIcon } from '@lucide/svelte'
 
-import { docs } from '$lib/docs.generated.js'
 import { get_grouped_docs } from '$lib/docs.js'
 import { get_current_language } from '$lib/i18n.js'
 
@@ -31,16 +30,16 @@ function get_quick_links() {
 let current_language = $derived(get_current_language())
 let quick_links = $derived(get_quick_links())
 let grouped_docs = $derived(get_grouped_docs(current_language))
-let total_docs = $derived(docs.length)
+let total_docs = $derived(grouped_docs.reduce((total, group) => total + group.docs.length, 0))
 </script>
 
 <section class="grid gap-8">
   <div>
     <div class="rule_label">الوثائق</div>
-    <h1 class="display_title mt-5 max-w-4xl text-ink">المواد التي كانت في مجلد الوثائق صارت داخل الموقع.</h1>
+    <h1 class="display_title mt-5 max-w-4xl text-ink">مكتبة الوثائق الأصلية للمشروع.</h1>
     <p class="section_text mt-5 max-w-3xl text-base sm:text-lg">
-      ستجد هنا المدخلات العامة، وسياسة التحرير، ووثائق المصادر، وملخص المراحل، وعقود الملفات العلمية.
-      صفحات المشروع والمطور بقيت أفضل نقطة بداية سريعة، وهذه المكتبة تحفظ التفاصيل الكاملة داخل التطبيق نفسه.
+      ستجد هنا الدليل العام، ووثائق التحرير والمراجعة، ووثائق المصادر، والعقود العلمية.
+      إن كنت تريد مدخلًا سريعًا فابدأ بصفحة المشروع أو صفحة المطور، ثم ارجع إلى الوثيقة التفصيلية عند الحاجة.
     </p>
   </div>
 
@@ -63,7 +62,7 @@ let total_docs = $derived(docs.length)
     <div class="flex flex-wrap items-center gap-3">
       <span class="stat_chip">{total_docs} وثيقة</span>
       <span class="stat_chip">{grouped_docs.length} أقسام</span>
-      <span class="stat_chip">الوثائق تعرض بلغتها الأصلية</span>
+      <span class="stat_chip">العربية والإنجليزية بحسب الأصل</span>
     </div>
   </section>
 

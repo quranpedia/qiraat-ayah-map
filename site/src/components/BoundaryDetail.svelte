@@ -14,8 +14,15 @@ import {
   get_verification_tone,
   systems
 } from '$lib/dataset.svelte.js'
+import { get_current_language } from '$lib/i18n.js'
 
 let { row } = $props()
+let current_language = $derived(get_current_language())
+
+function join_system_names(list) {
+  const separator = current_language === 'en' ? ', ' : '، '
+  return list.map(get_system_name).join(separator)
+}
 </script>
 
 {#if row}
@@ -31,7 +38,7 @@ let { row } = $props()
     </div>
 
     <p class="section_text mt-5 text-sm">
-      يعده {row.counted_by.length > 0 ? row.counted_by.map(get_system_name).join('، ') : 'لا أحد'}. ويسقطه {row.omitted_by.length > 0 ? row.omitted_by.map(get_system_name).join('، ') : 'لا أحد'}.
+      يعده {row.counted_by.length > 0 ? join_system_names(row.counted_by) : 'لا أحد'}، ويسقطه {row.omitted_by.length > 0 ? join_system_names(row.omitted_by) : 'لا أحد'}.
     </p>
 
     <div class="mt-5 grid gap-4 lg:grid-cols-2">
@@ -55,13 +62,13 @@ let { row } = $props()
     </div>
 
     <div class="mt-5 surface surface_muted p-4">
-      <div class="flex items-center gap-2 text-ink"><MilestoneIcon class="size-4" /> أثر الترقيم حسب النظام</div>
+      <div class="flex items-center gap-2 text-ink"><MilestoneIcon class="size-4" /> أثره في كل نظام</div>
       <div class="mt-3 space-y-3 text-sm text-ink-soft">
         {#each systems as system (system.id)}
           <div class="flex items-center justify-between gap-3 border-b border-line/60 pb-3 last:border-b-0 last:pb-0">
             <div>
               <div class="font-bold text-ink">{get_system_name(system)}</div>
-              {#if get_system_secondary_name(system)}
+              {#if current_language !== 'en' && get_system_secondary_name(system)}
                 <div class="text-base text-ink-soft">{get_system_secondary_name(system)}</div>
               {/if}
             </div>
@@ -75,11 +82,11 @@ let { row } = $props()
 
     <div class="mt-5 surface surface_muted p-4">
       <div class="flex flex-wrap items-center justify-between gap-3 text-ink">
-        <div class="flex items-center gap-2"><BookOpenTextIcon class="size-4" /> هيكل الشواهد</div>
+        <div class="flex items-center gap-2"><BookOpenTextIcon class="size-4" /> الشواهد</div>
         <div class="flex flex-wrap gap-2">
           <span class="badge" data-tone={row.primary_evidence_count > 0 ? 'ok' : 'warn'}>{compact_number(row.primary_evidence_count)} أصلي</span>
-          <span class="badge" data-tone={row.evidence_count > 0 ? 'accent' : 'warn'}>{compact_number(row.evidence_count)} جميع الشواهد</span>
-          <span class="badge" data-tone={row.reviewer_count > 0 ? 'ok' : 'warn'}>{compact_number(row.reviewer_count)} من المراجعين</span>
+          <span class="badge" data-tone={row.evidence_count > 0 ? 'accent' : 'warn'}>{compact_number(row.evidence_count)} كل الشواهد</span>
+          <span class="badge" data-tone={row.reviewer_count > 0 ? 'ok' : 'warn'}>{compact_number(row.reviewer_count)} مراجعون</span>
         </div>
       </div>
 
@@ -109,7 +116,7 @@ let { row } = $props()
         </div>
       {:else}
         <p class="mt-4 text-sm text-ink-soft">
-          لا يوجد شاهد مرفق بعد. الموضع مهيأ بنيويًا للتفريغ من المصادر والمراجعة العلمية.
+          لا يوجد شاهد مرفق بعد. الموضع جاهز للتفريغ والمراجعة.
         </p>
       {/if}
 
@@ -141,5 +148,5 @@ let { row } = $props()
     </div>
   </div>
 {:else}
-  <div class="surface p-5 text-sm text-ink-soft">اختر موضعًا من مواضع الخلاف لعرض أثره بين الأنظمة وحالة شواهده.</div>
+  <div class="surface p-5 text-sm text-ink-soft">اختر موضعًا لعرض أثره بين الأنظمة وحالة شواهده.</div>
 {/if}

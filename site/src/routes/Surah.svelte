@@ -120,7 +120,7 @@ $effect(() => {
         <div class="surah_pager_card" data-disabled="true">
           <div class="metric_label flex items-center gap-2"><ArrowLeftIcon class="size-4" /> السورة السابقة</div>
           <div class="mt-4 text-xl font-bold text-ink">بداية المصحف</div>
-          <p class="section_text mt-3 text-sm">هذه أول سورة في التسلسل.</p>
+          <p class="section_text mt-3 text-sm">هذه أول سورة.</p>
         </div>
       {/if}
 
@@ -135,7 +135,7 @@ $effect(() => {
           <p class="mt-3 text-sm text-ink-soft">{compact_number(surah_info.disputed_points)} موضعًا مختلفًا في هذه السورة</p>
         {:else}
           <div class="metric_label">واصل التصفح</div>
-          <div class="mt-4 text-lg font-bold text-ink">انتقل إلى السورة التالية أو السابقة، أو ارجع إلى الفهرس الكامل.</div>
+          <div class="mt-4 text-lg font-bold text-ink">انتقل إلى السورة التالية أو السابقة، أو ارجع إلى الفهرس.</div>
         {/if}
         <div class="mt-5">
           <a class="pill_button" href={window.navgo.href('/surahs')}><LibraryBigIcon class="size-4" /> جميع السور</a>
@@ -163,7 +163,7 @@ $effect(() => {
         <div class="surah_pager_card" data-disabled="true">
           <div class="metric_label flex items-center justify-end gap-2">السورة التالية <ArrowRightIcon class="size-4" /></div>
           <div class="mt-4 text-xl font-bold text-ink">نهاية المصحف</div>
-          <p class="section_text mt-3 text-sm">هذه آخر سورة في التسلسل.</p>
+          <p class="section_text mt-3 text-sm">هذه آخر سورة.</p>
         </div>
       {/if}
     </div>
@@ -189,12 +189,12 @@ $effect(() => {
         <p class="mt-3 text-3xl text-ink-soft">{get_surah_secondary_name(surah_info)}</p>
       {/if}
       <p class="section_text mt-5">
-        {compact_number(surah_info.disputed_points)} موضعًا مختلفًا في هذه السورة: {compact_number(surah_info.by_kind.end)} من النهايات و{compact_number(surah_info.by_kind.internal)} من الفواصل الداخلية.
+        فيها {compact_number(surah_info.disputed_points)} موضعًا مختلفًا: {compact_number(surah_info.by_kind.end)} نهايات و{compact_number(surah_info.by_kind.internal)} فواصل داخلية.
       </p>
     </div>
 
     <div class="surface surface_muted p-5">
-      <div class="metric_label">عدد الآيات حسب النظام</div>
+      <div class="metric_label">العد حسب النظام</div>
       <div class="mt-4 space-y-3 text-sm">
         {#each systems as system (system.id)}
           <div class="flex items-center justify-between gap-3 border-b border-line/60 pb-3 last:border-b-0 last:pb-0">
@@ -216,16 +216,14 @@ $effect(() => {
   {#if surah_rows.length === 0}
     <section class="mt-12 surface p-6 sm:p-8">
       <div class="rule_label">لا مواضع خلاف</div>
-      <h2 class="section_title mt-4">لا توجد في هذه السورة مواضع حدودية مختلف فيها مسجلة.</h2>
-      <p class="section_text mt-3">طبقة الأصول المعيارية لا تسجل داخل هذه السورة أي فرق حدودي صالحًا للمراجعة.</p>
+      <h2 class="section_title mt-4">لا توجد في هذه السورة مواضع خلاف مسجلة.</h2>
+      <p class="section_text mt-3">لا تسجل طبقة الأصول هنا فرقًا حدوديًا صالحًا للمراجعة.</p>
     </section>
   {:else}
     <section class="mt-12 surface p-5 sm:p-6">
       <div class="rule_label">مصفوفة المواضع</div>
-      <h2 class="section_title mt-4">أين يفصل كل نظام أو يدمج أو يوافق الكوفي عند كل موضع</h2>
-      <p class="section_text mt-3 text-sm">
-        تُعرض المواضع هنا على هيئة مصفوفة. وإذا وقع أكثر من موضع مختلف فيه داخل الآية نفسها استُعملت لواحق مثل 40a و40b بدل تكديس العلامات فوق بعضها.
-      </p>
+      <h2 class="section_title mt-4">كيف يعامل كل نظام كل موضع</h2>
+      <p class="section_text mt-3 text-sm">إذا تكرر الخلاف داخل آية واحدة استُعملت لواحق مثل 40a و40b.</p>
       <div class="mt-6">
         <PlotSurahBoundaryMap rows={surah_rows} {systems} />
       </div>
@@ -250,17 +248,17 @@ $effect(() => {
                 data-active={row.anchor_key === active_row?.anchor_key ? 'true' : 'false'}
                 onclick={() => setSelectedKey(row.anchor_key, 'table')}
               >
-                <td>
+                <td data-label="الآية">
                   <div class="font-bold text-ink">{row.ayah_slot_label}</div>
                   <div class="mt-2 text-xs text-ink-soft">{row.location_label}</div>
                 </td>
-                <td>
+                <td data-label="الارتكاز">
                   <div class="arabic_title text-xl text-ink">{row.word}</div>
                   <div class="mt-2 text-xs text-ink-soft">{row.anchor_key}</div>
                 </td>
-                <td><span class="badge" data-tone={row.kind === 'internal' ? 'accent' : 'ok'}>{format_boundary_kind(row.kind)}</span></td>
-                <td><span class="badge" data-tone={get_verification_tone(row.verification_status)}>{format_verification_status(row.verification_status)}</span></td>
-                <td>
+                <td data-label="النوع"><span class="badge" data-tone={row.kind === 'internal' ? 'accent' : 'ok'}>{format_boundary_kind(row.kind)}</span></td>
+                <td data-label="التوثيق"><span class="badge" data-tone={get_verification_tone(row.verification_status)}>{format_verification_status(row.verification_status)}</span></td>
+                <td data-label="يعده">
                   <div class="flex flex-wrap gap-2">
                     {#each row.counted_by as system_id (system_id)}
                       <span class="badge" data-tone="ok">{get_system_name(system_id)}</span>
@@ -291,10 +289,10 @@ $effect(() => {
           onselect={anchorKey => setSelectedKey(anchorKey, 'viewer')}
         />
       {:else}
-        <div class="surface p-5 text-sm text-ink-soft">بيانات عارض المصحف لهذه السورة غير متاحة بعد.</div>
+        <div class="surface p-5 text-sm text-ink-soft">بيانات عارض المصحف غير متاحة بعد.</div>
       {/if}
     {:catch}
-      <div class="surface p-5 text-sm text-ink-soft">تعذر تحميل بيانات عارض المصحف لهذه السورة.</div>
+      <div class="surface p-5 text-sm text-ink-soft">تعذر تحميل بيانات عارض المصحف.</div>
     {/await}
   </section>
 

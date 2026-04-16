@@ -59,10 +59,8 @@ function clear_filters() {
   <div class="rule_label">فهرس السور</div>
   <div class="mt-4 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
     <div>
-      <h1 class="section_title">تصفح السور وادخل مباشرة إلى العارض</h1>
-      <p class="section_text mt-3">
-        تفتح كل سورة صفحة واحدة تجمع مصفوفة المواضع المختلف فيها، ولوحة التفصيل الموثقة بالشواهد، ومرئي المصحف المضمن.
-      </p>
+      <h1 class="section_title">اختر سورة وافتح ملفها مباشرة</h1>
+      <p class="section_text mt-3">كل سورة تجمع الخريطة، والتفصيل، ومرئي المصحف في صفحة واحدة.</p>
     </div>
     <div class="stat_chip">{compact_number(visible_surahs.length)} سورة ظاهرة</div>
   </div>
@@ -80,29 +78,29 @@ function clear_filters() {
       <span class="metric_label">البحث</span>
       <div class="relative mt-3">
         <SearchIcon class="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-ink-soft" />
-        <input class="search pl-10" bind:value={query} placeholder="اسم السورة أو رقمها" />
+        <input class="search pl-10" bind:value={query} placeholder="اسم السورة أو رقم 2" />
       </div>
     </label>
 
     <label>
       <span class="metric_label">الترتيب</span>
       <select class="select mt-3" bind:value={sort_mode}>
-        <option value="canonical">الترتيب المصحفي</option>
-        <option value="disputed">الأكثر مواضع خلاف</option>
-        <option value="end">الأكثر نهايات مختلف فيها</option>
-        <option value="internal">الأكثر فواصل داخلية</option>
+        <option value="canonical">ترتيب المصحف</option>
+        <option value="disputed">الأكثر خلافًا</option>
+        <option value="end">أكثر نهايات</option>
+        <option value="internal">أكثر فواصل</option>
       </select>
     </label>
 
     <label class="flex items-center gap-3 rounded-2xl border border-line/70 bg-paper-soft/60 px-4 py-3 text-sm font-semibold text-ink-soft">
       <input bind:checked={show_only_disputed} type="checkbox" />
-      <span>السور المختلفة فقط</span>
+      <span>ذات الخلاف فقط</span>
     </label>
   </div>
 
   {#if has_filters}
     <div class="mt-4">
-      <button class="pill_button" onclick={clear_filters}>أعد ضبط مرشحات السور</button>
+      <button class="pill_button" onclick={clear_filters}>أعد الضبط</button>
     </div>
   {/if}
 </section>
@@ -110,8 +108,8 @@ function clear_filters() {
 {#if visible_surahs.length === 0}
   <section class="mt-8 surface p-6 sm:p-8">
     <div class="rule_label">لا نتائج</div>
-    <h2 class="section_title mt-4">لا توجد سورة تطابق المرشحات الحالية.</h2>
-    <p class="section_text mt-3">جرّب اسمًا أو رقمًا آخر، أو أعد ضبط المرشحات.</p>
+    <h2 class="section_title mt-4">لا توجد سورة تطابق هذه المرشحات.</h2>
+    <p class="section_text mt-3">جرّب اسمًا آخر أو أعد الضبط.</p>
     {#if has_filters}
       <div class="mt-6">
         <button class="pill_button" data-tone="accent" onclick={clear_filters}>أظهر جميع السور</button>
@@ -138,11 +136,10 @@ function clear_filters() {
         <div class="mt-5 flex flex-wrap gap-2 text-xs">
           <span class="badge" data-tone="ok">{compact_number(surah.by_kind.end)} {format_boundary_kind('end')}</span>
           <span class="badge" data-tone="accent">{compact_number(surah.by_kind.internal)} {format_boundary_kind('internal')}</span>
-          <span class="badge" data-tone="warn">الكوفي {compact_number(surah.counts.kufi)}</span>
         </div>
 
         <div class="mt-5 flex items-center gap-2 font-bold text-accent-strong">
-          <span>افتح ملف السورة</span>
+          <span>افتح السورة</span>
           <ArrowRightIcon class="size-4" />
         </div>
       </a>

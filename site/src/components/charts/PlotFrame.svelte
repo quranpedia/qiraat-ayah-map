@@ -20,6 +20,11 @@ function render_plot() {
   active_plot?.remove()
   active_plot = next_plot
   container.replaceChildren(next_plot)
+
+  // Observable Plot can emit aria-label on decorative <g> rule groups, which is invalid.
+  for (const node of container.querySelectorAll('g[aria-label="rule"]')) {
+    node.removeAttribute('aria-label')
+  }
 }
 
 onMount(() => {

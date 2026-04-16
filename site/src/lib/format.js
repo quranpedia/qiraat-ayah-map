@@ -83,7 +83,7 @@ export function format_difference_count(count, singular_label, plural_label) {
 
 export function format_signed_delta(delta) {
   const number = `${delta > 0 ? '+' : ''}${format_number(delta)}`
-  return `${number} عن الكوفي`
+  return get_current_language() === 'en' ? `${number} vs Kufi` : `${number} عن الكوفي`
 }
 
 export function format_primary_total(value) {

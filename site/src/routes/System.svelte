@@ -55,6 +55,7 @@ let attestation_policy = $derived(
       : attestation.policy_ar || attestation.policy_en || ''
     : ''
 )
+let current_language = $derived(get_current_language())
 </script>
 
 {#if !system_info}
@@ -67,10 +68,10 @@ let attestation_policy = $derived(
     <div>
       <div class="rule_label">ملف النظام</div>
       <h1 class="display_title mt-5 text-ink">{get_system_name(system_info)}</h1>
-      {#if get_system_secondary_name(system_info)}
+      {#if current_language !== 'en' && get_system_secondary_name(system_info)}
         <p class="mt-4 text-2xl text-ink-soft">{get_system_secondary_name(system_info)}</p>
       {/if}
-      <p class="section_text mt-5">يربط السجل الحالي هذه القراءات بهذا التقليد العددي.</p>
+      <p class="section_text mt-5">هذا حضور النظام داخل طبقة الخلاف في الأطلس.</p>
       <div class="mt-4 flex flex-wrap gap-2">
         {#each system_info.used_by_qiraat as qiraa (qiraa)}
           <span class="badge" data-tone="accent">{titleize_slug(qiraa)}</span>
@@ -91,17 +92,17 @@ let attestation_policy = $derived(
           <p class="mt-4 text-sm text-ink-soft">{attestation_policy}</p>
         {/if}
       {:else}
-        <p class="mt-3 text-sm text-ink-soft">لا توجد ملاحظة صريحة محفوظة بعد عن سياسة المجموع الكلي لهذا النظام.</p>
+        <p class="mt-3 text-sm text-ink-soft">لا توجد ملاحظة محفوظة بعد عن سياسة المجموع الكلي لهذا النظام.</p>
       {/if}
     </div>
   </section>
 
   <section class="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
-    <MetricCard label="مجموع الآيات" value={compact_number(system_info.total_ayahs)} note="مشتق من طبقة الأصول المعيارية." />
-    <MetricCard label="عن الكوفي" value={format_signed_delta(system_info.delta_from_kufi)} note="الأثر الصافي بالنسبة إلى العدد الكوفي المرجعي." tone={system_info.delta_from_kufi === 0 ? 'ok' : 'accent'} />
-    <MetricCard label="الرؤوس المعدودة" value={compact_number(system_info.counts_boundary)} note="عدد الرؤوس المختلف فيها التي يعدها هذا النظام فعلًا." tone="ok" />
-    <MetricCard label="الرؤوس المعدودة الموثقة" value={compact_number(system_info.cited_points)} note="عدد الرؤوس المعدودة المختلف فيها التي لحقها أي شاهد." tone={system_info.cited_points > 0 ? 'accent' : 'warn'} />
-    <MetricCard label="آثار الدمج" value={compact_number(system_info.merge_effects)} note="المواضع التي يؤدي فيها الإسقاط إلى دمج الترقيم بعد ذلك." tone="alert" />
+    <MetricCard label="مجموع الآيات" value={compact_number(system_info.total_ayahs)} note="المجموع النهائي في هذا النظام." />
+    <MetricCard label="عن الكوفي" value={format_signed_delta(system_info.delta_from_kufi)} note="الفارق عن الكوفي." tone={system_info.delta_from_kufi === 0 ? 'ok' : 'accent'} />
+    <MetricCard label="الرؤوس المعدودة" value={compact_number(system_info.counts_boundary)} note="المواضع المختلف فيها التي يعدها هذا النظام." tone="ok" />
+    <MetricCard label="الرؤوس المعدودة الموثقة" value={compact_number(system_info.cited_points)} note="المواضع المعدودة التي لها شواهد." tone={system_info.cited_points > 0 ? 'accent' : 'warn'} />
+    <MetricCard label="آثار الدمج" value={compact_number(system_info.merge_effects)} note="إسقاطات تغيّر ما بعدها." tone="alert" />
   </section>
 
   <section class="mt-12 grid gap-6 xl:grid-cols-2">
@@ -109,10 +110,8 @@ let attestation_policy = $derived(
       <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
         <div>
           <div class="rule_label">هيئة التوثيق</div>
-          <h2 class="section_title mt-4">كم من المادة المعدودة في هذا النظام لها شواهد</h2>
-          <p class="section_text mt-3 text-sm">
-            تقتصر هذه المجاميع على الرؤوس المختلف فيها التي يعدها {get_system_name(system_info)} فعلًا.
-          </p>
+          <h2 class="section_title mt-4">ما الذي له شواهد هنا</h2>
+          <p class="section_text mt-3 text-sm">داخل المواضع المختلف فيها التي يعدها {get_system_name(system_info)} فقط.</p>
         </div>
         <MilestoneIcon class="hidden size-10 text-accent-strong sm:block" />
       </div>
@@ -121,18 +120,18 @@ let attestation_policy = $derived(
         <div class="surface surface_muted p-4">
           <div class="metric_label">موثق</div>
           <div class="mt-3 text-3xl font-bold text-ink">{compact_number(verification?.cited_points || 0)}</div>
-          <div class="mt-2 text-sm text-ink-soft">له أي شاهد مرفق</div>
+          <div class="mt-2 text-sm text-ink-soft">له شاهد</div>
         </div>
         <div class="surface surface_muted p-4">
           <div class="metric_label">غير موثق</div>
           <div class="mt-3 text-3xl font-bold text-ink">{compact_number(verification?.uncited_points || 0)}</div>
-          <div class="mt-2 text-sm text-ink-soft">ما يزال يحتاج إلى تفريغ من المصادر</div>
+          <div class="mt-2 text-sm text-ink-soft">ينتظر الشواهد</div>
         </div>
       </div>
 
       <div class="mt-5 flex flex-wrap gap-2 text-sm">
-        <span class="badge" data-tone="ok">الشواهد الأصلية {compact_number(verification?.points_with_primary_evidence || 0)}</span>
-        <span class="badge" data-tone="warn">المواضع المراجعة {compact_number(verification?.points_reviewed || 0)}</span>
+        <span class="badge" data-tone="ok">أصلي {compact_number(verification?.points_with_primary_evidence || 0)}</span>
+        <span class="badge" data-tone="warn">مراجع {compact_number(verification?.points_reviewed || 0)}</span>
       </div>
     </div>
 
@@ -140,10 +139,8 @@ let attestation_policy = $derived(
       <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
         <div>
           <div class="rule_label">الجوار</div>
-          <h2 class="section_title mt-4">أي الأنظمة أقرب وأيها أبعد</h2>
-          <p class="section_text mt-3 text-sm">
-            تعني المسافة هنا عدد المواضع المختلف فيها التي يعاملها النظامان على وجه مختلف.
-          </p>
+          <h2 class="section_title mt-4">الأقرب والأبعد</h2>
+          <p class="section_text mt-3 text-sm">المسافة هنا هي عدد المواضع التي يختلف فيها النظامان.</p>
         </div>
         <MilestoneIcon class="hidden size-10 text-accent-strong sm:block" />
       </div>
@@ -162,7 +159,7 @@ let attestation_policy = $derived(
       </div>
 
       <a class="pill_button mt-6 w-full" href={window.navgo.href('/compare')}>
-        افتح عرض المقارنة
+        افتح المقارنة
         <ArrowRightIcon class="size-4" />
       </a>
     </div>
@@ -172,14 +169,12 @@ let attestation_policy = $derived(
     <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
       <div>
         <div class="rule_label">الانجراف داخل السورة</div>
-        <h2 class="section_title mt-4">كيف يبتعد الترقيم عن الكوفي داخل السورة</h2>
-        <p class="section_text mt-3 text-sm">
-          يرتفع الخط بمقدار +1 حين يعد هذا النظام موضع فصل داخلي، وينخفض بمقدار −1 حين يسقط رأسًا كوفيًا في نهاية آية.
-        </p>
+        <h2 class="section_title mt-4">مسار الفرق في السورة</h2>
+        <p class="section_text mt-3 text-sm">يصعد +1 عند فصل داخلي ويهبط −1 عند إسقاط رأس كوفي.</p>
       </div>
 
       <label class="block lg:w-72">
-        <span class="metric_label">سورة المعاينة</span>
+        <span class="metric_label">السورة</span>
         <select class="select mt-3" bind:value={selected_surah}>
           {#each top_surahs as surah (surah.surah)}
             <option value={surah.surah}>{format_surah_reference(surah.surah)} · {get_surah_name(surah)}</option>
@@ -197,10 +192,8 @@ let attestation_policy = $derived(
     <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
       <div>
         <div class="rule_label">البصمة التفاعلية</div>
-        <h2 class="section_title mt-4">أعلى السور بحسب الرؤوس المختلف فيها التي يعدها النظام</h2>
-        <p class="section_text mt-3 text-sm">
-          يعطي هذا الترتيب قراءة سريعة لبصمة النظام، فيقدّم السور التي يظهر فيها أثر هذا التقليد العددي بأوضح صورة.
-        </p>
+        <h2 class="section_title mt-4">أوضح السور بحسب مواضعه</h2>
+        <p class="section_text mt-3 text-sm">قراءة سريعة للسور التي يظهر فيها أثر النظام بأوضح صورة.</p>
       </div>
       <FingerprintIcon class="hidden size-10 text-accent-strong sm:block" />
     </div>
@@ -214,7 +207,7 @@ let attestation_policy = $derived(
     <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
       <div>
         <div class="rule_label">بؤر السور</div>
-        <h2 class="section_title mt-4">أين تظهر بصمة {get_system_name(system_info)} بأقوى صورة</h2>
+        <h2 class="section_title mt-4">أوضح السور في {get_system_name(system_info)}</h2>
       </div>
       <LibraryBigIcon class="hidden size-10 text-accent-strong sm:block" />
     </div>
@@ -224,7 +217,7 @@ let attestation_policy = $derived(
         <a class="surface block p-4 transition-transform duration-200 hover:-translate-y-0.5" href={window.navgo.href('/surahs/' + surah.surah)}>
           <div class="metric_label">{format_surah_reference(surah.surah)}</div>
           <div class="mt-3 text-xl font-bold text-ink">{get_surah_name(surah)}</div>
-          {#if get_surah_secondary_name(surah)}
+          {#if current_language !== 'en' && get_surah_secondary_name(surah)}
             <div class="mt-2 text-lg text-ink-soft">{get_surah_secondary_name(surah)}</div>
           {/if}
           <div class="mt-4 flex flex-wrap gap-2 text-xs">

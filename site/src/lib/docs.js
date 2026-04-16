@@ -4,7 +4,7 @@ export const doc_groups = [
   {
     id: 'overview',
     title: 'المدخل',
-    description: 'مدخل سريع ثم الوثائق الأساسية التي تشرح فكرة المشروع واستعماله.'
+    description: 'ابدأ هنا إذا كنت تريد فهم الفكرة سريعًا ثم الانتقال إلى الدليل المناسب.'
   },
   {
     id: 'curation',
@@ -14,12 +14,13 @@ export const doc_groups = [
   {
     id: 'sources',
     title: 'المصادر والحزم',
-    description: 'كيف نقرأ الشواهد المرفقة وكيف تسير حزم المصادر.'
+    description: 'كيف نقرأ الشواهد المرفقة، وكيف تُنظَّم حزم المصادر داخل المشروع.'
   },
   {
     id: 'planning',
     title: 'الخطة والمراحل',
-    description: 'خلفية التنفيذ، وخارطة الموقع، وما تم وما بقي.'
+    description: 'خلفية التنفيذ، وخارطة الموقع، وما تم وما بقي.',
+    internal: true
   },
   {
     id: 'schema',
@@ -39,8 +40,9 @@ export function get_doc_group(group_id) {
   return group_by_id.get(group_id) ?? null
 }
 
-export function get_grouped_docs(language = 'ar') {
+export function get_grouped_docs(language = 'ar', { include_internal = false } = {}) {
   return doc_groups
+    .filter(group => include_internal || !group.internal)
     .map(group => ({
       ...group,
       docs: docs
