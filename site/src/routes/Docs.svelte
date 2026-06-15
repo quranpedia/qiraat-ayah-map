@@ -1,5 +1,5 @@
 <script>
-import { BookOpenCheckIcon, FilesIcon, LibraryBigIcon } from '@lucide/svelte'
+import { BookOpenCheckIcon, LibraryBigIcon } from '@lucide/svelte'
 
 import { get_grouped_docs } from '$lib/docs.js'
 import { get_current_language } from '$lib/i18n.js'
@@ -13,16 +13,16 @@ function get_quick_links() {
       icon: BookOpenCheckIcon
     },
     {
-      href: '/developer',
-      label: 'استخدام المطور',
-      note: 'الاستعمال العملي للخرائط وملفات JSON في التطبيقات.',
-      icon: FilesIcon
+      href: '/mushaf',
+      label: 'المصحف',
+      note: 'ابدأ باختيار مذهب العدّ والسورة ثم اقرأ رؤوس الآي في سياقها.',
+      icon: LibraryBigIcon
     },
     {
-      href: '/surahs',
-      label: 'فهرس السور',
-      note: 'العارض العملي للسور ومواضع الخلاف داخلها.',
-      icon: LibraryBigIcon
+      href: '/ayah-counts',
+      label: 'أعداد الآي',
+      note: 'راجع مجموع القرآن وعدد آيات كل سورة في مذاهب العدّ الستة.',
+      icon: BookOpenCheckIcon
     }
   ]
 }
@@ -36,10 +36,9 @@ let total_docs = $derived(grouped_docs.reduce((total, group) => total + group.do
 <section class="grid gap-8">
   <div>
     <div class="rule_label">الوثائق</div>
-    <h1 class="display_title mt-5 max-w-4xl text-ink">مكتبة الوثائق الأصلية للمشروع.</h1>
+    <h1 class="display_title mt-5 max-w-4xl text-ink">مكتبة الباحث في رؤوس الآي.</h1>
     <p class="section_text mt-5 max-w-3xl text-base sm:text-lg">
-      ستجد هنا الدليل العام، ووثائق التحرير والمراجعة، ووثائق المصادر، والعقود العلمية.
-      إن كنت تريد مدخلًا سريعًا فابدأ بصفحة المشروع أو صفحة المطور، ثم ارجع إلى الوثيقة التفصيلية عند الحاجة.
+      ستجد هنا الدليل العام، ومنهج قراءة رؤوس الآي، وإرشادات المراجع العلمي. أما تفاصيل ملفات الربط والعقود الفنية فمكانها صفحة المطور.
     </p>
   </div>
 

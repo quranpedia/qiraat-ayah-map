@@ -3,7 +3,6 @@ import { ArrowRightIcon, SearchIcon } from '@lucide/svelte'
 
 import {
   compact_number,
-  format_boundary_kind,
   format_surah_reference,
   get_surah_name,
   get_surah_secondary_name,
@@ -34,10 +33,6 @@ let visible_surahs = $derived.by(() => {
 
   if (sort_mode === 'disputed') {
     results.sort((left, right) => right.disputed_points - left.disputed_points || left.surah - right.surah)
-  } else if (sort_mode === 'internal') {
-    results.sort((left, right) => right.by_kind.internal - left.by_kind.internal || left.surah - right.surah)
-  } else if (sort_mode === 'end') {
-    results.sort((left, right) => right.by_kind.end - left.by_kind.end || left.surah - right.surah)
   } else {
     results.sort((left, right) => left.surah - right.surah)
   }
@@ -59,16 +54,20 @@ function clear_filters() {
   <div class="rule_label">فهرس السور</div>
   <div class="mt-4 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
     <div>
-      <h1 class="section_title">اختر سورة وافتح ملفها مباشرة</h1>
-      <p class="section_text mt-3">كل سورة تجمع الخريطة، والتفصيل، ومرئي المصحف في صفحة واحدة.</p>
+      <h1 class="section_title">اختر سورة وافتح المصحف والتفصيل</h1>
+      <p class="section_text mt-3">
+        كل بطاقة تعرض اسم السورة ونطاق عدد آياتها في مذاهب العدّ الستة، ثم تفتح صفحة السورة للقراءة في السياق.
+      </p>
     </div>
     <div class="stat_chip">{compact_number(visible_surahs.length)} سورة ظاهرة</div>
   </div>
 
   <div class="mt-4 flex flex-wrap gap-2 text-sm text-ink-soft">
     <span class="stat_chip">{compact_number(114)} سورة</span>
-    <span class="stat_chip">{compact_number(disputed_surah_count)} فيها خلاف</span>
-    <span class="stat_chip">{compact_number(summary.total_points)} مجموع المواضع المختلف فيها</span>
+    <span class="stat_chip">{compact_number(disputed_surah_count)} فيها رؤوس آي مختلف فيها</span>
+    <span class="stat_chip">{compact_number(summary.total_points)} مجموع رؤوس الآي المختلف فيها</span>
+    <a class="stat_chip" href={window.navgo.href('/mushaf')}>المصحف</a>
+    <a class="stat_chip" href={window.navgo.href('/ayah-counts')}>جدول أعداد الآي</a>
   </div>
 </section>
 
@@ -78,7 +77,7 @@ function clear_filters() {
       <span class="metric_label">البحث</span>
       <div class="relative mt-3">
         <SearchIcon class="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-ink-soft" />
-        <input class="search pl-10" bind:value={query} placeholder="اسم السورة أو رقم 2" />
+        <input class="search pl-10" bind:value={query} placeholder="ابحث عن اسم السورة أو رقمها" />
       </div>
     </label>
 
@@ -86,9 +85,7 @@ function clear_filters() {
       <span class="metric_label">الترتيب</span>
       <select class="select mt-3" bind:value={sort_mode}>
         <option value="canonical">ترتيب المصحف</option>
-        <option value="disputed">الأكثر خلافًا</option>
-        <option value="end">أكثر نهايات</option>
-        <option value="internal">أكثر فواصل</option>
+        <option value="disputed">الأكثر رؤوسًا مختلفًا فيها</option>
       </select>
     </label>
 
@@ -119,6 +116,9 @@ function clear_filters() {
 {:else}
   <section class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
     {#each visible_surahs as surah (surah.surah)}
+      {@const counts = Object.values(surah.counts)}
+      {@const minCount = Math.min(...counts)}
+      {@const maxCount = Math.max(...counts)}
       <a class="surface block p-5 transition-transform duration-200 hover:-translate-y-0.5" href={window.navgo.href('/surahs/' + surah.surah)}>
         <div class="flex items-start justify-between gap-4">
           <div>
@@ -129,13 +129,18 @@ function clear_filters() {
             {/if}
           </div>
           <span class="badge" data-tone={surah.disputed_points === 0 ? 'ok' : 'accent'}>
-            {compact_number(surah.disputed_points)}
+            {compact_number(surah.disputed_points)} رأس آية
           </span>
         </div>
 
         <div class="mt-5 flex flex-wrap gap-2 text-xs">
-          <span class="badge" data-tone="ok">{compact_number(surah.by_kind.end)} {format_boundary_kind('end')}</span>
-          <span class="badge" data-tone="accent">{compact_number(surah.by_kind.internal)} {format_boundary_kind('internal')}</span>
+          <span class="badge" data-tone="ok">
+            {#if minCount === maxCount}
+              {compact_number(minCount)} آية في مذاهب العدّ الستة
+            {:else}
+              {compact_number(minCount)}–{compact_number(maxCount)} آية بحسب مذهب العدّ
+            {/if}
+          </span>
         </div>
 
         <div class="mt-5 flex items-center gap-2 font-bold text-accent-strong">

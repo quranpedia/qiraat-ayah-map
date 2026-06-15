@@ -5,7 +5,6 @@ import {
   FilesIcon,
   GlobeIcon,
   LibraryBigIcon,
-  MilestoneIcon,
   PanelsTopLeftIcon,
   SearchIcon
 } from '@lucide/svelte'
@@ -16,18 +15,19 @@ import { get_current_language, set_language } from '$lib/i18n.js'
 const { route } = window.navgo
 
 // @wc-ignore
-const BRAND_TITLE_AR = 'أطلس عدِّ الآي'
-const BRAND_TITLE_EN = 'Qiraat Ayah Atlas'
+const BRAND_TITLE_AR = 'مرجع عدِّ الآي'
+const BRAND_TITLE_EN = 'Qiraat Ayah Count Reference'
 
 function get_nav_items() {
   return [
-    { href: '/', label: 'الأطلس', icon: CompassIcon, matches: path => path === '/' },
+    { href: '/', label: 'الرئيسية', icon: CompassIcon, matches: path => path === '/' },
+    { href: '/mushaf', label: 'المصحف', icon: LibraryBigIcon, matches: path => path === '/mushaf' },
     { href: '/surahs', label: 'السور', icon: LibraryBigIcon, matches: path => path === '/surahs' || path.startsWith('/surahs/') },
-    { href: '/compare', label: 'المقارنة', icon: MilestoneIcon, matches: path => path === '/compare' },
+    { href: '/ayah-counts', label: 'أعداد الآي', icon: BookOpenCheckIcon, matches: path => path === '/ayah-counts' || path.startsWith('/madhhabs/') || path.startsWith('/systems/') },
     { href: '/explorer', label: 'المستكشف', icon: SearchIcon, matches: path => path === '/explorer' },
     { href: '/project', label: 'المشروع', icon: BookOpenCheckIcon, matches: path => path.startsWith('/project') },
     { href: '/docs', label: 'الوثائق', icon: FilesIcon, matches: path => path === '/docs' || path.startsWith('/docs/') },
-    { href: '/developer', label: 'للمطور', icon: FilesIcon, matches: path => path === '/developer' }
+    { href: '/developer', label: 'للمطور', icon: FilesIcon, matches: path => path === '/developer' || path.startsWith('/developer/') }
   ]
 }
 
@@ -71,8 +71,8 @@ function is_active(item) {
         </nav>
 
         <div class="hidden items-center gap-2 lg:flex">
-          <span class="stat_chip">{compact_number(summary.by_system ? Object.keys(summary.by_system).length : 0)} نظام عدّ</span>
-          <span class="stat_chip">{compact_number(summary.total_points)} موضع مختلف فيه</span>
+          <span class="stat_chip">{compact_number(summary.by_system ? Object.keys(summary.by_system).length : 0)} مذاهب العدّ</span>
+          <span class="stat_chip">{compact_number(summary.total_points)} رأس آية مختلف فيه</span>
         </div>
 
         <div class="flex shrink-0 items-center gap-2" role="group" aria-label="تبديل اللغة">

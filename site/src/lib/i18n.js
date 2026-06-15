@@ -38,10 +38,10 @@ export async function init_i18n(lang = get_saved_language()) {
   apply_language(next_language)
   await loadLocale(next_language)
 
-  document.title = 'أطلس عدِّ الآي'
+  document.title = 'مرجع عدِّ الآي'
   document.querySelector('meta[name="description"]')?.setAttribute(
     'content',
-    'واجهة تفاعلية لعدِّ الآي بين الأنظمة الستة المعيارية المستعملة مع القراءات العشر.'
+    'واجهة تفاعلية لعدِّ الآي بين مذاهب العدّ الستة المستعملة مع القراءات العشر.'
   )
 }
 

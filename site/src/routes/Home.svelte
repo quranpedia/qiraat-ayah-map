@@ -1,193 +1,99 @@
 <script>
-import { ArrowRightIcon, BookOpenCheckIcon, FilesIcon, SigmaIcon } from '@lucide/svelte'
+import { ArrowRightIcon, BookOpenCheckIcon, LibraryBigIcon, SearchIcon } from '@lucide/svelte'
 
-import MetricCard from '~/components/MetricCard.svelte'
-import SystemCard from '~/components/SystemCard.svelte'
-import PlotSurahHeatmap from '~/components/charts/PlotSurahHeatmap.svelte'
-import PlotTotals from '~/components/charts/PlotTotals.svelte'
-import SystemFingerprint from '~/components/charts/SystemFingerprint.svelte'
-import {
-  compact_number,
-  get_system,
-  get_system_name,
-  get_system_profile,
-  get_system_secondary_name,
-  summary,
-  surahs,
-  systems
-} from '$lib/dataset.svelte.js'
-import { get_current_language } from '$lib/i18n.js'
-
-let selected_system_id = $state('makki')
-let selected_system = $derived(get_system(selected_system_id))
-let selected_profile = $derived(get_system_profile(selected_system_id))
-let current_language = $derived(get_current_language())
+import MadhhabCard from '~/components/MadhhabCard.svelte'
+import { compact_number, summary, systems } from '$lib/dataset.svelte.js'
 </script>
 
-<section class="grid gap-10 lg:grid-cols-[minmax(0,1.35fr)_minmax(18rem,0.9fr)] lg:items-start">
+<section class="grid gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(18rem,0.85fr)] lg:items-start">
   <div>
-    <div class="rule_label">طبقة مراجعة معيارية</div>
-    <h1 class="display_title mt-5 max-w-4xl text-ink">أطلس تحريري لمواضع الخلاف في رؤوس آي القرآن.</h1>
+    <div class="rule_label">مرجع رؤوس الآي</div>
+    <h1 class="display_title mt-5 max-w-4xl text-ink">مرجع تفاعلي لرؤوس الآي بين مذاهب العدّ الستة.</h1>
     <p class="section_text mt-5 text-lg">
-      مرجع تفاعلي يبيّن أين يختلف عدُّ الآي بين الأنظمة الستة، وكيف يغيّر ذلك ترقيم الآيات داخل السورة.
+      اختر سورة، واقرأ رؤوس الآي المختلف فيها داخل سياقها، ثم افتح التفصيل المختصر لمعرفة أي مذاهب العدّ تعد الرأس.
     </p>
 
     <div class="mt-8 flex flex-wrap gap-3">
-      <a class="pill_button" data-tone="accent" href={window.navgo.href('/explorer')}>
-        استكشف مواضع الخلاف
+      <a class="pill_button" data-tone="accent" href={window.navgo.href('/mushaf')}>
+        افتح المصحف
         <ArrowRightIcon class="size-4" />
       </a>
-      <a class="pill_button" href={window.navgo.href('/project')}>اقرأ دليل المشروع</a>
-      <a class="pill_button" href={window.navgo.href('/developer')}>استخدام المطور</a>
+      <a class="pill_button" href={window.navgo.href('/ayah-counts')}>أعداد الآي</a>
+      <a class="pill_button" href={window.navgo.href('/explorer')}>استكشف رؤوس الآي</a>
     </div>
 
     <div class="mt-6 flex flex-wrap gap-2 text-sm text-ink-soft">
-      <span class="stat_chip">{compact_number(summary.by_kind.end)} موضع نهاية</span>
-      <span class="stat_chip">{compact_number(summary.by_kind.internal)} موضع داخلي</span>
-      <span class="stat_chip">{compact_number(summary.evidence.points_with_primary_evidence)} مع شاهد أصلي</span>
-      <span class="stat_chip">{compact_number(summary.evidence.points_uncited)} غير موثق</span>
+      <span class="stat_chip">{compact_number(systems.length)} مذاهب العدّ</span>
+      <span class="stat_chip">{compact_number(summary.total_points)} رأس آية مختلف فيه</span>
+      <span class="stat_chip">{compact_number(114)} سورة</span>
     </div>
   </div>
 
-  <div class="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
-    <MetricCard label="المواضع المختلف فيها" value={compact_number(summary.total_points)} note="كل موضع هنا نقطة خلاف قابلة للفحص والمراجعة." />
-    <MetricCard
-      label="النهايات / الداخلية"
-      value={compact_number(summary.by_kind.end) + ' · ' + compact_number(summary.by_kind.internal)}
-      note="بين مواضع في آخر الآية ومواضع فصل داخلية داخلها."
-      tone="ok"
-    />
-    <MetricCard
-      label="تغطية الشواهد"
-      value={compact_number(summary.evidence.points_with_evidence) + ' / ' + compact_number(summary.total_points)}
-      note="جزء من المادة موثق، والجزء الأكبر ما يزال ينتظر مزيدًا من الشواهد."
-      tone="alert"
-    />
+  <div class="surface surface_muted p-5 sm:p-6">
+    <div class="rule_label">ابدأ من هنا</div>
+    <h2 class="section_title mt-4 text-2xl">القراءة داخل السورة هي المسار الأساسي.</h2>
+    <p class="section_text mt-3 text-sm">
+      صفحات السور تجمع نص المصحف، ورؤوس الآي المختلف فيها، وتفصيل كل رأس في مكان واحد.
+    </p>
+    <a class="pill_button mt-6 w-full" href={window.navgo.href('/mushaf')}>
+      اختر سورة في المصحف
+      <ArrowRightIcon class="size-4" />
+    </a>
   </div>
 </section>
 
 <section class="mt-12 grid gap-4 lg:grid-cols-3">
-  <div class="surface p-5 sm:p-6">
-    <div class="rule_label">كيف يقرأ</div>
-    <h2 class="section_title mt-4 text-2xl">نهاية</h2>
+  <a class="surface block p-5 transition-transform duration-200 hover:-translate-y-0.5" href={window.navgo.href('/mushaf')}>
+    <LibraryBigIcon class="size-8 text-accent-strong" />
+    <h2 class="section_title mt-4 text-2xl">اقرأ في المصحف</h2>
     <p class="section_text mt-3 text-sm">
-      موضع يقع عند نهاية آية على ضبط حفص. إذا أسقطه نظام آخر انزاح الترقيم بعده.
+      افتح السورة، وشاهد رؤوس الآي المختلف فيها داخل النص بدلًا من البدء بالجداول التحليلية.
     </p>
-  </div>
+    <div class="mt-5 flex items-center gap-2 font-bold text-accent-strong">
+      <span>المصحف</span>
+      <ArrowRightIcon class="size-4" />
+    </div>
+  </a>
 
-  <div class="surface p-5 sm:p-6">
-    <div class="rule_label">كيف يقرأ</div>
-    <h2 class="section_title mt-4 text-2xl">داخلي</h2>
+  <a class="surface block p-5 transition-transform duration-200 hover:-translate-y-0.5" href={window.navgo.href('/explorer')}>
+    <SearchIcon class="size-8 text-accent-strong" />
+    <h2 class="section_title mt-4 text-2xl">استكشف رأس آية</h2>
     <p class="section_text mt-3 text-sm">
-      موضع يقع داخل الآية على ضبط حفص. إذا عدّه نظام آخر انفصل الترقيم عنده.
+      ابحث برأس الآية أو السورة، ثم راجع أي مذاهب العدّ تعده وأيها لا تعده.
     </p>
-  </div>
+    <div class="mt-5 flex items-center gap-2 font-bold text-accent-strong">
+      <span>المستكشف</span>
+      <ArrowRightIcon class="size-4" />
+    </div>
+  </a>
 
-  <div class="surface p-5 sm:p-6">
-    <div class="rule_label">رموز المخطط</div>
-    <h2 class="section_title mt-4 text-2xl">+, −, =</h2>
+  <a class="surface block p-5 transition-transform duration-200 hover:-translate-y-0.5" href={window.navgo.href('/ayah-counts')}>
+    <BookOpenCheckIcon class="size-8 text-accent-strong" />
+    <h2 class="section_title mt-4 text-2xl">راجع أعداد الآي</h2>
     <p class="section_text mt-3 text-sm">
-      يشير + إلى فصل الترقيم، و− إلى دمجه، و= إلى موافقة الكوفي في الموضع نفسه.
+      اعرض مجموع القرآن وعدد آيات كل سورة في مذاهب العدّ الستة من غير رسوم مقارنة.
     </p>
-  </div>
-</section>
-
-<section class="mt-14 grid gap-6 xl:grid-cols-2">
-  <div class="surface p-5 sm:p-6">
-    <div class="rule_label">مجاميع الأنظمة</div>
-    <div class="mt-4 flex items-end justify-between gap-4">
-      <div>
-        <h2 class="section_title">مجاميع الأنظمة الستة</h2>
-        <p class="section_text mt-3 text-sm">
-          نظرة سريعة إلى مجموع الآيات في كل نظام.
-        </p>
-      </div>
-      <SigmaIcon class="hidden size-10 text-accent-strong sm:block" />
+    <div class="mt-5 flex items-center gap-2 font-bold text-accent-strong">
+      <span>أعداد الآي</span>
+      <ArrowRightIcon class="size-4" />
     </div>
-    <div class="mt-6">
-      <PlotTotals {systems} />
-    </div>
-  </div>
-
-  <div class="surface p-5 sm:p-6">
-    <div class="rule_label">خريطة السور الحرارية</div>
-    <div class="mt-4 flex items-end justify-between gap-4">
-      <div>
-        <h2 class="section_title">أين تتركز مواضع الخلاف</h2>
-        <p class="section_text mt-3 text-sm">
-          يوزع مواضع الخلاف بحسب السورة والنوع.
-        </p>
-      </div>
-      <FilesIcon class="hidden size-10 text-accent-strong sm:block" />
-    </div>
-    <div class="mt-6">
-      <PlotSurahHeatmap {surahs} />
-    </div>
-  </div>
-</section>
-
-<section class="mt-14 surface p-5 sm:p-6">
-  <div class="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
-    <div>
-      <div class="rule_label">بصمة النظام</div>
-      <h2 class="section_title mt-4">أوضح السور لكل نظام</h2>
-      <p class="section_text mt-3 text-sm">
-        اختر نظامًا لترى السور التي يظهر فيها أثره بأوضح صورة.
-      </p>
-    </div>
-
-    <label class="block lg:w-72">
-      <span class="metric_label">نظام المعاينة</span>
-      <select class="select mt-3" bind:value={selected_system_id}>
-        {#each systems as system (system.id)}
-          <option value={system.id}>{get_system_name(system)}</option>
-        {/each}
-      </select>
-    </label>
-  </div>
-
-  <div class="mt-6 grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(16rem,0.8fr)] lg:items-start">
-    <SystemFingerprint profile={selected_profile} limit={10} />
-
-    <div class="surface surface_muted p-5">
-      <div class="rule_label">النظام الحالي</div>
-      <h3 class="mt-3 text-2xl font-bold text-ink">{get_system_name(selected_system)}</h3>
-      {#if current_language !== 'en' && get_system_secondary_name(selected_system)}
-        <p class="mt-2 text-xl text-ink-soft">{get_system_secondary_name(selected_system)}</p>
-      {/if}
-      <div class="mt-5 grid grid-cols-2 gap-3 text-sm">
-        <div>
-          <div class="font-bold text-ink">{compact_number(selected_system.counts_boundary)}</div>
-          <div class="text-ink-soft">رؤوس مختلف فيها</div>
-        </div>
-        <div>
-          <div class="font-bold text-ink">{compact_number(selected_system.merge_effects)}</div>
-          <div class="text-ink-soft">آثار الدمج</div>
-        </div>
-      </div>
-      <a class="pill_button mt-6 w-full" href={window.navgo.href('/systems/' + selected_system.id)}>
-        افتح ملف النظام الكامل
-        <ArrowRightIcon class="size-4" />
-      </a>
-    </div>
-  </div>
+  </a>
 </section>
 
 <section class="mt-14">
   <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-      <div>
-        <div class="rule_label">الأنظمة المعيارية</div>
-        <h2 class="section_title mt-4">اختر نظامًا للعرض</h2>
-      </div>
-    <div class="flex items-center gap-2 text-sm text-ink-soft">
-      <BookOpenCheckIcon class="size-4" />
-      <span>كل بطاقة تفتح ملف النظام وملخصه.</span>
+    <div>
+      <div class="rule_label">مذاهب العدّ الستة</div>
+      <h2 class="section_title mt-4">افتح ملف مذهب العدّ</h2>
+      <p class="section_text mt-3 text-sm">
+        كل ملف يعرض مجموع الآيات ورؤوس الآي المرتبطة بذلك المذهب داخل المادة الحالية.
+      </p>
     </div>
   </div>
 
-  <div class="system_grid mt-6">
+  <div class="madhhab_grid mt-6">
     {#each systems as system (system.id)}
-      <SystemCard {system} />
+      <MadhhabCard madhhab={system} />
     {/each}
   </div>
 </section>

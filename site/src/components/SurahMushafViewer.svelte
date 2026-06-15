@@ -3,12 +3,11 @@ import { tick } from 'svelte'
 
 import {
   compact_number,
-  format_ayah_reference,
   format_boundary_action,
-  format_boundary_kind,
   format_difference_count,
   get_system_name
 } from '$lib/dataset.svelte.js'
+import { buildCountingMadhhabAyahs } from '$lib/mushaf-viewer.js'
 import { getBoundaryViewerAyahId, getBoundaryViewerMarkerId } from '$lib/mushaf-viewer-dom.js'
 
 const SYSTEM_SHORT_LABELS = {
@@ -26,30 +25,55 @@ let {
   systems = [],
   selectedKey = null,
   selectionRequest = null,
+  initialDisplaySystemId = 'kufi',
+  onDisplaySystemChange,
   onselect
 } = $props()
 
 let script = $state('plain')
-let markerScope = $state('differences')
-let boundaryKind = $state('all')
+let viewMode = $state('all')
+let markerStatus = $state('all')
 let ayahScope = $state('context')
-let leftSystemId = $state('kufi')
-let rightSystemId = $state('madani-first')
+let displaySystemId = $state(initialDisplaySystemId)
+let comparisonSystemId = $state(initialDisplaySystemId === 'madani-first' ? 'kufi' : 'madani-first')
 
 let systemById = $derived(new Map(systems.map(system => [system.id, system])))
-let leftSystem = $derived(systemById.get(leftSystemId) || null)
-let rightSystem = $derived(systemById.get(rightSystemId) || null)
+let displaySystem = $derived(systemById.get(displaySystemId) || null)
+let comparisonSystem = $derived(systemById.get(comparisonSystemId) || null)
+let displayedMushaf = $derived(buildCountingMadhhabAyahs(viewer, rows, displaySystemId, script))
+let boundaryPositions = $derived(displayedMushaf.boundary_positions)
+
+$effect(() => {
+  onDisplaySystemChange?.(displaySystemId)
+})
 
 function getShortLabel(systemId) {
   return SYSTEM_SHORT_LABELS[systemId] || systemId
 }
 
-function getBoundaryAyahNumber(row) {
-  return viewer?.boundary_positions?.[row.anchor_key]?.ayah || row.hafs_ayah
+function formatDisplayAyahLabel(ayahNumber) {
+  return ayahNumber === 0 ? 'البسملة' : compact_number(ayahNumber)
+}
+
+function countsIn(row, systemId) {
+  return row.systems[systemId]?.counts_boundary ?? false
 }
 
 function getSelectedRow() {
   return selectedKey ? rows.find(row => row.anchor_key === selectedKey) || null : null
+}
+
+function scrollAyahIntoView(ayahNumber) {
+  if (ayahNumber == null) {
+    return
+  }
+
+  const ayahElement = document.getElementById(getBoundaryViewerAyahId(ayahNumber))
+  ayahElement?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center',
+    inline: 'nearest'
+  })
 }
 
 function scrollSelectedBoundaryIntoView(anchorKey) {
@@ -68,41 +92,19 @@ function scrollSelectedBoundaryIntoView(anchorKey) {
     return
   }
 
-  const ayahNumber = viewer?.boundary_positions?.[anchorKey]?.ayah
-
-  if (!ayahNumber) {
-    return
-  }
-
-  const ayahElement = document.getElementById(getBoundaryViewerAyahId(ayahNumber))
-
-  ayahElement?.scrollIntoView({
-    behavior: 'smooth',
-    block: 'center',
-    inline: 'nearest'
-  })
+  scrollAyahIntoView(boundaryPositions[anchorKey]?.ayah)
 }
 
 function revealSelectedBoundary() {
   const row = getSelectedRow()
 
-  if (!row || !selectedMarkerState) {
+  if (!row) {
     return
   }
 
-  boundaryKind = 'all'
+  viewMode = 'all'
+  markerStatus = 'all'
   ayahScope = 'context'
-
-  if (selectedMarkerState.leftCounts && selectedMarkerState.rightCounts) {
-    markerScope = 'either'
-  } else if (!selectedMarkerState.leftCounts && !selectedMarkerState.rightCounts) {
-    const preferredCounter = row.counted_by.find(systemId => systemId !== leftSystemId) || row.counted_by[0] || null
-
-    if (preferredCounter) {
-      rightSystemId = preferredCounter
-      markerScope = 'either'
-    }
-  }
 
   tick().then(() => {
     scrollSelectedBoundaryIntoView(row.anchor_key)
@@ -122,67 +124,55 @@ $effect(() => {
   })
 })
 
-function buildMarkerTitle(row, leftCounts, rightCounts) {
-  const leftName = get_system_name(leftSystem) || leftSystemId
-  const rightName = get_system_name(rightSystem) || rightSystemId
-  const pointType = format_boundary_kind(row.kind, 'viewer')
-  const leftStatus = format_boundary_action(leftCounts)
-  const rightStatus = format_boundary_action(rightCounts)
+function buildMarkerTitle(row, displayCounts, comparisonCounts) {
+  const displayName = get_system_name(displaySystem) || displaySystemId
+  const displayStatus = format_boundary_action(displayCounts)
 
-  return `${row.location_label} · ${row.word} · ${pointType} — ${leftName} ${leftStatus}؛ ${rightName} ${rightStatus}.`
+  if (viewMode !== 'pair') {
+    return `${row.location_label} · الفاصلة: ${row.word} — ${displayName} ${displayStatus}.`
+  }
+
+  const comparisonName = get_system_name(comparisonSystem) || comparisonSystemId
+  const comparisonStatus = format_boundary_action(comparisonCounts)
+  return `${row.location_label} · الفاصلة: ${row.word} — ${displayName} ${displayStatus}؛ ${comparisonName} ${comparisonStatus}.`
 }
 
-function getMarkerTone(leftCounts, rightCounts) {
-  if (leftCounts && rightCounts) {
-    return 'ok'
+function getMarkerTone(displayCounts, comparisonCounts) {
+  if (viewMode !== 'pair') {
+    return displayCounts ? 'ok' : 'warn'
   }
 
-  if (leftCounts) {
-    return 'accent'
-  }
-
-  if (rightCounts) {
-    return 'alert'
-  }
-
-  return 'muted'
+  return displayCounts && !comparisonCounts ? 'accent' : 'alert'
 }
 
-function getMarkerLabel(leftCounts, rightCounts) {
-  if (leftCounts && rightCounts) {
-    return `${getShortLabel(leftSystemId)}+${getShortLabel(rightSystemId)}`
+function getMarkerLabel(displayCounts, comparisonCounts) {
+  if (viewMode !== 'pair') {
+    return displayCounts ? getShortLabel(displaySystemId) : 'لا'
   }
 
-  if (leftCounts) {
-    return getShortLabel(leftSystemId)
-  }
-
-  if (rightCounts) {
-    return getShortLabel(rightSystemId)
-  }
-
-  return null
+  return displayCounts && !comparisonCounts ? getShortLabel(displaySystemId) : getShortLabel(comparisonSystemId)
 }
 
 let markerStatesByKey = $derived.by(() => {
   const states = new Map()
 
   for (const row of rows) {
-    const leftCounts = row.systems[leftSystemId]?.counts_boundary ?? false
-    const rightCounts = row.systems[rightSystemId]?.counts_boundary ?? false
-    const pairVisible = markerScope === 'differences'
-      ? leftCounts !== rightCounts
-      : leftCounts || rightCounts
-    const kindVisible = boundaryKind === 'all' || row.kind === boundaryKind
-    const visible = pairVisible && kindVisible
+    const displayCounts = countsIn(row, displaySystemId)
+    const comparisonCounts = countsIn(row, comparisonSystemId)
+    const modeVisible = viewMode === 'pair' ? displayCounts !== comparisonCounts : true
+    const statusVisible =
+      markerStatus === 'all'
+      || (markerStatus === 'counted' && displayCounts)
+      || (markerStatus === 'not_counted' && !displayCounts)
+    const visible = Boolean(boundaryPositions[row.anchor_key]) && modeVisible && statusVisible
 
     states.set(row.anchor_key, {
-      leftCounts,
-      rightCounts,
+      displayCounts,
+      comparisonCounts,
       visible,
-      label: getMarkerLabel(leftCounts, rightCounts),
-      tone: getMarkerTone(leftCounts, rightCounts),
-      title: buildMarkerTitle(row, leftCounts, rightCounts)
+      label: getMarkerLabel(displayCounts, comparisonCounts),
+      tone: getMarkerTone(displayCounts, comparisonCounts),
+      title: buildMarkerTitle(row, displayCounts, comparisonCounts)
     })
   }
 
@@ -190,44 +180,19 @@ let markerStatesByKey = $derived.by(() => {
 })
 
 let selectedMarkerState = $derived(selectedKey ? markerStatesByKey.get(selectedKey) || null : null)
-let selectedAyah = $derived(selectedKey && viewer ? viewer.boundary_positions[selectedKey]?.ayah || null : null)
+let selectedAyah = $derived(selectedKey ? boundaryPositions[selectedKey]?.ayah ?? null : null)
 let selectedMarkerHidden = $derived(Boolean(selectedKey && selectedMarkerState && !selectedMarkerState.visible))
 
 function getPairAyahTone(entry) {
-  if (entry.endCount > 0 && entry.internalCount > 0) {
+  if (entry.displayOnlyCount > 0 && entry.comparisonOnlyCount > 0) {
     return 'warn'
   }
 
-  if (entry.internalCount > 0) {
-    return 'accent'
-  }
-
-  return 'ok'
+  return entry.displayOnlyCount > 0 ? 'accent' : 'alert'
 }
 
 function buildPairAyahTitle(entry) {
-  const kindLabel = entry.endCount > 0 && entry.internalCount > 0
-    ? 'فروق نهايات وداخلية'
-    : entry.internalCount > 0
-      ? 'فروق داخلية'
-      : 'فروق في نهايات الآيات'
-  const pointLabel = format_difference_count(entry.pointCount, 'موضع مختلف', 'مواضع مختلفة')
-
-  return `${format_ayah_reference(entry.ayah)}: ${kindLabel}؛ لهذا الزوج ${pointLabel}`
-}
-
-function scrollAyahIntoView(ayahNumber) {
-  if (!ayahNumber) {
-    return
-  }
-
-  const ayahElement = document.getElementById(getBoundaryViewerAyahId(ayahNumber))
-
-  ayahElement?.scrollIntoView({
-    behavior: 'smooth',
-    block: 'center',
-    inline: 'nearest'
-  })
+  return `${formatDisplayAyahLabel(entry.ayah)}: ${format_difference_count(entry.pointCount, 'رأس آية مختلف فيه', 'رؤوس آي مختلف فيها')}`
 }
 
 let pairDifferenceSummary = $derived.by(() => {
@@ -235,30 +200,43 @@ let pairDifferenceSummary = $derived.by(() => {
   const summary = {
     pointCount: 0,
     ayahCount: 0,
-    endAyahCount: 0,
-    internalAyahCount: 0,
+    displayOnlyCount: 0,
+    comparisonOnlyCount: 0,
     ayahs: []
   }
 
   for (const row of rows) {
-    const leftCounts = row.systems[leftSystemId]?.counts_boundary ?? false
-    const rightCounts = row.systems[rightSystemId]?.counts_boundary ?? false
+    const displayCounts = countsIn(row, displaySystemId)
+    const comparisonCounts = countsIn(row, comparisonSystemId)
 
-    if (leftCounts === rightCounts) {
+    if (displayCounts === comparisonCounts) {
       continue
     }
 
-    const ayahNumber = getBoundaryAyahNumber(row)
+    const ayahNumber = boundaryPositions[row.anchor_key]?.ayah
+
+    if (ayahNumber == null) {
+      continue
+    }
+
     const entry = ayahMap.get(ayahNumber) || {
       ayah: ayahNumber,
       anchorKey: row.anchor_key,
       pointCount: 0,
-      endCount: 0,
-      internalCount: 0
+      displayOnlyCount: 0,
+      comparisonOnlyCount: 0
     }
 
     entry.pointCount += 1
-    entry[row.kind === 'end' ? 'endCount' : 'internalCount'] += 1
+
+    if (displayCounts) {
+      entry.displayOnlyCount += 1
+      summary.displayOnlyCount += 1
+    } else {
+      entry.comparisonOnlyCount += 1
+      summary.comparisonOnlyCount += 1
+    }
+
     ayahMap.set(ayahNumber, entry)
     summary.pointCount += 1
   }
@@ -271,8 +249,6 @@ let pairDifferenceSummary = $derived.by(() => {
       title: buildPairAyahTitle(entry)
     }))
   summary.ayahCount = summary.ayahs.length
-  summary.endAyahCount = summary.ayahs.filter(entry => entry.endCount > 0).length
-  summary.internalAyahCount = summary.ayahs.filter(entry => entry.internalCount > 0).length
 
   return summary
 })
@@ -282,17 +258,15 @@ function focusPairAyah(entry) {
     return
   }
 
-  const anchorKey = entry.anchorKey || null
-  const needsReveal = !focusAyahNumbers.has(entry.ayah) || (anchorKey && !markerStatesByKey.get(anchorKey)?.visible)
+  const needsReveal = !focusAyahNumbers.has(entry.ayah) || !markerStatesByKey.get(entry.anchorKey)?.visible
 
   if (needsReveal) {
-    boundaryKind = 'all'
+    viewMode = 'pair'
+    markerStatus = 'all'
     ayahScope = 'context'
   }
 
-  if (anchorKey) {
-    onselect?.(anchorKey)
-  }
+  onselect?.(entry.anchorKey)
 
   tick().then(() => {
     scrollAyahIntoView(entry.ayah)
@@ -304,21 +278,22 @@ let visibleAyahNumbers = $derived.by(() => {
 
   for (const row of rows) {
     if (markerStatesByKey.get(row.anchor_key)?.visible) {
-      ayahs.add(getBoundaryAyahNumber(row))
+      const position = boundaryPositions[row.anchor_key]
+
+      if (position) {
+        ayahs.add(position.ayah)
+      }
     }
   }
 
   return ayahs
 })
 
-let comparisonSummary = $derived.by(() => {
+let markerSummary = $derived.by(() => {
   const summary = {
     visible: 0,
-    left_only: 0,
-    right_only: 0,
-    both: 0,
-    end: 0,
-    internal: 0
+    counted: 0,
+    not_counted: 0
   }
 
   for (const row of rows) {
@@ -329,14 +304,11 @@ let comparisonSummary = $derived.by(() => {
     }
 
     summary.visible += 1
-    summary[row.kind] += 1
 
-    if (state.leftCounts && state.rightCounts) {
-      summary.both += 1
-    } else if (state.leftCounts) {
-      summary.left_only += 1
-    } else if (state.rightCounts) {
-      summary.right_only += 1
+    if (state.displayCounts) {
+      summary.counted += 1
+    } else {
+      summary.not_counted += 1
     }
   }
 
@@ -345,13 +317,14 @@ let comparisonSummary = $derived.by(() => {
 
 let focusAyahNumbers = $derived.by(() => {
   const included = new Set()
+  const totalAyahs = displayedMushaf.total_ayah_count
 
   if (!viewer) {
     return included
   }
 
   if (rows.length === 0 || ayahScope === 'full') {
-    for (let ayah = 1; ayah <= viewer.kufi_ayah_count; ayah += 1) {
+    for (let ayah = 1; ayah <= totalAyahs; ayah += 1) {
       included.add(ayah)
     }
 
@@ -362,7 +335,7 @@ let focusAyahNumbers = $derived.by(() => {
     included.add(ayah)
   }
 
-  if (selectedAyah) {
+  if (selectedAyah !== null) {
     included.add(selectedAyah)
   }
 
@@ -374,7 +347,7 @@ let focusAyahNumbers = $derived.by(() => {
         included.add(ayah - 1)
       }
 
-      if (ayah < viewer.kufi_ayah_count) {
+      if (ayah < totalAyahs) {
         included.add(ayah + 1)
       }
     }
@@ -383,96 +356,100 @@ let focusAyahNumbers = $derived.by(() => {
   return included
 })
 
-let displayAyahs = $derived.by(() => {
-  if (!viewer) {
-    return []
-  }
+function buildDisplayLine(unit) {
+  const internalMarkerBuckets = new Map()
+  const endMarkers = []
+  let hasVisibleMarkers = false
+  let hasSelectedMarker = false
 
-  const displayItems = []
-  let previousAyah = 0
+  for (const row of rows) {
+    const position = boundaryPositions[row.anchor_key]
 
-  for (const ayah of viewer.ayahs) {
-    if (!focusAyahNumbers.has(ayah.ayah)) {
+    if (!position || position.ayah !== unit.ayah) {
       continue
     }
 
-    if (previousAyah > 0 && ayah.ayah - previousAyah > 1) {
+    hasSelectedMarker = hasSelectedMarker || row.anchor_key === selectedKey
+
+    const state = markerStatesByKey.get(row.anchor_key)
+
+    if (!state?.visible || !state.label) {
+      continue
+    }
+
+    const marker = {
+      anchor_key: row.anchor_key,
+      kind: position.is_display_end ? 'end' : 'internal',
+      label: state.label,
+      tone: state.tone,
+      title: state.title
+    }
+
+    if (position.is_display_end) {
+      endMarkers.push(marker)
+    } else {
+      const markersAtToken = internalMarkerBuckets.get(position.after_token) || []
+      markersAtToken.push(marker)
+      internalMarkerBuckets.set(position.after_token, markersAtToken)
+    }
+
+    hasVisibleMarkers = true
+  }
+
+  return {
+    type: unit.type,
+    ayah: unit.ayah,
+    kufi_start: unit.kufi_start,
+    kufi_end: unit.kufi_end,
+    prefix: unit.prefix,
+    tokens: unit.tokens,
+    internalMarkerBuckets,
+    endMarkers,
+    hasVisibleMarkers,
+    hasSelectedMarker
+  }
+}
+
+let displayAyahs = $derived.by(() => {
+  const displayItems = []
+  let previousAyah = 0
+  const showPreamble = ayahScope === 'full' || focusAyahNumbers.has(0) || focusAyahNumbers.has(1)
+
+  for (const unit of displayedMushaf.display_units) {
+    if (unit.type === 'preamble') {
+      if (showPreamble) {
+        displayItems.push(buildDisplayLine(unit))
+      }
+
+      continue
+    }
+
+    if (!focusAyahNumbers.has(unit.ayah)) {
+      continue
+    }
+
+    if (previousAyah > 0 && unit.ayah - previousAyah > 1) {
       displayItems.push({
         type: 'gap',
         from: previousAyah + 1,
-        to: ayah.ayah - 1,
-        count: ayah.ayah - previousAyah - 1
+        to: unit.ayah - 1,
+        count: unit.ayah - previousAyah - 1
       })
     }
 
-    const tokens = script === 'plain' ? ayah.plain_tokens : ayah.uthmani_tokens
-    const internalMarkerBuckets = new Map()
-    const endMarkers = []
-    let hasVisibleMarkers = false
-    let hasSelectedMarker = false
-
-    for (const row of rows) {
-      const position = viewer.boundary_positions[row.anchor_key]
-
-      if (!position || position.ayah !== ayah.ayah) {
-        continue
-      }
-
-      hasSelectedMarker = hasSelectedMarker || row.anchor_key === selectedKey
-
-      const state = markerStatesByKey.get(row.anchor_key)
-
-      if (!state?.visible || !state.label) {
-        continue
-      }
-
-      const marker = {
-        anchor_key: row.anchor_key,
-        kind: row.kind,
-        label: state.label,
-        tone: state.tone,
-        title: state.title
-      }
-
-      if (row.kind === 'end') {
-        endMarkers.push(marker)
-      } else {
-        const afterToken = script === 'plain'
-          ? position.plain_after_token
-          : position.uthmani_after_token
-        const markersAtToken = internalMarkerBuckets.get(afterToken) || []
-        markersAtToken.push(marker)
-        internalMarkerBuckets.set(afterToken, markersAtToken)
-      }
-
-      hasVisibleMarkers = true
-    }
-
-    displayItems.push({
-      type: 'ayah',
-      ayah: ayah.ayah,
-      prefix: script === 'uthmani' ? ayah.uthmani_prefix : null,
-      tokens,
-      internalMarkerBuckets,
-      endMarkers,
-      hasVisibleMarkers,
-      hasSelectedMarker
-    })
-
-    previousAyah = ayah.ayah
+    displayItems.push(buildDisplayLine(unit))
+    previousAyah = unit.ayah
   }
 
   return displayItems
 })
 
 let displaySummary = $derived.by(() => {
-  const shownAyahs = displayAyahs.reduce((count, item) => {
-    return item.type === 'ayah' ? count + 1 : count
-  }, 0)
+  const shownAyahs = displayAyahs.reduce((count, item) => item.type === 'ayah' ? count + 1 : count, 0)
 
   return {
     shownAyahs,
-    hiddenAyahs: viewer ? Math.max(viewer.kufi_ayah_count - shownAyahs, 0) : 0
+    hiddenAyahs: Math.max(displayedMushaf.total_ayah_count - shownAyahs, 0)
   }
 })
 
@@ -487,72 +464,71 @@ let displayBasmala = $derived.by(() => {
 </script>
 
 {#if viewer}
-  <section class="surface p-5 sm:p-6">
+  <section id="mushaf" class="surface p-5 sm:p-6">
     <div class="flex flex-wrap items-start justify-between gap-4">
       <div>
         <div class="rule_label">عارض المصحف</div>
-        <h2 class="section_title mt-4">علامات الحدود داخل نص السورة</h2>
+        <h2 class="section_title mt-4">قراءة السورة بحسب مذهب العدّ المختار</h2>
         <p class="section_text mt-3 text-sm">
-          تظهر الفواصل الداخلية بعد كلمة الارتكاز، وتظهر فروق النهايات بجوار رقم الآية.
+          يحدد مذهب العدّ المعروض ترقيم الآيات، وتظهر علامات الفواصل المختلف فيها داخل موضعها من النص.
         </p>
       </div>
 
       <div class="flex flex-wrap gap-2 text-xs text-ink-soft">
-        <span class="badge" data-tone="accent">{getShortLabel(leftSystemId)} فقط: {compact_number(comparisonSummary.left_only)}</span>
-        <span class="badge" data-tone="alert">{getShortLabel(rightSystemId)} فقط: {compact_number(comparisonSummary.right_only)}</span>
-        {#if markerScope === 'either'}
-          <span class="badge" data-tone="ok">كلاهما: {compact_number(comparisonSummary.both)}</span>
+        <span class="badge" data-tone="ok">{compact_number(displayedMushaf.total_ayah_count)} آية في {get_system_name(displaySystem) || displaySystemId}</span>
+        <span class="badge" data-tone="accent">{compact_number(markerSummary.counted)} يعدها المذهب المعروض</span>
+        <span class="badge" data-tone="warn">{compact_number(markerSummary.not_counted)} لا يعدها</span>
+      </div>
+    </div>
+
+    {#if viewMode === 'pair'}
+      <div class="mushaf_pair_summary mt-6">
+        <div class="flex flex-wrap items-start justify-between gap-4">
+          <div>
+            <div class="metric_label">المقارنة الزوجية</div>
+            {#if displaySystemId === comparisonSystemId}
+              <p class="mt-3 text-sm text-ink-soft">
+                مذهب العدّ المعروض ومذهب المقارنة كلاهما {get_system_name(displaySystem) || displaySystemId}، لذلك لا يظهر فرق زوجي.
+              </p>
+            {:else if pairDifferenceSummary.ayahCount === 0}
+              <p class="mt-3 text-sm text-ink-soft">
+                لا يختلف {get_system_name(displaySystem) || displaySystemId} و{get_system_name(comparisonSystem) || comparisonSystemId} في أي رأس آية مسجل هنا.
+              </p>
+            {:else}
+              <p class="mt-3 text-sm text-ink-soft">
+                يختلف {get_system_name(displaySystem) || displaySystemId} و{get_system_name(comparisonSystem) || comparisonSystemId} في {format_difference_count(pairDifferenceSummary.pointCount, 'رأس آية مسجل', 'رؤوس آي مسجلة')} عبر {format_difference_count(pairDifferenceSummary.ayahCount, 'آية معروضة', 'آيات معروضة')}.
+              </p>
+            {/if}
+          </div>
+
+          <div class="flex flex-wrap gap-2 text-xs text-ink-soft">
+            <span class="badge" data-tone="accent">{getShortLabel(displaySystemId)} فقط: {compact_number(pairDifferenceSummary.displayOnlyCount)}</span>
+            <span class="badge" data-tone="alert">{getShortLabel(comparisonSystemId)} فقط: {compact_number(pairDifferenceSummary.comparisonOnlyCount)}</span>
+          </div>
+        </div>
+
+        {#if pairDifferenceSummary.ayahs.length > 0}
+          <div class="mt-4 text-[0.72rem] font-bold tracking-[0.16em] text-ink-soft uppercase">الآيات ذات الفرق الزوجي</div>
+          <div class="mushaf_pair_range_list mt-3">
+            {#each pairDifferenceSummary.ayahs as entry (entry.ayah)}
+              <button
+                type="button"
+                class="mushaf_pair_range_chip"
+                data-tone={entry.tone}
+                data-active={entry.ayah === selectedAyah ? 'true' : 'false'}
+                title={entry.title}
+                onclick={() => focusPairAyah(entry)}
+              >
+                {formatDisplayAyahLabel(entry.ayah)}
+              </button>
+            {/each}
+          </div>
+          <p class="mt-3 text-xs text-ink-soft">
+            أرقام الآيات هنا بحسب مذهب العدّ المعروض، لا بحسب ترقيم حفص إلا إذا كان الكوفي هو المذهب المعروض.
+          </p>
         {/if}
       </div>
-    </div>
-
-    <div class="mushaf_pair_summary mt-6">
-      <div class="flex flex-wrap items-start justify-between gap-4">
-        <div>
-          <div class="metric_label">الزوج الحالي</div>
-          {#if leftSystemId === rightSystemId}
-            <p class="mt-3 text-sm text-ink-soft">
-              كلا المحددين على {get_system_name(leftSystem) || leftSystemId}، لذلك لا فرق زوجيًا هنا.
-            </p>
-          {:else if pairDifferenceSummary.ayahCount === 0}
-            <p class="mt-3 text-sm text-ink-soft">
-              لا يختلف {get_system_name(leftSystem) || leftSystemId} و{get_system_name(rightSystem) || rightSystemId} في أي موضع مسجل هنا.
-            </p>
-          {:else}
-            <p class="mt-3 text-sm text-ink-soft">
-              يختلف {get_system_name(leftSystem) || leftSystemId} و{get_system_name(rightSystem) || rightSystemId} في {format_difference_count(pairDifferenceSummary.pointCount, 'موضع مسجل', 'مواضع مسجلة')} عبر {format_difference_count(pairDifferenceSummary.ayahCount, 'آية', 'آيات')}.
-            </p>
-          {/if}
-        </div>
-
-        <div class="flex flex-wrap gap-2 text-xs text-ink-soft">
-          <span class="badge" data-tone="accent">{format_difference_count(pairDifferenceSummary.ayahCount, 'آية مختلفة', 'آيات مختلفة')}</span>
-          <span class="badge" data-tone="ok">{compact_number(pairDifferenceSummary.endAyahCount)} مع فروق في النهايات</span>
-          <span class="badge" data-tone="warn">{compact_number(pairDifferenceSummary.internalAyahCount)} مع فروق داخلية</span>
-        </div>
-      </div>
-
-      {#if pairDifferenceSummary.ayahs.length > 0}
-        <div class="mt-4 text-[0.72rem] font-bold tracking-[0.16em] text-ink-soft uppercase">الآيات المختلفة</div>
-        <div class="mushaf_pair_range_list mt-3">
-          {#each pairDifferenceSummary.ayahs as entry (entry.ayah)}
-            <button
-              type="button"
-              class="mushaf_pair_range_chip"
-              data-tone={entry.tone}
-              data-active={entry.ayah === selectedAyah ? 'true' : 'false'}
-              title={entry.title}
-              onclick={() => focusPairAyah(entry)}
-            >
-              {compact_number(entry.ayah)}
-            </button>
-          {/each}
-        </div>
-        <p class="mt-3 text-xs text-ink-soft">
-          اضغط رقم الآية للانتقال إليها. لون النهاية لفروق النهايات، ولون الداخل للفروق الداخلية، واللون المركب لما يجمعهما.
-        </p>
-      {/if}
-    </div>
+    {/if}
 
     <div class="mushaf_control_grid mt-6">
       <label>
@@ -564,8 +540,8 @@ let displayBasmala = $derived.by(() => {
       </label>
 
       <label>
-        <div class="metric_label">النظام الأيسر</div>
-        <select class="select mt-2" bind:value={leftSystemId}>
+        <div class="metric_label">مذهب العدّ المعروض</div>
+        <select class="select mt-2" bind:value={displaySystemId}>
           {#each systems as system (system.id)}
             <option value={system.id}>{get_system_name(system)}</option>
           {/each}
@@ -573,65 +549,71 @@ let displayBasmala = $derived.by(() => {
       </label>
 
       <label>
-        <div class="metric_label">النظام الأيمن</div>
-        <select class="select mt-2" bind:value={rightSystemId}>
-          {#each systems as system (system.id)}
-            <option value={system.id}>{get_system_name(system)}</option>
-          {/each}
+        <div class="metric_label">نمط العلامات</div>
+        <select class="select mt-2" bind:value={viewMode}>
+          <option value="all">كل الفواصل المختلف فيها</option>
+          <option value="pair">مقارنة زوجية</option>
         </select>
       </label>
 
+      {#if viewMode === 'pair'}
+        <label>
+          <div class="metric_label">مذهب المقارنة</div>
+          <select class="select mt-2" bind:value={comparisonSystemId}>
+            {#each systems as system (system.id)}
+              <option value={system.id}>{get_system_name(system)}</option>
+            {/each}
+          </select>
+        </label>
+      {/if}
+
       <label>
-        <div class="metric_label">المواضع</div>
-        <select class="select mt-2" bind:value={boundaryKind}>
-          <option value="all">جميع مواضع الخلاف</option>
-          <option value="end">نهايات الآيات فقط</option>
-          <option value="internal">الداخلية فقط</option>
+        <div class="metric_label">حكم رأس الآية في المذهب المعروض</div>
+        <select class="select mt-2" bind:value={markerStatus}>
+          <option value="all">كل رؤوس الآي المختلف فيها</option>
+          <option value="counted">يعدها المذهب المعروض</option>
+          <option value="not_counted">لا يعدها المذهب المعروض</option>
         </select>
       </label>
 
       <label>
         <div class="metric_label">الآيات المعروضة</div>
         <select class="select mt-2" bind:value={ayahScope}>
-          <option value="context">الآيات المتغيرة مع الجوار</option>
-          <option value="changed">الآيات المتغيرة فقط</option>
+          <option value="context">رؤوس الآي المختلف فيها مع الجوار</option>
+          <option value="changed">رؤوس الآي المختلف فيها فقط</option>
           <option value="full">السورة كاملة</option>
-        </select>
-      </label>
-
-      <label>
-        <div class="metric_label">العلامات</div>
-        <select class="select mt-2" bind:value={markerScope}>
-          <option value="differences">مواضع الاختلاف فقط</option>
-          <option value="either">أي موضع يعده أحد النظامين</option>
         </select>
       </label>
     </div>
 
     <div class="mt-5 flex flex-wrap gap-2 text-xs text-ink-soft">
-      <span class="badge" data-tone="accent">{getShortLabel(leftSystemId)} = {get_system_name(leftSystem) || leftSystemId}</span>
-      <span class="badge" data-tone="alert">{getShortLabel(rightSystemId)} = {get_system_name(rightSystem) || rightSystemId}</span>
-      {#if script === 'uthmani'}
-        <span class="badge" data-tone="warn">قد تظهر البسملة مستقلة إذا سبق بها المصدر الآية الأولى.</span>
+      <span class="badge" data-tone="ok">{getShortLabel(displaySystemId)} = {get_system_name(displaySystem) || displaySystemId}</span>
+      {#if viewMode === 'pair'}
+        <span class="badge" data-tone="alert">{getShortLabel(comparisonSystemId)} = {get_system_name(comparisonSystem) || comparisonSystemId}</span>
+      {/if}
+      {#if displayedMushaf.preamble}
+        <span class="badge" data-tone="warn">تظهر بسملة الفاتحة بلا رقم في مذهب العدّ المعروض.</span>
+      {:else if script === 'uthmani' && displayBasmala}
+        <span class="badge" data-tone="warn">تظهر البسملة قبل الآية الأولى حين يثبتها المصدر مستقلة عن النص.</span>
       {/if}
     </div>
 
     <p class="mt-4 text-sm text-ink-soft">
-      يظهر {compact_number(displaySummary.shownAyahs)} من أصل {compact_number(viewer.kufi_ayah_count)} آية. والظاهر في هذا الترشيح {compact_number(comparisonSummary.visible)} موضعًا: {compact_number(comparisonSummary.end)} نهايات و{compact_number(comparisonSummary.internal)} فواصل داخلية.
+      يظهر {compact_number(displaySummary.shownAyahs)} من أصل {compact_number(displayedMushaf.total_ayah_count)} آية بحسب {get_system_name(displaySystem) || displaySystemId}. والظاهر في هذا الترشيح {compact_number(markerSummary.visible)} رأس آية مختلف فيه.
     </p>
 
     {#if selectedMarkerHidden}
       <div class="mt-3 flex flex-wrap items-center gap-3 text-sm text-ink-soft">
-        <p>الموضع المحدد مخفي بهذا الترشيح أو بهذا الزوج.</p>
+        <p>رأس الآية المحدد مخفي بهذا الترشيح.</p>
         <button type="button" class="pill_button" data-tone="accent" onclick={revealSelectedBoundary}>
           اضبط العارض لإظهاره
         </button>
       </div>
     {/if}
 
-    {#if comparisonSummary.visible === 0 && rows.length > 0}
+    {#if markerSummary.visible === 0 && rows.length > 0}
       <p class="mt-4 text-sm text-ink-soft">
-        لا يظهر مع هذا الزوج وهذا الترشيح أي موضع خلاف مسجل.
+        لا يظهر بهذا الترشيح أي رأس آية مختلف فيه.
       </p>
     {/if}
 
@@ -641,7 +623,7 @@ let displayBasmala = $derived.by(() => {
       {/if}
 
       <div class="mushaf_viewer_body">
-        {#each displayAyahs as item (`${script}-${item.type}-${item.type === 'ayah' ? item.ayah : `${item.from}-${item.to}`}`)}
+        {#each displayAyahs as item (`${script}-${displaySystemId}-${item.type}-${item.type === 'ayah' || item.type === 'preamble' ? item.ayah : `${item.from}-${item.to}`}`)}
           {#if item.type === 'gap'}
             <p class="mushaf_gap_line" dir="ltr">
               <span class="mushaf_gap_pill">
@@ -701,7 +683,11 @@ let displayBasmala = $derived.by(() => {
                 </span>
               {/if}
 
-              <span class="mushaf_ayah_number">{compact_number(item.ayah)}</span>
+              {#if item.type === 'preamble'}
+                <span class="mushaf_ayah_number" data-unnumbered="true">بلا رقم</span>
+              {:else}
+                <span class="mushaf_ayah_number">{compact_number(item.ayah)}</span>
+              {/if}
             </p>
           {/if}
         {/each}

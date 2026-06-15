@@ -1,6 +1,6 @@
 /**
  * Generate forward mapping files directly from the canonical scholar-facing,
- * book-aligned primitive source layer for all non-Kufan counting systems.
+ * book-aligned primitive source layer for all non-Kufan counting madhhabs.
  *
  * Outputs are written to dist/ because they are generated artifacts, not the
  * hand-maintained scholarly source of truth.

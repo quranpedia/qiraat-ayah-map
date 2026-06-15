@@ -65,7 +65,7 @@ export function format_boundary_decision(counts_boundary) {
 }
 
 export function format_boundary_action(counts_boundary) {
-  return counts_boundary ? 'يعد هذا الموضع' : 'يتجاوزه'
+  return counts_boundary ? 'يعدّه رأس آية' : 'لا يعدّه رأس آية'
 }
 
 export function format_surah_reference(surah_number) {

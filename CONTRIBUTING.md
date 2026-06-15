@@ -1,4 +1,4 @@
-# Contributing to Qiraat Ayah Map
+# Contributing to the Qiraat Ayah Count Reference
 
 Thank you for contributing.
 
@@ -9,7 +9,7 @@ This repository now has six related but distinct layers:
 1. **Book-aligned boundary primitives** — `data/book-boundary-primitives.json`
    - canonical authored scholarly claim layer
    - groups disputed boundary points by location and word
-   - lists the counting systems that count that point as a ra's ayah
+   - lists the counting madhhabs that count that point as a ra's ayah
 
 2. **Boundary evidence sidecar** — `data/book-boundary-evidence.json`
    - canonical authored evidence and review layer
@@ -17,7 +17,7 @@ This repository now has six related but distinct layers:
 
 3. **Word-level compatibility view** — `dist/differences.json`
    - generated from the canonical primitive layer
-   - preserves the legacy per-system word-level shape
+   - preserves the legacy word-level compatibility shape
 
 4. **Operational forward mappings** — `dist/mappings/by-counting-system/kufi-to-*.json`
    - generated runtime artifacts
@@ -53,7 +53,7 @@ Use this path when you have a source that identifies the exact **word** where an
    - the scholarly source
    - the disputed boundary word
    - whether it is an `end` boundary or an `internal` boundary
-   - which counting systems should count it
+   - which counting madhhabs should count it
    - the evidence tier, locator, and verification-status change
 
 ### 2) Operational mapping correction
@@ -126,7 +126,7 @@ Rules:
 
 - `end` = disputed boundary at the end of the specified Kufan/Hafs ayah
 - `internal` = disputed boundary inside the specified Kufan/Hafs ayah, after the named word
-- `counted_by` names the systems that count that point as a ra's ayah
+- `counted_by` names the counting madhhabs that count that point as a ra's ayah
 - ordinary undisputed Kufan ends are implicit and omitted
 
 See the in-site schema doc at `https://quranpedia.github.io/qiraat-ayah-map/docs/schema-book-boundary-primitives-v1` for the full schema contract.

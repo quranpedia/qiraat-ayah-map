@@ -1,3 +1,7 @@
+export function getBoundaryHash(anchorKey) {
+  return anchorKey ? `#${encodeURIComponent(anchorKey)}` : ''
+}
+
 export function decodeBoundaryHash(hash = '') {
   if (!hash || hash === '#') {
     return null

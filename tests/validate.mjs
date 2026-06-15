@@ -6,8 +6,10 @@
 
 import { readFileSync, existsSync, readdirSync } from 'fs';
 import { join } from 'path';
-import { decodeBoundaryHash, getBoundaryTableRowId, getBoundaryViewerAyahId, getBoundaryViewerMarkerId } from '../site/src/lib/mushaf-viewer-dom.js';
-import { buildDifferingAyahSummary } from '../site/src/lib/mushaf-viewer.js';
+import { decodeBoundaryHash, getBoundaryHash, getBoundaryTableRowId, getBoundaryViewerAyahId, getBoundaryViewerMarkerId } from '../site/src/lib/mushaf-viewer-dom.js';
+import { getMadhhabHref } from '../site/src/lib/route-urls.js';
+import { get_grouped_docs, get_neighbor_docs } from '../site/src/lib/docs.js';
+import { buildCountingMadhhabAyahs, buildDifferingAyahSummary } from '../site/src/lib/mushaf-viewer.js';
 import { normalizeBookBoundaryEvidenceDocument, flattenBookBoundaryReviewRows, VERIFICATION_STATUS_ORDER } from '../scripts/lib/book-evidence-utils.mjs';
 import { buildBookBoundaryPrimitives, expandBookBoundaryPrimitivesToDifferences, getTraditionalSystemOrder, normalizeBookBoundaryPrimitivesDocument } from '../scripts/lib/book-primitives-utils.mjs';
 import {
@@ -274,6 +276,155 @@ const knownMushafIds = new Map([
 ]);
 const boundaryBlocks = new Map(boundaryEvents.differences.map(block => [block.counting_system, block]));
 const differenceBlocks = new Map(differences.differences.map(block => [block.counting_system, block]));
+
+
+section('Public terminology guardrails');
+
+const publicTerminologyFiles = [
+  'README.md',
+  'CONTRIBUTING.md',
+  'data/book-boundary-primitives.json',
+  'site/index.html',
+  'site/src/lib/i18n.js',
+  'site/src/lib/docs.generated.js',
+  'site/src/locales/ar.po',
+  'site/src/locales/en.po',
+  'site/src/components/BoundaryDetail.svelte',
+  'site/src/components/Header.svelte',
+  'site/src/components/SiteFooter.svelte',
+  'site/src/components/SurahMushafViewer.svelte',
+  'site/src/components/MadhhabCard.svelte',
+  'site/src/routes/AyahCounts.svelte',
+  'site/src/routes/Explorer.svelte',
+  'site/src/routes/Home.svelte',
+  'site/src/routes/Mushaf.svelte',
+  'site/src/routes/NotFound.svelte',
+  'site/src/routes/Project.svelte',
+  'site/src/routes/Surah.svelte',
+  'site/src/routes/Surahs.svelte',
+  'site/src/routes/Madhhab.svelte'
+];
+
+const bannedPublicTerminology = [
+  [/أنظمة العدّ الستة|أنظمة العد الستة/u, 'Arabic six-systems wording'],
+  [/الأنظمة الستة|الأنظمة المعيارية/u, 'Arabic standard-systems wording'],
+  [/كلمة الارتكاز/u, 'Arabic anchor-word wording'],
+  [/حالة التوثيق/u, 'Arabic public documentation-status wording'],
+  [/قابل للفحص والمراجعة|قابل(?:ة)? للمراجعة|نقطة يَعُدُّها|يعد هذا الموضع|مكتبة الوثائق الأصلية/u, 'Arabic retired feedback wording'],
+  [/افحص رؤوس الآي المختلف فيها|رشِّح بحسب مذهب العدّ/u, 'Arabic old explorer copy'],
+  [/خرائط|خريطة|أطلس/u, 'Arabic map/atlas wording'],
+  [/النظام الأيسر|النظام الأيمن|هذا النظام|لهذا النظام|النظام غير موجود/u, 'Arabic system wording'],
+  [/six systems|six canonical systems|six counting systems|standard systems|canonical systems|No system|This system|counting systems that count|per-system word-level/i, 'English systems wording'],
+  [/anchor word/i, 'English anchor-word wording'],
+  [/documentation status/i, 'English public documentation-status wording'],
+  [/effect in each system/i, 'English per-system effect wording'],
+  [/reference atlas|public atlas/i, 'English atlas framing']
+];
+
+for (const filename of publicTerminologyFiles) {
+  const fileText = readFileSync(join(repoDir, filename), 'utf-8');
+
+  for (const [pattern, label] of bannedPublicTerminology) {
+    assert(!pattern.test(fileText), `${filename} avoids ${label}`);
+  }
+}
+
+const publicDocsTerminologyFiles = ['site/src/lib/docs.generated.js'];
+const bannedPublicDocsTerminology = [
+  [/خريطة|خرائط/u, 'Arabic map wording'],
+  [/\bmaps?\b/i, 'English map wording'],
+  [/\batlas\b/i, 'English atlas wording']
+];
+
+for (const filename of publicDocsTerminologyFiles) {
+  const fileText = readFileSync(join(repoDir, filename), 'utf-8');
+
+  for (const [pattern, label] of bannedPublicDocsTerminology) {
+    assert(!pattern.test(fileText), `${filename} avoids ${label}`);
+  }
+}
+
+
+const retiredPublicCharts = [
+  'site/src/components/charts/PlotTotals.svelte',
+  'site/src/components/charts/PlotSurahHeatmap.svelte',
+  'site/src/components/charts/PlotSurahDrift.svelte',
+  'site/src/components/charts/SystemFingerprint.svelte',
+  'site/src/components/charts/PlotSurahBoundaryMap.svelte'
+];
+
+for (const filename of retiredPublicCharts) {
+  assert(!existsSync(join(repoDir, filename)), `${filename} remains retired from researcher-facing chart surfaces`);
+}
+
+const appRouteShellText = readFileSync(join(repoDir, 'site/src/App.svelte'), 'utf-8');
+const mainRouteText = readFileSync(join(repoDir, 'site/src/main.svelte.js'), 'utf-8');
+const headerText = readFileSync(join(repoDir, 'site/src/components/Header.svelte'), 'utf-8');
+const madhhabCardText = readFileSync(join(repoDir, 'site/src/components/MadhhabCard.svelte'), 'utf-8');
+const ayahCountsRouteText = readFileSync(join(repoDir, 'site/src/routes/AyahCounts.svelte'), 'utf-8');
+const explorerRouteText = readFileSync(join(repoDir, 'site/src/routes/Explorer.svelte'), 'utf-8');
+const boundaryDetailText = readFileSync(join(repoDir, 'site/src/components/BoundaryDetail.svelte'), 'utf-8');
+const docsRouteText = readFileSync(join(repoDir, 'site/src/routes/Docs.svelte'), 'utf-8');
+const docRouteText = readFileSync(join(repoDir, 'site/src/routes/Doc.svelte'), 'utf-8');
+const docsLibraryText = readFileSync(join(repoDir, 'site/src/lib/docs.js'), 'utf-8');
+const docsGeneratedText = readFileSync(join(repoDir, 'site/src/lib/docs.generated.js'), 'utf-8');
+const developerRouteText = readFileSync(join(repoDir, 'site/src/routes/Developer.svelte'), 'utf-8');
+const projectRouteText = readFileSync(join(repoDir, 'site/src/routes/Project.svelte'), 'utf-8');
+const mushafRouteText = readFileSync(join(repoDir, 'site/src/routes/Mushaf.svelte'), 'utf-8');
+const madhhabRouteText = readFileSync(join(repoDir, 'site/src/routes/Madhhab.svelte'), 'utf-8');
+const routeUrlsText = readFileSync(join(repoDir, 'site/src/lib/route-urls.js'), 'utf-8');
+const surahRouteText = readFileSync(join(repoDir, 'site/src/routes/Surah.svelte'), 'utf-8');
+
+assert(/route_query/.test(mainRouteText) && /route_hash/.test(mainRouteText), 'Router publishes query and hash as route state');
+assert(/route_query=\{route_query\}/.test(appRouteShellText) && /route_hash=\{route_hash\}/.test(appRouteShellText), 'App passes query and hash state into routes');
+assert(/let \{ surah, route_hash = '', route_query = \{\} \} = \$props\(\)/.test(surahRouteText), 'Surah route receives route state as props');
+assert(/const requestedSystemId = route_query\.madhhab/.test(surahRouteText), 'Surah route derives the requested counting madhhab from route state');
+assert(!/new URLSearchParams\(window\.location\.search\)\.get\('madhhab'\)/.test(surahRouteText), 'Surah route does not parse the madhhab from ambient window state');
+assert(/initialDisplaySystemId\s*=\s*{\s*initial_display_system_id\s*}/.test(surahRouteText), 'Surah route passes the requested counting madhhab into the mushaf viewer');
+assert(/function setDisplaySystemId\(systemId\)/.test(surahRouteText) && /onDisplaySystemChange=\{setDisplaySystemId\}/.test(surahRouteText), 'Surah route tracks viewer madhhab changes for pager links');
+assert(/let selected_row = \$derived\(selected_key \?/.test(surahRouteText), 'Surah route keeps boundary selection explicit instead of defaulting to the first disputed head');
+assert(/<BoundaryDetail row=\{selected_row\}/.test(surahRouteText), 'Boundary detail renders only the explicitly selected head of ayah');
+assert(!/active_row/.test(surahRouteText), 'Surah route does not retain a fallback active row');
+assert(/getMadhhabHref\(window\.navgo\.href\('\/surahs\/' \+ surahNumber\), pager_system_id\)/.test(surahRouteText), 'Surah pager links preserve the active display madhhab');
+assert(/onDisplaySystemChange\?\.\(displaySystemId\)/.test(readFileSync(join(repoDir, 'site/src/components/SurahMushafViewer.svelte'), 'utf-8')), 'Mushaf viewer reports display madhhab changes to the route');
+assert(/let \{ route_query = \{\} \} = \$props\(\)/.test(mushafRouteText), 'Mushaf route accepts query state');
+assert(/let route_system_id = \$derived\(systems\.some\(system => system\.id === route_query\.madhhab\)/.test(mushafRouteText), 'Mushaf route seeds the selected counting madhhab from route state');
+assert(/'\/madhhabs\/:madhhab', Madhhab/.test(mainRouteText), 'Router exposes canonical madhhab profile route');
+assert(/'\/systems\/:madhhab', Madhhab/.test(mainRouteText), 'Router preserves the old systems profile route as a compatibility alias');
+assert(/path\.startsWith\('\/madhhabs\/'\)/.test(headerText), 'Header treats madhhab profile routes as ayah-counts section pages');
+assert(/\/madhhabs\//.test(madhhabCardText) && !/\/systems\//.test(madhhabCardText), 'Public madhhab cards link to the canonical madhhab route');
+assert(/\/madhhabs\//.test(ayahCountsRouteText) && !/\/systems\//.test(ayahCountsRouteText), 'Ayah Counts links to canonical madhhab routes');
+assert(/let \{ madhhab \} = \$props\(\)/.test(madhhabRouteText), 'Madhhab route receives a madhhab route parameter');
+assert(/replaceMadhhabQuery\(systemId\)/.test(surahRouteText), 'Surah route syncs viewer madhhab changes into the current URL');
+assert(/replaceMadhhabQuery\(selected_system_id\)/.test(mushafRouteText), 'Mushaf entry route keeps its selected madhhab shareable in the URL');
+assert(/DEFAULT_MADHHAB_ID = 'kufi'/.test(routeUrlsText), 'Route URL primitive keeps Kufi as the clean default display madhhab');
+assert(getMadhhabHref('/surahs/1', 'kufi') === '/surahs/1', 'Default Kufi links stay clean');
+assert(getMadhhabHref('/surahs/1', 'basri', '#surah-mushaf-viewer') === '/surahs/1?madhhab=basri#surah-mushaf-viewer', 'Non-default madhhab links are shareable');
+assert(getMadhhabHref('/surahs/1?view=full#old', 'basri') === '/surahs/1?view=full&madhhab=basri#old', 'Madhhab links preserve existing query and hash state');
+assert(getMadhhabHref('/surahs/1?view=full&madhhab=basri#old', 'kufi') === '/surahs/1?view=full#old', 'Default madhhab links remove stale madhhab query state');
+assert(getMadhhabHref('/surahs/1?view=compact#old', 'basri', '#new') === '/surahs/1?view=compact&madhhab=basri#new', 'Madhhab links preserve existing query parameters and replace hashes');
+assert(getBoundaryHash('2:219:1') === '#2%3A219%3A1' && decodeBoundaryHash(getBoundaryHash('2:219:1')) === '2:219:1', 'Boundary hash primitive round-trips anchor keys');
+assert(/let selected_row = \$derived\(selected_key \?/.test(explorerRouteText), 'Explorer keeps boundary detail selection explicit instead of defaulting to the first result');
+assert(!/filtered_rows\[0\]/.test(explorerRouteText), 'Explorer does not silently treat the first result as selected');
+assert(/placeholder="ابحث عن رأس آية"/.test(explorerRouteText), 'Explorer search uses the requested head-of-ayah prompt');
+assert(/get_boundary_href\(row\)/.test(explorerRouteText) && /getBoundaryHash\(row\.anchor_key\)/.test(explorerRouteText), 'Explorer rows deep-link to the selected head of ayah');
+assert(/madhhabId=\{selected_madhhab_id\}/.test(explorerRouteText), 'Explorer passes its active madhhab context into boundary detail links');
+assert(/madhhabId=\{display_system_id\}/.test(surahRouteText), 'Surah detail links preserve the active display madhhab');
+assert(/function get_mushaf_href\(row\)/.test(boundaryDetailText) && /getMadhhabHref\(window\.navgo\.href\('\/surahs\/' \+ row\.surah\), madhhabId, getBoundaryHash\(row\.anchor_key\)\)/.test(boundaryDetailText), 'Boundary detail has a canonical mushaf deep link');
+assert(!/قرار كل مذهب عدّ|format_boundary_decision|row\.note/.test(boundaryDetailText), 'Boundary detail shows counted/not-counted lists and evidence without a per-madhhab decision table or maintainer notes');
+assert(/أعداد السور/.test(madhhabRouteText) && /surah\.counts\[system_info\.id\]/.test(madhhabRouteText), 'Madhhab profile includes the complete per-surah count table');
+
+const publicDocSlugs = get_grouped_docs('ar').flatMap(group => group.docs.map(doc => doc.slug));
+const technicalDocSlugs = get_grouped_docs('ar', { include_internal: true }).flatMap(group => group.docs.map(doc => doc.slug));
+assert(!publicDocSlugs.includes('developer-usage') && !publicDocSlugs.includes('schema-book-boundary-primitives-v1'), 'Public docs exclude developer and schema documents');
+assert(technicalDocSlugs.includes('developer-usage') && technicalDocSlugs.includes('schema-book-boundary-primitives-v1'), 'Developer docs remain available when internal documents are requested');
+assert(/internal: true/.test(docsLibraryText) && /"slug": "developer-usage"[\s\S]*?"internal": true/.test(docsGeneratedText), 'Docs model marks technical groups and the developer guide as internal');
+assert(/function is_internal_doc/.test(docsLibraryText) && /visible_docs = docs\.filter\(item => include_internal === is_internal_doc\(item\)\)/.test(docsLibraryText), 'Doc neighbor navigation stays within public or internal audiences');
+assert(!get_neighbor_docs('review-workflow').next?.slug.includes('developer') && !get_neighbor_docs('review-workflow').next?.slug.includes('schema'), 'Public doc neighbors do not leak internal technical docs');
+assert(get_neighbor_docs('developer-usage').next && !publicDocSlugs.includes(get_neighbor_docs('developer-usage').next.slug), 'Internal docs keep internal neighbor navigation for Developer readers');
+assert(/index_href/.test(docRouteText) && /\/developer/.test(docRouteText), 'Internal doc pages return readers to Developer instead of the public Docs index');
+assert(!/include_internal: true/.test(docsRouteText) && /include_internal: true/.test(developerRouteText), 'Researcher Docs hides technical documents and Developer exposes them');
+assert(/فوائد معرفة رؤوس الآي/.test(projectRouteText) && !/dist\/|data\/|JSON|عقود/.test(projectRouteText), 'Project page is researcher-facing and leaves technical file details to Developer');
 
 section('Structural Integrity');
 
@@ -631,6 +782,81 @@ for (const surahData of siteData.surahs) {
   }
 
   mushafLineOffset += surahData.counts.kufi;
+}
+
+
+section('Counting madhhab mushaf display ayahs');
+
+for (const surahData of siteData.surahs) {
+  const paddedSurah = String(surahData.surah).padStart(3, '0');
+  const filename = `surah-${paddedSurah}.json`;
+  const filePath = join(mushafViewerDir, filename);
+
+  if (!existsSync(filePath)) {
+    continue;
+  }
+
+  const viewer = JSON.parse(readFileSync(filePath, 'utf-8'));
+  const surahRows = siteData.rows.filter(row => row.surah === surahData.surah);
+  const plainTokenStream = viewer.ayahs.flatMap(ayah => ayah.plain_tokens);
+  const uthmaniTokenStream = viewer.ayahs.flatMap(ayah => ayah.uthmani_tokens);
+
+  for (const systemId of systemIds) {
+    for (const script of ['plain', 'uthmani']) {
+      const display = buildCountingMadhhabAyahs(viewer, surahRows, systemId, script);
+      const expectedTokens = script === 'plain' ? plainTokenStream : uthmaniTokenStream;
+      const actualTokens = display.display_units.flatMap(unit => unit.tokens);
+      const openingBasmalahBoundary = surahData.surah === 1
+        ? surahRows.find(row => row.kind === 'end' && row.hafs_ayah === 1) || null
+        : null;
+      const hasUncountedOpeningBasmalah = openingBasmalahBoundary
+        && !(openingBasmalahBoundary.systems[systemId]?.counts_boundary ?? false);
+
+      assert(Boolean(display.preamble) === Boolean(hasUncountedOpeningBasmalah), `${filename} ${systemId} ${script}: uncounted opening basmalah is modeled outside numbered ayahs only when needed`);
+
+      if (hasUncountedOpeningBasmalah) {
+        assert(display.preamble.spans[0].ayah === 1, `${filename} ${systemId} ${script}: uncounted opening basmalah keeps its source position`);
+        assert(JSON.stringify(display.preamble.tokens) === JSON.stringify(expectedTokens.slice(0, display.preamble.tokens.length)), `${filename} ${systemId} ${script}: preamble preserves the opening basmalah tokens`);
+        assert(display.ayahs[0].spans[0].ayah === 2, `${filename} ${systemId} ${script}: first numbered ayah starts after the uncounted opening basmalah`);
+        assert(display.boundary_positions[openingBasmalahBoundary.anchor_key]?.is_preamble, `${filename} ${systemId} ${script}: uncounted opening basmalah boundary is placed in the preamble`);
+      }
+
+      assert(display.total_ayah_count === surahData.counts[systemId], `${filename} ${systemId} ${script}: display ayah count matches accepted surah count`);
+      assert(display.ayahs.length === display.total_ayah_count, `${filename} ${systemId} ${script}: display ayah array length matches total`);
+      assert(display.display_units.length === display.ayahs.length + (display.preamble ? 1 : 0), `${filename} ${systemId} ${script}: display units include numbered ayahs and any unnumbered preamble`);
+      assert(JSON.stringify(actualTokens) === JSON.stringify(expectedTokens), `${filename} ${systemId} ${script}: display token stream preserves the mushaf text`);
+      assert(Object.keys(display.boundary_positions).length === surahRows.length, `${filename} ${systemId} ${script}: every disputed boundary has a display position`);
+
+      for (const row of surahRows) {
+        const position = display.boundary_positions[row.anchor_key];
+        const countsBoundary = row.systems[systemId]?.counts_boundary ?? false;
+
+        assert(Boolean(position), `${filename} ${systemId} ${script}: ${row.anchor_key} has a display position`);
+
+        if (!position) {
+          continue;
+        }
+
+        const displayUnit = position.is_preamble ? display.preamble : display.ayahs[position.ayah - 1];
+        assert(Boolean(displayUnit), `${filename} ${systemId} ${script}: ${row.anchor_key} points to a display unit`);
+
+        if (!displayUnit) {
+          continue;
+        }
+
+        assert(position.after_token >= 1 && position.after_token <= displayUnit.tokens.length, `${filename} ${systemId} ${script}: ${row.anchor_key} token position is in display unit range`);
+
+        if (position.is_preamble) {
+          assert(!countsBoundary, `${filename} ${systemId} ${script}: unnumbered preamble boundary is not counted by the selected madhhab`);
+        }
+
+        if (countsBoundary) {
+          assert(!position.is_preamble, `${filename} ${systemId} ${script}: counted ${row.anchor_key} is not displayed as an unnumbered preamble`);
+          assert(position.is_display_end, `${filename} ${systemId} ${script}: counted ${row.anchor_key} lands at the selected madhhab ayah end`);
+        }
+      }
+    }
+  }
 }
 
 section('Kufan Total Ayah Count');

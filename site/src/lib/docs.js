@@ -14,7 +14,8 @@ export const doc_groups = [
   {
     id: 'sources',
     title: 'المصادر والحزم',
-    description: 'كيف نقرأ الشواهد المرفقة، وكيف تُنظَّم حزم المصادر داخل المشروع.'
+    description: 'كيف نقرأ الشواهد المرفقة، وكيف تُنظَّم حزم المصادر داخل المشروع.',
+    internal: true
   },
   {
     id: 'planning',
@@ -25,12 +26,17 @@ export const doc_groups = [
   {
     id: 'schema',
     title: 'العقود والبنية',
-    description: 'عقود ملفات الأصول العلمية وملف الشواهد.'
+    description: 'عقود ملفات الأصول العلمية وملف الشواهد.',
+    internal: true
   }
 ]
 
 const docs_by_slug = new Map(docs.map(doc => [doc.slug, doc]))
 const group_by_id = new Map(doc_groups.map(group => [group.id, group]))
+
+function is_internal_doc(doc) {
+  return Boolean(doc.internal || group_by_id.get(doc.group)?.internal)
+}
 
 export function get_doc(slug) {
   return docs_by_slug.get(slug) ?? null
@@ -47,6 +53,7 @@ export function get_grouped_docs(language = 'ar', { include_internal = false } =
       ...group,
       docs: docs
         .filter(doc => doc.group === group.id)
+        .filter(doc => include_internal || !is_internal_doc(doc))
         .sort((left, right) => {
           const left_matches = left.language === language ? 0 : 1
           const right_matches = right.language === language ? 0 : 1
@@ -61,14 +68,18 @@ export function get_grouped_docs(language = 'ar', { include_internal = false } =
 }
 
 export function get_neighbor_docs(slug) {
-  const index = docs.findIndex(doc => doc.slug === slug)
+  const doc = get_doc(slug)
 
-  if (index === -1) {
+  if (!doc) {
     return { previous: null, next: null }
   }
 
+  const include_internal = is_internal_doc(doc)
+  const visible_docs = docs.filter(item => include_internal === is_internal_doc(item))
+  const index = visible_docs.findIndex(item => item.slug === slug)
+
   return {
-    previous: docs[index - 1] ?? null,
-    next: docs[index + 1] ?? null
+    previous: visible_docs[index - 1] ?? null,
+    next: visible_docs[index + 1] ?? null
   }
 }

@@ -1,6 +1,18 @@
 <script>
 import { ArrowRightIcon } from '@lucide/svelte'
 
+import { get_grouped_docs } from '$lib/docs.js'
+import { get_current_language } from '$lib/i18n.js'
+
+let current_language = $derived(get_current_language())
+let technical_doc_groups = $derived(
+  get_grouped_docs(current_language, { include_internal: true })
+    .map(group => ({
+      ...group,
+      docs: group.docs.filter(doc => group.internal || doc.internal)
+    }))
+    .filter(group => group.docs.length)
+)
 
 const load_json_example = `async function load_json(path) {
   const response = await fetch(path)
@@ -50,7 +62,7 @@ const al_baqarah_count = counts.surahs['2']
 <section class="grid gap-10 lg:grid-cols-[minmax(0,1.35fr)_minmax(18rem,0.9fr)] lg:items-start">
   <div>
     <div class="rule_label">استخدام المطور</div>
-    <h1 class="display_title mt-5 max-w-4xl text-ink">استعمل الخرائط من غير أن تعقد تطبيقك.</h1>
+    <h1 class="display_title mt-5 max-w-4xl text-ink">استعمل ملفات الربط من غير أن تعقد تطبيقك.</h1>
     <p class="section_text mt-5 text-lg">
       القاعدة الأبسط لمعظم التطبيقات: ثبّت محورًا واحدًا داخليًا، ثم حوّل منه فقط عند العرض أو الإدخال.
       وهذه البيانات تختار لك هذا المحور سلفًا: الكوفي/حفص.
@@ -72,28 +84,50 @@ const al_baqarah_count = counts.surahs['2']
     <div class="rule_label">نقطة البداية الأبسط</div>
     <h2 class="mt-4 text-2xl font-bold text-ink">معظم التطبيقات لا تحتاج إلا إلى أربعة أشياء.</h2>
     <ul class="doc_list mt-4 text-sm text-ink-soft">
-      <li><span class="font-bold text-ink">الخريطة الأمامية</span> لتحويل حفص/الكوفي إلى ترقيم الهدف</li>
-      <li><span class="font-bold text-ink">الخريطة العكسية</span> لإرجاع ترقيم الهدف إلى حفص/الكوفي</li>
-      <li><span class="font-bold text-ink">بيانات الراوي</span> عندما يختار المستخدم الرواية لا اسم نظام العد</li>
-      <li><span class="font-bold text-ink">أعداد السور</span> عندما تحتاج مجموع آيات كل سورة داخل نظام معين</li>
+      <li><span class="font-bold text-ink">الربط الأمامي</span> لتحويل حفص/الكوفي إلى ترقيم الهدف</li>
+      <li><span class="font-bold text-ink">الربط العكسي</span> لإرجاع ترقيم الهدف إلى حفص/الكوفي</li>
+      <li><span class="font-bold text-ink">بيانات الراوي</span> عندما يختار المستخدم الرواية لا اسم مذهب العدّ</li>
+      <li><span class="font-bold text-ink">أعداد السور</span> عندما تحتاج مجموع آيات كل سورة داخل مذهب عدّ معين</li>
     </ul>
   </div>
 </section>
 
+{#if technical_doc_groups.length > 0}
+  <section class="mt-12 surface p-5 sm:p-6">
+    <div class="rule_label">وثائق المطور</div>
+    <h2 class="section_title mt-4">التفاصيل الفنية انتقلت إلى هذا المسار.</h2>
+    <p class="section_text mt-3 text-sm">
+      هذه الروابط مخصصة لمن يحتاج بنية الملفات، وحزم المصادر، وعقود البيانات. لذلك لا تظهر في مكتبة الباحث العامة.
+    </p>
+
+    <div class="doc_grid mt-6" data-columns="3">
+      {#each technical_doc_groups as group (group.id)}
+        {#each group.docs as doc (doc.slug)}
+          <a class="surface surface_muted flex h-full flex-col gap-3 p-4" href={window.navgo.href('/docs/' + doc.slug)}>
+            <div class="metric_label">{group.title}</div>
+            <h3 class="text-lg font-bold text-ink" dir={doc.direction}>{doc.title}</h3>
+            <p class="section_text text-sm" dir={doc.direction}>{doc.excerpt}</p>
+          </a>
+        {/each}
+      {/each}
+    </div>
+  </section>
+{/if}
+
 <section class="mt-12 doc_grid" data-columns="2">
   <div class="surface p-5 sm:p-6">
     <div class="rule_label">الملف ١</div>
-    <h2 class="section_title mt-4 text-2xl">الخريطة الأمامية</h2>
+    <h2 class="section_title mt-4 text-2xl">الربط الأمامي</h2>
     <p class="section_text mt-3 text-sm">
-      استخدم <span class="inline_code">dist/mappings/by-counting-system/kufi-to-*.json</span> إذا كان تطبيقك يخزن حفص/الكوفي أصلًا ويحتاج فقط إلى عرض نظام آخر.
+      استخدم <span class="inline_code">dist/mappings/by-counting-system/kufi-to-*.json</span> إذا كان تطبيقك يخزن حفص/الكوفي أصلًا ويحتاج فقط إلى عرض مذهب عدّ آخر.
     </p>
   </div>
 
   <div class="surface p-5 sm:p-6">
     <div class="rule_label">الملف ٢</div>
-    <h2 class="section_title mt-4 text-2xl">الخريطة العكسية</h2>
+    <h2 class="section_title mt-4 text-2xl">الربط العكسي</h2>
     <p class="section_text mt-3 text-sm">
-      استخدم <span class="inline_code">dist/mappings/by-counting-system/*-to-kufi.json</span> إذا كان الإدخال أو المصدر الخارجي يأتي بنظام غير حفصي وتريد إرجاعه إلى المحور الداخلي.
+      استخدم <span class="inline_code">dist/mappings/by-counting-system/*-to-kufi.json</span> إذا كان الإدخال أو المصدر الخارجي يأتي بترقيم غير كوفي/حفصي وتريد إرجاعه إلى المحور الداخلي.
     </p>
   </div>
 
@@ -101,7 +135,7 @@ const al_baqarah_count = counts.surahs['2']
     <div class="rule_label">الملف ٣</div>
     <h2 class="section_title mt-4 text-2xl">بيانات الراوي</h2>
     <p class="section_text mt-3 text-sm">
-      استخدم <span class="inline_code">dist/rawis/&#123;rawi&#125;.json</span> إذا كانت واجهتك مبنية على أسماء الرواة مثل ورش أو قالون. هذه البيانات تخبرك أي نظام عد يتبعه الراوي.
+      استخدم <span class="inline_code">dist/rawis/&#123;rawi&#125;.json</span> إذا كانت واجهتك مبنية على أسماء الرواة مثل ورش أو قالون. هذه البيانات تخبرك أي مذهب عدّ يتبعه الراوي.
     </p>
   </div>
 
@@ -127,12 +161,12 @@ const al_baqarah_count = counts.surahs['2']
   <div class="rule_label">مثال ١</div>
   <div class="mt-4 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
     <div>
-      <h2 class="section_title">حوّل من حفص/الكوفي إلى نظام ترقيم آخر</h2>
+      <h2 class="section_title">حوّل من حفص/الكوفي إلى ترقيم آخر</h2>
       <p class="section_text mt-3 text-sm">
-        هذه هي الحالة الأشهر: لديك مرجع حفصي وتريد رقمه في نظام آخر.
+        هذه هي الحالة الأشهر: لديك مرجع حفصي وتريد رقمه في مذهب عدّ آخر.
       </p>
     </div>
-    <span class="stat_chip">الخريطة الأمامية</span>
+    <span class="stat_chip">الربط الأمامي</span>
   </div>
   <pre class="code_block mt-5"><code>{forward_example}</code></pre>
   <p class="section_text mt-4 text-sm">
@@ -144,12 +178,12 @@ const al_baqarah_count = counts.surahs['2']
   <div class="rule_label">مثال ٢</div>
   <div class="mt-4 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
     <div>
-      <h2 class="section_title">أعد نظامًا آخر إلى محور حفص</h2>
+      <h2 class="section_title">أعد ترقيمًا آخر إلى محور حفص</h2>
       <p class="section_text mt-3 text-sm">
-        استعمل الخريطة العكسية إذا أدخل المستخدم رقمًا على نظام آخر، أو جاءك مصدر خارجي غير حفصي.
+        استعمل الربط العكسي إذا أدخل المستخدم رقمًا على مذهب عدّ آخر، أو جاءك مصدر خارجي غير حفصي.
       </p>
     </div>
-    <span class="stat_chip">الخريطة العكسية</span>
+    <span class="stat_chip">الربط العكسي</span>
   </div>
   <pre class="code_block mt-5"><code>{reverse_example}</code></pre>
   <p class="section_text mt-4 text-sm">
@@ -160,13 +194,13 @@ const al_baqarah_count = counts.surahs['2']
 <section class="mt-14 doc_grid" data-columns="2">
   <div class="surface p-5 sm:p-6">
     <div class="rule_label">مثال ٣</div>
-    <h2 class="section_title mt-4 text-2xl">اربط اسم الراوي بنظام عدِّه</h2>
+    <h2 class="section_title mt-4 text-2xl">اربط اسم الراوي بمذهب عدّه</h2>
     <p class="section_text mt-3 text-sm">
-      إذا كان المستخدم يختار ورشًا أو قالون أو الدوري أو غيرهم، فابدأ ببيانات الراوي. منها تعرف ملف نظام العد المطلوب.
+      إذا كان المستخدم يختار ورشًا أو قالون أو الدوري أو غيرهم، فابدأ ببيانات الراوي. منها تعرف ملف مذهب العدّ المطلوب.
     </p>
     <pre class="code_block mt-5"><code>{rawi_example}</code></pre>
     <p class="section_text mt-4 text-sm">
-      إذا كان تطبيقك يعرف بالفعل معرّف نظام العد، فتجاوز طبقة الراوي واستعمل الخرائط بحسب النظام مباشرة.
+      إذا كان تطبيقك يعرف بالفعل معرّف مذهب العدّ، فتجاوز طبقة الراوي واستعمل ملفات الربط بحسب مذهب العدّ مباشرة.
     </p>
   </div>
 
@@ -174,7 +208,7 @@ const al_baqarah_count = counts.surahs['2']
     <div class="rule_label">مثال ٤</div>
     <h2 class="section_title mt-4 text-2xl">اقرأ عدد آيات السورة</h2>
     <p class="section_text mt-3 text-sm">
-      استخدم أعداد السور عندما تحتاج عناصر الواجهة أو أدوات التحقق إلى عدد آيات السورة داخل نظام معين.
+      استخدم أعداد السور عندما تحتاج عناصر الواجهة أو أدوات التحقق إلى عدد آيات السورة داخل مذهب عدّ معين.
     </p>
     <pre class="code_block mt-5"><code>{counts_example}</code></pre>
   </div>
@@ -184,14 +218,14 @@ const al_baqarah_count = counts.surahs['2']
   <div class="surface p-5 sm:p-6">
     <div class="rule_label">الحالة</div>
     <h2 class="section_title mt-4 text-2xl"><span class="inline_code">mapped</span></h2>
-    <p class="section_text mt-3 text-sm">مطابقة عادية واحد إلى واحد: آية واحدة في حفص تقابل آية واحدة في نظام الهدف.</p>
+    <p class="section_text mt-3 text-sm">مطابقة عادية واحد إلى واحد: آية واحدة في حفص تقابل آية واحدة في مذهب العدّ الهدف.</p>
   </div>
 
   <div class="surface p-5 sm:p-6">
     <div class="rule_label">الحالة</div>
     <h2 class="section_title mt-4 text-2xl"><span class="inline_code">merged</span></h2>
     <p class="section_text mt-3 text-sm">
-      تعني أن هذه الآية على ضبط حفص لا تنتهي بوصفها آية مستقلة في نظام الهدف، بل تستمر مادتها إلى تغطية الآية التالية.
+      تعني أن هذه الآية على ضبط حفص لا تنتهي بوصفها آية مستقلة في مذهب العدّ الهدف، بل تستمر مادتها إلى تغطية الآية التالية.
     </p>
   </div>
 
@@ -212,8 +246,8 @@ const al_baqarah_count = counts.surahs['2']
       <li>احتفظ بمحور ترقيم داخلي واحد. وفي هذه البيانات ذلك المحور هو الكوفي/حفص.</li>
       <li>لا تستنتج الترقيم من مجموع عدد الآيات وحده.</li>
       <li>افصل طبقة التحويل عن طبقة النص القرآني عندك.</li>
-      <li>إذا كنت تدعم نظامًا واحدًا غير حفصي فقط، فحمّل ملفيه الأمامي والعكسي وحدهما.</li>
-      <li>إذا كانت واجهتك تُظهر أسماء الرواة، فاستخدم بيانات الراوي لاختيار ملف نظام العد الصحيح.</li>
+      <li>إذا كنت تدعم مذهب عدّ واحدًا غير كوفي فقط، فحمّل ملفيه الأمامي والعكسي وحدهما.</li>
+      <li>إذا كانت واجهتك تُظهر أسماء الرواة، فاستخدم بيانات الراوي لاختيار ملف مذهب العدّ الصحيح.</li>
       <li>الرواة الكوفيون يطابقون حفصًا في الترقيم، فلا يحتاجون طبقة تحويل مستقلة.</li>
     </ul>
   </div>
@@ -226,8 +260,8 @@ const al_baqarah_count = counts.surahs['2']
     </p>
     <div class="mt-6 flex flex-wrap gap-3">
       <a class="pill_button" href={window.navgo.href('/project')}>لماذا بُني المشروع بهذه الصورة</a>
-      <a class="pill_button" data-tone="accent" href={window.navgo.href('/compare')}>
-        قارن بين الأنظمة مباشرة
+      <a class="pill_button" data-tone="accent" href={window.navgo.href('/developer/diagnostics')}>
+        افتح تشخيص المطور
         <ArrowRightIcon class="size-4" />
       </a>
     </div>
@@ -241,21 +275,23 @@ const al_baqarah_count = counts.surahs['2']
     <ul class="doc_list mt-4 text-sm text-ink-soft">
       <li><span class="font-bold text-ink">المكدس</span> Svelte 5، وVite، وNavgo، وObservable Plot، وLayerChart، وWuchale.</li>
       <li><span class="font-bold text-ink">ملف البيانات</span> <span class="inline_code">src/lib/data/generated/site-data.json</span></li>
-      <li>تقرأ الواجهة منه المجاميع، وملخصات الأنظمة والسور، وصفوف الخلاف، ومصفوفة المسافات، وسلاسل الانجراف.</li>
+      <li>تقرأ الواجهة منه المجاميع، وملخصات مذاهب العدّ والسور، وصفوف الخلاف، ومصفوفة المسافات، وسلاسل الانجراف.</li>
     </ul>
   </div>
 
   <div class="surface p-5 sm:p-6">
     <div class="rule_label">المسارات الأساسية</div>
-    <h2 class="section_title mt-4 text-2xl">خريطة سريعة لأقسام الموقع.</h2>
+    <h2 class="section_title mt-4 text-2xl">دليل سريع لأقسام الموقع.</h2>
     <ul class="doc_list mt-4 text-sm text-ink-soft">
-      <li><span class="inline_code">/</span> للنظرة العامة ومداخل الأنظمة.</li>
-      <li><span class="inline_code">/compare</span> للمقارنة وتخطيط المراجعة.</li>
+      <li><span class="inline_code">/</span> للمدخل العام.</li>
+      <li><span class="inline_code">/mushaf</span> لاختيار السورة ومذهب العدّ قبل فتح عارض المصحف.</li>
+      <li><span class="inline_code">/developer/diagnostics</span> لأدوات التشخيص وتخطيط المراجعة.</li>
       <li><span class="inline_code">/developer</span> للدليل العملي ودمج البيانات.</li>
+      <li><span class="inline_code">/ayah-counts</span> لجدول أعداد الآي المقبولة.</li>
       <li><span class="inline_code">/explorer</span> للمستكشف القابل للترشيح.</li>
       <li><span class="inline_code">/project</span> للدليل العام للمشروع.</li>
-      <li><span class="inline_code">/systems/:system</span> لملف نظام العد المختار.</li>
-      <li><span class="inline_code">/surahs/:surah</span> لصفحة السورة وتفصيل مواضعها.</li>
+      <li><span class="inline_code">/madhhabs/:madhhab</span> لملف مذهب العدّ المختار، مع بقاء <span class="inline_code">/systems/:madhhab</span> كتوافق خلفي.</li>
+      <li><span class="inline_code">/surahs/:surah</span> لصفحة السورة وتفصيل رؤوس الآي فيها.</li>
     </ul>
   </div>
 </section>

@@ -3,7 +3,7 @@
  *
  * The goal of this layer is not binary compression. The goal is to store the
  * disputed ayah heads in the same shape used by books of `add al-ay: a
- * boundary point anchored by a word, plus the counting systems that count it as
+ * boundary point anchored by a word, plus the counting madhhabs that count it as
  * a ra's ayah.
  */
 
@@ -16,7 +16,7 @@ export const TRADITIONAL_SYSTEM_ORDER = [
   'kufi'
 ];
 
-export const BOOK_BOUNDARY_PRIMITIVES_DESCRIPTION = 'Canonical scholar-facing, book-aligned primitive boundary layer. Each listed point is a disputed ayah boundary anchored by the source word. counted_by names the counting systems that count that point as a ra\'s ayah. Ordinary undisputed kufi ends are implicit and omitted.';
+export const BOOK_BOUNDARY_PRIMITIVES_DESCRIPTION = 'Canonical scholar-facing, book-aligned primitive boundary layer. Each listed point is a disputed ayah boundary anchored by the source word. counted_by names the counting madhhabs that count that point as a ra\'s ayah. Ordinary undisputed kufi ends are implicit and omitted.';
 
 export const DIFFERENCES_COMPATIBILITY_DESCRIPTION = 'Generated system-by-system word-level compatibility view expanded from the canonical book-aligned primitive layer.';
 

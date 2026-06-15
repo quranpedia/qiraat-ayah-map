@@ -1,6 +1,6 @@
 {
   "_version": "0.1.0",
-  "_description": "Canonical scholar-facing, book-aligned primitive boundary layer. Each listed point is a disputed ayah boundary anchored by the source word. counted_by names the counting systems that count that point as a ra's ayah. Ordinary undisputed kufi ends are implicit and omitted.",
+  "_description": "Canonical scholar-facing, book-aligned primitive boundary layer. Each listed point is a disputed ayah boundary anchored by the source word. counted_by names the counting madhhabs that count that point as a ra's ayah. Ordinary undisputed kufi ends are implicit and omitted.",
   "_reference_system": "kufi",
   "_counting_system_order": [
     "madani-first",

@@ -49,7 +49,7 @@ function build_plot({ Plot, width }) {
     },
     x: {
       grid: true,
-      label: 'الرؤوس المختلف فيها التي يعدها النظام'
+      label: 'الرؤوس المختلف فيها التي يعدها مذهب العدّ'
     },
     y: {
       label: null,
@@ -76,4 +76,4 @@ function build_plot({ Plot, width }) {
 }
 </script>
 
-<PlotFrame {build_plot} watch={stacked_rows} aria_label="حالة التوثيق في الرؤوس المختلف فيها التي يعدها كل نظام" />
+<PlotFrame {build_plot} watch={stacked_rows} aria_label="تشخيص الشواهد في الرؤوس المختلف فيها التي يعدها كل مذهب" />

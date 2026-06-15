@@ -11,7 +11,7 @@
       "khalaf"
     ],
     "description_ar": "العدد الكوفي، وهو العدد الذي يتبعه الإمام عاصم وحمزة والكسائي وخلف في قراءاتهم، وهو المشهور في مصحف المدينة النبوية (مصحف حفص)",
-    "description_en": "The Kufan counting tradition, followed by Asim, Hamza, Al-Kisai, and Khalaf. The most widely used system, found in the Madinah Mushaf (Hafs edition)."
+    "description_en": "The Kufan counting tradition, followed by Asim, Hamza, Al-Kisai, and Khalaf. The most widely used counting madhhab, found in the Madinah Mushaf (Hafs edition)."
   },
   "madani-last": {
     "name_ar": "المدني الأخير",
@@ -32,8 +32,8 @@
     "used_by_qiraat": [
       "abu-jafar"
     ],
-    "description_ar": "العدد المدني الأول، وهو أحد الأعداد الستة المعتمدة في عدّ آي القرآن الكريم",
-    "description_en": "The First Madinan counting tradition, one of the six canonical systems."
+    "description_ar": "العدد المدني الأول، وهو أحد مذاهب العد الستة المعتمدة في عدّ آي القرآن الكريم",
+    "description_en": "The First Madinan counting tradition, one of the six counting madhhabs."
   },
   "makki": {
     "name_ar": "المكي",

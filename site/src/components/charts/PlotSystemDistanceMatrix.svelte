@@ -51,7 +51,7 @@ function build_plot({ Plot, width }) {
         y: 'right_name',
         fill: 'differing_points',
         inset: 1,
-        title: d => `${d.left_name} ↔ ${d.right_name} · ${format_difference_count(d.differing_points, 'موضع مختلف', 'مواضع مختلفة')}`
+        title: d => `${d.left_name} ↔ ${d.right_name} · ${format_difference_count(d.differing_points, 'رأس آية مختلف فيه', 'رؤوس آي مختلفة')}`
       }),
       Plot.text(localized_cells, {
         x: 'left_name',
@@ -66,4 +66,4 @@ function build_plot({ Plot, width }) {
 }
 </script>
 
-<PlotFrame {build_plot} watch={localized_cells} aria_label="مصفوفة التباين بين أنظمة العد" />
+<PlotFrame {build_plot} watch={localized_cells} aria_label="مصفوفة التباين بين مذاهب العد" />

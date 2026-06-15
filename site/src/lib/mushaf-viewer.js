@@ -8,6 +8,207 @@ function formatAyahRange(start, end) {
   return start === end ? String(start) : `${start}–${end}`
 }
 
+function getTokens(ayah, script) {
+  return script === 'uthmani' ? ayah.uthmani_tokens : ayah.plain_tokens
+}
+
+function getPositionAfterToken(position, script) {
+  return script === 'uthmani' ? position.uthmani_after_token : position.plain_after_token
+}
+
+function getRowsByKufiAyah(rows, viewer) {
+  const rowsByAyah = new Map()
+
+  for (const row of rows) {
+    const position = viewer.boundary_positions[row.anchor_key]
+
+    if (!position) {
+      continue
+    }
+
+    const ayahRows = rowsByAyah.get(position.ayah) || []
+    ayahRows.push(row)
+    rowsByAyah.set(position.ayah, ayahRows)
+  }
+
+  return rowsByAyah
+}
+
+function addSpan(segment, ayahNumber, startToken, endToken, displayOffset) {
+  if (endToken <= startToken) {
+    return
+  }
+
+  segment.kufi_start = Math.min(segment.kufi_start, ayahNumber)
+  segment.kufi_end = Math.max(segment.kufi_end, ayahNumber)
+  segment.spans.push({
+    ayah: ayahNumber,
+    start_token: startToken,
+    end_token: endToken,
+    display_offset: displayOffset
+  })
+}
+
+function findDisplayPosition(displayUnits, position, afterToken) {
+  for (const unit of displayUnits) {
+    const span = unit.spans.find(item => item.ayah === position.ayah && item.start_token < afterToken && afterToken <= item.end_token)
+
+    if (!span) {
+      continue
+    }
+
+    const unitAfterToken = span.display_offset + afterToken - span.start_token
+
+    return {
+      ayah: unit.ayah,
+      after_token: unitAfterToken,
+      is_display_end: unitAfterToken === unit.tokens.length,
+      is_preamble: unit.type === 'preamble',
+      source_ayah: position.ayah
+    }
+  }
+
+  return null
+}
+
+function isUncountedOpeningBasmalah(viewer, kufiAyah, endRow, systemId) {
+  return viewer.surah === 1
+    && kufiAyah.ayah === 1
+    && endRow
+    && !(endRow.systems[systemId]?.counts_boundary ?? false)
+}
+
+export function buildCountingMadhhabAyahs(viewer, rows, systemId, script = 'plain') {
+  if (!viewer || !systemId) {
+    return {
+      ayahs: [],
+      preamble: null,
+      display_units: [],
+      boundary_positions: {},
+      total_ayah_count: 0
+    }
+  }
+
+  const rowsByAyah = getRowsByKufiAyah(rows, viewer)
+  const ayahs = []
+  let preamble = null
+  let current = null
+  let ayahNumber = 1
+
+  function startSegment(prefix = null) {
+    current = {
+      type: 'ayah',
+      ayah: ayahNumber,
+      kufi_start: Number.POSITIVE_INFINITY,
+      kufi_end: 0,
+      prefix,
+      tokens: [],
+      spans: []
+    }
+  }
+
+  function closeSegment() {
+    if (!current || current.tokens.length === 0) {
+      return
+    }
+
+    ayahs.push(current)
+    ayahNumber += 1
+    current = null
+  }
+
+  for (const kufiAyah of viewer.ayahs) {
+    const tokens = getTokens(kufiAyah, script)
+    const ayahRows = rowsByAyah.get(kufiAyah.ayah) || []
+    const endRow = ayahRows.find(row => row.kind === 'end') || null
+    const boundaries = ayahRows
+      .filter(row => row.kind === 'internal' && (row.systems[systemId]?.counts_boundary ?? false))
+      .map(row => getPositionAfterToken(viewer.boundary_positions[row.anchor_key], script))
+
+    if (isUncountedOpeningBasmalah(viewer, kufiAyah, endRow, systemId)) {
+      preamble = {
+        type: 'preamble',
+        ayah: 0,
+        source_ayah: kufiAyah.ayah,
+        prefix: null,
+        tokens,
+        spans: [{
+          ayah: kufiAyah.ayah,
+          start_token: 0,
+          end_token: tokens.length,
+          display_offset: 0
+        }]
+      }
+      continue
+    }
+
+    if (!endRow || (endRow.systems[systemId]?.counts_boundary ?? false)) {
+      boundaries.push(tokens.length)
+    }
+
+    boundaries.sort((left, right) => left - right)
+
+    let cursor = 0
+
+    if (!current) {
+      startSegment(script === 'uthmani' ? kufiAyah.uthmani_prefix : null)
+    }
+
+    for (const boundary of boundaries) {
+      if (boundary === cursor) {
+        continue
+      }
+
+      const displayOffset = current.tokens.length
+      current.tokens.push(...tokens.slice(cursor, boundary))
+      addSpan(current, kufiAyah.ayah, cursor, boundary, displayOffset)
+      closeSegment()
+      cursor = boundary
+
+      if (cursor < tokens.length) {
+        startSegment(null)
+      }
+    }
+
+    if (cursor < tokens.length) {
+      if (!current) {
+        startSegment(null)
+      }
+
+      const displayOffset = current.tokens.length
+      current.tokens.push(...tokens.slice(cursor))
+      addSpan(current, kufiAyah.ayah, cursor, tokens.length, displayOffset)
+    }
+  }
+
+  closeSegment()
+
+  const displayUnits = preamble ? [preamble, ...ayahs] : ayahs
+  const boundaryPositions = {}
+
+  for (const row of rows) {
+    const position = viewer.boundary_positions[row.anchor_key]
+
+    if (!position) {
+      continue
+    }
+
+    const displayPosition = findDisplayPosition(displayUnits, position, getPositionAfterToken(position, script))
+
+    if (displayPosition) {
+      boundaryPositions[row.anchor_key] = displayPosition
+    }
+  }
+
+  return {
+    ayahs,
+    preamble,
+    display_units: displayUnits,
+    boundary_positions: boundaryPositions,
+    total_ayah_count: ayahs.length
+  }
+}
+
 export function buildDifferingAyahSummary(rows, leftSystemId, rightSystemId) {
   const ayahMap = new Map()
   let totalPoints = 0

@@ -10,6 +10,8 @@ let group = $derived(doc ? get_doc_group(doc.group) : null)
 let neighbors = $derived(get_neighbor_docs(slug))
 let alternate_doc = $derived(doc?.alternateSlug ? get_doc(doc.alternateSlug) : null)
 let same_language_as_ui = $derived(doc ? doc.language === current_language : false)
+let index_href = $derived(doc && (doc.internal || group?.internal) ? '/developer' : '/docs')
+let index_label = $derived(index_href === '/developer' ? 'العودة إلى صفحة المطور' : 'العودة إلى الوثائق')
 </script>
 
 {#if !doc}
@@ -24,7 +26,7 @@ let same_language_as_ui = $derived(doc ? doc.language === current_language : fal
 {:else}
   <section class="grid gap-6">
     <div class="flex flex-wrap items-center gap-3">
-      <a class="pill_button" href={window.navgo.href('/docs')}>العودة إلى الوثائق</a>
+      <a class="pill_button" href={window.navgo.href(index_href)}>{index_label}</a>
       {#if group}
         <span class="stat_chip">{group.title}</span>
       {/if}

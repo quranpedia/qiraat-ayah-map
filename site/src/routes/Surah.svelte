@@ -3,47 +3,56 @@ import { ArrowLeftIcon, ArrowRightIcon, LibraryBigIcon } from '@lucide/svelte'
 
 import BoundaryDetail from '~/components/BoundaryDetail.svelte'
 import SurahMushafViewer from '~/components/SurahMushafViewer.svelte'
-import PlotSurahBoundaryMap from '~/components/charts/PlotSurahBoundaryMap.svelte'
 import {
   compact_number,
-  format_boundary_kind,
-  format_signed_delta,
   format_surah_reference,
-  format_verification_status,
   get_surah,
   get_surah_name,
   get_surah_rows,
   get_surah_secondary_name,
   get_system_name,
   get_system_secondary_name,
-  get_verification_tone,
   surahs as surah_catalog,
   systems
 } from '$lib/dataset.svelte.js'
-import { decodeBoundaryHash, getBoundaryTableRowId } from '$lib/mushaf-viewer-dom.js'
+import { decodeBoundaryHash, getBoundaryHash, getBoundaryTableRowId } from '$lib/mushaf-viewer-dom.js'
 import { loadSurahViewer } from '$lib/mushaf-viewer.js'
+import { getMadhhabHref, replaceMadhhabQuery } from '$lib/route-urls.js'
 
-let { surah } = $props()
-
-const initialHashKey = decodeBoundaryHash(window.location.hash)
+let { surah, route_hash = '', route_query = {} } = $props()
 
 let surah_info = $derived(get_surah(surah))
 let surah_rows = $derived(get_surah_rows(surah))
 let viewerPromise = $derived(surah_info ? loadSurahViewer(surah_info.surah) : Promise.resolve(null))
-let selected_key = $state(initialHashKey)
-let selection_request = $state(
-  initialHashKey
-    ? {
-        anchorKey: initialHashKey,
-        source: 'hash',
-        nonce: 1
-      }
-    : null
-)
-let last_routed_surah = $state(null)
-let active_row = $derived(surah_rows.find(row => row.anchor_key === selected_key) || surah_rows[0] || null)
+let selected_key = $state(null)
+let selection_request = $state(null)
+let last_route_selection = $state(null)
+let selected_row = $derived(selected_key ? surah_rows.find(row => row.anchor_key === selected_key) || null : null)
 let previous_surah = $derived(surah_info ? get_surah(surah_info.surah - 1) : null)
 let next_surah = $derived(surah_info ? get_surah(surah_info.surah + 1) : null)
+let initial_display_system_id = $derived.by(() => {
+  if (!surah_info) {
+    return 'kufi'
+  }
+
+  const requestedSystemId = route_query.madhhab
+  return systems.some(system => system.id === requestedSystemId) ? requestedSystemId : 'kufi'
+})
+let display_system_id = $state('kufi')
+let pager_system_id = $derived(display_system_id || initial_display_system_id)
+
+$effect(() => {
+  display_system_id = initial_display_system_id
+})
+
+function getSurahHref(surahNumber) {
+  return getMadhhabHref(window.navgo.href('/surahs/' + surahNumber), pager_system_id)
+}
+
+function setDisplaySystemId(systemId) {
+  display_system_id = systemId
+  replaceMadhhabQuery(systemId)
+}
 
 function setSelectedKey(anchorKey, source = 'table') {
   if (!anchorKey) {
@@ -60,15 +69,16 @@ function setSelectedKey(anchorKey, source = 'table') {
 
 $effect(() => {
   const currentSurahNumber = surah_info?.surah || null
+  const selectionKey = `${currentSurahNumber || ''}:${route_hash || ''}`
 
-  if (!currentSurahNumber || currentSurahNumber === last_routed_surah) {
+  if (!currentSurahNumber || selectionKey === last_route_selection) {
     return
   }
 
-  last_routed_surah = currentSurahNumber
+  last_route_selection = selectionKey
 
-  const hashKey = decodeBoundaryHash(window.location.hash)
-  const nextAnchorKey = surah_rows.find(row => row.anchor_key === hashKey)?.anchor_key || surah_rows[0]?.anchor_key || null
+  const hashKey = decodeBoundaryHash(route_hash)
+  const nextAnchorKey = surah_rows.find(row => row.anchor_key === hashKey)?.anchor_key || null
 
   selected_key = nextAnchorKey
   selection_request = nextAnchorKey
@@ -81,13 +91,13 @@ $effect(() => {
 })
 
 $effect(() => {
-  const row = active_row
+  const row = selected_row
 
   if (!row) {
     return
   }
 
-  const nextHash = `#${encodeURIComponent(row.anchor_key)}`
+  const nextHash = getBoundaryHash(row.anchor_key)
   const nextUrl = `${window.location.pathname}${window.location.search}${nextHash}`
 
   if (window.location.hash !== nextHash) {
@@ -100,7 +110,7 @@ $effect(() => {
   <section aria-label="التنقل بين السور">
     <div class="surah_pager_grid">
       {#if previous_surah}
-        <a class="surah_pager_card" href={window.navgo.href('/surahs/' + previous_surah.surah)}>
+        <a class="surah_pager_card" href={getSurahHref(previous_surah.surah)}>
           <div class="metric_label flex items-center gap-2"><ArrowLeftIcon class="size-4" /> السورة السابقة</div>
           <div class="mt-3 flex items-center gap-2 text-sm font-bold text-ink">
             <ArrowLeftIcon class="size-4" />
@@ -112,7 +122,7 @@ $effect(() => {
           {/if}
           <div class="mt-4 flex flex-wrap gap-2">
             <span class="badge" data-tone={previous_surah.disputed_points === 0 ? 'ok' : 'accent'}>
-              {compact_number(previous_surah.disputed_points)} موضعًا مختلفًا
+              {compact_number(previous_surah.disputed_points)} رأس آية مختلف فيه
             </span>
           </div>
         </a>
@@ -132,7 +142,7 @@ $effect(() => {
           {#if get_surah_secondary_name(surah_info)}
             <p class="mt-2 text-xl text-ink-soft">{get_surah_secondary_name(surah_info)}</p>
           {/if}
-          <p class="mt-3 text-sm text-ink-soft">{compact_number(surah_info.disputed_points)} موضعًا مختلفًا في هذه السورة</p>
+          <p class="mt-3 text-sm text-ink-soft">{compact_number(surah_info.disputed_points)} رأس آية مختلف فيه في هذه السورة</p>
         {:else}
           <div class="metric_label">واصل التصفح</div>
           <div class="mt-4 text-lg font-bold text-ink">انتقل إلى السورة التالية أو السابقة، أو ارجع إلى الفهرس.</div>
@@ -143,7 +153,7 @@ $effect(() => {
       </div>
 
       {#if next_surah}
-        <a class="surah_pager_card" href={window.navgo.href('/surahs/' + next_surah.surah)}>
+        <a class="surah_pager_card" href={getSurahHref(next_surah.surah)}>
           <div class="metric_label flex items-center justify-end gap-2">السورة التالية <ArrowRightIcon class="size-4" /></div>
           <div class="mt-3 flex items-center justify-end gap-2 text-sm font-bold text-ink">
             <span>{format_surah_reference(next_surah.surah)}</span>
@@ -155,7 +165,7 @@ $effect(() => {
           {/if}
           <div class="mt-4 flex flex-wrap justify-end gap-2">
             <span class="badge" data-tone={next_surah.disputed_points === 0 ? 'ok' : 'accent'}>
-              {compact_number(next_surah.disputed_points)} موضعًا مختلفًا
+              {compact_number(next_surah.disputed_points)} رأس آية مختلف فيه
             </span>
           </div>
         </a>
@@ -189,12 +199,12 @@ $effect(() => {
         <p class="mt-3 text-3xl text-ink-soft">{get_surah_secondary_name(surah_info)}</p>
       {/if}
       <p class="section_text mt-5">
-        فيها {compact_number(surah_info.disputed_points)} موضعًا مختلفًا: {compact_number(surah_info.by_kind.end)} نهايات و{compact_number(surah_info.by_kind.internal)} فواصل داخلية.
+        في هذه السورة {compact_number(surah_info.disputed_points)} رأس آية مختلف فيه ضمن البيانات الحالية.
       </p>
     </div>
 
     <div class="surface surface_muted p-5">
-      <div class="metric_label">العد حسب النظام</div>
+      <div class="metric_label">العد حسب مذهب العدّ</div>
       <div class="mt-4 space-y-3 text-sm">
         {#each systems as system (system.id)}
           <div class="flex items-center justify-between gap-3 border-b border-line/60 pb-3 last:border-b-0 last:pb-0">
@@ -204,75 +214,77 @@ $effect(() => {
                 <div class="text-base text-ink-soft">{get_system_secondary_name(system)}</div>
               {/if}
             </div>
-            <span class="badge" data-tone={surah_info.deltas_from_kufi[system.id] === 0 ? 'ok' : 'warn'}>
-              {compact_number(surah_info.counts[system.id])} · {format_signed_delta(surah_info.deltas_from_kufi[system.id])}
-            </span>
+            <span class="badge" data-tone="ok">{compact_number(surah_info.counts[system.id])} آية</span>
           </div>
         {/each}
       </div>
+      <a class="pill_button mt-5 w-full" href={window.navgo.href('/ayah-counts')}>كل أعداد الآي</a>
     </div>
   </section>
 
   {#if surah_rows.length === 0}
     <section class="mt-12 surface p-6 sm:p-8">
-      <div class="rule_label">لا مواضع خلاف</div>
-      <h2 class="section_title mt-4">لا توجد في هذه السورة مواضع خلاف مسجلة.</h2>
-      <p class="section_text mt-3">لا تسجل طبقة الأصول هنا فرقًا حدوديًا صالحًا للمراجعة.</p>
+      <div class="rule_label">لا رؤوس آي مختلف فيها</div>
+      <h2 class="section_title mt-4">لا توجد في هذه السورة رؤوس آي مختلف فيها ضمن البيانات الحالية.</h2>
+      <p class="section_text mt-3">أعداد مذاهب العدّ الستة لهذه السورة معروضة في بطاقة العد أعلاه.</p>
     </section>
   {:else}
-    <section class="mt-12 surface p-5 sm:p-6">
-      <div class="rule_label">مصفوفة المواضع</div>
-      <h2 class="section_title mt-4">كيف يعامل كل نظام كل موضع</h2>
-      <p class="section_text mt-3 text-sm">إذا تكرر الخلاف داخل آية واحدة استُعملت لواحق مثل 40a و40b.</p>
-      <div class="mt-6">
-        <PlotSurahBoundaryMap rows={surah_rows} {systems} />
-      </div>
-    </section>
-
     <section class="mt-12 split_layout">
-      <div class="table_shell">
-        <table class="data_table">
-          <thead>
-            <tr>
-              <th>الآية</th>
-              <th>الارتكاز</th>
-              <th>النوع</th>
-              <th>التوثيق</th>
-              <th>يعده</th>
-            </tr>
-          </thead>
-          <tbody>
-            {#each surah_rows as row (row.anchor_key)}
-              <tr
-                id={getBoundaryTableRowId(row.anchor_key)}
-                data-active={row.anchor_key === active_row?.anchor_key ? 'true' : 'false'}
-                onclick={() => setSelectedKey(row.anchor_key, 'table')}
-              >
-                <td data-label="الآية">
-                  <div class="font-bold text-ink">{row.ayah_slot_label}</div>
-                  <div class="mt-2 text-xs text-ink-soft">{row.location_label}</div>
-                </td>
-                <td data-label="الارتكاز">
-                  <div class="arabic_title text-xl text-ink">{row.word}</div>
-                  <div class="mt-2 text-xs text-ink-soft">{row.anchor_key}</div>
-                </td>
-                <td data-label="النوع"><span class="badge" data-tone={row.kind === 'internal' ? 'accent' : 'ok'}>{format_boundary_kind(row.kind)}</span></td>
-                <td data-label="التوثيق"><span class="badge" data-tone={get_verification_tone(row.verification_status)}>{format_verification_status(row.verification_status)}</span></td>
-                <td data-label="يعده">
-                  <div class="flex flex-wrap gap-2">
-                    {#each row.counted_by as system_id (system_id)}
-                      <span class="badge" data-tone="ok">{get_system_name(system_id)}</span>
-                    {/each}
-                  </div>
-                </td>
+      <div class="space-y-4">
+        <div class="surface p-5 sm:p-6">
+          <div class="rule_label">رؤوس الآي المختلف فيها</div>
+          <h2 class="section_title mt-4">رؤوس الآي التي تختلف فيها مذاهب العدّ داخل السورة</h2>
+          <p class="section_text mt-3 text-sm">
+            اختر رأس آية لعرض الفاصلة، وحكم حفص/الكوفي فيه، ومذاهب العدّ التي تعده.
+          </p>
+        </div>
+
+        <div class="table_shell">
+          <table class="data_table">
+            <thead>
+              <tr>
+                <th>رأس الآية</th>
+                <th>الفاصلة</th>
+                <th>في حفص/الكوفي</th>
+                <th>يعده</th>
               </tr>
-            {/each}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {#each surah_rows as row (row.anchor_key)}
+                <tr
+                  id={getBoundaryTableRowId(row.anchor_key)}
+                  data-active={row.anchor_key === selected_row?.anchor_key ? 'true' : 'false'}
+                  onclick={() => setSelectedKey(row.anchor_key, 'table')}
+                >
+                  <td data-label="رأس الآية">
+                    <div class="font-bold text-ink">{row.ayah_slot_label}</div>
+                    <div class="mt-2 text-xs text-ink-soft">{row.location_label}</div>
+                  </td>
+                  <td data-label="الفاصلة">
+                    <div class="arabic_title text-xl text-ink">{row.word}</div>
+                    <div class="mt-2 text-xs text-ink-soft">{row.anchor_key}</div>
+                  </td>
+                  <td data-label="في حفص/الكوفي">
+                    <span class="badge" data-tone={row.systems.kufi?.counts_boundary ? 'ok' : 'warn'}>
+                      {row.systems.kufi?.counts_boundary ? 'يعده حفص' : 'لا يعده حفص'}
+                    </span>
+                  </td>
+                  <td data-label="يعده">
+                    <div class="flex flex-wrap gap-2">
+                      {#each row.counted_by as system_id (system_id)}
+                        <span class="badge" data-tone="ok">{get_system_name(system_id)}</span>
+                      {/each}
+                    </div>
+                  </td>
+                </tr>
+              {/each}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <div id="boundary-detail-panel">
-        <BoundaryDetail row={active_row} />
+        <BoundaryDetail row={selected_row} madhhabId={display_system_id} />
       </div>
     </section>
   {/if}
@@ -280,14 +292,18 @@ $effect(() => {
   <section class="mt-12" id="surah-mushaf-viewer">
     {#await viewerPromise then viewer}
       {#if viewer}
-        <SurahMushafViewer
-          {viewer}
-          rows={surah_rows}
-          {systems}
-          selectedKey={active_row?.anchor_key || null}
-          selectionRequest={selection_request}
-          onselect={anchorKey => setSelectedKey(anchorKey, 'viewer')}
-        />
+        {#key `${surah_info.surah}-${initial_display_system_id}`}
+          <SurahMushafViewer
+            {viewer}
+            rows={surah_rows}
+            {systems}
+            initialDisplaySystemId={initial_display_system_id}
+            selectedKey={selected_row?.anchor_key || null}
+            selectionRequest={selection_request}
+            onDisplaySystemChange={setDisplaySystemId}
+            onselect={anchorKey => setSelectedKey(anchorKey, 'viewer')}
+          />
+        {/key}
       {:else}
         <div class="surface p-5 text-sm text-ink-soft">بيانات عارض المصحف غير متاحة بعد.</div>
       {/if}

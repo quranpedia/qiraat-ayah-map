@@ -388,7 +388,7 @@ button {
   color: var(--accent-strong);
 }
 
-.system_grid {
+.madhhab_grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   gap: 1rem;
@@ -899,6 +899,11 @@ a.surah_pager_card:hover {
   color: color-mix(in oklch, var(--alert) 74%, black 26%);
 }
 
+.mushaf_marker[data-tone='warn'] {
+  background: color-mix(in oklch, var(--warn) 18%, white 82%);
+  color: color-mix(in oklch, var(--warn) 76%, black 24%);
+}
+
 .mushaf_marker[data-kind='internal'] {
   border-style: dashed;
 }
@@ -927,4 +932,10 @@ a.surah_pager_card:hover {
   font-size: 0.82rem;
   font-weight: 700;
   vertical-align: middle;
+}
+
+.mushaf_ayah_number[data-unnumbered='true'] {
+  min-width: auto;
+  padding-inline: 0.65rem;
+  font-size: 0.72rem;
 }

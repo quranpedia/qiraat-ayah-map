@@ -1,8 +1,8 @@
-# Qiraat Ayah Map | خريطة ربط أرقام الآيات بين القراءات
+# Qiraat Ayah Count Reference | مرجع عدِّ الآي
 
-Open data and a demo site for mapping Qurʾān ayah numbering between the six canonical counting systems used by the ten qirāʾāt.
+Open data and a demo site for linking Qurʾān ayah numbering across the six counting madhhabs used by the ten qirāʾāt.
 
-بيانات مفتوحة وموقع عرض لربط ترقيم آيات القرآن بين أنظمة العدّ الستة المعتمدة في القراءات العشر.
+بيانات مفتوحة وموقع عرض لربط ترقيم آيات القرآن بين مذاهب العدّ الستة المعتمدة في القراءات العشر.
 
 ## Quick links | روابط سريعة
 
