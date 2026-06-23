@@ -33,7 +33,7 @@ let {
 let script = $state('plain')
 let viewMode = $state('all')
 let markerStatus = $state('all')
-let ayahScope = $state('context')
+let ayahScope = $state('full')
 let displaySystemId = $state(initialDisplaySystemId)
 let comparisonSystemId = $state(initialDisplaySystemId === 'madani-first' ? 'kufi' : 'madani-first')
 
@@ -444,15 +444,6 @@ let displayAyahs = $derived.by(() => {
   return displayItems
 })
 
-let displaySummary = $derived.by(() => {
-  const shownAyahs = displayAyahs.reduce((count, item) => item.type === 'ayah' ? count + 1 : count, 0)
-
-  return {
-    shownAyahs,
-    hiddenAyahs: Math.max(displayedMushaf.total_ayah_count - shownAyahs, 0)
-  }
-})
-
 let displayBasmala = $derived.by(() => {
   if (script !== 'uthmani') {
     return null
@@ -464,158 +455,146 @@ let displayBasmala = $derived.by(() => {
 </script>
 
 {#if viewer}
-  <section id="mushaf" class="surface p-5 sm:p-6">
-    <div class="flex flex-wrap items-start justify-between gap-4">
-      <div>
+  <section id="mushaf" class="surface p-4 sm:p-5">
+    <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+      <div class="max-w-2xl">
         <div class="rule_label">عارض المصحف</div>
-        <h2 class="section_title mt-4">قراءة السورة بحسب مذهب العدّ المختار</h2>
         <p class="section_text mt-3 text-sm">
-          يحدد مذهب العدّ المعروض ترقيم الآيات، وتظهر علامات الفواصل المختلف فيها داخل موضعها من النص.
+          يقرأ النص بترقيم مذهب العدّ المعروض، وتظهر علامات رؤوس الآي المختلف فيها داخل موضعها من السورة.
         </p>
       </div>
 
-      <div class="flex flex-wrap gap-2 text-xs text-ink-soft">
-        <span class="badge" data-tone="ok">{compact_number(displayedMushaf.total_ayah_count)} آية في {get_system_name(displaySystem) || displaySystemId}</span>
-        <span class="badge" data-tone="accent">{compact_number(markerSummary.counted)} يعدها المذهب المعروض</span>
-        <span class="badge" data-tone="warn">{compact_number(markerSummary.not_counted)} لا يعدها</span>
-      </div>
-    </div>
-
-    {#if viewMode === 'pair'}
-      <div class="mushaf_pair_summary mt-6">
-        <div class="flex flex-wrap items-start justify-between gap-4">
-          <div>
-            <div class="metric_label">المقارنة الزوجية</div>
-            {#if displaySystemId === comparisonSystemId}
-              <p class="mt-3 text-sm text-ink-soft">
-                مذهب العدّ المعروض ومذهب المقارنة كلاهما {get_system_name(displaySystem) || displaySystemId}، لذلك لا يظهر فرق زوجي.
-              </p>
-            {:else if pairDifferenceSummary.ayahCount === 0}
-              <p class="mt-3 text-sm text-ink-soft">
-                لا يختلف {get_system_name(displaySystem) || displaySystemId} و{get_system_name(comparisonSystem) || comparisonSystemId} في أي رأس آية مسجل هنا.
-              </p>
-            {:else}
-              <p class="mt-3 text-sm text-ink-soft">
-                يختلف {get_system_name(displaySystem) || displaySystemId} و{get_system_name(comparisonSystem) || comparisonSystemId} في {format_difference_count(pairDifferenceSummary.pointCount, 'رأس آية مسجل', 'رؤوس آي مسجلة')} عبر {format_difference_count(pairDifferenceSummary.ayahCount, 'آية معروضة', 'آيات معروضة')}.
-              </p>
-            {/if}
-          </div>
-
-          <div class="flex flex-wrap gap-2 text-xs text-ink-soft">
-            <span class="badge" data-tone="accent">{getShortLabel(displaySystemId)} فقط: {compact_number(pairDifferenceSummary.displayOnlyCount)}</span>
-            <span class="badge" data-tone="alert">{getShortLabel(comparisonSystemId)} فقط: {compact_number(pairDifferenceSummary.comparisonOnlyCount)}</span>
-          </div>
-        </div>
-
-        {#if pairDifferenceSummary.ayahs.length > 0}
-          <div class="mt-4 text-[0.72rem] font-bold tracking-[0.16em] text-ink-soft uppercase">الآيات ذات الفرق الزوجي</div>
-          <div class="mushaf_pair_range_list mt-3">
-            {#each pairDifferenceSummary.ayahs as entry (entry.ayah)}
-              <button
-                type="button"
-                class="mushaf_pair_range_chip"
-                data-tone={entry.tone}
-                data-active={entry.ayah === selectedAyah ? 'true' : 'false'}
-                title={entry.title}
-                onclick={() => focusPairAyah(entry)}
-              >
-                {formatDisplayAyahLabel(entry.ayah)}
-              </button>
-            {/each}
-          </div>
-          <p class="mt-3 text-xs text-ink-soft">
-            أرقام الآيات هنا بحسب مذهب العدّ المعروض، لا بحسب ترقيم حفص إلا إذا كان الكوفي هو المذهب المعروض.
-          </p>
-        {/if}
-      </div>
-    {/if}
-
-    <div class="mushaf_control_grid mt-6">
-      <label>
-        <div class="metric_label">الرسم</div>
-        <select class="select mt-2" bind:value={script}>
-          <option value="plain">إملائي</option>
-          <option value="uthmani">عثماني</option>
-        </select>
-      </label>
-
-      <label>
-        <div class="metric_label">مذهب العدّ المعروض</div>
-        <select class="select mt-2" bind:value={displaySystemId}>
-          {#each systems as system (system.id)}
-            <option value={system.id}>{get_system_name(system)}</option>
-          {/each}
-        </select>
-      </label>
-
-      <label>
-        <div class="metric_label">نمط العلامات</div>
-        <select class="select mt-2" bind:value={viewMode}>
-          <option value="all">كل الفواصل المختلف فيها</option>
-          <option value="pair">مقارنة زوجية</option>
-        </select>
-      </label>
-
-      {#if viewMode === 'pair'}
+      <div class="grid gap-3 sm:grid-cols-2 lg:w-[34rem]">
         <label>
-          <div class="metric_label">مذهب المقارنة</div>
-          <select class="select mt-2" bind:value={comparisonSystemId}>
+          <div class="field_label">مذهب العدّ المعروض</div>
+          <select class="select mt-2" bind:value={displaySystemId}>
             {#each systems as system (system.id)}
               <option value={system.id}>{get_system_name(system)}</option>
             {/each}
           </select>
         </label>
-      {/if}
 
-      <label>
-        <div class="metric_label">حكم رأس الآية في المذهب المعروض</div>
-        <select class="select mt-2" bind:value={markerStatus}>
-          <option value="all">كل رؤوس الآي المختلف فيها</option>
-          <option value="counted">يعدها المذهب المعروض</option>
-          <option value="not_counted">لا يعدها المذهب المعروض</option>
-        </select>
-      </label>
-
-      <label>
-        <div class="metric_label">الآيات المعروضة</div>
-        <select class="select mt-2" bind:value={ayahScope}>
-          <option value="context">رؤوس الآي المختلف فيها مع الجوار</option>
-          <option value="changed">رؤوس الآي المختلف فيها فقط</option>
-          <option value="full">السورة كاملة</option>
-        </select>
-      </label>
-    </div>
-
-    <div class="mt-5 flex flex-wrap gap-2 text-xs text-ink-soft">
-      <span class="badge" data-tone="ok">{getShortLabel(displaySystemId)} = {get_system_name(displaySystem) || displaySystemId}</span>
-      {#if viewMode === 'pair'}
-        <span class="badge" data-tone="alert">{getShortLabel(comparisonSystemId)} = {get_system_name(comparisonSystem) || comparisonSystemId}</span>
-      {/if}
-      {#if displayedMushaf.preamble}
-        <span class="badge" data-tone="warn">تظهر بسملة الفاتحة بلا رقم في مذهب العدّ المعروض.</span>
-      {:else if script === 'uthmani' && displayBasmala}
-        <span class="badge" data-tone="warn">تظهر البسملة قبل الآية الأولى حين يثبتها المصدر مستقلة عن النص.</span>
-      {/if}
-    </div>
-
-    <p class="mt-4 text-sm text-ink-soft">
-      يظهر {compact_number(displaySummary.shownAyahs)} من أصل {compact_number(displayedMushaf.total_ayah_count)} آية بحسب {get_system_name(displaySystem) || displaySystemId}. والظاهر في هذا الترشيح {compact_number(markerSummary.visible)} رأس آية مختلف فيه.
-    </p>
-
-    {#if selectedMarkerHidden}
-      <div class="mt-3 flex flex-wrap items-center gap-3 text-sm text-ink-soft">
-        <p>رأس الآية المحدد مخفي بهذا الترشيح.</p>
-        <button type="button" class="pill_button" data-tone="accent" onclick={revealSelectedBoundary}>
-          اضبط العارض لإظهاره
-        </button>
+        <label>
+          <div class="field_label">الرسم</div>
+          <select class="select mt-2" bind:value={script}>
+            <option value="plain">إملائي</option>
+            <option value="uthmani">عثماني</option>
+          </select>
+        </label>
       </div>
-    {/if}
+    </div>
 
-    {#if markerSummary.visible === 0 && rows.length > 0}
-      <p class="mt-4 text-sm text-ink-soft">
-        لا يظهر بهذا الترشيح أي رأس آية مختلف فيه.
-      </p>
-    {/if}
+    <details class="mt-5 border-t border-line/70 pt-4">
+      <summary class="cursor-pointer text-sm font-bold text-ink-soft">خيارات متقدمة</summary>
+
+      <div class="mushaf_control_grid mt-4">
+        <label>
+          <div class="field_label">نمط العلامات</div>
+          <select class="select mt-2" bind:value={viewMode}>
+            <option value="all">كل الفواصل المختلف فيها</option>
+            <option value="pair">مقارنة زوجية</option>
+          </select>
+        </label>
+
+        {#if viewMode === 'pair'}
+          <label>
+            <div class="field_label">مذهب المقارنة</div>
+            <select class="select mt-2" bind:value={comparisonSystemId}>
+              {#each systems as system (system.id)}
+                <option value={system.id}>{get_system_name(system)}</option>
+              {/each}
+            </select>
+          </label>
+        {/if}
+
+        <label>
+          <div class="field_label">حكم الرأس في المذهب المعروض</div>
+          <select class="select mt-2" bind:value={markerStatus}>
+            <option value="all">كل رؤوس الآي المختلف فيها</option>
+            <option value="counted">يعدها المذهب المعروض</option>
+            <option value="not_counted">لا يعدها المذهب المعروض</option>
+          </select>
+        </label>
+
+        <label>
+          <div class="field_label">الآيات المعروضة</div>
+          <select class="select mt-2" bind:value={ayahScope}>
+            <option value="full">السورة كاملة</option>
+            <option value="context">رؤوس الآي المختلف فيها مع الجوار</option>
+            <option value="changed">رؤوس الآي المختلف فيها فقط</option>
+          </select>
+        </label>
+      </div>
+
+      {#if viewMode === 'pair'}
+        <div class="mushaf_pair_summary mt-5">
+          <div class="flex flex-wrap items-start justify-between gap-4">
+            <div>
+              <div class="field_label">المقارنة الزوجية</div>
+              {#if displaySystemId === comparisonSystemId}
+                <p class="mt-3 text-sm text-ink-soft">
+                  مذهب العدّ المعروض ومذهب المقارنة كلاهما {get_system_name(displaySystem) || displaySystemId}، لذلك لا يظهر فرق زوجي.
+                </p>
+              {:else if pairDifferenceSummary.ayahCount === 0}
+                <p class="mt-3 text-sm text-ink-soft">
+                  لا يختلف {get_system_name(displaySystem) || displaySystemId} و{get_system_name(comparisonSystem) || comparisonSystemId} في أي رأس آية مسجل هنا.
+                </p>
+              {:else}
+                <p class="mt-3 text-sm text-ink-soft">
+                  يختلف {get_system_name(displaySystem) || displaySystemId} و{get_system_name(comparisonSystem) || comparisonSystemId} في {format_difference_count(pairDifferenceSummary.pointCount, 'رأس آية مسجل', 'رؤوس آي مسجلة')} عبر {format_difference_count(pairDifferenceSummary.ayahCount, 'آية معروضة', 'آيات معروضة')}.
+                </p>
+              {/if}
+            </div>
+
+            <p class="text-xs font-bold text-ink-soft">
+              {getShortLabel(displaySystemId)} فقط: {compact_number(pairDifferenceSummary.displayOnlyCount)} · {getShortLabel(comparisonSystemId)} فقط: {compact_number(pairDifferenceSummary.comparisonOnlyCount)}
+            </p>
+          </div>
+
+          {#if pairDifferenceSummary.ayahs.length > 0}
+            <div class="mt-4 text-[0.72rem] font-bold tracking-[0.16em] text-ink-soft uppercase">الآيات ذات الفرق الزوجي</div>
+            <div class="mushaf_pair_range_list mt-3">
+              {#each pairDifferenceSummary.ayahs as entry (entry.ayah)}
+                <button
+                  type="button"
+                  class="mushaf_pair_range_chip"
+                  data-tone={entry.tone}
+                  data-active={entry.ayah === selectedAyah ? 'true' : 'false'}
+                  title={entry.title}
+                  onclick={() => focusPairAyah(entry)}
+                >
+                  {formatDisplayAyahLabel(entry.ayah)}
+                </button>
+              {/each}
+            </div>
+            <p class="mt-3 text-xs text-ink-soft">
+              أرقام الآيات هنا بحسب مذهب العدّ المعروض، لا بحسب ترقيم حفص إلا إذا كان الكوفي هو المذهب المعروض.
+            </p>
+          {/if}
+        </div>
+      {/if}
+
+      {#if displayedMushaf.preamble}
+        <p class="mt-4 text-sm text-ink-soft">تظهر بسملة الفاتحة بلا رقم في مذهب العدّ المعروض.</p>
+      {:else if script === 'uthmani' && displayBasmala}
+        <p class="mt-4 text-sm text-ink-soft">تظهر البسملة قبل الآية الأولى حين يثبتها المصدر مستقلة عن النص.</p>
+      {/if}
+
+      {#if selectedMarkerHidden}
+        <div class="mt-4 flex flex-wrap items-center gap-3 text-sm text-ink-soft">
+          <p>رأس الآية المحدد مخفي بهذا الترشيح.</p>
+          <button type="button" class="pill_button" data-tone="accent" onclick={revealSelectedBoundary}>
+            اضبط العارض لإظهاره
+          </button>
+        </div>
+      {/if}
+
+      {#if markerSummary.visible === 0 && rows.length > 0}
+        <p class="mt-4 text-sm text-ink-soft">
+          لا يظهر بهذا الترشيح أي رأس آية مختلف فيه.
+        </p>
+      {/if}
+    </details>
 
     <div class="mushaf_viewer_shell mt-6">
       {#if displayBasmala}

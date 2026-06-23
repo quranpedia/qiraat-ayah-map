@@ -12,10 +12,17 @@ let alternate_doc = $derived(doc?.alternateSlug ? get_doc(doc.alternateSlug) : n
 let same_language_as_ui = $derived(doc ? doc.language === current_language : false)
 let index_href = $derived(doc && (doc.internal || group?.internal) ? '/developer' : '/docs')
 let index_label = $derived(index_href === '/developer' ? 'العودة إلى صفحة المطور' : 'العودة إلى الوثائق')
+let metadata = $derived(
+  doc
+    ? [group?.title, doc.language === 'ar' ? 'عربي' : 'English', `${doc.headers.length} عنوانًا فرعيًا`]
+        .filter(Boolean)
+        .join(' · ')
+    : ''
+)
 </script>
 
 {#if !doc}
-  <section class="grid gap-4">
+  <section class="grid max-w-4xl gap-4">
     <div class="rule_label">الوثيقة غير موجودة</div>
     <h1 class="section_title mt-4">لا توجد وثيقة بهذا المعرّف داخل المكتبة.</h1>
     <div class="flex flex-wrap gap-3 pt-2">
@@ -24,20 +31,13 @@ let index_label = $derived(index_href === '/developer' ? 'العودة إلى ص
     </div>
   </section>
 {:else}
-  <section class="grid gap-6">
-    <div class="flex flex-wrap items-center gap-3">
-      <a class="pill_button" href={window.navgo.href(index_href)}>{index_label}</a>
-      {#if group}
-        <span class="stat_chip">{group.title}</span>
-      {/if}
-      <span class="stat_chip">{doc.language === 'ar' ? 'عربي' : 'English'}</span>
-      <span class="stat_chip">{doc.headers.length} عنوانًا فرعيًا</span>
-    </div>
-
-    <section class="surface p-5 sm:p-7">
-      <div class="rule_label">وثيقة كاملة</div>
-      <h1 class="display_title mt-5 max-w-5xl text-ink" dir={doc.direction}>{doc.title}</h1>
-      <p class="section_text mt-5 max-w-3xl text-base sm:text-lg" dir={doc.direction}>{doc.excerpt}</p>
+  <section class="grid max-w-4xl gap-8">
+    <div>
+      <a class="text-sm font-bold text-accent-strong" href={window.navgo.href(index_href)}>{index_label}</a>
+      <div class="rule_label mt-6">وثيقة كاملة</div>
+      <h1 class="page_title mt-5 text-ink" dir={doc.direction}>{doc.title}</h1>
+      <p class="section_text mt-5 text-base sm:text-lg" dir={doc.direction}>{doc.excerpt}</p>
+      <p class="mt-4 text-sm font-bold text-ink-soft">{metadata}</p>
 
       <div class="mt-5 flex flex-wrap gap-3">
         {#if alternate_doc}
@@ -47,43 +47,42 @@ let index_label = $derived(index_href === '/developer' ? 'العودة إلى ص
         {/if}
 
         {#if !same_language_as_ui}
-          <span class="stat_chip">واجهة الموقع الآن بلغة مختلفة عن لغة هذه الوثيقة</span>
+          <span class="text-sm text-ink-soft">واجهة الموقع الآن بلغة مختلفة عن لغة هذه الوثيقة.</span>
         {/if}
       </div>
-    </section>
+    </div>
 
     {#if doc.headers.length}
-      <section class="surface p-5 sm:p-6">
-        <div class="rule_label">في هذه الصفحة</div>
-        <div class="doc_grid mt-5" data-columns="3">
+      <details class="border-y border-line/70 py-4">
+        <summary class="cursor-pointer font-bold text-ink">في هذه الصفحة</summary>
+        <ol class="mt-4 grid gap-2 text-sm text-ink-soft">
           {#each doc.headers as header (header.id)}
-            <a class="surface surface_muted block p-4" href="#{header.id}">
-              <div class="metric_label">H{header.level}</div>
-              <div class="mt-2 text-sm font-bold text-ink" dir={doc.direction}>{header.title}</div>
-            </a>
+            <li class={header.level > 2 ? 'pr-4' : ''}>
+              <a class="hover:text-ink" href="#{header.id}" dir={doc.direction}>{header.title}</a>
+            </li>
           {/each}
-        </div>
-      </section>
+        </ol>
+      </details>
     {/if}
 
-    <article class="surface markdown_doc p-5 sm:p-8" lang={doc.language} dir={doc.direction}>
+    <article class="markdown_doc" lang={doc.language} dir={doc.direction}>
       {@html doc.html}
     </article>
 
-    <section class="doc_grid" data-columns="2">
+    <nav class="grid gap-4 border-t border-line/70 pt-6 sm:grid-cols-2">
       {#if neighbors.previous}
-        <a class="surface surface_muted h-full p-5 sm:p-6" href={window.navgo.href('/docs/' + neighbors.previous.slug)}>
-          <div class="metric_label">الوثيقة السابقة</div>
-          <div class="mt-3 text-xl font-bold text-ink" dir={neighbors.previous.direction}>{neighbors.previous.title}</div>
+        <a class="block" href={window.navgo.href('/docs/' + neighbors.previous.slug)}>
+          <div class="text-sm font-bold text-ink-soft">الوثيقة السابقة</div>
+          <div class="mt-1 text-lg font-bold text-ink" dir={neighbors.previous.direction}>{neighbors.previous.title}</div>
         </a>
       {/if}
 
       {#if neighbors.next}
-        <a class="surface surface_muted h-full p-5 sm:p-6" href={window.navgo.href('/docs/' + neighbors.next.slug)}>
-          <div class="metric_label">الوثيقة التالية</div>
-          <div class="mt-3 text-xl font-bold text-ink" dir={neighbors.next.direction}>{neighbors.next.title}</div>
+        <a class="block" href={window.navgo.href('/docs/' + neighbors.next.slug)}>
+          <div class="text-sm font-bold text-ink-soft">الوثيقة التالية</div>
+          <div class="mt-1 text-lg font-bold text-ink" dir={neighbors.next.direction}>{neighbors.next.title}</div>
         </a>
       {/if}
-    </section>
+    </nav>
   </section>
 {/if}

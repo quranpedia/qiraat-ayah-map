@@ -18,7 +18,6 @@ import * as Mushaf from '~/routes/Mushaf.svelte'
 import * as NotFound from '~/routes/NotFound.svelte'
 import * as Project from '~/routes/Project.svelte'
 import * as Surah from '~/routes/Surah.svelte'
-import * as Surahs from '~/routes/Surahs.svelte'
 import * as Madhhab from '~/routes/Madhhab.svelte'
 
 import App from './App.svelte'
@@ -36,7 +35,7 @@ const routes = [
   ['/project', Project],
   ['/madhhabs/:madhhab', Madhhab],
   ['/systems/:madhhab', Madhhab],
-  ['/surahs', Surahs],
+  ['/surahs', Mushaf],
   ['/surahs/:surah', Surah],
   [/^.*$/, NotFound]
 ]

@@ -1,201 +1,232 @@
 <script>
+import { ArrowRightIcon, SearchIcon } from '@lucide/svelte'
+
 import BoundaryDetail from '~/components/BoundaryDetail.svelte'
 import {
   compact_number,
+  format_surah_reference,
+  get_surah_name,
   get_system_name,
   rows,
-  system_order
+  surahs,
+  systems
 } from '$lib/dataset.svelte.js'
 import { get_current_language } from '$lib/i18n.js'
 import { getBoundaryHash } from '$lib/mushaf-viewer-dom.js'
-import { getMadhhabHref } from '$lib/route-urls.js'
+import { getMadhhabHref, replaceMadhhabQuery } from '$lib/route-urls.js'
 
+const RESULT_LIMIT = 80
+
+let { route_query = {} } = $props()
+
+let route_system_id = $derived(systems.some(system => system.id === route_query.madhhab) ? route_query.madhhab : 'kufi')
 let search = $state('')
-let system_filter = $state('all')
-let hafs_filter = $state('all')
+let surah_filter = $state('all')
+let selected_system_id = $state(route_system_id)
+let boundary_filter = $state('all')
 let selected_key = $state(null)
 let current_language = $derived(get_current_language())
+
+let selected_system = $derived(systems.find(system => system.id === selected_system_id) || systems[0] || null)
+let normalized_query = $derived(search.trim().toLowerCase())
+let has_search_criteria = $derived(Boolean(normalized_query || surah_filter !== 'all' || boundary_filter !== 'all'))
+
+$effect(() => {
+  selected_system_id = route_system_id
+})
+
+$effect(() => {
+  replaceMadhhabQuery(selected_system_id)
+})
 
 function join_system_names(list) {
   const separator = current_language === 'en' ? ', ' : '، '
   return list.map(get_system_name).join(separator)
 }
 
-function clear_filters() {
+function clear_search() {
   search = ''
-  system_filter = 'all'
-  hafs_filter = 'all'
+  surah_filter = 'all'
+  boundary_filter = 'all'
   selected_key = null
 }
 
-let filtered_rows = $derived.by(() => {
-  const query = search.trim().toLowerCase()
+function use_example(next) {
+  search = next.search || ''
+  surah_filter = next.surah || 'all'
+  boundary_filter = next.boundary || 'all'
+  selected_key = null
+}
 
-  return rows.filter(row => {
-    if (system_filter !== 'all' && !row.systems[system_filter].counts_boundary) {
-      return false
-    }
+function counts_selected(row) {
+  return row.systems[selected_system_id]?.counts_boundary ?? false
+}
 
-    const countedByHafs = row.systems.kufi?.counts_boundary ?? false
-
-    if (hafs_filter === 'counted' && !countedByHafs) {
-      return false
-    }
-
-    if (hafs_filter === 'not_counted' && countedByHafs) {
-      return false
-    }
-
-    if (!query) {
-      return true
-    }
-
-    const haystack = [
-      row.anchor_key,
-      row.word,
-      row.location_label,
-      row.kind,
-      row.counted_by.join(' '),
-      row.omitted_by.join(' '),
-      row.supported_systems.join(' ')
-    ]
-      .join(' ')
-      .toLowerCase()
-
-    return haystack.includes(query)
-  })
-})
-
-let filtered_summary = $derived.by(() => {
-  const summary = { counted_by_hafs: 0, not_counted_by_hafs: 0 }
-
-  for (const row of filtered_rows) {
-    if (row.systems.kufi?.counts_boundary) {
-      summary.counted_by_hafs += 1
-    } else {
-      summary.not_counted_by_hafs += 1
-    }
+function matches_query(row) {
+  if (!normalized_query) {
+    return true
   }
 
-  return summary
-})
+  const surahName = get_surah_name(row.surah)
+  const haystack = [
+    row.word,
+    row.location_label,
+    format_surah_reference(row.surah),
+    surahName,
+    row.counted_by.map(get_system_name).join(' '),
+    row.omitted_by.map(get_system_name).join(' ')
+  ]
+    .join(' ')
+    .toLowerCase()
 
-let has_filters = $derived(search.trim().length > 0 || system_filter !== 'all' || hafs_filter !== 'all')
+  return haystack.includes(normalized_query)
+}
+
+let filtered_rows = $derived.by(() => rows.filter(row => {
+  if (!has_search_criteria) {
+    return false
+  }
+
+  if (surah_filter !== 'all' && row.surah !== Number(surah_filter)) {
+    return false
+  }
+
+  const selectedCounts = counts_selected(row)
+
+  if (boundary_filter === 'counted' && !selectedCounts) {
+    return false
+  }
+
+  if (boundary_filter === 'not_counted' && selectedCounts) {
+    return false
+  }
+
+  return matches_query(row)
+}))
+
+
 let selected_row = $derived(selected_key ? filtered_rows.find(row => row.anchor_key === selected_key) || null : null)
-let selected_madhhab_id = $derived(system_filter === 'all' ? 'kufi' : system_filter)
+let visible_rows = $derived(has_search_criteria ? filtered_rows.slice(0, RESULT_LIMIT) : [])
+let hidden_result_count = $derived(Math.max(0, filtered_rows.length - visible_rows.length))
 
 function get_boundary_href(row) {
-  return getMadhhabHref(window.navgo.href('/surahs/' + row.surah), selected_madhhab_id, getBoundaryHash(row.anchor_key))
+  return getMadhhabHref(window.navgo.href('/surahs/' + row.surah), selected_system_id, getBoundaryHash(row.anchor_key))
 }
 </script>
 
-<section>
-  <div class="rule_label">المستكشف</div>
-  <div class="mt-4 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-    <div>
-      <h1 class="section_title">ابحث عن مواضع الخلاف في رؤوس الآي</h1>
-      <p class="section_text mt-3">
-        قم بتصفية رؤوس الآي المختلف فيها بحسب مذهب العدّ أو بحسب حكمها في حفص/الكوفي، أو ابحث عن رأس آية، ثم اضغط على الموضع المطلوب لعرض تفاصيله في القائمة الجانبية.
-      </p>
-    </div>
-    <div class="stat_chip">{compact_number(filtered_rows.length)} نتيجة ظاهرة</div>
-  </div>
-
-  <div class="mt-4 flex flex-wrap gap-2 text-sm text-ink-soft">
-    <span class="stat_chip">{compact_number(filtered_summary.counted_by_hafs)} يعده حفص</span>
-    <span class="stat_chip">{compact_number(filtered_summary.not_counted_by_hafs)} لا يعده حفص</span>
-  </div>
+<section class="max-w-3xl">
+  <div class="rule_label">البحث</div>
+  <h1 class="section_title mt-4">ابحث عن رأس آية مختلف فيه.</h1>
+  <p class="section_text mt-4 text-lg">
+    اكتب فاصلة أو اختر سورة، ثم افتح النتيجة في المصحف لرؤية رأس الآية في سياق القراءة.
+  </p>
 </section>
 
-<section class="mt-8 split_layout">
-  <div class="space-y-4">
-    <div class="surface p-4 sm:p-5">
-      <div class="grid gap-3 md:grid-cols-3">
-        <label>
-          <span class="metric_label">البحث</span>
-          <input class="search mt-3" bind:value={search} placeholder="ابحث عن رأس آية" />
-        </label>
+<section class="mt-8 surface p-4 sm:p-5" aria-label="مرشحات البحث">
+  <label>
+    <span class="field_label">البحث</span>
+    <div class="relative mt-3">
+      <SearchIcon class="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-ink-soft" />
+      <input class="search pl-10 text-lg" bind:value={search} placeholder="ابحث بفاصلة أو رقم آية" />
+    </div>
+  </label>
 
-        <label>
-          <span class="metric_label">مذهب العدّ الذي يعده</span>
-          <select class="select mt-3" bind:value={system_filter}>
-            <option value="all">كل مذاهب العدّ</option>
-            {#each system_order as system_id}
-              <option value={system_id}>{get_system_name(system_id)}</option>
-            {/each}
-          </select>
-        </label>
+  <div class="mt-4 grid gap-3 md:grid-cols-3">
+    <label>
+      <span class="field_label">السورة</span>
+      <select class="select mt-2" bind:value={surah_filter}>
+        <option value="all">كل السور</option>
+        {#each surahs as surah (surah.surah)}
+          <option value={String(surah.surah)}>{format_surah_reference(surah.surah)} · {get_surah_name(surah)}</option>
+        {/each}
+      </select>
+    </label>
 
-        <label>
-          <span class="metric_label">في حفص/الكوفي</span>
-          <select class="select mt-3" bind:value={hafs_filter}>
-            <option value="all">كل رؤوس الآي</option>
-            <option value="counted">يعده حفص</option>
-            <option value="not_counted">لا يعده حفص</option>
-          </select>
-        </label>
+    <label>
+      <span class="field_label">مذهب العدّ</span>
+      <select class="select mt-2" bind:value={selected_system_id}>
+        {#each systems as system (system.id)}
+          <option value={system.id}>{get_system_name(system)}</option>
+        {/each}
+      </select>
+    </label>
+
+    <label>
+      <span class="field_label">حكم الرأس</span>
+      <select class="select mt-2" bind:value={boundary_filter}>
+        <option value="all">كل النتائج المطابقة</option>
+        <option value="counted">يعده مذهب العدّ المختار</option>
+        <option value="not_counted">لا يعده مذهب العدّ المختار</option>
+      </select>
+    </label>
+  </div>
+
+  {#if has_search_criteria}
+    <div class="mt-4">
+      <button class="pill_button" onclick={clear_search}>امسح البحث</button>
+    </div>
+  {/if}
+</section>
+
+{#if !has_search_criteria}
+  <section class="mt-8 surface surface_muted p-5 sm:p-6">
+    <div class="rule_label">ابدأ بالبحث</div>
+    <h2 class="section_title mt-4 text-2xl">لن تُعرض كل البيانات قبل أن تحدد ما تريد الوصول إليه.</h2>
+    <p class="section_text mt-3 text-sm">
+      هذا يحافظ على الصفحة كأداة بحث لا كجدول تدقيق. جرّب فاصلة، سورة، أو حكم الرأس في مذهب العدّ المختار.
+    </p>
+
+    <div class="mt-5 flex flex-wrap gap-2">
+      <button class="pill_button" type="button" onclick={() => use_example({ search: 'الرحيم' })}>ابحث عن “الرحيم”</button>
+      <button class="pill_button" type="button" onclick={() => use_example({ surah: '1' })}>رؤوس الفاتحة</button>
+      <button class="pill_button" type="button" onclick={() => use_example({ boundary: 'not_counted' })}>ما لا يعده المذهب المختار</button>
+    </div>
+  </section>
+{:else if filtered_rows.length === 0}
+  <section class="mt-8 surface p-6 sm:p-8">
+    <div class="rule_label">لا نتائج</div>
+    <h2 class="section_title mt-4 text-2xl">لا يوجد رأس آية يطابق البحث الحالي.</h2>
+    <p class="section_text mt-3">غيّر النص أو المرشحات ثم جرّب من جديد.</p>
+    <div class="mt-6">
+      <button class="pill_button" data-tone="accent" onclick={clear_search}>أعد ضبط البحث</button>
+    </div>
+  </section>
+{:else}
+  <section class="mt-8 grid gap-6 xl:grid-cols-[minmax(0,1fr)_minmax(18rem,0.42fr)] xl:items-start">
+    <div class="surface overflow-hidden">
+      <div class="border-b border-line/70 px-4 py-3 text-sm font-semibold text-ink-soft sm:px-5">
+        {compact_number(filtered_rows.length)} نتيجة مطابقة{#if hidden_result_count > 0} · تظهر أول {compact_number(visible_rows.length)} نتيجة فقط{/if}
       </div>
 
-      {#if has_filters}
-        <div class="mt-4">
-          <button class="pill_button" onclick={clear_filters}>امسح المرشحات</button>
-        </div>
-      {/if}
+      <div class="divide-y divide-line/70">
+        {#each visible_rows as row (row.anchor_key)}
+          {@const selectedCounts = counts_selected(row)}
+          <article class="p-4 transition hover:bg-paper-soft/60 data-[active=true]:bg-paper-soft/70 sm:p-5" data-active={row.anchor_key === selected_row?.anchor_key ? 'true' : 'false'}>
+            <div class="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+              <div class="min-w-0">
+                <div class="text-sm font-bold text-ink-soft">{format_surah_reference(row.surah)} · {get_surah_name(row.surah)} · {row.location_label}</div>
+                <div class="arabic_title mt-2 text-2xl text-ink">{row.word}</div>
+                <p class="mt-3 text-sm text-ink-soft">
+                  {get_system_name(selected_system)} {selectedCounts ? 'يعده رأس آية' : 'لا يعده رأس آية'}.
+                  يعده: {row.counted_by.length ? join_system_names(row.counted_by) : 'لا أحد'}.
+                </p>
+              </div>
+
+              <div class="flex shrink-0 flex-wrap gap-2">
+                <button class="pill_button" type="button" onclick={() => (selected_key = row.anchor_key)}>تفاصيل</button>
+                <a class="pill_button" data-tone="accent" href={get_boundary_href(row)}>
+                  افتح في المصحف
+                  <ArrowRightIcon class="size-4" />
+                </a>
+              </div>
+            </div>
+          </article>
+        {/each}
+      </div>
     </div>
 
-    {#if filtered_rows.length === 0}
-      <div class="surface p-6 sm:p-8">
-        <div class="rule_label">لا نتائج</div>
-        <h2 class="section_title mt-4">لا يوجد رأس آية يطابق المرشحات الحالية.</h2>
-        <p class="section_text mt-3">امسح بعض المرشحات ثم جرّب من جديد.</p>
-        {#if has_filters}
-          <div class="mt-6">
-            <button class="pill_button" data-tone="accent" onclick={clear_filters}>أعد ضبط المستكشف</button>
-          </div>
-        {/if}
-      </div>
-    {:else}
-      <div class="table_shell">
-        <table class="data_table">
-          <thead>
-            <tr>
-              <th>رأس الآية</th>
-              <th>الفاصلة</th>
-              <th>في حفص/الكوفي</th>
-              <th>يعده</th>
-            </tr>
-          </thead>
-          <tbody>
-            {#each filtered_rows as row (row.anchor_key)}
-              <tr data-active={row.anchor_key === selected_row?.anchor_key ? 'true' : 'false'} onclick={() => (selected_key = row.anchor_key)}>
-                <td data-label="رأس الآية">
-                  <a class="font-bold text-ink underline decoration-line decoration-1 underline-offset-4" href={get_boundary_href(row)}>{row.location_label}</a>
-                </td>
-                <td data-label="الفاصلة">
-                  <div class="arabic_title text-xl text-ink">{row.word}</div>
-                  <div class="mt-2 text-xs text-ink-soft">{row.anchor_key}</div>
-                </td>
-                <td data-label="في حفص/الكوفي">
-                  <span class="badge" data-tone={row.systems.kufi?.counts_boundary ? 'ok' : 'warn'}>
-                    {row.systems.kufi?.counts_boundary ? 'يعده حفص' : 'لا يعده حفص'}
-                  </span>
-                </td>
-                <td data-label="يعده">
-                  <div class="flex flex-wrap gap-2">
-                    <span class="badge" data-tone="ok">{compact_number(row.counted_by_count)} من {compact_number(system_order.length)} يعده</span>
-                    <span class="badge" data-tone="warn">{compact_number(row.omitted_by_count)} لا يعده</span>
-                  </div>
-                  <div class="mt-2 text-xs text-ink-soft">{join_system_names(row.counted_by)}</div>
-                </td>
-              </tr>
-            {/each}
-          </tbody>
-        </table>
-      </div>
+    {#if selected_row}
+      <BoundaryDetail row={selected_row} madhhabId={selected_system_id} />
     {/if}
-  </div>
-
-  <div>
-    <BoundaryDetail row={selected_row} madhhabId={selected_madhhab_id} />
-  </div>
-</section>
+  </section>
+{/if}

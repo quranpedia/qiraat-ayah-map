@@ -1,9 +1,6 @@
 <script>
-import { ArrowRightIcon, BookOpenCheckIcon, FilesIcon, MilestoneIcon } from '@lucide/svelte'
+import { ArrowRightIcon } from '@lucide/svelte'
 
-import PlotSystemDistanceMatrix from '~/components/charts/PlotSystemDistanceMatrix.svelte'
-import PlotSystemVerificationBars from '~/components/charts/PlotSystemVerificationBars.svelte'
-import SystemReviewWorkload from '~/components/charts/SystemReviewWorkload.svelte'
 import {
   compact_number,
   get_system_name,
@@ -18,6 +15,10 @@ import { get_current_language } from '$lib/i18n.js'
 
 let current_language = $derived(get_current_language())
 
+let distance_cells = $derived(
+  new Map(system_distance_matrix.map(cell => [`${cell.left_system_id}:${cell.right_system_id}`, cell]))
+)
+
 let relationship_rows = $derived.by(() =>
   systems.map(system => {
     const relationships = system_relationships[system.id]
@@ -31,125 +32,151 @@ let relationship_rows = $derived.by(() =>
     }
   })
 )
+
+function get_distance(left_system_id, right_system_id) {
+  return distance_cells.get(`${left_system_id}:${right_system_id}`)?.differing_points ?? 0
+}
 </script>
 
-<section class="grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(18rem,0.8fr)] lg:items-start">
-  <div>
-    <div class="rule_label">تشخيص المطور</div>
-    <h1 class="display_title mt-5 text-ink">أدوات داخلية لفحص المسافات وعبء المراجعة.</h1>
-    <p class="section_text mt-5 text-lg">
-      هذه الصفحة مخصصة للتشخيص وتخطيط العمل، وليست المسار الأساسي لقراءة رؤوس الآي.
-    </p>
-    <div class="mt-6 flex flex-wrap gap-2 text-sm text-ink-soft">
-      <span class="stat_chip">{compact_number(summary.total_points)} رأس آية مختلف فيه</span>
-      <span class="stat_chip">{compact_number(summary.evidence.points_with_primary_evidence)} مع شاهد أصلي</span>
-      <span class="stat_chip">{compact_number(summary.evidence.points_uncited)} يحتاج إلى مراجعة</span>
-    </div>
-  </div>
-
-  <div class="surface surface_muted p-5">
-    <div class="metric_label">نطاق الصفحة</div>
-    <div class="mt-4 space-y-4 text-sm text-ink-soft">
-      <p>
-        تبقى الرسوم هنا لأنها نافعة للمحافظة على البيانات ومراجعة التغطية.
-      </p>
-      <a class="pill_button w-full" href={window.navgo.href('/explorer')}>
-        افتح المستكشف
-        <ArrowRightIcon class="size-4" />
-      </a>
-    </div>
+<section class="max-w-4xl">
+  <div class="rule_label">تشخيص المطور</div>
+  <h1 class="page_title mt-5 text-ink">مراجعة داخلية هادئة لسلامة البيانات.</h1>
+  <p class="section_text mt-5 text-lg">
+    هذه الصفحة مخصصة للمحافظة على البيانات وتقدير عبء المراجعة. تعرض جداول صيانة فقط حتى يبقى مسار الباحث منفصلًا وواضحًا.
+  </p>
+  <div class="mt-7 flex flex-wrap gap-3">
+    <a class="pill_button" href={window.navgo.href('/developer')}>استخدام المطور</a>
+    <a class="pill_button" data-tone="accent" href={window.navgo.href('/explorer')}>
+      افتح البحث
+      <ArrowRightIcon class="size-4" />
+    </a>
   </div>
 </section>
 
-<section class="mt-12 surface p-5 sm:p-6">
-  <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-    <div>
-        <div class="rule_label">مسافة مذاهب العدّ</div>
-        <h2 class="section_title mt-4">كم يفصل بين مذاهب العدّ من رؤوس آي مختلفة</h2>
-        <p class="section_text mt-3 text-sm">
-          كل خلية = عدد رؤوس الآي المختلفة بين المذهبين.
-        </p>
-    </div>
-    <FilesIcon class="hidden size-10 text-accent-strong sm:block" />
-  </div>
-  <div class="mt-6">
-    <PlotSystemDistanceMatrix cells={system_distance_matrix} {systems} />
-  </div>
-</section>
+<section class="mt-12 max-w-5xl border-t border-line/70 pt-8">
+  <div class="rule_label">عبء المراجعة</div>
+  <h2 class="section_title mt-4">الرؤوس المعدودة التي تحتاج إلى شواهد.</h2>
+  <p class="section_text mt-3 text-sm">
+    يعرض هذا الجدول العمل المتبقي لكل مذهب عدّ من غير ألوان حالة أو تصنيف بصري.
+  </p>
 
-<section class="mt-12 grid gap-6 xl:grid-cols-2">
-  <div class="surface p-5 sm:p-6">
-    <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-      <div>
-        <div class="rule_label">تغطية التوثيق</div>
-        <h2 class="section_title mt-4">أين تتراكم الشواهد</h2>
-        <p class="section_text mt-3 text-sm">
-          يعرض فقط ما يعده كل مذهب، لذلك يقيس عبء المراجعة الحقيقي.
-        </p>
-      </div>
-      <BookOpenCheckIcon class="hidden size-10 text-accent-strong sm:block" />
-    </div>
-    <div class="mt-6">
-      <PlotSystemVerificationBars />
-    </div>
-  </div>
-
-  <div class="surface p-5 sm:p-6">
-    <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-      <div>
-        <div class="rule_label">تحجيم حملة المراجعة</div>
-        <h2 class="section_title mt-4">من أين يبدأ المرور الكامل</h2>
-        <p class="section_text mt-3 text-sm">
-          يرتب مذاهب العدّ بحسب الرؤوس المعدودة التي تحتاج إلى مراجعة.
-        </p>
-      </div>
-      <MilestoneIcon class="hidden size-10 text-accent-strong sm:block" />
-    </div>
-    <div class="mt-6">
-      <SystemReviewWorkload queue={review_queue} />
-    </div>
-    <div class="mt-6 grid gap-3 sm:grid-cols-3">
-      {#each review_queue.slice(0, 3) as entry (entry.system_id)}
-        <div class="surface surface_muted p-4">
-          <div class="metric_label">{entry.system_id}</div>
-          <div class="mt-3 text-xl font-bold text-ink">{get_system_name(entry)}</div>
-          <div class="mt-2 text-sm text-ink-soft">{compact_number(entry.uncited_points)} رأسًا معدودًا يحتاج إلى مراجعة</div>
-        </div>
-      {/each}
-    </div>
-  </div>
-</section>
-
-<section class="mt-12 surface p-5 sm:p-6">
-  <div class="rule_label">أقرب الجيران وأبعدهم</div>
-  <h2 class="section_title mt-4">أسرع لمحة للتشابه</h2>
   <div class="table_shell mt-6">
     <table class="data_table">
       <thead>
         <tr>
           <th>مذهب العدّ</th>
-          <th>الأقرب</th>
-          <th>المسافة</th>
-          <th>الأبعد</th>
-          <th>المسافة</th>
+          <th>الرؤوس المعدودة</th>
+          <th>بلا شاهد</th>
+          <th>مع شاهد</th>
+          <th>فواصل داخلية</th>
+          <th>نهايات لا يعدّها</th>
         </tr>
       </thead>
       <tbody>
-        {#each relationship_rows as row (row.system.id)}
+        {#each review_queue as entry (entry.system_id)}
           <tr>
-            <td data-label="مذهب العدّ">
-              <div class="font-bold text-ink">{get_system_name(row.system)}</div>
-              {#if current_language !== 'en' && get_system_secondary_name(row.system)}
-                <div class="text-base text-ink-soft">{get_system_secondary_name(row.system)}</div>
+            <td>
+              <div class="font-bold text-ink">{get_system_name(entry.system_id)}</div>
+              {#if current_language !== 'en' && get_system_secondary_name(entry.system_id)}
+                <div class="text-base text-ink-soft">{get_system_secondary_name(entry.system_id)}</div>
               {/if}
             </td>
-            <td data-label="الأقرب">{row.nearest_system_name}</td>
-            <td data-label="المسافة الأقرب"><span class="badge" data-tone="ok">{compact_number(row.nearest_distance)}</span></td>
-            <td data-label="الأبعد">{row.farthest_system_name}</td>
-            <td data-label="المسافة الأبعد"><span class="badge" data-tone="warn">{compact_number(row.farthest_distance)}</span></td>
+            <td>{compact_number(entry.counted_points)}</td>
+            <td>{compact_number(entry.uncited_points)}</td>
+            <td>{compact_number(entry.cited_points)}</td>
+            <td>{compact_number(entry.split_effects)}</td>
+            <td>{compact_number(entry.merge_effects)}</td>
           </tr>
         {/each}
       </tbody>
     </table>
   </div>
+</section>
+
+<section class="mt-12 max-w-5xl border-t border-line/70 pt-8">
+  <div class="rule_label">ملخص الشواهد</div>
+  <h2 class="section_title mt-4">أرقام داخلية لمتابعة اكتمال التوثيق.</h2>
+  <dl class="mt-6 grid gap-x-10 gap-y-4 sm:grid-cols-3">
+    <div>
+      <dt class="field_label">رؤوس مختلفة</dt>
+      <dd class="mt-2 text-2xl font-bold text-ink">{compact_number(summary.total_points)}</dd>
+    </div>
+    <div>
+      <dt class="field_label">مع شاهد أصلي</dt>
+      <dd class="mt-2 text-2xl font-bold text-ink">{compact_number(summary.evidence.points_with_primary_evidence)}</dd>
+    </div>
+    <div>
+      <dt class="field_label">بلا شاهد</dt>
+      <dd class="mt-2 text-2xl font-bold text-ink">{compact_number(summary.evidence.points_uncited)}</dd>
+    </div>
+  </dl>
+</section>
+
+<section class="mt-12 max-w-5xl border-t border-line/70 pt-8">
+  <div class="rule_label">مسافات داخلية</div>
+  <h2 class="section_title mt-4">تشخيص التشابه بين مذاهب العدّ.</h2>
+  <p class="section_text mt-3 text-sm">
+    هذه الجداول للمراجعين فقط. واجهة الباحث لا تحتاج إلى لغة المسافة أو المقارنة.
+  </p>
+
+  <details class="mt-6 border-b border-line/70 pb-5" open>
+    <summary class="cursor-pointer font-bold text-ink">أقرب وأبعد مذهب لكل مذهب</summary>
+    <div class="table_shell mt-5">
+      <table class="data_table">
+        <thead>
+          <tr>
+            <th>مذهب العدّ</th>
+            <th>الأقرب</th>
+            <th>الفروق</th>
+            <th>الأبعد</th>
+            <th>الفروق</th>
+          </tr>
+        </thead>
+        <tbody>
+          {#each relationship_rows as row (row.system.id)}
+            <tr>
+              <td>
+                <div class="font-bold text-ink">{get_system_name(row.system)}</div>
+                {#if current_language !== 'en' && get_system_secondary_name(row.system)}
+                  <div class="text-base text-ink-soft">{get_system_secondary_name(row.system)}</div>
+                {/if}
+              </td>
+              <td>{row.nearest_system_name}</td>
+              <td>{compact_number(row.nearest_distance)}</td>
+              <td>{row.farthest_system_name}</td>
+              <td>{compact_number(row.farthest_distance)}</td>
+            </tr>
+          {/each}
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+  <details class="mt-5 border-b border-line/70 pb-5">
+    <summary class="cursor-pointer font-bold text-ink">مصفوفة الفروق الكاملة</summary>
+    <div class="table_shell mt-5">
+      <table class="data_table">
+        <thead>
+          <tr>
+            <th>مذهب العدّ</th>
+            {#each systems as system (system.id)}
+              <th>{get_system_name(system)}</th>
+            {/each}
+          </tr>
+        </thead>
+        <tbody>
+          {#each systems as left_system (left_system.id)}
+            <tr>
+              <td>
+                <div class="font-bold text-ink">{get_system_name(left_system)}</div>
+              </td>
+              {#each systems as right_system (right_system.id)}
+                <td>{compact_number(get_distance(left_system.id, right_system.id))}</td>
+              {/each}
+            </tr>
+          {/each}
+        </tbody>
+      </table>
+    </div>
+  </details>
 </section>

@@ -45,11 +45,8 @@
 
 html {
   min-height: 100%;
-  font-size: clamp(16px, 0.92rem + 0.25vw, 19px);
-  background:
-    radial-gradient(circle at top left, oklch(0.96 0.03 145 / 0.55), transparent 28%),
-    radial-gradient(circle at top right, oklch(0.96 0.025 75 / 0.48), transparent 26%),
-    linear-gradient(180deg, oklch(0.995 0.01 95), oklch(0.982 0.012 92));
+  font-size: clamp(16px, 0.92rem + 0.2vw, 18px);
+  background: linear-gradient(180deg, oklch(0.995 0.01 95), oklch(0.982 0.012 92));
 }
 
 body {
@@ -58,18 +55,6 @@ body {
   line-height: 1.5;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(to right, transparent 0, transparent calc(100% - 1px), color-mix(in oklch, var(--line) 52%, transparent) 100%),
-    linear-gradient(to bottom, transparent 0, transparent calc(100% - 1px), color-mix(in oklch, var(--line) 48%, transparent) 100%);
-  background-size: 28px 28px;
-  opacity: 0.18;
-  mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
-}
 
 main {
   display: block;
@@ -96,39 +81,19 @@ button {
 
 .page_shell {
   position: relative;
-  max-width: 92rem;
+  max-width: 82rem;
   margin: 0 auto;
-  padding: clamp(1rem, 1vw + 0.6rem, 1.4rem);
-}
-
-.editorial_shell {
-  position: relative;
-  overflow: clip;
-  border: 1px solid color-mix(in oklch, var(--line) 80%, white 20%);
-  border-radius: 2rem;
-  background: color-mix(in oklch, var(--panel) 94%, white 6%);
-  box-shadow:
-    0 1px 0 color-mix(in oklch, var(--line) 85%, white 15%),
-    0 22px 60px -36px var(--shadow);
-}
-
-.editorial_shell::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
 }
 
 .surface {
   position: relative;
-  border: 1px solid color-mix(in oklch, var(--line) 78%, white 22%);
-  border-radius: 1.5rem;
-  background: color-mix(in oklch, var(--panel) 92%, white 8%);
-  box-shadow: 0 18px 48px -40px var(--shadow);
+  border: 1px solid color-mix(in oklch, var(--line) 82%, white 18%);
+  border-radius: 0.85rem;
+  background: color-mix(in oklch, white 70%, var(--paper-soft) 30%);
 }
 
 .surface_muted {
-  background: color-mix(in oklch, var(--paper-soft) 90%, white 10%);
+  background: color-mix(in oklch, var(--paper-soft) 76%, white 24%);
 }
 
 .rule_label {
@@ -149,19 +114,20 @@ button {
   background: linear-gradient(90deg, var(--accent-strong), transparent);
 }
 
-.display_title {
+.page_title {
+  max-width: 54rem;
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5.8vw, 6rem);
-  line-height: 0.98;
-  letter-spacing: -0.04em;
+  font-size: clamp(2rem, 2.2vw + 1rem, 3.2rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
   margin: 0;
 }
 
 .section_title {
   font-family: var(--font-display);
-  font-size: clamp(1.6rem, 2vw + 1rem, 2.75rem);
-  line-height: 1.02;
-  letter-spacing: -0.035em;
+  font-size: clamp(1.45rem, 1.4vw + 1rem, 2.35rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
   margin: 0;
 }
 
@@ -177,30 +143,11 @@ button {
   line-height: 1.5;
 }
 
-.stat_chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  padding: 0.65rem 0.9rem;
-  border-radius: 999px;
-  background: color-mix(in oklch, var(--paper-soft) 86%, white 14%);
-  border: 1px solid color-mix(in oklch, var(--line) 82%, white 18%);
-  color: var(--ink-soft);
-  font-size: 0.82rem;
-  font-weight: 700;
-}
-
-.metric_value {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 2vw + 1.2rem, 3.5rem);
-  line-height: 0.95;
-  letter-spacing: -0.05em;
-}
-
-.metric_label {
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+.field_label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-soft);
 }
@@ -209,7 +156,7 @@ button {
   position: relative;
   padding: 0.35rem 0;
   color: var(--ink-soft);
-  font-size: 0.96rem;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
@@ -236,27 +183,48 @@ button {
   color: var(--ink);
 }
 
-.mobile_nav_link {
-  display: flex;
-  min-height: 4.4rem;
-  flex-direction: column;
+.compact_nav_link,
+.language_button,
+.footer_link {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: 0.45rem;
-  border: 1px solid color-mix(in oklch, var(--line) 80%, white 20%);
-  border-radius: 1rem;
-  background: color-mix(in oklch, var(--panel) 92%, white 8%);
+  border-radius: 999px;
   color: var(--ink-soft);
-  text-align: center;
-  font-size: 0.76rem;
-  font-weight: 800;
-  line-height: 1.2;
-  padding: 0.65rem 0.5rem;
+  font-weight: 700;
 }
 
-.mobile_nav_link[data-active='true'] {
-  background: color-mix(in oklch, var(--accent-soft) 40%, white 60%);
+.compact_nav_link {
+  flex: 0 0 auto;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid color-mix(in oklch, var(--line) 78%, white 22%);
+  background: color-mix(in oklch, var(--paper-soft) 88%, white 12%);
+  font-size: 0.82rem;
+}
+
+.compact_nav_link[data-active='true'] {
   border-color: color-mix(in oklch, var(--accent) 38%, var(--line) 62%);
+  color: var(--ink);
+  background: color-mix(in oklch, var(--accent-soft) 32%, white 68%);
+}
+
+.language_button {
+  border: 0;
+  background: transparent;
+  padding: 0.35rem 0.55rem;
+  font-size: 0.8rem;
+}
+
+.language_button[data-active='true'] {
+  color: var(--ink);
+  background: color-mix(in oklch, var(--paper-soft) 82%, white 18%);
+}
+
+.footer_link {
+  padding: 0.15rem 0;
+}
+
+.footer_link:hover {
   color: var(--ink);
 }
 
@@ -265,22 +233,20 @@ button {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.85rem 1.15rem;
+  padding: 0.72rem 1rem;
   border: 1px solid color-mix(in oklch, var(--line) 82%, white 18%);
   border-radius: 999px;
   background: color-mix(in oklch, var(--panel) 84%, white 16%);
   color: var(--ink);
   font-weight: 700;
   transition:
-    transform 180ms ease,
     border-color 180ms ease,
     background 180ms ease;
 }
 
 .pill_button:hover {
-  transform: translateY(-1px);
   border-color: color-mix(in oklch, var(--accent) 45%, var(--line) 55%);
-  background: color-mix(in oklch, var(--accent-soft) 28%, white 72%);
+  background: color-mix(in oklch, var(--accent-soft) 24%, white 76%);
 }
 
 .pill_button[data-tone='accent'] {
@@ -288,18 +254,6 @@ button {
   border-color: color-mix(in oklch, var(--accent) 38%, var(--line) 62%);
 }
 
-.plot_shell {
-  overflow: hidden;
-  border-radius: 1.35rem;
-  border: 1px solid color-mix(in oklch, var(--line) 78%, white 22%);
-  background: linear-gradient(180deg, color-mix(in oklch, white 88%, var(--paper-soft) 12%), color-mix(in oklch, var(--paper-soft) 88%, white 12%));
-}
-
-.plot_shell svg {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 
 .field,
 .select,
@@ -313,23 +267,23 @@ button {
 }
 
 .table_shell {
-  overflow: auto;
-  border-radius: 1.5rem;
-  border: 1px solid color-mix(in oklch, var(--line) 78%, white 22%);
-  background: color-mix(in oklch, var(--panel) 92%, white 8%);
+  overflow-x: auto;
+  border-radius: 0.85rem;
+  border: 1px solid color-mix(in oklch, var(--line) 82%, white 18%);
+  background: color-mix(in oklch, white 78%, var(--paper-soft) 22%);
 }
 
 .data_table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 58rem;
+  min-width: 48rem;
 }
 
 .data_table th,
 .data_table td {
-  padding: 0.95rem 1rem;
+  padding: 0.75rem 0.9rem;
   vertical-align: top;
-  border-bottom: 1px solid color-mix(in oklch, var(--line) 65%, white 35%);
+  border-bottom: 1px solid color-mix(in oklch, var(--line) 70%, white 30%);
 }
 
 .data_table th {
@@ -345,53 +299,8 @@ button {
   color: var(--ink-soft);
 }
 
-.data_table tbody tr {
-  cursor: pointer;
-  transition: background 140ms ease;
-}
-
-.data_table tbody tr:hover,
 .data_table tbody tr[data-active='true'] {
   background: color-mix(in oklch, var(--accent-soft) 24%, white 76%);
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.28rem 0.6rem;
-  border-radius: 999px;
-  background: color-mix(in oklch, var(--paper-soft) 84%, white 16%);
-  font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.badge[data-tone='ok'] {
-  background: color-mix(in oklch, var(--ok) 12%, white 88%);
-  color: color-mix(in oklch, var(--ok) 72%, black 28%);
-}
-
-.badge[data-tone='warn'] {
-  background: color-mix(in oklch, var(--warn) 24%, white 76%);
-  color: color-mix(in oklch, var(--warn) 92%, black 40%);
-}
-
-.badge[data-tone='alert'] {
-  background: color-mix(in oklch, var(--alert) 15%, white 85%);
-  color: color-mix(in oklch, var(--alert) 74%, black 26%);
-}
-
-.badge[data-tone='accent'] {
-  background: color-mix(in oklch, var(--accent-soft) 48%, white 52%);
-  color: var(--accent-strong);
-}
-
-.madhhab_grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-  gap: 1rem;
 }
 
 .split_layout {
@@ -399,50 +308,6 @@ button {
   gap: 1.25rem;
 }
 
-.surah_pager_grid {
-  display: grid;
-  gap: 1rem;
-}
-
-.surah_pager_card {
-  display: block;
-  min-height: 100%;
-  padding: 1rem 1.1rem;
-  border-radius: 1.4rem;
-  border: 1px solid color-mix(in oklch, var(--line) 78%, white 22%);
-  background: color-mix(in oklch, var(--panel) 92%, white 8%);
-  box-shadow: 0 18px 48px -40px var(--shadow);
-  transition:
-    transform 180ms ease,
-    border-color 180ms ease,
-    background 180ms ease;
-}
-
-a.surah_pager_card:hover {
-  transform: translateY(-1px);
-  border-color: color-mix(in oklch, var(--accent) 36%, var(--line) 64%);
-  background: color-mix(in oklch, var(--accent-soft) 20%, white 80%);
-}
-
-.surah_pager_card[data-disabled='true'] {
-  opacity: 0.7;
-}
-
-.surah_pager_status {
-  text-align: center;
-  background: color-mix(in oklch, var(--paper-soft) 82%, white 18%);
-}
-
-.surah_pager_grid > :last-child {
-  text-align: right;
-}
-
-@media (min-width: 72rem) {
-  .surah_pager_grid {
-    grid-template-columns: minmax(0, 1fr) minmax(17rem, 0.9fr) minmax(0, 1fr);
-    align-items: stretch;
-  }
-}
 
 
 @media (min-width: 68rem) {
@@ -452,137 +317,16 @@ a.surah_pager_card:hover {
 }
 
 @media (max-width: 52rem) {
-  .display_title {
-    font-size: clamp(2.1rem, 8vw, 3.4rem);
+  .page_title {
+    font-size: clamp(1.9rem, 7vw, 2.6rem);
   }
 
   .section_title {
-    font-size: clamp(1.45rem, 6vw, 2.1rem);
-  }
-
-  .data_table {
-    min-width: 0;
-  }
-
-  .table_shell {
-    overflow: visible;
-    border: 0;
-    background: transparent;
-  }
-
-  .data_table thead {
-    display: none;
-  }
-
-  .data_table,
-  .data_table tbody,
-  .data_table tr,
-  .data_table td {
-    display: block;
-    width: 100%;
-  }
-
-  .data_table tbody {
-    display: grid;
-    gap: 0.9rem;
-  }
-
-  .data_table tbody tr {
-    border: 1px solid color-mix(in oklch, var(--line) 78%, white 22%);
-    border-radius: 1.25rem;
-    background: color-mix(in oklch, var(--panel) 92%, white 8%);
-    box-shadow: 0 18px 48px -40px var(--shadow);
-  }
-
-  .data_table td {
-    padding: 0.8rem 1rem;
-  }
-
-  .data_table td::before {
-    content: attr(data-label);
-    display: block;
-    margin-bottom: 0.35rem;
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-  }
-
-  .data_table td:last-child {
-    border-bottom: 0;
+    font-size: clamp(1.35rem, 6vw, 2rem);
   }
 }
 
 
-
-.arabic_doc {
-  direction: rtl;
-}
-
-.arabic_doc .display_title,
-.arabic_doc .section_title {
-  font-family: var(--font-arabic);
-  line-height: 1.35;
-  letter-spacing: 0;
-}
-
-.arabic_doc .section_text,
-.arabic_doc .doc_list {
-  max-width: none;
-  font-family: var(--font-arabic);
-}
-
-.arabic_doc .doc_list {
-  padding-right: 1.2rem;
-  padding-left: 0;
-}
-
-.arabic_kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  font-family: var(--font-arabic);
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: var(--ink-soft);
-}
-
-.arabic_kicker::after {
-  content: '';
-  width: 3.1rem;
-  height: 1px;
-  background: linear-gradient(270deg, var(--accent-strong), transparent);
-}
-
-.arabic_stat_label {
-  font-family: var(--font-arabic);
-  font-size: 0.92rem;
-  font-weight: 700;
-  color: var(--ink-soft);
-}
-
-.arabic_metric_value {
-  font-family: var(--font-arabic);
-  font-size: clamp(2rem, 2vw + 1.2rem, 3.1rem);
-  font-weight: 700;
-  line-height: 1.1;
-}
-
-.doc_grid {
-  display: grid;
-  gap: 1rem;
-}
-
-@media (min-width: 48rem) {
-  .doc_grid[data-columns='2'] {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .doc_grid[data-columns='3'] {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
 
 .doc_flow {
   display: grid;
@@ -717,9 +461,9 @@ a.surah_pager_card:hover {
 
 
 .mushaf_pair_summary {
-  border-radius: 1.2rem;
-  border: 1px solid color-mix(in oklch, var(--line) 76%, white 24%);
-  background: color-mix(in oklch, var(--paper-soft) 82%, white 18%);
+  border-radius: 0.85rem;
+  border: 1px solid color-mix(in oklch, var(--line) 80%, white 20%);
+  background: color-mix(in oklch, var(--paper-soft) 72%, white 28%);
   padding: 1rem 1.05rem;
 }
 
@@ -785,9 +529,9 @@ a.surah_pager_card:hover {
 
 
 .mushaf_viewer_shell {
-  border-radius: 1.5rem;
-  border: 1px solid color-mix(in oklch, var(--line) 76%, white 24%);
-  background: linear-gradient(180deg, color-mix(in oklch, white 92%, var(--paper-soft) 8%), color-mix(in oklch, var(--paper-soft) 88%, white 12%));
+  border-radius: 0.85rem;
+  border: 1px solid color-mix(in oklch, var(--line) 80%, white 20%);
+  background: color-mix(in oklch, white 82%, var(--paper-soft) 18%);
   padding: 1rem;
 }
 
