@@ -7,14 +7,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/components/charts/PlotTotals.svelte
-msgid "آيات"
-msgstr "آيات"
-
-#: src/components/charts/PlotTotals.svelte
-msgid "آية"
-msgstr "آية"
-
 #: src/components/SurahMushafViewer.svelte
 msgid "آية واحدة مخفية"
 msgstr "آية واحدة مخفية"
@@ -24,7 +16,6 @@ msgid "أصلي"
 msgstr "أصلي"
 
 #: src/routes/Mushaf.svelte
-#: src/routes/Surahs.svelte
 msgid "أظهر جميع السور"
 msgstr "أظهر جميع السور"
 
@@ -47,8 +38,6 @@ msgid "اضبط العارض لإظهاره"
 msgstr "اضبط العارض لإظهاره"
 
 #: src/routes/Madhhab.svelte
-#: src/routes/Surahs.svelte
-#: src/routes/System.svelte
 msgid "افتح السورة"
 msgstr "افتح السورة"
 
@@ -63,13 +52,8 @@ msgstr "الآيات المعروضة"
 #: src/routes/Explorer.svelte
 #: src/routes/Explorer.svelte
 #: src/routes/Home.svelte
-#: src/routes/Surahs.svelte
 msgid "البحث"
 msgstr "البحث"
-
-#: src/routes/Surahs.svelte
-msgid "الترتيب"
-msgstr "الترتيب"
 
 #: src/routes/Surah.svelte
 msgid "التنقل بين السور"
@@ -79,12 +63,10 @@ msgstr "التنقل بين السور"
 msgid "الرسم"
 msgstr "الرسم"
 
-#: src/components/charts/PlotSurahHeatmap.svelte
 #: src/routes/AyahCounts.svelte
 #: src/routes/Explorer.svelte
 #: src/routes/Madhhab.svelte
 #: src/routes/Mushaf.svelte
-#: src/routes/System.svelte
 msgid "السورة"
 msgstr "السورة"
 
@@ -156,17 +138,12 @@ msgid "غير محسوم"
 msgstr "غير محسوم"
 
 #: src/lib/format.js
-#: src/routes/System.svelte
 msgid "غير موثق"
 msgstr "غير موثق"
 
 #: src/lib/format.js
 msgid "فاصل داخلي"
 msgstr "فاصل داخلي"
-
-#: src/routes/Surahs.svelte
-msgid "فهرس السور"
-msgstr "فهرس السور"
 
 #: src/routes/Developer.svelte
 msgid "قواعد عملية"
@@ -187,13 +164,8 @@ msgid "لا توجد ملاحظة إثبات"
 msgstr "لا توجد ملاحظة إثبات"
 
 #: src/routes/Explorer.svelte
-#: src/routes/Surahs.svelte
 msgid "لا نتائج"
 msgstr "لا نتائج"
-
-#: src/components/charts/SystemReviewWorkload.svelte
-msgid "لا يوجد عبء مراجعة معروض حاليًا."
-msgstr "لا يوجد عبء مراجعة معروض حاليًا."
 
 #: src/lib/format.js
 msgid "مباشر"
@@ -203,11 +175,8 @@ msgstr "مباشر"
 msgid "مثل الكوفي"
 msgstr "مثل الكوفي"
 
-#: src/components/MadhhabCard.svelte
-#: src/components/charts/PlotTotals.svelte
 #: src/routes/AyahCounts.svelte
 #: src/routes/Home.svelte
-#: src/routes/System.svelte
 msgid "مجموع الآيات"
 msgstr "مجموع الآيات"
 
@@ -224,10 +193,6 @@ msgstr "محسوم إلى الرواية الأصلية"
 msgid "مختلف فيه"
 msgstr "مختلف فيه"
 
-#: src/components/charts/PlotFrame.svelte
-msgid "مخطط"
-msgstr "مخطط"
-
 #: src/components/SurahMushafViewer.svelte
 msgid "مد١"
 msgstr "مد١"
@@ -243,14 +208,6 @@ msgstr "مستفاد"
 #: src/components/SurahMushafViewer.svelte
 msgid "مك"
 msgstr "مك"
-
-#: src/components/charts/PlotSurahHeatmap.svelte
-msgid "مواضع مختلفة"
-msgstr "مواضع مختلفة"
-
-#: src/components/charts/PlotSurahHeatmap.svelte
-msgid "موضع مختلف"
-msgstr "موضع مختلف"
 
 #: src/lib/format.js
 msgid "نهاية"
@@ -318,30 +275,6 @@ msgstr "بيانات عارض المصحف غير متاحة بعد."
 msgid "تعذر تحميل بيانات عارض المصحف."
 msgstr "تعذر تحميل بيانات عارض المصحف."
 
-#: src/routes/Surahs.svelte
-msgid "ابحث عن اسم السورة أو رقمها"
-msgstr "ابحث عن اسم السورة أو رقمها"
-
-#: src/routes/Surahs.svelte
-msgid "ترتيب المصحف"
-msgstr "ترتيب المصحف"
-
-#: src/routes/Surahs.svelte
-msgid "ذات الخلاف فقط"
-msgstr "ذات الخلاف فقط"
-
-#: src/routes/Surahs.svelte
-msgid "أعد الضبط"
-msgstr "أعد الضبط"
-
-#: src/routes/Surahs.svelte
-msgid "لا توجد سورة تطابق هذه المرشحات."
-msgstr "لا توجد سورة تطابق هذه المرشحات."
-
-#: src/routes/Surahs.svelte
-msgid "جرّب اسمًا آخر أو أعد الضبط."
-msgstr "جرّب اسمًا آخر أو أعد الضبط."
-
 #: src/routes/Developer.svelte
 msgid "تشغيل محلي"
 msgstr "تشغيل محلي"
@@ -351,25 +284,12 @@ msgid "مذاهب العدّ"
 msgstr "مذاهب العدّ"
 
 #: src/components/SurahMushafViewer.svelte
-#: src/components/charts/PlotSystemDistanceMatrix.svelte
 msgid "رأس آية مختلف فيه"
 msgstr "رأس آية مختلف فيه"
 
 #: src/routes/Docs.svelte
 msgid "ابدأ من هنا"
 msgstr "ابدأ من هنا"
-
-#: src/components/MadhhabCard.svelte
-msgid "افتح ملف مذهب العدّ"
-msgstr "افتح ملف مذهب العدّ"
-
-#: src/components/MadhhabCard.svelte
-msgid "مذهب عدّ"
-msgstr "مذهب عدّ"
-
-#: src/components/MadhhabCard.svelte
-msgid "القراءات المرتبطة"
-msgstr "القراءات المرتبطة"
 
 #: src/routes/NotFound.svelte
 msgid "العودة إلى الرئيسية"
@@ -417,61 +337,13 @@ msgstr "تشخيص المطور"
 msgid "مذهب العدّ"
 msgstr "مذهب العدّ"
 
-#. 0: compact_number(summary.evidence.points_with_primary_evidence)
-#: src/routes/Compare.svelte
-msgid "{0} مع شاهد أصلي"
-msgstr "{0} مع شاهد أصلي"
-
-#: src/routes/Compare.svelte
-msgid "تغطية التوثيق"
-msgstr "تغطية التوثيق"
-
-#: src/routes/Compare.svelte
-msgid "أين تتراكم الشواهد"
-msgstr "أين تتراكم الشواهد"
-
-#: src/routes/Compare.svelte
-msgid "تحجيم حملة المراجعة"
-msgstr "تحجيم حملة المراجعة"
-
-#: src/routes/Compare.svelte
-msgid "من أين يبدأ المرور الكامل"
-msgstr "من أين يبدأ المرور الكامل"
-
-#: src/routes/Compare.svelte
-msgid "أقرب الجيران وأبعدهم"
-msgstr "أقرب الجيران وأبعدهم"
-
-#: src/routes/Compare.svelte
-msgid "أسرع لمحة للتشابه"
-msgstr "أسرع لمحة للتشابه"
-
-#: src/routes/Compare.svelte
-#: src/routes/Compare.svelte
 #: src/routes/DeveloperDiagnostics.svelte
-#: src/routes/System.svelte
 msgid "الأقرب"
 msgstr "الأقرب"
 
-#: src/routes/Compare.svelte
-#: src/routes/Compare.svelte
-msgid "المسافة"
-msgstr "المسافة"
-
-#: src/routes/Compare.svelte
-#: src/routes/Compare.svelte
 #: src/routes/DeveloperDiagnostics.svelte
-#: src/routes/System.svelte
 msgid "الأبعد"
 msgstr "الأبعد"
-
-#: src/routes/Compare.svelte
-msgid "المسافة الأقرب"
-msgstr "المسافة الأقرب"
-
-#: src/routes/Compare.svelte
-msgid "المسافة الأبعد"
-msgstr "المسافة الأبعد"
 
 #: src/routes/Doc.svelte
 msgid "العودة إلى صفحة المطور"
@@ -508,19 +380,8 @@ msgstr "رأس الآية"
 
 #: src/routes/Mushaf.svelte
 #: src/routes/Surah.svelte
-#: src/routes/Surahs.svelte
 msgid "المصحف"
 msgstr "المصحف"
-
-#. 0: compact_number(surah.disputed_points)
-#: src/routes/Surahs.svelte
-msgid "{0} رأس آية"
-msgstr "{0} رأس آية"
-
-#. 0: compact_number(114)
-#: src/routes/Surahs.svelte
-msgid "{0} سورة"
-msgstr "{0} سورة"
 
 #: src/routes/Project.svelte
 msgid "راجع أعداد الآي"
@@ -545,52 +406,6 @@ msgstr "المسألة"
 #: src/routes/Project.svelte
 msgid "صفحة المطور"
 msgstr "صفحة المطور"
-
-#: src/routes/Surahs.svelte
-msgid "اختر سورة وافتح المصحف والتفصيل"
-msgstr "اختر سورة وافتح المصحف والتفصيل"
-
-#: src/routes/Surahs.svelte
-msgid "كل بطاقة تعرض اسم السورة ونطاق عدد آياتها في مذاهب العدّ الستة، ثم تفتح صفحة السورة للقراءة في السياق."
-msgstr "كل بطاقة تعرض اسم السورة ونطاق عدد آياتها في مذاهب العدّ الستة، ثم تفتح صفحة السورة للقراءة في السياق."
-
-#. 0: compact_number(visible_surahs.length)
-#: src/routes/Surahs.svelte
-msgid "{0} سورة ظاهرة"
-msgstr "{0} سورة ظاهرة"
-
-#. 0: compact_number(disputed_surah_count)
-#: src/routes/Surahs.svelte
-msgid "{0} فيها رؤوس آي مختلف فيها"
-msgstr "{0} فيها رؤوس آي مختلف فيها"
-
-#. 0: compact_number(summary.total_points)
-#: src/routes/Surahs.svelte
-msgid "{0} مجموع رؤوس الآي المختلف فيها"
-msgstr "{0} مجموع رؤوس الآي المختلف فيها"
-
-#: src/routes/Surahs.svelte
-msgid "جدول أعداد الآي"
-msgstr "جدول أعداد الآي"
-
-#: src/routes/Surahs.svelte
-msgid "الأكثر رؤوسًا مختلفًا فيها"
-msgstr "الأكثر رؤوسًا مختلفًا فيها"
-
-#. 0: compact_number(minCount)
-#: src/routes/Surahs.svelte
-msgid "{0} آية في مذاهب العدّ الستة"
-msgstr "{0} آية في مذاهب العدّ الستة"
-
-#. 0: compact_number(minCount); 1: compact_number(maxCount)
-#: src/routes/Surahs.svelte
-msgid "{0}–{1} آية بحسب مذهب العدّ"
-msgstr "{0}–{1} آية بحسب مذهب العدّ"
-
-#. 0: get_system_name(system_info)
-#: src/routes/System.svelte
-msgid "أوضح السور في {0}"
-msgstr "أوضح السور في {0}"
 
 #. 0: get_system_name(system_info)
 #: src/routes/Madhhab.svelte
@@ -737,22 +552,6 @@ msgstr "لا يظهر بهذا الترشيح أي رأس آية مختلف في
 msgid "بلا رقم"
 msgstr "بلا رقم"
 
-#: src/components/charts/PlotSystemDistanceMatrix.svelte
-msgid "رؤوس آي مختلفة"
-msgstr "رؤوس آي مختلفة"
-
-#: src/components/charts/PlotSystemDistanceMatrix.svelte
-msgid "مصفوفة التباين بين مذاهب العد"
-msgstr "مصفوفة التباين بين مذاهب العد"
-
-#: src/components/charts/PlotSystemVerificationBars.svelte
-msgid "الرؤوس المختلف فيها التي يعدها مذهب العدّ"
-msgstr "الرؤوس المختلف فيها التي يعدها مذهب العدّ"
-
-#: src/components/charts/PlotSystemVerificationBars.svelte
-msgid "تشخيص الشواهد في الرؤوس المختلف فيها التي يعدها كل مذهب"
-msgstr "تشخيص الشواهد في الرؤوس المختلف فيها التي يعدها كل مذهب"
-
 #: src/lib/format.js
 msgid "يعدّه رأس آية"
 msgstr "يعدّه رأس آية"
@@ -771,282 +570,9 @@ msgstr "سورة {0}"
 msgid "الآية {0}"
 msgstr "الآية {0}"
 
-#: src/components/SystemCard.svelte
-msgid "رؤوس مختلف فيها"
-msgstr "رؤوس مختلف فيها"
-
-#: src/components/SystemCard.svelte
-msgid "آثار التفريق"
-msgstr "آثار التفريق"
-
-#: src/components/SystemCard.svelte
-msgid "افتح ملف النظام"
-msgstr "افتح ملف النظام"
-
-#: src/routes/Compare.svelte
-msgid "المقارنة وتخطيط المراجعة"
-msgstr "المقارنة وتخطيط المراجعة"
-
-#: src/routes/Compare.svelte
-msgid "قارن بين الأنظمة، وقدِّر الباقي، واختر المسار التالي."
-msgstr "قارن بين الأنظمة، وقدِّر الباقي، واختر المسار التالي."
-
-#: src/routes/Compare.svelte
-msgid "هنا ترى الأقرب، وتراكم الشواهد، وأولوية المراجعة."
-msgstr "هنا ترى الأقرب، وتراكم الشواهد، وأولوية المراجعة."
-
-#. 0: compact_number(summary.total_points)
-#: src/routes/Compare.svelte
-msgid "{0} موضع مختلف فيه"
-msgstr "{0} موضع مختلف فيه"
-
-#. 0: compact_number(summary.evidence.points_uncited)
-#: src/routes/Compare.svelte
-msgid "{0} ما يزال غير موثق"
-msgstr "{0} ما يزال غير موثق"
-
-#: src/routes/Compare.svelte
-msgid "المؤشر الحالي"
-msgstr "المؤشر الحالي"
-
-#: src/routes/Compare.svelte
-msgid "المصفوفة للمسافات، ومخطط العمل لأولويات المراجعة."
-msgstr "المصفوفة للمسافات، ومخطط العمل لأولويات المراجعة."
-
-#: src/routes/Compare.svelte
-msgid "افحص المواضع الموثقة <0/>"
-msgstr "افحص المواضع الموثقة <0/>"
-
-#: src/routes/Compare.svelte
-msgid "مسافة الأنظمة"
-msgstr "مسافة الأنظمة"
-
-#: src/routes/Compare.svelte
-msgid "كم يفصل بين الأنظمة من مواضع مختلفة"
-msgstr "كم يفصل بين الأنظمة من مواضع مختلفة"
-
-#: src/routes/Compare.svelte
-msgid "كل خلية = عدد المواضع المختلفة بين النظامين."
-msgstr "كل خلية = عدد المواضع المختلفة بين النظامين."
-
-#: src/routes/Compare.svelte
-msgid "يعرض فقط ما يعده كل نظام، لذلك يقيس عبء المراجعة الحقيقي."
-msgstr "يعرض فقط ما يعده كل نظام، لذلك يقيس عبء المراجعة الحقيقي."
-
-#: src/routes/Compare.svelte
-msgid "يرتب الأنظمة بحسب الرؤوس المعدودة غير الموثقة."
-msgstr "يرتب الأنظمة بحسب الرؤوس المعدودة غير الموثقة."
-
-#. 0: compact_number(entry.uncited_points)
-#: src/routes/Compare.svelte
-msgid "{0} رأسًا معدودًا غير موثق"
-msgstr "{0} رأسًا معدودًا غير موثق"
-
-#: src/routes/Compare.svelte
-#: src/routes/Compare.svelte
-msgid "النظام"
-msgstr "النظام"
-
-#: src/routes/System.svelte
-msgid "النظام غير موجود"
-msgstr "النظام غير موجود"
-
-#. 0: system
-#: src/routes/System.svelte
-msgid "لا يوجد نظام عد يطابق “{0}”."
-msgstr "لا يوجد نظام عد يطابق “{0}”."
-
-#: src/routes/System.svelte
-msgid "ملف النظام"
-msgstr "ملف النظام"
-
-#: src/routes/System.svelte
-msgid "هذا حضور النظام داخل طبقة الخلاف في الأطلس."
-msgstr "هذا حضور النظام داخل طبقة الخلاف في الأطلس."
-
-#: src/routes/System.svelte
-msgid "سياسة المجموع الكلي"
-msgstr "سياسة المجموع الكلي"
-
-#: src/routes/System.svelte
-msgid "لا توجد ملاحظة محفوظة بعد عن سياسة المجموع الكلي لهذا النظام."
-msgstr "لا توجد ملاحظة محفوظة بعد عن سياسة المجموع الكلي لهذا النظام."
-
-#: src/routes/System.svelte
-msgid "المجموع النهائي في هذا النظام."
-msgstr "المجموع النهائي في هذا النظام."
-
-#: src/routes/System.svelte
-msgid "عن الكوفي"
-msgstr "عن الكوفي"
-
-#: src/routes/System.svelte
-msgid "الفارق عن الكوفي."
-msgstr "الفارق عن الكوفي."
-
 #: src/routes/DeveloperDiagnostics.svelte
-#: src/routes/System.svelte
 msgid "الرؤوس المعدودة"
 msgstr "الرؤوس المعدودة"
-
-#: src/routes/System.svelte
-msgid "المواضع المختلف فيها التي يعدها هذا النظام."
-msgstr "المواضع المختلف فيها التي يعدها هذا النظام."
-
-#: src/routes/System.svelte
-msgid "الرؤوس المعدودة الموثقة"
-msgstr "الرؤوس المعدودة الموثقة"
-
-#: src/routes/System.svelte
-msgid "المواضع المعدودة التي لها شواهد."
-msgstr "المواضع المعدودة التي لها شواهد."
-
-#: src/routes/System.svelte
-msgid "آثار الدمج"
-msgstr "آثار الدمج"
-
-#: src/routes/System.svelte
-msgid "إسقاطات تغيّر ما بعدها."
-msgstr "إسقاطات تغيّر ما بعدها."
-
-#: src/routes/System.svelte
-msgid "هيئة التوثيق"
-msgstr "هيئة التوثيق"
-
-#: src/routes/System.svelte
-msgid "ما الذي له شواهد هنا"
-msgstr "ما الذي له شواهد هنا"
-
-#. 0: get_system_name(system_info)
-#: src/routes/System.svelte
-msgid "داخل المواضع المختلف فيها التي يعدها {0} فقط."
-msgstr "داخل المواضع المختلف فيها التي يعدها {0} فقط."
-
-#: src/routes/System.svelte
-msgid "موثق"
-msgstr "موثق"
-
-#: src/routes/System.svelte
-msgid "له شاهد"
-msgstr "له شاهد"
-
-#: src/routes/System.svelte
-msgid "ينتظر الشواهد"
-msgstr "ينتظر الشواهد"
-
-#. 0: compact_number(verification?.points_with_primary_evidence || 0)
-#: src/routes/System.svelte
-msgid "أصلي {0}"
-msgstr "أصلي {0}"
-
-#. 0: compact_number(verification?.points_reviewed || 0)
-#: src/routes/System.svelte
-msgid "مراجع {0}"
-msgstr "مراجع {0}"
-
-#: src/routes/System.svelte
-msgid "الجوار"
-msgstr "الجوار"
-
-#: src/routes/System.svelte
-msgid "الأقرب والأبعد"
-msgstr "الأقرب والأبعد"
-
-#: src/routes/System.svelte
-msgid "المسافة هنا هي عدد المواضع التي يختلف فيها النظامان."
-msgstr "المسافة هنا هي عدد المواضع التي يختلف فيها النظامان."
-
-#. 0: compact_number(relationship?.nearest?.differing_points ?? 0)
-#. 0: compact_number(relationship?.farthest?.differing_points ?? 0)
-#: src/routes/System.svelte
-#: src/routes/System.svelte
-msgid "{0} موضعًا مختلفًا"
-msgstr "{0} موضعًا مختلفًا"
-
-#: src/routes/System.svelte
-msgid "افتح المقارنة <0/>"
-msgstr "افتح المقارنة <0/>"
-
-#: src/routes/System.svelte
-msgid "الانجراف داخل السورة"
-msgstr "الانجراف داخل السورة"
-
-#: src/routes/System.svelte
-msgid "مسار الفرق في السورة"
-msgstr "مسار الفرق في السورة"
-
-#: src/routes/System.svelte
-msgid "يصعد +1 عند فصل داخلي ويهبط −1 عند إسقاط رأس كوفي."
-msgstr "يصعد +1 عند فصل داخلي ويهبط −1 عند إسقاط رأس كوفي."
-
-#: src/routes/System.svelte
-msgid "البصمة التفاعلية"
-msgstr "البصمة التفاعلية"
-
-#: src/routes/System.svelte
-msgid "أوضح السور بحسب مواضعه"
-msgstr "أوضح السور بحسب مواضعه"
-
-#: src/routes/System.svelte
-msgid "قراءة سريعة للسور التي يظهر فيها أثر النظام بأوضح صورة."
-msgstr "قراءة سريعة للسور التي يظهر فيها أثر النظام بأوضح صورة."
-
-#: src/routes/System.svelte
-msgid "بؤر السور"
-msgstr "بؤر السور"
-
-#. 0: compact_number(surah.counted_points)
-#: src/routes/System.svelte
-msgid "يعد {0}"
-msgstr "يعد {0}"
-
-#: src/components/charts/PlotSurahBoundaryMap.svelte
-#: src/components/charts/PlotSurahDrift.svelte
-msgid "موضع الخلاف في ترتيب القراءة"
-msgstr "موضع الخلاف في ترتيب القراءة"
-
-#: src/components/charts/PlotSurahBoundaryMap.svelte
-msgid "مصفوفة المواضع في السورة المختارة"
-msgstr "مصفوفة المواضع في السورة المختارة"
-
-#. 0: point.slot_label
-#: src/components/charts/PlotSurahDrift.svelte
-msgid "الموضع {0}"
-msgstr "الموضع {0}"
-
-#. 0: compact_number(point.step)
-#: src/components/charts/PlotSurahDrift.svelte
-msgid "الخطوة {0}"
-msgstr "الخطوة {0}"
-
-#: src/components/charts/PlotSurahDrift.svelte
-msgid "البداية"
-msgstr "البداية"
-
-#. 0: value
-#: src/components/charts/PlotSurahDrift.svelte
-msgid "التراكم {0}"
-msgstr "التراكم {0}"
-
-#: src/components/charts/PlotSurahDrift.svelte
-msgid "التغير التراكمي عن الكوفي"
-msgstr "التغير التراكمي عن الكوفي"
-
-#: src/components/charts/PlotSurahDrift.svelte
-msgid "انجراف الترقيم التراكمي داخل السورة المختارة"
-msgstr "انجراف الترقيم التراكمي داخل السورة المختارة"
-
-#: src/components/charts/PlotSurahHeatmap.svelte
-msgid "خريطة حرارية لمواضع الخلاف حسب السورة والنوع"
-msgstr "خريطة حرارية لمواضع الخلاف حسب السورة والنوع"
-
-#: src/components/charts/PlotTotals.svelte
-msgid "مجموع الآيات حسب نظام العد"
-msgstr "مجموع الآيات حسب نظام العد"
-
-#: src/components/charts/SystemFingerprint.svelte
-msgid "لا توجد فروق على مستوى السور لهذا النظام."
-msgstr "لا توجد فروق على مستوى السور لهذا النظام."
 
 #: src/routes/Mushaf.svelte
 msgid "جرّب اسمًا آخر أو رقم سورة."
