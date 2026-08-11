@@ -88,10 +88,10 @@
       }
     },
     "evidence": {
-      "total_items": 283,
-      "total_primary_items": 61,
+      "total_items": 284,
+      "total_primary_items": 62,
       "points_with_evidence": 118,
-      "points_with_primary_evidence": 60,
+      "points_with_primary_evidence": 61,
       "points_reviewed": 0,
       "points_uncited": 128
     },
@@ -159,7 +159,7 @@
       "uncited_points": 60,
       "cited_points": 52,
       "points_with_evidence": 52,
-      "points_with_primary_evidence": 27,
+      "points_with_primary_evidence": 28,
       "points_reviewed": 0,
       "nearest_system_id": "makki",
       "nearest_system_distance": 47,
@@ -187,7 +187,7 @@
       "uncited_points": 64,
       "cited_points": 53,
       "points_with_evidence": 53,
-      "points_with_primary_evidence": 27,
+      "points_with_primary_evidence": 28,
       "points_reviewed": 0,
       "nearest_system_id": "madani-first",
       "nearest_system_distance": 40,
@@ -244,7 +244,7 @@
       "uncited_points": 58,
       "cited_points": 66,
       "points_with_evidence": 66,
-      "points_with_primary_evidence": 32,
+      "points_with_primary_evidence": 33,
       "points_reviewed": 0,
       "nearest_system_id": "basri",
       "nearest_system_distance": 84,
@@ -11502,7 +11502,7 @@
         "unresolved": 0
       },
       "points_with_evidence": 52,
-      "points_with_primary_evidence": 27,
+      "points_with_primary_evidence": 28,
       "points_reviewed": 0,
       "uncited_points": 60,
       "cited_points": 52
@@ -11518,7 +11518,7 @@
         "unresolved": 0
       },
       "points_with_evidence": 53,
-      "points_with_primary_evidence": 27,
+      "points_with_primary_evidence": 28,
       "points_reviewed": 0,
       "uncited_points": 64,
       "cited_points": 53
@@ -11550,7 +11550,7 @@
         "unresolved": 0
       },
       "points_with_evidence": 66,
-      "points_with_primary_evidence": 32,
+      "points_with_primary_evidence": 33,
       "points_reviewed": 0,
       "uncited_points": 58,
       "cited_points": 66
@@ -29685,8 +29685,8 @@
         "kufi"
       ],
       "verification_status": "disputed",
-      "evidence_count": 2,
-      "primary_evidence_count": 0,
+      "evidence_count": 3,
+      "primary_evidence_count": 1,
       "reviewer_count": 0,
       "supported_systems": [
         "madani-last",
@@ -29721,6 +29721,18 @@
       },
       "note": "شرح نفائس البيان يثبت هذا الموضع للمكي والدمشقي وشيبة، وهو ما يوافق طبقة المدني الأخير في المشروع، بينما ملف البيان المورّد يشفّر هذا الموضع مع ملاحظة انقسام داخلي في النقل المدني هنا. يحتاج تحويل هذا النقل إلى إحدى طبقتي المدني في المشروع إلى مراجعة أولية أدق.",
       "evidence": [
+        {
+          "tier": "primary",
+          "work": "البيان في عدّ آي القرآن",
+          "locator": "ص 143",
+          "supports": [
+            "makki",
+            "dimashqi"
+          ],
+          "strength": "direct",
+          "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+          "note": "مدخل السورة: (﴿مما تحبون﴾) الأول لم يعدها الكوفي والبصري وأبو جعفر القارى وعدها الباقون وشيبة بن نصاح"
+        },
         {
           "tier": "commentary",
           "work": "نفائس البيان — شرح الفرائد الحسان",
@@ -46497,7 +46509,7 @@
             "dimashqi"
           ],
           "evidence_verification_status": "disputed",
-          "has_primary_evidence_entry": false,
+          "has_primary_evidence_entry": true,
           "file": "al_bayan_batch3_surah_003_al_imran.json",
           "locator": "ص 143",
           "match_status": "counted_by_mismatch",
