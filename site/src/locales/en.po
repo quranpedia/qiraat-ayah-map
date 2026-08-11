@@ -24,11 +24,9 @@ msgid "أصلي"
 msgstr "Primary"
 
 #: src/routes/Mushaf.svelte
+#: src/routes/Surahs.svelte
 msgid "أظهر جميع السور"
 msgstr "Show all surahs"
-
-#~ msgid "أعد ضبط المستكشف"
-#~ msgstr "Reset the explorer"
 
 #: src/routes/AyahCounts.svelte
 #: src/routes/Madhhab.svelte
@@ -38,9 +36,6 @@ msgstr "Surah counts"
 #: src/components/SurahMushafViewer.svelte
 msgid "إملائي"
 msgstr "Plain script"
-
-#~ msgid "احتفظ بمحور ترقيم داخلي واحد. وفي هذه البيانات ذلك المحور هو الكوفي/حفص."
-#~ msgstr "Keep one internal numbering axis. In these data, that axis is Kufi/Hafs."
 
 #: src/routes/Developer.svelte
 #: src/routes/DeveloperDiagnostics.svelte
@@ -52,15 +47,10 @@ msgid "اضبط العارض لإظهاره"
 msgstr "اضبط العارض لإظهاره"
 
 #: src/routes/Madhhab.svelte
+#: src/routes/Surahs.svelte
+#: src/routes/System.svelte
 msgid "افتح السورة"
 msgstr "Open surah"
-
-#~ msgid "افتح المستكشف"
-#~ msgstr "Open explorer"
-
-#: src/routes/Developer.svelte
-msgid "افصل طبقة التحويل عن طبقة النص القرآني عندك."
-msgstr "Keep the conversion layer separate from your Qur'an text layer."
 
 #: src/routes/Developer.svelte
 msgid "اقرأ عدد آيات السورة"
@@ -70,21 +60,10 @@ msgstr "Read a surah's ayah count"
 msgid "الآيات المعروضة"
 msgstr "Visible ayahs"
 
-#~ msgid "الآية"
-#~ msgstr "الآية"
-
-#~ msgid "للمطور"
-#~ msgstr "For developers"
-
-#~ msgid "العربية والإنجليزية بحسب الأصل"
-#~ msgstr "Arabic and English in their original language"
-
-#~ msgid "الإنجليزية"
-#~ msgstr "English"
-
 #: src/routes/Explorer.svelte
 #: src/routes/Explorer.svelte
 #: src/routes/Home.svelte
+#: src/routes/Surahs.svelte
 msgid "البحث"
 msgstr "Search"
 
@@ -96,24 +75,16 @@ msgstr "Sort"
 msgid "التنقل بين السور"
 msgstr "Surah navigation"
 
-#~ msgid "الحالة"
-#~ msgstr "Status"
-
 #: src/components/SurahMushafViewer.svelte
 msgid "الرسم"
 msgstr "Script"
 
-#: src/routes/Developer.svelte
-msgid "الرواة الكوفيون يطابقون حفصًا في الترقيم، فلا يحتاجون طبقة تحويل مستقلة."
-msgstr "Kufi rawis match Hafs in numbering, so they do not need a separate conversion layer."
-
-#~ msgid "السور"
-#~ msgstr "Surahs"
-
+#: src/components/charts/PlotSurahHeatmap.svelte
 #: src/routes/AyahCounts.svelte
 #: src/routes/Explorer.svelte
 #: src/routes/Madhhab.svelte
 #: src/routes/Mushaf.svelte
+#: src/routes/System.svelte
 msgid "السورة"
 msgstr "Surah"
 
@@ -133,52 +104,13 @@ msgstr "الصفحة غير موجودة"
 msgid "العربية"
 msgstr "Arabic"
 
-#~ msgid "العلامات"
-#~ msgstr "Markers"
-
-#~ msgid "القراءة التالية النافعة"
-#~ msgstr "Useful next reading"
-
-#~ msgid "المستكشف"
-#~ msgstr "Explorer"
-
 #: src/routes/Home.svelte
 msgid "المشروع"
 msgstr "Project"
 
-#~ msgid "المشكلة"
-#~ msgstr "The problem"
-
-#~ msgid "الملف ١"
-#~ msgstr "File 1"
-
-#~ msgid "الملف ٢"
-#~ msgstr "File 2"
-
-#~ msgid "الملف ٣"
-#~ msgstr "File 3"
-
-#~ msgid "الملف ٤"
-#~ msgstr "File 4"
-
-#~ msgid "الوضع الحالي"
-#~ msgstr "Current state"
-
-#~ msgid "امسح المرشحات"
-#~ msgstr "Clear filters"
-
-#~ msgid "امسح بعض المرشحات ثم جرّب من جديد."
-#~ msgstr "Clear a few filters and try again."
-
-#~ msgid "بداية المصحف"
-#~ msgstr "Start of the mushaf"
-
 #: src/components/SurahMushafViewer.svelte
 msgid "بص"
 msgstr "Basri"
-
-#~ msgid "بيانات الراوي"
-#~ msgstr "Rawi metadata"
 
 #: src/components/Header.svelte
 msgid "تبديل اللغة"
@@ -192,17 +124,13 @@ msgstr "Commentary"
 msgid "ثانوي"
 msgstr "Secondary"
 
-#~ msgid "حمّل JSON بالطريقة التي تناسب مكدسك"
-#~ msgstr "Load JSON in whatever way fits your stack"
-
-#~ msgid "خطأ شائع"
-#~ msgstr "Common mistake"
-
 #: src/lib/format.js
 msgid "داخلي"
 msgstr "Internal"
 
 #: src/routes/Doc.svelte
+#: src/routes/Docs.svelte
+#: src/routes/Home.svelte
 #: src/routes/Project.svelte
 msgid "دليل المشروع"
 msgstr "Project guide"
@@ -210,9 +138,6 @@ msgstr "Project guide"
 #: src/components/SurahMushafViewer.svelte
 msgid "دم"
 msgstr "Dim."
-
-#~ msgid "شاهد أمثلة حية في المستكشف"
-#~ msgstr "See live examples in the explorer"
 
 #: src/lib/format.js
 msgid "شواهد ثانوية فقط"
@@ -231,6 +156,7 @@ msgid "غير محسوم"
 msgstr "Unresolved"
 
 #: src/lib/format.js
+#: src/routes/System.svelte
 msgid "غير موثق"
 msgstr "Uncited"
 
@@ -250,24 +176,11 @@ msgstr "Practical rules"
 msgid "كو"
 msgstr "Kufi"
 
-#~ msgid "كيف يُراجع"
-#~ msgstr "How it is reviewed"
-
 #: src/components/BoundaryDetail.svelte
 #: src/components/BoundaryDetail.svelte
 #: src/routes/Explorer.svelte
 msgid "لا أحد"
 msgstr "No counting madhhab"
-
-#~ msgid "لا اختراعات من المجاميع وحدها"
-#~ msgstr "No inventions from totals alone"
-
-#: src/routes/Developer.svelte
-msgid "لا تستنتج الترقيم من مجموع عدد الآيات وحده."
-msgstr "Do not infer numbering from total ayah counts alone."
-
-#~ msgid "لا تمليس صامت للخلاف"
-#~ msgstr "No silent smoothing of disagreement"
 
 #: src/lib/format.js
 msgid "لا توجد ملاحظة إثبات"
@@ -282,33 +195,9 @@ msgstr "No results"
 msgid "لا يوجد عبء مراجعة معروض حاليًا."
 msgstr "No review workload is currently shown."
 
-#~ msgid "لماذا بُني المشروع بهذه الصورة"
-#~ msgstr "Why the project is structured this way"
-
-#~ msgid "لماذا يهم"
-#~ msgstr "Why it matters"
-
-#~ msgid "ما الذي لا يفعله المشروع"
-#~ msgstr "What the project does not do"
-
-#~ msgid "ما الذي ننشره"
-#~ msgstr "What we publish"
-
 #: src/lib/format.js
 msgid "مباشر"
 msgstr "Direct"
-
-#~ msgid "مثال ١"
-#~ msgstr "Example 1"
-
-#~ msgid "مثال ٢"
-#~ msgstr "Example 2"
-
-#~ msgid "مثال ٣"
-#~ msgstr "Example 3"
-
-#~ msgid "مثال ٤"
-#~ msgstr "Example 4"
 
 #: src/lib/format.js
 msgid "مثل الكوفي"
@@ -317,6 +206,7 @@ msgstr "Same as Kufi"
 #: src/components/MadhhabCard.svelte
 #: src/components/charts/PlotTotals.svelte
 #: src/routes/AyahCounts.svelte
+#: src/routes/Home.svelte
 #: src/routes/System.svelte
 msgid "مجموع الآيات"
 msgstr "Total ayahs"
@@ -329,15 +219,10 @@ msgstr "Resolved"
 msgid "محسوم إلى الرواية الأصلية"
 msgstr "Resolved to the primary riwāya"
 
-#~ msgid "محمّل أساسي"
-#~ msgstr "Basic loader"
-
 #: src/lib/format.js
+#: src/routes/Project.svelte
 msgid "مختلف فيه"
 msgstr "Disputed"
-
-#~ msgid "مخرجات مولدة قابلة لإعادة الإنتاج"
-#~ msgstr "Generated outputs that can be reproduced"
 
 #: src/components/charts/PlotFrame.svelte
 msgid "مخطط"
@@ -355,37 +240,17 @@ msgstr "M2"
 msgid "مستفاد"
 msgstr "Derived"
 
-#~ msgid "معظم التطبيقات لا تحتاج إلا إلى أربعة أشياء."
-#~ msgstr "Most apps only need four things."
-
 #: src/components/SurahMushafViewer.svelte
 msgid "مك"
 msgstr "Makki"
-
-#~ msgid "ملف السورة"
-#~ msgstr "Surah profile"
-
-#~ msgid "منهجنا"
-#~ msgstr "Method"
 
 #: src/components/charts/PlotSurahHeatmap.svelte
 msgid "مواضع مختلفة"
 msgstr "Differing boundary points"
 
-#: src/lib/format.js
-msgid "موثق أوليًا"
-msgstr "Primary cited"
-
-#: src/lib/format.js
-msgid "موثق أوليًا ومراجع"
-msgstr "Primary cited and reviewed"
-
 #: src/components/charts/PlotSurahHeatmap.svelte
 msgid "موضع مختلف"
 msgstr "Differing boundary point"
-
-#~ msgid "نقطة البداية الأبسط"
-#~ msgstr "Simplest starting point"
 
 #: src/lib/format.js
 msgid "نهاية"
@@ -394,21 +259,6 @@ msgstr "End"
 #: src/lib/format.js
 msgid "نهاية آية"
 msgstr "Ayah end"
-
-#~ msgid "نهاية المصحف"
-#~ msgstr "End of the mushaf"
-
-#~ msgid "هذه البيانات لا تخبرك كيف ترسم النص نفسه."
-#~ msgstr "These data do not tell you how to render the text itself."
-
-#~ msgid "واصل التصفح"
-#~ msgstr "Keep browsing"
-
-#~ msgid "وضوح الحدود يحفظ صدق الدعوى."
-#~ msgstr "Clear boundaries preserve intellectual honesty."
-
-#~ msgid "يتجاوزه"
-#~ msgstr "Continues through it"
 
 #: src/lib/format.js
 msgid "يحتاج إلى توفيق بين المصادر"
@@ -419,22 +269,8 @@ msgid "يسقط"
 msgstr "Omits"
 
 #: src/lib/format.js
-msgid "يضم الترقيم"
-msgstr "Merges numbering"
-
-#: src/lib/format.js
-msgid "يعد"
-msgstr "Counts"
-
-#~ msgid "يعده"
-#~ msgstr "Counts it"
-
-#: src/lib/format.js
 msgid "يفصل الترقيم"
 msgstr "Splits numbering"
-
-#~ msgid "المسارات الأساسية"
-#~ msgstr "Core routes"
 
 #: src/routes/Docs.svelte
 msgid "الوثائق"
@@ -442,16 +278,13 @@ msgstr "Docs"
 
 #: src/routes/Doc.svelte
 #: src/routes/Docs.svelte
+#: src/routes/Docs.svelte
 msgid "عربي"
 msgstr "Arabic"
 
 #: src/routes/Doc.svelte
 msgid "الوثيقة غير موجودة"
 msgstr "Document not found"
-
-#: src/routes/Doc.svelte
-msgid "لا توجد وثيقة بهذا المعرّف داخل المكتبة."
-msgstr "No document with this slug exists in the library."
 
 #: src/routes/Doc.svelte
 msgid "ارجع إلى مكتبة الوثائق"
@@ -469,13 +302,6 @@ msgstr "Full document"
 msgid "افتح النسخة العربية"
 msgstr "Open the Arabic version"
 
-#~ msgid "واجهة الموقع الآن بلغة مختلفة عن لغة هذه الوثيقة"
-#~ msgstr "The site interface is currently in a different language from this document"
-
-#: src/routes/Doc.svelte
-msgid "في هذه الصفحة"
-msgstr "On this page"
-
 #: src/routes/Doc.svelte
 msgid "الوثيقة السابقة"
 msgstr "Previous document"
@@ -483,60 +309,6 @@ msgstr "Previous document"
 #: src/routes/Doc.svelte
 msgid "الوثيقة التالية"
 msgstr "Next document"
-
-#~ msgid "المدخل الأبسط قبل الغوص في الوثائق المفصلة."
-#~ msgstr "The simplest entry point before diving into the detailed docs."
-
-#~ msgid "مسار سريع"
-#~ msgstr "Quick path"
-
-#~ msgid "١. تثبيت محور ترقيم مرجعي"
-#~ msgstr "1. Fix a reference numbering axis"
-
-#~ msgid "٢. تسجيل الرؤوس المختلف فيها فقط"
-#~ msgstr "2. Record only the disputed heads"
-
-#~ msgid "٤. توليد المخرجات الموجهة للمطور"
-#~ msgstr "4. Generate developer-facing outputs"
-
-#~ msgid "تشغيل موقع العرض"
-#~ msgstr "Running the site"
-
-#~ msgid "ما الذي يقدمه هذا المشروع."
-#~ msgstr "What this project provides."
-
-#~ msgid "قد يبقى النص نفسه بينما تتبدل أرقام الآيات."
-#~ msgstr "The text may stay the same while the verse numbers change."
-
-#~ msgid "طبقة أصول مراجعية، ثم مخرجات مولدة منها."
-#~ msgstr "A reviewable source layer, then generated outputs."
-
-#~ msgid "كيف تُربط البيانات بالشواهد"
-#~ msgstr "How the data is tied to evidence"
-
-#~ msgid "لا يعامل المشروع المجاميع وحدها على أنها برهان. طبقة الشواهد مقصودة لتبقى قريبة من أدب عدِّ الآي المنقول نفسه."
-#~ msgstr "The project does not treat totals alone as proof. The evidence layer is meant to stay close to the transmitted literature of ayah counting itself."
-
-#~ msgid "لا يستبدل الكتب الكلاسيكية، بل يبني منها طبقة مراجعة منظمة."
-#~ msgstr "It does not replace the classical books; it builds an organized review layer from them."
-
-#~ msgid "لا يحاول نمذجة كل أوجه الاختلاف النصي؛ تركيزه على حدود الآيات وترقيمها."
-#~ msgstr "It does not attempt to model every textual variant; its focus is ayah boundaries and numbering."
-
-#~ msgid "سير العمل الموجَّه للمختص صغير عمدًا."
-#~ msgstr "The specialist workflow is intentionally small."
-
-#~ msgid "استخدم البيانات عمليًا من غير أن تعيد حل المسألة من الصفر"
-#~ msgstr "Use the data in practice without re-solving the whole question from scratch"
-
-#~ msgid "هذه أول سورة."
-#~ msgstr "This is the first surah."
-
-#~ msgid "انتقل إلى السورة التالية أو السابقة، أو ارجع إلى الفهرس."
-#~ msgstr "Move to the next or previous surah, or return to the index."
-
-#~ msgid "هذه آخر سورة."
-#~ msgstr "This is the last surah."
 
 #: src/routes/Surah.svelte
 msgid "بيانات عارض المصحف غير متاحة بعد."
@@ -570,233 +342,50 @@ msgstr "No surah matches these filters."
 msgid "جرّب اسمًا آخر أو أعد الضبط."
 msgstr "Try another name or reset."
 
-#~ msgid "هذه البيانات للترقيم فقط، لا للنص نفسه. أرقام السور ثابتة، والمتغير هو حدود الآيات وأرقامها."
-#~ msgstr "These data are for numbering only, not the text itself. Surah numbers stay fixed; ayah boundaries and numbers are what change."
-
-#~ msgid "الأمثلة أدناه تستعمل مساعدًا صغيرًا في المتصفح. استبدله بمحمّل الملفات أو نظام الاستيراد الذي تعتمد عليه."
-#~ msgstr "The examples below use a small browser helper. Replace it with the file loader or import flow you already use."
-
-#~ msgid "عادات صغيرة تجعل الدمج أنظف."
-#~ msgstr "Small habits that keep the integration cleaner."
-
-#~ msgid "هي تخبرك فقط كيف يتحول الترقيم. أما الكلمات والرسم فخذها من مصدر النص أو بيانات المصحف التي تعتمدها."
-#~ msgstr "They tell you only how the numbering changes. Take the words and script from the text source or mushaf data you already trust."
-
-#~ msgid "موقع العرض"
-#~ msgstr "The site"
-
-#~ msgid "ما الذي يشغّل الواجهة"
-#~ msgstr "What powers the interface"
-
-#~ msgid "ملف البيانات"
-#~ msgstr "Data file"
-
 #: src/routes/Developer.svelte
 msgid "تشغيل محلي"
 msgstr "Local run"
 
-#~ msgid "ملاحظات نشر"
-#~ msgstr "Deploy notes"
-
-#~ msgid "إذا كان الموقع تحت مسار فرعي"
-#~ msgstr "If the site lives under a subpath"
-
-#: src/lib/i18n.js
-msgid "مرجع عدِّ الآي"
-msgstr "Ayah Count Reference"
-
-#: src/lib/i18n.js
-msgid "واجهة تفاعلية لعدِّ الآي بين مذاهب العدّ الستة المستعملة مع القراءات العشر."
-msgstr "An interactive interface for ayah counting across the six counting madhhabs used with the ten qirāʾāt."
-
-#~ msgid "الرئيسية"
-#~ msgstr "Home"
-
-#~ msgid "مذاهب العدّ"
-#~ msgstr "counting madhhabs"
-
 #: src/routes/Home.svelte
-msgid "مرجع رؤوس الآي"
-msgstr "Ayah-head reference"
-
-#~ msgid "مرجع تفاعلي لرؤوس الآي بين مذاهب العدّ الستة."
-#~ msgstr "An interactive reference for ayah heads across the six counting madhhabs."
-
-#~ msgid "اختر سورة، واقرأ مواضع الخلاف في سياقها، ثم افتح التفصيل المختصر لمعرفة أي مذاهب العدّ تعد الموضع رأس آية."
-#~ msgstr "Choose a surah, read disputed points in context, then open the concise detail to see which counting madhhabs count the point as a head of ayah."
-
-#~ msgid "افتح فهرس السور"
-#~ msgstr "Open the surah index"
-
-#~ msgid "استكشف رؤوس الآي"
-#~ msgstr "Explore ayah heads"
+msgid "مذاهب العدّ"
+msgstr "counting madhhabs"
 
 #: src/components/SurahMushafViewer.svelte
 #: src/components/charts/PlotSystemDistanceMatrix.svelte
 msgid "رأس آية مختلف فيه"
 msgstr "disputed head of ayah"
 
-#~ msgid "ابدأ من هنا"
-#~ msgstr "Start here"
-
-#~ msgid "القراءة داخل السورة هي المسار الأساسي."
-#~ msgstr "Reading inside the surah is the primary path."
-
-#~ msgid "صفحات السور تجمع نص المصحف، ومواضع رؤوس الآي المختلف فيها، وتفصيل كل موضع في مكان واحد."
-#~ msgstr "Surah pages bring the mushaf text, disputed ayah heads, and each point detail into one place."
-
-#~ msgid "اختر سورة"
-#~ msgstr "Choose a surah"
-
-#~ msgid "اقرأ في المصحف"
-#~ msgstr "Read in the mushaf"
-
-#~ msgid "افتح السورة، وشاهد رؤوس الآي المختلف فيها داخل النص بدلًا من البدء بالجداول التحليلية."
-#~ msgstr "Open a surah and view disputed ayah heads inside the text instead of starting from analytical tables."
-
-#~ msgid "استكشف رأس آية"
-#~ msgstr "Explore an ayah head"
-
-#~ msgid "ابحث بالموضع أو السورة، ثم راجع أي مذاهب العدّ تعده وأيها لا تعده."
-#~ msgstr "Search by point or surah, then review which counting madhhabs count it and which do not."
-
-#~ msgid "افهم المنهج"
-#~ msgstr "Understand the method"
-
-#~ msgid "اقرأ كيف تُسجَّل رؤوس الآي المختلف فيها، وكيف تُربط الشواهد بالمادة المعروضة."
-#~ msgstr "Read how disputed ayah heads are recorded and how evidence is linked to the displayed material."
-
-#~ msgid "مذاهب العدّ الستة"
-#~ msgstr "The six counting madhhabs"
+#: src/routes/Docs.svelte
+msgid "ابدأ من هنا"
+msgstr "Start here"
 
 #: src/components/MadhhabCard.svelte
 msgid "افتح ملف مذهب العدّ"
 msgstr "Open the counting-madhhab file"
 
-#~ msgid "كل ملف يعرض مجموع الآيات ومواضع رؤوس الآي المرتبطة بذلك المذهب داخل المادة الحالية."
-#~ msgstr "Each file shows the total ayah count and the ayah-head points linked to that madhhab in the current material."
-
 #: src/components/MadhhabCard.svelte
 msgid "مذهب عدّ"
 msgstr "Counting madhhab"
 
-#~ msgid "القراءات المرتبطة"
-#~ msgstr "Linked qirāʾāt"
-
-#~ msgid "مرجع لفحص رؤوس الآي المختلف فيها بين مذاهب العدّ الستة، مع مسارات منفصلة للقراءة، والاستكشاف، والاستخدام البرمجي."
-#~ msgstr "A reference for reviewing disputed ayah heads across the six counting madhhabs, with separate paths for reading, exploration, and programmatic use."
-
-#~ msgid "ابدأ بفهرس السور لقراءة المواضع في سياقها، أو بالمستكشف إذا كنت تريد الوصول مباشرة إلى رأس آية محدد."
-#~ msgstr "Start from the surah index to read points in context, or use the explorer to jump directly to a specific ayah head."
-
-#: src/routes/NotFound.svelte
-msgid "هذه الصفحة غير موجودة في المرجع."
-msgstr "This page does not exist in the reference."
+#: src/components/MadhhabCard.svelte
+msgid "القراءات المرتبطة"
+msgstr "Linked qirāʾāt"
 
 #: src/routes/NotFound.svelte
 msgid "العودة إلى الرئيسية"
 msgstr "Return home"
 
-#~ msgid "مرجع بحثي لرؤوس الآي المختلف فيها بين مذاهب العدّ الستة، يعرض الفاصلة ومن يعدها ومن لا يعدها داخل سياق التلاوة."
-#~ msgstr "A practical reference for disputed ayah heads across the six counting madhhabs, with a reviewable data layer and generated linking files for programmatic use."
-
 #: src/components/SurahMushafViewer.svelte
 msgid "رؤوس آي مختلف فيها"
 msgstr "Disputed ayah heads"
-
-#~ msgid "كل رأس آية هنا يعدّه بعضهم ولا يعده آخرون."
-#~ msgstr "Each point here is counted as a head of ayah by some and not counted by others."
-
-#~ msgid "تُقرأ المواضع داخل سياق السورة، لا بوصفها أرقامًا مجردة."
-#~ msgstr "Points are read in surah context, not as abstract numbers."
-
-#~ msgid "المشروع يعالج سؤال الحدود: أين تنتهي الآية وأين تبدأ التالية. فإذا عُدَّ موضع في مذهب عدّ ولم يُعد في آخر تغيّر الترقيم مع بقاء النص نفسه."
-#~ msgstr "The project addresses the boundary question: where one ayah ends and the next begins. When a point is counted in one madhhab and not another, numbering changes while the text remains the same."
-
-#~ msgid "التطبيقات تحتاج إلى جسر ثابت بين مذاهب العدّ."
-#~ msgstr "Applications need a stable bridge between counting madhhabs."
-
-#~ msgid "كثير من البرمجيات تفترض أن اقتران السورة بالآية ثابت دائمًا. هذا المشروع يوفّر طريقة واضحة للانتقال بين أرقام الآيات من غير تخمين."
-#~ msgstr "Many applications assume the surah-ayah pair is always fixed. This project provides a clear way to move between ayah numbers without guessing."
-
-#~ msgid "نبدأ من سؤال رأس الآية نفسه، ثم نولّد ما بعده منه."
-#~ msgstr "We start from the ayah-head question itself, then generate the derived outputs from it."
-
-#~ msgid "يعتمد المشروع الكوفي/حفص محورًا تشغيليًا حتى تبقى الإحالات وملفات الربط على إحداثية ثابتة."
-#~ msgstr "The project uses Kufi/Hafs as the operational axis so references and linking files remain on one stable coordinate."
-
-#~ msgid "من هذه الطبقة تُولد ملفات الربط، وعدد آيات السور، وأسماء الرواة، ورزم المراجعة، وبيانات هذا الموقع."
-#~ msgstr "From this layer come the linking files, surah ayah counts, rawi names, review packets, and site data."
-
-#~ msgid "التفاصيل الداخلية محفوظة."
-#~ msgstr "Internal details are preserved."
-
-#~ msgid "تعرض صفحة المطور الطريق العملي الأبسط: ثبّت محورًا واحدًا، ثم استعمل ملفات الربط المولدة عندما تحتاج إلى تغيير الترقيم."
-#~ msgstr "The developer page shows the simplest practical path: keep one axis fixed, then use generated linking files when you need to change numbering."
 
 #: src/routes/Madhhab.svelte
 msgid "مذهب العدّ غير موجود"
 msgstr "Counting madhhab not found"
 
-#. 0: madhhab
-#: src/routes/Madhhab.svelte
-msgid "لا يوجد مذهب عدّ يطابق “{0}”."
-msgstr "No counting madhhab matches “{0}”."
-
-#~ msgid "ملف مذهب العدّ"
-#~ msgstr "Counting-madhhab file"
-
-#~ msgid "يعرض هذا الملف مجموع الآيات، والقراءات المرتبطة، والسور التي تظهر فيها رؤوس آي لهذا المذهب داخل المادة الحالية."
-#~ msgstr "This file shows the total ayah count, linked qirāʾāt, and surahs where this madhhab has ayah-head points in the current material."
-
 #: src/routes/Madhhab.svelte
 msgid "لا توجد قراءات مرتبطة محفوظة لهذا المذهب."
 msgstr "No linked qirāʾāt are stored for this madhhab."
-
-#~ msgid "رؤوس يعدها"
-#~ msgstr "Heads counted"
-
-#~ msgid "المواضع المختلف فيها التي يعدها هذا المذهب رأس آية."
-#~ msgstr "Disputed points this madhhab counts as heads of ayah."
-
-#~ msgid "السور ذات المواضع"
-#~ msgstr "Surahs with points"
-
-#~ msgid "السور التي يظهر فيها لهذا المذهب موضع واحد أو أكثر."
-#~ msgstr "Surahs where this madhhab has one or more points."
-
-#~ msgid "الروايات أو القراءات المرتبطة بهذا المذهب في البيانات."
-#~ msgstr "Narrations or qirāʾāt linked to this madhhab in the data."
-
-#~ msgid "ابدأ بهذه السور إذا أردت رؤية مواضع رأس الآية في سياق النص."
-#~ msgstr "Start with these surahs to see ayah-head points in textual context."
-
-#~ msgid "لا توجد مواضع مختلفة يعدها هذا المذهب في المادة الحالية."
-#~ msgstr "There are no disputed points counted by this madhhab in the current material."
-
-#~ msgid "{0} رؤوس يعدها هذا المذهب"
-#~ msgstr "{0} heads counted by this madhhab"
-
-#~ msgid "الخطوة التالية"
-#~ msgstr "Next step"
-
-#~ msgid "للقراءة في السياق افتح فهرس السور. وللوصول إلى موضع محدد مباشرة استخدم المستكشف."
-#~ msgstr "To read in context, open the surah index. To jump directly to a specific point, use the explorer."
-
-#~ msgid "ابحث عن مواضع الخلاف في رؤوس الآي"
-#~ msgstr "Inspect disputed ayah heads"
-
-#~ msgid "مذهب العدّ الذي يعده"
-#~ msgstr "Counting madhhab that counts it"
-
-#~ msgid "كل مذاهب العدّ"
-#~ msgstr "All counting madhhabs"
-
-#~ msgid "لا يعده"
-#~ msgstr "Does not count it"
-
-#~ msgid "يعده {0}، ولا يعده {1}."
-#~ msgstr "Counted by {0}, and not counted by {1}."
 
 #: src/components/BoundaryDetail.svelte
 #: src/routes/Explorer.svelte
@@ -809,154 +398,29 @@ msgid "لا يعده رأس آية"
 msgstr "does not count it as a head of ayah"
 
 #: src/routes/Developer.svelte
-msgid "استعمل ملفات الربط من غير أن تعقد تطبيقك."
-msgstr "Use the linking files without overcomplicating your app."
-
-#~ msgid "الربط الأمامي"
-#~ msgstr "Forward linking"
-
-#~ msgid "الربط العكسي"
-#~ msgstr "Reverse linking"
-
-#~ msgid "<0>الربط الأمامي</0> لتحويل حفص/الكوفي إلى ترقيم الهدف"
-#~ msgstr "<0>Forward linking</0> to convert Hafs/Kufi to the target numbering"
-
-#~ msgid "<0>الربط العكسي</0> لإرجاع ترقيم الهدف إلى حفص/الكوفي"
-#~ msgstr "<0>Reverse linking</0> to bring target numbering back to Hafs/Kufi"
-
-#~ msgid "<0>بيانات الراوي</0> عندما يختار المستخدم الرواية لا اسم مذهب العدّ"
-#~ msgstr "<0>Rawi data</0> when the user chooses a narration rather than a counting-madhhab name"
-
-#~ msgid "استخدم <0/> إذا كان تطبيقك يخزن حفص/الكوفي أصلًا ويحتاج فقط إلى عرض مذهب عدّ آخر."
-#~ msgstr "Use <0/> if your app already stores Hafs/Kufi and only needs to display another counting madhhab."
-
-#~ msgid "استخدم <0/> إذا كان الإدخال أو المصدر الخارجي يأتي بترقيم غير كوفي/حفصي وتريد إرجاعه إلى المحور الداخلي."
-#~ msgstr "Use <0/> if input or an external source arrives in non-Kufi/Hafsi numbering and you want to bring it back to the internal axis."
-
-#~ msgid "استخدم <0/> إذا كانت واجهتك مبنية على أسماء الرواة مثل ورش أو قالون. هذه البيانات تخبرك أي مذهب عدّ يتبعه الراوي."
-#~ msgstr "Use <0/> if your interface is built around rawi names such as Warsh or Qalun. These data tell you which counting madhhab the rawi follows."
-
-#~ msgid "حوّل من حفص/الكوفي إلى ترقيم آخر"
-#~ msgstr "Convert from Hafs/Kufi to another numbering"
-
-#~ msgid "هذه هي الحالة الأشهر: لديك مرجع حفصي وتريد رقمه في مذهب عدّ آخر."
-#~ msgstr "This is the most common case: you have a Hafsi reference and want its number in another counting madhhab."
-
-#~ msgid "أعد ترقيمًا آخر إلى محور حفص"
-#~ msgstr "Bring another numbering back to the Hafs axis"
-
-#~ msgid "استعمل الربط العكسي إذا أدخل المستخدم رقمًا على مذهب عدّ آخر، أو جاءك مصدر خارجي غير حفصي."
-#~ msgstr "Use reverse linking if the user enters a number in another counting madhhab, or an external source arrives in non-Hafsi numbering."
-
-#~ msgid "اربط اسم الراوي بمذهب عدّه"
-#~ msgstr "Link the rawi name to its counting madhhab"
-
-#~ msgid "إذا كان المستخدم يختار ورشًا أو قالون أو الدوري أو غيرهم، فابدأ ببيانات الراوي. منها تعرف ملف مذهب العدّ المطلوب."
-#~ msgstr "If the user chooses Warsh, Qalun, al-Duri, or others, start with the rawi data. From it you know the required counting-madhhab file."
-
-#~ msgid "إذا كان تطبيقك يعرف بالفعل معرّف مذهب العدّ، فتجاوز طبقة الراوي واستعمل ملفات الربط بحسب مذهب العدّ مباشرة."
-#~ msgstr "If your app already knows the counting-madhhab identifier, skip the rawi layer and use the linking files for that madhhab directly."
-
-#~ msgid "استخدم أعداد السور عندما تحتاج عناصر الواجهة أو أدوات التحقق إلى عدد آيات السورة داخل مذهب عدّ معين."
-#~ msgstr "Use surah counts when interface elements or validation tools need the ayah count of a surah in a specific counting madhhab."
-
-#~ msgid "مطابقة عادية واحد إلى واحد: آية واحدة في حفص تقابل آية واحدة في مذهب العدّ الهدف."
-#~ msgstr "A normal one-to-one match: one Hafs ayah corresponds to one ayah in the target counting madhhab."
-
-#~ msgid "تعني أن هذه الآية على ضبط حفص لا تنتهي بوصفها آية مستقلة في مذهب العدّ الهدف، بل تستمر مادتها إلى تغطية الآية التالية."
-#~ msgstr "This means the Hafs ayah does not end as an independent ayah in the target counting madhhab; its material continues to cover the following ayah."
-
-#~ msgid "إذا كنت تدعم مذهب عدّ واحدًا غير كوفي فقط، فحمّل ملفيه الأمامي والعكسي وحدهما."
-#~ msgstr "If you support only one non-Kufi counting madhhab, load only its forward and reverse files."
-
-#: src/routes/Developer.svelte
 msgid "إذا كانت واجهتك تُظهر أسماء الرواة، فاستخدم بيانات الراوي لاختيار ملف مذهب العدّ الصحيح."
 msgstr "If your interface shows rawi names, use the rawi data to choose the correct counting-madhhab file."
-
-#~ msgid "افتح تشخيص المطور"
-#~ msgstr "Open Developer diagnostics"
-
-#~ msgid "تقرأ الواجهة منه المجاميع، وملخصات مذاهب العدّ والسور، وصفوف الخلاف، ومصفوفة المسافات، وسلاسل الانجراف."
-#~ msgstr "The interface reads totals, counting-madhhab and surah summaries, dispute rows, the distance matrix, and drift series from it."
-
-#~ msgid "دليل سريع لأقسام الموقع."
-#~ msgstr "A quick guide to site sections."
-
-#~ msgid "<0/> للمدخل العام ومداخل السور ومذاهب العدّ."
-#~ msgstr "<0/> for the main entry point and the surah and counting-madhhab entries."
-
-#~ msgid "<0/> لأدوات التشخيص وتخطيط المراجعة."
-#~ msgstr "<0/> for diagnostics and review planning tools."
-
-#~ msgid "<0/> لملف مذهب العدّ المختار."
-#~ msgstr "<0/> for the selected counting-madhhab file."
-
-#~ msgid "الاستعمال العملي لملفات الربط و JSON في التطبيقات."
-#~ msgstr "Practical use of linking files and JSON in applications."
 
 #: src/routes/DeveloperDiagnostics.svelte
 msgid "تشخيص المطور"
 msgstr "Developer diagnostics"
-
-#~ msgid "أدوات داخلية لفحص المسافات وعبء المراجعة."
-#~ msgstr "Internal tools for checking distances and review workload."
-
-#~ msgid "هذه الصفحة مخصصة للتشخيص وتخطيط العمل، وليست المسار الأساسي لقراءة رؤوس الآي."
-#~ msgstr "This page is for diagnostics and work planning, not the primary path for reading ayah heads."
-
-#~ msgid "{0} يحتاج إلى مراجعة"
-#~ msgstr "{0} need review"
-
-#~ msgid "نطاق الصفحة"
-#~ msgstr "Page scope"
-
-#~ msgid "تبقى الرسوم هنا لأنها نافعة للمحافظة على البيانات ومراجعة التغطية."
-#~ msgstr "The charts remain here because they are useful for maintaining the data and reviewing coverage."
-
-#~ msgid "مسافة مذاهب العدّ"
-#~ msgstr "Counting-madhhab distance"
-
-#~ msgid "كم يفصل بين مذاهب العدّ من مواضع مختلفة"
-#~ msgstr "How many differing points separate the counting madhhabs"
-
-#~ msgid "كل خلية = عدد المواضع المختلفة بين المذهبين."
-#~ msgstr "Each cell = the number of differing points between the two madhhabs."
-
-#~ msgid "يعرض فقط ما يعده كل مذهب، لذلك يقيس عبء المراجعة الحقيقي."
-#~ msgstr "It shows only what each madhhab counts, so it measures the real review workload."
-
-#~ msgid "يرتب مذاهب العدّ بحسب الرؤوس المعدودة التي تحتاج إلى مراجعة."
-#~ msgstr "Orders the counting madhhabs by counted heads that need review."
-
-#~ msgid "{0} رأسًا معدودًا يحتاج إلى مراجعة"
-#~ msgstr "{0} counted heads need review"
 
 #: src/routes/AyahCounts.svelte
 #: src/routes/DeveloperDiagnostics.svelte
 #: src/routes/DeveloperDiagnostics.svelte
 #: src/routes/DeveloperDiagnostics.svelte
 #: src/routes/Explorer.svelte
+#: src/routes/Home.svelte
 #: src/routes/Madhhab.svelte
 #: src/routes/Mushaf.svelte
+#: src/routes/Project.svelte
 msgid "مذهب العدّ"
 msgstr "Counting madhhab"
-
-#~ msgid "{0} رأس آية مختلف فيه"
-#~ msgstr ""
 
 #. 0: compact_number(summary.evidence.points_with_primary_evidence)
 #: src/routes/Compare.svelte
 msgid "{0} مع شاهد أصلي"
 msgstr ""
-
-#~ msgid "افتح المستكشف <0/>"
-#~ msgstr ""
-
-#~ msgid "كم يفصل بين مذاهب العدّ من رؤوس آي مختلفة"
-#~ msgstr ""
-
-#~ msgid "كل خلية = عدد رؤوس الآي المختلفة بين المذهبين."
-#~ msgstr ""
 
 #: src/routes/Compare.svelte
 msgid "تغطية التوثيق"
@@ -982,7 +446,10 @@ msgstr ""
 msgid "أسرع لمحة للتشابه"
 msgstr ""
 
+#: src/routes/Compare.svelte
+#: src/routes/Compare.svelte
 #: src/routes/DeveloperDiagnostics.svelte
+#: src/routes/System.svelte
 msgid "الأقرب"
 msgstr "Nearest"
 
@@ -991,7 +458,10 @@ msgstr "Nearest"
 msgid "المسافة"
 msgstr ""
 
+#: src/routes/Compare.svelte
+#: src/routes/Compare.svelte
 #: src/routes/DeveloperDiagnostics.svelte
+#: src/routes/System.svelte
 msgid "الأبعد"
 msgstr "Farthest"
 
@@ -1005,415 +475,76 @@ msgstr ""
 
 #: src/routes/Doc.svelte
 msgid "العودة إلى صفحة المطور"
-msgstr ""
-
-#~ msgid "{0} عنوانًا فرعيًا"
-#~ msgstr ""
-
-#~ msgid "القاعدة الأبسط لمعظم التطبيقات: ثبّت محورًا واحدًا داخليًا، ثم حوّل منه فقط عند العرض أو الإدخال. وهذه البيانات تختار لك هذا المحور سلفًا: الكوفي/حفص."
-#~ msgstr ""
-
-#~ msgid "اقرأ دليل المشروع <0/>"
-#~ msgstr ""
-
-#~ msgid "<0>أعداد السور</0> عندما تحتاج مجموع آيات كل سورة داخل مذهب عدّ معين"
-#~ msgstr ""
+msgstr "Back to the developer page"
 
 #: src/routes/Developer.svelte
 msgid "وثائق المطور"
-msgstr ""
-
-#~ msgid "التفاصيل الفنية انتقلت إلى هذا المسار."
-#~ msgstr ""
-
-#~ msgid "هذه الروابط مخصصة لمن يحتاج بنية الملفات، وحزم المصادر، وعقود البيانات. لذلك لا تظهر في مكتبة الباحث العامة."
-#~ msgstr ""
-
-#~ msgid "استخدم <0/> للتحقق، ولمجاميع الواجهة، ولعناصر التنقل التي تحتاج عدد آيات السورة."
-#~ msgstr ""
-
-#~ msgid "في هذا المثال يبقى رقم الهدف <0/>، لكن <1/> تعني أن آية الهدف تغطي أكثر من آية حفصية."
-#~ msgstr ""
-
-#~ msgid "عندما تكون الحالة <0/> فإن آية الهدف تغطي عدة آيات متتالية على ضبط حفص. البداية في <1/> والمدى الكامل في <2/>."
-#~ msgstr ""
-
-#~ msgid "تعني أن آية واحدة على ضبط حفص تنقسم إلى عدة آيات في الهدف. اقرأ المدى الكامل في <0/>."
-#~ msgstr ""
-
-#: src/routes/Developer.svelte
-msgid "افتح تشخيص المطور <0/>"
-msgstr ""
-
-#~ msgid "<0>المكدس</0> Svelte 5، وVite، وNavgo، وObservable Plot، وLayerChart، وWuchale."
-#~ msgstr ""
-
-#~ msgid "<0/> للمدخل العام."
-#~ msgstr ""
-
-#~ msgid "<0/> لاختيار السورة ومذهب العدّ قبل فتح عارض المصحف."
-#~ msgstr ""
-
-#~ msgid "<0/> للدليل العملي ودمج البيانات."
-#~ msgstr ""
-
-#~ msgid "<0/> لجدول أعداد الآي المقبولة."
-#~ msgstr ""
-
-#~ msgid "<0/> للمستكشف القابل للترشيح."
-#~ msgstr ""
-
-#~ msgid "<0/> للدليل العام للمشروع."
-#~ msgstr ""
-
-#~ msgid "<0/> لملف مذهب العدّ المختار، مع بقاء <1/> كتوافق خلفي."
-#~ msgstr ""
-
-#~ msgid "<0/> لصفحة السورة وتفصيل رؤوس الآي فيها."
-#~ msgstr ""
-
-#~ msgid "أمر البناء يشغّل <0/> ثم يجهّز ملفات النشر للمسارات العميقة."
-#~ msgstr ""
-
-#~ msgid "مرّر <0/> إلى Vite حتى تبقى الأصول والمسارات صحيحة."
-#~ msgstr ""
-
-#~ msgid "يكتب البناء <0/> و <1/> حتى تعمل الروابط العميقة بعد النشر."
-#~ msgstr ""
+msgstr "Developer documents"
 
 #: src/routes/AyahCounts.svelte
 #: src/routes/Home.svelte
 msgid "أعداد الآي"
-msgstr ""
-
-#~ msgid "الأعداد المقبولة في مذاهب العدّ الستة."
-#~ msgstr ""
-
-#~ msgid "هذه الصفحة تجمع مجموع آيات القرآن، وعدد آيات كل سورة، بحسب كل مذهب عدّ مشمول في البيانات الحالية. اختلاف العدد هنا اختلاف في رؤوس الآي وترقيمها، لا في نص القرآن."
-#~ msgstr ""
-
-#~ msgid "طريقة القراءة"
-#~ msgstr ""
-
-#~ msgid "ابدأ بالعدد، ثم افتح السورة للسياق."
-#~ msgstr ""
-
-#~ msgid "إذا اختلف العدد بين مذهبين فافتح صفحة السورة لرؤية رؤوس الآي المختلف فيها داخل النص."
-#~ msgstr ""
+msgstr "Ayah counts"
 
 #: src/routes/AyahCounts.svelte
-#: src/routes/Home.svelte
-#: src/routes/Project.svelte
 msgid "افتح المصحف <0/>"
-msgstr ""
+msgstr "Open the mushaf <0/>"
 
 #: src/routes/AyahCounts.svelte
 msgid "مجموع القرآن"
-msgstr ""
+msgstr "Qur'an total"
 
 #: src/routes/AyahCounts.svelte
 msgid "عدد الآيات في كل مذهب عدّ"
-msgstr ""
-
-#~ msgid "آية في هذا المذهب"
-#~ msgstr ""
-
-#~ msgid "جدول عدد آيات كل سورة"
-#~ msgstr ""
-
-#~ msgid "يعرض الجدول العدد المعتمد لكل سورة في كل مذهب عدّ، من غير مقارنات تحليلية أو دلتا حسابية."
-#~ msgstr ""
-
-#~ msgid "قم بتصفية رؤوس الآي المختلف فيها بحسب مذهب العدّ أو بحسب حكمها في حفص/الكوفي، أو ابحث عن رأس آية، ثم اضغط على الموضع المطلوب لعرض تفاصيله في القائمة الجانبية."
-#~ msgstr ""
-
-#~ msgid "{0} نتيجة ظاهرة"
-#~ msgstr ""
-
-#~ msgid "{0} يعده حفص"
-#~ msgstr ""
-
-#~ msgid "{0} لا يعده حفص"
-#~ msgstr ""
+msgstr "Total ayahs in each counting madhhab"
 
 #: src/routes/Project.svelte
 msgid "ابحث عن رأس آية"
 msgstr "Search for an ayah head"
 
-#~ msgid "في حفص/الكوفي"
-#~ msgstr ""
-
-#~ msgid "كل رؤوس الآي"
-#~ msgstr ""
-
-#~ msgid "يعده حفص"
-#~ msgstr ""
-
-#~ msgid "لا يعده حفص"
-#~ msgstr ""
-
-#~ msgid "لا يوجد رأس آية يطابق المرشحات الحالية."
-#~ msgstr ""
-
-#~ msgid "رأس الآية"
-#~ msgstr ""
-
-#~ msgid "الفاصلة"
-#~ msgstr ""
-
-#~ msgid "{0} من {1} يعده"
-#~ msgstr ""
-
-#~ msgid "{0} لا يعده"
-#~ msgstr ""
+#: src/routes/Project.svelte
+msgid "رأس الآية"
+msgstr "Head of ayah"
 
 #: src/routes/Mushaf.svelte
 #: src/routes/Surah.svelte
+#: src/routes/Surahs.svelte
 msgid "المصحف"
-msgstr ""
-
-#~ msgid "ابدأ باختيار مذهب العدّ والسورة ثم اقرأ رؤوس الآي في سياقها."
-#~ msgstr ""
-
-#~ msgid "راجع مجموع القرآن وعدد آيات كل سورة في مذاهب العدّ الستة."
-#~ msgstr ""
-
-#~ msgid "مكتبة الباحث في رؤوس الآي."
-#~ msgstr ""
-
-#~ msgid "ستجد هنا الدليل العام، ومنهج قراءة رؤوس الآي، وإرشادات المراجع العلمي. أما تفاصيل ملفات الربط والعقود الفنية فمكانها صفحة المطور."
-#~ msgstr ""
-
-#~ msgid "{0} وثيقة"
-#~ msgstr ""
-
-#~ msgid "{0} أقسام"
-#~ msgstr ""
-
-#~ msgid "اقرأ السورة بحسب مذهب العدّ المختار."
-#~ msgstr ""
-
-#~ msgid "اختر مذهب العدّ أولًا، ثم افتح السورة ليعرض عارض المصحف ترقيم الآيات بحسب ذلك المذهب مع رؤوس الآي المختلف فيها داخل النص."
-#~ msgstr ""
-
-#~ msgid "{0} مذاهب العدّ"
-#~ msgstr ""
-
-#~ msgid "{0} سورة فيها خلاف"
-#~ msgstr ""
-
-#~ msgid "مذهب العدّ المختار"
-#~ msgstr ""
-
-#~ msgid "ستفتح كل سورة أدناه بهذا الاختيار، ويمكن تغييره داخل عارض المصحف أيضًا."
-#~ msgstr ""
-
-#~ msgid "ذات رؤوس آي مختلف فيها فقط"
-#~ msgstr ""
+msgstr "Mushaf"
 
 #. 0: compact_number(surah.disputed_points)
 #: src/routes/Surahs.svelte
 msgid "{0} رأس آية"
 msgstr ""
 
-#~ msgid "{0} آية في {1}"
-#~ msgstr ""
-
-#~ msgid "افتح في عارض المصحف"
-#~ msgstr ""
-
-#~ msgid "اختر سورة، واقرأ رؤوس الآي المختلف فيها داخل سياقها، ثم افتح التفصيل المختصر لمعرفة أي مذاهب العدّ تعد الرأس."
-#~ msgstr ""
-
 #. 0: compact_number(114)
 #: src/routes/Surahs.svelte
 msgid "{0} سورة"
 msgstr ""
 
-#~ msgid "صفحات السور تجمع نص المصحف، ورؤوس الآي المختلف فيها، وتفصيل كل رأس في مكان واحد."
-#~ msgstr ""
-
-#~ msgid "اختر سورة في المصحف <0/>"
-#~ msgstr ""
-
-#~ msgid "ابحث برأس الآية أو السورة، ثم راجع أي مذاهب العدّ تعده وأيها لا تعده."
-#~ msgstr ""
-
 #: src/routes/Project.svelte
 msgid "راجع أعداد الآي"
 msgstr "Review ayah counts"
 
-#~ msgid "اعرض مجموع القرآن وعدد آيات كل سورة في مذاهب العدّ الستة من غير رسوم مقارنة."
-#~ msgstr ""
-
-#~ msgid "كل ملف يعرض مجموع الآيات ورؤوس الآي المرتبطة بذلك المذهب داخل المادة الحالية."
-#~ msgstr ""
-
-#~ msgid "<0/> السورة السابقة"
-#~ msgstr ""
-
 #. 0: compact_number(visible_surahs.length); 1: compact_number(surahs.length)
 #: src/routes/Mushaf.svelte
 msgid "{0} من {1}"
-msgstr ""
-
-#~ msgid "{0} رأس آية مختلف فيه في هذه السورة"
-#~ msgstr ""
-
-#~ msgid "<0/> جميع السور"
-#~ msgstr ""
-
-#~ msgid "السورة التالية <0/>"
-#~ msgstr ""
-
-#. 0: surah
-#: src/routes/Surah.svelte
-msgid "لا توجد سورة تطابق “{0}”."
-msgstr ""
-
-#~ msgid "في هذه السورة {0} رأس آية مختلف فيه ضمن البيانات الحالية."
-#~ msgstr ""
-
-#~ msgid "العد حسب مذهب العدّ"
-#~ msgstr ""
-
-#~ msgid "{0} آية"
-#~ msgstr ""
-
-#~ msgid "كل أعداد الآي"
-#~ msgstr ""
-
-#~ msgid "لا رؤوس آي مختلف فيها"
-#~ msgstr ""
-
-#~ msgid "لا توجد في هذه السورة رؤوس آي مختلف فيها ضمن البيانات الحالية."
-#~ msgstr ""
-
-#~ msgid "أعداد مذاهب العدّ الستة لهذه السورة معروضة في بطاقة العد أعلاه."
-#~ msgstr ""
-
-#~ msgid "رؤوس الآي المختلف فيها"
-#~ msgstr ""
-
-#~ msgid "رؤوس الآي التي تختلف فيها مذاهب العدّ داخل السورة"
-#~ msgstr ""
-
-#~ msgid "اختر رأس آية لعرض الفاصلة، وحكم حفص/الكوفي فيه، ومذاهب العدّ التي تعده."
-#~ msgstr ""
-
-#: src/routes/NotFound.svelte
-msgid "يمكنك الرجوع إلى الواجهة الرئيسة أو فتح المصحف بدلًا من ذلك."
-msgstr ""
+msgstr "{0} of {1}"
 
 #: src/routes/AyahCounts.svelte
+#: src/routes/Home.svelte
 #: src/routes/NotFound.svelte
+#: src/routes/Project.svelte
 msgid "افتح المصحف"
-msgstr ""
+msgstr "Open the mushaf"
 
 #: src/routes/Project.svelte
-msgid "مرجع لرؤوس الآي ومذاهب العدّ الستة."
-msgstr ""
-
-#~ msgid "يضع المشروع مواضع الخلاف في رؤوس الآي داخل سياق التلاوة، ويبيّن أي مذاهب العدّ تعدّ الفاصلة رأس آية وأيها لا تعدّها، مع إتاحة الشواهد المختصرة عند الحاجة."
-#~ msgstr ""
-
-#~ msgid "مذاهب العدّ الستة المشمولة في هذه النسخة."
-#~ msgstr ""
-
-#~ msgid "تُقرأ رؤوس الآي داخل السورة لا كأرقام منفصلة عن النص."
-#~ msgstr ""
-
-#~ msgid "المسألة"
-#~ msgstr ""
-
-#~ msgid "النص واحد وقد يختلف ترقيم الآيات."
-#~ msgstr ""
-
-#~ msgid "الخلاف هنا في مواضع رؤوس الآي: هل تعدّ الفاصلة رأس آية في مذهب عدّ معين أم لا؟ فإذا اختلف الحكم تغيّر رقم الآية مع بقاء النص نفسه."
-#~ msgstr ""
-
-#~ msgid "ابدأ من المصحف ثم افتح التفصيل."
-#~ msgstr ""
-
-#~ msgid "اختر مذهب العدّ، واقرأ السورة بترقيمه، ثم اضغط على رأس آية مختلف فيه لتعرف من يعدّه ومن لا يعدّه والشواهد المرتبطة به."
-#~ msgstr ""
-
-#~ msgid "الأعداد"
-#~ msgstr ""
-
-#~ msgid "المجاميع تظهر في صفحة مستقلة."
-#~ msgstr ""
-
-#~ msgid "صفحة أعداد الآي تعرض مجموع القرآن وعدد آيات كل سورة في كل مذهب من مذاهب العدّ الستة من غير رسوم مقارنة أو مؤشرات تشخيصية."
-#~ msgstr ""
+msgid "المسألة"
+msgstr "The question"
 
 #: src/routes/Project.svelte
-msgid "فوائد معرفة رؤوس الآي"
-msgstr ""
-
-#~ msgid "تظهر فائدة عدّ الآي عندما يحتاج الباحث إلى قراءة دقيقة للحدود والترقيم."
-#~ msgstr ""
-
-#~ msgid "ضبط مواضع الوقف ورؤوس الآيات"
-#~ msgstr ""
-
-#: src/routes/Project.svelte
-msgid "معرفة الرأس تساعد القارئ والمعلّم على تمييز موضع انتهاء الآية في مذهب العدّ المختار."
-msgstr ""
-
-#~ msgid "فهم اختلاف ترقيم الآيات"
-#~ msgstr ""
-
-#: src/routes/Project.svelte
-msgid "إذا اختلف رقم الآية بين مصدرين، فالسبب قد يكون اختلاف مذهب العدّ لا اختلاف النص المقروء."
-msgstr ""
-
-#~ msgid "توحيد الإحالات بين المصادر"
-#~ msgstr ""
-
-#~ msgid "معرفة مذهب العدّ تجعل الإحالة إلى السورة والآية أوضح عند الانتقال بين مصاحف وكتب تستعمل ترقيمًا مختلفًا."
-#~ msgstr ""
-
-#~ msgid "قراءة الشاهد على سؤال محدد"
-#~ msgstr ""
-
-#~ msgid "التفصيل لا يبدأ بجدول كبير، بل بسؤال واحد: هل هذه الفاصلة رأس آية عند هذا المذهب أم لا؟"
-#~ msgstr ""
-
-#~ msgid "كيف يُعرض رأس الآية"
-#~ msgstr ""
-
-#~ msgid "يعرض التفصيل ما يحتاجه الباحث مباشرة."
-#~ msgstr ""
-
-#~ msgid "<0>الفاصلة.</0> الكلمة أو العبارة التي يقع عندها رأس الآية المختلف فيه."
-#~ msgstr ""
-
-#~ msgid "<0>من يعدّه.</0> قائمة مذاهب العدّ التي تعدّ الفاصلة رأس آية."
-#~ msgstr ""
-
-#~ msgid "<0>من لا يعدّه.</0> قائمة مذاهب العدّ التي لا تعدّ الفاصلة رأس آية."
-#~ msgstr ""
-
-#~ msgid "<0>الشواهد.</0> إحالات مختصرة تعين الباحث على تتبع موضع الحكم في المصادر."
-#~ msgstr ""
-
-#: src/routes/Project.svelte
-msgid "حدود المرجع"
-msgstr ""
-
-#: src/routes/Project.svelte
-msgid "هذا المرجع خاص بعدّ الآي، لا بجميع أوجه القراءات."
-msgstr ""
-
-#~ msgid "يركّز الموقع على حدود الآيات وترقيمها. أما تفاصيل ملفات الربط والاستخدام البرمجي فهي في صفحة المطور حتى تبقى صفحات الباحث مركزة على القراءة والشواهد."
-#~ msgstr ""
-
-#~ msgid "ابدأ بالمصحف"
-#~ msgstr ""
-
-#~ msgid "صفحة المطور"
-#~ msgstr ""
+msgid "صفحة المطور"
+msgstr "Developer page"
 
 #: src/routes/Surahs.svelte
 msgid "اختر سورة وافتح المصحف والتفصيل"
@@ -1456,57 +587,24 @@ msgstr ""
 msgid "{0}–{1} آية بحسب مذهب العدّ"
 msgstr ""
 
-#~ msgid "المجموع النهائي في هذا المذهب."
-#~ msgstr ""
-
-#~ msgid "رؤوس الآي المختلف فيها التي يعدها هذا المذهب."
-#~ msgstr ""
-
-#~ msgid "السور ذات رؤوس الآي"
-#~ msgstr ""
-
-#~ msgid "السور التي يظهر فيها لهذا المذهب رأس آية مختلف فيه واحد أو أكثر."
-#~ msgstr ""
-
 #. 0: get_system_name(system_info)
 #: src/routes/System.svelte
 msgid "أوضح السور في {0}"
 msgstr ""
 
-#~ msgid "ابدأ بهذه السور إذا أردت رؤية رؤوس الآي في سياق النص."
-#~ msgstr ""
-
-#~ msgid "لا توجد رؤوس آي مختلف فيها يعدها هذا المذهب ضمن المادة الحالية."
-#~ msgstr ""
-
 #. 0: get_system_name(system_info)
 #: src/routes/Madhhab.svelte
 msgid "عدد آيات كل سورة في {0}"
-msgstr ""
-
-#~ msgid "هذا جدول العدّ المقبول لكل سورة في هذا المذهب، مع رابط مباشر لقراءة السورة بالترقيم نفسه."
-#~ msgstr ""
+msgstr "Ayahs per surah in {0}"
 
 #: src/routes/Madhhab.svelte
 msgid "عدد الآيات"
-msgstr ""
-
-#~ msgid "رؤوس يعدها هذا المذهب"
-#~ msgstr ""
+msgstr "Ayahs"
 
 #: src/routes/AyahCounts.svelte
 #: src/routes/Madhhab.svelte
 msgid "القراءة"
-msgstr ""
-
-#~ msgid "للقراءة في السياق افتح المصحف بهذا المذهب. وللوصول إلى رأس آية محدد مباشرة استخدم المستكشف."
-#~ msgstr ""
-
-#~ msgid "المستكشف <0/>"
-#~ msgstr ""
-
-#~ msgid "ابدأ بالمصحف لاختيار مذهب العدّ وقراءة رؤوس الآي في سياقها، أو بالمستكشف إذا كنت تريد الوصول مباشرة إلى رأس آية محدد."
-#~ msgstr ""
+msgstr "Read"
 
 #: src/components/BoundaryDetail.svelte
 msgid "تفصيل رأس الآية"
@@ -1517,199 +615,161 @@ msgstr "Head of ayah detail"
 #: src/components/BoundaryDetail.svelte
 #: src/routes/Surah.svelte
 msgid "الفاصلة: {0}"
-msgstr ""
-
-#~ msgid "يعده حفص/الكوفي"
-#~ msgstr ""
-
-#~ msgid "لا يعده حفص/الكوفي"
-#~ msgstr ""
-
-#~ msgid "<0/> الشواهد"
-#~ msgstr ""
+msgstr "Fasilah: {0}"
 
 #. 0: item.edition
 #: src/components/BoundaryDetail.svelte
 msgid "الطبعة: {0}"
-msgstr ""
+msgstr "Edition: {0}"
 
 #: src/components/BoundaryDetail.svelte
 msgid "افتح هذا الرأس في المصحف <0/>"
-msgstr ""
-
-#~ msgid "اختر رأس آية لعرض قرار مذاهب العدّ فيه."
-#~ msgstr ""
+msgstr "Open this head in the mushaf <0/>"
 
 #: src/components/SurahMushafViewer.svelte
 msgid "البسملة"
-msgstr ""
+msgstr "Basmala"
 
 #: src/components/SurahMushafViewer.svelte
 msgid "لا"
-msgstr ""
-
-#~ msgid "قراءة السورة بحسب مذهب العدّ المختار"
-#~ msgstr ""
-
-#~ msgid "يحدد مذهب العدّ المعروض ترقيم الآيات، وتظهر علامات الفواصل المختلف فيها داخل موضعها من النص."
-#~ msgstr ""
-
-#~ msgid "{0} يعدها المذهب المعروض"
-#~ msgstr ""
-
-#~ msgid "{0} لا يعدها"
-#~ msgstr ""
+msgstr "No"
 
 #: src/components/SurahMushafViewer.svelte
 msgid "المقارنة الزوجية"
-msgstr ""
+msgstr "Pairwise comparison"
 
 #. 0: get_system_name(displaySystem) || displaySystemId
 #: src/components/SurahMushafViewer.svelte
 msgid "مذهب العدّ المعروض ومذهب المقارنة كلاهما {0}، لذلك لا يظهر فرق زوجي."
-msgstr ""
+msgstr "The displayed madhhab and the comparison madhhab are both {0}, so no pairwise difference appears."
 
 #. 0: get_system_name(displaySystem) || displaySystemId; 1: get_system_name(comparisonSystem) || comparisonSystemId
 #: src/components/SurahMushafViewer.svelte
 msgid "لا يختلف {0} و{1} في أي رأس آية مسجل هنا."
-msgstr ""
+msgstr "{0} and {1} differ at no head of ayah recorded here."
 
 #: src/components/SurahMushafViewer.svelte
 msgid "رأس آية مسجل"
-msgstr ""
+msgstr "recorded head of ayah"
 
 #: src/components/SurahMushafViewer.svelte
 msgid "رؤوس آي مسجلة"
-msgstr ""
+msgstr "recorded heads of ayah"
 
 #: src/components/SurahMushafViewer.svelte
 msgid "آية معروضة"
-msgstr ""
+msgstr "displayed ayah"
 
 #: src/components/SurahMushafViewer.svelte
 msgid "آيات معروضة"
-msgstr ""
+msgstr "displayed ayahs"
 
 #. 0: get_system_name(displaySystem) || displaySystemId; 1: get_system_name(comparisonSystem) || comparisonSystemId; 2: format_difference_count(pairDifferenceSummary.pointCount, 'رأس آية مسجل', 'رؤوس آي مسجلة'); 3: format_difference_count(pairDifferenceSummary.ayahCount, 'آية معروضة', 'آيات معروضة')
 #: src/components/SurahMushafViewer.svelte
 msgid "يختلف {0} و{1} في {2} عبر {3}."
-msgstr ""
-
-#~ msgid "{0} فقط: {1}"
-#~ msgstr ""
+msgstr "{0} and {1} differ at {2} across {3}."
 
 #: src/components/SurahMushafViewer.svelte
 msgid "الآيات ذات الفرق الزوجي"
-msgstr ""
+msgstr "Ayahs with a pairwise difference"
 
 #: src/components/SurahMushafViewer.svelte
 msgid "أرقام الآيات هنا بحسب مذهب العدّ المعروض، لا بحسب ترقيم حفص إلا إذا كان الكوفي هو المذهب المعروض."
-msgstr ""
+msgstr "Ayah numbers here follow the displayed counting madhhab, not Hafs numbering — unless Kufi is the displayed madhhab."
 
 #: src/components/SurahMushafViewer.svelte
 msgid "مذهب العدّ المعروض"
-msgstr ""
+msgstr "Displayed madhhab"
 
 #: src/components/SurahMushafViewer.svelte
 msgid "نمط العلامات"
-msgstr ""
+msgstr "Marker mode"
 
 #: src/components/SurahMushafViewer.svelte
 msgid "كل الفواصل المختلف فيها"
-msgstr ""
+msgstr "All disputed fasilahs"
 
 #: src/components/SurahMushafViewer.svelte
 msgid "مقارنة زوجية"
-msgstr ""
+msgstr "Pairwise"
 
 #: src/components/SurahMushafViewer.svelte
 msgid "مذهب المقارنة"
-msgstr ""
-
-#~ msgid "حكم رأس الآية في المذهب المعروض"
-#~ msgstr ""
+msgstr "Comparison madhhab"
 
 #: src/components/SurahMushafViewer.svelte
 msgid "كل رؤوس الآي المختلف فيها"
-msgstr ""
+msgstr "All disputed heads"
 
 #: src/components/SurahMushafViewer.svelte
 msgid "يعدها المذهب المعروض"
-msgstr ""
+msgstr "Counted by the displayed madhhab"
 
 #: src/components/SurahMushafViewer.svelte
 msgid "لا يعدها المذهب المعروض"
-msgstr ""
+msgstr "Not counted by the displayed madhhab"
 
 #: src/components/SurahMushafViewer.svelte
 msgid "رؤوس الآي المختلف فيها مع الجوار"
-msgstr ""
+msgstr "Disputed heads with surrounding ayahs"
 
 #: src/components/SurahMushafViewer.svelte
 msgid "رؤوس الآي المختلف فيها فقط"
-msgstr ""
+msgstr "Disputed heads only"
 
 #: src/components/SurahMushafViewer.svelte
 msgid "تظهر بسملة الفاتحة بلا رقم في مذهب العدّ المعروض."
-msgstr ""
+msgstr "The basmala of al-Fatiha appears unnumbered in the displayed madhhab."
 
 #: src/components/SurahMushafViewer.svelte
 msgid "تظهر البسملة قبل الآية الأولى حين يثبتها المصدر مستقلة عن النص."
-msgstr ""
-
-#~ msgid "يظهر {0} من أصل {1} آية بحسب {2}. والظاهر في هذا الترشيح {3} رأس آية مختلف فيه."
-#~ msgstr ""
+msgstr "The basmala appears before the first ayah when the source records it separately."
 
 #: src/components/SurahMushafViewer.svelte
 msgid "رأس الآية المحدد مخفي بهذا الترشيح."
-msgstr ""
+msgstr "The selected head of ayah is hidden by this filter."
 
 #: src/components/SurahMushafViewer.svelte
 msgid "لا يظهر بهذا الترشيح أي رأس آية مختلف فيه."
-msgstr ""
+msgstr "No disputed head of ayah is shown under this filter."
 
 #: src/components/SurahMushafViewer.svelte
 msgid "بلا رقم"
-msgstr ""
+msgstr "Unnumbered"
 
 #: src/components/charts/PlotSystemDistanceMatrix.svelte
 msgid "رؤوس آي مختلفة"
-msgstr ""
+msgstr "Disputed heads"
 
 #: src/components/charts/PlotSystemDistanceMatrix.svelte
 msgid "مصفوفة التباين بين مذاهب العد"
-msgstr ""
+msgstr "Divergence matrix between counting madhhabs"
 
 #: src/components/charts/PlotSystemVerificationBars.svelte
 msgid "الرؤوس المختلف فيها التي يعدها مذهب العدّ"
-msgstr ""
+msgstr "Disputed heads counted by the madhhab"
 
 #: src/components/charts/PlotSystemVerificationBars.svelte
 msgid "تشخيص الشواهد في الرؤوس المختلف فيها التي يعدها كل مذهب"
-msgstr ""
+msgstr "Evidence status for the disputed heads each madhhab counts"
 
 #: src/lib/format.js
 msgid "يعدّه رأس آية"
-msgstr ""
+msgstr "Counts it as a head of ayah"
 
 #: src/lib/format.js
 msgid "لا يعدّه رأس آية"
-msgstr ""
+msgstr "Does not count it as a head of ayah"
 
 #. 0: format_number(surah_number)
 #: src/lib/format.js
 msgid "سورة {0}"
-msgstr ""
+msgstr "Surah {0}"
 
 #. 0: format_number(ayah_number)
 #: src/lib/format.js
 msgid "الآية {0}"
-msgstr ""
-
-#. 0: format_number(value)
-#: src/lib/format.js
-msgid "الأصل الكلاسيكي {0}"
-msgstr ""
+msgstr "Ayah {0}"
 
 #: src/components/SystemCard.svelte
 msgid "رؤوس مختلف فيها"
@@ -1825,6 +885,7 @@ msgid "الفارق عن الكوفي."
 msgstr ""
 
 #: src/routes/DeveloperDiagnostics.svelte
+#: src/routes/System.svelte
 msgid "الرؤوس المعدودة"
 msgstr "Counted heads"
 
@@ -1942,81 +1003,50 @@ msgstr ""
 #: src/components/charts/PlotSurahBoundaryMap.svelte
 #: src/components/charts/PlotSurahDrift.svelte
 msgid "موضع الخلاف في ترتيب القراءة"
-msgstr ""
+msgstr "Disputed position in reading order"
 
 #: src/components/charts/PlotSurahBoundaryMap.svelte
 msgid "مصفوفة المواضع في السورة المختارة"
-msgstr ""
+msgstr "Position matrix for the selected surah"
 
 #. 0: point.slot_label
 #: src/components/charts/PlotSurahDrift.svelte
 msgid "الموضع {0}"
-msgstr ""
+msgstr "Position {0}"
 
 #. 0: compact_number(point.step)
 #: src/components/charts/PlotSurahDrift.svelte
 msgid "الخطوة {0}"
-msgstr ""
+msgstr "Step {0}"
 
 #: src/components/charts/PlotSurahDrift.svelte
 msgid "البداية"
-msgstr ""
+msgstr "Start"
 
 #. 0: value
 #: src/components/charts/PlotSurahDrift.svelte
 msgid "التراكم {0}"
-msgstr ""
+msgstr "Cumulative {0}"
 
 #: src/components/charts/PlotSurahDrift.svelte
 msgid "التغير التراكمي عن الكوفي"
-msgstr ""
+msgstr "Cumulative shift from Kufi"
 
 #: src/components/charts/PlotSurahDrift.svelte
 msgid "انجراف الترقيم التراكمي داخل السورة المختارة"
-msgstr ""
+msgstr "Cumulative numbering drift within the selected surah"
 
 #: src/components/charts/PlotSurahHeatmap.svelte
 msgid "خريطة حرارية لمواضع الخلاف حسب السورة والنوع"
-msgstr ""
+msgstr "Heatmap of disputed positions by surah and kind"
 
 #: src/components/charts/PlotTotals.svelte
 msgid "مجموع الآيات حسب نظام العد"
-msgstr ""
+msgstr "Total ayahs by counting system"
 
 #: src/components/charts/SystemFingerprint.svelte
 msgid "لا توجد فروق على مستوى السور لهذا النظام."
-msgstr ""
-
-#: src/components/SiteFooter.svelte
-msgid "مرجع لرؤوس الآي في مذاهب العدّ الستة؛ يبدأ من القراءة في المصحف ثم يتيح البحث والتفصيل عند الحاجة."
-msgstr "A reference for ayah heads across the six counting madhhabs; start by reading in the mushaf, then search and inspect details only when needed."
-
-#~ msgid "اختر مذهب العدّ"
-#~ msgstr "Choose a counting madhhab"
-
-#: src/routes/Home.svelte
-msgid "ابدأ بالقراءة في المصحف."
-msgstr "Start by reading in the mushaf."
-
-#: src/routes/Home.svelte
-msgid "اختر مذهب العدّ، ثم اختر السورة، واقرأ ترقيم الآيات بحسب ذلك المذهب. عند الحاجة فقط، افتح تفصيل رأس الآية المختلف فيه."
-msgstr "Choose a counting madhhab, then choose a surah and read the ayah numbering according to that madhhab. Open the disputed ayah-head detail only when needed."
-
-#: src/routes/Home.svelte
-msgid "يشمل المرجع مذاهب العدّ الستة، وسور القرآن كلها، ورؤوس الآي المختلف فيها ضمن البيانات الحالية."
-msgstr "The reference covers the six counting madhhabs, all Qur'an surahs, and the disputed ayah heads in the current data."
-
-#: src/routes/Mushaf.svelte
-msgid "اختر مذهب العدّ ثم السورة."
-msgstr "Choose a counting madhhab, then a surah."
-
-#: src/routes/Mushaf.svelte
-msgid "هذه هي نقطة الدخول الرئيسة للقراءة: يفتح الرابط عارض المصحف بترقيم مذهب العدّ المختار، وتظهر رؤوس الآي المختلف فيها داخل النص."
-msgstr "This is the main reading entry point: each link opens the mushaf viewer with the selected madhhab numbering, with disputed ayah heads shown inside the text."
-
-#: src/routes/Mushaf.svelte
-msgid "لا توجد سورة تطابق هذا البحث."
-msgstr "No surah matches this search."
+msgstr "No surah-level differences for this madhhab."
 
 #: src/routes/Mushaf.svelte
 msgid "جرّب اسمًا آخر أو رقم سورة."
@@ -2026,9 +1056,6 @@ msgstr "Try another name or surah number."
 msgid "قائمة السور"
 msgstr "Surah list"
 
-#~ msgid "اختيار سورة"
-#~ msgstr "Choose a surah"
-
 #: src/routes/Mushaf.svelte
 msgid "اختيار القراءة"
 msgstr "Reading selection"
@@ -2037,14 +1064,6 @@ msgstr "Reading selection"
 msgid "ابحث عن سورة"
 msgstr "Search for a surah"
 
-#: src/routes/Surah.svelte
-msgid "لا توجد في هذه السورة رؤوس آي مختلف فيها ضمن البيانات الحالية. راجع أعداد الآي لمعرفة العدد المعتمد في كل مذهب من مذاهب العدّ الستة."
-msgstr "This surah has no disputed heads of ayah in the current data. See Ayah Counts for the accepted count in each of the six counting madhhabs."
-
-#: src/components/SurahMushafViewer.svelte
-msgid "يقرأ النص بترقيم مذهب العدّ المعروض، وتظهر علامات رؤوس الآي المختلف فيها داخل موضعها من السورة."
-msgstr "The text uses the displayed counting madhhab’s numbering; markers for disputed heads of ayah appear in their place in the surah."
-
 #: src/components/SurahMushafViewer.svelte
 msgid "خيارات متقدمة"
 msgstr "Advanced options"
@@ -2052,10 +1071,6 @@ msgstr "Advanced options"
 #: src/components/SurahMushafViewer.svelte
 msgid "حكم الرأس في المذهب المعروض"
 msgstr "Decision in the displayed madhhab"
-
-#: src/routes/Explorer.svelte
-msgid "ابحث عن رأس آية مختلف فيه."
-msgstr "Search for a disputed head of ayah."
 
 #: src/routes/Explorer.svelte
 msgid "اكتب فاصلة أو اختر سورة، ثم افتح النتيجة في المصحف لرؤية رأس الآية في سياق القراءة."
@@ -2098,14 +1113,6 @@ msgid "ابدأ بالبحث"
 msgstr "Start with a search"
 
 #: src/routes/Explorer.svelte
-msgid "لن تُعرض كل البيانات قبل أن تحدد ما تريد الوصول إليه."
-msgstr "The full dataset is not shown until you narrow what you want to find."
-
-#: src/routes/Explorer.svelte
-msgid "هذا يحافظ على الصفحة كأداة بحث لا كجدول تدقيق. جرّب فاصلة، سورة، أو حكم الرأس في مذهب العدّ المختار."
-msgstr "This keeps the page a search tool rather than an audit table. Try a fāṣilah, a surah, or the head decision in the selected counting madhhab."
-
-#: src/routes/Explorer.svelte
 msgid "ابحث عن “الرحيم”"
 msgstr "Search for “al-Raḥīm”"
 
@@ -2116,10 +1123,6 @@ msgstr "Heads in al-Fātiḥah"
 #: src/routes/Explorer.svelte
 msgid "ما لا يعده المذهب المختار"
 msgstr "Not counted by the selected madhhab"
-
-#: src/routes/Explorer.svelte
-msgid "لا يوجد رأس آية يطابق البحث الحالي."
-msgstr "No head of ayah matches the current search."
 
 #: src/routes/Explorer.svelte
 msgid "غيّر النص أو المرشحات ثم جرّب من جديد."
@@ -2133,9 +1136,6 @@ msgstr "Reset search"
 msgid "تفاصيل"
 msgstr "Details"
 
-#~ msgid "افتح في المصحف"
-#~ msgstr "Open in mushaf"
-
 #: src/components/BoundaryDetail.svelte
 msgid "يعده:"
 msgstr "Counted by:"
@@ -2143,17 +1143,6 @@ msgstr "Counted by:"
 #: src/components/BoundaryDetail.svelte
 msgid "لا يعده:"
 msgstr "Not counted by:"
-
-#~ msgid "افتح هذا الرأس في المصحف"
-#~ msgstr "Open this head in the mushaf"
-
-#: src/routes/AyahCounts.svelte
-msgid "أعداد الآي في مذاهب العدّ الستة."
-msgstr "Ayah counts in the six counting madhhabs."
-
-#: src/routes/AyahCounts.svelte
-msgid "هذا مرجع سريع لمجموع آيات القرآن وعدد آيات كل سورة في كل مذهب عدّ. اختلاف العدد هنا اختلاف في رؤوس الآي وترقيمها، لا في نص القرآن."
-msgstr "A concise reference for the Qur’an total and per-surah ayah counts in each counting madhhab. Count differences are differences in ayah heads and numbering, not in the Qur’anic text."
 
 #: src/routes/AyahCounts.svelte
 msgid "عدد آيات كل سورة"
@@ -2164,10 +1153,6 @@ msgid "اختر رقمًا من الجدول لفتح السورة مباشرة 
 msgstr "Choose a number in the table to open the surah directly with the numbering of that column’s counting madhhab."
 
 #: src/routes/Madhhab.svelte
-msgid "اقرأ السور بترقيم هذا المذهب، أو راجع أعداد السور كاملة في الجدول أدناه."
-msgstr "Read surahs with this madhhab’s numbering, or review the complete per-surah counts in the table below."
-
-#: src/routes/Madhhab.svelte
 msgid "ابحث في رؤوس الآي"
 msgstr "Search ayah heads"
 
@@ -2176,70 +1161,12 @@ msgid "رؤوس آي مختلف فيها يعدها"
 msgstr "Disputed ayah heads it counts"
 
 #: src/routes/Project.svelte
-msgid "يضع المشروع مواضع الخلاف في رؤوس الآي داخل سياق التلاوة، ويبيّن أي مذاهب العدّ تعدّ الفاصلة رأس آية وأيها لا تعدّها."
-msgstr "The project places disputed heads of ayah inside the reading context and shows which counting madhhabs count a fāṣilah as a head of ayah and which do not."
-
-#: src/routes/Project.svelte
 msgid "المسار العملي"
 msgstr "Practical flow"
-
-#~ msgid "اختر مذهب العدّ."
-#~ msgstr "Choose the counting madhhab."
-
-#~ msgid "يبدأ المرجع من الترقيم الذي تريد القراءة به، لا من جدول مقارنة عام."
-#~ msgstr "The reference starts from the numbering you want to read with, not from a general comparison table."
-
-#~ msgid "اختر السورة."
-#~ msgstr "Choose the surah."
-
-#~ msgid "تظهر الآيات مرقمة بحسب المذهب المختار حتى يبقى النص هو مركز التجربة."
-#~ msgstr "The ayahs are numbered according to the selected madhhab so the text remains central."
-
-#~ msgid "افتح التفصيل عند الحاجة."
-#~ msgstr "Open detail only when needed."
-
-#~ msgid "عند رأس الآية المختلف فيه يظهر من يعدّه ومن لا يعدّه مع الشواهد المتاحة."
-#~ msgstr "At a disputed head of ayah, the detail shows who counts it, who does not, and the available evidence."
-
-#: src/routes/Project.svelte
-msgid "الفائدة الأساسية هي ضبط الحدود والإحالات من غير تغيير النص."
-msgstr "The main benefit is precise boundaries and references without changing the text."
-
-#: src/routes/Project.svelte
-msgid "عند الانتقال بين مصاحف وكتب تستعمل ترقيمًا مختلفًا، يجعل مذهب العدّ الإحالة إلى السورة والآية أوضح."
-msgstr "When moving between muṣḥafs and books that use different numbering, the counting madhhab makes surah-and-ayah references clearer."
-
-#: src/routes/Project.svelte
-msgid "يركّز الموقع على حدود الآيات وترقيمها. التفاصيل الفنية وملفات الربط تبقى في صفحة المطور حتى تظل صفحات الباحث مركزة على القراءة والشواهد."
-msgstr "The site focuses on ayah boundaries and numbering. Technical details and linking files stay on the Developer page so researcher pages remain focused on reading and evidence."
-
-#: src/routes/Docs.svelte
-msgid "مكتبة مختصرة للباحث."
-msgstr "A concise researcher library."
-
-#: src/routes/Docs.svelte
-msgid "تضم هذه الصفحة الوثائق العامة فقط: التعريف بالمشروع، والمنهج، وإرشادات المراجعة العلمية. تفاصيل الملفات الفنية موجودة في صفحة المطور."
-msgstr "This page contains only public documents: the project introduction, methodology, and scholarly review guidance. Technical file details are on the Developer page."
-
-#: src/routes/Doc.svelte
-msgid "واجهة الموقع الآن بلغة مختلفة عن لغة هذه الوثيقة."
-msgstr "The site interface is currently in a different language than this document."
-
-#: src/routes/Developer.svelte
-msgid "ثبّت محورًا داخليًا واحدًا، ثم حوّل منه فقط عند العرض أو الإدخال. في هذه البيانات يكون المحور العملي هو الكوفي/حفص."
-msgstr "Keep one internal axis, then convert from it only at display or input boundaries. In these data, the operational axis is Kufi/Hafs."
-
-#: src/routes/Developer.svelte
-msgid "هذه الصفحة ثانوية وموجهة لمن يدمج البيانات أو يراجعها. مسار الباحث يبدأ من المصحف وأعداد الآي والبحث."
-msgstr "This is a secondary page for people integrating or reviewing the data. The researcher path starts with Mushaf, Ayah Counts, and Search."
 
 #: src/routes/Developer.svelte
 msgid "الملفات الأساسية"
 msgstr "Core files"
-
-#: src/routes/Developer.svelte
-msgid "معظم التطبيقات تحتاج هذه الملفات فقط."
-msgstr "Most applications need only these files."
 
 #: src/routes/Developer.svelte
 msgid "الملف"
@@ -2254,74 +1181,20 @@ msgid "لتحويل رقم حفص/الكوفي إلى مذهب عدّ آخر ع�
 msgstr "To convert a Kufi/Hafs number into another counting madhhab at display time."
 
 #: src/routes/Developer.svelte
-msgid "لإرجاع ترقيم خارجي إلى المحور الداخلي."
-msgstr "To map external numbering back to the internal axis."
-
-#: src/routes/Developer.svelte
 msgid "عندما يبدأ تطبيقك من اسم الراوي لا من اسم مذهب العدّ."
 msgstr "When your app starts from a rawi name rather than a counting madhhab name."
-
-#: src/routes/Developer.svelte
-msgid "لعرض عدد آيات السورة أو التحقق من حدود التنقل."
-msgstr "To show a surah ayah count or validate navigation bounds."
 
 #: src/routes/Developer.svelte
 msgid "أمثلة قصيرة"
 msgstr "Short examples"
 
 #: src/routes/Developer.svelte
-msgid "ابدأ بالمحمّل ثم افتح المثال الذي تحتاجه."
-msgstr "Start with the loader, then open the example you need."
-
-#: src/routes/Developer.svelte
-msgid "محمّل JSON أساسي"
-msgstr "Basic JSON loader"
-
-#: src/routes/Developer.svelte
-msgid "استبدله بمحمّل الملفات أو نظام الاستيراد الذي تعتمد عليه."
-msgstr "Replace it with your file loader or import system."
-
-#: src/routes/Developer.svelte
-msgid "حوّل من حفص/الكوفي إلى مذهب عدّ آخر"
-msgstr "Convert from Kufi/Hafs to another counting madhhab"
-
-#: src/routes/Developer.svelte
-msgid "أعد ترقيمًا آخر إلى حفص/الكوفي"
-msgstr "Map another numbering back to Kufi/Hafs"
-
-#: src/routes/Developer.svelte
 msgid "اربط الراوي بمذهب العدّ"
 msgstr "Connect a rawi to its counting madhhab"
-
-#: src/routes/Developer.svelte
-msgid "تفاصيل البنية وحزم المصادر."
-msgstr "Schema and source-bundle details."
-
-#~ msgid "إذا كان الموقع تحت مسار فرعي، مرّر <span class=\"inline_code\">BASE_PATH</span> إلى Vite حتى تبقى الأصول والمسارات صحيحة."
-#~ msgstr "If the site lives under a subpath, pass <span class=\"inline_code\">BASE_PATH</span> to Vite so assets and routes stay correct."
-
-#: src/routes/DeveloperDiagnostics.svelte
-msgid "مراجعة داخلية هادئة لسلامة البيانات."
-msgstr "Quiet internal review for data integrity."
-
-#: src/routes/DeveloperDiagnostics.svelte
-msgid "هذه الصفحة مخصصة للمحافظة على البيانات وتقدير عبء المراجعة. تعرض جداول صيانة فقط حتى يبقى مسار الباحث منفصلًا وواضحًا."
-msgstr "This page is for maintaining the data and estimating review workload. It shows maintenance tables only so the researcher path stays separate and clear."
-
-#~ msgid "افتح البحث"
-#~ msgstr "Open Search"
 
 #: src/routes/DeveloperDiagnostics.svelte
 msgid "عبء المراجعة"
 msgstr "Review workload"
-
-#: src/routes/DeveloperDiagnostics.svelte
-msgid "الرؤوس المعدودة التي تحتاج إلى شواهد."
-msgstr "Counted heads that still need evidence."
-
-#: src/routes/DeveloperDiagnostics.svelte
-msgid "يعرض هذا الجدول العمل المتبقي لكل مذهب عدّ من غير ألوان حالة أو تصنيف بصري."
-msgstr "This table shows the remaining work for each counting madhhab without status colors or visual scoring."
 
 #: src/routes/DeveloperDiagnostics.svelte
 #: src/routes/DeveloperDiagnostics.svelte
@@ -2345,10 +1218,6 @@ msgid "ملخص الشواهد"
 msgstr "Evidence summary"
 
 #: src/routes/DeveloperDiagnostics.svelte
-msgid "أرقام داخلية لمتابعة اكتمال التوثيق."
-msgstr "Internal numbers for tracking documentation completeness."
-
-#: src/routes/DeveloperDiagnostics.svelte
 msgid "رؤوس مختلفة"
 msgstr "Disputed heads"
 
@@ -2359,14 +1228,6 @@ msgstr "With primary evidence"
 #: src/routes/DeveloperDiagnostics.svelte
 msgid "مسافات داخلية"
 msgstr "Internal distances"
-
-#: src/routes/DeveloperDiagnostics.svelte
-msgid "تشخيص التشابه بين مذاهب العدّ."
-msgstr "Diagnostics for similarity between counting madhhabs."
-
-#: src/routes/DeveloperDiagnostics.svelte
-msgid "هذه الجداول للمراجعين فقط. واجهة الباحث لا تحتاج إلى لغة المسافة أو المقارنة."
-msgstr "These tables are for reviewers only. The researcher interface does not need distance or comparison language."
 
 #: src/routes/DeveloperDiagnostics.svelte
 msgid "أقرب وأبعد مذهب لكل مذهب"
@@ -2384,139 +1245,926 @@ msgstr "Complete difference matrix"
 #. 0: selected_madhhab_name; 1: selected_madhhab_counts ? 'يعده رأس آية' \\: 'لا يعده رأس آية'
 #: src/components/BoundaryDetail.svelte
 msgid "في {0}: {1}."
-msgstr ""
+msgstr "In {0}: {1}."
 
 #. 0: compact_number(row.evidence.length)
 #: src/components/BoundaryDetail.svelte
 msgid "<0/> الشواهد ({0})"
-msgstr ""
+msgstr "<0/> Evidence ({0})"
 
 #. 0: join_system_names(item.supports)
 #: src/components/BoundaryDetail.svelte
 msgid "يسند: {0}"
-msgstr ""
+msgstr "Supports: {0}"
 
 #: src/components/Header.svelte
 msgid "التنقل الرئيسي"
-msgstr ""
+msgstr "Main navigation"
 
 #: src/components/Header.svelte
 msgid "التنقل الرئيسي للجوال"
-msgstr ""
+msgstr "Main navigation (mobile)"
 
 #: src/components/SiteFooter.svelte
 msgid "روابط إضافية"
-msgstr ""
+msgstr "More links"
 
 #. 0: getShortLabel(displaySystemId); 1: compact_number(pairDifferenceSummary.displayOnlyCount); 2: getShortLabel(comparisonSystemId); 3: compact_number(pairDifferenceSummary.comparisonOnlyCount)
 #: src/components/SurahMushafViewer.svelte
 msgid "{0} فقط: {1} · {2} فقط: {3}"
-msgstr ""
+msgstr "{0} only: {1} · {2} only: {3}"
 
 #: src/routes/DeveloperDiagnostics.svelte
 msgid "افتح البحث <0/>"
-msgstr ""
+msgstr "Open search <0/>"
 
 #: src/routes/Developer.svelte
 msgid "اقرأ دليل المشروع"
-msgstr ""
-
-#: src/routes/Developer.svelte
-msgid "إذا كان الموقع تحت مسار فرعي، مرّر <0/> إلى Vite حتى تبقى الأصول والمسارات صحيحة."
-msgstr ""
+msgstr "Read the project guide"
 
 #: src/routes/Explorer.svelte
 msgid "الرحيم"
-msgstr ""
+msgstr "al-Rahim"
 
 #. 0: compact_number(visible_rows.length)
 #: src/routes/Explorer.svelte
 msgid "· تظهر أول {0} نتيجة فقط"
-msgstr ""
+msgstr "· showing the first {0} only"
 
 #. 0: compact_number(filtered_rows.length)
 #: src/routes/Explorer.svelte
 msgid "{0} نتيجة مطابقة<0/>"
-msgstr ""
+msgstr "{0} matching results<0/>"
 
 #. 0: get_system_name(selected_system); 1: selectedCounts ? 'يعده رأس آية' \\: 'لا يعده رأس آية'; 2: row.counted_by.length ? join_system_names(row.counted_by) \\: 'لا أحد'
 #: src/routes/Explorer.svelte
 msgid "{0} {1}. يعده: {2}."
-msgstr ""
+msgstr "{0} {1}. Counted by: {2}."
 
 #: src/routes/Explorer.svelte
 msgid "افتح في المصحف <0/>"
-msgstr ""
+msgstr "Open in the mushaf <0/>"
 
 #: src/routes/Madhhab.svelte
 msgid "<0/> آية في القرآن"
-msgstr ""
+msgstr "<0/> ayahs in the Qur'an"
 
 #: src/routes/Madhhab.svelte
 msgid "<0/> سورة فيها رؤوس آي مختلف فيها يعدها هذا المذهب"
-msgstr ""
+msgstr "<0/> surahs with disputed heads that this madhhab counts"
 
 #: src/routes/Madhhab.svelte
 msgid "القراءات المرتبطة:"
-msgstr ""
+msgstr "Related qiraat:"
 
 #: src/routes/Madhhab.svelte
 msgid "افتح المصحف بهذا المذهب <0/>"
-msgstr ""
-
-#. 0: get_system_name(system_info)
-#: src/routes/Madhhab.svelte
-msgid "كل رابط يفتح السورة في المصحف مع ترقيم {0}."
-msgstr ""
-
-#. 0: get_system_name(selected_system)
-#: src/routes/Mushaf.svelte
-msgid "ستُفتح السورة بترقيم {0}."
-msgstr ""
+msgstr "Open the mushaf in this madhhab <0/>"
 
 #. 0: compact_number(surah.counts[selected_system_id]); 1: get_system_name(selected_system); 2: compact_number(surah.disputed_points)
 #: src/routes/Mushaf.svelte
 msgid "{0} آية في {1} · {2} رأس آية مختلف فيه"
-msgstr ""
+msgstr "{0} ayahs in {1} · {2} disputed heads"
 
 #: src/routes/Mushaf.svelte
 msgid "اقرأ"
-msgstr ""
-
-#~ msgid "{0} فقط: {1} · {2} فقط: {3}0: compact_number(row.evidence.length)"
-#~ msgstr ""
-
-#~ msgid "اقرأoutes/Developer.svelte"
-#~ msgstr ""
+msgstr "Read"
 
 #: src/routes/Surah.svelte
 #: src/routes/Surah.svelte
 msgid "<0/> اختيار سورة"
-msgstr ""
-
-#. 0: get_system_name(display_system) || pager_system_id; 1: compact_number(display_count); 2: compact_number(surah_info.disputed_points)
-#: src/routes/Surah.svelte
-msgid "تعرض القراءة هنا ترقيم {0}: {1} آية، وفي السورة {2} رأس آية مختلف فيه ضمن البيانات الحالية."
-msgstr ""
+msgstr "<0/> Choose a surah"
 
 #. 0: compact_number(surah_rows.length)
 #: src/routes/Surah.svelte
 msgid "رؤوس الآي المختلف فيها في هذه السورة ({0})"
-msgstr ""
+msgstr "Disputed heads in this surah ({0})"
 
 #. 0: row.counted_by.map(get_system_name).join('، ')
 #: src/routes/Surah.svelte
 msgid "يعده: {0}"
-msgstr ""
+msgstr "Counted by: {0}"
+
+#: src/routes/Developer.svelte
+msgid "البداية السريعة"
+msgstr "Quick start"
 
 #: src/routes/Project.svelte
-msgid "<0>اختر مذهب العدّ.</0> يبدأ المرجع من الترقيم الذي تريد القراءة به، لا من جدول مقارنة عام."
-msgstr ""
+msgid "الحال"
+msgstr "Status"
+
+#: src/routes/Developer.svelte
+#: src/routes/Developer.svelte
+#: src/routes/Project.svelte
+msgid "معناها"
+msgstr "Meaning"
+
+#: src/routes/Developer.svelte
+#: src/routes/Developer.svelte
+msgid "حقل إضافي"
+msgstr "Extra field"
+
+#: src/routes/Docs.svelte
+msgid "كل الوثائق"
+msgstr "All documents"
+
+#: src/routes/Docs.svelte
+msgid "ابحث في الوثائق"
+msgstr "Search the documents"
+
+#: src/routes/Docs.svelte
+msgid "وثائق أخرى"
+msgstr "Other documents"
+
+#: src/components/FatihaSpecimen.svelte
+msgid "الكوفي والمكي"
+msgstr "The Kufan and the Makkan"
+
+#: src/components/FatihaSpecimen.svelte
+msgid "المدنيان والبصري والدمشقي"
+msgstr "The two Madinan, the Basran, and the Damascene"
+
+#: src/routes/Home.svelte
+msgid "الفرق عن الكوفي"
+msgstr "Difference from Kufi"
+
+#: src/routes/Home.svelte
+msgid "حال التوثيق"
+msgstr "State of documentation"
+
+#: src/routes/Home.svelte
+#: src/routes/Project.svelte
+msgid "مكتبة الوثائق"
+msgstr "Docs library"
 
 #: src/routes/Project.svelte
-msgid "<0>اختر السورة.</0> تظهر الآيات مرقمة بحسب المذهب المختار حتى يبقى النص هو مركز التجربة."
-msgstr ""
+msgid "مذهب متوارث في عدّ الآي، تنسبه كتب العدّ إلى أهل مِصْر من الأمصار كالمدينة ومكة والبصرة والشام والكوفة."
+msgstr "A transmitted school of ayah counting, attributed by the counting literature to the scholars of one of the great cities: Madinah, Makkah, Basra, Damascus, and Kufa."
 
 #: src/routes/Project.svelte
-msgid "<0>افتح التفصيل عند الحاجة.</0> عند رأس الآية المختلف فيه يظهر من يعدّه ومن لا يعدّه مع الشواهد المتاحة."
-msgstr ""
+msgid "موضع الخلاف"
+msgstr "Disputed position"
+
+#: src/routes/Project.svelte
+msgid "الأثر في الترقيم"
+msgstr "Effect on numbering"
+
+#: src/routes/Project.svelte
+msgid "المصطلحات"
+msgstr "Terms"
+
+#: src/routes/Project.svelte
+msgid "الموضع واقع في آخر آية كوفية. فمن لم يعدّه من المذاهب ضمّ هذه الآية إلى ما بعدها، فنقص عدده عن الكوفي."
+msgstr "The position falls at the end of a Kufan ayah. Any madhhab that does not count it merges that ayah with the next, so its total falls below Kufi's."
+
+#: src/routes/Project.svelte
+msgid "الموضع واقع داخل آية كوفية. فمن عدّه من المذاهب فصل هذه الآية إلى آيتين، فزاد عدده على الكوفي."
+msgstr "The position falls inside a Kufan ayah. Any madhhab that counts it splits that ayah in two, so its total rises above Kufi's."
+
+#: src/routes/Project.svelte
+msgid "التوثيق"
+msgstr "Documentation"
+
+#: src/lib/format.js
+#: src/routes/Project.svelte
+msgid "موثق بأصل"
+msgstr "Primary-cited"
+
+#: src/routes/Project.svelte
+msgid "ثبت الموضع بنصّ من كتب العدّ المعتمدة، مثل \"البيان في عدّ آي القرآن\" لأبي عمرو الداني."
+msgstr "The position is established by a text from the accepted counting works, such as \\\"al-Bayan fi 'Add Ay al-Qur'an\\\" by Abu 'Amr al-Dani."
+
+#: src/routes/Project.svelte
+msgid "شواهد ثانوية"
+msgstr "Secondary evidence"
+
+#: src/routes/Project.svelte
+msgid "لم يثبت بأصل بعد، وإنما اعتُمد فيه على المنظومات والشروح المتأخرة."
+msgstr "Not yet established from a primary work; it currently rests on later didactic poems and commentaries."
+
+#: src/routes/Project.svelte
+msgid "تعارضت فيه المصادر، فتُرك الخلاف ظاهرًا ولم يُرجَّح."
+msgstr "The sources conflict, so the disagreement is left visible rather than resolved."
+
+#: src/routes/Project.svelte
+msgid "غير موثق بعد"
+msgstr "Not yet documented"
+
+#: src/routes/Project.svelte
+msgid "معرفة الرأس تعين القارئ والمعلّم على تمييز موضع انتهاء الآية في مذهب العدّ المختار."
+msgstr "Knowing the head of ayah helps the reader and the teacher identify where an ayah ends in the chosen counting madhhab."
+
+#: src/routes/Project.svelte
+msgid "وعند الانتقال بين مصاحف وكتب تستعمل ترقيمًا مختلفًا، تصير الإحالة إلى السورة والآية أوضح وأضبط."
+msgstr "And when moving between mushafs and books that use different numbering, citing surah and ayah becomes clearer and more exact."
+
+#: src/lib/format.js
+msgid "موثق بأصل ومراجَع"
+msgstr "Primary-cited and reviewed"
+
+#: src/lib/format.js
+msgid "يضمّ الترقيم"
+msgstr "Merges numbering"
+
+#: src/lib/format.js
+msgid "يعدّ"
+msgstr "Counts"
+
+#. 0: format_number(value)
+#: src/lib/format.js
+msgid "العدد المتوارث {0}"
+msgstr "Transmitted total {0}"
+
+#: src/routes/Project.svelte
+msgid "الموضع مثبت في البيانات، ولم يُنقَل شاهده من مصدره إلى الآن."
+msgstr "The position is recorded in the data, but its evidence has not yet been transcribed from the source."
+
+#: src/routes/Docs.svelte
+msgid "افتح صفحة المطور"
+msgstr "Open the developer page"
+
+#: src/routes/Project.svelte
+msgid "موضع في آخر الآية، يعدّه الكوفي"
+msgstr "A position at the end of an ayah, which Kufi counts"
+
+#: src/routes/Project.svelte
+msgid "موضع داخل الآية، لا يعدّه الكوفي"
+msgstr "A position inside an ayah, which Kufi does not count"
+
+#: src/routes/Home.svelte
+msgid "سورة الفاتحة"
+msgstr "Al-Fatiha"
+
+#: src/routes/Home.svelte
+msgid "اقرأ الفاتحة كاملة"
+msgstr "Read al-Fatiha in full"
+
+#. 0: compact_number(summary.total_points); 1: compact_number(disputed_surah_count); 2: compact_number(surahs.length); 3: compact_number(documented_points); 4: compact_number(summary.by_verification_status.primary_cited); 5: compact_number(summary.by_verification_status.uncited)
+#: src/routes/Home.svelte
+msgid "المواضع المرصودة {0} موضعًا، وقع الخلاف منها في {1} سورة من {2}. وقد بلغ الموثق بشاهد {3} موضعًا، منها {4} موضعًا ثبت بأصل من كتب العدّ، ويبقى {5} موضعًا غير موثق إلى الآن."
+msgstr "{0} positions are recorded, falling across {1} surahs of {2}. Of these, {3} now carry evidence — {4} established from a primary counting work — and {5} remain undocumented."
+
+#: src/components/FatihaSpecimen.svelte
+#: src/components/FatihaSpecimen.svelte
+msgid "٧ آيات"
+msgstr "7 ayahs"
+
+#: src/routes/Project.svelte
+msgid "قراءة الموضع"
+msgstr "Reading a position"
+
+#: src/routes/Project.svelte
+msgid "الفائدة"
+msgstr "Why it matters"
+
+#: src/components/FatihaSpecimen.svelte
+msgid "تُعَدُّ البسملة آية، وتبقى الآية السابعة موصولة."
+msgstr "The basmala is counted as an ayah, and ayah 7 stays whole."
+
+#: src/components/FatihaSpecimen.svelte
+msgid "لا تُعَدُّ البسملة آية، ويُعَدُّ الوقف على ﴿أنعمت عليهم﴾ رأس آية."
+msgstr "The basmala is not counted, and the stop at \"an'amta 'alayhim\" is counted as a head of ayah."
+
+#: src/routes/Docs.svelte
+msgid "المطابق للبحث: <0/>"
+msgstr "Matching your search: <0/>"
+
+#: src/routes/Project.svelte
+msgid "الموضع الذي تنتهي عنده الآية ويبتدئ ما بعدها."
+msgstr "The position at which one ayah ends and the next begins."
+
+#: src/routes/Project.svelte
+msgid "موضع بعينه يعدّه بعض المذاهب رأس آية ويتركه بعضها."
+msgstr "A specific position that some madhhabs count as a head of ayah and others leave."
+
+#: src/routes/Project.svelte
+msgid "ما يلزم من عدّ الموضع أو تركه: ضمّ آيتين في واحدة، أو فصل الواحدة إلى آيتين."
+msgstr "What follows from counting a position or leaving it: two ayahs merge into one, or one splits into two."
+
+#: src/routes/Project.svelte
+msgid "وليس الخلاف عامًّا؛ فمن السور ما خلا منه، ومنها ما فيه موضع أو مواضع."
+msgstr "The disagreement is not universal: some surahs carry none of it, others carry one position or several."
+
+#: src/routes/Project.svelte
+msgid "المقارنة تجري على الترقيم الكوفي؛ لأنه ترقيم المصاحف المنتشرة اليوم."
+msgstr "Comparison runs against Kufan numbering, the numbering of the mushafs in common use today."
+
+#: src/routes/Home.svelte
+msgid "العلامة الذهبية رأسٌ معدود، والدائرة المتقطّعة موضعٌ لا يعدّه هذا المذهب. ولا يكفي مجموع آيات السورة للدلالة على المذهب؛ فالمرجع رؤوس الآي نفسها."
+msgstr "A gold marker is a counted head; a dashed circle is a position this madhhab does not count. A surah's total is not enough to identify a madhhab — the heads of ayah themselves are."
+
+#: src/routes/Home.svelte
+msgid "الفرق محسوب بالنسبة إلى الكوفي؛ لأنه ترقيم المصاحف المنتشرة اليوم."
+msgstr "The difference is measured against Kufi, the numbering of the mushafs in common use today."
+
+#: src/routes/Home.svelte
+msgid "الشواهد معروضة كما هي؛ فغير الموثق يبقى ظاهرًا، ولا يُسوّى بالموثق."
+msgstr "Evidence is shown as it stands: what is undocumented stays visible as such, and is never levelled with what is documented."
+
+#: src/routes/Home.svelte
+msgid "اللفظ في هذين الموضعين واحد، وموضع العلامة مختلف؛ فصارت <0>﴿الحمد لله رب العالمين﴾</0> الآية الثانية في مذهب، والأولى في آخر."
+msgstr "The wording at these two positions is the same; the marker positions are not. That is why <0>al-hamdu lillahi rabbi l-'alamin</0> is the second ayah in one madhhab and the first in another."
+
+#: src/routes/Home.svelte
+msgid "والنص المعروض برواية حفص عن عاصم؛ ومذهب العدّ يغيّر الترقيم لا اللفظ. <0>تنبيه للمراجع العلمي</0>"
+msgstr "The text shown is the riwayah of Hafs from 'Asim; a counting madhhab changes the numbering, not the wording. <0>Note for reviewers</0>"
+
+#: src/routes/Project.svelte
+msgid "تنبيه للمراجع"
+msgstr "Note for reviewers"
+
+#: src/routes/Project.svelte
+msgid "الخلاف في القراءات ليس موضوع هذا المرجع"
+msgstr "Differences between the qiraat are not this reference's subject"
+
+#: src/routes/Project.svelte
+msgid "النص المعروض برواية حفص عن عاصم"
+msgstr "The text shown is the riwayah of Hafs from 'Asim"
+
+#: src/routes/Project.svelte
+msgid "مذهب العدّ لا يخصّ قراءةً بعينها"
+msgstr "A counting madhhab does not belong to one qiraah"
+
+#: src/routes/Project.svelte
+msgid "قد تشترك قراءاتٌ في مذهب عدٍّ واحد، فلا يلزم من اتفاق مذهبين في العدّ اتفاقُ قارئيهما في وجوه القراءة، ولا العكس."
+msgstr "Several qiraat may share a single counting madhhab, so agreement in counting does not entail agreement in reading, nor the reverse."
+
+#: src/routes/Project.svelte
+msgid "ما لم يُنقل شاهده من كتب العدّ يبقى معلَّمًا بأنه غير موثق، وما تعارضت فيه المصادر يبقى مختلفًا فيه من غير ترجيح."
+msgstr "Whatever has no evidence transcribed from the counting literature stays marked as undocumented, and whatever the sources conflict over stays marked as disputed, without adjudication."
+
+#: src/routes/Project.svelte
+msgid "وإذا اختلف رقم الآية بين مصدرين، فقد يكون السبب اختلاف مذهب العدّ، فيُراجَع قبل أن يُظنّ الخطأ في العزو."
+msgstr "When two sources give different ayah numbers, a different counting madhhab may be the cause — worth checking before assuming a faulty citation."
+
+#: src/routes/Project.svelte
+msgid "رؤوس الآي ومذاهب العدّ الستة"
+msgstr "Heads of ayah and the six counting madhhabs"
+
+#: src/routes/Project.svelte
+msgid "تجد كل موضع خلاف في سياقه من المصحف، ومعه من يعدّه من المذاهب ومن يتركه."
+msgstr "Every disputed position appears in its place in the mushaf, with the madhhabs that count it and those that leave it."
+
+#: src/routes/Project.svelte
+msgid "خلافُ العدّ في مواضع رؤوس الآي"
+msgstr "The counting disagreement is about where heads of ayah fall"
+
+#: src/routes/Project.svelte
+msgid "عدُّ الآي علمٌ مستقلٌّ عن وجوه القراءة"
+msgstr "Ayah counting is a science distinct from the variant readings"
+
+#: src/routes/Project.svelte
+msgid "يقتصر هذا المرجع على مواضع رؤوس الآي وأثرها في الترقيم، وهذه حدوده."
+msgstr "This reference covers only the positions of heads of ayah and their effect on numbering. These are its limits."
+
+#: src/routes/Project.svelte
+msgid "ألفاظ يتكرر ورودها"
+msgstr "Recurring terms"
+
+#: src/routes/Project.svelte
+msgid "لموضع الخلاف حالان لا ثالثة لهما"
+msgstr "A disputed position has exactly two cases"
+
+#: src/routes/Project.svelte
+msgid "كيف تقرأ الموضع"
+msgstr "How to read a position"
+
+#: src/routes/Project.svelte
+msgid "لكل موضع حال معلنة في التوثيق"
+msgstr "Every position carries a declared documentation state"
+
+#: src/routes/Project.svelte
+msgid "فوائد معرفة رؤوس الآي"
+msgstr "Why heads of ayah matter"
+
+#: src/routes/Home.svelte
+msgid "سبعُ آياتٍ عند الجميع، ورأسان مختلَفٌ فيهما"
+msgstr "Seven ayahs in every madhhab, and two disputed heads"
+
+#: src/routes/Home.svelte
+msgid "مجموع الآيات في كل مذهب"
+msgstr "Total ayahs in each madhhab"
+
+#: src/routes/Home.svelte
+msgid "ما وُثِّق، وما لم يوثَّق بعد"
+msgstr "What is documented, and what is not yet"
+
+#: src/routes/Developer.svelte
+msgid "خطوات الدمج"
+msgstr "Integration steps"
+
+#: src/routes/Developer.svelte
+msgid "الملفات التي تحتاجها"
+msgstr "The files you need"
+
+#: src/routes/Developer.svelte
+msgid "انسخ المثال الذي تحتاجه"
+msgstr "Copy the example you need"
+
+#: src/routes/Developer.svelte
+msgid "تجنّب هذه الأخطاء"
+msgstr "Avoid these mistakes"
+
+#: src/routes/Developer.svelte
+msgid "تفاصيل البنية وحزم المصادر"
+msgstr "Structure and source bundles"
+
+#: src/routes/Developer.svelte
+msgid "شغّل الموقع على جهازك"
+msgstr "Run the site locally"
+
+#: src/routes/Docs.svelte
+msgid "عقود الملفات وحزم المصادر"
+msgstr "File contracts and source bundles"
+
+#: src/routes/Docs.svelte
+msgid "وثائق المشروع"
+msgstr "Project documents"
+
+#: src/routes/Docs.svelte
+msgid "ابدأ بالتعريف إن كانت زيارتك الأولى، وراجع المنهج قبل الحكم على المواضع."
+msgstr "Start with the introduction if this is your first visit, and read the methodology before judging any position."
+
+#: src/routes/Docs.svelte
+msgid "اقرأ بالترتيب"
+msgstr "Read in order"
+
+#: src/routes/Docs.svelte
+msgid "الوثائق حسب الموضوع"
+msgstr "Documents by topic"
+
+#: src/routes/Docs.svelte
+msgid "ما الذي تبحث عنه؟"
+msgstr "What are you looking for?"
+
+#: src/routes/Docs.svelte
+msgid "لا توجد وثيقة بهذا الاسم. جرّب كلمة أخرى."
+msgstr "No document by that name. Try another word."
+
+#: src/routes/AyahCounts.svelte
+msgid "أعداد الآي في مذاهب العدّ الستة"
+msgstr "Ayah counts across the six madhhabs"
+
+#: src/routes/AyahCounts.svelte
+msgid "قارن مجموع آيات القرآن وعدد آيات كل سورة بين المذاهب الستة. واختلاف العدد راجعٌ إلى مواضع رؤوس الآي، لا إلى وجوه القراءة."
+msgstr "Compare the total ayahs of the Qur'an and of each surah across the six madhhabs. The difference comes from where the heads of ayah fall, not from the variant readings."
+
+#: src/routes/Madhhab.svelte
+msgid "اقرأ السور بترقيم هذا المذهب، أو راجع أعداد السور كاملة."
+msgstr "Read the surahs in this madhhab's numbering, or review the full per-surah counts."
+
+#. 0: get_system_name(system_info)
+#: src/routes/Madhhab.svelte
+msgid "اختر سورة لتقرأها بترقيم {0}."
+msgstr "Choose a surah to read in {0} numbering."
+
+#: src/routes/DeveloperDiagnostics.svelte
+msgid "سلامة البيانات وعبء المراجعة"
+msgstr "Data integrity and review workload"
+
+#: src/routes/DeveloperDiagnostics.svelte
+msgid "تابع ما ينقص من الشواهد، وقدّر العمل المتبقي في كل مذهب عدّ."
+msgstr "Track missing evidence and gauge the work left in each counting madhhab."
+
+#: src/routes/DeveloperDiagnostics.svelte
+msgid "الرؤوس المعدودة التي تحتاج إلى شواهد"
+msgstr "Counted heads that still need evidence"
+
+#: src/routes/DeveloperDiagnostics.svelte
+msgid "اكتمال التوثيق"
+msgstr "Documentation coverage"
+
+#: src/routes/DeveloperDiagnostics.svelte
+msgid "التشابه بين مذاهب العدّ"
+msgstr "Similarity between counting madhhabs"
+
+#: src/routes/Doc.svelte
+msgid "لا توجد هذه الوثيقة"
+msgstr "No such document"
+
+#: src/routes/Doc.svelte
+msgid "هذه الوثيقة بلغة أخرى."
+msgstr "This document is in another language."
+
+#: src/routes/Doc.svelte
+msgid "محتويات الوثيقة"
+msgstr "Contents"
+
+#. 0: get_system_name(display_system) || pager_system_id; 1: compact_number(display_count); 2: compact_number(surah_info.disputed_points)
+#: src/routes/Surah.svelte
+msgid "الترقيم هنا بمذهب {0}: {1} آية، وفيها {2} رأس آية مختلف فيه."
+msgstr "Numbering here follows {0}: {1} ayahs, with {2} disputed heads."
+
+#: src/components/SurahMushafViewer.svelte
+msgid "النص بترقيم المذهب المعروض، وعلامات رؤوس الآي المختلف فيها في مواضعها."
+msgstr "The text carries the displayed madhhab's numbering, with disputed heads marked in place."
+
+#: src/routes/Explorer.svelte
+msgid "ابحث عن رأس آية مختلف فيه"
+msgstr "Find a disputed head of ayah"
+
+#: src/routes/Explorer.svelte
+msgid "ابدأ بكتابة فاصلة أو اختيار سورة"
+msgstr "Start by typing a fasilah or choosing a surah"
+
+#: src/routes/Explorer.svelte
+msgid "أو جرّب أحد هذه المداخل."
+msgstr "Or try one of these."
+
+#: src/routes/Explorer.svelte
+msgid "لا نتائج لهذا البحث"
+msgstr "No results for this search"
+
+#: src/routes/NotFound.svelte
+msgid "لا توجد هذه الصفحة"
+msgstr "This page does not exist"
+
+#: src/routes/NotFound.svelte
+msgid "ابدأ من الرئيسية، أو افتح المصحف."
+msgstr "Start from the home page, or open the mushaf."
+
+#: src/routes/Mushaf.svelte
+msgid "اختر مذهب العدّ ثم السورة"
+msgstr "Choose a counting madhhab, then a surah"
+
+#: src/routes/Mushaf.svelte
+msgid "تُعرض رؤوس الآي المختلف فيها في مواضعها من النص."
+msgstr "Disputed heads of ayah are marked in place in the text."
+
+#. 0: get_system_name(selected_system)
+#: src/routes/Mushaf.svelte
+msgid "تفتح السورة بترقيم {0}."
+msgstr "The surah opens in {0} numbering."
+
+#: src/routes/Mushaf.svelte
+msgid "لا توجد سورة بهذا الاسم"
+msgstr "No surah by that name"
+
+#: src/components/SiteFooter.svelte
+msgid "مرجع لرؤوس الآي في مذاهب العدّ الستة."
+msgstr "A reference for heads of ayah across the six counting madhhabs."
+
+#: src/routes/Surah.svelte
+msgid "لا رؤوس آي مختلف فيها في هذه السورة. راجع أعداد الآي لمعرفة العدد في كل مذهب."
+msgstr "No disputed heads of ayah in this surah. See the ayah counts for the total in each madhhab."
+
+#: src/routes/DeveloperDiagnostics.svelte
+msgid "العمل المتبقي في كل مذهب عدّ."
+msgstr "Work remaining in each counting madhhab."
+
+#: src/routes/DeveloperDiagnostics.svelte
+msgid "عدد المواضع التي يفترق فيها كل مذهبين."
+msgstr "How many positions separate each pair of madhhabs."
+
+#: src/routes/Surah.svelte
+msgid "لا توجد سورة بهذا الرقم"
+msgstr "No surah with that number"
+
+#: src/routes/Madhhab.svelte
+msgid "لا يوجد مذهب عدّ بهذا الاسم"
+msgstr "No counting madhhab by that name"
+
+#: src/routes/Developer.svelte
+msgid "آية واحدة في حفص تقابل آية واحدة في المذهب المطلوب."
+msgstr "One ayah in Hafs maps to one ayah in the target madhhab."
+
+#: src/routes/Developer.svelte
+msgid "الآية تُدمج مع التي بعدها في المذهب المطلوب."
+msgstr "The ayah merges with the next one in the target madhhab."
+
+#: src/routes/Developer.svelte
+msgid "الآية تُقسم إلى آيتين أو أكثر في المذهب المطلوب."
+msgstr "The ayah splits into two or more in the target madhhab."
+
+#: src/routes/Developer.svelte
+msgid "آية واحدة تقابل آية واحدة في حفص."
+msgstr "One ayah maps to one ayah in Hafs."
+
+#: src/routes/Developer.svelte
+msgid "الآية الواحدة تقابل أكثر من آية في حفص."
+msgstr "One ayah covers more than one ayah in Hafs."
+
+#: src/routes/Developer.svelte
+msgid "حوّل أرقام الآيات بين مذاهب العدّ"
+msgstr "Convert ayah numbers between counting madhhabs"
+
+#: src/routes/Developer.svelte
+msgid "احفظ أرقام الآيات في تطبيقك بترقيم حفص، وحوّلها إلى مذهب آخر عند العرض فقط."
+msgstr "Store ayah numbers in Hafs numbering, and convert to another madhhab only when displaying them."
+
+#: src/routes/Developer.svelte
+msgid "افتح فحص البيانات"
+msgstr "Open data checks"
+
+#: src/routes/Developer.svelte
+msgid "لتحويل رقم من مذهب آخر إلى ترقيم حفص."
+msgstr "To convert a number from another madhhab into Hafs numbering."
+
+#: src/routes/Developer.svelte
+msgid "لعرض عدد آيات السورة، أو للتحقق من صحة رقم الآية."
+msgstr "To show a surah's ayah count, or to validate an ayah number."
+
+#: src/routes/Developer.svelte
+msgid "اقرأ حقل status قبل أن تعرض الرقم"
+msgstr "Read the status field before you display the number"
+
+#: src/routes/Developer.svelte
+msgid "لكل آية في ملف التحويل حقل status يوضّح نوع التحويل. وإن تجاهلته، ستعرض أرقامًا خاطئة عند الآيات المدموجة أو المقسومة."
+msgstr "Every ayah in a conversion file has a status field describing the kind of conversion. Ignore it and you will show wrong numbers wherever ayahs merge or split."
+
+#: src/routes/Developer.svelte
+msgid "في ملفات التحويل من حفص"
+msgstr "In the files that convert from Hafs"
+
+#: src/routes/Developer.svelte
+msgid "في ملفات التحويل إلى حفص"
+msgstr "In the files that convert to Hafs"
+
+#: src/routes/Developer.svelte
+msgid "دالة تحميل JSON"
+msgstr "A JSON loader"
+
+#: src/routes/Developer.svelte
+msgid "استبدلها بطريقة تحميل الملفات في مشروعك."
+msgstr "Replace it with however your project loads files."
+
+#: src/routes/Developer.svelte
+msgid "حوّل من حفص إلى مذهب آخر"
+msgstr "Convert from Hafs to another madhhab"
+
+#: src/routes/Developer.svelte
+msgid "الرقم لم يتغير، لكن <0/> يعني أن هذه الآية تُدمج مع التي بعدها."
+msgstr "The number is unchanged, but <0/> means this ayah merges with the next one."
+
+#: src/routes/Developer.svelte
+msgid "حوّل من مذهب آخر إلى حفص"
+msgstr "Convert from another madhhab to Hafs"
+
+#: src/routes/Developer.svelte
+msgid "عند <0/> استعمل المصفوفة <1/> كاملة، لا الرقم الأول فقط."
+msgstr "On <0/>, use the whole <1/> array, not just the first number."
+
+#: src/routes/Developer.svelte
+msgid "لا تعرف مذهب العدّ من مجموع الآيات وحده؛ فقد يتفق المجموع وتختلف المواضع، كما في الفاتحة."
+msgstr "Do not identify a counting madhhab from the total alone: totals can match while the positions differ, as in al-Fatiha."
+
+#: src/routes/Developer.svelte
+msgid "هذه البيانات للترقيم فقط، وليست نصًّا قرآنيًّا. احتفظ بنص المصحف في مصدر منفصل."
+msgstr "This data covers numbering only; it is not Qur'anic text. Keep the mushaf text in a separate source."
+
+#: src/routes/Developer.svelte
+msgid "الرواة الكوفيون ترقيمهم مطابق لحفص، فلا يحتاجون تحويلًا."
+msgstr "Kufan rawis share Hafs numbering, so they need no conversion."
+
+#: src/routes/Developer.svelte
+msgid "إذا نشرت الموقع في مسار فرعي، مرّر <0/> إلى Vite."
+msgstr "If you deploy the site under a sub-path, pass <0/> to Vite."
+
+#: src/routes/Project.svelte
+msgid "اختر مذهب العدّ."
+msgstr "Choose a counting madhhab."
+
+#: src/routes/Project.svelte
+msgid "يبدأ المرجع من الترقيم الذي تريد القراءة به، لا من جدول مقارنة عام."
+msgstr "The reference starts from the numbering you want to read in, not from a generic comparison table."
+
+#: src/routes/Project.svelte
+msgid "اختر السورة."
+msgstr "Choose a surah."
+
+#: src/routes/Project.svelte
+msgid "تظهر الآيات مرقمة بحسب المذهب المختار."
+msgstr "Ayahs are numbered according to the chosen madhhab."
+
+#: src/routes/Project.svelte
+msgid "افتح التفصيل عند الحاجة."
+msgstr "Open the detail when you need it."
+
+#: src/routes/Project.svelte
+msgid "عند رأس الآية المختلف فيه يظهر من يعدّه ومن لا يعدّه مع الشواهد المتاحة."
+msgstr "At a disputed head of ayah you see which madhhabs count it, which do not, and the evidence on record."
+
+#: src/routes/Developer.svelte
+msgid "احفظ الأرقام بترقيم حفص."
+msgstr "Store numbers in Hafs numbering."
+
+#: src/routes/Developer.svelte
+msgid "استعمله وحده في قاعدة البيانات وفي روابط التطبيق."
+msgstr "Use it alone in your database and in your app's links."
+
+#: src/routes/Developer.svelte
+msgid "اقرأ حقل status مع الرقم."
+msgstr "Read the status field along with the number."
+
+#: src/routes/Developer.svelte
+msgid "الرقم وحده لا يكفي: قد تكون الآية دُمجت مع التالية أو قُسمت إلى آيتين."
+msgstr "The number alone is not enough: the ayah may have merged with the next or split in two."
+
+#: src/routes/Developer.svelte
+msgid "حمّل ملفّي التحويل."
+msgstr "Load the two conversion files."
+
+#: src/routes/Developer.svelte
+msgid "واحد يحوّل من حفص إلى المذهب المطلوب، والآخر يحوّل منه إلى حفص."
+msgstr "One converts from Hafs to the target madhhab, the other converts back to Hafs."
+
+#: src/routes/Developer.svelte
+msgid "قيم status"
+msgstr "status values"
+
+#: src/routes/Developer.svelte
+#: src/routes/Developer.svelte
+msgid "القيمة"
+msgstr "Value"
+
+#: src/routes/Home.svelte
+msgid "مدخل"
+msgstr "Introduction"
+
+#: src/routes/Home.svelte
+msgid "عن المشروع"
+msgstr "About the project"
+
+#: src/routes/Home.svelte
+msgid "عدُّ الآي علمٌ يحدّد أين تنتهي كل آية. توارثت الأمصار فيه ستة مذاهب، فاختلف ترقيم الآيات بينها."
+msgstr "Ayah counting is the science of where each ayah ends. Six madhhabs were transmitted through the great cities, and the ayah numbering differs between them."
+
+#: src/routes/Home.svelte
+msgid "يجمع هذا المرجع المواضع التي اختلفت فيها المذاهب، ويعرض كلَّ موضع في سياقه من المصحف مع شواهده من كتب العدّ."
+msgstr "This reference gathers the positions the madhhabs disagree on and shows each one in its place in the mushaf, with its evidence from the counting literature."
+
+#: src/routes/Home.svelte
+msgid "موضوعه الترقيم دون وجوه القراءة. وما لم يثبت بشاهد يبقى معلَّمًا بذلك."
+msgstr "Its subject is numbering, not the variant readings. Whatever is not established by evidence stays marked as such."
+
+#: src/routes/Home.svelte
+msgid "القراءات التي تعدّ به"
+msgstr "Qiraat that count by it"
+
+#: src/routes/Home.svelte
+msgid "المصحف المنتشر برواية حفص عن عاصم، وعدده كوفي. ومصاحف ورش وقالون عن نافع عددها مدني أخير."
+msgstr "The widely printed mushaf is the riwayah of Hafs from 'Asim, which counts by Kufi. Warsh and Qalun mushafs, from Nafi', count by Last Madinan."
+
+#: src/routes/Project.svelte
+msgid "عدُّ الآي علمٌ يبحث في أحوال آيات القرآن الكريم من حيث عددُها في كل سورة، وبيانُ رأس الآية وخاتمتها، معزوًّا إلى ناقله."
+msgstr "Ayah counting is the science that examines the ayahs of the Qur'an: how many there are in each surah, and where each ayah begins and ends — always attributed to the one who transmitted it."
+
+#: src/routes/Project.svelte
+msgid "والاختلاف فيه اختلافٌ في تحديد موضع انتهاء الآية، وليس زيادةً في الآيات ولا نقصًا منها، ولا زيادةَ ألفاظ."
+msgstr "Disagreement within it concerns where an ayah ends. It is not an addition to the ayahs, nor an omission from them, nor any addition of wording."
+
+#: src/routes/Project.svelte
+msgid "فسورة الإخلاص أربعُ آيات في المدني الأول والمدني الأخير والبصري والكوفي، وخمسُ آيات في المكي والدمشقي؛ والخلاف في <0>﴿لم يلد ولم يولد﴾</0>: أهي آية واحدة أم آيتان؟"
+msgstr "Surat al-Ikhlas is four ayahs in First Madinan, Last Madinan, Basran, and Kufan, and five in Makkan and Damascene. The disagreement is over <0>lam yalid wa-lam yulad</0>: one ayah, or two?"
+
+#: src/routes/Project.svelte
+msgid "أهل العدد"
+msgstr "Who transmitted each"
+
+#: src/routes/Project.svelte
+msgid "ستةُ مذاهب، بعدد المصاحف التي وجّهها عثمان إلى الأمصار"
+msgstr "Six madhhabs, matching the mushafs 'Uthman sent to the great cities"
+
+#: src/routes/Project.svelte
+msgid "لكل مذهب ناقلٌ يُعزى إليه، وعليه يُعتمد في القراءات."
+msgstr "Each madhhab has a transmitter it is attributed to, and the qiraat rely on it accordingly."
+
+#: src/routes/Project.svelte
+msgid "المذهب"
+msgstr "Madhhab"
+
+#: src/routes/Project.svelte
+msgid "نقلُه"
+msgstr "Transmission"
+
+#: src/routes/Project.svelte
+msgid "يُعتمد لـ"
+msgstr "Relied on for"
+
+#: src/routes/Project.svelte
+msgid "المدني الأول"
+msgstr "First Madinan"
+
+#: src/routes/Project.svelte
+msgid "ما يرويه نافع عن شيخيه أبي جعفر وشيبة بن نصاح."
+msgstr "Transmitted by Nafi' from his two teachers Abu Ja'far and Shayba ibn Nassah."
+
+#: src/routes/Project.svelte
+msgid "قالون وأبو جعفر"
+msgstr "Qalun and Abu Ja'far"
+
+#: src/routes/Project.svelte
+msgid "المدني الأخير"
+msgstr "Last Madinan"
+
+#: src/routes/Project.svelte
+msgid "ما يرويه إسماعيل بن جعفر وقالون عن سليمان بن مسلم بن جمّاز، عن شيبة وأبي جعفر."
+msgstr "Transmitted by Isma'il ibn Ja'far and Qalun from Sulayman ibn Muslim ibn Jammaz, from Shayba and Abu Ja'far."
+
+#: src/routes/Project.svelte
+msgid "ورش"
+msgstr "Warsh"
+
+#: src/routes/Project.svelte
+msgid "المكي"
+msgstr "Makkan"
+
+#: src/routes/Project.svelte
+msgid "ما رواه عبد الله بن كثير عن مجاهد بن جبر، عن ابن عباس، عن أُبيّ بن كعب، عن رسول الله ﷺ."
+msgstr "Transmitted by 'Abd Allah ibn Kathir from Mujahid ibn Jabr, from Ibn 'Abbas, from Ubayy ibn Ka'b, from the Messenger of Allah ﷺ."
+
+#: src/routes/Project.svelte
+msgid "ابن كثير"
+msgstr "Ibn Kathir"
+
+#: src/routes/Project.svelte
+msgid "البصري"
+msgstr "Basran"
+
+#: src/routes/Project.svelte
+msgid "ما يرويه عاصم الجحدري وأيوب بن المتوكل ويعقوب الحضرمي."
+msgstr "Transmitted by 'Asim al-Jahdari, Ayyub ibn al-Mutawakkil, and Ya'qub al-Hadrami."
+
+#: src/routes/Project.svelte
+msgid "أبو عمرو ويعقوب"
+msgstr "Abu 'Amr and Ya'qub"
+
+#: src/routes/Project.svelte
+msgid "الكوفي"
+msgstr "Kufan"
+
+#: src/routes/Project.svelte
+msgid "ما رواه حمزة عن ابن أبي ليلى، وسفيان الثوري عن عبد الأعلى، كلاهما عن أبي عبد الرحمن السلمي، عن علي بن أبي طالب."
+msgstr "Transmitted by Hamza from Ibn Abi Layla, and by Sufyan al-Thawri from 'Abd al-A'la, both from Abu 'Abd al-Rahman al-Sulami, from 'Ali ibn Abi Talib."
+
+#: src/routes/Project.svelte
+msgid "عاصم وحمزة والكسائي وخلف"
+msgstr "'Asim, Hamza, al-Kisa'i, and Khalaf"
+
+#: src/routes/Project.svelte
+msgid "الدمشقي"
+msgstr "Damascene"
+
+#: src/routes/Project.svelte
+msgid "ما رواه يحيى بن الحارث الذماري عن عبد الله بن عامر، عن أبي الدرداء."
+msgstr "Transmitted by Yahya ibn al-Harith al-Dhimari from 'Abd Allah ibn 'Amir, from Abu al-Darda'."
+
+#: src/routes/Project.svelte
+msgid "ابن عامر"
+msgstr "Ibn 'Amir"
+
+#: src/routes/Project.svelte
+msgid "وبعضهم يزيد عدًّا سابعًا هو الحمصي، وهو ما رواه شريح بن يزيد مسندًا إلى خالد بن معدان."
+msgstr "Some add a seventh, the Homsi count, transmitted by Shurayh ibn Yazid with a chain to Khalid ibn Ma'dan."
+
+#: src/routes/Project.svelte
+msgid "المؤلفات"
+msgstr "Works"
+
+#: src/routes/Project.svelte
+msgid "من كتب هذا العلم"
+msgstr "Works in this field"
+
+#: src/routes/Project.svelte
+msgid "\"البيان في عدّ آي القرآن\" لأبي عمرو الداني"
+msgstr "\"Al-Bayan fi 'Add Ay al-Qur'an\" by Abu 'Amr al-Dani"
+
+#: src/routes/Project.svelte
+msgid "\"ناظمة الزهر\" للشاطبي"
+msgstr "\"Nazimat al-Zahr\" by al-Shatibi"
+
+#: src/routes/Project.svelte
+msgid "\"حسن المدد\" للجعبري"
+msgstr "\"Husn al-Madad\" by al-Ja'bari"
+
+#: src/routes/Project.svelte
+msgid "\"سعادة الدارين في بيان وعدّ آي معجز الثقلين\" لمحمد بن علي بن خلف الحداد الحسيني"
+msgstr "\"Sa'adat al-Darayn\" by Muhammad ibn 'Ali ibn Khalaf al-Haddad al-Husayni"
+
+#: src/routes/Project.svelte
+msgid "\"القول الوجيز في معرفة فواصل الكتاب العزيز\" للمخلّلاتي"
+msgstr "\"Al-Qawl al-Wajiz fi Ma'rifat Fawasil al-Kitab al-'Aziz\" by al-Mukhallalati"
+
+#: src/routes/Project.svelte
+msgid "\"الفرائد الحسان في عدّ آي القرآن\" للقاضي"
+msgstr "\"Al-Fara'id al-Hisan fi 'Add Ay al-Qur'an\" by al-Qadi"
+
+#: src/routes/Project.svelte
+msgid "\"مرشد الخلان إلى معرفة عدّ آي القرآن\" لعبد الرزاق علي موسى"
+msgstr "\"Murshid al-Khillan ila Ma'rifat 'Add Ay al-Qur'an\" by 'Abd al-Razzaq 'Ali Musa"
+
+#: src/routes/Project.svelte
+msgid "بين القراءات اختلافٌ في فرش الحروف، نحو <0>﴿مالك يوم الدين﴾</0> و<1>﴿ملك يوم الدين﴾</1>. وهذا خارج نطاق المشروع."
+msgstr "The qiraat differ in the wording of individual words — for example <0>māliki yawmi l-dīn</0> and <1>maliki yawmi l-dīn</1>. That is outside the scope of this project."
+
+#: src/routes/Project.svelte
+msgid "المصحف هنا مرسومٌ بالرسم العثماني على رواية حفص، ولا يتبدّل لفظه باختيار مذهب عدٍّ آخر؛ فالذي يتبدّل هو الترقيم وحده."
+msgstr "The mushaf here is set in Uthmani orthography following Hafs. Choosing another counting madhhab changes the numbering only, not the wording."
+
+#: src/routes/Project.svelte
+msgid "لا نتجاوز ما يشهد به المصدر"
+msgstr "We do not go beyond what the source attests"
+
+#: src/routes/Project.svelte
+msgid "الشواهد مفصولة عن المواضع؛ فلا يُعرض الموضع أقوى مما تحتمله مصادره. وحال التوثيق ظاهرة في صفحة كل موضع."
+msgstr "Evidence is kept separate from the positions, so no position is presented as stronger than its sources allow. The documentation state is visible on each position's page."

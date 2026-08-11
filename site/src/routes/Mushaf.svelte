@@ -49,9 +49,9 @@ function get_mushaf_href(surah) {
 
 <section class="max-w-4xl">
   <div class="rule_label">المصحف</div>
-  <h1 class="section_title mt-4">اختر مذهب العدّ ثم السورة.</h1>
+  <h1 class="section_title mt-4">اختر مذهب العدّ ثم السورة</h1>
   <p class="section_text mt-4 text-lg">
-    هذه هي نقطة الدخول الرئيسة للقراءة: يفتح الرابط عارض المصحف بترقيم مذهب العدّ المختار، وتظهر رؤوس الآي المختلف فيها داخل النص.
+    تُعرض رؤوس الآي المختلف فيها في مواضعها من النص.
   </p>
 </section>
 
@@ -69,15 +69,15 @@ function get_mushaf_href(surah) {
     <label>
       <span class="field_label">السورة</span>
       <div class="relative mt-3">
-        <SearchIcon class="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-ink-soft" />
-        <input class="search pl-10" bind:value={query} placeholder="ابحث عن سورة" />
+        <SearchIcon class="pointer-events-none absolute top-1/2 start-3 size-4 -translate-y-1/2 text-ink-soft" />
+        <input class="search" data-icon="true" bind:value={query} placeholder="ابحث عن سورة" />
       </div>
     </label>
   </div>
 
   {#if selected_system}
     <p class="mt-4 text-sm text-ink-soft">
-      ستُفتح السورة بترقيم {get_system_name(selected_system)}.
+      تفتح السورة بترقيم {get_system_name(selected_system)}.
     </p>
   {/if}
 </section>
@@ -90,7 +90,7 @@ function get_mushaf_href(surah) {
 
   {#if visible_surahs.length === 0}
     <div class="surface p-6 sm:p-8">
-      <h2 class="section_title text-2xl">لا توجد سورة تطابق هذا البحث.</h2>
+      <h2 class="section_title text-2xl">لا توجد سورة بهذا الاسم</h2>
       <p class="section_text mt-3">جرّب اسمًا آخر أو رقم سورة.</p>
       {#if has_query}
         <div class="mt-6">
@@ -113,7 +113,7 @@ function get_mushaf_href(surah) {
           <div class="flex shrink-0 items-center gap-3 text-sm font-semibold text-ink-soft">
             <span class="hidden sm:inline">{compact_number(surah.counts[selected_system_id])} آية في {get_system_name(selected_system)} · {compact_number(surah.disputed_points)} رأس آية مختلف فيه</span>
             <span class="text-accent-strong">اقرأ</span>
-            <ArrowRightIcon class="size-4 text-accent-strong transition-transform group-hover:translate-x-0.5" />
+            <ArrowRightIcon class="arrow_nudge size-4 text-accent-strong" />
           </div>
         </a>
       {/each}

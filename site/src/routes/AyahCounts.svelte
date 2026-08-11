@@ -19,9 +19,9 @@ let current_language = $derived(get_current_language())
 
 <section class="max-w-3xl">
   <div class="rule_label">أعداد الآي</div>
-  <h1 class="section_title mt-4 text-ink">أعداد الآي في مذاهب العدّ الستة.</h1>
+  <h1 class="section_title mt-4 text-ink">أعداد الآي في مذاهب العدّ الستة</h1>
   <p class="section_text mt-4 text-lg">
-    هذا مرجع سريع لمجموع آيات القرآن وعدد آيات كل سورة في كل مذهب عدّ. اختلاف العدد هنا اختلاف في رؤوس الآي وترقيمها، لا في نص القرآن.
+    قارن مجموع آيات القرآن وعدد آيات كل سورة بين المذاهب الستة. واختلاف العدد راجعٌ إلى مواضع رؤوس الآي، لا إلى وجوه القراءة.
   </p>
   <div class="mt-6">
     <a class="pill_button" href={window.navgo.href('/mushaf')}>

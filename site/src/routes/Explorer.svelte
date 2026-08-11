@@ -116,7 +116,7 @@ function get_boundary_href(row) {
 
 <section class="max-w-3xl">
   <div class="rule_label">البحث</div>
-  <h1 class="section_title mt-4">ابحث عن رأس آية مختلف فيه.</h1>
+  <h1 class="section_title mt-4">ابحث عن رأس آية مختلف فيه</h1>
   <p class="section_text mt-4 text-lg">
     اكتب فاصلة أو اختر سورة، ثم افتح النتيجة في المصحف لرؤية رأس الآية في سياق القراءة.
   </p>
@@ -126,8 +126,8 @@ function get_boundary_href(row) {
   <label>
     <span class="field_label">البحث</span>
     <div class="relative mt-3">
-      <SearchIcon class="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-ink-soft" />
-      <input class="search pl-10 text-lg" bind:value={search} placeholder="ابحث بفاصلة أو رقم آية" />
+      <SearchIcon class="pointer-events-none absolute top-1/2 start-3 size-4 -translate-y-1/2 text-ink-soft" />
+      <input class="search text-lg" data-icon="true" bind:value={search} placeholder="ابحث بفاصلة أو رقم آية" />
     </div>
   </label>
 
@@ -171,9 +171,9 @@ function get_boundary_href(row) {
 {#if !has_search_criteria}
   <section class="mt-8 surface surface_muted p-5 sm:p-6">
     <div class="rule_label">ابدأ بالبحث</div>
-    <h2 class="section_title mt-4 text-2xl">لن تُعرض كل البيانات قبل أن تحدد ما تريد الوصول إليه.</h2>
+    <h2 class="section_title mt-4 text-2xl">ابدأ بكتابة فاصلة أو اختيار سورة</h2>
     <p class="section_text mt-3 text-sm">
-      هذا يحافظ على الصفحة كأداة بحث لا كجدول تدقيق. جرّب فاصلة، سورة، أو حكم الرأس في مذهب العدّ المختار.
+      أو جرّب أحد هذه المداخل.
     </p>
 
     <div class="mt-5 flex flex-wrap gap-2">
@@ -185,7 +185,7 @@ function get_boundary_href(row) {
 {:else if filtered_rows.length === 0}
   <section class="mt-8 surface p-6 sm:p-8">
     <div class="rule_label">لا نتائج</div>
-    <h2 class="section_title mt-4 text-2xl">لا يوجد رأس آية يطابق البحث الحالي.</h2>
+    <h2 class="section_title mt-4 text-2xl">لا نتائج لهذا البحث</h2>
     <p class="section_text mt-3">غيّر النص أو المرشحات ثم جرّب من جديد.</p>
     <div class="mt-6">
       <button class="pill_button" data-tone="accent" onclick={clear_search}>أعد ضبط البحث</button>

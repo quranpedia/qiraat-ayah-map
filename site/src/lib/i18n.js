@@ -1,5 +1,17 @@
 import { loadLocale } from 'wuchale/load-utils'
 
+// Document metadata is chosen explicitly per language rather than routed through
+// the message catalogue. These are a brand name and a meta description, not UI
+// strings, and an index-based lookup renders an unrelated message whenever the
+// catalogue is regenerated.
+// @wc-ignore
+const DOCUMENT_TITLE = { ar: 'مرجع عدِّ الآي', en: 'Ayah Count Reference' }
+// @wc-ignore
+const DOCUMENT_DESCRIPTION = {
+  ar: 'واجهة تفاعلية لعدِّ الآي بين مذاهب العدّ الستة المستعملة مع القراءات العشر.',
+  en: 'An interactive reference for Quranic ayah counting across the six counting madhhabs used with the ten qiraat.'
+}
+
 const LANGUAGE_KEY = 'qiraat-language'
 const DEFAULT_LANGUAGE = 'ar'
 
@@ -38,11 +50,8 @@ export async function init_i18n(lang = get_saved_language()) {
   apply_language(next_language)
   await loadLocale(next_language)
 
-  document.title = 'مرجع عدِّ الآي'
-  document.querySelector('meta[name="description"]')?.setAttribute(
-    'content',
-    'واجهة تفاعلية لعدِّ الآي بين مذاهب العدّ الستة المستعملة مع القراءات العشر.'
-  )
+  document.title = DOCUMENT_TITLE[next_language]
+  document.querySelector('meta[name="description"]')?.setAttribute('content', DOCUMENT_DESCRIPTION[next_language])
 }
 
 export function set_language(lang) {

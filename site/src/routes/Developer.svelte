@@ -1,6 +1,4 @@
 <script>
-import { ArrowRightIcon } from '@lucide/svelte'
-
 import { get_grouped_docs } from '$lib/docs.js'
 import { get_current_language } from '$lib/i18n.js'
 
@@ -40,132 +38,234 @@ const rawi_example = `const warsh = await load_json('dist/rawis/warsh.json')
 const counts_example = `const counts = await load_json('dist/surah-counts/madani-last.json')
 const al_baqarah_count = counts.surahs['2']
 // => 285`
+
+const forward_statuses = [
+  { status: 'mapped', body: 'آية واحدة في حفص تقابل آية واحدة في المذهب المطلوب.', extra: '—' },
+  { status: 'merged', body: 'الآية تُدمج مع التي بعدها في المذهب المطلوب.', extra: 'merges_with_next' },
+  { status: 'split', body: 'الآية تُقسم إلى آيتين أو أكثر في المذهب المطلوب.', extra: 'splits_into' }
+]
+
+const reverse_statuses = [
+  { status: 'mapped', body: 'آية واحدة تقابل آية واحدة في حفص.', extra: '—' },
+  { status: 'covers_multiple', body: 'الآية الواحدة تقابل أكثر من آية في حفص.', extra: 'hafs_ayahs' }
+]
 </script>
 
-<section class="max-w-4xl">
-  <div class="rule_label">استخدام المطور</div>
-  <h1 class="page_title mt-5 text-ink">استعمل ملفات الربط من غير أن تعقد تطبيقك.</h1>
-  <p class="section_text mt-5 text-lg">
-    ثبّت محورًا داخليًا واحدًا، ثم حوّل منه فقط عند العرض أو الإدخال. في هذه البيانات يكون المحور العملي هو الكوفي/حفص.
-  </p>
-  <p class="section_text mt-4 text-sm">
-    هذه الصفحة ثانوية وموجهة لمن يدمج البيانات أو يراجعها. مسار الباحث يبدأ من المصحف وأعداد الآي والبحث.
-  </p>
+<section class="leaf">
+  <span class="marginal">استخدام المطور</span>
+  <div class="leaf_body">
+    <h1 class="page_title">حوّل أرقام الآيات بين مذاهب العدّ</h1>
+    <p class="lede mt-5">
+      احفظ أرقام الآيات في تطبيقك بترقيم حفص، وحوّلها إلى مذهب آخر عند العرض فقط.
+    </p>
 
-  <div class="mt-8 flex flex-wrap gap-3">
-    <a class="pill_button" href={window.navgo.href('/project')}>اقرأ دليل المشروع</a>
-    <a class="pill_button" data-tone="accent" href={window.navgo.href('/developer/diagnostics')}>
-      افتح تشخيص المطور
-      <ArrowRightIcon class="size-4" />
-    </a>
+    <div class="mt-7 flex flex-wrap gap-3">
+      <a class="pill_button" data-tone="accent" href={window.navgo.href('/developer/diagnostics')}>افتح فحص البيانات</a>
+      <a class="pill_button" href={window.navgo.href('/project')}>اقرأ دليل المشروع</a>
+    </div>
   </div>
 </section>
 
-<section class="mt-12 max-w-5xl border-t border-line/70 pt-8">
-  <div class="rule_label">الملفات الأساسية</div>
-  <h2 class="section_title mt-4">معظم التطبيقات تحتاج هذه الملفات فقط.</h2>
-
-  <div class="table_shell mt-6">
-    <table class="data_table">
-      <thead>
-        <tr>
-          <th>الملف</th>
-          <th>متى تستخدمه</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span class="inline_code">dist/mappings/by-counting-system/kufi-to-*.json</span></td>
-          <td>لتحويل رقم حفص/الكوفي إلى مذهب عدّ آخر عند العرض.</td>
-        </tr>
-        <tr>
-          <td><span class="inline_code">dist/mappings/by-counting-system/*-to-kufi.json</span></td>
-          <td>لإرجاع ترقيم خارجي إلى المحور الداخلي.</td>
-        </tr>
-        <tr>
-          <td><span class="inline_code">dist/rawis/&#123;rawi&#125;.json</span></td>
-          <td>عندما يبدأ تطبيقك من اسم الراوي لا من اسم مذهب العدّ.</td>
-        </tr>
-        <tr>
-          <td><span class="inline_code">dist/surah-counts/&#123;system&#125;.json</span></td>
-          <td>لعرض عدد آيات السورة أو التحقق من حدود التنقل.</td>
-        </tr>
-      </tbody>
-    </table>
+<section class="leaf">
+  <span class="marginal">البداية السريعة</span>
+  <div class="leaf_body">
+    <h2 class="section_title">خطوات الدمج</h2>
+    <ol class="numbered_steps mt-7" style="color:var(--ink-soft)">
+      <li>
+        <div>
+          <b>احفظ الأرقام بترقيم حفص.</b>
+          <span>استعمله وحده في قاعدة البيانات وفي روابط التطبيق.</span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <b>حمّل ملفّي التحويل.</b>
+          <span>واحد يحوّل من حفص إلى المذهب المطلوب، والآخر يحوّل منه إلى حفص.</span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <b>اقرأ حقل status مع الرقم.</b>
+          <span>الرقم وحده لا يكفي: قد تكون الآية دُمجت مع التالية أو قُسمت إلى آيتين.</span>
+        </div>
+      </li>
+    </ol>
   </div>
 </section>
 
-<section class="mt-12 max-w-5xl border-t border-line/70 pt-8">
-  <div class="rule_label">أمثلة قصيرة</div>
-  <h2 class="section_title mt-4">ابدأ بالمحمّل ثم افتح المثال الذي تحتاجه.</h2>
-
-  <div class="mt-6 grid gap-5">
-    <details class="border-b border-line/70 pb-5" open>
-      <summary class="cursor-pointer font-bold text-ink">محمّل JSON أساسي</summary>
-      <p class="section_text mt-3 text-sm">استبدله بمحمّل الملفات أو نظام الاستيراد الذي تعتمد عليه.</p>
-      <pre class="code_block mt-4"><code>{load_json_example}</code></pre>
-    </details>
-
-    <details class="border-b border-line/70 pb-5">
-      <summary class="cursor-pointer font-bold text-ink">حوّل من حفص/الكوفي إلى مذهب عدّ آخر</summary>
-      <pre class="code_block mt-4"><code>{forward_example}</code></pre>
-    </details>
-
-    <details class="border-b border-line/70 pb-5">
-      <summary class="cursor-pointer font-bold text-ink">أعد ترقيمًا آخر إلى حفص/الكوفي</summary>
-      <pre class="code_block mt-4"><code>{reverse_example}</code></pre>
-    </details>
-
-    <details class="border-b border-line/70 pb-5">
-      <summary class="cursor-pointer font-bold text-ink">اربط الراوي بمذهب العدّ</summary>
-      <pre class="code_block mt-4"><code>{rawi_example}</code></pre>
-    </details>
-
-    <details class="border-b border-line/70 pb-5">
-      <summary class="cursor-pointer font-bold text-ink">اقرأ عدد آيات السورة</summary>
-      <pre class="code_block mt-4"><code>{counts_example}</code></pre>
-    </details>
+<section class="leaf">
+  <span class="marginal">الملفات الأساسية</span>
+  <div class="leaf_body" style="max-width:none">
+    <h2 class="section_title">الملفات التي تحتاجها</h2>
+    <div class="table_shell mt-6">
+      <table class="data_table">
+        <thead>
+          <tr>
+            <th>الملف</th>
+            <th>متى تستخدمه</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="inline_code">dist/mappings/by-counting-system/kufi-to-*.json</span></td>
+            <td>لتحويل رقم حفص/الكوفي إلى مذهب عدّ آخر عند العرض.</td>
+          </tr>
+          <tr>
+            <td><span class="inline_code">dist/mappings/by-counting-system/*-to-kufi.json</span></td>
+            <td>لتحويل رقم من مذهب آخر إلى ترقيم حفص.</td>
+          </tr>
+          <tr>
+            <td><span class="inline_code">dist/rawis/&#123;rawi&#125;.json</span></td>
+            <td>عندما يبدأ تطبيقك من اسم الراوي لا من اسم مذهب العدّ.</td>
+          </tr>
+          <tr>
+            <td><span class="inline_code">dist/surah-counts/&#123;system&#125;.json</span></td>
+            <td>لعرض عدد آيات السورة، أو للتحقق من صحة رقم الآية.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
 
-<section class="mt-12 max-w-5xl border-t border-line/70 pt-8">
-  <div class="rule_label">قواعد عملية</div>
-  <ul class="doc_list mt-5 text-ink-soft">
-    <li>لا تستنتج الترقيم من مجموع عدد الآيات وحده.</li>
-    <li>افصل طبقة التحويل عن طبقة النص القرآني عندك.</li>
-    <li>إذا كانت واجهتك تُظهر أسماء الرواة، فاستخدم بيانات الراوي لاختيار ملف مذهب العدّ الصحيح.</li>
-    <li>الرواة الكوفيون يطابقون حفصًا في الترقيم، فلا يحتاجون طبقة تحويل مستقلة.</li>
-  </ul>
+<section class="leaf">
+  <span class="marginal">قيم status</span>
+  <div class="leaf_body" style="max-width:none">
+    <h2 class="section_title">اقرأ حقل status قبل أن تعرض الرقم</h2>
+    <p class="section_text mt-4">
+      لكل آية في ملف التحويل حقل status يوضّح نوع التحويل. وإن تجاهلته، ستعرض أرقامًا خاطئة عند الآيات المدموجة أو المقسومة.
+    </p>
+
+    <h3 class="mt-7 font-bold" style="color:var(--rubric)">في ملفات التحويل من حفص</h3>
+    <div class="table_shell mt-3">
+      <table class="data_table">
+        <thead>
+          <tr><th>القيمة</th><th>معناها</th><th>حقل إضافي</th></tr>
+        </thead>
+        <tbody>
+          {#each forward_statuses as row (row.status)}
+            <tr>
+              <td><span class="inline_code">{row.status}</span></td>
+              <td>{row.body}</td>
+              <td><span class="inline_code">{row.extra}</span></td>
+            </tr>
+          {/each}
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="mt-8 font-bold" style="color:var(--rubric)">في ملفات التحويل إلى حفص</h3>
+    <div class="table_shell mt-3">
+      <table class="data_table">
+        <thead>
+          <tr><th>القيمة</th><th>معناها</th><th>حقل إضافي</th></tr>
+        </thead>
+        <tbody>
+          {#each reverse_statuses as row (row.status)}
+            <tr>
+              <td><span class="inline_code">{row.status}</span></td>
+              <td>{row.body}</td>
+              <td><span class="inline_code">{row.extra}</span></td>
+            </tr>
+          {/each}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="leaf">
+  <span class="marginal">أمثلة قصيرة</span>
+  <div class="leaf_body" style="max-width:none">
+    <h2 class="section_title">انسخ المثال الذي تحتاجه</h2>
+
+    <div class="mt-6 grid gap-5">
+      <details class="border-b pb-5" style="border-color:var(--line)" open>
+        <summary class="cursor-pointer font-bold" style="color:var(--ink)">دالة تحميل JSON</summary>
+        <p class="section_text mt-3 text-sm">استبدلها بطريقة تحميل الملفات في مشروعك.</p>
+        <pre class="code_block mt-4"><code>{load_json_example}</code></pre>
+      </details>
+
+      <details class="border-b pb-5" style="border-color:var(--line)">
+        <summary class="cursor-pointer font-bold" style="color:var(--ink)">حوّل من حفص إلى مذهب آخر</summary>
+        <p class="section_text mt-3 text-sm">
+          الرقم لم يتغير، لكن <span class="inline_code">status: merged</span> يعني أن هذه الآية تُدمج مع التي بعدها.
+        </p>
+        <pre class="code_block mt-4"><code>{forward_example}</code></pre>
+      </details>
+
+      <details class="border-b pb-5" style="border-color:var(--line)">
+        <summary class="cursor-pointer font-bold" style="color:var(--ink)">حوّل من مذهب آخر إلى حفص</summary>
+        <p class="section_text mt-3 text-sm">
+          عند <span class="inline_code">covers_multiple</span> استعمل المصفوفة <span class="inline_code">hafs_ayahs</span> كاملة، لا الرقم الأول فقط.
+        </p>
+        <pre class="code_block mt-4"><code>{reverse_example}</code></pre>
+      </details>
+
+      <details class="border-b pb-5" style="border-color:var(--line)">
+        <summary class="cursor-pointer font-bold" style="color:var(--ink)">اربط الراوي بمذهب العدّ</summary>
+        <pre class="code_block mt-4"><code>{rawi_example}</code></pre>
+      </details>
+
+      <details class="border-b pb-5" style="border-color:var(--line)">
+        <summary class="cursor-pointer font-bold" style="color:var(--ink)">اقرأ عدد آيات السورة</summary>
+        <pre class="code_block mt-4"><code>{counts_example}</code></pre>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="leaf">
+  <span class="marginal">قواعد عملية</span>
+  <div class="leaf_body">
+    <h2 class="section_title">تجنّب هذه الأخطاء</h2>
+    <ul class="doc_list mt-5" style="color:var(--ink-soft)">
+      <li>لا تعرف مذهب العدّ من مجموع الآيات وحده؛ فقد يتفق المجموع وتختلف المواضع، كما في الفاتحة.</li>
+      <li>هذه البيانات للترقيم فقط، وليست نصًّا قرآنيًّا. احتفظ بنص المصحف في مصدر منفصل.</li>
+      <li>إذا كانت واجهتك تُظهر أسماء الرواة، فاستخدم بيانات الراوي لاختيار ملف مذهب العدّ الصحيح.</li>
+      <li>الرواة الكوفيون ترقيمهم مطابق لحفص، فلا يحتاجون تحويلًا.</li>
+    </ul>
+  </div>
 </section>
 
 {#if technical_doc_groups.length > 0}
-  <section class="mt-12 max-w-5xl border-t border-line/70 pt-8">
-    <div class="rule_label">وثائق المطور</div>
-    <h2 class="section_title mt-4">تفاصيل البنية وحزم المصادر.</h2>
-    <div class="mt-6 grid gap-6">
-      {#each technical_doc_groups as group (group.id)}
-        <section>
-          <h3 class="text-lg font-bold text-ink">{group.title}</h3>
-          <div class="mt-3 grid gap-3">
-            {#each group.docs as doc (doc.slug)}
-              <a class="block border-b border-line/70 pb-3 last:border-b-0" href={window.navgo.href('/docs/' + doc.slug)}>
-                <div class="font-bold text-ink" dir={doc.direction}>{doc.title}</div>
-                <p class="section_text mt-1 text-sm" dir={doc.direction}>{doc.excerpt}</p>
-              </a>
-            {/each}
-          </div>
-        </section>
-      {/each}
+  <section class="leaf">
+    <span class="marginal">وثائق المطور</span>
+    <div class="leaf_body">
+      <h2 class="section_title">تفاصيل البنية وحزم المصادر</h2>
+      <div class="mt-6 grid gap-8">
+        {#each technical_doc_groups as group (group.id)}
+          <section>
+            <h3 class="font-bold" style="color:var(--rubric)">{group.title}</h3>
+            {#if group.description}
+              <p class="mt-1 text-sm" style="color:var(--ink-faint)">{group.description}</p>
+            {/if}
+            <dl class="gloss mt-4">
+              {#each group.docs as doc (doc.slug)}
+                <div>
+                  <dt>
+                    <a class="text_link" href={window.navgo.href('/docs/' + doc.slug)} dir={doc.direction}>{doc.title}</a>
+                  </dt>
+                  <dd dir={doc.direction}>{doc.excerpt}</dd>
+                </div>
+              {/each}
+            </dl>
+          </section>
+        {/each}
+      </div>
     </div>
   </section>
 {/if}
 
-<section class="mt-12 max-w-5xl border-t border-line/70 pt-8">
-  <div class="rule_label">تشغيل محلي</div>
-  <pre class="code_block mt-5"><code>pnpm install
+<section class="leaf">
+  <span class="marginal">تشغيل محلي</span>
+  <div class="leaf_body">
+    <h2 class="section_title">شغّل الموقع على جهازك</h2>
+    <pre class="code_block mt-5"><code>pnpm install
 pnpm dev
 pnpm build</code></pre>
-  <p class="section_text mt-4 text-sm">
-    إذا كان الموقع تحت مسار فرعي، مرّر <span class="inline_code">BASE_PATH</span> إلى Vite حتى تبقى الأصول والمسارات صحيحة.
-  </p>
+    <p class="section_text mt-4 text-sm">
+      إذا نشرت الموقع في مسار فرعي، مرّر <span class="inline_code">BASE_PATH</span> إلى Vite.
+    </p>
+  </div>
 </section>

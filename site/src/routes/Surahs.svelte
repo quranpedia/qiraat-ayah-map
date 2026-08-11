@@ -76,8 +76,8 @@ function clear_filters() {
     <label>
       <span class="metric_label">البحث</span>
       <div class="relative mt-3">
-        <SearchIcon class="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-ink-soft" />
-        <input class="search pl-10" bind:value={query} placeholder="ابحث عن اسم السورة أو رقمها" />
+        <SearchIcon class="pointer-events-none absolute top-1/2 start-3 size-4 -translate-y-1/2 text-ink-soft" />
+        <input class="search" data-icon="true" bind:value={query} placeholder="ابحث عن اسم السورة أو رقمها" />
       </div>
     </label>
 

@@ -6,7 +6,7 @@ const { slug } = $props()
 
 let current_language = $derived(get_current_language())
 let doc = $derived(get_doc(slug))
-let group = $derived(doc ? get_doc_group(doc.group) : null)
+let group = $derived(doc ? get_doc_group(doc.group, current_language) : null)
 let neighbors = $derived(get_neighbor_docs(slug))
 let alternate_doc = $derived(doc?.alternateSlug ? get_doc(doc.alternateSlug) : null)
 let same_language_as_ui = $derived(doc ? doc.language === current_language : false)
@@ -14,9 +14,7 @@ let index_href = $derived(doc && (doc.internal || group?.internal) ? '/developer
 let index_label = $derived(index_href === '/developer' ? 'العودة إلى صفحة المطور' : 'العودة إلى الوثائق')
 let metadata = $derived(
   doc
-    ? [group?.title, doc.language === 'ar' ? 'عربي' : 'English', `${doc.headers.length} عنوانًا فرعيًا`]
-        .filter(Boolean)
-        .join(' · ')
+    ? [group?.title, doc.language === 'ar' ? 'عربي' : 'English'].filter(Boolean).join(' · ')
     : ''
 )
 </script>
@@ -24,7 +22,7 @@ let metadata = $derived(
 {#if !doc}
   <section class="grid max-w-4xl gap-4">
     <div class="rule_label">الوثيقة غير موجودة</div>
-    <h1 class="section_title mt-4">لا توجد وثيقة بهذا المعرّف داخل المكتبة.</h1>
+    <h1 class="section_title mt-4">لا توجد هذه الوثيقة</h1>
     <div class="flex flex-wrap gap-3 pt-2">
       <a class="pill_button" href={window.navgo.href('/docs')}>ارجع إلى مكتبة الوثائق</a>
       <a class="pill_button" href={window.navgo.href('/project')}>دليل المشروع</a>
@@ -47,14 +45,14 @@ let metadata = $derived(
         {/if}
 
         {#if !same_language_as_ui}
-          <span class="text-sm text-ink-soft">واجهة الموقع الآن بلغة مختلفة عن لغة هذه الوثيقة.</span>
+          <span class="text-sm text-ink-soft">هذه الوثيقة بلغة أخرى.</span>
         {/if}
       </div>
     </div>
 
     {#if doc.headers.length}
       <details class="border-y border-line/70 py-4">
-        <summary class="cursor-pointer font-bold text-ink">في هذه الصفحة</summary>
+        <summary class="cursor-pointer font-bold text-ink">محتويات الوثيقة</summary>
         <ol class="mt-4 grid gap-2 text-sm text-ink-soft">
           {#each doc.headers as header (header.id)}
             <li class={header.level > 2 ? 'pr-4' : ''}>

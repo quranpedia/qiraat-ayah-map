@@ -40,9 +40,9 @@ function get_distance(left_system_id, right_system_id) {
 
 <section class="max-w-4xl">
   <div class="rule_label">تشخيص المطور</div>
-  <h1 class="page_title mt-5 text-ink">مراجعة داخلية هادئة لسلامة البيانات.</h1>
+  <h1 class="page_title mt-5 text-ink">سلامة البيانات وعبء المراجعة</h1>
   <p class="section_text mt-5 text-lg">
-    هذه الصفحة مخصصة للمحافظة على البيانات وتقدير عبء المراجعة. تعرض جداول صيانة فقط حتى يبقى مسار الباحث منفصلًا وواضحًا.
+    تابع ما ينقص من الشواهد، وقدّر العمل المتبقي في كل مذهب عدّ.
   </p>
   <div class="mt-7 flex flex-wrap gap-3">
     <a class="pill_button" href={window.navgo.href('/developer')}>استخدام المطور</a>
@@ -55,9 +55,9 @@ function get_distance(left_system_id, right_system_id) {
 
 <section class="mt-12 max-w-5xl border-t border-line/70 pt-8">
   <div class="rule_label">عبء المراجعة</div>
-  <h2 class="section_title mt-4">الرؤوس المعدودة التي تحتاج إلى شواهد.</h2>
+  <h2 class="section_title mt-4">الرؤوس المعدودة التي تحتاج إلى شواهد</h2>
   <p class="section_text mt-3 text-sm">
-    يعرض هذا الجدول العمل المتبقي لكل مذهب عدّ من غير ألوان حالة أو تصنيف بصري.
+    العمل المتبقي في كل مذهب عدّ.
   </p>
 
   <div class="table_shell mt-6">
@@ -95,7 +95,7 @@ function get_distance(left_system_id, right_system_id) {
 
 <section class="mt-12 max-w-5xl border-t border-line/70 pt-8">
   <div class="rule_label">ملخص الشواهد</div>
-  <h2 class="section_title mt-4">أرقام داخلية لمتابعة اكتمال التوثيق.</h2>
+  <h2 class="section_title mt-4">اكتمال التوثيق</h2>
   <dl class="mt-6 grid gap-x-10 gap-y-4 sm:grid-cols-3">
     <div>
       <dt class="field_label">رؤوس مختلفة</dt>
@@ -114,9 +114,9 @@ function get_distance(left_system_id, right_system_id) {
 
 <section class="mt-12 max-w-5xl border-t border-line/70 pt-8">
   <div class="rule_label">مسافات داخلية</div>
-  <h2 class="section_title mt-4">تشخيص التشابه بين مذاهب العدّ.</h2>
+  <h2 class="section_title mt-4">التشابه بين مذاهب العدّ</h2>
   <p class="section_text mt-3 text-sm">
-    هذه الجداول للمراجعين فقط. واجهة الباحث لا تحتاج إلى لغة المسافة أو المقارنة.
+    عدد المواضع التي يفترق فيها كل مذهبين.
   </p>
 
   <details class="mt-6 border-b border-line/70 pb-5" open>

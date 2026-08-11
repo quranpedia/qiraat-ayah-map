@@ -10,7 +10,7 @@ let current_language = $derived(get_current_language())
   <div class="page_shell border-t border-line/70 pt-5 text-sm text-ink-soft">
     <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
       <p class="max-w-2xl">
-        مرجع لرؤوس الآي في مذاهب العدّ الستة؛ يبدأ من القراءة في المصحف ثم يتيح البحث والتفصيل عند الحاجة.
+        مرجع لرؤوس الآي في مذاهب العدّ الستة.
       </p>
 
       <nav class="flex flex-wrap gap-x-4 gap-y-2" aria-label="روابط إضافية">

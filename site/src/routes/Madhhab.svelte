@@ -29,7 +29,7 @@ let surahs_with_counted_points = $derived(profile.filter(entry => entry.counted_
 {#if !system_info}
   <section class="surface p-6">
     <div class="rule_label">مذهب العدّ غير موجود</div>
-    <h1 class="section_title mt-4">لا يوجد مذهب عدّ يطابق “{madhhab}”.</h1>
+    <h1 class="section_title mt-4">لا يوجد مذهب عدّ بهذا الاسم</h1>
   </section>
 {:else}
   <section class="max-w-4xl">
@@ -39,7 +39,7 @@ let surahs_with_counted_points = $derived(profile.filter(entry => entry.counted_
       <p class="mt-3 text-xl text-ink-soft">{get_system_secondary_name(system_info)}</p>
     {/if}
     <p class="section_text mt-4 text-lg">
-      اقرأ السور بترقيم هذا المذهب، أو راجع أعداد السور كاملة في الجدول أدناه.
+      اقرأ السور بترقيم هذا المذهب، أو راجع أعداد السور كاملة.
     </p>
 
     <div class="mt-6 flex flex-wrap gap-x-8 gap-y-3 text-sm text-ink-soft">
@@ -61,7 +61,7 @@ let surahs_with_counted_points = $derived(profile.filter(entry => entry.counted_
     <div class="rule_label">أعداد السور</div>
     <h2 class="section_title mt-4 text-2xl">عدد آيات كل سورة في {get_system_name(system_info)}</h2>
     <p class="section_text mt-3 text-sm">
-      كل رابط يفتح السورة في المصحف مع ترقيم {get_system_name(system_info)}.
+      اختر سورة لتقرأها بترقيم {get_system_name(system_info)}.
     </p>
 
     <div class="table_shell mt-5">

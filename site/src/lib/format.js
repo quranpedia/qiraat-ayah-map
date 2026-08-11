@@ -15,8 +15,8 @@ export function format_verification_status(status) {
   const labels = {
     uncited: 'غير موثق',
     secondary_only: 'شواهد ثانوية فقط',
-    primary_cited: 'موثق أوليًا',
-    primary_cited_and_reviewed: 'موثق أوليًا ومراجع',
+    primary_cited: 'موثق بأصل',
+    primary_cited_and_reviewed: 'موثق بأصل ومراجَع',
     disputed: 'مختلف فيه',
     unresolved: 'غير محسوم'
   }
@@ -27,7 +27,7 @@ export function format_verification_status(status) {
 export function format_numbering_effect(effect) {
   const labels = {
     split: 'يفصل الترقيم',
-    merge: 'يضم الترقيم',
+    merge: 'يضمّ الترقيم',
     none: 'مثل الكوفي'
   }
 
@@ -61,7 +61,7 @@ export function format_boundary_kind(kind, mode = 'default') {
 }
 
 export function format_boundary_decision(counts_boundary) {
-  return counts_boundary ? 'يعد' : 'يسقط'
+  return counts_boundary ? 'يعدّ' : 'يسقط'
 }
 
 export function format_boundary_action(counts_boundary) {
@@ -87,7 +87,7 @@ export function format_signed_delta(delta) {
 }
 
 export function format_primary_total(value) {
-  return `الأصل الكلاسيكي ${format_number(value)}`
+  return `العدد المتوارث ${format_number(value)}`
 }
 
 export function format_evidence_tier(tier) {

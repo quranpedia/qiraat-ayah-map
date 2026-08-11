@@ -113,7 +113,7 @@ $effect(() => {
 {#if !surah_info}
   <section class="surface p-6">
     <div class="rule_label">السورة غير موجودة</div>
-    <h1 class="section_title mt-4">لا توجد سورة تطابق “{surah}”.</h1>
+    <h1 class="section_title mt-4">لا توجد سورة بهذا الرقم</h1>
     <a class="pill_button mt-6" href={window.navgo.href('/mushaf')}>
       <LibraryBigIcon class="size-4" />
       اختيار سورة
@@ -133,7 +133,7 @@ $effect(() => {
         <p class="arabic_title mt-2 text-ink-soft">{get_surah_secondary_name(surah_info)}</p>
       {/if}
       <p class="section_text mt-4 text-sm">
-        تعرض القراءة هنا ترقيم {get_system_name(display_system) || pager_system_id}: {compact_number(display_count)} آية، وفي السورة {compact_number(surah_info.disputed_points)} رأس آية مختلف فيه ضمن البيانات الحالية.
+        الترقيم هنا بمذهب {get_system_name(display_system) || pager_system_id}: {compact_number(display_count)} آية، وفيها {compact_number(surah_info.disputed_points)} رأس آية مختلف فيه.
       </p>
     </div>
 
@@ -184,7 +184,7 @@ $effect(() => {
 
   {#if surah_rows.length === 0}
     <section class="mt-6 surface p-5 text-sm text-ink-soft">
-      لا توجد في هذه السورة رؤوس آي مختلف فيها ضمن البيانات الحالية. راجع أعداد الآي لمعرفة العدد المعتمد في كل مذهب من مذاهب العدّ الستة.
+      لا رؤوس آي مختلف فيها في هذه السورة. راجع أعداد الآي لمعرفة العدد في كل مذهب.
     </section>
   {:else}
     <details class="mt-6 surface p-5">
