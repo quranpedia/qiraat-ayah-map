@@ -1541,6 +1541,7 @@ msgstr "A specific position that some madhhabs count as a head of ayah and other
 msgid "ما يلزم من عدّ الموضع أو تركه: ضمّ آيتين في واحدة، أو فصل الواحدة إلى آيتين."
 msgstr "What follows from counting a position or leaving it: two ayahs merge into one, or one splits into two."
 
+#: src/routes/Home.svelte
 #: src/routes/Project.svelte
 msgid "وليس الخلاف عامًّا؛ فمن السور ما خلا منه، ومنها ما فيه موضع أو مواضع."
 msgstr "The disagreement is not universal: some surahs carry none of it, others carry one position or several."
@@ -1986,16 +1987,8 @@ msgid "عن المشروع"
 msgstr "About the project"
 
 #: src/routes/Home.svelte
-msgid "عدُّ الآي علمٌ يحدّد أين تنتهي كل آية. توارثت الأمصار فيه ستة مذاهب، فاختلف ترقيم الآيات بينها."
-msgstr "Ayah counting is the science of where each ayah ends. Six madhhabs were transmitted through the great cities, and the ayah numbering differs between them."
-
-#: src/routes/Home.svelte
 msgid "يجمع هذا المرجع المواضع التي اختلفت فيها المذاهب، ويعرض كلَّ موضع في سياقه من المصحف مع شواهده من كتب العدّ."
 msgstr "This reference gathers the positions the madhhabs disagree on and shows each one in its place in the mushaf, with its evidence from the counting literature."
-
-#: src/routes/Home.svelte
-msgid "موضوعه الترقيم دون وجوه القراءة. وما لم يثبت بشاهد يبقى معلَّمًا بذلك."
-msgstr "Its subject is numbering, not the variant readings. Whatever is not established by evidence stays marked as such."
 
 #: src/routes/Home.svelte
 msgid "القراءات التي تعدّ به"
@@ -2005,14 +1998,17 @@ msgstr "Qiraat that count by it"
 msgid "المصحف المنتشر برواية حفص عن عاصم، وعدده كوفي. ومصاحف ورش وقالون عن نافع عددها مدني أخير."
 msgstr "The widely printed mushaf is the riwayah of Hafs from 'Asim, which counts by Kufi. Warsh and Qalun mushafs, from Nafi', count by Last Madinan."
 
+#: src/routes/Home.svelte
 #: src/routes/Project.svelte
 msgid "عدُّ الآي علمٌ يبحث في أحوال آيات القرآن الكريم من حيث عددُها في كل سورة، وبيانُ رأس الآية وخاتمتها، معزوًّا إلى ناقله."
 msgstr "Ayah counting is the science that examines the ayahs of the Qur'an: how many there are in each surah, and where each ayah begins and ends — always attributed to the one who transmitted it."
 
+#: src/routes/Home.svelte
 #: src/routes/Project.svelte
 msgid "والاختلاف فيه اختلافٌ في تحديد موضع انتهاء الآية، وليس زيادةً في الآيات ولا نقصًا منها، ولا زيادةَ ألفاظ."
 msgstr "Disagreement within it concerns where an ayah ends. It is not an addition to the ayahs, nor an omission from them, nor any addition of wording."
 
+#: src/routes/Home.svelte
 #: src/routes/Project.svelte
 msgid "فسورة الإخلاص أربعُ آيات في المدني الأول والمدني الأخير والبصري والكوفي، وخمسُ آيات في المكي والدمشقي؛ والخلاف في <0>﴿لم يلد ولم يولد﴾</0>: أهي آية واحدة أم آيتان؟"
 msgstr "Surat al-Ikhlas is four ayahs in First Madinan, Last Madinan, Basran, and Kufan, and five in Makkan and Damascene. The disagreement is over <0>lam yalid wa-lam yulad</0>: one ayah, or two?"
