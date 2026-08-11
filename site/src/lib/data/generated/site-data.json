@@ -46129,8 +46129,8 @@
       "registry_total_ayahs": 6214,
       "primary_classical_total_ayahs": 6214,
       "delta_from_primary": 0,
-      "policy_en": "The Last Madinan count is what Isma'il ibn Ja'far transmits from Yazid and Shaybah by way of Sulayman ibn Jimmaz. Only one total is attested for it.",
-      "policy_ar": "العدد المدني الأخير هو ما رواه إسماعيل بن جعفر عن يزيد وشيبة بواسطة سليمان بن جماز، ولم تُنقل له إلا جملة واحدة.",
+      "policy_en": "The Last Madinan count is what Isma'il ibn Ja'far transmits from Yazid and Shaybah by way of Sulayman ibn Jimmaz. al-Bayan records its total in the same chapter as Abu Ja'far's own count, which differs.",
+      "policy_ar": "العدد المدني الأخير هو ما رواه إسماعيل بن جعفر عن يزيد وشيبة بواسطة سليمان بن جماز. وقد ذكر البيانُ جملتَه في الباب نفسه الذي ذكر فيه جملة أبي جعفر، وهي مغايرة لها.",
       "attested_totals": [
         {
           "total_ayahs": 6214,
@@ -46159,7 +46159,7 @@
           "total_ayahs": 6210,
           "role": "alternative",
           "attribution_en": "Abu Ja'far's own count, differing from Shaybah — recorded by al-Dani in the same chapter. Relevant because Abu Ja'far is the Qiraa this repository maps to the First Madinan madhhab.",
-          "attribution_ar": "جملة أبي جعفر نفسه للاختلاف بينه وبين شيبة، ذكرها الداني في الباب نفسه. وتُعنى هنا لأن أبا جعفر هو القارئ المنسوب في هذا المستودع إلى العدد المدني الأول.",
+          "attribution_ar": "جملة أبي جعفر نفسه للاختلاف بينه وبين شيبة، ذكرها الداني في الباب نفسه. وإنما ذُكرت هنا لأن أبا جعفر هو القارئ المنسوب في هذا المستودع إلى العدد المدني الأول.",
           "evidence": [
             {
               "tier": "primary",
@@ -46232,6 +46232,16 @@
           "primary_riwaya_decision": "excluded",
           "note_en": "Abu Amr al-Dani reports this boundary for Basri only, not for Makki.",
           "note_ar": "نصَّ أبو عمرو الداني على عدِّ هذا الموضع للبصري فقط دون المكي.",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "locator": "ص 262",
+              "strength": "direct",
+              "note": "مدخل السورة: اختلافها آية (﴿عذابا قريبا﴾) عدها البصري ولم يعدها الباقون"
+            }
+          ],
           "current_mapping_decision": "excluded"
         },
         {
@@ -46239,8 +46249,18 @@
           "hafs_ayah": 14,
           "word": "فعقروها",
           "primary_riwaya_decision": "excluded",
-          "note_en": "Abu Amr al-Dani marks the Makki count here as disputed (بخلاف عنه); the repository excludes it to preserve the primary Makki total of 6219.",
-          "note_ar": "ذكر أبو عمرو الداني عدَّ هذا الموضع للمكي بخلاف عنه؛ واعتمد المستودع تركه محافظةً على الجملة الأصلية للعدد المكي (6219).",
+          "note_en": "al-Dani's default reading gives Makki fifteen ayahs for this surah and reports the sixteenth only as «ويقال»; the repository follows that default and excludes the boundary.",
+          "note_ar": "جعل الدانيُّ الأصلَ في هذه السورة خمس عشرة آية للمكي، ولم يذكر السادسة عشرة إلا بصيغة «ويقال»؛ فاتّبع المستودعُ الأصلَ وترك عدّ الموضع.",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "locator": "ص 275",
+              "strength": "direct",
+              "note": "مدخل السورة: وهي ست عشرة آية في المدني الأول ويقال في المكي كذلك وخمس عشرة في عدد الباقين. اختلافها آية (﴿فعقروها﴾) عدها المدني الأول والمكي بخلاف عنه ولم يعدها الباقون"
+            }
+          ],
           "current_mapping_decision": "excluded"
         }
       ]
@@ -46252,14 +46272,14 @@
       "registry_total_ayahs": 6204,
       "primary_classical_total_ayahs": 6204,
       "delta_from_primary": 0,
-      "policy_en": "The Basran count is what 'Ata' ibn Yasar and 'Asim al-Jahdari transmit, later attributed also to Ayyub ibn al-Mutawakkil. One total is attested: 6204. This is the count that Abu Amr al-Basri and Ya'qub follow, and therefore the count that governs the riwayat of al-Duri 'an Abi 'Amr, al-Susi, Ruways and Rawh.",
-      "policy_ar": "العدد البصري هو ما رواه عطاء بن يسار وعاصم الجحدري، ونُسب بعدُ إلى أيوب بن المتوكل، وجملته ٦٢٠٤. وهو عدد أبي عمرو البصري ويعقوب، فيجري على روايات الدوري عن أبي عمرو والسوسي ورويس وروح.",
+      "policy_en": "The Basran count is the one al-Dani reports as Ayyub ibn al-Mutawakkil's, and the one their codices carried in his day. 'Asim al-Jahdari's Basran count is one ayah higher. This is the count Abu Amr al-Basri and Ya'qub follow, so it governs the riwayat of al-Duri 'an Abi 'Amr, al-Susi, Ruways and Rawh (per data/qiraat.json; al-Bayan does not state the rawi mapping here).",
+      "policy_ar": "العدد البصري هو ما ذكره الداني أنه عدد أيوب بن المتوكل، وعليه مصاحفهم في زمنه. وعددُ عاصم الجحدري البصريُّ يزيد آية. وهو عدد أبي عمرو البصري ويعقوب، فيجري على روايات الدوري عن أبي عمرو والسوسي ورويس وروح (بحسب data/qiraat.json، ولم ينصّ البيان على نسبة الرواة هنا).",
       "attested_totals": [
         {
           "total_ayahs": 6204,
           "role": "primary",
-          "attribution_en": "'Ata' ibn Yasar and 'Asim al-Jahdari; later attributed to Ayyub ibn al-Mutawakkil.",
-          "attribution_ar": "عطاء بن يسار وعاصم الجحدري، ونُسب بعدُ إلى أيوب بن المتوكل.",
+          "attribution_en": "The count of Ayyub ibn al-Mutawakkil, and the count their codices carried, per al-Dani.",
+          "attribution_ar": "عدد أيوب بن المتوكل، وهو الذي عليه مصاحفهم كما نصّ الداني.",
           "evidence": [
             {
               "tier": "primary",
@@ -46364,14 +46384,14 @@
       "registry_total_ayahs": 6236,
       "primary_classical_total_ayahs": 6236,
       "delta_from_primary": 0,
-      "policy_en": "The Kufan count is what Hamzah and Sufyan transmit from 'Ali ibn Abi Talib. It is the reference madhhab of this repository: every mapping is expressed as Kufi to target. Note that the Kufans carry two counts — whatever they narrate stopping at the people of Madinah is the First Madinan count, and only what they narrate with a connected chain to 'Ali is the Kufan count proper.",
-      "policy_ar": "العدد الكوفي هو ما رواه حمزة وسفيان عن علي بن أبي طالب رضي الله عنه، وهو العدد المرجعي في هذا المستودع، وكل الخرائط مبنية على: من الكوفي إلى غيره. وينبَّه أن لأهل الكوفة عددين: ما رووه موقوفًا على أهل المدينة فهو المدني الأول، وما رووه موصولًا إلى علي فهو الكوفي.",
+      "policy_en": "The Kufan count is what Sulaym and al-Kisa'i transmit from Hamzah, al-Kisa'i raising it to 'Ali ibn Abi Talib, with Abu 'Abd al-Rahman al-Sulami named as the link. It is the reference madhhab of this repository: every mapping is expressed as Kufi to target. Note that the Kufans carry two counts — whatever they narrate stopping at the people of Madinah is the First Madinan count, and only what they narrate with a connected chain to 'Ali is the Kufan count proper.",
+      "policy_ar": "العدد الكوفي هو ما رواه سليم والكسائي عن حمزة، وأسنده الكسائي إلى علي بن أبي طالب رضي الله عنه، وذكر سليم أن حمزة قال: هو عدد أبي عبد الرحمن السلمي. وهو العدد المرجعي في هذا المستودع، وكل الخرائط مبنية عليه من الكوفي إلى غيره. وينبَّه أن لأهل الكوفة عددين: ما رووه موقوفًا على أهل المدينة فهو المدني الأول، وما رووه موصولًا إلى علي فهو الكوفي.",
       "attested_totals": [
         {
           "total_ayahs": 6236,
           "role": "primary",
-          "attribution_en": "Hamzah and Sufyan, from 'Ali ibn Abi Talib.",
-          "attribution_ar": "حمزة وسفيان عن علي بن أبي طالب رضي الله عنه.",
+          "attribution_en": "Sulaym and al-Kisa'i, from Hamzah; al-Kisa'i raises it to 'Ali ibn Abi Talib, and Hamzah called it the count of Abu 'Abd al-Rahman al-Sulami.",
+          "attribution_ar": "سليم والكسائي عن حمزة، وأسنده الكسائي إلى علي بن أبي طالب رضي الله عنه، وذكر سليم أن حمزة قال: هو عدد أبي عبد الرحمن السلمي.",
           "evidence": [
             {
               "tier": "primary",
