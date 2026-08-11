@@ -5290,7 +5290,29 @@
             "verification_status": "uncited",
             "evidence": []
           }
-        ]
+        ],
+        "end": {
+          "word": "رسولا",
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 257",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة: (﴿إلى فرعون رسولا﴾) لم يعدها المكي بخلاف عنه وعدها الباقون وهو الصحيح عن المكي"
+            }
+          ]
+        }
       },
       "17": {
         "end": {
