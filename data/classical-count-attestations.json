@@ -26,8 +26,8 @@
     "madani-first": {
       "verification_status": "primary_cited",
       "primary_classical_total_ayahs": 6217,
-      "policy_en": "The First Madinan count is what Nafi' transmits from his two shaykhs Abu Ja'far and Shaybah ibn Nissah. It reaches us by two routes with two different totals: the Kufan route from the people of Madinah (6217), and the Basran route through Warsh from Nafi' (6214). Al-Shatibi adopted the Kufan route, following al-Dani, so 6217 is recorded here as the primary figure.",
-      "policy_ar": "العدد المدني الأول هو ما رواه نافع عن شيخيه أبي جعفر وشيبة بن نصاح، وقد ورد من طريقين بجملتين مختلفتين: رواية أهل الكوفة عن أهل المدينة (٦٢١٧)، ورواية أهل البصرة عن ورش عن نافع (٦٢١٤). واعتمد الإمام الشاطبي رواية أهل الكوفة تبعًا للإمام الداني، فأُثبتت ٦٢١٧ هنا جملةً أصلية.",
+      "policy_en": "The First Madinan count is what Nafi' transmits from his two shaykhs Abu Ja'far and Shaybah ibn Nissah. It reaches us by two routes with two different totals: the Kufan route from the people of Madinah (6217), and the Basran route through Warsh from Nafi' (6214). Al-Shatibi adopted the Kufan route, following al-Dani, so 6217 is recorded here as the primary figure. This repository therefore treats madani-first as the madhhab — Nafi from both shaykhs — and not as Abu Jafar personal count of 6210. Where al-Dani reports that Abu Jafar alone omits an ayah while Shaybah and the rest count it, the madhhab counts it.",
+      "policy_ar": "العدد المدني الأول هو ما رواه نافع عن شيخيه أبي جعفر وشيبة بن نصاح، وقد ورد من طريقين بجملتين مختلفتين: رواية أهل الكوفة عن أهل المدينة (٦٢١٧)، ورواية أهل البصرة عن ورش عن نافع (٦٢١٤). واعتمد الإمام الشاطبي رواية أهل الكوفة تبعًا للإمام الداني، فأُثبتت ٦٢١٧ هنا جملةً أصلية. وعليه فالمراد بالمدني الأول في هذا المستودع مذهبُ العدّ، أي رواية نافع عن شيخيه، لا جملةُ أبي جعفر نفسه (٦٢١٠). فحيث نصّ الداني على أن أبا جعفر وحده لم يعدّ موضعًا وعدّه شيبة والباقون، فالمذهب عادٌّ له.",
       "attested_totals": [
         {
           "total_ayahs": 6217,
@@ -68,8 +68,6 @@
           ]
         }
       ],
-      "open_question_en": "The generated mapping reproduces 6214, the Basran route, while the adopted primary figure is 6217. Three boundary points counted in the Kufan route are therefore not yet present in the primitive layer. Two tasks follow: cite the six totals from al-Bayan directly rather than through a commentary, and identify the three missing First Madinan boundaries. Until then this system must not be described as settled. Note also that the mapping total for madani-first currently equals madani-last (6214) while the two systems differ in 15 surahs, which is consistent with the Basran route but should be re-checked once the three points are located.",
-      "open_question_ar": "الخريطة المولَّدة تعطي ٦٢١٤ وهي جملة الطريق البصري، والجملة الأصلية المعتمدة ٦٢١٧. فثلاثة مواضع معدودة في الطريق الكوفي لم تُثبت بعد في طبقة المواضع. ويلزم أمران: توثيق الجمل الست من البيان نفسه لا من شرح، وتعيين المواضع الثلاثة الناقصة. ولا يوصف هذا العدد بالاستقرار قبل ذلك.",
       "disputed_boundaries": []
     },
     "madani-last": {

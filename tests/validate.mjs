@@ -623,7 +623,13 @@ for (const [surahKey, ayahs] of Object.entries(bookBoundaryPrimitives.surahs)) {
       assert(typeof primitive.end.word === 'string' && primitive.end.word.length > 0, `book-boundary-primitives.json: ${surahKey}:${ayahKey} end has word`);
       assert(Array.isArray(primitive.end.counted_by) && primitive.end.counted_by.length >= 1, `book-boundary-primitives.json: ${surahKey}:${ayahKey} end has counted_by`);
       assert(primitive.end.counted_by.includes('kufi'), `book-boundary-primitives.json: ${surahKey}:${ayahKey} end includes kufi`);
-      assert(primitive.end.counted_by.length < systemIds.length, `book-boundary-primitives.json: ${surahKey}:${ayahKey} end is actually disputed`);
+      // A point counted by every madhhab is normally not a dispute at all. The
+      // exception is a point al-Dani records as disputed between transmitters inside
+      // a madhhab, which riwaya_note is what records.
+      assert(
+        primitive.end.counted_by.length < systemIds.length || typeof primitive.end.riwaya_note === 'string',
+        `book-boundary-primitives.json: ${surahKey}:${ayahKey} end is disputed, or carries riwaya_note`
+      );
       for (const systemId of primitive.end.counted_by) {
         assert(systemIds.includes(systemId), `book-boundary-primitives.json: ${surahKey}:${ayahKey} end uses known system ${systemId}`);
       }
@@ -655,7 +661,29 @@ for (const [surahKey, ayahs] of Object.entries(bookBoundaryPrimitives.surahs)) {
   const rebuiltPrimitives = buildBookBoundaryPrimitives(differences, countingSystems);
   assert(rebuiltPrimitives._reference_system === bookBoundaryPrimitives._reference_system, 'differences.json projects back to the same primitive reference system');
   assert(JSON.stringify(rebuiltPrimitives._counting_system_order) === JSON.stringify(bookBoundaryPrimitives._counting_system_order), 'differences.json projects back to the same primitive counting-system order');
-  assert(JSON.stringify(rebuiltPrimitives.surahs) === JSON.stringify(bookBoundaryPrimitives.surahs), 'differences.json projects back to book-boundary-primitives.json exactly');
+  // differences.json is a madhhab-level view, so a point every madhhab counts cannot
+  // appear in it. Those points exist only to carry riwaya_note, and are excluded from
+  // the round-trip comparison rather than treated as a projection failure.
+  const withoutRiwayaOnlyPoints = surahs => {
+    const kept = {};
+    for (const [surahKey, ayahs] of Object.entries(surahs)) {
+      const keptAyahs = {};
+      for (const [ayahKey, primitive] of Object.entries(ayahs)) {
+        const next = { ...primitive };
+        if (next.end && next.end.riwaya_note && next.end.counted_by.length === systemIds.length) {
+          delete next.end;
+        }
+        if (next.end || next.internal) keptAyahs[ayahKey] = next;
+      }
+      if (Object.keys(keptAyahs).length > 0) kept[surahKey] = keptAyahs;
+    }
+    return kept;
+  };
+
+  assert(
+    JSON.stringify(withoutRiwayaOnlyPoints(rebuiltPrimitives.surahs)) === JSON.stringify(withoutRiwayaOnlyPoints(bookBoundaryPrimitives.surahs)),
+    'differences.json projects back to book-boundary-primitives.json exactly'
+  );
 }
 
 

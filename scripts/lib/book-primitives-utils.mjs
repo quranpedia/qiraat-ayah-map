@@ -154,7 +154,7 @@ function topologicallyOrderInternalWords(wordRecords, sequences) {
   return ordered;
 }
 
-function normalizeCountedBy(countedBy, orderedSystemIds, { allowKufi, location }) {
+function normalizeCountedBy(countedBy, orderedSystemIds, { allowKufi, location, allowAllSystems = false }) {
   if (!Array.isArray(countedBy) || countedBy.length === 0) {
     throw new Error(`${location}: counted_by must be a non-empty array`);
   }
@@ -179,11 +179,28 @@ function normalizeCountedBy(countedBy, orderedSystemIds, { allowKufi, location }
 
   const normalized = orderedSystemIds.filter(systemId => uniqueIds.includes(systemId));
 
-  if (normalized.length === orderedSystemIds.length) {
-    throw new Error(`${location}: counted_by must represent a disputed boundary, not all systems`);
+  if (normalized.length === orderedSystemIds.length && !allowAllSystems) {
+    throw new Error(`${location}: counted_by must represent a disputed boundary, not all systems, unless riwaya_note records a sub-madhhab dispute`);
   }
 
   return normalized;
+}
+
+// A point every madhhab counts is normally not a boundary dispute at all. The one
+// exception is a point al-Dani records as disputed between transmitters *inside* a
+// madhhab -- Abu Ja'far against Shayba, or one Makki riwaya against another. Those
+// carry real scholarly content that the flat counted_by array cannot express, so they
+// are kept, and riwaya_note is what makes them legible rather than looking like noise.
+function normalizeRiwayaNote(value, location) {
+  if (value === undefined || value === null) {
+    return null;
+  }
+
+  if (typeof value !== 'string' || value.trim().length === 0) {
+    throw new Error(`${location}: riwaya_note must be a non-empty string when present`);
+  }
+
+  return value.trim();
 }
 
 function normalizeWord(value, location) {
@@ -256,10 +273,13 @@ export function normalizeBookBoundaryPrimitivesDocument(primitivesDocument, coun
       }
 
       if (primitive.end) {
+        const endRiwayaNote = normalizeRiwayaNote(primitive.end.riwaya_note, `${location}:end`);
         normalizedPrimitive.end = {
           word: normalizeWord(primitive.end.word, `${location}:end`),
+          ...(endRiwayaNote ? { riwaya_note: endRiwayaNote } : {}),
           counted_by: normalizeCountedBy(primitive.end.counted_by, orderedSystemIds, {
             allowKufi: true,
+            allowAllSystems: Boolean(endRiwayaNote),
             location: `${location}:end`
           })
         };

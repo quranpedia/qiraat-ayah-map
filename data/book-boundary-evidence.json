@@ -4595,8 +4595,25 @@
       "167": {
         "end": {
           "word": "ليقولون",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 212",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة: (﴿وإن كانوا ليقولون﴾) وهو الثاني لم يعدها أبو جعفر وعدها الباقون وشيبة"
+            }
+          ]
         }
       }
     },
@@ -5303,8 +5320,25 @@
       "24": {
         "end": {
           "word": "طعامه",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 264",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة: (﴿إلى طعامه﴾) لم يعدها أبو جعفر وحده وعدها شيبة والباقون"
+            }
+          ]
         }
       },
       "32": {
@@ -5326,8 +5360,25 @@
       "26": {
         "end": {
           "word": "تذهبون",
-          "verification_status": "uncited",
-          "evidence": []
+          "verification_status": "primary_cited",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "locator": "ص 265",
+              "supports": [
+                "madani-first",
+                "madani-last",
+                "makki",
+                "basri",
+                "dimashqi",
+                "kufi"
+              ],
+              "strength": "direct",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "note": "مدخل السورة: (﴿فأين تذهبون﴾) لم يعدها أبو جعفر وحده وعدها الباقون وشيبة"
+            }
+          ]
         }
       }
     },
