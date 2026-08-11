@@ -96,11 +96,11 @@
       "points_uncited": 131
     },
     "attestations": {
-      "total_recorded": 1,
-      "with_explicit_policy": 1,
+      "total_recorded": 6,
+      "with_explicit_policy": 6,
       "by_status": {
-        "missing": 5,
-        "resolved_to_primary_riwaya": 1
+        "follows_alternative_attested_riwaya": 1,
+        "resolved_to_primary_riwaya": 5
       }
     },
     "primary_source_frontier": {
@@ -138,9 +138,9 @@
       "nearest_system_distance": 43,
       "farthest_system_id": "kufi",
       "farthest_system_distance": 136,
-      "attestation_status": null,
-      "attestation_total": null,
-      "attestation_delta": null
+      "attestation_status": "follows_alternative_attested_riwaya",
+      "attestation_total": 6217,
+      "attestation_delta": -3
     },
     {
       "id": "madani-last",
@@ -166,9 +166,9 @@
       "nearest_system_distance": 47,
       "farthest_system_id": "kufi",
       "farthest_system_distance": 140,
-      "attestation_status": null,
-      "attestation_total": null,
-      "attestation_delta": null
+      "attestation_status": "resolved_to_primary_riwaya",
+      "attestation_total": 6214,
+      "attestation_delta": 0
     },
     {
       "id": "makki",
@@ -223,9 +223,9 @@
       "nearest_system_distance": 84,
       "farthest_system_id": "kufi",
       "farthest_system_distance": 128,
-      "attestation_status": null,
-      "attestation_total": null,
-      "attestation_delta": null
+      "attestation_status": "resolved_to_primary_riwaya",
+      "attestation_total": 6204,
+      "attestation_delta": 0
     },
     {
       "id": "dimashqi",
@@ -251,9 +251,9 @@
       "nearest_system_distance": 84,
       "farthest_system_id": "kufi",
       "farthest_system_distance": 140,
-      "attestation_status": null,
-      "attestation_total": null,
-      "attestation_delta": null
+      "attestation_status": "resolved_to_primary_riwaya",
+      "attestation_total": 6226,
+      "attestation_delta": 0
     },
     {
       "id": "kufi",
@@ -282,9 +282,9 @@
       "nearest_system_distance": 128,
       "farthest_system_id": "makki",
       "farthest_system_distance": 149,
-      "attestation_status": null,
-      "attestation_total": null,
-      "attestation_delta": null
+      "attestation_status": "resolved_to_primary_riwaya",
+      "attestation_total": 6236,
+      "attestation_delta": 0
     }
   ],
   "surahs": [
@@ -46069,13 +46069,161 @@
     }
   ],
   "attestations": {
+    "madani-first": {
+      "status": "follows_alternative_attested_riwaya",
+      "verification_status": "primary_cited",
+      "mapping_total_ayahs": 6214,
+      "registry_total_ayahs": 6214,
+      "primary_classical_total_ayahs": 6217,
+      "delta_from_primary": -3,
+      "policy_en": "The First Madinan count is what Nafi' transmits from his two shaykhs Abu Ja'far and Shaybah ibn Nissah. It reaches us by two routes with two different totals: the Kufan route from the people of Madinah (6217), and the Basran route through Warsh from Nafi' (6214). Al-Shatibi adopted the Kufan route, following al-Dani, so 6217 is recorded here as the primary figure.",
+      "policy_ar": "العدد المدني الأول هو ما رواه نافع عن شيخيه أبي جعفر وشيبة بن نصاح، وقد ورد من طريقين بجملتين مختلفتين: رواية أهل الكوفة عن أهل المدينة (٦٢١٧)، ورواية أهل البصرة عن ورش عن نافع (٦٢١٤). واعتمد الإمام الشاطبي رواية أهل الكوفة تبعًا للإمام الداني، فأُثبتت ٦٢١٧ هنا جملةً أصلية.",
+      "attested_totals": [
+        {
+          "total_ayahs": 6217,
+          "role": "primary",
+          "attribution_en": "Kufan route: the Kufans transmitting from the people of Madinah without naming a transmitter. Adopted by al-Shatibi, following al-Dani.",
+          "attribution_ar": "رواية أهل الكوفة عن أهل المدينة من غير تعيين أحد منهم، وهي التي اعتمدها الشاطبي تبعًا للداني.",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "locator": "ص 79",
+              "strength": "direct",
+              "note": "قسم count_school.madani_1: جميع عدد آي القرآن في المدني الأول ستة آلاف آية ومئتا آية وسبع عشرة آية، وهو العدد الذي رواه أهل الكوفة عن أهل المدينة"
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 25-26",
+              "strength": "direct",
+              "note": "مقطع nfb.madkhal.enumerators.madani_first"
+            }
+          ]
+        },
+        {
+          "total_ayahs": 6214,
+          "role": "alternative",
+          "attribution_en": "Basran route: the Basrans transmitting through Warsh from Nafi' from his two shaykhs.",
+          "attribution_ar": "رواية أهل البصرة عن ورش عن نافع عن شيخيه.",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 25-26",
+              "strength": "direct",
+              "note": "مقطع nfb.madkhal.enumerators.madani_first: ورواية أهل البصرة عن ورش ٦٢١٤"
+            }
+          ]
+        }
+      ],
+      "open_question_en": "The generated mapping reproduces 6214, the Basran route, while the adopted primary figure is 6217. Three boundary points counted in the Kufan route are therefore not yet present in the primitive layer. Two tasks follow: cite the six totals from al-Bayan directly rather than through a commentary, and identify the three missing First Madinan boundaries. Until then this system must not be described as settled. Note also that the mapping total for madani-first currently equals madani-last (6214) while the two systems differ in 15 surahs, which is consistent with the Basran route but should be re-checked once the three points are located.",
+      "open_question_ar": "الخريطة المولَّدة تعطي ٦٢١٤ وهي جملة الطريق البصري، والجملة الأصلية المعتمدة ٦٢١٧. فثلاثة مواضع معدودة في الطريق الكوفي لم تُثبت بعد في طبقة المواضع. ويلزم أمران: توثيق الجمل الست من البيان نفسه لا من شرح، وتعيين المواضع الثلاثة الناقصة. ولا يوصف هذا العدد بالاستقرار قبل ذلك.",
+      "disputed_boundaries": []
+    },
+    "madani-last": {
+      "status": "resolved_to_primary_riwaya",
+      "verification_status": "primary_cited",
+      "mapping_total_ayahs": 6214,
+      "registry_total_ayahs": 6214,
+      "primary_classical_total_ayahs": 6214,
+      "delta_from_primary": 0,
+      "policy_en": "The Last Madinan count is what Isma'il ibn Ja'far transmits from Yazid and Shaybah by way of Sulayman ibn Jimmaz. Only one total is attested for it.",
+      "policy_ar": "العدد المدني الأخير هو ما رواه إسماعيل بن جعفر عن يزيد وشيبة بواسطة سليمان بن جماز، ولم تُنقل له إلا جملة واحدة.",
+      "attested_totals": [
+        {
+          "total_ayahs": 6214,
+          "role": "primary",
+          "attribution_en": "Isma'il ibn Ja'far, from Sulayman ibn Jimmaz, from Shaybah and Yazid.",
+          "attribution_ar": "إسماعيل بن جعفر عن سليمان بن جماز عن شيبة ويزيد.",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "locator": "ص 79",
+              "strength": "direct",
+              "note": "قسم count_school.madani_2: جميع عدد آي القرآن في قول إسماعيل بن جعفر ستة آلاف آية ومئتا آية وأربع عشرة آية"
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 26",
+              "strength": "direct",
+              "note": "مقطع nfb.madkhal.enumerators.madani_last"
+            }
+          ]
+        },
+        {
+          "total_ayahs": 6210,
+          "role": "alternative",
+          "attribution_en": "Abu Ja'far's own count, differing from Shaybah — recorded by al-Dani in the same chapter. Relevant because Abu Ja'far is the Qiraa this repository maps to the First Madinan madhhab.",
+          "attribution_ar": "جملة أبي جعفر نفسه للاختلاف بينه وبين شيبة، ذكرها الداني في الباب نفسه. وتُعنى هنا لأن أبا جعفر هو القارئ المنسوب في هذا المستودع إلى العدد المدني الأول.",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "locator": "ص 79",
+              "strength": "direct",
+              "note": "قسم count_school.madani_2: وجميع آي القرآن في قول أبي جعفر للاختلاف الذي ذكرناه بينه وبين شيبة ستة آلاف ومئتان وعشر آيات"
+            }
+          ]
+        }
+      ],
+      "disputed_boundaries": []
+    },
     "makki": {
       "status": "resolved_to_primary_riwaya",
+      "verification_status": "primary_cited",
       "mapping_total_ayahs": 6219,
+      "registry_total_ayahs": 6219,
       "primary_classical_total_ayahs": 6219,
       "delta_from_primary": 0,
-      "policy_en": "Prefer the primary Makki total reported by Abu Amr al-Dani when later computed variants can be reproduced only by disputed boundary positions.",
-      "policy_ar": "يُقدَّم مجموع العدد المكي الذي رواه أبو عمرو الداني إذا لم يمكن بلوغ الجمل الأخرى إلا بعدِّ مواضع مختلف فيها.",
+      "policy_en": "Prefer the primary Makki total reported by Abu Amr al-Dani when later computed variants can be reproduced only by disputed boundary positions. The adopted figure is 6219, directly attested in al-Bayan. Nafa'is al-Bayan reports 6210 for the Makkan chain; al-Bayan shows that 6210 is the figure of Ubayy ibn Ka'b, recorded separately from the Makkiyyun total in the same chapter. The two figures describe different things.",
+      "policy_ar": "يُقدَّم مجموع العدد المكي الذي رواه أبو عمرو الداني إذا لم يمكن بلوغ الجمل الأخرى إلا بعدِّ مواضع مختلف فيها، والمعتمد ٦٢١٩ وهو منصوص في البيان. وذكر نفائس البيان ٦٢١٠ في سند المكي، وبيَّن البيانُ أن ٦٢١٠ جملة أبيّ بن كعب مذكورةً على حدة في الباب نفسه، فالجملتان في شيئين مختلفين.",
+      "attested_totals": [
+        {
+          "total_ayahs": 6219,
+          "role": "primary",
+          "attribution_en": "The Makkan count as reported by Abu Amr al-Dani. Adopted by this repository.",
+          "attribution_ar": "العدد المكي كما رواه أبو عمرو الداني، وهو المعتمد في هذا المستودع.",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "locator": "ص 79",
+              "strength": "direct",
+              "note": "قسم count_school.makki: وعدد آي القرآن في قول المكيين ستة آلاف آية ومئتان وتسع عشرة آية"
+            }
+          ]
+        },
+        {
+          "total_ayahs": 6210,
+          "role": "alternative",
+          "attribution_en": "The figure of Ubayy ibn Ka'b, recorded by al-Dani immediately after the Makkiyyun total. Nafa'is al-Bayan attaches this figure to the Makkan chain (al-Dani to Ibn Kathir, from Mujahid, from Ibn 'Abbas, from Ubayy), which is why the two sources appear to conflict.",
+          "attribution_ar": "جملة أبيّ بن كعب، ذكرها الداني عقب جملة المكيين. ونسبها نفائس البيان إلى سند المكي (الداني إلى ابن كثير عن مجاهد عن ابن عباس عن أبيّ)، ومن هنا نشأ توهم التعارض بين المصدرين.",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "locator": "ص 79",
+              "strength": "direct",
+              "note": "قسم count_school.makki: وفي قول أبي بن كعب ستة آلاف ومئتان وعشر آيات"
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 26",
+              "strength": "direct",
+              "note": "مقطع nfb.madkhal.enumerators.makki: وعدد الآي عنده ٦٢١٠"
+            }
+          ]
+        }
+      ],
       "disputed_boundaries": [
         {
           "surah": 78,
@@ -46083,7 +46231,7 @@
           "word": "قريبا",
           "primary_riwaya_decision": "excluded",
           "note_en": "Abu Amr al-Dani reports this boundary for Basri only, not for Makki.",
-          "note_ar": "نصَّ أبو عمرو الداني على عدِّ هذا الموضع للبصري فقط دون المكي.",
+          "note_ar": "نصَّ أبو عمرو الداني على عدِّ هذا الموضع للبصري فقط دون المكي.",
           "current_mapping_decision": "excluded"
         },
         {
@@ -46092,10 +46240,158 @@
           "word": "فعقروها",
           "primary_riwaya_decision": "excluded",
           "note_en": "Abu Amr al-Dani marks the Makki count here as disputed (بخلاف عنه); the repository excludes it to preserve the primary Makki total of 6219.",
-          "note_ar": "ذكر أبو عمرو الداني عدَّ هذا الموضع للمكي بخلاف عنه؛ واعتمد المستودع تركه محافظةً على الجملة الأصلية للعدد المكي (6219).",
+          "note_ar": "ذكر أبو عمرو الداني عدَّ هذا الموضع للمكي بخلاف عنه؛ واعتمد المستودع تركه محافظةً على الجملة الأصلية للعدد المكي (6219).",
           "current_mapping_decision": "excluded"
         }
       ]
+    },
+    "basri": {
+      "status": "resolved_to_primary_riwaya",
+      "verification_status": "primary_cited",
+      "mapping_total_ayahs": 6204,
+      "registry_total_ayahs": 6204,
+      "primary_classical_total_ayahs": 6204,
+      "delta_from_primary": 0,
+      "policy_en": "The Basran count is what 'Ata' ibn Yasar and 'Asim al-Jahdari transmit, later attributed also to Ayyub ibn al-Mutawakkil. One total is attested: 6204. This is the count that Abu Amr al-Basri and Ya'qub follow, and therefore the count that governs the riwayat of al-Duri 'an Abi 'Amr, al-Susi, Ruways and Rawh.",
+      "policy_ar": "العدد البصري هو ما رواه عطاء بن يسار وعاصم الجحدري، ونُسب بعدُ إلى أيوب بن المتوكل، وجملته ٦٢٠٤. وهو عدد أبي عمرو البصري ويعقوب، فيجري على روايات الدوري عن أبي عمرو والسوسي ورويس وروح.",
+      "attested_totals": [
+        {
+          "total_ayahs": 6204,
+          "role": "primary",
+          "attribution_en": "'Ata' ibn Yasar and 'Asim al-Jahdari; later attributed to Ayyub ibn al-Mutawakkil.",
+          "attribution_ar": "عطاء بن يسار وعاصم الجحدري، ونُسب بعدُ إلى أيوب بن المتوكل.",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "locator": "ص 80",
+              "strength": "direct",
+              "note": "قسم count_school.basri: وجميع عدد آي القرآن في عدد البصريين ستة آلاف ومئتان وأربع آيات، وهو العدد الذي عليه مصاحفهم حتى الآن، وهو عدد أيوب بن المتوكل"
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 26",
+              "strength": "direct",
+              "note": "مقطع nfb.madkhal.enumerators.basri"
+            }
+          ]
+        },
+        {
+          "total_ayahs": 6205,
+          "role": "alternative",
+          "attribution_en": "The count of 'Asim al-Jahdari, one ayah more than Ayyub ibn al-Mutawakkil's, on the view that 'Asim counted ﴿قال فالحق﴾ in Sad.",
+          "attribution_ar": "عدد عاصم الجحدري بزيادة آية على عدد أيوب بن المتوكل، على قول من قال إن عاصمًا كان يعدّ في ص ﴿قال فالحق﴾.",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "locator": "ص 80",
+              "strength": "direct",
+              "note": "قسم count_school.basri: وأما عدد عاصم الجحدري فهو وخمس آيات، وذلك على قول من قال إن عاصمًا كان يعد في ص ﴿قال فالحق﴾"
+            }
+          ]
+        }
+      ],
+      "disputed_boundaries": []
+    },
+    "dimashqi": {
+      "status": "resolved_to_primary_riwaya",
+      "verification_status": "primary_cited",
+      "mapping_total_ayahs": 6226,
+      "registry_total_ayahs": 6226,
+      "primary_classical_total_ayahs": 6226,
+      "delta_from_primary": 0,
+      "policy_en": "The Damascene count is what Yahya al-Dhimari transmitted from Ibn 'Amir al-Yahsubi from Abu al-Darda', and is also attributed to 'Uthman ibn 'Affan. al-Bayan attests 6226 directly, so 6226 is adopted. Nafa'is al-Bayan gives 6227 and reports 6226 only as a second reading; the primary source is preferred over the commentary.",
+      "policy_ar": "العدد الدمشقي هو ما رواه يحيى الذماري عن ابن عامر اليحصبي عن أبي الدرداء، ويُنسب إلى عثمان بن عفان رضي الله عنه. وقد نصّ البيان على ٦٢٢٦ فاعتُمدت. وذكر نفائس البيان ٦٢٢٧ ثم قال: وقيل ٦٢٢٦؛ ويُقدَّم الأصل على الشرح.",
+      "attested_totals": [
+        {
+          "total_ayahs": 6226,
+          "role": "primary",
+          "attribution_en": "Yahya al-Dhimari, via Suwayd ibn 'Abd al-'Aziz from Hisham ibn 'Ammar — al-Dani reports this chain three times.",
+          "attribution_ar": "يحيى بن الحارث الذماري من طريق سويد بن عبد العزيز عن هشام بن عمار، أوردها الداني بثلاثة أسانيد.",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "locator": "ص 81",
+              "strength": "direct",
+              "note": "قسم count_school.shami: سألت يحيى بن الحارث الذماري عن عدد آي القرآن فأشار إليّ بيده ستة آلاف ومئتان وست وعشرون"
+            }
+          ]
+        },
+        {
+          "total_ayahs": 6225,
+          "role": "alternative",
+          "attribution_en": "A report of 'six thousand two hundred and twenty-five, one ayah short'; Ibn Dhakwan explains it as Yahya not counting the basmala.",
+          "attribution_ar": "رواية: ستة آلاف ومئتان وخمس وعشرون آية نقص آية. قال ابن ذكوان: فظننت يحيى لم يعد ﴿بسم الله الرحمن الرحيم﴾.",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "locator": "ص 81",
+              "strength": "direct",
+              "note": "قسم count_school.shami: هو ستة آلاف ومئتان وخمس وعشرون آية نقص آية، قال ابن ذكوان فظننت يحيى لم يعد ﴿بسم الله الرحمن الرحيم﴾"
+            }
+          ]
+        },
+        {
+          "total_ayahs": 6227,
+          "role": "conflicting",
+          "attribution_en": "Given as the Damascene total in Nafa'is al-Bayan, which then reports 6226 with the qualifier wa-qila. Not supported by al-Bayan.",
+          "attribution_ar": "جاءت في نفائس البيان جملةً للعدد الدمشقي ثم قال: وقيل ٦٢٢٦. ولم يوافقه البيان.",
+          "evidence": [
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 26",
+              "strength": "direct",
+              "note": "مقطع nfb.madkhal.enumerators.dimashqi: وعدد الآي فيه ٦٢٢٧ وقيل ٦٢٢٦"
+            }
+          ]
+        }
+      ],
+      "disputed_boundaries": []
+    },
+    "kufi": {
+      "status": "resolved_to_primary_riwaya",
+      "verification_status": "primary_cited",
+      "mapping_total_ayahs": 6236,
+      "registry_total_ayahs": 6236,
+      "primary_classical_total_ayahs": 6236,
+      "delta_from_primary": 0,
+      "policy_en": "The Kufan count is what Hamzah and Sufyan transmit from 'Ali ibn Abi Talib. It is the reference madhhab of this repository: every mapping is expressed as Kufi to target. Note that the Kufans carry two counts — whatever they narrate stopping at the people of Madinah is the First Madinan count, and only what they narrate with a connected chain to 'Ali is the Kufan count proper.",
+      "policy_ar": "العدد الكوفي هو ما رواه حمزة وسفيان عن علي بن أبي طالب رضي الله عنه، وهو العدد المرجعي في هذا المستودع، وكل الخرائط مبنية على: من الكوفي إلى غيره. وينبَّه أن لأهل الكوفة عددين: ما رووه موقوفًا على أهل المدينة فهو المدني الأول، وما رووه موصولًا إلى علي فهو الكوفي.",
+      "attested_totals": [
+        {
+          "total_ayahs": 6236,
+          "role": "primary",
+          "attribution_en": "Hamzah and Sufyan, from 'Ali ibn Abi Talib.",
+          "attribution_ar": "حمزة وسفيان عن علي بن أبي طالب رضي الله عنه.",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "locator": "ص 80",
+              "strength": "direct",
+              "note": "قسم count_school.kufi: وجميع عدد آي القرآن في قول الكوفيين خاصة ستة آلاف ومئتا آية وثلاثون وست آيات، وهو العدد الذي رواه سليم والكسائي عن حمزة وأسنده الكسائي إلى علي رضي الله عنه"
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 26-27",
+              "strength": "direct",
+              "note": "مقطع nfb.madkhal.enumerators.kufi"
+            }
+          ]
+        }
+      ],
+      "disputed_boundaries": []
     }
   },
   "source_frontiers": {
