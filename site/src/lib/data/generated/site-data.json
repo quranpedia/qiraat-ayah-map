@@ -31,10 +31,10 @@
     },
     "by_verification_status": {
       "uncited": 128,
-      "secondary_only": 56,
-      "primary_cited": 60,
+      "secondary_only": 55,
+      "primary_cited": 62,
       "primary_cited_and_reviewed": 0,
-      "disputed": 2,
+      "disputed": 1,
       "unresolved": 0
     },
     "by_system": {
@@ -88,10 +88,10 @@
       }
     },
     "evidence": {
-      "total_items": 283,
-      "total_primary_items": 61,
+      "total_items": 285,
+      "total_primary_items": 63,
       "points_with_evidence": 118,
-      "points_with_primary_evidence": 60,
+      "points_with_primary_evidence": 62,
       "points_reviewed": 0,
       "points_uncited": 128
     },
@@ -131,10 +131,10 @@
       "uncited_points": 60,
       "cited_points": 55,
       "points_with_evidence": 55,
-      "points_with_primary_evidence": 29,
+      "points_with_primary_evidence": 30,
       "points_reviewed": 0,
       "nearest_system_id": "makki",
-      "nearest_system_distance": 40,
+      "nearest_system_distance": 38,
       "farthest_system_id": "kufi",
       "farthest_system_distance": 133,
       "attestation_status": "resolved_to_primary_riwaya",
@@ -159,7 +159,7 @@
       "uncited_points": 60,
       "cited_points": 52,
       "points_with_evidence": 52,
-      "points_with_primary_evidence": 27,
+      "points_with_primary_evidence": 28,
       "points_reviewed": 0,
       "nearest_system_id": "makki",
       "nearest_system_distance": 47,
@@ -187,10 +187,10 @@
       "uncited_points": 64,
       "cited_points": 53,
       "points_with_evidence": 53,
-      "points_with_primary_evidence": 27,
+      "points_with_primary_evidence": 28,
       "points_reviewed": 0,
       "nearest_system_id": "madani-first",
-      "nearest_system_distance": 40,
+      "nearest_system_distance": 38,
       "farthest_system_id": "kufi",
       "farthest_system_distance": 149,
       "attestation_status": "resolved_to_primary_riwaya",
@@ -244,7 +244,7 @@
       "uncited_points": 58,
       "cited_points": 66,
       "points_with_evidence": 66,
-      "points_with_primary_evidence": 32,
+      "points_with_primary_evidence": 34,
       "points_reviewed": 0,
       "nearest_system_id": "basri",
       "nearest_system_distance": 84,
@@ -360,10 +360,10 @@
       },
       "by_verification_status": {
         "uncited": 0,
-        "secondary_only": 1,
-        "primary_cited": 5,
+        "secondary_only": 0,
+        "primary_cited": 7,
         "primary_cited_and_reviewed": 0,
-        "disputed": 1,
+        "disputed": 0,
         "unresolved": 0
       },
       "counts": {
@@ -11479,14 +11479,14 @@
       "total_points": 115,
       "by_status": {
         "uncited": 60,
-        "secondary_only": 25,
-        "primary_cited": 29,
+        "secondary_only": 24,
+        "primary_cited": 30,
         "primary_cited_and_reviewed": 0,
         "disputed": 1,
         "unresolved": 0
       },
       "points_with_evidence": 55,
-      "points_with_primary_evidence": 29,
+      "points_with_primary_evidence": 30,
       "points_reviewed": 0,
       "uncited_points": 60,
       "cited_points": 55
@@ -11496,13 +11496,13 @@
       "by_status": {
         "uncited": 60,
         "secondary_only": 23,
-        "primary_cited": 27,
+        "primary_cited": 28,
         "primary_cited_and_reviewed": 0,
-        "disputed": 2,
+        "disputed": 1,
         "unresolved": 0
       },
       "points_with_evidence": 52,
-      "points_with_primary_evidence": 27,
+      "points_with_primary_evidence": 28,
       "points_reviewed": 0,
       "uncited_points": 60,
       "cited_points": 52
@@ -11512,13 +11512,13 @@
       "by_status": {
         "uncited": 64,
         "secondary_only": 24,
-        "primary_cited": 27,
+        "primary_cited": 28,
         "primary_cited_and_reviewed": 0,
-        "disputed": 2,
+        "disputed": 1,
         "unresolved": 0
       },
       "points_with_evidence": 53,
-      "points_with_primary_evidence": 27,
+      "points_with_primary_evidence": 28,
       "points_reviewed": 0,
       "uncited_points": 64,
       "cited_points": 53
@@ -11543,14 +11543,14 @@
       "total_points": 124,
       "by_status": {
         "uncited": 58,
-        "secondary_only": 32,
-        "primary_cited": 32,
+        "secondary_only": 31,
+        "primary_cited": 34,
         "primary_cited_and_reviewed": 0,
-        "disputed": 2,
+        "disputed": 1,
         "unresolved": 0
       },
       "points_with_evidence": 66,
-      "points_with_primary_evidence": 32,
+      "points_with_primary_evidence": 34,
       "points_reviewed": 0,
       "uncited_points": 58,
       "cited_points": 66
@@ -11589,22 +11589,22 @@
       "right_system_id": "madani-last",
       "left_name": "First Madinan",
       "right_name": "Last Madinan",
-      "differing_points": 59,
-      "agreement_points": 187,
-      "difference_ratio": 0.23983739837398374,
-      "similarity_ratio": 0.7601626016260162,
-      "same_numbering_effect_points": 187
+      "differing_points": 57,
+      "agreement_points": 189,
+      "difference_ratio": 0.23170731707317074,
+      "similarity_ratio": 0.7682926829268293,
+      "same_numbering_effect_points": 189
     },
     {
       "left_system_id": "madani-first",
       "right_system_id": "makki",
       "left_name": "First Madinan",
       "right_name": "Makkan",
-      "differing_points": 40,
-      "agreement_points": 206,
-      "difference_ratio": 0.16260162601626016,
-      "similarity_ratio": 0.8373983739837398,
-      "same_numbering_effect_points": 206
+      "differing_points": 38,
+      "agreement_points": 208,
+      "difference_ratio": 0.15447154471544716,
+      "similarity_ratio": 0.8455284552845529,
+      "same_numbering_effect_points": 208
     },
     {
       "left_system_id": "madani-first",
@@ -11644,11 +11644,11 @@
       "right_system_id": "madani-first",
       "left_name": "Last Madinan",
       "right_name": "First Madinan",
-      "differing_points": 59,
-      "agreement_points": 187,
-      "difference_ratio": 0.23983739837398374,
-      "similarity_ratio": 0.7601626016260162,
-      "same_numbering_effect_points": 187
+      "differing_points": 57,
+      "agreement_points": 189,
+      "difference_ratio": 0.23170731707317074,
+      "similarity_ratio": 0.7682926829268293,
+      "same_numbering_effect_points": 189
     },
     {
       "left_system_id": "madani-last",
@@ -11710,11 +11710,11 @@
       "right_system_id": "madani-first",
       "left_name": "Makkan",
       "right_name": "First Madinan",
-      "differing_points": 40,
-      "agreement_points": 206,
-      "difference_ratio": 0.16260162601626016,
-      "similarity_ratio": 0.8373983739837398,
-      "same_numbering_effect_points": 206
+      "differing_points": 38,
+      "agreement_points": 208,
+      "difference_ratio": 0.15447154471544716,
+      "similarity_ratio": 0.8455284552845529,
+      "same_numbering_effect_points": 208
     },
     {
       "left_system_id": "makki",
@@ -11977,11 +11977,11 @@
         "right_system_id": "makki",
         "left_name": "First Madinan",
         "right_name": "Makkan",
-        "differing_points": 40,
-        "agreement_points": 206,
-        "difference_ratio": 0.16260162601626016,
-        "similarity_ratio": 0.8373983739837398,
-        "same_numbering_effect_points": 206
+        "differing_points": 38,
+        "agreement_points": 208,
+        "difference_ratio": 0.15447154471544716,
+        "similarity_ratio": 0.8455284552845529,
+        "same_numbering_effect_points": 208
       },
       "farthest": {
         "left_system_id": "madani-first",
@@ -12025,11 +12025,11 @@
         "right_system_id": "madani-first",
         "left_name": "Makkan",
         "right_name": "First Madinan",
-        "differing_points": 40,
-        "agreement_points": 206,
-        "difference_ratio": 0.16260162601626016,
-        "similarity_ratio": 0.8373983739837398,
-        "same_numbering_effect_points": 206
+        "differing_points": 38,
+        "agreement_points": 208,
+        "difference_ratio": 0.15447154471544716,
+        "similarity_ratio": 0.8455284552845529,
+        "same_numbering_effect_points": 208
       },
       "farthest": {
         "left_system_id": "makki",
@@ -12320,13 +12320,13 @@
         {
           "step": 6,
           "word": "تحبون",
-          "numbering_effect": "none",
-          "cumulative_delta": -1
+          "numbering_effect": "split",
+          "cumulative_delta": 0
         },
         {
           "step": 7,
           "word": "إبراهيم",
-          "numbering_effect": "split",
+          "numbering_effect": "none",
           "cumulative_delta": 0
         }
       ],
@@ -29675,28 +29675,29 @@
       "kind": "internal",
       "word": "تحبون",
       "counted_by": [
+        "madani-first",
         "madani-last",
         "makki",
         "dimashqi"
       ],
       "omitted_by": [
-        "madani-first",
         "basri",
         "kufi"
       ],
-      "verification_status": "disputed",
-      "evidence_count": 2,
-      "primary_evidence_count": 0,
+      "verification_status": "primary_cited",
+      "evidence_count": 3,
+      "primary_evidence_count": 1,
       "reviewer_count": 0,
       "supported_systems": [
+        "madani-first",
         "madani-last",
         "makki",
         "dimashqi"
       ],
       "systems": {
         "madani-first": {
-          "counts_boundary": false,
-          "numbering_effect": "none"
+          "counts_boundary": true,
+          "numbering_effect": "split"
         },
         "madani-last": {
           "counts_boundary": true,
@@ -29721,6 +29722,20 @@
       },
       "note": "شرح نفائس البيان يثبت هذا الموضع للمكي والدمشقي وشيبة، وهو ما يوافق طبقة المدني الأخير في المشروع، بينما ملف البيان المورّد يشفّر هذا الموضع مع ملاحظة انقسام داخلي في النقل المدني هنا. يحتاج تحويل هذا النقل إلى إحدى طبقتي المدني في المشروع إلى مراجعة أولية أدق.",
       "evidence": [
+        {
+          "tier": "primary",
+          "work": "البيان في عدّ آي القرآن",
+          "locator": "ص 143",
+          "supports": [
+            "madani-first",
+            "madani-last",
+            "makki",
+            "dimashqi"
+          ],
+          "strength": "direct",
+          "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+          "note": "مدخل السورة: (﴿مما تحبون﴾) الأول لم يعدها الكوفي والبصري وأبو جعفر القارى وعدها الباقون وشيبة بن نصاح"
+        },
         {
           "tier": "commentary",
           "work": "نفائس البيان — شرح الفرائد الحسان",
@@ -29748,8 +29763,8 @@
       ],
       "reviewers": [],
       "location_label": "3:92",
-      "counted_by_count": 3,
-      "omitted_by_count": 3,
+      "counted_by_count": 4,
+      "omitted_by_count": 2,
       "surah_row_index": 6,
       "ayah_slot_index": 1,
       "ayah_slot_count": 1,
@@ -29762,27 +29777,26 @@
       "kind": "internal",
       "word": "إبراهيم",
       "counted_by": [
-        "madani-first",
         "dimashqi"
       ],
       "omitted_by": [
+        "madani-first",
         "madani-last",
         "makki",
         "basri",
         "kufi"
       ],
-      "verification_status": "secondary_only",
-      "evidence_count": 2,
-      "primary_evidence_count": 0,
+      "verification_status": "primary_cited",
+      "evidence_count": 3,
+      "primary_evidence_count": 1,
       "reviewer_count": 0,
       "supported_systems": [
-        "madani-first",
         "dimashqi"
       ],
       "systems": {
         "madani-first": {
-          "counts_boundary": true,
-          "numbering_effect": "split"
+          "counts_boundary": false,
+          "numbering_effect": "none"
         },
         "madani-last": {
           "counts_boundary": false,
@@ -29808,32 +29822,41 @@
       "note": "شرح نفائس البيان يثبت مقام إبراهيم للشامي وأبي جعفر، وهو ما يوافق دعوى المشروع. لم يقدّم ملف البيان المورّد في هذه الدفعة مدخلا أوليا مطابقا لهذا الموضع بعد.",
       "evidence": [
         {
+          "tier": "primary",
+          "work": "البيان في عدّ آي القرآن",
+          "locator": "باب ذكر ما اختلف فيه أبو جعفر وشيبة",
+          "supports": [
+            "dimashqi"
+          ],
+          "strength": "direct",
+          "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+          "note": "(﴿مقام إبراهيم﴾) آية في قول أبي جعفر وليست في قول شيبة؛ فالموضع للشامي وتابعه أبو جعفر وحده"
+        },
+        {
           "tier": "commentary",
           "work": "نفائس البيان — شرح الفرائد الحسان",
           "locator": "ص 33",
           "supports": [
-            "madani-first",
             "dimashqi"
           ],
           "strength": "direct",
-          "note": "مقطع nfb.al_imran.commentary.maqam_ibrahim"
+          "note": "مقطع nfb.al_imran.commentary.maqam_ibrahim [نُقّح: الموضع لأبي جعفر وحده لا للمدني الأول]"
         },
         {
           "tier": "secondary",
           "work": "الفرائد الحسان في عدّ آي القرآن",
           "locator": "ص 33",
           "supports": [
-            "madani-first",
             "dimashqi"
           ],
           "strength": "direct",
-          "note": "مقطع nfb.al_imran.poem.maqam_ibrahim"
+          "note": "مقطع nfb.al_imran.poem.maqam_ibrahim [نُقّح: الموضع لأبي جعفر وحده لا للمدني الأول]"
         }
       ],
       "reviewers": [],
       "location_label": "3:97",
-      "counted_by_count": 2,
-      "omitted_by_count": 4,
+      "counted_by_count": 1,
+      "omitted_by_count": 5,
       "surah_row_index": 7,
       "ayah_slot_index": 1,
       "ayah_slot_count": 1,
@@ -46512,12 +46535,13 @@
           "kind": "internal",
           "word": "تحبون",
           "project_counted_by": [
+            "madani-first",
             "madani-last",
             "makki",
             "dimashqi"
           ],
-          "evidence_verification_status": "disputed",
-          "has_primary_evidence_entry": false,
+          "evidence_verification_status": "primary_cited",
+          "has_primary_evidence_entry": true,
           "file": "al_bayan_batch3_surah_003_al_imran.json",
           "locator": "ص 143",
           "match_status": "counted_by_mismatch",
@@ -46543,11 +46567,10 @@
           "kind": "internal",
           "word": "إبراهيم",
           "project_counted_by": [
-            "madani-first",
             "dimashqi"
           ],
-          "evidence_verification_status": "secondary_only",
-          "has_primary_evidence_entry": false,
+          "evidence_verification_status": "primary_cited",
+          "has_primary_evidence_entry": true,
           "file": "al_bayan_batch3_surah_003_al_imran.json",
           "locator": "ص 143",
           "match_status": "no_exact_primary_match",

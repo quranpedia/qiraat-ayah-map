@@ -209,6 +209,7 @@
           {
             "word": "تحبون",
             "counted_by": [
+              "madani-first",
               "madani-last",
               "makki",
               "dimashqi"
@@ -221,7 +222,6 @@
           {
             "word": "إبراهيم",
             "counted_by": [
-              "madani-first",
               "dimashqi"
             ]
           }

@@ -848,8 +848,22 @@
         "internal": [
           {
             "word": "تحبون",
-            "verification_status": "disputed",
+            "verification_status": "primary_cited",
             "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 143",
+                "supports": [
+                  "madani-first",
+                  "madani-last",
+                  "makki",
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "مدخل السورة: (﴿مما تحبون﴾) الأول لم يعدها الكوفي والبصري وأبو جعفر القارى وعدها الباقون وشيبة بن نصاح"
+              },
               {
                 "tier": "commentary",
                 "work": "نفائس البيان — شرح الفرائد الحسان",
@@ -883,29 +897,38 @@
         "internal": [
           {
             "word": "إبراهيم",
-            "verification_status": "secondary_only",
+            "verification_status": "primary_cited",
             "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "باب ذكر ما اختلف فيه أبو جعفر وشيبة",
+                "supports": [
+                  "dimashqi"
+                ],
+                "strength": "direct",
+                "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+                "note": "(﴿مقام إبراهيم﴾) آية في قول أبي جعفر وليست في قول شيبة؛ فالموضع للشامي وتابعه أبو جعفر وحده"
+              },
               {
                 "tier": "commentary",
                 "work": "نفائس البيان — شرح الفرائد الحسان",
                 "locator": "ص 33",
                 "supports": [
-                  "madani-first",
                   "dimashqi"
                 ],
                 "strength": "direct",
-                "note": "مقطع nfb.al_imran.commentary.maqam_ibrahim"
+                "note": "مقطع nfb.al_imran.commentary.maqam_ibrahim [نُقّح: الموضع لأبي جعفر وحده لا للمدني الأول]"
               },
               {
                 "tier": "secondary",
                 "work": "الفرائد الحسان في عدّ آي القرآن",
                 "locator": "ص 33",
                 "supports": [
-                  "madani-first",
                   "dimashqi"
                 ],
                 "strength": "direct",
-                "note": "مقطع nfb.al_imran.poem.maqam_ibrahim"
+                "note": "مقطع nfb.al_imran.poem.maqam_ibrahim [نُقّح: الموضع لأبي جعفر وحده لا للمدني الأول]"
               }
             ],
             "note": "شرح نفائس البيان يثبت مقام إبراهيم للشامي وأبي جعفر، وهو ما يوافق دعوى المشروع. لم يقدّم ملف البيان المورّد في هذه الدفعة مدخلا أوليا مطابقا لهذا الموضع بعد."
