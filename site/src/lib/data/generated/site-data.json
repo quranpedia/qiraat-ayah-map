@@ -24,9 +24,9 @@
     "unresolved"
   ],
   "summary": {
-    "total_points": 243,
+    "total_points": 246,
     "by_kind": {
-      "end": 131,
+      "end": 134,
       "internal": 112
     },
     "by_verification_status": {
@@ -34,72 +34,73 @@
       "secondary_only": 56,
       "primary_cited": 57,
       "primary_cited_and_reviewed": 0,
-      "disputed": 3,
-      "unresolved": 0
+      "disputed": 2,
+      "unresolved": 4
     },
     "by_system": {
       "madani-first": {
         "counts_boundary": 112,
-        "does_not_count_boundary": 131,
+        "does_not_count_boundary": 134,
         "split_effects": 57,
-        "merge_effects": 76,
+        "merge_effects": 79,
         "fully_reviewed_points": 0,
-        "outstanding_points": 243
+        "outstanding_points": 246
       },
       "madani-last": {
-        "counts_boundary": 109,
+        "counts_boundary": 112,
         "does_not_count_boundary": 134,
         "split_effects": 59,
         "merge_effects": 81,
         "fully_reviewed_points": 0,
-        "outstanding_points": 243
+        "outstanding_points": 246
       },
       "makki": {
-        "counts_boundary": 114,
+        "counts_boundary": 117,
         "does_not_count_boundary": 129,
         "split_effects": 66,
         "merge_effects": 83,
         "fully_reviewed_points": 0,
-        "outstanding_points": 243
+        "outstanding_points": 246
       },
       "basri": {
-        "counts_boundary": 99,
+        "counts_boundary": 102,
         "does_not_count_boundary": 144,
         "split_effects": 48,
         "merge_effects": 80,
         "fully_reviewed_points": 0,
-        "outstanding_points": 243
+        "outstanding_points": 246
       },
       "dimashqi": {
-        "counts_boundary": 121,
+        "counts_boundary": 124,
         "does_not_count_boundary": 122,
         "split_effects": 65,
         "merge_effects": 75,
         "fully_reviewed_points": 0,
-        "outstanding_points": 243
+        "outstanding_points": 246
       },
       "kufi": {
-        "counts_boundary": 131,
+        "counts_boundary": 134,
         "does_not_count_boundary": 112,
         "split_effects": 0,
         "merge_effects": 0,
         "fully_reviewed_points": 0,
-        "outstanding_points": 243
+        "outstanding_points": 246
       }
     },
     "evidence": {
-      "total_items": 283,
-      "total_primary_items": 59,
-      "points_with_evidence": 116,
-      "points_with_primary_evidence": 58,
+      "total_items": 287,
+      "total_primary_items": 63,
+      "points_with_evidence": 119,
+      "points_with_primary_evidence": 62,
       "points_reviewed": 0,
       "points_uncited": 127
     },
     "attestations": {
-      "total_recorded": 1,
-      "with_explicit_policy": 1,
+      "total_recorded": 2,
+      "with_explicit_policy": 2,
       "by_status": {
-        "missing": 5,
+        "drift_from_primary_riwaya": 1,
+        "missing": 4,
         "resolved_to_primary_riwaya": 1
       }
     },
@@ -118,29 +119,29 @@
       "id": "madani-first",
       "name_en": "First Madinan",
       "name_ar": "المدني الأول",
-      "total_ayahs": 6217,
-      "delta_from_kufi": -19,
+      "total_ayahs": 6214,
+      "delta_from_kufi": -22,
       "used_by_qiraat": [
         "abu-jafar"
       ],
       "counts_boundary": 112,
-      "does_not_count_boundary": 131,
+      "does_not_count_boundary": 134,
       "split_effects": 57,
-      "merge_effects": 76,
+      "merge_effects": 79,
       "fully_reviewed_points": 0,
-      "outstanding_points": 243,
+      "outstanding_points": 246,
       "uncited_points": 60,
       "cited_points": 52,
       "points_with_evidence": 52,
       "points_with_primary_evidence": 26,
       "points_reviewed": 0,
       "nearest_system_id": "makki",
-      "nearest_system_distance": 40,
+      "nearest_system_distance": 43,
       "farthest_system_id": "kufi",
-      "farthest_system_distance": 133,
-      "attestation_status": null,
-      "attestation_total": null,
-      "attestation_delta": null
+      "farthest_system_distance": 136,
+      "attestation_status": "drift_from_primary_riwaya",
+      "attestation_total": 6217,
+      "attestation_delta": -3
     },
     {
       "id": "madani-last",
@@ -151,16 +152,16 @@
       "used_by_qiraat": [
         "nafi"
       ],
-      "counts_boundary": 109,
+      "counts_boundary": 112,
       "does_not_count_boundary": 134,
       "split_effects": 59,
       "merge_effects": 81,
       "fully_reviewed_points": 0,
-      "outstanding_points": 243,
+      "outstanding_points": 246,
       "uncited_points": 59,
-      "cited_points": 50,
-      "points_with_evidence": 50,
-      "points_with_primary_evidence": 25,
+      "cited_points": 53,
+      "points_with_evidence": 53,
+      "points_with_primary_evidence": 29,
       "points_reviewed": 0,
       "nearest_system_id": "makki",
       "nearest_system_distance": 47,
@@ -179,19 +180,19 @@
       "used_by_qiraat": [
         "ibn-kathir"
       ],
-      "counts_boundary": 114,
+      "counts_boundary": 117,
       "does_not_count_boundary": 129,
       "split_effects": 66,
       "merge_effects": 83,
       "fully_reviewed_points": 0,
-      "outstanding_points": 243,
+      "outstanding_points": 246,
       "uncited_points": 63,
-      "cited_points": 51,
-      "points_with_evidence": 51,
-      "points_with_primary_evidence": 25,
+      "cited_points": 54,
+      "points_with_evidence": 54,
+      "points_with_primary_evidence": 29,
       "points_reviewed": 0,
       "nearest_system_id": "madani-first",
-      "nearest_system_distance": 40,
+      "nearest_system_distance": 43,
       "farthest_system_id": "kufi",
       "farthest_system_distance": 149,
       "attestation_status": "resolved_to_primary_riwaya",
@@ -208,16 +209,16 @@
         "abu-amr",
         "yaqub"
       ],
-      "counts_boundary": 99,
+      "counts_boundary": 102,
       "does_not_count_boundary": 144,
       "split_effects": 48,
       "merge_effects": 80,
       "fully_reviewed_points": 0,
-      "outstanding_points": 243,
+      "outstanding_points": 246,
       "uncited_points": 47,
-      "cited_points": 52,
-      "points_with_evidence": 52,
-      "points_with_primary_evidence": 27,
+      "cited_points": 55,
+      "points_with_evidence": 55,
+      "points_with_primary_evidence": 30,
       "points_reviewed": 0,
       "nearest_system_id": "dimashqi",
       "nearest_system_distance": 84,
@@ -236,16 +237,16 @@
       "used_by_qiraat": [
         "ibn-amir"
       ],
-      "counts_boundary": 121,
+      "counts_boundary": 124,
       "does_not_count_boundary": 122,
       "split_effects": 65,
       "merge_effects": 75,
       "fully_reviewed_points": 0,
-      "outstanding_points": 243,
+      "outstanding_points": 246,
       "uncited_points": 58,
-      "cited_points": 63,
-      "points_with_evidence": 63,
-      "points_with_primary_evidence": 29,
+      "cited_points": 66,
+      "points_with_evidence": 66,
+      "points_with_primary_evidence": 33,
       "points_reviewed": 0,
       "nearest_system_id": "basri",
       "nearest_system_distance": 84,
@@ -267,16 +268,16 @@
         "kisai",
         "khalaf"
       ],
-      "counts_boundary": 131,
+      "counts_boundary": 134,
       "does_not_count_boundary": 112,
       "split_effects": 0,
       "merge_effects": 0,
       "fully_reviewed_points": 0,
-      "outstanding_points": 243,
+      "outstanding_points": 246,
       "uncited_points": 76,
-      "cited_points": 55,
-      "points_with_evidence": 55,
-      "points_with_primary_evidence": 23,
+      "cited_points": 58,
+      "points_with_evidence": 58,
+      "points_with_primary_evidence": 26,
       "points_reviewed": 0,
       "nearest_system_id": "basri",
       "nearest_system_distance": 128,
@@ -364,8 +365,8 @@
         "secondary_only": 1,
         "primary_cited": 5,
         "primary_cited_and_reviewed": 0,
-        "disputed": 1,
-        "unresolved": 0
+        "disputed": 0,
+        "unresolved": 1
       },
       "counts": {
         "madani-first": 200,
@@ -1442,9 +1443,9 @@
     },
     {
       "surah": 37,
-      "disputed_points": 1,
+      "disputed_points": 2,
       "by_kind": {
-        "end": 1,
+        "end": 2,
         "internal": 0
       },
       "by_verification_status": {
@@ -1453,10 +1454,10 @@
         "primary_cited": 0,
         "primary_cited_and_reviewed": 0,
         "disputed": 0,
-        "unresolved": 0
+        "unresolved": 1
       },
       "counts": {
-        "madani-first": 182,
+        "madani-first": 181,
         "madani-last": 182,
         "makki": 182,
         "basri": 181,
@@ -1464,7 +1465,7 @@
         "kufi": 182
       },
       "deltas_from_kufi": {
-        "madani-first": 0,
+        "madani-first": -1,
         "madani-last": 0,
         "makki": 0,
         "basri": -1,
@@ -2818,9 +2819,9 @@
     },
     {
       "surah": 80,
-      "disputed_points": 2,
+      "disputed_points": 3,
       "by_kind": {
-        "end": 2,
+        "end": 3,
         "internal": 0
       },
       "by_verification_status": {
@@ -2829,10 +2830,10 @@
         "primary_cited": 0,
         "primary_cited_and_reviewed": 0,
         "disputed": 0,
-        "unresolved": 0
+        "unresolved": 1
       },
       "counts": {
-        "madani-first": 42,
+        "madani-first": 41,
         "madani-last": 42,
         "makki": 42,
         "basri": 41,
@@ -2840,7 +2841,7 @@
         "kufi": 42
       },
       "deltas_from_kufi": {
-        "madani-first": 0,
+        "madani-first": -1,
         "madani-last": 0,
         "makki": 0,
         "basri": -1,
@@ -2850,9 +2851,9 @@
     },
     {
       "surah": 81,
-      "disputed_points": 0,
+      "disputed_points": 1,
       "by_kind": {
-        "end": 0,
+        "end": 1,
         "internal": 0
       },
       "by_verification_status": {
@@ -2861,10 +2862,10 @@
         "primary_cited": 0,
         "primary_cited_and_reviewed": 0,
         "disputed": 0,
-        "unresolved": 0
+        "unresolved": 1
       },
       "counts": {
-        "madani-first": 29,
+        "madani-first": 28,
         "madani-last": 29,
         "makki": 29,
         "basri": 29,
@@ -2872,7 +2873,7 @@
         "kufi": 29
       },
       "deltas_from_kufi": {
-        "madani-first": 0,
+        "madani-first": -1,
         "madani-last": 0,
         "makki": 0,
         "basri": 0,
@@ -4337,14 +4338,14 @@
       },
       {
         "surah": 37,
-        "ayah_count": 182,
+        "ayah_count": 181,
         "kufi_ayah_count": 182,
-        "delta_from_kufi": 0,
-        "disputed_points": 1,
+        "delta_from_kufi": -1,
+        "disputed_points": 2,
         "counted_points": 1,
-        "omitted_points": 0,
+        "omitted_points": 1,
         "split_effects": 0,
-        "merge_effects": 0
+        "merge_effects": 1
       },
       {
         "surah": 38,
@@ -4810,25 +4811,25 @@
       },
       {
         "surah": 80,
-        "ayah_count": 42,
+        "ayah_count": 41,
         "kufi_ayah_count": 42,
-        "delta_from_kufi": 0,
-        "disputed_points": 2,
+        "delta_from_kufi": -1,
+        "disputed_points": 3,
         "counted_points": 2,
-        "omitted_points": 0,
+        "omitted_points": 1,
         "split_effects": 0,
-        "merge_effects": 0
+        "merge_effects": 1
       },
       {
         "surah": 81,
-        "ayah_count": 29,
+        "ayah_count": 28,
         "kufi_ayah_count": 29,
-        "delta_from_kufi": 0,
-        "disputed_points": 0,
+        "delta_from_kufi": -1,
+        "disputed_points": 1,
         "counted_points": 0,
-        "omitted_points": 0,
+        "omitted_points": 1,
         "split_effects": 0,
-        "merge_effects": 0
+        "merge_effects": 1
       },
       {
         "surah": 82,
@@ -5596,8 +5597,8 @@
         "ayah_count": 182,
         "kufi_ayah_count": 182,
         "delta_from_kufi": 0,
-        "disputed_points": 1,
-        "counted_points": 1,
+        "disputed_points": 2,
+        "counted_points": 2,
         "omitted_points": 0,
         "split_effects": 0,
         "merge_effects": 0
@@ -6069,8 +6070,8 @@
         "ayah_count": 42,
         "kufi_ayah_count": 42,
         "delta_from_kufi": 0,
-        "disputed_points": 2,
-        "counted_points": 2,
+        "disputed_points": 3,
+        "counted_points": 3,
         "omitted_points": 0,
         "split_effects": 0,
         "merge_effects": 0
@@ -6080,8 +6081,8 @@
         "ayah_count": 29,
         "kufi_ayah_count": 29,
         "delta_from_kufi": 0,
-        "disputed_points": 0,
-        "counted_points": 0,
+        "disputed_points": 1,
+        "counted_points": 1,
         "omitted_points": 0,
         "split_effects": 0,
         "merge_effects": 0
@@ -6852,8 +6853,8 @@
         "ayah_count": 182,
         "kufi_ayah_count": 182,
         "delta_from_kufi": 0,
-        "disputed_points": 1,
-        "counted_points": 1,
+        "disputed_points": 2,
+        "counted_points": 2,
         "omitted_points": 0,
         "split_effects": 0,
         "merge_effects": 0
@@ -7325,8 +7326,8 @@
         "ayah_count": 42,
         "kufi_ayah_count": 42,
         "delta_from_kufi": 0,
-        "disputed_points": 2,
-        "counted_points": 2,
+        "disputed_points": 3,
+        "counted_points": 3,
         "omitted_points": 0,
         "split_effects": 0,
         "merge_effects": 0
@@ -7336,8 +7337,8 @@
         "ayah_count": 29,
         "kufi_ayah_count": 29,
         "delta_from_kufi": 0,
-        "disputed_points": 0,
-        "counted_points": 0,
+        "disputed_points": 1,
+        "counted_points": 1,
         "omitted_points": 0,
         "split_effects": 0,
         "merge_effects": 0
@@ -8108,8 +8109,8 @@
         "ayah_count": 181,
         "kufi_ayah_count": 182,
         "delta_from_kufi": -1,
-        "disputed_points": 1,
-        "counted_points": 0,
+        "disputed_points": 2,
+        "counted_points": 1,
         "omitted_points": 1,
         "split_effects": 0,
         "merge_effects": 1
@@ -8581,8 +8582,8 @@
         "ayah_count": 41,
         "kufi_ayah_count": 42,
         "delta_from_kufi": -1,
-        "disputed_points": 2,
-        "counted_points": 1,
+        "disputed_points": 3,
+        "counted_points": 2,
         "omitted_points": 1,
         "split_effects": 0,
         "merge_effects": 1
@@ -8592,8 +8593,8 @@
         "ayah_count": 29,
         "kufi_ayah_count": 29,
         "delta_from_kufi": 0,
-        "disputed_points": 0,
-        "counted_points": 0,
+        "disputed_points": 1,
+        "counted_points": 1,
         "omitted_points": 0,
         "split_effects": 0,
         "merge_effects": 0
@@ -9364,8 +9365,8 @@
         "ayah_count": 182,
         "kufi_ayah_count": 182,
         "delta_from_kufi": 0,
-        "disputed_points": 1,
-        "counted_points": 1,
+        "disputed_points": 2,
+        "counted_points": 2,
         "omitted_points": 0,
         "split_effects": 0,
         "merge_effects": 0
@@ -9837,8 +9838,8 @@
         "ayah_count": 40,
         "kufi_ayah_count": 42,
         "delta_from_kufi": -2,
-        "disputed_points": 2,
-        "counted_points": 0,
+        "disputed_points": 3,
+        "counted_points": 1,
         "omitted_points": 2,
         "split_effects": 0,
         "merge_effects": 2
@@ -9848,8 +9849,8 @@
         "ayah_count": 29,
         "kufi_ayah_count": 29,
         "delta_from_kufi": 0,
-        "disputed_points": 0,
-        "counted_points": 0,
+        "disputed_points": 1,
+        "counted_points": 1,
         "omitted_points": 0,
         "split_effects": 0,
         "merge_effects": 0
@@ -10620,8 +10621,8 @@
         "ayah_count": 182,
         "kufi_ayah_count": 182,
         "delta_from_kufi": 0,
-        "disputed_points": 1,
-        "counted_points": 1,
+        "disputed_points": 2,
+        "counted_points": 2,
         "omitted_points": 0,
         "split_effects": 0,
         "merge_effects": 0
@@ -11093,8 +11094,8 @@
         "ayah_count": 42,
         "kufi_ayah_count": 42,
         "delta_from_kufi": 0,
-        "disputed_points": 2,
-        "counted_points": 2,
+        "disputed_points": 3,
+        "counted_points": 3,
         "omitted_points": 0,
         "split_effects": 0,
         "merge_effects": 0
@@ -11104,8 +11105,8 @@
         "ayah_count": 29,
         "kufi_ayah_count": 29,
         "delta_from_kufi": 0,
-        "disputed_points": 0,
-        "counted_points": 0,
+        "disputed_points": 1,
+        "counted_points": 1,
         "omitted_points": 0,
         "split_effects": 0,
         "merge_effects": 0
@@ -11493,84 +11494,84 @@
       "cited_points": 52
     },
     "madani-last": {
-      "total_points": 109,
+      "total_points": 112,
       "by_status": {
         "uncited": 59,
         "secondary_only": 23,
         "primary_cited": 24,
         "primary_cited_and_reviewed": 0,
-        "disputed": 3,
-        "unresolved": 0
+        "disputed": 2,
+        "unresolved": 4
       },
-      "points_with_evidence": 50,
-      "points_with_primary_evidence": 25,
+      "points_with_evidence": 53,
+      "points_with_primary_evidence": 29,
       "points_reviewed": 0,
       "uncited_points": 59,
-      "cited_points": 50
+      "cited_points": 53
     },
     "makki": {
-      "total_points": 114,
+      "total_points": 117,
       "by_status": {
         "uncited": 63,
         "secondary_only": 24,
         "primary_cited": 24,
         "primary_cited_and_reviewed": 0,
-        "disputed": 3,
-        "unresolved": 0
+        "disputed": 2,
+        "unresolved": 4
       },
-      "points_with_evidence": 51,
-      "points_with_primary_evidence": 25,
+      "points_with_evidence": 54,
+      "points_with_primary_evidence": 29,
       "points_reviewed": 0,
       "uncited_points": 63,
-      "cited_points": 51
+      "cited_points": 54
     },
     "basri": {
-      "total_points": 99,
+      "total_points": 102,
       "by_status": {
         "uncited": 47,
         "secondary_only": 24,
         "primary_cited": 27,
         "primary_cited_and_reviewed": 0,
         "disputed": 1,
-        "unresolved": 0
+        "unresolved": 3
       },
-      "points_with_evidence": 52,
-      "points_with_primary_evidence": 27,
+      "points_with_evidence": 55,
+      "points_with_primary_evidence": 30,
       "points_reviewed": 0,
       "uncited_points": 47,
-      "cited_points": 52
+      "cited_points": 55
     },
     "dimashqi": {
-      "total_points": 121,
+      "total_points": 124,
       "by_status": {
         "uncited": 58,
         "secondary_only": 32,
         "primary_cited": 29,
         "primary_cited_and_reviewed": 0,
-        "disputed": 2,
-        "unresolved": 0
+        "disputed": 1,
+        "unresolved": 4
       },
-      "points_with_evidence": 63,
-      "points_with_primary_evidence": 29,
+      "points_with_evidence": 66,
+      "points_with_primary_evidence": 33,
       "points_reviewed": 0,
       "uncited_points": 58,
-      "cited_points": 63
+      "cited_points": 66
     },
     "kufi": {
-      "total_points": 131,
+      "total_points": 134,
       "by_status": {
         "uncited": 76,
         "secondary_only": 32,
         "primary_cited": 23,
         "primary_cited_and_reviewed": 0,
         "disputed": 0,
-        "unresolved": 0
+        "unresolved": 3
       },
-      "points_with_evidence": 55,
-      "points_with_primary_evidence": 23,
+      "points_with_evidence": 58,
+      "points_with_primary_evidence": 26,
       "points_reviewed": 0,
       "uncited_points": 76,
-      "cited_points": 55
+      "cited_points": 58
     }
   },
   "system_distance_matrix": [
@@ -11580,20 +11581,20 @@
       "left_name": "First Madinan",
       "right_name": "First Madinan",
       "differing_points": 0,
-      "agreement_points": 243,
+      "agreement_points": 246,
       "difference_ratio": 0,
       "similarity_ratio": 1,
-      "same_numbering_effect_points": 243
+      "same_numbering_effect_points": 246
     },
     {
       "left_system_id": "madani-first",
       "right_system_id": "madani-last",
       "left_name": "First Madinan",
       "right_name": "Last Madinan",
-      "differing_points": 59,
+      "differing_points": 62,
       "agreement_points": 184,
-      "difference_ratio": 0.24279835390946503,
-      "similarity_ratio": 0.757201646090535,
+      "difference_ratio": 0.25203252032520324,
+      "similarity_ratio": 0.7479674796747967,
       "same_numbering_effect_points": 184
     },
     {
@@ -11601,10 +11602,10 @@
       "right_system_id": "makki",
       "left_name": "First Madinan",
       "right_name": "Makkan",
-      "differing_points": 40,
+      "differing_points": 43,
       "agreement_points": 203,
-      "difference_ratio": 0.1646090534979424,
-      "similarity_ratio": 0.8353909465020576,
+      "difference_ratio": 0.17479674796747968,
+      "similarity_ratio": 0.8252032520325203,
       "same_numbering_effect_points": 203
     },
     {
@@ -11612,10 +11613,10 @@
       "right_system_id": "basri",
       "left_name": "First Madinan",
       "right_name": "Basran",
-      "differing_points": 97,
+      "differing_points": 100,
       "agreement_points": 146,
-      "difference_ratio": 0.3991769547325103,
-      "similarity_ratio": 0.6008230452674898,
+      "difference_ratio": 0.4065040650406504,
+      "similarity_ratio": 0.5934959349593496,
       "same_numbering_effect_points": 146
     },
     {
@@ -11623,10 +11624,10 @@
       "right_system_id": "dimashqi",
       "left_name": "First Madinan",
       "right_name": "Damascene",
-      "differing_points": 107,
+      "differing_points": 110,
       "agreement_points": 136,
-      "difference_ratio": 0.4403292181069959,
-      "similarity_ratio": 0.5596707818930041,
+      "difference_ratio": 0.44715447154471544,
+      "similarity_ratio": 0.5528455284552846,
       "same_numbering_effect_points": 136
     },
     {
@@ -11634,10 +11635,10 @@
       "right_system_id": "kufi",
       "left_name": "First Madinan",
       "right_name": "Kufan",
-      "differing_points": 133,
+      "differing_points": 136,
       "agreement_points": 110,
-      "difference_ratio": 0.5473251028806584,
-      "similarity_ratio": 0.45267489711934156,
+      "difference_ratio": 0.5528455284552846,
+      "similarity_ratio": 0.44715447154471544,
       "same_numbering_effect_points": 110
     },
     {
@@ -11645,10 +11646,10 @@
       "right_system_id": "madani-first",
       "left_name": "Last Madinan",
       "right_name": "First Madinan",
-      "differing_points": 59,
+      "differing_points": 62,
       "agreement_points": 184,
-      "difference_ratio": 0.24279835390946503,
-      "similarity_ratio": 0.757201646090535,
+      "difference_ratio": 0.25203252032520324,
+      "similarity_ratio": 0.7479674796747967,
       "same_numbering_effect_points": 184
     },
     {
@@ -11657,10 +11658,10 @@
       "left_name": "Last Madinan",
       "right_name": "Last Madinan",
       "differing_points": 0,
-      "agreement_points": 243,
+      "agreement_points": 246,
       "difference_ratio": 0,
       "similarity_ratio": 1,
-      "same_numbering_effect_points": 243
+      "same_numbering_effect_points": 246
     },
     {
       "left_system_id": "madani-last",
@@ -11668,10 +11669,10 @@
       "left_name": "Last Madinan",
       "right_name": "Makkan",
       "differing_points": 47,
-      "agreement_points": 196,
-      "difference_ratio": 0.1934156378600823,
-      "similarity_ratio": 0.8065843621399177,
-      "same_numbering_effect_points": 196
+      "agreement_points": 199,
+      "difference_ratio": 0.1910569105691057,
+      "similarity_ratio": 0.8089430894308943,
+      "same_numbering_effect_points": 199
     },
     {
       "left_system_id": "madani-last",
@@ -11679,10 +11680,10 @@
       "left_name": "Last Madinan",
       "right_name": "Basran",
       "differing_points": 100,
-      "agreement_points": 143,
-      "difference_ratio": 0.411522633744856,
-      "similarity_ratio": 0.588477366255144,
-      "same_numbering_effect_points": 143
+      "agreement_points": 146,
+      "difference_ratio": 0.4065040650406504,
+      "similarity_ratio": 0.5934959349593496,
+      "same_numbering_effect_points": 146
     },
     {
       "left_system_id": "madani-last",
@@ -11690,10 +11691,10 @@
       "left_name": "Last Madinan",
       "right_name": "Damascene",
       "differing_points": 108,
-      "agreement_points": 135,
-      "difference_ratio": 0.4444444444444444,
-      "similarity_ratio": 0.5555555555555556,
-      "same_numbering_effect_points": 135
+      "agreement_points": 138,
+      "difference_ratio": 0.43902439024390244,
+      "similarity_ratio": 0.5609756097560976,
+      "same_numbering_effect_points": 138
     },
     {
       "left_system_id": "madani-last",
@@ -11701,20 +11702,20 @@
       "left_name": "Last Madinan",
       "right_name": "Kufan",
       "differing_points": 140,
-      "agreement_points": 103,
-      "difference_ratio": 0.5761316872427984,
-      "similarity_ratio": 0.42386831275720166,
-      "same_numbering_effect_points": 103
+      "agreement_points": 106,
+      "difference_ratio": 0.5691056910569106,
+      "similarity_ratio": 0.43089430894308944,
+      "same_numbering_effect_points": 106
     },
     {
       "left_system_id": "makki",
       "right_system_id": "madani-first",
       "left_name": "Makkan",
       "right_name": "First Madinan",
-      "differing_points": 40,
+      "differing_points": 43,
       "agreement_points": 203,
-      "difference_ratio": 0.1646090534979424,
-      "similarity_ratio": 0.8353909465020576,
+      "difference_ratio": 0.17479674796747968,
+      "similarity_ratio": 0.8252032520325203,
       "same_numbering_effect_points": 203
     },
     {
@@ -11723,10 +11724,10 @@
       "left_name": "Makkan",
       "right_name": "Last Madinan",
       "differing_points": 47,
-      "agreement_points": 196,
-      "difference_ratio": 0.1934156378600823,
-      "similarity_ratio": 0.8065843621399177,
-      "same_numbering_effect_points": 196
+      "agreement_points": 199,
+      "difference_ratio": 0.1910569105691057,
+      "similarity_ratio": 0.8089430894308943,
+      "same_numbering_effect_points": 199
     },
     {
       "left_system_id": "makki",
@@ -11734,10 +11735,10 @@
       "left_name": "Makkan",
       "right_name": "Makkan",
       "differing_points": 0,
-      "agreement_points": 243,
+      "agreement_points": 246,
       "difference_ratio": 0,
       "similarity_ratio": 1,
-      "same_numbering_effect_points": 243
+      "same_numbering_effect_points": 246
     },
     {
       "left_system_id": "makki",
@@ -11745,10 +11746,10 @@
       "left_name": "Makkan",
       "right_name": "Basran",
       "differing_points": 107,
-      "agreement_points": 136,
-      "difference_ratio": 0.4403292181069959,
-      "similarity_ratio": 0.5596707818930041,
-      "same_numbering_effect_points": 136
+      "agreement_points": 139,
+      "difference_ratio": 0.4349593495934959,
+      "similarity_ratio": 0.5650406504065041,
+      "same_numbering_effect_points": 139
     },
     {
       "left_system_id": "makki",
@@ -11756,10 +11757,10 @@
       "left_name": "Makkan",
       "right_name": "Damascene",
       "differing_points": 117,
-      "agreement_points": 126,
-      "difference_ratio": 0.48148148148148145,
-      "similarity_ratio": 0.5185185185185185,
-      "same_numbering_effect_points": 126
+      "agreement_points": 129,
+      "difference_ratio": 0.47560975609756095,
+      "similarity_ratio": 0.524390243902439,
+      "same_numbering_effect_points": 129
     },
     {
       "left_system_id": "makki",
@@ -11767,20 +11768,20 @@
       "left_name": "Makkan",
       "right_name": "Kufan",
       "differing_points": 149,
-      "agreement_points": 94,
-      "difference_ratio": 0.6131687242798354,
-      "similarity_ratio": 0.3868312757201646,
-      "same_numbering_effect_points": 94
+      "agreement_points": 97,
+      "difference_ratio": 0.6056910569105691,
+      "similarity_ratio": 0.3943089430894309,
+      "same_numbering_effect_points": 97
     },
     {
       "left_system_id": "basri",
       "right_system_id": "madani-first",
       "left_name": "Basran",
       "right_name": "First Madinan",
-      "differing_points": 97,
+      "differing_points": 100,
       "agreement_points": 146,
-      "difference_ratio": 0.3991769547325103,
-      "similarity_ratio": 0.6008230452674898,
+      "difference_ratio": 0.4065040650406504,
+      "similarity_ratio": 0.5934959349593496,
       "same_numbering_effect_points": 146
     },
     {
@@ -11789,10 +11790,10 @@
       "left_name": "Basran",
       "right_name": "Last Madinan",
       "differing_points": 100,
-      "agreement_points": 143,
-      "difference_ratio": 0.411522633744856,
-      "similarity_ratio": 0.588477366255144,
-      "same_numbering_effect_points": 143
+      "agreement_points": 146,
+      "difference_ratio": 0.4065040650406504,
+      "similarity_ratio": 0.5934959349593496,
+      "same_numbering_effect_points": 146
     },
     {
       "left_system_id": "basri",
@@ -11800,10 +11801,10 @@
       "left_name": "Basran",
       "right_name": "Makkan",
       "differing_points": 107,
-      "agreement_points": 136,
-      "difference_ratio": 0.4403292181069959,
-      "similarity_ratio": 0.5596707818930041,
-      "same_numbering_effect_points": 136
+      "agreement_points": 139,
+      "difference_ratio": 0.4349593495934959,
+      "similarity_ratio": 0.5650406504065041,
+      "same_numbering_effect_points": 139
     },
     {
       "left_system_id": "basri",
@@ -11811,10 +11812,10 @@
       "left_name": "Basran",
       "right_name": "Basran",
       "differing_points": 0,
-      "agreement_points": 243,
+      "agreement_points": 246,
       "difference_ratio": 0,
       "similarity_ratio": 1,
-      "same_numbering_effect_points": 243
+      "same_numbering_effect_points": 246
     },
     {
       "left_system_id": "basri",
@@ -11822,10 +11823,10 @@
       "left_name": "Basran",
       "right_name": "Damascene",
       "differing_points": 84,
-      "agreement_points": 159,
-      "difference_ratio": 0.345679012345679,
-      "similarity_ratio": 0.654320987654321,
-      "same_numbering_effect_points": 159
+      "agreement_points": 162,
+      "difference_ratio": 0.34146341463414637,
+      "similarity_ratio": 0.6585365853658537,
+      "same_numbering_effect_points": 162
     },
     {
       "left_system_id": "basri",
@@ -11833,20 +11834,20 @@
       "left_name": "Basran",
       "right_name": "Kufan",
       "differing_points": 128,
-      "agreement_points": 115,
-      "difference_ratio": 0.5267489711934157,
-      "similarity_ratio": 0.4732510288065844,
-      "same_numbering_effect_points": 115
+      "agreement_points": 118,
+      "difference_ratio": 0.5203252032520326,
+      "similarity_ratio": 0.4796747967479675,
+      "same_numbering_effect_points": 118
     },
     {
       "left_system_id": "dimashqi",
       "right_system_id": "madani-first",
       "left_name": "Damascene",
       "right_name": "First Madinan",
-      "differing_points": 107,
+      "differing_points": 110,
       "agreement_points": 136,
-      "difference_ratio": 0.4403292181069959,
-      "similarity_ratio": 0.5596707818930041,
+      "difference_ratio": 0.44715447154471544,
+      "similarity_ratio": 0.5528455284552846,
       "same_numbering_effect_points": 136
     },
     {
@@ -11855,10 +11856,10 @@
       "left_name": "Damascene",
       "right_name": "Last Madinan",
       "differing_points": 108,
-      "agreement_points": 135,
-      "difference_ratio": 0.4444444444444444,
-      "similarity_ratio": 0.5555555555555556,
-      "same_numbering_effect_points": 135
+      "agreement_points": 138,
+      "difference_ratio": 0.43902439024390244,
+      "similarity_ratio": 0.5609756097560976,
+      "same_numbering_effect_points": 138
     },
     {
       "left_system_id": "dimashqi",
@@ -11866,10 +11867,10 @@
       "left_name": "Damascene",
       "right_name": "Makkan",
       "differing_points": 117,
-      "agreement_points": 126,
-      "difference_ratio": 0.48148148148148145,
-      "similarity_ratio": 0.5185185185185185,
-      "same_numbering_effect_points": 126
+      "agreement_points": 129,
+      "difference_ratio": 0.47560975609756095,
+      "similarity_ratio": 0.524390243902439,
+      "same_numbering_effect_points": 129
     },
     {
       "left_system_id": "dimashqi",
@@ -11877,10 +11878,10 @@
       "left_name": "Damascene",
       "right_name": "Basran",
       "differing_points": 84,
-      "agreement_points": 159,
-      "difference_ratio": 0.345679012345679,
-      "similarity_ratio": 0.654320987654321,
-      "same_numbering_effect_points": 159
+      "agreement_points": 162,
+      "difference_ratio": 0.34146341463414637,
+      "similarity_ratio": 0.6585365853658537,
+      "same_numbering_effect_points": 162
     },
     {
       "left_system_id": "dimashqi",
@@ -11888,10 +11889,10 @@
       "left_name": "Damascene",
       "right_name": "Damascene",
       "differing_points": 0,
-      "agreement_points": 243,
+      "agreement_points": 246,
       "difference_ratio": 0,
       "similarity_ratio": 1,
-      "same_numbering_effect_points": 243
+      "same_numbering_effect_points": 246
     },
     {
       "left_system_id": "dimashqi",
@@ -11899,20 +11900,20 @@
       "left_name": "Damascene",
       "right_name": "Kufan",
       "differing_points": 140,
-      "agreement_points": 103,
-      "difference_ratio": 0.5761316872427984,
-      "similarity_ratio": 0.42386831275720166,
-      "same_numbering_effect_points": 103
+      "agreement_points": 106,
+      "difference_ratio": 0.5691056910569106,
+      "similarity_ratio": 0.43089430894308944,
+      "same_numbering_effect_points": 106
     },
     {
       "left_system_id": "kufi",
       "right_system_id": "madani-first",
       "left_name": "Kufan",
       "right_name": "First Madinan",
-      "differing_points": 133,
+      "differing_points": 136,
       "agreement_points": 110,
-      "difference_ratio": 0.5473251028806584,
-      "similarity_ratio": 0.45267489711934156,
+      "difference_ratio": 0.5528455284552846,
+      "similarity_ratio": 0.44715447154471544,
       "same_numbering_effect_points": 110
     },
     {
@@ -11921,10 +11922,10 @@
       "left_name": "Kufan",
       "right_name": "Last Madinan",
       "differing_points": 140,
-      "agreement_points": 103,
-      "difference_ratio": 0.5761316872427984,
-      "similarity_ratio": 0.42386831275720166,
-      "same_numbering_effect_points": 103
+      "agreement_points": 106,
+      "difference_ratio": 0.5691056910569106,
+      "similarity_ratio": 0.43089430894308944,
+      "same_numbering_effect_points": 106
     },
     {
       "left_system_id": "kufi",
@@ -11932,10 +11933,10 @@
       "left_name": "Kufan",
       "right_name": "Makkan",
       "differing_points": 149,
-      "agreement_points": 94,
-      "difference_ratio": 0.6131687242798354,
-      "similarity_ratio": 0.3868312757201646,
-      "same_numbering_effect_points": 94
+      "agreement_points": 97,
+      "difference_ratio": 0.6056910569105691,
+      "similarity_ratio": 0.3943089430894309,
+      "same_numbering_effect_points": 97
     },
     {
       "left_system_id": "kufi",
@@ -11943,10 +11944,10 @@
       "left_name": "Kufan",
       "right_name": "Basran",
       "differing_points": 128,
-      "agreement_points": 115,
-      "difference_ratio": 0.5267489711934157,
-      "similarity_ratio": 0.4732510288065844,
-      "same_numbering_effect_points": 115
+      "agreement_points": 118,
+      "difference_ratio": 0.5203252032520326,
+      "similarity_ratio": 0.4796747967479675,
+      "same_numbering_effect_points": 118
     },
     {
       "left_system_id": "kufi",
@@ -11954,10 +11955,10 @@
       "left_name": "Kufan",
       "right_name": "Damascene",
       "differing_points": 140,
-      "agreement_points": 103,
-      "difference_ratio": 0.5761316872427984,
-      "similarity_ratio": 0.42386831275720166,
-      "same_numbering_effect_points": 103
+      "agreement_points": 106,
+      "difference_ratio": 0.5691056910569106,
+      "similarity_ratio": 0.43089430894308944,
+      "same_numbering_effect_points": 106
     },
     {
       "left_system_id": "kufi",
@@ -11965,10 +11966,10 @@
       "left_name": "Kufan",
       "right_name": "Kufan",
       "differing_points": 0,
-      "agreement_points": 243,
+      "agreement_points": 246,
       "difference_ratio": 0,
       "similarity_ratio": 1,
-      "same_numbering_effect_points": 243
+      "same_numbering_effect_points": 246
     }
   ],
   "system_relationships": {
@@ -11978,10 +11979,10 @@
         "right_system_id": "makki",
         "left_name": "First Madinan",
         "right_name": "Makkan",
-        "differing_points": 40,
+        "differing_points": 43,
         "agreement_points": 203,
-        "difference_ratio": 0.1646090534979424,
-        "similarity_ratio": 0.8353909465020576,
+        "difference_ratio": 0.17479674796747968,
+        "similarity_ratio": 0.8252032520325203,
         "same_numbering_effect_points": 203
       },
       "farthest": {
@@ -11989,10 +11990,10 @@
         "right_system_id": "kufi",
         "left_name": "First Madinan",
         "right_name": "Kufan",
-        "differing_points": 133,
+        "differing_points": 136,
         "agreement_points": 110,
-        "difference_ratio": 0.5473251028806584,
-        "similarity_ratio": 0.45267489711934156,
+        "difference_ratio": 0.5528455284552846,
+        "similarity_ratio": 0.44715447154471544,
         "same_numbering_effect_points": 110
       }
     },
@@ -12003,10 +12004,10 @@
         "left_name": "Last Madinan",
         "right_name": "Makkan",
         "differing_points": 47,
-        "agreement_points": 196,
-        "difference_ratio": 0.1934156378600823,
-        "similarity_ratio": 0.8065843621399177,
-        "same_numbering_effect_points": 196
+        "agreement_points": 199,
+        "difference_ratio": 0.1910569105691057,
+        "similarity_ratio": 0.8089430894308943,
+        "same_numbering_effect_points": 199
       },
       "farthest": {
         "left_system_id": "madani-last",
@@ -12014,10 +12015,10 @@
         "left_name": "Last Madinan",
         "right_name": "Kufan",
         "differing_points": 140,
-        "agreement_points": 103,
-        "difference_ratio": 0.5761316872427984,
-        "similarity_ratio": 0.42386831275720166,
-        "same_numbering_effect_points": 103
+        "agreement_points": 106,
+        "difference_ratio": 0.5691056910569106,
+        "similarity_ratio": 0.43089430894308944,
+        "same_numbering_effect_points": 106
       }
     },
     "makki": {
@@ -12026,10 +12027,10 @@
         "right_system_id": "madani-first",
         "left_name": "Makkan",
         "right_name": "First Madinan",
-        "differing_points": 40,
+        "differing_points": 43,
         "agreement_points": 203,
-        "difference_ratio": 0.1646090534979424,
-        "similarity_ratio": 0.8353909465020576,
+        "difference_ratio": 0.17479674796747968,
+        "similarity_ratio": 0.8252032520325203,
         "same_numbering_effect_points": 203
       },
       "farthest": {
@@ -12038,10 +12039,10 @@
         "left_name": "Makkan",
         "right_name": "Kufan",
         "differing_points": 149,
-        "agreement_points": 94,
-        "difference_ratio": 0.6131687242798354,
-        "similarity_ratio": 0.3868312757201646,
-        "same_numbering_effect_points": 94
+        "agreement_points": 97,
+        "difference_ratio": 0.6056910569105691,
+        "similarity_ratio": 0.3943089430894309,
+        "same_numbering_effect_points": 97
       }
     },
     "basri": {
@@ -12051,10 +12052,10 @@
         "left_name": "Basran",
         "right_name": "Damascene",
         "differing_points": 84,
-        "agreement_points": 159,
-        "difference_ratio": 0.345679012345679,
-        "similarity_ratio": 0.654320987654321,
-        "same_numbering_effect_points": 159
+        "agreement_points": 162,
+        "difference_ratio": 0.34146341463414637,
+        "similarity_ratio": 0.6585365853658537,
+        "same_numbering_effect_points": 162
       },
       "farthest": {
         "left_system_id": "basri",
@@ -12062,10 +12063,10 @@
         "left_name": "Basran",
         "right_name": "Kufan",
         "differing_points": 128,
-        "agreement_points": 115,
-        "difference_ratio": 0.5267489711934157,
-        "similarity_ratio": 0.4732510288065844,
-        "same_numbering_effect_points": 115
+        "agreement_points": 118,
+        "difference_ratio": 0.5203252032520326,
+        "similarity_ratio": 0.4796747967479675,
+        "same_numbering_effect_points": 118
       }
     },
     "dimashqi": {
@@ -12075,10 +12076,10 @@
         "left_name": "Damascene",
         "right_name": "Basran",
         "differing_points": 84,
-        "agreement_points": 159,
-        "difference_ratio": 0.345679012345679,
-        "similarity_ratio": 0.654320987654321,
-        "same_numbering_effect_points": 159
+        "agreement_points": 162,
+        "difference_ratio": 0.34146341463414637,
+        "similarity_ratio": 0.6585365853658537,
+        "same_numbering_effect_points": 162
       },
       "farthest": {
         "left_system_id": "dimashqi",
@@ -12086,10 +12087,10 @@
         "left_name": "Damascene",
         "right_name": "Kufan",
         "differing_points": 140,
-        "agreement_points": 103,
-        "difference_ratio": 0.5761316872427984,
-        "similarity_ratio": 0.42386831275720166,
-        "same_numbering_effect_points": 103
+        "agreement_points": 106,
+        "difference_ratio": 0.5691056910569106,
+        "similarity_ratio": 0.43089430894308944,
+        "same_numbering_effect_points": 106
       }
     },
     "kufi": {
@@ -12099,10 +12100,10 @@
         "left_name": "Kufan",
         "right_name": "Basran",
         "differing_points": 128,
-        "agreement_points": 115,
-        "difference_ratio": 0.5267489711934157,
-        "similarity_ratio": 0.4732510288065844,
-        "same_numbering_effect_points": 115
+        "agreement_points": 118,
+        "difference_ratio": 0.5203252032520326,
+        "similarity_ratio": 0.4796747967479675,
+        "same_numbering_effect_points": 118
       },
       "farthest": {
         "left_system_id": "kufi",
@@ -12110,10 +12111,10 @@
         "left_name": "Kufan",
         "right_name": "Makkan",
         "differing_points": 149,
-        "agreement_points": 94,
-        "difference_ratio": 0.6131687242798354,
-        "similarity_ratio": 0.3868312757201646,
-        "same_numbering_effect_points": 94
+        "agreement_points": 97,
+        "difference_ratio": 0.6056910569105691,
+        "similarity_ratio": 0.3943089430894309,
+        "same_numbering_effect_points": 97
       }
     }
   },
@@ -12122,9 +12123,9 @@
       "system_id": "basri",
       "name_en": "Basran",
       "name_ar": "البصري",
-      "counted_points": 99,
+      "counted_points": 102,
       "uncited_points": 47,
-      "cited_points": 52,
+      "cited_points": 55,
       "split_effects": 48,
       "merge_effects": 80
     },
@@ -12132,9 +12133,9 @@
       "system_id": "dimashqi",
       "name_en": "Damascene",
       "name_ar": "الدمشقي",
-      "counted_points": 121,
+      "counted_points": 124,
       "uncited_points": 58,
-      "cited_points": 63,
+      "cited_points": 66,
       "split_effects": 65,
       "merge_effects": 75
     },
@@ -12142,9 +12143,9 @@
       "system_id": "madani-last",
       "name_en": "Last Madinan",
       "name_ar": "المدني الأخير",
-      "counted_points": 109,
+      "counted_points": 112,
       "uncited_points": 59,
-      "cited_points": 50,
+      "cited_points": 53,
       "split_effects": 59,
       "merge_effects": 81
     },
@@ -12156,15 +12157,15 @@
       "uncited_points": 60,
       "cited_points": 52,
       "split_effects": 57,
-      "merge_effects": 76
+      "merge_effects": 79
     },
     {
       "system_id": "makki",
       "name_en": "Makkan",
       "name_ar": "المكي",
-      "counted_points": 114,
+      "counted_points": 117,
       "uncited_points": 63,
-      "cited_points": 51,
+      "cited_points": 54,
       "split_effects": 66,
       "merge_effects": 83
     },
@@ -12172,9 +12173,9 @@
       "system_id": "kufi",
       "name_en": "Kufan",
       "name_ar": "الكوفي",
-      "counted_points": 131,
+      "counted_points": 134,
       "uncited_points": 76,
-      "cited_points": 55,
+      "cited_points": 58,
       "split_effects": 0,
       "merge_effects": 0
     }
@@ -13365,6 +13366,12 @@
           "word": "يعبدون",
           "numbering_effect": "none",
           "cumulative_delta": 0
+        },
+        {
+          "step": 2,
+          "word": "ليقولون",
+          "numbering_effect": "merge",
+          "cumulative_delta": -1
         }
       ],
       "38": [
@@ -14296,15 +14303,21 @@
         },
         {
           "step": 1,
-          "word": "ولأنعامكم",
-          "numbering_effect": "none",
-          "cumulative_delta": 0
+          "word": "طعامه",
+          "numbering_effect": "merge",
+          "cumulative_delta": -1
         },
         {
           "step": 2,
+          "word": "ولأنعامكم",
+          "numbering_effect": "none",
+          "cumulative_delta": -1
+        },
+        {
+          "step": 3,
           "word": "الصاخة",
           "numbering_effect": "none",
-          "cumulative_delta": 0
+          "cumulative_delta": -1
         }
       ],
       "81": [
@@ -14315,6 +14328,12 @@
           "word": null,
           "numbering_effect": "none",
           "cumulative_delta": 0
+        },
+        {
+          "step": 1,
+          "word": "تذهبون",
+          "numbering_effect": "merge",
+          "cumulative_delta": -1
         }
       ],
       "82": [
@@ -15965,6 +15984,12 @@
           "word": "يعبدون",
           "numbering_effect": "none",
           "cumulative_delta": 0
+        },
+        {
+          "step": 2,
+          "word": "ليقولون",
+          "numbering_effect": "none",
+          "cumulative_delta": 0
         }
       ],
       "38": [
@@ -16896,12 +16921,18 @@
         },
         {
           "step": 1,
-          "word": "ولأنعامكم",
+          "word": "طعامه",
           "numbering_effect": "none",
           "cumulative_delta": 0
         },
         {
           "step": 2,
+          "word": "ولأنعامكم",
+          "numbering_effect": "none",
+          "cumulative_delta": 0
+        },
+        {
+          "step": 3,
           "word": "الصاخة",
           "numbering_effect": "none",
           "cumulative_delta": 0
@@ -16913,6 +16944,12 @@
           "slot_label": "start",
           "location_label": "81:start",
           "word": null,
+          "numbering_effect": "none",
+          "cumulative_delta": 0
+        },
+        {
+          "step": 1,
+          "word": "تذهبون",
           "numbering_effect": "none",
           "cumulative_delta": 0
         }
@@ -18565,6 +18602,12 @@
           "word": "يعبدون",
           "numbering_effect": "none",
           "cumulative_delta": 0
+        },
+        {
+          "step": 2,
+          "word": "ليقولون",
+          "numbering_effect": "none",
+          "cumulative_delta": 0
         }
       ],
       "38": [
@@ -19496,12 +19539,18 @@
         },
         {
           "step": 1,
-          "word": "ولأنعامكم",
+          "word": "طعامه",
           "numbering_effect": "none",
           "cumulative_delta": 0
         },
         {
           "step": 2,
+          "word": "ولأنعامكم",
+          "numbering_effect": "none",
+          "cumulative_delta": 0
+        },
+        {
+          "step": 3,
           "word": "الصاخة",
           "numbering_effect": "none",
           "cumulative_delta": 0
@@ -19513,6 +19562,12 @@
           "slot_label": "start",
           "location_label": "81:start",
           "word": null,
+          "numbering_effect": "none",
+          "cumulative_delta": 0
+        },
+        {
+          "step": 1,
+          "word": "تذهبون",
           "numbering_effect": "none",
           "cumulative_delta": 0
         }
@@ -21165,6 +21220,12 @@
           "word": "يعبدون",
           "numbering_effect": "merge",
           "cumulative_delta": -1
+        },
+        {
+          "step": 2,
+          "word": "ليقولون",
+          "numbering_effect": "none",
+          "cumulative_delta": -1
         }
       ],
       "38": [
@@ -22096,12 +22157,18 @@
         },
         {
           "step": 1,
+          "word": "طعامه",
+          "numbering_effect": "none",
+          "cumulative_delta": 0
+        },
+        {
+          "step": 2,
           "word": "ولأنعامكم",
           "numbering_effect": "merge",
           "cumulative_delta": -1
         },
         {
-          "step": 2,
+          "step": 3,
           "word": "الصاخة",
           "numbering_effect": "none",
           "cumulative_delta": -1
@@ -22113,6 +22180,12 @@
           "slot_label": "start",
           "location_label": "81:start",
           "word": null,
+          "numbering_effect": "none",
+          "cumulative_delta": 0
+        },
+        {
+          "step": 1,
+          "word": "تذهبون",
           "numbering_effect": "none",
           "cumulative_delta": 0
         }
@@ -23765,6 +23838,12 @@
           "word": "يعبدون",
           "numbering_effect": "none",
           "cumulative_delta": 0
+        },
+        {
+          "step": 2,
+          "word": "ليقولون",
+          "numbering_effect": "none",
+          "cumulative_delta": 0
         }
       ],
       "38": [
@@ -24696,12 +24775,18 @@
         },
         {
           "step": 1,
+          "word": "طعامه",
+          "numbering_effect": "none",
+          "cumulative_delta": 0
+        },
+        {
+          "step": 2,
           "word": "ولأنعامكم",
           "numbering_effect": "merge",
           "cumulative_delta": -1
         },
         {
-          "step": 2,
+          "step": 3,
           "word": "الصاخة",
           "numbering_effect": "merge",
           "cumulative_delta": -2
@@ -24713,6 +24798,12 @@
           "slot_label": "start",
           "location_label": "81:start",
           "word": null,
+          "numbering_effect": "none",
+          "cumulative_delta": 0
+        },
+        {
+          "step": 1,
+          "word": "تذهبون",
           "numbering_effect": "none",
           "cumulative_delta": 0
         }
@@ -26365,6 +26456,12 @@
           "word": "يعبدون",
           "numbering_effect": "none",
           "cumulative_delta": 0
+        },
+        {
+          "step": 2,
+          "word": "ليقولون",
+          "numbering_effect": "none",
+          "cumulative_delta": 0
         }
       ],
       "38": [
@@ -27296,12 +27393,18 @@
         },
         {
           "step": 1,
-          "word": "ولأنعامكم",
+          "word": "طعامه",
           "numbering_effect": "none",
           "cumulative_delta": 0
         },
         {
           "step": 2,
+          "word": "ولأنعامكم",
+          "numbering_effect": "none",
+          "cumulative_delta": 0
+        },
+        {
+          "step": 3,
           "word": "الصاخة",
           "numbering_effect": "none",
           "cumulative_delta": 0
@@ -27313,6 +27416,12 @@
           "slot_label": "start",
           "location_label": "81:start",
           "word": null,
+          "numbering_effect": "none",
+          "cumulative_delta": 0
+        },
+        {
+          "step": 1,
+          "word": "تذهبون",
           "numbering_effect": "none",
           "cumulative_delta": 0
         }
@@ -29577,9 +29686,9 @@
         "basri",
         "kufi"
       ],
-      "verification_status": "disputed",
-      "evidence_count": 2,
-      "primary_evidence_count": 0,
+      "verification_status": "unresolved",
+      "evidence_count": 3,
+      "primary_evidence_count": 1,
       "reviewer_count": 0,
       "supported_systems": [
         "madani-last",
@@ -29637,6 +29746,19 @@
           ],
           "strength": "direct",
           "note": "مقطع nfb.al_imran.poem.mimma_tuhibbun"
+        },
+        {
+          "tier": "primary",
+          "work": "البيان في عدّ آي القرآن",
+          "locator": "ص 96",
+          "supports": [
+            "madani-last",
+            "makki",
+            "dimashqi"
+          ],
+          "strength": "direct",
+          "edition": "طبعة تُراث الرقمية (shamela 5542)",
+          "note": "قال الداني في آل عمران: «(مما تحبون) الأول لم يعدها الكوفي والبصري وأبو جعفر القارئ، وعدها الباقون وشيبة بن نصاح». وظاهره أن المدني الأول يعدّها، والخريطة لا تعدّه فيها."
         }
       ],
       "reviewers": [],
@@ -39530,6 +39652,86 @@
       "ayah_slot_label": "22"
     },
     {
+      "anchor_key": "37:167:end:ليقولون",
+      "surah": 37,
+      "hafs_ayah": 167,
+      "kind": "end",
+      "word": "ليقولون",
+      "counted_by": [
+        "madani-last",
+        "makki",
+        "basri",
+        "dimashqi",
+        "kufi"
+      ],
+      "omitted_by": [
+        "madani-first"
+      ],
+      "verification_status": "unresolved",
+      "evidence_count": 1,
+      "primary_evidence_count": 1,
+      "reviewer_count": 0,
+      "supported_systems": [
+        "madani-last",
+        "makki",
+        "basri",
+        "dimashqi",
+        "kufi"
+      ],
+      "systems": {
+        "madani-first": {
+          "counts_boundary": false,
+          "numbering_effect": "merge"
+        },
+        "madani-last": {
+          "counts_boundary": true,
+          "numbering_effect": "none"
+        },
+        "makki": {
+          "counts_boundary": true,
+          "numbering_effect": "none"
+        },
+        "basri": {
+          "counts_boundary": true,
+          "numbering_effect": "none"
+        },
+        "dimashqi": {
+          "counts_boundary": true,
+          "numbering_effect": "none"
+        },
+        "kufi": {
+          "counts_boundary": true,
+          "numbering_effect": "none"
+        }
+      },
+      "note": null,
+      "evidence": [
+        {
+          "tier": "primary",
+          "work": "البيان في عدّ آي القرآن",
+          "locator": "ص 212",
+          "supports": [
+            "madani-last",
+            "makki",
+            "basri",
+            "dimashqi",
+            "kufi"
+          ],
+          "strength": "direct",
+          "edition": "طبعة تُراث الرقمية (shamela 5542)",
+          "note": "قال الداني في والصافات: «(وإن كانوا ليقولون) وهو الثاني لم يعدها أبو جعفر وعدها الباقون وشيبة». وظاهره أن المدني الأول يعدّها، والخريطة لا تعدّه فيها."
+        }
+      ],
+      "reviewers": [],
+      "location_label": "37:167",
+      "counted_by_count": 5,
+      "omitted_by_count": 1,
+      "surah_row_index": 2,
+      "ayah_slot_index": 1,
+      "ayah_slot_count": 1,
+      "ayah_slot_label": "167"
+    },
+    {
       "anchor_key": "38:1:end:الذكر",
       "surah": 38,
       "hafs_ayah": 1,
@@ -43317,18 +43519,7 @@
           ],
           "strength": "direct",
           "edition": "طبعة تُراث الرقمية (shamela 5542)",
-          "note": "قال الداني في سورة الملك: «وهي إحدى وثلاثون آية في المدني الأخير والمكي، وثلاثون في عدد الباقين. اختلافها آية (قد جاءنا نذير) عدها المدني الأخير والمكي ولم يعدها الباقون، وعدها شيبة ولم يعدها أبو جعفر»."
-        },
-        {
-          "tier": "secondary",
-          "work": "ناظمة الزهر — الشاطبي",
-          "locator": "البيتان 249–250",
-          "supports": [
-            "madani-last",
-            "makki"
-          ],
-          "strength": "derived",
-          "note": "«وَمُلْكٌ: لَوَى، والصَّدْرُ ﴿قَدْ جَاءَنَا نَذِيرْ﴾ زَادَ سِوَى فَيْرُوزَ». فـ«لوى» ثلاثون، والصدر يزيد «نذير» إلا فيروز (زيد بن القعقاع = أبو جعفر)."
+          "note": "قال الداني في الملك: «اختلافها آية (قد جاءنا نذير) عدها المدني الأخير والمكي ولم يعدها الباقون، وعدها شيبة ولم يعدها أبو جعفر». وهذا موافق لما في الخريطة."
         },
         {
           "tier": "commentary",
@@ -43339,7 +43530,18 @@
             "makki"
           ],
           "strength": "derived",
-          "note": "«أن الصدر وهم المدنيان والمكي يزيدون الآية المذكورة ما عدا زيد فلا يعدها، فتكون السورة عند البصري والشامي والكوفي وزيد ثلاثين آية فقط، وعند المدني الأخير والمكي وشعبة بن نصاح إحدى وثلاثين آية». موضع الإشكال لفظ «المدنيان»: إن أريد به العددان المدنيان لزم أن يعدّها المدني الأول فيصير ٦٢١٨؛ وإن أريد به الشيخان المدنيان شيبة وأبو جعفر فإسقاط زيد يُبقي شيبة وحده، وهو المدني الأخير — وعليه تنطبق الجملة الثانية من الشرح نفسه وعبارة الداني. والقراءة الثانية أرجح لاتساقها مع النصين، ولكنّ الموضع يحتاج حكمًا بشريًّا. وهو المفسِّر لكون مصحف الدوري (مجمع الملك فهد) يحمل ٦٢١٨ مع إعلانه المدني الأول."
+          "note": "«أن الصدر وهم المدنيان والمكي يزيدون الآية المذكورة ما عدا زيدًا فلا يعدها، فتكون السورة عند البصري والشامي والكوفي وزيد ثلاثين آية فقط، وعند المدني الأخير والمكي وشعبة بن نصاح إحدى وثلاثين آية». ولفظ «المدنيان» محتمل: العددان المدنيان، أو الشيخان شيبة وأبو جعفر. والجملة الثانية ترجّح الثاني."
+        },
+        {
+          "tier": "modern-reference",
+          "work": "مصحف المدينة برواية الدوري — مجمع الملك فهد",
+          "locator": "طبعات 1429 و1436 و1443",
+          "supports": [
+            "madani-last",
+            "makki"
+          ],
+          "strength": "derived",
+          "note": "طبعتا 1429 و1443 تعدّان «نذير» فتكون السورة 31 آية، وطبعة 1436 لا تعدّها فتكون 30. انظر docs/evidence/."
         }
       ],
       "reviewers": [],
@@ -44396,6 +44598,86 @@
       "ayah_slot_label": "37"
     },
     {
+      "anchor_key": "80:24:end:طعامه",
+      "surah": 80,
+      "hafs_ayah": 24,
+      "kind": "end",
+      "word": "طعامه",
+      "counted_by": [
+        "madani-last",
+        "makki",
+        "basri",
+        "dimashqi",
+        "kufi"
+      ],
+      "omitted_by": [
+        "madani-first"
+      ],
+      "verification_status": "unresolved",
+      "evidence_count": 1,
+      "primary_evidence_count": 1,
+      "reviewer_count": 0,
+      "supported_systems": [
+        "madani-last",
+        "makki",
+        "basri",
+        "dimashqi",
+        "kufi"
+      ],
+      "systems": {
+        "madani-first": {
+          "counts_boundary": false,
+          "numbering_effect": "merge"
+        },
+        "madani-last": {
+          "counts_boundary": true,
+          "numbering_effect": "none"
+        },
+        "makki": {
+          "counts_boundary": true,
+          "numbering_effect": "none"
+        },
+        "basri": {
+          "counts_boundary": true,
+          "numbering_effect": "none"
+        },
+        "dimashqi": {
+          "counts_boundary": true,
+          "numbering_effect": "none"
+        },
+        "kufi": {
+          "counts_boundary": true,
+          "numbering_effect": "none"
+        }
+      },
+      "note": null,
+      "evidence": [
+        {
+          "tier": "primary",
+          "work": "البيان في عدّ آي القرآن",
+          "locator": "ص 264",
+          "supports": [
+            "madani-last",
+            "makki",
+            "basri",
+            "dimashqi",
+            "kufi"
+          ],
+          "strength": "direct",
+          "edition": "طبعة تُراث الرقمية (shamela 5542)",
+          "note": "قال الداني في عبس: «(إلى طعامه) لم يعدها أبو جعفر وحده وعدها شيبة والباقون». وظاهره أن المدني الأول يعدّها، والخريطة لا تعدّه فيها."
+        }
+      ],
+      "reviewers": [],
+      "location_label": "80:24",
+      "counted_by_count": 5,
+      "omitted_by_count": 1,
+      "surah_row_index": 1,
+      "ayah_slot_index": 1,
+      "ayah_slot_count": 1,
+      "ayah_slot_label": "24"
+    },
+    {
       "anchor_key": "80:32:end:ولأنعامكم",
       "surah": 80,
       "hafs_ayah": 32,
@@ -44448,7 +44730,7 @@
       "location_label": "80:32",
       "counted_by_count": 4,
       "omitted_by_count": 2,
-      "surah_row_index": 1,
+      "surah_row_index": 2,
       "ayah_slot_index": 1,
       "ayah_slot_count": 1,
       "ayah_slot_label": "32"
@@ -44506,10 +44788,90 @@
       "location_label": "80:33",
       "counted_by_count": 5,
       "omitted_by_count": 1,
-      "surah_row_index": 2,
+      "surah_row_index": 3,
       "ayah_slot_index": 1,
       "ayah_slot_count": 1,
       "ayah_slot_label": "33"
+    },
+    {
+      "anchor_key": "81:26:end:تذهبون",
+      "surah": 81,
+      "hafs_ayah": 26,
+      "kind": "end",
+      "word": "تذهبون",
+      "counted_by": [
+        "madani-last",
+        "makki",
+        "basri",
+        "dimashqi",
+        "kufi"
+      ],
+      "omitted_by": [
+        "madani-first"
+      ],
+      "verification_status": "unresolved",
+      "evidence_count": 1,
+      "primary_evidence_count": 1,
+      "reviewer_count": 0,
+      "supported_systems": [
+        "madani-last",
+        "makki",
+        "basri",
+        "dimashqi",
+        "kufi"
+      ],
+      "systems": {
+        "madani-first": {
+          "counts_boundary": false,
+          "numbering_effect": "merge"
+        },
+        "madani-last": {
+          "counts_boundary": true,
+          "numbering_effect": "none"
+        },
+        "makki": {
+          "counts_boundary": true,
+          "numbering_effect": "none"
+        },
+        "basri": {
+          "counts_boundary": true,
+          "numbering_effect": "none"
+        },
+        "dimashqi": {
+          "counts_boundary": true,
+          "numbering_effect": "none"
+        },
+        "kufi": {
+          "counts_boundary": true,
+          "numbering_effect": "none"
+        }
+      },
+      "note": null,
+      "evidence": [
+        {
+          "tier": "primary",
+          "work": "البيان في عدّ آي القرآن",
+          "locator": "ص 265",
+          "supports": [
+            "madani-last",
+            "makki",
+            "basri",
+            "dimashqi",
+            "kufi"
+          ],
+          "strength": "direct",
+          "edition": "طبعة تُراث الرقمية (shamela 5542)",
+          "note": "قال الداني في التكوير: «وهي عشرون وتسع آيات في جميع العدد، إلا في عد أبي جعفر فإنها وثمان … (فأين تذهبون) لم يعدها أبو جعفر وحده وعدها الباقون وشيبة». وظاهره أن المدني الأول يعدّها، والخريطة لا تعدّه فيها."
+        }
+      ],
+      "reviewers": [],
+      "location_label": "81:26",
+      "counted_by_count": 5,
+      "omitted_by_count": 1,
+      "surah_row_index": 1,
+      "ayah_slot_index": 1,
+      "ayah_slot_count": 1,
+      "ayah_slot_label": "26"
     },
     {
       "anchor_key": "84:7:end:بيمينه",
@@ -45831,7 +46193,7 @@
       "primary_classical_total_ayahs": 6219,
       "delta_from_primary": 0,
       "policy_en": "Prefer the primary Makki total reported by Abu Amr al-Dani when later computed variants can be reproduced only by disputed boundary positions.",
-      "policy_ar": "يُقدَّم مجموع العدد المكي الذي رواه أبو عمرو الداني إذا لم يمكن بلوغ الجمل الأخرى إلا بعدِّ مواضع مختلف فيها.",
+      "policy_ar": "يُقدَّم مجموع العدد المكي الذي رواه أبو عمرو الداني إذا لم يمكن بلوغ الجمل الأخرى إلا بعدِّ مواضع مختلف فيها.",
       "disputed_boundaries": [
         {
           "surah": 78,
@@ -45839,7 +46201,7 @@
           "word": "قريبا",
           "primary_riwaya_decision": "excluded",
           "note_en": "Abu Amr al-Dani reports this boundary for Basri only, not for Makki.",
-          "note_ar": "نصَّ أبو عمرو الداني على عدِّ هذا الموضع للبصري فقط دون المكي.",
+          "note_ar": "نصَّ أبو عمرو الداني على عدِّ هذا الموضع للبصري فقط دون المكي.",
           "current_mapping_decision": "excluded"
         },
         {
@@ -45848,7 +46210,58 @@
           "word": "فعقروها",
           "primary_riwaya_decision": "excluded",
           "note_en": "Abu Amr al-Dani marks the Makki count here as disputed (بخلاف عنه); the repository excludes it to preserve the primary Makki total of 6219.",
-          "note_ar": "ذكر أبو عمرو الداني عدَّ هذا الموضع للمكي بخلاف عنه؛ واعتمد المستودع تركه محافظةً على الجملة الأصلية للعدد المكي (6219).",
+          "note_ar": "ذكر أبو عمرو الداني عدَّ هذا الموضع للمكي بخلاف عنه؛ واعتمد المستودع تركه محافظةً على الجملة الأصلية للعدد المكي (6219).",
+          "current_mapping_decision": "excluded"
+        }
+      ]
+    },
+    "madani-first": {
+      "status": "drift_from_primary_riwaya",
+      "mapping_total_ayahs": 6214,
+      "primary_classical_total_ayahs": 6217,
+      "delta_from_primary": -3,
+      "attested_by": [
+        "البيان في عدّ آي القرآن، أبو عمرو الداني: «جميع عدد آي القرآن في المدني الأول ستة آلاف آية ومئتا آية وسبع عشرة آية»",
+        "مصحف المدينة برواية الدوري، مجمع الملك فهد، طبعة 1436هـ: «وعدد آي القرآن على طريقتهم (6217)»",
+        "الجداول المنشورة المتداولة لمذاهب العدّ الستة"
+      ],
+      "policy_en": "The 6217 total is well attested and is recorded here. The point-by-point reconstruction that would reach it is not settled, so the boundary map is left unchanged and the difference is reported rather than absorbed.",
+      "policy_ar": "جملة 6217 ثابتة بالنقل وتُسجَّل هنا. وأما تحرير المواضع الذي يُبلَّغ به فغير محسوم، فتُركت الخريطة على حالها ويُبيَّن الفرق ولا يُطوى.",
+      "disputed_boundaries": [
+        {
+          "surah": 3,
+          "hafs_ayah": 92,
+          "word": "تحبون",
+          "primary_riwaya_decision": "unresolved",
+          "note_en": "Al-Dani says Abu Ja'far alone does not count this ending and that Shayba and the rest do, which reads as including madani-first. The map excludes it. See data/book-boundary-evidence.json.",
+          "note_ar": "نصَّ الداني على أن أبا جعفر وحده لا يعدُّ هذا الموضع وأن شيبة والباقين يعدّونه، وظاهره دخول المدني الأول فيهم؛ والخريطة تُخرجه. انظر data/book-boundary-evidence.json.",
+          "current_mapping_decision": "excluded"
+        },
+        {
+          "surah": 37,
+          "hafs_ayah": 167,
+          "word": "ليقولون",
+          "primary_riwaya_decision": "unresolved",
+          "note_en": "Al-Dani says Abu Ja'far alone does not count this ending and that Shayba and the rest do, which reads as including madani-first. The map excludes it. See data/book-boundary-evidence.json.",
+          "note_ar": "نصَّ الداني على أن أبا جعفر وحده لا يعدُّ هذا الموضع وأن شيبة والباقين يعدّونه، وظاهره دخول المدني الأول فيهم؛ والخريطة تُخرجه. انظر data/book-boundary-evidence.json.",
+          "current_mapping_decision": "excluded"
+        },
+        {
+          "surah": 80,
+          "hafs_ayah": 24,
+          "word": "طعامه",
+          "primary_riwaya_decision": "unresolved",
+          "note_en": "Al-Dani says Abu Ja'far alone does not count this ending and that Shayba and the rest do, which reads as including madani-first. The map excludes it. See data/book-boundary-evidence.json.",
+          "note_ar": "نصَّ الداني على أن أبا جعفر وحده لا يعدُّ هذا الموضع وأن شيبة والباقين يعدّونه، وظاهره دخول المدني الأول فيهم؛ والخريطة تُخرجه. انظر data/book-boundary-evidence.json.",
+          "current_mapping_decision": "excluded"
+        },
+        {
+          "surah": 81,
+          "hafs_ayah": 26,
+          "word": "تذهبون",
+          "primary_riwaya_decision": "unresolved",
+          "note_en": "Al-Dani says Abu Ja'far alone does not count this ending and that Shayba and the rest do, which reads as including madani-first. The map excludes it. See data/book-boundary-evidence.json.",
+          "note_ar": "نصَّ الداني على أن أبا جعفر وحده لا يعدُّ هذا الموضع وأن شيبة والباقين يعدّونه، وظاهره دخول المدني الأول فيهم؛ والخريطة تُخرجه. انظر data/book-boundary-evidence.json.",
           "current_mapping_decision": "excluded"
         }
       ]
@@ -45890,8 +46303,8 @@
             "makki",
             "dimashqi"
           ],
-          "evidence_verification_status": "disputed",
-          "has_primary_evidence_entry": false,
+          "evidence_verification_status": "unresolved",
+          "has_primary_evidence_entry": true,
           "file": "al_bayan_batch3_surah_003_al_imran.json",
           "locator": "ص 143",
           "match_status": "counted_by_mismatch",
