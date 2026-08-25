@@ -32,9 +32,9 @@
     "by_verification_status": {
       "uncited": 127,
       "secondary_only": 56,
-      "primary_cited": 58,
+      "primary_cited": 57,
       "primary_cited_and_reviewed": 0,
-      "disputed": 2,
+      "disputed": 3,
       "unresolved": 0
     },
     "by_system": {
@@ -88,7 +88,7 @@
       }
     },
     "evidence": {
-      "total_items": 281,
+      "total_items": 283,
       "total_primary_items": 59,
       "points_with_evidence": 116,
       "points_with_primary_evidence": 58,
@@ -2410,9 +2410,9 @@
       "by_verification_status": {
         "uncited": 0,
         "secondary_only": 0,
-        "primary_cited": 1,
+        "primary_cited": 0,
         "primary_cited_and_reviewed": 0,
-        "disputed": 0,
+        "disputed": 1,
         "unresolved": 0
       },
       "counts": {
@@ -11497,9 +11497,9 @@
       "by_status": {
         "uncited": 59,
         "secondary_only": 23,
-        "primary_cited": 25,
+        "primary_cited": 24,
         "primary_cited_and_reviewed": 0,
-        "disputed": 2,
+        "disputed": 3,
         "unresolved": 0
       },
       "points_with_evidence": 50,
@@ -11513,9 +11513,9 @@
       "by_status": {
         "uncited": 63,
         "secondary_only": 24,
-        "primary_cited": 25,
+        "primary_cited": 24,
         "primary_cited_and_reviewed": 0,
-        "disputed": 2,
+        "disputed": 3,
         "unresolved": 0
       },
       "points_with_evidence": 51,
@@ -43271,8 +43271,8 @@
         "dimashqi",
         "kufi"
       ],
-      "verification_status": "primary_cited",
-      "evidence_count": 1,
+      "verification_status": "disputed",
+      "evidence_count": 3,
       "primary_evidence_count": 1,
       "reviewer_count": 0,
       "supported_systems": [
@@ -43318,6 +43318,28 @@
           "strength": "direct",
           "edition": "طبعة تُراث الرقمية (shamela 5542)",
           "note": "قال الداني في سورة الملك: «وهي إحدى وثلاثون آية في المدني الأخير والمكي، وثلاثون في عدد الباقين. اختلافها آية (قد جاءنا نذير) عدها المدني الأخير والمكي ولم يعدها الباقون، وعدها شيبة ولم يعدها أبو جعفر»."
+        },
+        {
+          "tier": "secondary",
+          "work": "ناظمة الزهر — الشاطبي",
+          "locator": "البيتان 249–250",
+          "supports": [
+            "madani-last",
+            "makki"
+          ],
+          "strength": "derived",
+          "note": "«وَمُلْكٌ: لَوَى، والصَّدْرُ ﴿قَدْ جَاءَنَا نَذِيرْ﴾ زَادَ سِوَى فَيْرُوزَ». فـ«لوى» ثلاثون، والصدر يزيد «نذير» إلا فيروز (زيد بن القعقاع = أبو جعفر)."
+        },
+        {
+          "tier": "commentary",
+          "work": "معالم اليسر شرح ناظمة الزهر",
+          "locator": "ص 190",
+          "supports": [
+            "madani-last",
+            "makki"
+          ],
+          "strength": "derived",
+          "note": "«أن الصدر وهم المدنيان والمكي يزيدون الآية المذكورة ما عدا زيد فلا يعدها، فتكون السورة عند البصري والشامي والكوفي وزيد ثلاثين آية فقط، وعند المدني الأخير والمكي وشعبة بن نصاح إحدى وثلاثين آية». موضع الإشكال لفظ «المدنيان»: إن أريد به العددان المدنيان لزم أن يعدّها المدني الأول فيصير ٦٢١٨؛ وإن أريد به الشيخان المدنيان شيبة وأبو جعفر فإسقاط زيد يُبقي شيبة وحده، وهو المدني الأخير — وعليه تنطبق الجملة الثانية من الشرح نفسه وعبارة الداني. والقراءة الثانية أرجح لاتساقها مع النصين، ولكنّ الموضع يحتاج حكمًا بشريًّا. وهو المفسِّر لكون مصحف الدوري (مجمع الملك فهد) يحمل ٦٢١٨ مع إعلانه المدني الأول."
         }
       ],
       "reviewers": [],
