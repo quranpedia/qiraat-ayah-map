@@ -4591,13 +4591,6 @@
           "verification_status": "uncited",
           "evidence": []
         }
-      },
-      "167": {
-        "end": {
-          "word": "ليقولون",
-          "verification_status": "uncited",
-          "evidence": []
-        }
       }
     },
     "38": {
@@ -5139,8 +5132,21 @@
         "internal": [
           {
             "word": "نذير",
-            "verification_status": "uncited",
-            "evidence": []
+            "verification_status": "primary_cited",
+            "evidence": [
+              {
+                "tier": "primary",
+                "work": "البيان في عدّ آي القرآن",
+                "locator": "ص 251",
+                "supports": [
+                  "madani-last",
+                  "makki"
+                ],
+                "strength": "direct",
+                "edition": "طبعة تُراث الرقمية (shamela 5542)",
+                "note": "قال الداني في سورة الملك: «وهي إحدى وثلاثون آية في المدني الأخير والمكي، وثلاثون في عدد الباقين. اختلافها آية (قد جاءنا نذير) عدها المدني الأخير والمكي ولم يعدها الباقون، وعدها شيبة ولم يعدها أبو جعفر»."
+              }
+            ]
           }
         ]
       }
@@ -5300,13 +5306,6 @@
       }
     },
     "80": {
-      "24": {
-        "end": {
-          "word": "طعامه",
-          "verification_status": "uncited",
-          "evidence": []
-        }
-      },
       "32": {
         "end": {
           "word": "ولأنعامكم",
@@ -5317,15 +5316,6 @@
       "33": {
         "end": {
           "word": "الصاخة",
-          "verification_status": "uncited",
-          "evidence": []
-        }
-      }
-    },
-    "81": {
-      "26": {
-        "end": {
-          "word": "تذهبون",
           "verification_status": "uncited",
           "evidence": []
         }

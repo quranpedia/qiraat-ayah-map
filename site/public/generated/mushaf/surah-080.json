@@ -691,15 +691,6 @@
     }
   ],
   "boundary_positions": {
-    "80:24:end:طعامه": {
-      "ayah": 24,
-      "kind": "end",
-      "word": "طعامه",
-      "occurrence_index": 1,
-      "plain_after_token": 4,
-      "uthmani_after_token": 4,
-      "uthmani_resolution": "exact"
-    },
     "80:32:end:ولأنعامكم": {
       "ayah": 32,
       "kind": "end",

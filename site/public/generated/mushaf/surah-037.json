@@ -3562,15 +3562,6 @@
       "plain_after_token": 7,
       "uthmani_after_token": 8,
       "uthmani_resolution": "exact"
-    },
-    "37:167:end:ليقولون": {
-      "ayah": 167,
-      "kind": "end",
-      "word": "ليقولون",
-      "occurrence_index": 1,
-      "plain_after_token": 3,
-      "uthmani_after_token": 3,
-      "uthmani_resolution": "exact"
     }
   }
 }

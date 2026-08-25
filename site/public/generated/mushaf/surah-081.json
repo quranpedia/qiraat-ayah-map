@@ -502,15 +502,5 @@
       "uthmani_prefix": null
     }
   ],
-  "boundary_positions": {
-    "81:26:end:تذهبون": {
-      "ayah": 26,
-      "kind": "end",
-      "word": "تذهبون",
-      "occurrence_index": 1,
-      "plain_after_token": 2,
-      "uthmani_after_token": 2,
-      "uthmani_resolution": "exact"
-    }
-  }
+  "boundary_positions": {}
 }
