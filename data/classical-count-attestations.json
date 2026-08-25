@@ -26,14 +26,14 @@
     "madani-first": {
       "verification_status": "primary_cited",
       "primary_classical_total_ayahs": 6217,
-      "policy_en": "The First Madinan count is what Nafi' transmits from his two shaykhs Abu Ja'far and Shaybah ibn Nissah. It reaches us by two routes with two different totals: the Kufan route from the people of Madinah (6217), and the Basran route through Warsh from Nafi' (6214). Al-Shatibi adopted the Kufan route, following al-Dani, so 6217 is recorded here as the primary figure.",
-      "policy_ar": "العدد المدني الأول هو ما رواه نافع عن شيخيه أبي جعفر وشيبة بن نصاح، وقد ورد من طريقين بجملتين مختلفتين: رواية أهل الكوفة عن أهل المدينة (٦٢١٧)، ورواية أهل البصرة عن ورش عن نافع (٦٢١٤). واعتمد الإمام الشاطبي رواية أهل الكوفة تبعًا للإمام الداني، فأُثبتت ٦٢١٧ هنا جملةً أصلية.",
+      "policy_en": "The First Madinan count is what Nafi' transmits from his two shaykhs Abu Ja'far and Shaybah ibn Nissah — al-Dani states this in his opening, not in the count chapter, which says only that the Kufans transmitted it from the people of Madinah without naming anyone. It reaches us by the Kufan route at 6217, which al-Shatibi adopted following al-Dani, so 6217 is the primary figure here. Abu Ja'far's own count is a separate figure, 6210: he and Shaybah differ in six places, Abu Ja'far counting one Shaybah omits and omitting five Shaybah counts, and Isma'il ibn Ja'far follows Shaybah throughout. This repository therefore treats madani-first as the madhhab and not as Abu Ja'far personally; where al-Dani reports that Abu Ja'far alone omits an ayah while Shaybah and the rest count it, the madhhab counts it.",
+      "policy_ar": "العدد المدني الأول هو ما رواه نافع عن شيخيه أبي جعفر وشيبة بن نصاح، نصّ عليه الدانيّ في صدر الكتاب لا في باب العدد، إذ اقتصر فيه على أن أهل الكوفة رووه عن أهل المدينة من غير تسمية أحد. وجملته من طريق أهل الكوفة ٦٢١٧، وهي التي اعتمدها الشاطبي تبعًا للداني، فأُثبتت جملةً أصلية. وأما جملة أبي جعفر نفسه فمغايرة، وهي ٦٢١٠؛ لأنه وشيبة اختلفا في ستة مواضع: عدّ أبو جعفر منها موضعًا لم يعدّه شيبة، وترك خمسةً عدّها شيبة، وكان إسماعيل بن جعفر يأخذ فيهنّ بقول شيبة. وعليه فالمراد بالمدني الأول في هذا المستودع مذهبُ العدّ لا جملةُ أبي جعفر؛ فحيث نصّ الدانيّ على أن أبا جعفر وحده لم يعدّ موضعًا وعدّه شيبة والباقون، فالمذهب عادٌّ له.",
       "attested_totals": [
         {
           "total_ayahs": 6217,
           "role": "primary",
-          "attribution_en": "Kufan route: the Kufans transmitting from the people of Madinah without naming a transmitter. Adopted by al-Shatibi, following al-Dani.",
-          "attribution_ar": "رواية أهل الكوفة عن أهل المدينة من غير تعيين أحد منهم، وهي التي اعتمدها الشاطبي تبعًا للداني.",
+          "attribution_en": "Kufan route: the Kufans transmitting from the people of Madinah without naming a transmitter. Adopted by al-Shatibi, following al-Dani. Independently confirmed by al-Dani's enumerated chapters: the two Madinan counts differ in 57 places, 30 counted by the First alone and 27 by the Last alone; and Abu Ja'far's own 6210 follows from the Last Madinan total by the six Abu Ja'far/Shaybah differences, which closes the set.",
+          "attribution_ar": "رواية أهل الكوفة عن أهل المدينة من غير تعيين أحد منهم، وهي التي اعتمدها الشاطبي تبعًا للداني. ويؤيّدها ما أفرده الدانيّ من أبواب: اختلاف المدنيَّين في سبعة وخمسين موضعًا، منها ثلاثون عدّها الأول دون الآخر وسبعة وعشرون عدّها الآخر دون الأول؛ وجملةُ أبي جعفر (٦٢١٠) تخرج من جملة المدني الأخير بمواضع الخلاف الستة بينه وبين شيبة، وبذلك انغلق العدّ.",
           "evidence": [
             {
               "tier": "primary",
@@ -54,9 +54,9 @@
         },
         {
           "total_ayahs": 6214,
-          "role": "alternative",
-          "attribution_en": "Basran route: the Basrans transmitting through Warsh from Nafi' from his two shaykhs.",
-          "attribution_ar": "رواية أهل البصرة عن ورش عن نافع عن شيخيه.",
+          "role": "conflicting",
+          "attribution_en": "Reported in Nafa'is al-Bayan as the First Madinan total by the Basran route through Warsh from Nafi'. al-Bayan attests no second First Madinan total, so this figure rests on the commentary alone and is recorded rather than adopted.",
+          "attribution_ar": "ما ذكره صاحب نفائس البيان من أن جملة المدني الأول في رواية أهل البصرة عن ورش عن نافع ٦٢١٤. ولم يذكر البيانُ للمدني الأول جملةً ثانية، فهذه الرواية على الشرح وحده، وأُثبتت ولم تُعتمد.",
           "evidence": [
             {
               "tier": "commentary",
@@ -68,9 +68,8 @@
           ]
         }
       ],
-      "open_question_en": "The generated mapping reproduces 6214 while the adopted primary figure is 6217. The identity and composition of the differing boundaries are not established by that delta: an aggregate difference of three is equally consistent with three missing boundaries, or four missing and one wrongly included. It does not license naming a specific number of missing points. Note also that the mapping total here equals madani-last (6214) while the two systems differ in 15 surahs — a matching sum, not a matching composition.",
-      "open_question_ar": "تُخرج الخريطة ٦٢١٤ والجملة المعتمدة ٦٢١٧. ولا يُعيّن هذا الفرقُ مواضعَ الخلاف ولا عددَها: فَرْقُ ثلاثٍ يحتمل نقصَ ثلاثة مواضع، ويحتمل نقصَ أربعة مع زيادة واحد. فلا يصحّ الجزم بعددٍ بعينه. على أن جملة الخريطة هنا تساوي المدني الأخير (٦٢١٤) مع اختلاف المذهبين في خمس عشرة سورة — فهي مطابقةُ جملةٍ لا مطابقةُ تركيب.",
-      "disputed_boundaries": []
+      "disputed_boundaries": [],
+      "boundary_reconstruction": "resolved"
     },
     "madani-last": {
       "verification_status": "primary_cited",
@@ -123,7 +122,8 @@
             }
           ]
         }
-      ]
+      ],
+      "boundary_reconstruction": "unresolved"
     },
     "makki": {
       "verification_status": "primary_cited",
@@ -215,7 +215,8 @@
             }
           ]
         }
-      ]
+      ],
+      "boundary_reconstruction": "unresolved"
     },
     "basri": {
       "verification_status": "primary_cited",
@@ -263,7 +264,8 @@
           ]
         }
       ],
-      "disputed_boundaries": []
+      "disputed_boundaries": [],
+      "boundary_reconstruction": "unresolved"
     },
     "dimashqi": {
       "verification_status": "primary_cited",
@@ -319,7 +321,8 @@
           ]
         }
       ],
-      "disputed_boundaries": []
+      "disputed_boundaries": [],
+      "boundary_reconstruction": "unresolved"
     },
     "kufi": {
       "verification_status": "primary_cited",
@@ -351,7 +354,8 @@
           ]
         }
       ],
-      "disputed_boundaries": []
+      "disputed_boundaries": [],
+      "boundary_reconstruction": "unresolved"
     }
   },
   "_evidence_tier_descriptions": {

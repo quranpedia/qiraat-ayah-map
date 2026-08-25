@@ -154,7 +154,7 @@ function topologicallyOrderInternalWords(wordRecords, sequences) {
   return ordered;
 }
 
-function normalizeCountedBy(countedBy, orderedSystemIds, { allowKufi, location }) {
+function normalizeCountedBy(countedBy, orderedSystemIds, { allowKufi, location, allowAllSystems = false }) {
   if (!Array.isArray(countedBy) || countedBy.length === 0) {
     throw new Error(`${location}: counted_by must be a non-empty array`);
   }
@@ -179,11 +179,54 @@ function normalizeCountedBy(countedBy, orderedSystemIds, { allowKufi, location }
 
   const normalized = orderedSystemIds.filter(systemId => uniqueIds.includes(systemId));
 
-  if (normalized.length === orderedSystemIds.length) {
-    throw new Error(`${location}: counted_by must represent a disputed boundary, not all systems`);
+  if (normalized.length === orderedSystemIds.length && !allowAllSystems) {
+    throw new Error(`${location}: counted_by must represent a disputed boundary, not all systems, unless dispute_scope is "riwaya"`);
   }
 
   return normalized;
+}
+
+// At what level a point is disputed.
+//
+//   madhhab -- the ordinary case: the counting madhhabs disagree, and counted_by
+//              says which ones count it.
+//   riwaya  -- al-Dani records the disagreement *inside* a madhhab, between its
+//              transmitters: Abu Ja'far against Shayba, or one Makki riwaya
+//              against another. Every madhhab counts the boundary, so counted_by
+//              is all systems and carries no information; the scholarly content
+//              is that the madhhab is internally split.
+//
+// Only "riwaya" may have counted_by covering every system. That used to be gated
+// on the presence of riwaya_note, which made a prose field load-bearing and left
+// the distinction invisible to anything reading the generated data.
+export const DISPUTE_SCOPES = ['madhhab', 'riwaya'];
+export const DEFAULT_DISPUTE_SCOPE = 'madhhab';
+
+function normalizeDisputeScope(value, location) {
+  if (value === undefined || value === null) {
+    return DEFAULT_DISPUTE_SCOPE;
+  }
+
+  if (!DISPUTE_SCOPES.includes(value)) {
+    throw new Error(`${location}: dispute_scope must be one of ${DISPUTE_SCOPES.join(', ')}`);
+  }
+
+  return value;
+}
+
+// Human-readable companion to dispute_scope: which transmitters, and on whose
+// authority. Required when the scope is "riwaya", because "every system counts
+// this" is otherwise unreadable.
+function normalizeRiwayaNote(value, location) {
+  if (value === undefined || value === null) {
+    return null;
+  }
+
+  if (typeof value !== 'string' || value.trim().length === 0) {
+    throw new Error(`${location}: riwaya_note must be a non-empty string when present`);
+  }
+
+  return value.trim();
 }
 
 function normalizeWord(value, location) {
@@ -245,8 +288,17 @@ export function normalizeBookBoundaryPrimitivesDocument(primitivesDocument, coun
           }
           seenInternalWords.add(word);
 
+          const scope = normalizeDisputeScope(internalPoint.dispute_scope, pointLocation);
+          const note = normalizeRiwayaNote(internalPoint.riwaya_note, pointLocation);
+
+          if (scope === 'riwaya' && !note) {
+            throw new Error(`${pointLocation}: dispute_scope "riwaya" requires riwaya_note naming the transmitters`);
+          }
+
           return {
             word,
+            dispute_scope: scope,
+            ...(note ? { riwaya_note: note } : {}),
             counted_by: normalizeCountedBy(internalPoint.counted_by, orderedSystemIds, {
               allowKufi: false,
               location: pointLocation
@@ -256,10 +308,20 @@ export function normalizeBookBoundaryPrimitivesDocument(primitivesDocument, coun
       }
 
       if (primitive.end) {
+        const endScope = normalizeDisputeScope(primitive.end.dispute_scope, `${location}:end`);
+        const endRiwayaNote = normalizeRiwayaNote(primitive.end.riwaya_note, `${location}:end`);
+
+        if (endScope === 'riwaya' && !endRiwayaNote) {
+          throw new Error(`${location}:end: dispute_scope "riwaya" requires riwaya_note naming the transmitters`);
+        }
+
         normalizedPrimitive.end = {
           word: normalizeWord(primitive.end.word, `${location}:end`),
+          dispute_scope: endScope,
+          ...(endRiwayaNote ? { riwaya_note: endRiwayaNote } : {}),
           counted_by: normalizeCountedBy(primitive.end.counted_by, orderedSystemIds, {
             allowKufi: true,
+            allowAllSystems: endScope === 'riwaya',
             location: `${location}:end`
           })
         };
@@ -355,6 +417,9 @@ export function buildBookBoundaryPrimitives(differencesDocument, countingSystems
 
         return {
           word: record.word,
+          // differences.json only carries madhhab-level disagreement, so anything
+          // projected back out of it is madhhab-scope by construction.
+          dispute_scope: DEFAULT_DISPUTE_SCOPE,
           counted_by: countedBy
         };
       });
@@ -375,6 +440,7 @@ export function buildBookBoundaryPrimitives(differencesDocument, countingSystems
 
       output.end = {
         word: ayahRecord.end.word,
+        dispute_scope: DEFAULT_DISPUTE_SCOPE,
         counted_by: countedBy
       };
     }

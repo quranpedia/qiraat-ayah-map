@@ -12,7 +12,7 @@ import {
   normalizeBookBoundaryEvidenceDocument,
   VERIFICATION_STATUS_ORDER
 } from './lib/book-evidence-utils.mjs'
-import { normalizeBookBoundaryPrimitivesDocument } from './lib/book-primitives-utils.mjs'
+import { DISPUTE_SCOPES, normalizeBookBoundaryPrimitivesDocument } from './lib/book-primitives-utils.mjs'
 import {
   distPath,
   distReviewDir,
@@ -91,9 +91,20 @@ function summarize_rows() {
     }
   }
 
+  const by_dispute_scope = Object.fromEntries(DISPUTE_SCOPES.map(scope => [scope, 0]))
+
+  for (const row of rows) {
+    if (!(row.dispute_scope in by_dispute_scope)) {
+      throw new Error(`unknown dispute_scope ${row.dispute_scope} at ${row.anchor_key}`)
+    }
+
+    by_dispute_scope[row.dispute_scope] += 1
+  }
+
   return {
     total_points: rows.length,
     by_kind,
+    by_dispute_scope,
     by_verification_status,
     by_system
   }
@@ -267,6 +278,7 @@ const csv_columns = [
   'hafs_ayah',
   'kind',
   'word',
+  'dispute_scope',
   ...ordered_system_ids,
   'verification_status',
   'evidence_count',
@@ -283,6 +295,7 @@ for (const row of rows) {
     row.hafs_ayah,
     row.kind,
     row.word,
+    row.dispute_scope,
     ...ordered_system_ids.map(system_id => row.systems[system_id].counts_boundary ? 'counts' : ''),
     row.verification_status,
     row.evidence_count,
@@ -305,23 +318,18 @@ for (const system_id of ordered_system_ids) {
   const counted_status_counts = summarize_verification_statuses(counted_rows)
   const omitted_status_counts = summarize_verification_statuses(omitted_rows)
 
-  const counted_table_rows = counted_rows.map(row => [
+  const review_table_row = row => [
     `${row.surah}:${row.hafs_ayah}`,
     row.kind,
     row.word,
+    row.dispute_scope,
     numbering_effect_label(system_id, row),
     row.verification_status,
     String(row.evidence_count)
-  ])
+  ]
 
-  const omitted_table_rows = omitted_rows.map(row => [
-    `${row.surah}:${row.hafs_ayah}`,
-    row.kind,
-    row.word,
-    numbering_effect_label(system_id, row),
-    row.verification_status,
-    String(row.evidence_count)
-  ])
+  const counted_table_rows = counted_rows.map(review_table_row)
+  const omitted_table_rows = omitted_rows.map(review_table_row)
 
   const lines = [
     `# Review packet — ${system.name_en} (${system.name_ar})`,
@@ -354,13 +362,13 @@ for (const system_id of ordered_system_ids) {
     '## Boundaries counted by this system',
     '',
     counted_table_rows.length > 0
-      ? render_markdown_table(['Location', 'Kind', 'Word', 'Effect vs. Kufi', 'Verification', 'Evidence'], counted_table_rows)
+      ? render_markdown_table(['Location', 'Kind', 'Word', 'Dispute', 'Effect vs. Kufi', 'Verification', 'Evidence'], counted_table_rows)
       : '_None._',
     '',
     '## Boundaries not counted by this system',
     '',
     omitted_table_rows.length > 0
-      ? render_markdown_table(['Location', 'Kind', 'Word', 'Effect vs. Kufi', 'Verification', 'Evidence'], omitted_table_rows)
+      ? render_markdown_table(['Location', 'Kind', 'Word', 'Dispute', 'Effect vs. Kufi', 'Verification', 'Evidence'], omitted_table_rows)
       : '_None._',
     ''
   ]

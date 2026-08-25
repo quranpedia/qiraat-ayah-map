@@ -209,6 +209,7 @@
           {
             "word": "تحبون",
             "counted_by": [
+              "madani-first",
               "madani-last",
               "makki",
               "dimashqi"
@@ -221,7 +222,6 @@
           {
             "word": "إبراهيم",
             "counted_by": [
-              "madani-first",
               "dimashqi"
             ]
           }
@@ -1527,7 +1527,10 @@
       "167": {
         "end": {
           "word": "ليقولون",
+          "dispute_scope": "riwaya",
+          "riwaya_note": "نصّ الداني على أن أبا جعفر وحده لم يعدّ هذا الموضع وعدّه شيبة وسائر العادّين، فالخلاف فيه بين شيخَي المدني الأول لا بين مذاهب العدّ.",
           "counted_by": [
+            "madani-first",
             "madani-last",
             "makki",
             "basri",
@@ -2456,7 +2459,10 @@
       "24": {
         "end": {
           "word": "طعامه",
+          "dispute_scope": "riwaya",
+          "riwaya_note": "نصّ الداني على أن أبا جعفر وحده لم يعدّ هذا الموضع وعدّه شيبة والباقون، فالخلاف فيه داخل المدني الأول.",
           "counted_by": [
+            "madani-first",
             "madani-last",
             "makki",
             "basri",
@@ -2493,7 +2499,10 @@
       "26": {
         "end": {
           "word": "تذهبون",
+          "dispute_scope": "riwaya",
+          "riwaya_note": "نصّ الداني على أن أبا جعفر وحده لم يعدّ هذا الموضع وعدّه الباقون وشيبة، فالخلاف فيه داخل المدني الأول.",
           "counted_by": [
+            "madani-first",
             "madani-last",
             "makki",
             "basri",
