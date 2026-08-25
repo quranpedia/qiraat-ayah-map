@@ -29,6 +29,10 @@
       "end": 134,
       "internal": 112
     },
+    "by_dispute_scope": {
+      "madhhab": 243,
+      "riwaya": 3
+    },
     "by_verification_status": {
       "uncited": 128,
       "secondary_only": 55,
@@ -27895,6 +27899,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "الرحيم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "makki",
         "kufi"
@@ -27991,6 +27996,7 @@
       "hafs_ayah": 7,
       "kind": "internal",
       "word": "عليهم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -28095,6 +28101,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "الم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -28187,6 +28194,7 @@
       "hafs_ayah": 10,
       "kind": "internal",
       "word": "أليم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi"
       ],
@@ -28279,6 +28287,7 @@
       "hafs_ayah": 11,
       "kind": "end",
       "word": "مصلحون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -28387,6 +28396,7 @@
       "hafs_ayah": 114,
       "kind": "internal",
       "word": "خائفين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri"
       ],
@@ -28479,6 +28489,7 @@
       "hafs_ayah": 197,
       "kind": "end",
       "word": "الألباب",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "basri",
@@ -28583,6 +28594,7 @@
       "hafs_ayah": 200,
       "kind": "end",
       "word": "خلاق",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "makki",
@@ -28691,6 +28703,7 @@
       "hafs_ayah": 219,
       "kind": "internal",
       "word": "ينفقون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "makki"
@@ -28787,6 +28800,7 @@
       "hafs_ayah": 219,
       "kind": "end",
       "word": "تتفكرون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "dimashqi",
@@ -28887,6 +28901,7 @@
       "hafs_ayah": 235,
       "kind": "internal",
       "word": "معروفا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri"
       ],
@@ -28979,6 +28994,7 @@
       "hafs_ayah": 255,
       "kind": "internal",
       "word": "القيوم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "makki",
@@ -29079,6 +29095,7 @@
       "hafs_ayah": 257,
       "kind": "internal",
       "word": "النور",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first"
       ],
@@ -29182,6 +29199,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "الم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -29274,6 +29292,7 @@
       "hafs_ayah": 3,
       "kind": "end",
       "word": "والإنجيل",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -29382,6 +29401,7 @@
       "hafs_ayah": 4,
       "kind": "internal",
       "word": "الفرقان",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -29490,6 +29510,7 @@
       "hafs_ayah": 48,
       "kind": "end",
       "word": "والإنجيل",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -29582,6 +29603,7 @@
       "hafs_ayah": 49,
       "kind": "internal",
       "word": "إسرائيل",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri"
       ],
@@ -29674,6 +29696,7 @@
       "hafs_ayah": 92,
       "kind": "internal",
       "word": "تحبون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -29776,6 +29799,7 @@
       "hafs_ayah": 97,
       "kind": "internal",
       "word": "إبراهيم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi"
       ],
@@ -29868,6 +29892,7 @@
       "hafs_ayah": 44,
       "kind": "end",
       "word": "السبيل",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi",
         "kufi"
@@ -29964,6 +29989,7 @@
       "hafs_ayah": 173,
       "kind": "internal",
       "word": "أليما",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi"
       ],
@@ -30056,6 +30082,7 @@
       "hafs_ayah": 1,
       "kind": "internal",
       "word": "بالعقود",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -30164,6 +30191,7 @@
       "hafs_ayah": 15,
       "kind": "internal",
       "word": "كثير",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -30272,6 +30300,7 @@
       "hafs_ayah": 23,
       "kind": "internal",
       "word": "غالبون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri"
       ],
@@ -30364,6 +30393,7 @@
       "hafs_ayah": 1,
       "kind": "internal",
       "word": "والنور",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -30464,6 +30494,7 @@
       "hafs_ayah": 66,
       "kind": "end",
       "word": "بوكيل",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -30556,6 +30587,7 @@
       "hafs_ayah": 73,
       "kind": "internal",
       "word": "فيكون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -30649,6 +30681,7 @@
       "hafs_ayah": 161,
       "kind": "internal",
       "word": "مستقيم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -30757,6 +30790,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "المص",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -30849,6 +30883,7 @@
       "hafs_ayah": 29,
       "kind": "internal",
       "word": "الدين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri",
         "dimashqi"
@@ -30945,6 +30980,7 @@
       "hafs_ayah": 29,
       "kind": "end",
       "word": "تعودون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -31037,6 +31073,7 @@
       "hafs_ayah": 38,
       "kind": "internal",
       "word": "النار",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -31137,6 +31174,7 @@
       "hafs_ayah": 137,
       "kind": "internal",
       "word": "إسرائيل",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -31237,6 +31275,7 @@
       "hafs_ayah": 36,
       "kind": "internal",
       "word": "يغلبون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri",
         "dimashqi"
@@ -31333,6 +31372,7 @@
       "hafs_ayah": 42,
       "kind": "internal",
       "word": "مفعولا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -31441,6 +31481,7 @@
       "hafs_ayah": 62,
       "kind": "end",
       "word": "وبالمؤمنين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -31549,6 +31590,7 @@
       "hafs_ayah": 3,
       "kind": "internal",
       "word": "المشركين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri"
       ],
@@ -31641,6 +31683,7 @@
       "hafs_ayah": 39,
       "kind": "internal",
       "word": "أليما",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi"
       ],
@@ -31733,6 +31776,7 @@
       "hafs_ayah": 70,
       "kind": "internal",
       "word": "وثمود",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -31833,6 +31877,7 @@
       "hafs_ayah": 22,
       "kind": "internal",
       "word": "الدين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi"
       ],
@@ -31925,6 +31970,7 @@
       "hafs_ayah": 22,
       "kind": "end",
       "word": "الشاكرين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -32033,6 +32079,7 @@
       "hafs_ayah": 57,
       "kind": "internal",
       "word": "الصدور",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi"
       ],
@@ -32125,6 +32172,7 @@
       "hafs_ayah": 54,
       "kind": "end",
       "word": "تشركون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -32217,6 +32265,7 @@
       "hafs_ayah": 74,
       "kind": "end",
       "word": "لوط",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -32325,6 +32374,7 @@
       "hafs_ayah": 82,
       "kind": "internal",
       "word": "سجيل",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "makki"
@@ -32421,6 +32471,7 @@
       "hafs_ayah": 82,
       "kind": "end",
       "word": "منضود",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "basri",
@@ -32525,6 +32576,7 @@
       "hafs_ayah": 86,
       "kind": "internal",
       "word": "مؤمنين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -32625,6 +32677,7 @@
       "hafs_ayah": 118,
       "kind": "end",
       "word": "مختلفين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri",
         "dimashqi",
@@ -32725,6 +32778,7 @@
       "hafs_ayah": 121,
       "kind": "end",
       "word": "عاملون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "basri",
@@ -32829,6 +32883,7 @@
       "hafs_ayah": 5,
       "kind": "internal",
       "word": "جديد",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -32937,6 +32992,7 @@
       "hafs_ayah": 16,
       "kind": "internal",
       "word": "والبصير",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi"
       ],
@@ -33029,6 +33085,7 @@
       "hafs_ayah": 16,
       "kind": "internal",
       "word": "والنور",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -33137,6 +33194,7 @@
       "hafs_ayah": 18,
       "kind": "internal",
       "word": "الحساب",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi"
       ],
@@ -33229,6 +33287,7 @@
       "hafs_ayah": 23,
       "kind": "end",
       "word": "باب",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri",
         "dimashqi",
@@ -33329,6 +33388,7 @@
       "hafs_ayah": 1,
       "kind": "internal",
       "word": "النور",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -33419,6 +33479,7 @@
       "hafs_ayah": 5,
       "kind": "internal",
       "word": "النور",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -33509,6 +33570,7 @@
       "hafs_ayah": 9,
       "kind": "internal",
       "word": "وثمود",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -33599,6 +33661,7 @@
       "hafs_ayah": 19,
       "kind": "end",
       "word": "جديد",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "dimashqi",
@@ -33686,6 +33749,7 @@
       "hafs_ayah": 24,
       "kind": "end",
       "word": "السماء",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "makki",
@@ -33794,6 +33858,7 @@
       "hafs_ayah": 33,
       "kind": "end",
       "word": "والنهار",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -33887,6 +33952,7 @@
       "hafs_ayah": 42,
       "kind": "internal",
       "word": "الظالمون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi"
       ],
@@ -33968,6 +34034,7 @@
       "hafs_ayah": 107,
       "kind": "end",
       "word": "سجدا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -34049,6 +34116,7 @@
       "hafs_ayah": 13,
       "kind": "end",
       "word": "هدى",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -34142,6 +34210,7 @@
       "hafs_ayah": 22,
       "kind": "internal",
       "word": "قليل",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last"
       ],
@@ -34223,6 +34292,7 @@
       "hafs_ayah": 23,
       "kind": "end",
       "word": "غدا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "makki",
@@ -34316,6 +34386,7 @@
       "hafs_ayah": 32,
       "kind": "end",
       "word": "زرعا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "basri",
@@ -34406,6 +34477,7 @@
       "hafs_ayah": 35,
       "kind": "end",
       "word": "أبدا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "makki",
@@ -34496,6 +34568,7 @@
       "hafs_ayah": 84,
       "kind": "end",
       "word": "سببا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "basri",
@@ -34586,6 +34659,7 @@
       "hafs_ayah": 85,
       "kind": "end",
       "word": "سببا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri",
         "kufi"
@@ -34670,6 +34744,7 @@
       "hafs_ayah": 86,
       "kind": "internal",
       "word": "قوما",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "makki",
@@ -34760,6 +34835,7 @@
       "hafs_ayah": 89,
       "kind": "end",
       "word": "سببا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri",
         "kufi"
@@ -34844,6 +34920,7 @@
       "hafs_ayah": 92,
       "kind": "end",
       "word": "سببا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri",
         "kufi"
@@ -34928,6 +35005,7 @@
       "hafs_ayah": 103,
       "kind": "end",
       "word": "أعمالا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri",
         "dimashqi",
@@ -35015,6 +35093,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "كهيعص",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -35096,6 +35175,7 @@
       "hafs_ayah": 41,
       "kind": "internal",
       "word": "إبراهيم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "makki"
@@ -35180,6 +35260,7 @@
       "hafs_ayah": 75,
       "kind": "internal",
       "word": "مدا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -35273,6 +35354,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "طه",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -35354,6 +35436,7 @@
       "hafs_ayah": 33,
       "kind": "end",
       "word": "كثيرا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -35447,6 +35530,7 @@
       "hafs_ayah": 34,
       "kind": "end",
       "word": "كثيرا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -35540,6 +35624,7 @@
       "hafs_ayah": 39,
       "kind": "internal",
       "word": "مني",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -35630,6 +35715,7 @@
       "hafs_ayah": 40,
       "kind": "internal",
       "word": "تحزن",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi"
       ],
@@ -35711,6 +35797,7 @@
       "hafs_ayah": 40,
       "kind": "internal",
       "word": "فتونا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri",
         "dimashqi"
@@ -35795,6 +35882,7 @@
       "hafs_ayah": 40,
       "kind": "internal",
       "word": "مدين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi"
       ],
@@ -35876,6 +35964,7 @@
       "hafs_ayah": 41,
       "kind": "end",
       "word": "لنفسي",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi",
         "kufi"
@@ -35960,6 +36049,7 @@
       "hafs_ayah": 47,
       "kind": "internal",
       "word": "إسرائيل",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi"
       ],
@@ -36041,6 +36131,7 @@
       "hafs_ayah": 77,
       "kind": "internal",
       "word": "موسى",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi"
       ],
@@ -36122,6 +36213,7 @@
       "hafs_ayah": 78,
       "kind": "end",
       "word": "غشيهم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -36203,6 +36295,7 @@
       "hafs_ayah": 86,
       "kind": "internal",
       "word": "أسفا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "makki"
@@ -36287,6 +36380,7 @@
       "hafs_ayah": 86,
       "kind": "internal",
       "word": "حسنا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last"
       ],
@@ -36368,6 +36462,7 @@
       "hafs_ayah": 87,
       "kind": "end",
       "word": "السامري",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "makki",
@@ -36461,6 +36556,7 @@
       "hafs_ayah": 88,
       "kind": "internal",
       "word": "موسى",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "makki"
@@ -36545,6 +36641,7 @@
       "hafs_ayah": 88,
       "kind": "end",
       "word": "فنسي",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "basri",
@@ -36635,6 +36732,7 @@
       "hafs_ayah": 89,
       "kind": "internal",
       "word": "قولا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last"
       ],
@@ -36716,6 +36814,7 @@
       "hafs_ayah": 92,
       "kind": "end",
       "word": "ضلوا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -36797,6 +36896,7 @@
       "hafs_ayah": 106,
       "kind": "end",
       "word": "صفصفا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri",
         "dimashqi",
@@ -36884,6 +36984,7 @@
       "hafs_ayah": 123,
       "kind": "internal",
       "word": "هدى",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -36977,6 +37078,7 @@
       "hafs_ayah": 131,
       "kind": "internal",
       "word": "الدنيا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -37070,6 +37172,7 @@
       "hafs_ayah": 66,
       "kind": "end",
       "word": "يضركم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -37151,6 +37254,7 @@
       "hafs_ayah": 19,
       "kind": "end",
       "word": "الحميم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -37232,6 +37336,7 @@
       "hafs_ayah": 20,
       "kind": "end",
       "word": "والجلود",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -37313,6 +37418,7 @@
       "hafs_ayah": 42,
       "kind": "end",
       "word": "وثمود",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -37406,6 +37512,7 @@
       "hafs_ayah": 43,
       "kind": "end",
       "word": "لوط",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -37496,6 +37603,7 @@
       "hafs_ayah": 78,
       "kind": "internal",
       "word": "المسلمين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "makki"
       ],
@@ -37577,6 +37685,7 @@
       "hafs_ayah": 45,
       "kind": "internal",
       "word": "هارون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -37670,6 +37779,7 @@
       "hafs_ayah": 36,
       "kind": "end",
       "word": "والآصال",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri",
         "dimashqi",
@@ -37757,6 +37867,7 @@
       "hafs_ayah": 43,
       "kind": "end",
       "word": "بالأبصار",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri",
         "dimashqi",
@@ -37844,6 +37955,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "طسم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -37925,6 +38037,7 @@
       "hafs_ayah": 49,
       "kind": "internal",
       "word": "تعلمون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -38018,6 +38131,7 @@
       "hafs_ayah": 92,
       "kind": "end",
       "word": "تعبدون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -38111,6 +38225,7 @@
       "hafs_ayah": 210,
       "kind": "end",
       "word": "الشياطين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "basri",
@@ -38201,6 +38316,7 @@
       "hafs_ayah": 33,
       "kind": "internal",
       "word": "شديد",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -38259,6 +38375,7 @@
       "hafs_ayah": 44,
       "kind": "internal",
       "word": "قوارير",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -38317,6 +38434,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "طسم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -38375,6 +38493,7 @@
       "hafs_ayah": 23,
       "kind": "internal",
       "word": "يسقون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -38433,6 +38552,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "الم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -38491,6 +38611,7 @@
       "hafs_ayah": 29,
       "kind": "internal",
       "word": "السبيل",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -38549,6 +38670,7 @@
       "hafs_ayah": 65,
       "kind": "internal",
       "word": "الدين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri",
         "dimashqi"
@@ -38607,6 +38729,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "الم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -38665,6 +38788,7 @@
       "hafs_ayah": 2,
       "kind": "end",
       "word": "الروم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "basri",
@@ -38723,6 +38847,7 @@
       "hafs_ayah": 4,
       "kind": "internal",
       "word": "سنين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "makki",
@@ -38781,6 +38906,7 @@
       "hafs_ayah": 55,
       "kind": "internal",
       "word": "المجرمون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first"
       ],
@@ -38853,6 +38979,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "الم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -38911,6 +39038,7 @@
       "hafs_ayah": 32,
       "kind": "internal",
       "word": "الدين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri",
         "dimashqi"
@@ -38969,6 +39097,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "الم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -39027,6 +39156,7 @@
       "hafs_ayah": 10,
       "kind": "internal",
       "word": "جديد",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -39085,6 +39215,7 @@
       "hafs_ayah": 15,
       "kind": "internal",
       "word": "وشمال",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi"
       ],
@@ -39143,6 +39274,7 @@
       "hafs_ayah": 7,
       "kind": "internal",
       "word": "شديد",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri",
         "dimashqi"
@@ -39201,6 +39333,7 @@
       "hafs_ayah": 16,
       "kind": "end",
       "word": "جديد",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -39259,6 +39392,7 @@
       "hafs_ayah": 19,
       "kind": "end",
       "word": "والبصير",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -39317,6 +39451,7 @@
       "hafs_ayah": 20,
       "kind": "end",
       "word": "النور",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -39375,6 +39510,7 @@
       "hafs_ayah": 22,
       "kind": "end",
       "word": "القبور",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -39433,6 +39569,7 @@
       "hafs_ayah": 41,
       "kind": "internal",
       "word": "تزولا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri"
       ],
@@ -39491,6 +39628,7 @@
       "hafs_ayah": 43,
       "kind": "internal",
       "word": "تبديلا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "basri",
@@ -39549,6 +39687,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "يس",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -39607,6 +39746,7 @@
       "hafs_ayah": 22,
       "kind": "end",
       "word": "يعبدون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -39665,6 +39805,7 @@
       "hafs_ayah": 167,
       "kind": "end",
       "word": "ليقولون",
+      "dispute_scope": "riwaya",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -39746,6 +39887,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "الذكر",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -39804,6 +39946,7 @@
       "hafs_ayah": 37,
       "kind": "end",
       "word": "وغواص",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -39862,6 +40005,7 @@
       "hafs_ayah": 84,
       "kind": "end",
       "word": "أقول",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -39920,6 +40064,7 @@
       "hafs_ayah": 3,
       "kind": "internal",
       "word": "يختلفون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -39978,6 +40123,7 @@
       "hafs_ayah": 11,
       "kind": "end",
       "word": "الدين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi",
         "kufi"
@@ -40036,6 +40182,7 @@
       "hafs_ayah": 14,
       "kind": "end",
       "word": "ديني",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -40094,6 +40241,7 @@
       "hafs_ayah": 17,
       "kind": "end",
       "word": "عباد",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "basri",
@@ -40152,6 +40300,7 @@
       "hafs_ayah": 20,
       "kind": "internal",
       "word": "الأنهار",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "makki"
@@ -40210,6 +40359,7 @@
       "hafs_ayah": 36,
       "kind": "end",
       "word": "هاد",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -40268,6 +40418,7 @@
       "hafs_ayah": 39,
       "kind": "end",
       "word": "تعلمون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -40326,6 +40477,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "حم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -40384,6 +40536,7 @@
       "hafs_ayah": 15,
       "kind": "end",
       "word": "التلاق",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -40442,6 +40595,7 @@
       "hafs_ayah": 16,
       "kind": "internal",
       "word": "بارزون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi"
       ],
@@ -40500,6 +40654,7 @@
       "hafs_ayah": 18,
       "kind": "internal",
       "word": "كاظمين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -40558,6 +40713,7 @@
       "hafs_ayah": 53,
       "kind": "end",
       "word": "الكتاب",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "makki",
@@ -40616,6 +40772,7 @@
       "hafs_ayah": 58,
       "kind": "internal",
       "word": "والبصير",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "dimashqi"
@@ -40674,6 +40831,7 @@
       "hafs_ayah": 71,
       "kind": "end",
       "word": "يسحبون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "dimashqi",
@@ -40732,6 +40890,7 @@
       "hafs_ayah": 72,
       "kind": "internal",
       "word": "الحميم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "makki"
@@ -40790,6 +40949,7 @@
       "hafs_ayah": 73,
       "kind": "end",
       "word": "تشركون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi",
         "kufi"
@@ -40848,6 +41008,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "حم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -40906,6 +41067,7 @@
       "hafs_ayah": 13,
       "kind": "end",
       "word": "وثمود",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -40964,6 +41126,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "حم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -41022,6 +41185,7 @@
       "hafs_ayah": 2,
       "kind": "end",
       "word": "عسق",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -41080,6 +41244,7 @@
       "hafs_ayah": 32,
       "kind": "end",
       "word": "كالأعلام",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -41138,6 +41303,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "حم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -41196,6 +41362,7 @@
       "hafs_ayah": 52,
       "kind": "internal",
       "word": "مهين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -41254,6 +41421,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "حم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -41312,6 +41480,7 @@
       "hafs_ayah": 34,
       "kind": "end",
       "word": "ليقولون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -41370,6 +41539,7 @@
       "hafs_ayah": 43,
       "kind": "end",
       "word": "الزقوم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "basri",
@@ -41428,6 +41598,7 @@
       "hafs_ayah": 45,
       "kind": "end",
       "word": "البطون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "makki",
@@ -41486,6 +41657,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "حم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -41544,6 +41716,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "حم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -41602,6 +41775,7 @@
       "hafs_ayah": 4,
       "kind": "internal",
       "word": "أوزارها",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -41660,6 +41834,7 @@
       "hafs_ayah": 15,
       "kind": "internal",
       "word": "للشاربين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri"
       ],
@@ -41718,6 +41893,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "والطور",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri",
         "dimashqi",
@@ -41776,6 +41952,7 @@
       "hafs_ayah": 13,
       "kind": "end",
       "word": "دعا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi",
         "kufi"
@@ -41834,6 +42011,7 @@
       "hafs_ayah": 28,
       "kind": "end",
       "word": "شيئا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -41892,6 +42070,7 @@
       "hafs_ayah": 29,
       "kind": "internal",
       "word": "تولى",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi"
       ],
@@ -41950,6 +42129,7 @@
       "hafs_ayah": 29,
       "kind": "end",
       "word": "الدنيا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -42008,6 +42188,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "الرحمن",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi",
         "kufi"
@@ -42066,6 +42247,7 @@
       "hafs_ayah": 3,
       "kind": "end",
       "word": "الإنسان",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "makki",
         "basri",
@@ -42124,6 +42306,7 @@
       "hafs_ayah": 10,
       "kind": "end",
       "word": "للأنام",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -42182,6 +42365,7 @@
       "hafs_ayah": 35,
       "kind": "internal",
       "word": "نار",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -42240,6 +42424,7 @@
       "hafs_ayah": 43,
       "kind": "end",
       "word": "المجرمون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -42298,6 +42483,7 @@
       "hafs_ayah": 8,
       "kind": "internal",
       "word": "الميمنة",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -42356,6 +42542,7 @@
       "hafs_ayah": 9,
       "kind": "internal",
       "word": "المشأمة",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -42414,6 +42601,7 @@
       "hafs_ayah": 15,
       "kind": "end",
       "word": "موضونة",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -42472,6 +42660,7 @@
       "hafs_ayah": 18,
       "kind": "internal",
       "word": "وأباريق",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "makki"
@@ -42530,6 +42719,7 @@
       "hafs_ayah": 22,
       "kind": "end",
       "word": "عين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "kufi"
@@ -42588,6 +42778,7 @@
       "hafs_ayah": 25,
       "kind": "end",
       "word": "تأثيما",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "basri",
@@ -42646,6 +42837,7 @@
       "hafs_ayah": 27,
       "kind": "internal",
       "word": "اليمين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "makki",
@@ -42704,6 +42896,7 @@
       "hafs_ayah": 35,
       "kind": "end",
       "word": "إنشاء",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -42762,6 +42955,7 @@
       "hafs_ayah": 41,
       "kind": "internal",
       "word": "الشمال",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -42820,6 +43014,7 @@
       "hafs_ayah": 42,
       "kind": "end",
       "word": "وحميم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -42878,6 +43073,7 @@
       "hafs_ayah": 47,
       "kind": "internal",
       "word": "يقولون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "makki"
       ],
@@ -42936,6 +43132,7 @@
       "hafs_ayah": 49,
       "kind": "end",
       "word": "والآخرين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "makki",
@@ -42994,6 +43191,7 @@
       "hafs_ayah": 50,
       "kind": "internal",
       "word": "لمجموعون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "dimashqi"
@@ -43052,6 +43250,7 @@
       "hafs_ayah": 89,
       "kind": "internal",
       "word": "وريحان",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi"
       ],
@@ -43110,6 +43309,7 @@
       "hafs_ayah": 13,
       "kind": "end",
       "word": "العذاب",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -43168,6 +43368,7 @@
       "hafs_ayah": 27,
       "kind": "internal",
       "word": "الإنجيل",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri"
       ],
@@ -43226,6 +43427,7 @@
       "hafs_ayah": 20,
       "kind": "end",
       "word": "الأذلين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "basri",
@@ -43284,6 +43486,7 @@
       "hafs_ayah": 2,
       "kind": "internal",
       "word": "الآخر",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "dimashqi"
       ],
@@ -43342,6 +43545,7 @@
       "hafs_ayah": 2,
       "kind": "end",
       "word": "مخرجا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "makki",
@@ -43400,6 +43604,7 @@
       "hafs_ayah": 10,
       "kind": "internal",
       "word": "الألباب",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first"
       ],
@@ -43472,6 +43677,7 @@
       "hafs_ayah": 9,
       "kind": "internal",
       "word": "نذير",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "makki"
@@ -43530,6 +43736,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "الحاقة",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -43588,6 +43795,7 @@
       "hafs_ayah": 25,
       "kind": "internal",
       "word": "بشماله",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -43646,6 +43854,7 @@
       "hafs_ayah": 4,
       "kind": "end",
       "word": "سنة",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -43704,6 +43913,7 @@
       "hafs_ayah": 23,
       "kind": "internal",
       "word": "سواعا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -43762,6 +43972,7 @@
       "hafs_ayah": 23,
       "kind": "end",
       "word": "ونسرا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "kufi"
@@ -43820,6 +44031,7 @@
       "hafs_ayah": 24,
       "kind": "internal",
       "word": "كثيرا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "makki"
@@ -43878,6 +44090,7 @@
       "hafs_ayah": 25,
       "kind": "internal",
       "word": "نارا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -43936,6 +44149,7 @@
       "hafs_ayah": 22,
       "kind": "internal",
       "word": "أحد",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "makki"
       ],
@@ -43994,6 +44208,7 @@
       "hafs_ayah": 22,
       "kind": "end",
       "word": "ملتحدا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -44052,6 +44267,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "المزمل",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "dimashqi",
@@ -44110,6 +44326,7 @@
       "hafs_ayah": 15,
       "kind": "internal",
       "word": "رسولا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "makki"
       ],
@@ -44168,6 +44385,7 @@
       "hafs_ayah": 17,
       "kind": "end",
       "word": "شيبا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "makki",
@@ -44226,6 +44444,7 @@
       "hafs_ayah": 40,
       "kind": "end",
       "word": "يتساءلون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "makki",
@@ -44284,6 +44503,7 @@
       "hafs_ayah": 41,
       "kind": "end",
       "word": "المجرمين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -44342,6 +44562,7 @@
       "hafs_ayah": 16,
       "kind": "end",
       "word": "به",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -44400,6 +44621,7 @@
       "hafs_ayah": 40,
       "kind": "internal",
       "word": "قريبا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri"
       ],
@@ -44458,6 +44680,7 @@
       "hafs_ayah": 33,
       "kind": "end",
       "word": "ولأنعامكم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -44516,6 +44739,7 @@
       "hafs_ayah": 37,
       "kind": "end",
       "word": "طغى",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri",
         "dimashqi",
@@ -44574,6 +44798,7 @@
       "hafs_ayah": 24,
       "kind": "end",
       "word": "طعامه",
+      "dispute_scope": "riwaya",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -44655,6 +44880,7 @@
       "hafs_ayah": 32,
       "kind": "end",
       "word": "ولأنعامكم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -44713,6 +44939,7 @@
       "hafs_ayah": 33,
       "kind": "end",
       "word": "الصاخة",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -44771,6 +44998,7 @@
       "hafs_ayah": 26,
       "kind": "end",
       "word": "تذهبون",
+      "dispute_scope": "riwaya",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -44852,6 +45080,7 @@
       "hafs_ayah": 7,
       "kind": "end",
       "word": "بيمينه",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -44910,6 +45139,7 @@
       "hafs_ayah": 10,
       "kind": "end",
       "word": "ظهره",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -44968,6 +45198,7 @@
       "hafs_ayah": 15,
       "kind": "end",
       "word": "كيدا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "makki",
@@ -45048,6 +45279,7 @@
       "hafs_ayah": 15,
       "kind": "internal",
       "word": "ونعمه",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -45106,6 +45338,7 @@
       "hafs_ayah": 16,
       "kind": "internal",
       "word": "رزقه",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -45164,6 +45397,7 @@
       "hafs_ayah": 23,
       "kind": "internal",
       "word": "بجهنم",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -45222,6 +45456,7 @@
       "hafs_ayah": 29,
       "kind": "end",
       "word": "عبادي",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -45280,6 +45515,7 @@
       "hafs_ayah": 14,
       "kind": "internal",
       "word": "فعقروها",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first"
       ],
@@ -45352,6 +45588,7 @@
       "hafs_ayah": 9,
       "kind": "end",
       "word": "ينهى",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -45410,6 +45647,7 @@
       "hafs_ayah": 15,
       "kind": "internal",
       "word": "ينته",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -45468,6 +45706,7 @@
       "hafs_ayah": 3,
       "kind": "internal",
       "word": "القدر",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "makki",
         "dimashqi"
@@ -45526,6 +45765,7 @@
       "hafs_ayah": 5,
       "kind": "internal",
       "word": "الدين",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri",
         "dimashqi"
@@ -45584,6 +45824,7 @@
       "hafs_ayah": 6,
       "kind": "internal",
       "word": "أشتاتا",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last",
         "makki",
@@ -45642,6 +45883,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "القارعة",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "kufi"
       ],
@@ -45700,6 +45942,7 @@
       "hafs_ayah": 6,
       "kind": "end",
       "word": "موازينه",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -45758,6 +46001,7 @@
       "hafs_ayah": 8,
       "kind": "end",
       "word": "موازينه",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -45816,6 +46060,7 @@
       "hafs_ayah": 1,
       "kind": "end",
       "word": "والعصر",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "makki",
@@ -45874,6 +46119,7 @@
       "hafs_ayah": 3,
       "kind": "internal",
       "word": "بالحق",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-last"
       ],
@@ -45932,6 +46178,7 @@
       "hafs_ayah": 4,
       "kind": "internal",
       "word": "جوع",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "madani-first",
         "madani-last",
@@ -45990,6 +46237,7 @@
       "hafs_ayah": 6,
       "kind": "end",
       "word": "يراءون",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "basri",
         "kufi"
@@ -46048,6 +46296,7 @@
       "hafs_ayah": 3,
       "kind": "internal",
       "word": "يلد",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "makki",
         "dimashqi"
@@ -46106,6 +46355,7 @@
       "hafs_ayah": 4,
       "kind": "internal",
       "word": "الوسواس",
+      "dispute_scope": "madhhab",
       "counted_by": [
         "makki",
         "dimashqi"

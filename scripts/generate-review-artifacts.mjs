@@ -91,9 +91,16 @@ function summarize_rows() {
     }
   }
 
+  const by_dispute_scope = { madhhab: 0, riwaya: 0 }
+
+  for (const row of rows) {
+    by_dispute_scope[row.dispute_scope] += 1
+  }
+
   return {
     total_points: rows.length,
     by_kind,
+    by_dispute_scope,
     by_verification_status,
     by_system
   }
