@@ -675,9 +675,14 @@ for (const [surahKey, ayahs] of Object.entries(bookBoundaryPrimitives.surahs)) {
   // excluded from this comparison — which is therefore a round trip over the
   // madhhab-scope points, not over the whole file — and the gap is asserted below
   // so it stays visible rather than being quietly absorbed by the filter.
-  // The authored file leaves dispute_scope implicit when it is the default, while
-  // the projection writes it explicitly, so compare on the normalized shape.
-  const withDefaultScope = point => ({ dispute_scope: 'madhhab', ...point });
+  // The authored file leaves dispute_scope implicit when it is the default, and
+  // carries an `occurrence` disambiguator that differences.json has no room for,
+  // so compare on the shape differences.json can actually express.
+  const withDefaultScope = point => {
+    const { occurrence, ...rest } = point;
+
+    return { dispute_scope: 'madhhab', ...rest };
+  };
 
   const withoutRiwayaOnlyPoints = surahs => {
     const kept = {};
@@ -828,7 +833,11 @@ section('73:15 - the Makki riwaya boundary');
   // actually pins the anchor is the token offset, so assert that.
   const endPosition = surahPositions['73:15:end:رسولا'];
   assert(Boolean(endPosition), 'mushaf positions: 73:15 end boundary is located');
-  assert(endPosition.occurrence_index === 2, 'mushaf positions: 73:15 end sits on the SECOND رسولا');
+  assert(point.end.occurrence === 2, 'book-boundary-primitives.json: 73:15 end declares occurrence 2');
+  assert(
+    endPosition.occurrence_index === point.end.occurrence,
+    'mushaf positions: 73:15 end resolves to the occurrence the canonical file declares'
+  );
   assert(
     endPosition.plain_after_token === 11 && endPosition.uthmani_after_token === 11,
     'mushaf positions: 73:15 end closes after token 11 — «إلى فرعون رسولا», not the earlier «إليكم رسولا»'
