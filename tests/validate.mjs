@@ -669,9 +669,16 @@ for (const [surahKey, ayahs] of Object.entries(bookBoundaryPrimitives.surahs)) {
   const rebuiltPrimitives = buildBookBoundaryPrimitives(differences, countingSystems);
   assert(rebuiltPrimitives._reference_system === bookBoundaryPrimitives._reference_system, 'differences.json projects back to the same primitive reference system');
   assert(JSON.stringify(rebuiltPrimitives._counting_system_order) === JSON.stringify(bookBoundaryPrimitives._counting_system_order), 'differences.json projects back to the same primitive counting-system order');
-  // differences.json is a madhhab-level view, so a point every madhhab counts cannot
-  // appear in it. Those are the dispute_scope "riwaya" points, and they are excluded
-  // from the round-trip comparison rather than treated as a projection failure.
+  // differences.json is a diff against kufi, so a boundary every madhhab counts
+  // produces no rows at all and cannot be projected back. That makes the primitive
+  // file a strict superset: the riwaya-scope points exist only there. They are
+  // excluded from this comparison — which is therefore a round trip over the
+  // madhhab-scope points, not over the whole file — and the gap is asserted below
+  // so it stays visible rather than being quietly absorbed by the filter.
+  // The authored file leaves dispute_scope implicit when it is the default, while
+  // the projection writes it explicitly, so compare on the normalized shape.
+  const withDefaultScope = point => ({ dispute_scope: 'madhhab', ...point });
+
   const withoutRiwayaOnlyPoints = surahs => {
     const kept = {};
     for (const [surahKey, ayahs] of Object.entries(surahs)) {
@@ -681,6 +688,8 @@ for (const [surahKey, ayahs] of Object.entries(bookBoundaryPrimitives.surahs)) {
         if (next.end && next.end.dispute_scope === 'riwaya' && next.end.counted_by.length === systemIds.length) {
           delete next.end;
         }
+        if (next.end) next.end = withDefaultScope(next.end);
+        if (next.internal) next.internal = next.internal.map(withDefaultScope);
         if (next.end || next.internal) keptAyahs[ayahKey] = next;
       }
       if (Object.keys(keptAyahs).length > 0) kept[surahKey] = keptAyahs;
@@ -690,7 +699,29 @@ for (const [surahKey, ayahs] of Object.entries(bookBoundaryPrimitives.surahs)) {
 
   assert(
     JSON.stringify(withoutRiwayaOnlyPoints(rebuiltPrimitives.surahs)) === JSON.stringify(withoutRiwayaOnlyPoints(bookBoundaryPrimitives.surahs)),
-    'differences.json projects back to book-boundary-primitives.json exactly'
+    'differences.json projects back to every madhhab-scope primitive exactly'
+  );
+}
+
+
+{
+  // The size of the gap the round-trip filter above steps over.
+  const allPoints = Object.values(bookBoundaryPrimitives.surahs)
+    .flatMap(ayahs => Object.values(ayahs))
+    .flatMap(primitive => [...(primitive.internal || []), ...(primitive.end ? [primitive.end] : [])]);
+  const riwayaPoints = allPoints.filter(point => point.dispute_scope === 'riwaya');
+
+  assert(
+    riwayaPoints.length === 3,
+    `book-boundary-primitives.json: 3 riwaya-scope points sit outside differences.json (got ${riwayaPoints.length})`
+  );
+  assert(
+    riwayaPoints.every(point => point.counted_by.length === systemIds.length),
+    'book-boundary-primitives.json: every riwaya-scope point is counted by all systems, which is why differences.json cannot carry it'
+  );
+  assert(
+    allPoints.length - riwayaPoints.length === 243,
+    'book-boundary-primitives.json: 243 madhhab-scope points, which is what differences.json round-trips'
   );
 }
 

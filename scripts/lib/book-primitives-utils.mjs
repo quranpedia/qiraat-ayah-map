@@ -288,9 +288,17 @@ export function normalizeBookBoundaryPrimitivesDocument(primitivesDocument, coun
           }
           seenInternalWords.add(word);
 
+          const scope = normalizeDisputeScope(internalPoint.dispute_scope, pointLocation);
+          const note = normalizeRiwayaNote(internalPoint.riwaya_note, pointLocation);
+
+          if (scope === 'riwaya' && !note) {
+            throw new Error(`${pointLocation}: dispute_scope "riwaya" requires riwaya_note naming the transmitters`);
+          }
+
           return {
             word,
-            dispute_scope: normalizeDisputeScope(internalPoint.dispute_scope, pointLocation),
+            dispute_scope: scope,
+            ...(note ? { riwaya_note: note } : {}),
             counted_by: normalizeCountedBy(internalPoint.counted_by, orderedSystemIds, {
               allowKufi: false,
               location: pointLocation

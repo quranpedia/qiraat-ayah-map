@@ -15,7 +15,6 @@
       "1": {
         "end": {
           "word": "الرحيم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "makki",
             "kufi"
@@ -26,7 +25,6 @@
         "internal": [
           {
             "word": "عليهم",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -41,7 +39,6 @@
       "1": {
         "end": {
           "word": "الم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -51,7 +48,6 @@
         "internal": [
           {
             "word": "أليم",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "dimashqi"
             ]
@@ -61,7 +57,6 @@
       "11": {
         "end": {
           "word": "مصلحون",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -75,7 +70,6 @@
         "internal": [
           {
             "word": "خائفين",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "basri"
             ]
@@ -85,7 +79,6 @@
       "197": {
         "end": {
           "word": "الألباب",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-last",
             "basri",
@@ -97,7 +90,6 @@
       "200": {
         "end": {
           "word": "خلاق",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "makki",
@@ -111,7 +103,6 @@
         "internal": [
           {
             "word": "ينفقون",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "makki"
@@ -120,7 +111,6 @@
         ],
         "end": {
           "word": "تتفكرون",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-last",
             "dimashqi",
@@ -132,7 +122,6 @@
         "internal": [
           {
             "word": "معروفا",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "basri"
             ]
@@ -143,7 +132,6 @@
         "internal": [
           {
             "word": "القيوم",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-last",
               "makki",
@@ -156,7 +144,6 @@
         "internal": [
           {
             "word": "النور",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first"
             ]
@@ -168,7 +155,6 @@
       "1": {
         "end": {
           "word": "الم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -177,7 +163,6 @@
       "3": {
         "end": {
           "word": "والإنجيل",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -191,7 +176,6 @@
         "internal": [
           {
             "word": "الفرقان",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -205,7 +189,6 @@
       "48": {
         "end": {
           "word": "والإنجيل",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -215,7 +198,6 @@
         "internal": [
           {
             "word": "إسرائيل",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "basri"
             ]
@@ -226,7 +208,6 @@
         "internal": [
           {
             "word": "تحبون",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -240,7 +221,6 @@
         "internal": [
           {
             "word": "إبراهيم",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "dimashqi"
             ]
@@ -252,7 +232,6 @@
       "44": {
         "end": {
           "word": "السبيل",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "dimashqi",
             "kufi"
@@ -263,7 +242,6 @@
         "internal": [
           {
             "word": "أليما",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "dimashqi"
             ]
@@ -276,7 +254,6 @@
         "internal": [
           {
             "word": "بالعقود",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -291,7 +268,6 @@
         "internal": [
           {
             "word": "كثير",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -306,7 +282,6 @@
         "internal": [
           {
             "word": "غالبون",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "basri"
             ]
@@ -319,7 +294,6 @@
         "internal": [
           {
             "word": "والنور",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -331,7 +305,6 @@
       "66": {
         "end": {
           "word": "بوكيل",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -341,7 +314,6 @@
         "internal": [
           {
             "word": "فيكون",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -356,7 +328,6 @@
         "internal": [
           {
             "word": "مستقيم",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -372,7 +343,6 @@
       "1": {
         "end": {
           "word": "المص",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -382,7 +352,6 @@
         "internal": [
           {
             "word": "الدين",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "basri",
               "dimashqi"
@@ -391,7 +360,6 @@
         ],
         "end": {
           "word": "تعودون",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -401,7 +369,6 @@
         "internal": [
           {
             "word": "النار",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -414,7 +381,6 @@
         "internal": [
           {
             "word": "إسرائيل",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -429,7 +395,6 @@
         "internal": [
           {
             "word": "يغلبون",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "basri",
               "dimashqi"
@@ -441,7 +406,6 @@
         "internal": [
           {
             "word": "مفعولا",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -455,7 +419,6 @@
       "62": {
         "end": {
           "word": "وبالمؤمنين",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -471,7 +434,6 @@
         "internal": [
           {
             "word": "المشركين",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "basri"
             ]
@@ -482,7 +444,6 @@
         "internal": [
           {
             "word": "أليما",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "dimashqi"
             ]
@@ -493,7 +454,6 @@
         "internal": [
           {
             "word": "وثمود",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -508,7 +468,6 @@
         "internal": [
           {
             "word": "الدين",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "dimashqi"
             ]
@@ -516,7 +475,6 @@
         ],
         "end": {
           "word": "الشاكرين",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -530,7 +488,6 @@
         "internal": [
           {
             "word": "الصدور",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "dimashqi"
             ]
@@ -542,7 +499,6 @@
       "54": {
         "end": {
           "word": "تشركون",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -551,7 +507,6 @@
       "74": {
         "end": {
           "word": "لوط",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -565,7 +520,6 @@
         "internal": [
           {
             "word": "سجيل",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-last",
               "makki"
@@ -574,7 +528,6 @@
         ],
         "end": {
           "word": "منضود",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "basri",
@@ -587,7 +540,6 @@
         "internal": [
           {
             "word": "مؤمنين",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -599,7 +551,6 @@
       "118": {
         "end": {
           "word": "مختلفين",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "basri",
             "dimashqi",
@@ -610,7 +561,6 @@
       "121": {
         "end": {
           "word": "عاملون",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "basri",
@@ -625,7 +575,6 @@
         "internal": [
           {
             "word": "جديد",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -640,14 +589,12 @@
         "internal": [
           {
             "word": "والبصير",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "dimashqi"
             ]
           },
           {
             "word": "والنور",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -662,7 +609,6 @@
         "internal": [
           {
             "word": "الحساب",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "dimashqi"
             ]
@@ -672,7 +618,6 @@
       "23": {
         "end": {
           "word": "باب",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "basri",
             "dimashqi",
@@ -686,7 +631,6 @@
         "internal": [
           {
             "word": "النور",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -700,7 +644,6 @@
         "internal": [
           {
             "word": "النور",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -714,7 +657,6 @@
         "internal": [
           {
             "word": "وثمود",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -727,7 +669,6 @@
       "19": {
         "end": {
           "word": "جديد",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "dimashqi",
@@ -738,7 +679,6 @@
       "24": {
         "end": {
           "word": "السماء",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-last",
             "makki",
@@ -751,7 +691,6 @@
       "33": {
         "end": {
           "word": "والنهار",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -765,7 +704,6 @@
         "internal": [
           {
             "word": "الظالمون",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "dimashqi"
             ]
@@ -777,7 +715,6 @@
       "107": {
         "end": {
           "word": "سجدا",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -788,7 +725,6 @@
       "13": {
         "end": {
           "word": "هدى",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -802,7 +738,6 @@
         "internal": [
           {
             "word": "قليل",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-last"
             ]
@@ -812,7 +747,6 @@
       "23": {
         "end": {
           "word": "غدا",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "makki",
@@ -825,7 +759,6 @@
       "32": {
         "end": {
           "word": "زرعا",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-last",
             "basri",
@@ -837,7 +770,6 @@
       "35": {
         "end": {
           "word": "أبدا",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "makki",
@@ -849,7 +781,6 @@
       "84": {
         "end": {
           "word": "سببا",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-last",
             "basri",
@@ -861,7 +792,6 @@
       "85": {
         "end": {
           "word": "سببا",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "basri",
             "kufi"
@@ -872,7 +802,6 @@
         "internal": [
           {
             "word": "قوما",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "makki",
@@ -885,7 +814,6 @@
       "89": {
         "end": {
           "word": "سببا",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "basri",
             "kufi"
@@ -895,7 +823,6 @@
       "92": {
         "end": {
           "word": "سببا",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "basri",
             "kufi"
@@ -905,7 +832,6 @@
       "103": {
         "end": {
           "word": "أعمالا",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "basri",
             "dimashqi",
@@ -918,7 +844,6 @@
       "1": {
         "end": {
           "word": "كهيعص",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -928,7 +853,6 @@
         "internal": [
           {
             "word": "إبراهيم",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-last",
               "makki"
@@ -940,7 +864,6 @@
         "internal": [
           {
             "word": "مدا",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -956,7 +879,6 @@
       "1": {
         "end": {
           "word": "طه",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -965,7 +887,6 @@
       "33": {
         "end": {
           "word": "كثيرا",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -978,7 +899,6 @@
       "34": {
         "end": {
           "word": "كثيرا",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -992,7 +912,6 @@
         "internal": [
           {
             "word": "مني",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -1006,14 +925,12 @@
         "internal": [
           {
             "word": "تحزن",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "dimashqi"
             ]
           },
           {
             "word": "فتونا",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "basri",
               "dimashqi"
@@ -1021,7 +938,6 @@
           },
           {
             "word": "مدين",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "dimashqi"
             ]
@@ -1031,7 +947,6 @@
       "41": {
         "end": {
           "word": "لنفسي",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "dimashqi",
             "kufi"
@@ -1042,7 +957,6 @@
         "internal": [
           {
             "word": "إسرائيل",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "dimashqi"
             ]
@@ -1053,7 +967,6 @@
         "internal": [
           {
             "word": "موسى",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "dimashqi"
             ]
@@ -1063,7 +976,6 @@
       "78": {
         "end": {
           "word": "غشيهم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1073,7 +985,6 @@
         "internal": [
           {
             "word": "أسفا",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "makki"
@@ -1081,7 +992,6 @@
           },
           {
             "word": "حسنا",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-last"
             ]
@@ -1091,7 +1001,6 @@
       "87": {
         "end": {
           "word": "السامري",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "makki",
@@ -1105,7 +1014,6 @@
         "internal": [
           {
             "word": "موسى",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "makki"
@@ -1114,7 +1022,6 @@
         ],
         "end": {
           "word": "فنسي",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-last",
             "basri",
@@ -1127,7 +1034,6 @@
         "internal": [
           {
             "word": "قولا",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-last"
             ]
@@ -1137,7 +1043,6 @@
       "92": {
         "end": {
           "word": "ضلوا",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1146,7 +1051,6 @@
       "106": {
         "end": {
           "word": "صفصفا",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "basri",
             "dimashqi",
@@ -1158,7 +1062,6 @@
         "internal": [
           {
             "word": "هدى",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -1173,7 +1076,6 @@
         "internal": [
           {
             "word": "الدنيا",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -1189,7 +1091,6 @@
       "66": {
         "end": {
           "word": "يضركم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1200,7 +1101,6 @@
       "19": {
         "end": {
           "word": "الحميم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1209,7 +1109,6 @@
       "20": {
         "end": {
           "word": "والجلود",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1218,7 +1117,6 @@
       "42": {
         "end": {
           "word": "وثمود",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -1231,7 +1129,6 @@
       "43": {
         "end": {
           "word": "لوط",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -1244,7 +1141,6 @@
         "internal": [
           {
             "word": "المسلمين",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "makki"
             ]
@@ -1257,7 +1153,6 @@
         "internal": [
           {
             "word": "هارون",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -1273,7 +1168,6 @@
       "36": {
         "end": {
           "word": "والآصال",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "basri",
             "dimashqi",
@@ -1284,7 +1178,6 @@
       "43": {
         "end": {
           "word": "بالأبصار",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "basri",
             "dimashqi",
@@ -1297,7 +1190,6 @@
       "1": {
         "end": {
           "word": "طسم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1307,7 +1199,6 @@
         "internal": [
           {
             "word": "تعلمون",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -1321,7 +1212,6 @@
       "92": {
         "end": {
           "word": "تعبدون",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -1334,7 +1224,6 @@
       "210": {
         "end": {
           "word": "الشياطين",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "basri",
@@ -1349,7 +1238,6 @@
         "internal": [
           {
             "word": "شديد",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -1362,7 +1250,6 @@
         "internal": [
           {
             "word": "قوارير",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -1378,7 +1265,6 @@
       "1": {
         "end": {
           "word": "طسم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1388,7 +1274,6 @@
         "internal": [
           {
             "word": "يسقون",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -1404,7 +1289,6 @@
       "1": {
         "end": {
           "word": "الم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1414,7 +1298,6 @@
         "internal": [
           {
             "word": "السبيل",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -1427,7 +1310,6 @@
         "internal": [
           {
             "word": "الدين",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "basri",
               "dimashqi"
@@ -1440,7 +1322,6 @@
       "1": {
         "end": {
           "word": "الم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1449,7 +1330,6 @@
       "2": {
         "end": {
           "word": "الروم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "basri",
@@ -1462,7 +1342,6 @@
         "internal": [
           {
             "word": "سنين",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-last",
               "makki",
@@ -1476,7 +1355,6 @@
         "internal": [
           {
             "word": "المجرمون",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first"
             ]
@@ -1488,7 +1366,6 @@
       "1": {
         "end": {
           "word": "الم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1498,7 +1375,6 @@
         "internal": [
           {
             "word": "الدين",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "basri",
               "dimashqi"
@@ -1511,7 +1387,6 @@
       "1": {
         "end": {
           "word": "الم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1521,7 +1396,6 @@
         "internal": [
           {
             "word": "جديد",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -1537,7 +1411,6 @@
         "internal": [
           {
             "word": "وشمال",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "dimashqi"
             ]
@@ -1550,7 +1423,6 @@
         "internal": [
           {
             "word": "شديد",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "basri",
               "dimashqi"
@@ -1561,7 +1433,6 @@
       "16": {
         "end": {
           "word": "جديد",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -1574,7 +1445,6 @@
       "19": {
         "end": {
           "word": "والبصير",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -1587,7 +1457,6 @@
       "20": {
         "end": {
           "word": "النور",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -1600,7 +1469,6 @@
       "22": {
         "end": {
           "word": "القبور",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -1614,7 +1482,6 @@
         "internal": [
           {
             "word": "تزولا",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "basri"
             ]
@@ -1625,7 +1492,6 @@
         "internal": [
           {
             "word": "تبديلا",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-last",
               "basri",
@@ -1639,7 +1505,6 @@
       "1": {
         "end": {
           "word": "يس",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1650,7 +1515,6 @@
       "22": {
         "end": {
           "word": "يعبدون",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -1680,7 +1544,6 @@
       "1": {
         "end": {
           "word": "الذكر",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1689,7 +1552,6 @@
       "37": {
         "end": {
           "word": "وغواص",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -1702,7 +1564,6 @@
       "84": {
         "end": {
           "word": "أقول",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1714,7 +1575,6 @@
         "internal": [
           {
             "word": "يختلفون",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -1728,7 +1588,6 @@
       "11": {
         "end": {
           "word": "الدين",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "dimashqi",
             "kufi"
@@ -1738,7 +1597,6 @@
       "14": {
         "end": {
           "word": "ديني",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1747,7 +1605,6 @@
       "17": {
         "end": {
           "word": "عباد",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-last",
             "basri",
@@ -1760,7 +1617,6 @@
         "internal": [
           {
             "word": "الأنهار",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "makki"
@@ -1771,7 +1627,6 @@
       "36": {
         "end": {
           "word": "هاد",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1780,7 +1635,6 @@
       "39": {
         "end": {
           "word": "تعلمون",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1791,7 +1645,6 @@
       "1": {
         "end": {
           "word": "حم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1800,7 +1653,6 @@
       "15": {
         "end": {
           "word": "التلاق",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -1814,7 +1666,6 @@
         "internal": [
           {
             "word": "بارزون",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "dimashqi"
             ]
@@ -1825,7 +1676,6 @@
         "internal": [
           {
             "word": "كاظمين",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -1839,7 +1689,6 @@
       "53": {
         "end": {
           "word": "الكتاب",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "makki",
@@ -1852,7 +1701,6 @@
         "internal": [
           {
             "word": "والبصير",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-last",
               "dimashqi"
@@ -1863,7 +1711,6 @@
       "71": {
         "end": {
           "word": "يسحبون",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-last",
             "dimashqi",
@@ -1875,7 +1722,6 @@
         "internal": [
           {
             "word": "الحميم",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "makki"
@@ -1886,7 +1732,6 @@
       "73": {
         "end": {
           "word": "تشركون",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "dimashqi",
             "kufi"
@@ -1898,7 +1743,6 @@
       "1": {
         "end": {
           "word": "حم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1907,7 +1751,6 @@
       "13": {
         "end": {
           "word": "وثمود",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -1921,7 +1764,6 @@
       "1": {
         "end": {
           "word": "حم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1930,7 +1772,6 @@
       "2": {
         "end": {
           "word": "عسق",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1939,7 +1780,6 @@
       "32": {
         "end": {
           "word": "كالأعلام",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1950,7 +1790,6 @@
       "1": {
         "end": {
           "word": "حم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1960,7 +1799,6 @@
         "internal": [
           {
             "word": "مهين",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -1975,7 +1813,6 @@
       "1": {
         "end": {
           "word": "حم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1984,7 +1821,6 @@
       "34": {
         "end": {
           "word": "ليقولون",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -1993,7 +1829,6 @@
       "43": {
         "end": {
           "word": "الزقوم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "basri",
@@ -2005,7 +1840,6 @@
       "45": {
         "end": {
           "word": "البطون",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-last",
             "makki",
@@ -2019,7 +1853,6 @@
       "1": {
         "end": {
           "word": "حم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -2030,7 +1863,6 @@
       "1": {
         "end": {
           "word": "حم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -2042,7 +1874,6 @@
         "internal": [
           {
             "word": "أوزارها",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -2057,7 +1888,6 @@
         "internal": [
           {
             "word": "للشاربين",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "basri"
             ]
@@ -2069,7 +1899,6 @@
       "1": {
         "end": {
           "word": "والطور",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "basri",
             "dimashqi",
@@ -2080,7 +1909,6 @@
       "13": {
         "end": {
           "word": "دعا",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "dimashqi",
             "kufi"
@@ -2092,7 +1920,6 @@
       "28": {
         "end": {
           "word": "شيئا",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -2102,7 +1929,6 @@
         "internal": [
           {
             "word": "تولى",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "dimashqi"
             ]
@@ -2110,7 +1936,6 @@
         ],
         "end": {
           "word": "الدنيا",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -2125,7 +1950,6 @@
       "1": {
         "end": {
           "word": "الرحمن",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "dimashqi",
             "kufi"
@@ -2135,7 +1959,6 @@
       "3": {
         "end": {
           "word": "الإنسان",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "makki",
             "basri",
@@ -2147,7 +1970,6 @@
       "10": {
         "end": {
           "word": "للأنام",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -2161,7 +1983,6 @@
         "internal": [
           {
             "word": "نار",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -2173,7 +1994,6 @@
       "43": {
         "end": {
           "word": "المجرمون",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -2189,7 +2009,6 @@
         "internal": [
           {
             "word": "الميمنة",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -2204,7 +2023,6 @@
         "internal": [
           {
             "word": "المشأمة",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -2218,7 +2036,6 @@
       "15": {
         "end": {
           "word": "موضونة",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -2231,7 +2048,6 @@
         "internal": [
           {
             "word": "وأباريق",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-last",
               "makki"
@@ -2242,7 +2058,6 @@
       "22": {
         "end": {
           "word": "عين",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "kufi"
@@ -2252,7 +2067,6 @@
       "25": {
         "end": {
           "word": "تأثيما",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-last",
             "basri",
@@ -2265,7 +2079,6 @@
         "internal": [
           {
             "word": "اليمين",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "makki",
@@ -2278,7 +2091,6 @@
       "35": {
         "end": {
           "word": "إنشاء",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -2292,7 +2104,6 @@
         "internal": [
           {
             "word": "الشمال",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -2306,7 +2117,6 @@
       "42": {
         "end": {
           "word": "وحميم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -2320,7 +2130,6 @@
         "internal": [
           {
             "word": "يقولون",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "makki"
             ]
@@ -2330,7 +2139,6 @@
       "49": {
         "end": {
           "word": "والآخرين",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "makki",
@@ -2343,7 +2151,6 @@
         "internal": [
           {
             "word": "لمجموعون",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-last",
               "dimashqi"
@@ -2355,7 +2162,6 @@
         "internal": [
           {
             "word": "وريحان",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "dimashqi"
             ]
@@ -2367,7 +2173,6 @@
       "13": {
         "end": {
           "word": "العذاب",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -2377,7 +2182,6 @@
         "internal": [
           {
             "word": "الإنجيل",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "basri"
             ]
@@ -2389,7 +2193,6 @@
       "20": {
         "end": {
           "word": "الأذلين",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "basri",
@@ -2404,7 +2207,6 @@
         "internal": [
           {
             "word": "الآخر",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "dimashqi"
             ]
@@ -2412,7 +2214,6 @@
         ],
         "end": {
           "word": "مخرجا",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-last",
             "makki",
@@ -2424,7 +2225,6 @@
         "internal": [
           {
             "word": "الألباب",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first"
             ]
@@ -2437,7 +2237,6 @@
         "internal": [
           {
             "word": "نذير",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-last",
               "makki"
@@ -2450,7 +2249,6 @@
       "1": {
         "end": {
           "word": "الحاقة",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -2460,7 +2258,6 @@
         "internal": [
           {
             "word": "بشماله",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -2474,7 +2271,6 @@
       "4": {
         "end": {
           "word": "سنة",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -2490,7 +2286,6 @@
         "internal": [
           {
             "word": "سواعا",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -2502,7 +2297,6 @@
         ],
         "end": {
           "word": "ونسرا",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-last",
             "kufi"
@@ -2513,7 +2307,6 @@
         "internal": [
           {
             "word": "كثيرا",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "makki"
@@ -2525,7 +2318,6 @@
         "internal": [
           {
             "word": "نارا",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -2542,7 +2334,6 @@
         "internal": [
           {
             "word": "أحد",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "makki"
             ]
@@ -2550,7 +2341,6 @@
         ],
         "end": {
           "word": "ملتحدا",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -2565,7 +2355,6 @@
       "1": {
         "end": {
           "word": "المزمل",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "dimashqi",
@@ -2577,7 +2366,6 @@
         "internal": [
           {
             "word": "رسولا",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "makki"
             ]
@@ -2587,7 +2375,6 @@
       "17": {
         "end": {
           "word": "شيبا",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "makki",
@@ -2602,7 +2389,6 @@
       "40": {
         "end": {
           "word": "يتساءلون",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "makki",
@@ -2615,7 +2401,6 @@
       "41": {
         "end": {
           "word": "المجرمين",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -2629,7 +2414,6 @@
       "16": {
         "end": {
           "word": "به",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -2641,7 +2425,6 @@
         "internal": [
           {
             "word": "قريبا",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "basri"
             ]
@@ -2653,7 +2436,6 @@
       "33": {
         "end": {
           "word": "ولأنعامكم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -2665,7 +2447,6 @@
       "37": {
         "end": {
           "word": "طغى",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "basri",
             "dimashqi",
@@ -2693,7 +2474,6 @@
       "32": {
         "end": {
           "word": "ولأنعامكم",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -2705,7 +2485,6 @@
       "33": {
         "end": {
           "word": "الصاخة",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -2737,7 +2516,6 @@
       "7": {
         "end": {
           "word": "بيمينه",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -2749,7 +2527,6 @@
       "10": {
         "end": {
           "word": "ظهره",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -2763,7 +2540,6 @@
       "15": {
         "end": {
           "word": "كيدا",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-last",
             "makki",
@@ -2779,7 +2555,6 @@
         "internal": [
           {
             "word": "ونعمه",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -2792,7 +2567,6 @@
         "internal": [
           {
             "word": "رزقه",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -2805,7 +2579,6 @@
         "internal": [
           {
             "word": "بجهنم",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -2818,7 +2591,6 @@
       "29": {
         "end": {
           "word": "عبادي",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -2830,7 +2602,6 @@
         "internal": [
           {
             "word": "فعقروها",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first"
             ]
@@ -2842,7 +2613,6 @@
       "9": {
         "end": {
           "word": "ينهى",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -2856,7 +2626,6 @@
         "internal": [
           {
             "word": "ينته",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -2871,7 +2640,6 @@
         "internal": [
           {
             "word": "القدر",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "makki",
               "dimashqi"
@@ -2885,7 +2653,6 @@
         "internal": [
           {
             "word": "الدين",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "basri",
               "dimashqi"
@@ -2899,7 +2666,6 @@
         "internal": [
           {
             "word": "أشتاتا",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-last",
               "makki",
@@ -2914,7 +2680,6 @@
       "1": {
         "end": {
           "word": "القارعة",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "kufi"
           ]
@@ -2923,7 +2688,6 @@
       "6": {
         "end": {
           "word": "موازينه",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -2935,7 +2699,6 @@
       "8": {
         "end": {
           "word": "موازينه",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "madani-last",
@@ -2949,7 +2712,6 @@
       "1": {
         "end": {
           "word": "والعصر",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "madani-first",
             "makki",
@@ -2963,7 +2725,6 @@
         "internal": [
           {
             "word": "بالحق",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-last"
             ]
@@ -2976,7 +2737,6 @@
         "internal": [
           {
             "word": "جوع",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "madani-first",
               "madani-last",
@@ -2990,7 +2750,6 @@
       "6": {
         "end": {
           "word": "يراءون",
-          "dispute_scope": "madhhab",
           "counted_by": [
             "basri",
             "kufi"
@@ -3003,7 +2762,6 @@
         "internal": [
           {
             "word": "يلد",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "makki",
               "dimashqi"
@@ -3017,7 +2775,6 @@
         "internal": [
           {
             "word": "الوسواس",
-            "dispute_scope": "madhhab",
             "counted_by": [
               "makki",
               "dimashqi"
