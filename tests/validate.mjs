@@ -726,6 +726,74 @@ for (const [surahKey, ayahs] of Object.entries(bookBoundaryPrimitives.surahs)) {
 }
 
 
+section('73:15 - the Makki riwaya boundary');
+
+{
+  // al-Dani records 73:15 among the disputed places, but the disagreement is
+  // between two riwayat of the Makki count, not between madhhabs: the sound
+  // reading has every system counting it. It is recorded so the point is not
+  // silently missing from the 247, and marked riwaya-scope so it stays out of
+  // the madhhab-level view and changes no mapping and no total.
+  const point = bookBoundaryPrimitives.surahs['73']?.['15'];
+  assert(Boolean(point?.end), 'book-boundary-primitives.json: 73:15 records an end boundary');
+  assert(point.end.word === 'رسولا', 'book-boundary-primitives.json: 73:15 anchors on رسولا');
+  assert(point.end.dispute_scope === 'riwaya', 'book-boundary-primitives.json: 73:15 is riwaya-scope');
+  assert(
+    typeof point.end.riwaya_note === 'string' && point.end.riwaya_note.length > 0,
+    'book-boundary-primitives.json: 73:15 names the riwayat behind the dispute'
+  );
+  assert(
+    point.end.counted_by.length === systemIds.length,
+    'book-boundary-primitives.json: 73:15 is counted by every system'
+  );
+
+  // Anchored to the SECOND رسولا: the ayah names Pharaoh's messenger first, and
+  // the disputed boundary is the closing one. The word alone is ambiguous, so the
+  // evidence sidecar has to say which occurrence.
+  const evidencePoint = bookBoundaryEvidence.surahs['73']?.['15']?.end;
+  assert(Boolean(evidencePoint), 'book-boundary-evidence.json: 73:15 has an evidence record');
+  assert(
+    JSON.stringify(evidencePoint).includes('2') || evidencePoint.occurrence === 2,
+    'book-boundary-evidence.json: 73:15 records which رسولا the boundary sits on'
+  );
+
+  const totalPoints = Object.values(bookBoundaryPrimitives.surahs)
+    .flatMap(ayahs => Object.values(ayahs))
+    .reduce((sum, primitive) => sum + (primitive.internal?.length || 0) + (primitive.end ? 1 : 0), 0);
+  assert(totalPoints === 247, `book-boundary-primitives.json: records 247 disputed points (got ${totalPoints})`);
+
+  // Recording it must not move a single number.
+  // Recording it must not move a single number. These are al-Muzzammil's counts
+  // as they stood before the point existed; a riwaya-scope boundary is invisible
+  // to the madhhab-level view by construction, so they must be unchanged.
+  const muzzammilBefore = {
+    'madani-first': 20,
+    'madani-last': 18,
+    makki: 20,
+    basri: 19,
+    dimashqi: 20,
+    kufi: 20
+  };
+
+  for (const systemId of systemIds) {
+    const counts = loadDist(`surah-counts/${systemId}.json`);
+    assert(
+      counts.surahs['73'] === muzzammilBefore[systemId],
+      `surah-counts/${systemId}.json: 73 still holds ${muzzammilBefore[systemId]} ayat`
+    );
+  }
+
+  // And the totals themselves are untouched.
+  for (const systemId of systemIds) {
+    const counts = loadDist(`surah-counts/${systemId}.json`);
+    assert(
+      counts._total_ayahs === countingSystems[systemId].total_ayahs,
+      `surah-counts/${systemId}.json: total still matches counting-systems.json`
+    );
+  }
+}
+
+
 section('Canonical Evidence Sidecar');
 
 const normalizedPrimitives = normalizeBookBoundaryPrimitivesDocument(bookBoundaryPrimitives, countingSystems, pkg.version);
