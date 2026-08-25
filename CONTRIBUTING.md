@@ -29,9 +29,23 @@ This repository now has six related but distinct layers:
    - `dist/differences-reconciliation.json`
    - do not edit these by hand; regenerate them
 
-6. **Curated classical-count attestations** — `dist/classical-count-attestations.json`
-   - records explicit primary-riwaya total decisions for disputed aggregate counts
-   - do not edit generated fields by hand; regenerate them
+6. **Curated classical-count attestations** — authored in `data/classical-count-attestations.json`,
+   generated to `dist/classical-count-attestations.json`
+   - **edit the file under `data/`**; the one under `dist/` is generated and will be overwritten
+   - records, per counting madhhab: the adopted primary total and its citations, other totals
+     attested for the same madhhab (`attested_totals`), totals belonging to a related authority
+     rather than to the madhhab itself (`related_authority_totals` — Abu Ja'far's personal count,
+     for instance), and the boundaries where the repository has made an explicit decision
+   - `mapping_total_status` is computed and strictly arithmetic: it compares sums only. Two maps
+     can share a total while counting different boundaries, so a matching total is never evidence
+     that the mapping follows a particular riwaya
+   - `boundary_reconstruction` is authored, and is the field that says whether the point-by-point
+     composition behind the total is actually settled
+   - every entry in `disputed_boundaries` must name its exact identity — `surah`, `hafs_ayah`,
+     `kind` (`internal` or `end`) and `word`. An ayah can carry both an internal and an end
+     boundary (2:219 has ﴿ينفقون﴾ internal and ﴿تتفكرون﴾ end), so surah and ayah alone do not
+     identify a point. The generator resolves each one against the canonical primitives and
+     throws if it is missing or ambiguous
 
 ## Common contribution types
 
