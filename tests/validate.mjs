@@ -712,8 +712,8 @@ for (const [surahKey, ayahs] of Object.entries(bookBoundaryPrimitives.surahs)) {
   const riwayaPoints = allPoints.filter(point => point.dispute_scope === 'riwaya');
 
   assert(
-    riwayaPoints.length === 3,
-    `book-boundary-primitives.json: 3 riwaya-scope points sit outside differences.json (got ${riwayaPoints.length})`
+    riwayaPoints.length === 4,
+    `book-boundary-primitives.json: 4 riwaya-scope points sit outside differences.json (got ${riwayaPoints.length})`
   );
   assert(
     riwayaPoints.every(point => point.counted_by.length === systemIds.length),
@@ -789,6 +789,136 @@ section('73:15 - the Makki riwaya boundary');
     assert(
       counts._total_ayahs === countingSystems[systemId].total_ayahs,
       `surah-counts/${systemId}.json: total still matches counting-systems.json`
+    );
+  }
+}
+
+
+section('73:15 - the Makki riwaya boundary');
+
+{
+  // al-Dani records 73:15 among the disputed places, but the disagreement is
+  // between two riwayat of the Makki count, not between madhhabs: the sound
+  // reading has every system counting it. It is recorded so the point is not
+  // silently missing from the 247, and marked riwaya-scope so it stays out of
+  // the madhhab-level view and changes no mapping and no total.
+  const point = bookBoundaryPrimitives.surahs['73']?.['15'];
+  assert(Boolean(point?.end), 'book-boundary-primitives.json: 73:15 records an end boundary');
+  assert(point.end.word === 'رسولا', 'book-boundary-primitives.json: 73:15 anchors on رسولا');
+  assert(point.end.dispute_scope === 'riwaya', 'book-boundary-primitives.json: 73:15 is riwaya-scope');
+  assert(
+    typeof point.end.riwaya_note === 'string' && point.end.riwaya_note.length > 0,
+    'book-boundary-primitives.json: 73:15 names the riwayat behind the dispute'
+  );
+  assert(
+    point.end.counted_by.length === systemIds.length,
+    'book-boundary-primitives.json: 73:15 is counted by every system'
+  );
+
+  // Anchored to the SECOND رسولا. The ayah says «أرسلنا إليكم رسولا … كما أرسلنا
+  // إلى فرعون رسولا», so the word alone is ambiguous and the boundary is the
+  // closing one. The generated mushaf positions are where that is pinned down.
+  const mushafSurah = JSON.parse(
+    readFileSync(new URL('../site/public/generated/mushaf/surah-073.json', import.meta.url), 'utf-8')
+  );
+  const surahPositions = mushafSurah.boundary_positions;
+
+  // occurrence_index alone proves nothing: the generator assigns "end -> last
+  // occurrence" unconditionally, so asserting 2 only re-states that rule. What
+  // actually pins the anchor is the token offset, so assert that.
+  const endPosition = surahPositions['73:15:end:رسولا'];
+  assert(Boolean(endPosition), 'mushaf positions: 73:15 end boundary is located');
+  assert(endPosition.occurrence_index === 2, 'mushaf positions: 73:15 end sits on the SECOND رسولا');
+  assert(
+    endPosition.plain_after_token === 11 && endPosition.uthmani_after_token === 11,
+    'mushaf positions: 73:15 end closes after token 11 — «إلى فرعون رسولا», not the earlier «إليكم رسولا»'
+  );
+  assert(
+    endPosition.uthmani_resolution === 'exact',
+    'mushaf positions: 73:15 end resolves exactly against the Uthmani text'
+  );
+
+  const internalPosition = surahPositions['73:15:internal:رسولا'];
+  assert(Boolean(internalPosition), 'mushaf positions: 73:15 internal boundary is located');
+  assert(
+    internalPosition.plain_after_token === 4 && internalPosition.uthmani_after_token === 4,
+    'mushaf positions: 73:15 internal sits on the first رسولا, at token 4'
+  );
+
+  // And the ayah really does hold exactly two, so "second" is meaningful and the
+  // two boundaries cannot be the same word.
+  const ayah15 = mushafSurah.ayahs.find(entry => entry.ayah === 15);
+  assert(Boolean(ayah15), 'mushaf data: 73:15 is present');
+  assert(
+    ayah15.plain_tokens.filter(token => token === 'رسولا').length === 2,
+    'mushaf data: 73:15 contains رسولا exactly twice'
+  );
+  assert(
+    endPosition.plain_after_token > internalPosition.plain_after_token,
+    'mushaf positions: 73:15 end falls after the internal point'
+  );
+
+  const evidencePoint = bookBoundaryEvidence.surahs['73']?.['15']?.end;
+  assert(Boolean(evidencePoint), 'book-boundary-evidence.json: 73:15 has an evidence record');
+  assert(
+    evidencePoint.evidence.some(item => item.tier === 'primary' && item.note.includes('فرعون')),
+    'book-boundary-evidence.json: 73:15 cites the phrase that disambiguates the occurrence'
+  );
+
+  const totalPoints = Object.values(bookBoundaryPrimitives.surahs)
+    .flatMap(ayahs => Object.values(ayahs))
+    .reduce((sum, primitive) => sum + (primitive.internal?.length || 0) + (primitive.end ? 1 : 0), 0);
+  assert(totalPoints === 247, `book-boundary-primitives.json: records 247 disputed points (got ${totalPoints})`);
+
+  // Recording it must not move a single number.
+  // Recording it must not move a single number. These are al-Muzzammil's counts
+  // as they stood before the point existed; a riwaya-scope boundary is invisible
+  // to the madhhab-level view by construction, so they must be unchanged.
+  const muzzammilBefore = {
+    'madani-first': 20,
+    'madani-last': 18,
+    makki: 20,
+    basri: 19,
+    dimashqi: 20,
+    kufi: 20
+  };
+
+  for (const systemId of systemIds) {
+    const counts = loadDist(`surah-counts/${systemId}.json`);
+    assert(
+      counts.surahs['73'] === muzzammilBefore[systemId],
+      `surah-counts/${systemId}.json: 73 still holds ${muzzammilBefore[systemId]} ayat`
+    );
+  }
+
+  // And the totals themselves are untouched.
+  for (const systemId of systemIds) {
+    const counts = loadDist(`surah-counts/${systemId}.json`);
+    assert(
+      counts._total_ayahs === countingSystems[systemId].total_ayahs,
+      `surah-counts/${systemId}.json: total still matches counting-systems.json`
+    );
+  }
+
+  // "No mapping change" was previously only claimed in a comment. Al-Muzzammil
+  // maps identically in both directions for every system: a riwaya-scope point
+  // moves no ayah number.
+  for (const systemId of systemIds) {
+    if (systemId === 'kufi') continue;
+
+    const forward = loadDist(`mappings/by-counting-system/kufi-to-${systemId}.json`);
+    const reverse = loadDist(`mappings/by-counting-system/${systemId}-to-kufi.json`);
+
+    for (const [kufiAyah, entry] of Object.entries(forward.surahs['73'].ayahs)) {
+      assert(
+        entry.status !== 'covers_multiple' || !entry.target_ayahs?.includes(15),
+        `kufi-to-${systemId}.json: 73:${kufiAyah} does not merge across the riwaya boundary`
+      );
+    }
+
+    assert(
+      Object.keys(reverse.surahs['73'].ayahs).length === loadDist(`surah-counts/${systemId}.json`).surahs['73'],
+      `${systemId}-to-kufi.json: 73 maps exactly as many ayat as the surah holds`
     );
   }
 }
