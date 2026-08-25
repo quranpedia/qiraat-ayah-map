@@ -623,6 +623,15 @@
       "uthmani_after_token": 4,
       "uthmani_resolution": "exact"
     },
+    "73:15:end:رسولا": {
+      "ayah": 15,
+      "kind": "end",
+      "word": "رسولا",
+      "occurrence_index": 2,
+      "plain_after_token": 11,
+      "uthmani_after_token": 11,
+      "uthmani_resolution": "exact"
+    },
     "73:17:end:شيبا": {
       "ayah": 17,
       "kind": "end",

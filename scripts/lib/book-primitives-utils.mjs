@@ -229,6 +229,23 @@ function normalizeRiwayaNote(value, location) {
   return value.trim();
 }
 
+// Which occurrence of `word` inside the ayah the boundary sits on. Only needed
+// when the word repeats: 73:15 says «أرسلنا إليكم رسولا … أرسلنا إلى فرعون
+// رسولا», and the two boundaries there are different places on the same word.
+// Without this the canonical file is ambiguous on its face and the distinction
+// survives only in generated token offsets.
+function normalizeOccurrence(value, location) {
+  if (value === undefined || value === null) {
+    return null;
+  }
+
+  if (!Number.isInteger(value) || value < 1) {
+    throw new Error(`${location}: occurrence must be a positive integer when present`);
+  }
+
+  return value;
+}
+
 function normalizeWord(value, location) {
   if (typeof value !== 'string' || value.trim().length === 0) {
     throw new Error(`${location}: word must be a non-empty string`);
@@ -295,8 +312,11 @@ export function normalizeBookBoundaryPrimitivesDocument(primitivesDocument, coun
             throw new Error(`${pointLocation}: dispute_scope "riwaya" requires riwaya_note naming the transmitters`);
           }
 
+          const occurrence = normalizeOccurrence(internalPoint.occurrence, pointLocation);
+
           return {
             word,
+            ...(occurrence ? { occurrence } : {}),
             dispute_scope: scope,
             ...(note ? { riwaya_note: note } : {}),
             counted_by: normalizeCountedBy(internalPoint.counted_by, orderedSystemIds, {
@@ -315,8 +335,11 @@ export function normalizeBookBoundaryPrimitivesDocument(primitivesDocument, coun
           throw new Error(`${location}:end: dispute_scope "riwaya" requires riwaya_note naming the transmitters`);
         }
 
+        const endOccurrence = normalizeOccurrence(primitive.end.occurrence, `${location}:end`);
+
         normalizedPrimitive.end = {
           word: normalizeWord(primitive.end.word, `${location}:end`),
+          ...(endOccurrence ? { occurrence: endOccurrence } : {}),
           dispute_scope: endScope,
           ...(endRiwayaNote ? { riwaya_note: endRiwayaNote } : {}),
           counted_by: normalizeCountedBy(primitive.end.counted_by, orderedSystemIds, {

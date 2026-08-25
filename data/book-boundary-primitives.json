@@ -2366,11 +2366,26 @@
         "internal": [
           {
             "word": "رسولا",
+            "occurrence": 1,
             "counted_by": [
               "makki"
             ]
           }
-        ]
+        ],
+        "end": {
+          "word": "رسولا",
+          "occurrence": 2,
+          "dispute_scope": "riwaya",
+          "riwaya_note": "ذكره الداني في مواضع الخلاف، والخلاف فيه بين روايتين عن المكي: لم يعدّه المكي بخلاف عنه، وعدّه الباقون، وهو الصحيح عن المكي. فيؤول إلى عدّ الجميع.",
+          "counted_by": [
+            "madani-first",
+            "madani-last",
+            "makki",
+            "basri",
+            "dimashqi",
+            "kufi"
+          ]
+        }
       },
       "17": {
         "end": {
