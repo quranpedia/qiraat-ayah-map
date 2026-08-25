@@ -409,6 +409,9 @@ export function buildBookBoundaryPrimitives(differencesDocument, countingSystems
 
         return {
           word: record.word,
+          // differences.json only carries madhhab-level disagreement, so anything
+          // projected back out of it is madhhab-scope by construction.
+          dispute_scope: DEFAULT_DISPUTE_SCOPE,
           counted_by: countedBy
         };
       });
@@ -429,6 +432,7 @@ export function buildBookBoundaryPrimitives(differencesDocument, countingSystems
 
       output.end = {
         word: ayahRecord.end.word,
+        dispute_scope: DEFAULT_DISPUTE_SCOPE,
         counted_by: countedBy
       };
     }

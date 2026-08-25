@@ -34,9 +34,9 @@
       "riwaya": 3
     },
     "by_verification_status": {
-      "uncited": 128,
+      "uncited": 127,
       "secondary_only": 55,
-      "primary_cited": 62,
+      "primary_cited": 63,
       "primary_cited_and_reviewed": 0,
       "disputed": 1,
       "unresolved": 0
@@ -92,12 +92,12 @@
       }
     },
     "evidence": {
-      "total_items": 285,
-      "total_primary_items": 63,
-      "points_with_evidence": 118,
-      "points_with_primary_evidence": 62,
+      "total_items": 287,
+      "total_primary_items": 65,
+      "points_with_evidence": 119,
+      "points_with_primary_evidence": 63,
       "points_reviewed": 0,
-      "points_uncited": 128
+      "points_uncited": 127
     },
     "attestations": {
       "total_recorded": 6,
@@ -160,10 +160,10 @@
       "merge_effects": 81,
       "fully_reviewed_points": 0,
       "outstanding_points": 246,
-      "uncited_points": 60,
-      "cited_points": 52,
-      "points_with_evidence": 52,
-      "points_with_primary_evidence": 28,
+      "uncited_points": 59,
+      "cited_points": 53,
+      "points_with_evidence": 53,
+      "points_with_primary_evidence": 29,
       "points_reviewed": 0,
       "nearest_system_id": "makki",
       "nearest_system_distance": 47,
@@ -188,10 +188,10 @@
       "merge_effects": 83,
       "fully_reviewed_points": 0,
       "outstanding_points": 246,
-      "uncited_points": 64,
-      "cited_points": 53,
-      "points_with_evidence": 53,
-      "points_with_primary_evidence": 28,
+      "uncited_points": 63,
+      "cited_points": 54,
+      "points_with_evidence": 54,
+      "points_with_primary_evidence": 29,
       "points_reviewed": 0,
       "nearest_system_id": "madani-first",
       "nearest_system_distance": 38,
@@ -2411,9 +2411,9 @@
         "internal": 1
       },
       "by_verification_status": {
-        "uncited": 1,
+        "uncited": 0,
         "secondary_only": 0,
-        "primary_cited": 0,
+        "primary_cited": 1,
         "primary_cited_and_reviewed": 0,
         "disputed": 0,
         "unresolved": 0
@@ -11498,34 +11498,34 @@
     "madani-last": {
       "total_points": 112,
       "by_status": {
-        "uncited": 60,
+        "uncited": 59,
         "secondary_only": 23,
-        "primary_cited": 28,
-        "primary_cited_and_reviewed": 0,
-        "disputed": 1,
-        "unresolved": 0
-      },
-      "points_with_evidence": 52,
-      "points_with_primary_evidence": 28,
-      "points_reviewed": 0,
-      "uncited_points": 60,
-      "cited_points": 52
-    },
-    "makki": {
-      "total_points": 117,
-      "by_status": {
-        "uncited": 64,
-        "secondary_only": 24,
-        "primary_cited": 28,
+        "primary_cited": 29,
         "primary_cited_and_reviewed": 0,
         "disputed": 1,
         "unresolved": 0
       },
       "points_with_evidence": 53,
-      "points_with_primary_evidence": 28,
+      "points_with_primary_evidence": 29,
       "points_reviewed": 0,
-      "uncited_points": 64,
+      "uncited_points": 59,
       "cited_points": 53
+    },
+    "makki": {
+      "total_points": 117,
+      "by_status": {
+        "uncited": 63,
+        "secondary_only": 24,
+        "primary_cited": 29,
+        "primary_cited_and_reviewed": 0,
+        "disputed": 1,
+        "unresolved": 0
+      },
+      "points_with_evidence": 54,
+      "points_with_primary_evidence": 29,
+      "points_reviewed": 0,
+      "uncited_points": 63,
+      "cited_points": 54
     },
     "basri": {
       "total_points": 102,
@@ -12146,8 +12146,8 @@
       "name_en": "Last Madinan",
       "name_ar": "المدني الأخير",
       "counted_points": 112,
-      "uncited_points": 60,
-      "cited_points": 52,
+      "uncited_points": 59,
+      "cited_points": 53,
       "split_effects": 59,
       "merge_effects": 81
     },
@@ -12166,8 +12166,8 @@
       "name_en": "Makkan",
       "name_ar": "المكي",
       "counted_points": 117,
-      "uncited_points": 64,
-      "cited_points": 53,
+      "uncited_points": 63,
+      "cited_points": 54,
       "split_effects": 66,
       "merge_effects": 83
     },
@@ -29708,8 +29708,8 @@
         "kufi"
       ],
       "verification_status": "primary_cited",
-      "evidence_count": 3,
-      "primary_evidence_count": 1,
+      "evidence_count": 4,
+      "primary_evidence_count": 2,
       "reviewer_count": 0,
       "supported_systems": [
         "madani-first",
@@ -29782,6 +29782,19 @@
           ],
           "strength": "direct",
           "note": "مقطع nfb.al_imran.poem.mimma_tuhibbun"
+        },
+        {
+          "tier": "primary",
+          "work": "البيان في عدّ آي القرآن",
+          "locator": "ص 96",
+          "supports": [
+            "madani-last",
+            "makki",
+            "dimashqi"
+          ],
+          "strength": "direct",
+          "edition": "طبعة تُراث الرقمية (shamela 5542)",
+          "note": "قال الداني في آل عمران: «(مما تحبون) الأول لم يعدها الكوفي والبصري وأبو جعفر القارئ، وعدها الباقون وشيبة بن نصاح». وظاهره أن المدني الأول يعدّها، والخريطة لا تعدّه فيها."
         }
       ],
       "reviewers": [],
@@ -43688,11 +43701,14 @@
         "dimashqi",
         "kufi"
       ],
-      "verification_status": "uncited",
-      "evidence_count": 0,
-      "primary_evidence_count": 0,
+      "verification_status": "primary_cited",
+      "evidence_count": 1,
+      "primary_evidence_count": 1,
       "reviewer_count": 0,
-      "supported_systems": [],
+      "supported_systems": [
+        "madani-last",
+        "makki"
+      ],
       "systems": {
         "madani-first": {
           "counts_boundary": false,
@@ -43720,7 +43736,20 @@
         }
       },
       "note": null,
-      "evidence": [],
+      "evidence": [
+        {
+          "tier": "primary",
+          "work": "البيان في عدّ آي القرآن",
+          "locator": "ص 251",
+          "supports": [
+            "madani-last",
+            "makki"
+          ],
+          "strength": "direct",
+          "edition": "طبعة تُراث الرقمية (shamela 5542)",
+          "note": "قال الداني في الملك: «اختلافها آية (قد جاءنا نذير) عدها المدني الأخير والمكي ولم يعدها الباقون، وعدها شيبة ولم يعدها أبو جعفر». وهذا موافق لما في الخريطة."
+        }
+      ],
       "reviewers": [],
       "location_label": "67:9",
       "counted_by_count": 2,
