@@ -103,7 +103,7 @@
       "total_recorded": 6,
       "with_explicit_policy": 6,
       "by_status": {
-        "resolved_to_primary_riwaya": 6
+        "missing": 6
       }
     },
     "primary_source_frontier": {
@@ -141,7 +141,7 @@
       "nearest_system_distance": 38,
       "farthest_system_id": "kufi",
       "farthest_system_distance": 133,
-      "attestation_status": "resolved_to_primary_riwaya",
+      "attestation_status": null,
       "attestation_total": 6217,
       "attestation_delta": 0
     },
@@ -169,7 +169,7 @@
       "nearest_system_distance": 47,
       "farthest_system_id": "kufi",
       "farthest_system_distance": 140,
-      "attestation_status": "resolved_to_primary_riwaya",
+      "attestation_status": null,
       "attestation_total": 6214,
       "attestation_delta": 0
     },
@@ -197,7 +197,7 @@
       "nearest_system_distance": 38,
       "farthest_system_id": "kufi",
       "farthest_system_distance": 149,
-      "attestation_status": "resolved_to_primary_riwaya",
+      "attestation_status": null,
       "attestation_total": 6219,
       "attestation_delta": 0
     },
@@ -226,7 +226,7 @@
       "nearest_system_distance": 84,
       "farthest_system_id": "kufi",
       "farthest_system_distance": 128,
-      "attestation_status": "resolved_to_primary_riwaya",
+      "attestation_status": null,
       "attestation_total": 6204,
       "attestation_delta": 0
     },
@@ -254,7 +254,7 @@
       "nearest_system_distance": 84,
       "farthest_system_id": "kufi",
       "farthest_system_distance": 140,
-      "attestation_status": "resolved_to_primary_riwaya",
+      "attestation_status": null,
       "attestation_total": 6226,
       "attestation_delta": 0
     },
@@ -285,7 +285,7 @@
       "nearest_system_distance": 128,
       "farthest_system_id": "makki",
       "farthest_system_distance": 149,
-      "attestation_status": "resolved_to_primary_riwaya",
+      "attestation_status": null,
       "attestation_total": 6236,
       "attestation_delta": 0
     }
@@ -46427,7 +46427,8 @@
   ],
   "attestations": {
     "madani-first": {
-      "status": "resolved_to_primary_riwaya",
+      "mapping_total_status": "mapping_total_matches_primary",
+      "boundary_reconstruction": "resolved",
       "verification_status": "primary_cited",
       "mapping_total_ayahs": 6217,
       "registry_total_ayahs": 6217,
@@ -46475,10 +46476,12 @@
           ]
         }
       ],
+      "related_authority_totals": [],
       "disputed_boundaries": []
     },
     "madani-last": {
-      "status": "resolved_to_primary_riwaya",
+      "mapping_total_status": "mapping_total_matches_primary",
+      "boundary_reconstruction": "unresolved",
       "verification_status": "primary_cited",
       "mapping_total_ayahs": 6214,
       "registry_total_ayahs": 6214,
@@ -46509,12 +46512,17 @@
               "note": "مقطع nfb.madkhal.enumerators.madani_last"
             }
           ]
-        },
+        }
+      ],
+      "related_authority_totals": [
         {
           "total_ayahs": 6210,
-          "role": "alternative",
+          "relation": "authority_count",
+          "authority": "abu-jafar",
           "attribution_en": "Abu Ja'far's own count, differing from Shaybah — recorded by al-Dani in the same chapter. Relevant because Abu Ja'far is the Qiraa this repository maps to the First Madinan madhhab.",
           "attribution_ar": "جملة أبي جعفر نفسه للاختلاف بينه وبين شيبة، ذكرها الداني في الباب نفسه. وإنما ذُكرت هنا لأن أبا جعفر هو القارئ المنسوب في هذا المستودع إلى العدد المدني الأول.",
+          "note_en": "Abu Ja'far's own count, not a second total of the Last Madinan madhhab. Al-Dani gives it separately (ص 79) and it bears on the First Madinan reconstruction, not on this madhhab's sum.",
+          "note_ar": "عدد أبي جعفر نفسه لا جملة ثانية للمدني الأخير؛ أفرده الداني (ص ٧٩)، ومَبنى أثره على تحرير المدني الأول لا على جملة هذا المذهب.",
           "evidence": [
             {
               "tier": "primary",
@@ -46530,7 +46538,8 @@
       "disputed_boundaries": []
     },
     "makki": {
-      "status": "resolved_to_primary_riwaya",
+      "mapping_total_status": "mapping_total_matches_primary",
+      "boundary_reconstruction": "unresolved",
       "verification_status": "primary_cited",
       "mapping_total_ayahs": 6219,
       "registry_total_ayahs": 6219,
@@ -46554,12 +46563,17 @@
               "note": "قسم count_school.makki: وعدد آي القرآن في قول المكيين ستة آلاف آية ومئتان وتسع عشرة آية"
             }
           ]
-        },
+        }
+      ],
+      "related_authority_totals": [
         {
           "total_ayahs": 6210,
-          "role": "alternative",
+          "relation": "authority_count",
+          "authority": "ubayy-ibn-kab",
           "attribution_en": "The figure of Ubayy ibn Ka'b, recorded by al-Dani immediately after the Makkiyyun total. Nafa'is al-Bayan attaches this figure to the Makkan chain (al-Dani to Ibn Kathir, from Mujahid, from Ibn 'Abbas, from Ubayy), which is why the two sources appear to conflict.",
           "attribution_ar": "جملة أبيّ بن كعب، ذكرها الداني عقب جملة المكيين. ونسبها نفائس البيان إلى سند المكي (الداني إلى ابن كثير عن مجاهد عن ابن عباس عن أبيّ)، ومن هنا نشأ توهم التعارض بين المصدرين.",
+          "note_en": "Ubayy ibn Ka'b's figure. This record's own policy says 6210 and the Makkan 6219 describe different things, so it cannot serve as an alternative total for this madhhab.",
+          "note_ar": "جملة أُبيّ بن كعب. وسياسة هذا السجل نفسها تقرّر أن ٦٢١٠ و٦٢١٩ لا يصفان شيئًا واحدًا، فلا تصلح جملةً بديلة للمذهب.",
           "evidence": [
             {
               "tier": "primary",
@@ -46597,6 +46611,7 @@
               "note": "مدخل السورة: اختلافها آية (﴿عذابا قريبا﴾) عدها البصري ولم يعدها الباقون"
             }
           ],
+          "kind": "internal",
           "current_mapping_decision": "excluded"
         },
         {
@@ -46616,19 +46631,21 @@
               "note": "مدخل السورة: وهي ست عشرة آية في المدني الأول ويقال في المكي كذلك وخمس عشرة في عدد الباقين. اختلافها آية (﴿فعقروها﴾) عدها المدني الأول والمكي بخلاف عنه ولم يعدها الباقون"
             }
           ],
+          "kind": "internal",
           "current_mapping_decision": "excluded"
         }
       ]
     },
     "basri": {
-      "status": "resolved_to_primary_riwaya",
+      "mapping_total_status": "mapping_total_matches_primary",
+      "boundary_reconstruction": "unresolved",
       "verification_status": "primary_cited",
       "mapping_total_ayahs": 6204,
       "registry_total_ayahs": 6204,
       "primary_classical_total_ayahs": 6204,
       "delta_from_primary": 0,
-      "policy_en": "The Basran count is the one al-Dani reports as Ayyub ibn al-Mutawakkil's, and the one their codices carried in his day. 'Asim al-Jahdari's Basran count is one ayah higher. This is the count Abu Amr al-Basri and Ya'qub follow, so it governs the riwayat of al-Duri 'an Abi 'Amr, al-Susi, Ruways and Rawh (per data/qiraat.json; al-Bayan does not state the rawi mapping here).",
-      "policy_ar": "العدد البصري هو ما ذكره الداني أنه عدد أيوب بن المتوكل، وعليه مصاحفهم في زمنه. وعددُ عاصم الجحدري البصريُّ يزيد آية. وهو عدد أبي عمرو البصري ويعقوب، فيجري على روايات الدوري عن أبي عمرو والسوسي ورويس وروح (بحسب data/qiraat.json، ولم ينصّ البيان على نسبة الرواة هنا).",
+      "policy_en": "The Basran count is the one al-Dani reports as Ayyub ibn al-Mutawakkil's, and the one their codices carried in his day. 'Asim al-Jahdari's Basran count is one ayah higher. This repository currently uses Basran as the default mapping for al-Duri 'an Abi 'Amr, al-Susi, Ruways and Rawh, per data/qiraat.json. That is a repository default, not a universal rule: a counting madhhab is a property of a printed edition as much as of a qiraa, and a King Fahd al-Duri edition declares First Madinan in its own colophon and follows it in 113 of 114 surahs. Which qiraat, rawis and editions a count applies to does not belong in this count-attestation layer and should move out of it.",
+      "policy_ar": "العدد البصري هو ما رواه الداني عن أيوب بن المتوكل، وعليه مصاحفهم في زمانه، وعددُ عاصم الجحدري يزيد آية. ويعتمد هذا المستودع البصريَّ افتراضًا لروايات الدوري عن أبي عمرو والسوسي ورويس وروح بحسب data/qiraat.json. وهو افتراضُ مستودعٍ لا قاعدةٌ مطّردة: فمذهب العدّ صفةُ الطبعة كما هو صفةُ القراءة، وقد صرّحت طبعةٌ للدوري من مجمع الملك فهد بالمدني الأول ووافقته في ١١٣ سورة من ١١٤. وتعيينُ ما تنطبق عليه الجملة من قراءاتٍ ورواياتٍ وطبعات ليس من شأن هذه الطبقة، والأولى إخراجه منها.",
       "attested_totals": [
         {
           "total_ayahs": 6204,
@@ -46670,10 +46687,12 @@
           ]
         }
       ],
+      "related_authority_totals": [],
       "disputed_boundaries": []
     },
     "dimashqi": {
-      "status": "resolved_to_primary_riwaya",
+      "mapping_total_status": "mapping_total_matches_primary",
+      "boundary_reconstruction": "unresolved",
       "verification_status": "primary_cited",
       "mapping_total_ayahs": 6226,
       "registry_total_ayahs": 6226,
@@ -46730,10 +46749,12 @@
           ]
         }
       ],
+      "related_authority_totals": [],
       "disputed_boundaries": []
     },
     "kufi": {
-      "status": "resolved_to_primary_riwaya",
+      "mapping_total_status": "mapping_total_matches_primary",
+      "boundary_reconstruction": "unresolved",
       "verification_status": "primary_cited",
       "mapping_total_ayahs": 6236,
       "registry_total_ayahs": 6236,
@@ -46766,6 +46787,7 @@
           ]
         }
       ],
+      "related_authority_totals": [],
       "disputed_boundaries": []
     }
   },

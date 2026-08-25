@@ -16,9 +16,9 @@
     "conflicting": "An attested total that conflicts with the adopted figure and is not yet reconciled."
   },
   "_status_descriptions": {
-    "resolved_to_primary_riwaya": "The generated mapping total equals the adopted primary classical total.",
-    "follows_alternative_attested_riwaya": "The generated mapping total does not equal the adopted primary total, but does equal another total explicitly attested for this counting madhhab.",
-    "drift_from_primary_riwaya": "The generated mapping total matches no attested total for this counting madhhab."
+    "mapping_total_matches_primary": "The generated mapping total equals the adopted primary classical total. This is an arithmetic fact about the sum only; it does not establish that the mapping counts the same boundaries.",
+    "mapping_total_matches_other_attestation": "The generated mapping total does not equal the adopted primary total, but equals another total attested for this madhhab with role \"alternative\". Again a statement about the sum, not the composition.",
+    "mapping_total_unattested": "The generated mapping total matches no attested total for this madhhab."
   },
   "_scope_note_en": "This repository models six counting madhhabs. al-Bayan's per-surah apparatus and its six count_school chapters (ص 79-84) likewise work with six, and its الشامي is this repository's dimashqi. al-Dani does however know a seventh: he calls Hims «عدد سابع» (ص 19) and devotes two chapters to its infiradat, 16 counted and 14 omitted, 30 positions in all (ص ≈94). What he does not give is a global Himsi total, and he keeps Hims out of the per-surah «اختلافها» apparatus entirely. Nafa'is al-Bayan supplies the total of 6232, attributed to Shurayh ibn Yazid al-Himsi al-Hadrami. Hims is excluded here because no Qiraa among the ten follows it and because the primary source gives it no global total, not because the primary source is silent about it. Recorded so the omission is a stated scope decision rather than a silent gap.",
   "_scope_note_ar": "يقتصر هذا المستودع على مذاهب العدّ الستة، وكذلك أبواب البيان الستة (ص ٧٩-٨٤) وجدولُه لكل سورة، وشاميُّه هو الدمشقي نفسه. على أن الدانيّ يعرف عددًا سابعًا، فقد سمّى الحمصي «عددًا سابعًا» (ص ١٩) وأفرد له بابين فيما انفرد بعدّه وإسقاطه، ست عشرة آية وأربع عشرة آية، وجملتها ثلاثون موضعًا (ص ٩٤ تقريبًا). لكنه لم يذكر له جملةً كليّة، ولم يُدخله في جدول الاختلاف لكل سورة. وإنما جاءت جملته (٦٢٣٢) في نفائس البيان منسوبةً إلى شريح بن يزيد الحمصي الحضرمي. وتُرك الحمصي هنا لأنه لا تتبعه قراءة من القراءات العشر، ولأن الأصل لم يذكر له جملةً كليّة، لا لأنه سكت عنه. وأُثبت ذلك ليكون تركه قرارًا مصرَّحًا به.",
@@ -99,12 +99,18 @@
               "note": "مقطع nfb.madkhal.enumerators.madani_last"
             }
           ]
-        },
+        }
+      ],
+      "disputed_boundaries": [],
+      "related_authority_totals": [
         {
           "total_ayahs": 6210,
-          "role": "alternative",
+          "relation": "authority_count",
+          "authority": "abu-jafar",
           "attribution_en": "Abu Ja'far's own count, differing from Shaybah — recorded by al-Dani in the same chapter. Relevant because Abu Ja'far is the Qiraa this repository maps to the First Madinan madhhab.",
           "attribution_ar": "جملة أبي جعفر نفسه للاختلاف بينه وبين شيبة، ذكرها الداني في الباب نفسه. وإنما ذُكرت هنا لأن أبا جعفر هو القارئ المنسوب في هذا المستودع إلى العدد المدني الأول.",
+          "note_en": "Abu Ja'far's own count, not a second total of the Last Madinan madhhab. Al-Dani gives it separately (ص 79) and it bears on the First Madinan reconstruction, not on this madhhab's sum.",
+          "note_ar": "عدد أبي جعفر نفسه لا جملة ثانية للمدني الأخير؛ أفرده الداني (ص ٧٩)، ومَبنى أثره على تحرير المدني الأول لا على جملة هذا المذهب.",
           "evidence": [
             {
               "tier": "primary",
@@ -117,7 +123,6 @@
           ]
         }
       ],
-      "disputed_boundaries": [],
       "boundary_reconstruction": "unresolved"
     },
     "makki": {
@@ -141,29 +146,6 @@
               "note": "قسم count_school.makki: وعدد آي القرآن في قول المكيين ستة آلاف آية ومئتان وتسع عشرة آية"
             }
           ]
-        },
-        {
-          "total_ayahs": 6210,
-          "role": "alternative",
-          "attribution_en": "The figure of Ubayy ibn Ka'b, recorded by al-Dani immediately after the Makkiyyun total. Nafa'is al-Bayan attaches this figure to the Makkan chain (al-Dani to Ibn Kathir, from Mujahid, from Ibn 'Abbas, from Ubayy), which is why the two sources appear to conflict.",
-          "attribution_ar": "جملة أبيّ بن كعب، ذكرها الداني عقب جملة المكيين. ونسبها نفائس البيان إلى سند المكي (الداني إلى ابن كثير عن مجاهد عن ابن عباس عن أبيّ)، ومن هنا نشأ توهم التعارض بين المصدرين.",
-          "evidence": [
-            {
-              "tier": "primary",
-              "work": "البيان في عدّ آي القرآن",
-              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
-              "locator": "ص 79",
-              "strength": "direct",
-              "note": "قسم count_school.makki: وفي قول أبي بن كعب ستة آلاف ومئتان وعشر آيات"
-            },
-            {
-              "tier": "commentary",
-              "work": "نفائس البيان — شرح الفرائد الحسان",
-              "locator": "ص 26",
-              "strength": "direct",
-              "note": "مقطع nfb.madkhal.enumerators.makki: وعدد الآي عنده ٦٢١٠"
-            }
-          ]
         }
       ],
       "disputed_boundaries": [
@@ -183,7 +165,8 @@
               "strength": "direct",
               "note": "مدخل السورة: اختلافها آية (﴿عذابا قريبا﴾) عدها البصري ولم يعدها الباقون"
             }
-          ]
+          ],
+          "kind": "internal"
         },
         {
           "surah": 91,
@@ -201,6 +184,35 @@
               "strength": "direct",
               "note": "مدخل السورة: وهي ست عشرة آية في المدني الأول ويقال في المكي كذلك وخمس عشرة في عدد الباقين. اختلافها آية (﴿فعقروها﴾) عدها المدني الأول والمكي بخلاف عنه ولم يعدها الباقون"
             }
+          ],
+          "kind": "internal"
+        }
+      ],
+      "related_authority_totals": [
+        {
+          "total_ayahs": 6210,
+          "relation": "authority_count",
+          "authority": "ubayy-ibn-kab",
+          "attribution_en": "The figure of Ubayy ibn Ka'b, recorded by al-Dani immediately after the Makkiyyun total. Nafa'is al-Bayan attaches this figure to the Makkan chain (al-Dani to Ibn Kathir, from Mujahid, from Ibn 'Abbas, from Ubayy), which is why the two sources appear to conflict.",
+          "attribution_ar": "جملة أبيّ بن كعب، ذكرها الداني عقب جملة المكيين. ونسبها نفائس البيان إلى سند المكي (الداني إلى ابن كثير عن مجاهد عن ابن عباس عن أبيّ)، ومن هنا نشأ توهم التعارض بين المصدرين.",
+          "note_en": "Ubayy ibn Ka'b's figure. This record's own policy says 6210 and the Makkan 6219 describe different things, so it cannot serve as an alternative total for this madhhab.",
+          "note_ar": "جملة أُبيّ بن كعب. وسياسة هذا السجل نفسها تقرّر أن ٦٢١٠ و٦٢١٩ لا يصفان شيئًا واحدًا، فلا تصلح جملةً بديلة للمذهب.",
+          "evidence": [
+            {
+              "tier": "primary",
+              "work": "البيان في عدّ آي القرآن",
+              "edition": "تحقيق غانم قدوري الحمد، مركز المخطوطات والتراث، الكويت، الطبعة الأولى، 1414هـ/1994م",
+              "locator": "ص 79",
+              "strength": "direct",
+              "note": "قسم count_school.makki: وفي قول أبي بن كعب ستة آلاف ومئتان وعشر آيات"
+            },
+            {
+              "tier": "commentary",
+              "work": "نفائس البيان — شرح الفرائد الحسان",
+              "locator": "ص 26",
+              "strength": "direct",
+              "note": "مقطع nfb.madkhal.enumerators.makki: وعدد الآي عنده ٦٢١٠"
+            }
           ]
         }
       ],
@@ -209,8 +221,8 @@
     "basri": {
       "verification_status": "primary_cited",
       "primary_classical_total_ayahs": 6204,
-      "policy_en": "The Basran count is the one al-Dani reports as Ayyub ibn al-Mutawakkil's, and the one their codices carried in his day. 'Asim al-Jahdari's Basran count is one ayah higher. This is the count Abu Amr al-Basri and Ya'qub follow, so it governs the riwayat of al-Duri 'an Abi 'Amr, al-Susi, Ruways and Rawh (per data/qiraat.json; al-Bayan does not state the rawi mapping here).",
-      "policy_ar": "العدد البصري هو ما ذكره الداني أنه عدد أيوب بن المتوكل، وعليه مصاحفهم في زمنه. وعددُ عاصم الجحدري البصريُّ يزيد آية. وهو عدد أبي عمرو البصري ويعقوب، فيجري على روايات الدوري عن أبي عمرو والسوسي ورويس وروح (بحسب data/qiraat.json، ولم ينصّ البيان على نسبة الرواة هنا).",
+      "policy_en": "The Basran count is the one al-Dani reports as Ayyub ibn al-Mutawakkil's, and the one their codices carried in his day. 'Asim al-Jahdari's Basran count is one ayah higher. This repository currently uses Basran as the default mapping for al-Duri 'an Abi 'Amr, al-Susi, Ruways and Rawh, per data/qiraat.json. That is a repository default, not a universal rule: a counting madhhab is a property of a printed edition as much as of a qiraa, and a King Fahd al-Duri edition declares First Madinan in its own colophon and follows it in 113 of 114 surahs. Which qiraat, rawis and editions a count applies to does not belong in this count-attestation layer and should move out of it.",
+      "policy_ar": "العدد البصري هو ما رواه الداني عن أيوب بن المتوكل، وعليه مصاحفهم في زمانه، وعددُ عاصم الجحدري يزيد آية. ويعتمد هذا المستودع البصريَّ افتراضًا لروايات الدوري عن أبي عمرو والسوسي ورويس وروح بحسب data/qiraat.json. وهو افتراضُ مستودعٍ لا قاعدةٌ مطّردة: فمذهب العدّ صفةُ الطبعة كما هو صفةُ القراءة، وقد صرّحت طبعةٌ للدوري من مجمع الملك فهد بالمدني الأول ووافقته في ١١٣ سورة من ١١٤. وتعيينُ ما تنطبق عليه الجملة من قراءاتٍ ورواياتٍ وطبعات ليس من شأن هذه الطبقة، والأولى إخراجه منها.",
       "attested_totals": [
         {
           "total_ayahs": 6204,
@@ -358,5 +370,7 @@
   "_boundary_reconstruction_descriptions": {
     "resolved": "The point-by-point composition behind the adopted total is settled and cited: every boundary that differs between this madhhab and the reference is identified.",
     "unresolved": "The adopted total is attested, but which boundaries produce it is not fully established. An aggregate delta alone cannot determine them."
-  }
+  },
+  "_related_authority_totals_note_en": "Totals attested for a named authority connected to this madhhab but not a total of the madhhab itself — Abu Ja'far's personal count, for instance. Kept separate from attested_totals because they must not participate in mapping-total status.",
+  "_related_authority_totals_note_ar": "جُمَلٌ منقولة عن إمام متّصل بهذا المذهب لا عن المذهب نفسه، كعدد أبي جعفر الخاصّ. وفُصلت عن attested_totals لئلا تدخل في حكم مطابقة الجملة."
 }
