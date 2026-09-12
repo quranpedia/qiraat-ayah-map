@@ -28,6 +28,8 @@ That is surah 1, verse 7 — four systems end a verse inside what the Ḥafṣ m
 
 **Generated mapping tables**, produced by `npm run generate` into `dist/`: ten counting-system mapping files, twenty-four convenience files keyed by transmitter, per-surah counts for each system, and one metadata file per transmitter saying which system they use.
 
+Alongside them, `dist/site-data.json` carries every disputed head of ayah with its evidence, and `dist/mushaf/surah-NNN.json` the muṣḥaf tokens with the token offset of every disputed boundary in both orthographies — what the reference site reads.
+
 Kufan is the hub. Every mapping goes to or from it, so there are ten mapping files instead of thirty and you only ever reason about one reference numbering.
 
 ## Use it when you need
@@ -48,9 +50,12 @@ Kufan is the hub. Every mapping goes to or from it, so there are ten mapping fil
 
 ## See it work
 
-- **[quran.ws/blocks/qiraat-ayah-map/](https://quran.ws/blocks/qiraat-ayah-map/)** — three live panels, each running on this repository's own data: the six systems side by side, all 246 disputed boundaries with the word each turns on, and a converter that takes a Kufan reference and shows what the other five call it.
+- **[quran.ws/blocks/qiraat-ayah-map/](https://quran.ws/blocks/qiraat-ayah-map/)** — the reader-facing reference, running on this repository's own data: a [muṣḥaf](https://quran.ws/blocks/qiraat-ayah-map/mushaf/) with every disputed head of ayah marked in place, the [ayah-count tables](https://quran.ws/blocks/qiraat-ayah-map/counts/), a [search](https://quran.ws/blocks/qiraat-ayah-map/explorer/) across all 246 boundaries, and a [converter](https://quran.ws/blocks/qiraat-ayah-map/developer/) that takes a Kufan reference and shows what the other five call it. In Arabic and English.
 - **[quran.ws/demo/](https://quran.ws/demo/)** — the same data layered with the other blocks: switch riwayah and watch al-Fātiḥah regroup.
-- **This repository's own site**, at <https://quranpedia.github.io/qiraat-ayah-map/> — a browsable muṣḥaf, per-surah count tables, and a reference explorer.
+
+This repository used to carry its own Svelte site under `site/`, published to
+GitHub Pages. It has been rewritten in full at the address above and removed
+here, so there is one reference rather than two that drift apart.
 
 ## Supported systems and readings
 

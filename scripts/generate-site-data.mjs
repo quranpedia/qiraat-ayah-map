@@ -1,7 +1,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'fs'
 import { join } from 'path'
 import { VERIFICATION_STATUS_ORDER } from './lib/book-evidence-utils.mjs'
-import { distPath, repoDir, sourcePath } from './lib/repo-paths.mjs'
+import { distDir, distPath, sourcePath } from './lib/repo-paths.mjs'
 
 function load_json(path) {
   return JSON.parse(readFileSync(path, 'utf-8'))
@@ -369,6 +369,8 @@ const site_data = {
   }
 }
 
-const target_dir = join(repoDir, 'site', 'src', 'lib', 'data', 'generated')
-mkdirSync(target_dir, { recursive: true })
-write_json(join(target_dir, 'site-data.json'), site_data)
+// Published alongside the mappings rather than tucked inside a website: this
+// bundle is a generated artefact of the dataset, and the site that used to own
+// it is retired.
+mkdirSync(distDir, { recursive: true })
+write_json(distPath('site-data.json'), site_data)

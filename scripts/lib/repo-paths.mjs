@@ -12,6 +12,7 @@ export const distRawisDir = join(distDir, 'rawis');
 export const distSurahCountsDir = join(distDir, 'surah-counts');
 export const distReviewDir = join(distDir, 'review');
 export const distReviewSystemsDir = join(distReviewDir, 'systems');
+export const distMushafDir = join(distDir, 'mushaf');
 
 export function sourcePath(...parts) {
   return join(sourceDataDir, ...parts);

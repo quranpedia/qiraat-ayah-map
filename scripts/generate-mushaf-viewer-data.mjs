@@ -1,11 +1,11 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
-import { repoDir } from './lib/repo-paths.mjs';
+import { distMushafDir, distPath, repoDir } from './lib/repo-paths.mjs';
 
-const siteDataPath = join(repoDir, 'site', 'src', 'lib', 'data', 'generated', 'site-data.json');
+const siteDataPath = distPath('site-data.json');
 const plainPath = join(repoDir, 'sources', 'mushaf-text', 'quran-plain.txt');
 const uthmaniPath = join(repoDir, 'sources', 'mushaf-text', 'quran-uthmani.txt');
-const targetDir = join(repoDir, 'site', 'public', 'generated', 'mushaf');
+const targetDir = distMushafDir;
 
 const UTHMANI_BASMALA = 'بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ';
 
@@ -331,4 +331,4 @@ for (const surahData of siteData.surahs) {
   });
 }
 
-console.log(`  Generated: ${join('site', 'public', 'generated', 'mushaf', 'surah-###.json')}`);
+console.log(`  Generated: ${join('dist', 'mushaf', 'surah-###.json')}`);

@@ -1,9 +1,13 @@
-const viewerCache = new Map()
-
-function padSurahNumber(surah) {
-  return String(surah).padStart(3, '0')
-}
-
+/**
+ * Rebuild a surah under one counting madhhab's numbering, from the generated
+ * muṣḥaf viewer data.
+ *
+ * This lived in the retired `site/` app. It stays in the repository because it
+ * is the only thing that proves the generated data is usable: `tests/validate.mjs`
+ * runs it over all 114 surahs in all six madhhabs and checks that the rebuilt
+ * ayah counts are the published totals. The consumer that renders it now lives
+ * elsewhere; this is the reference implementation the data is checked against.
+ */
 function formatAyahRange(start, end) {
   return start === end ? String(start) : `${start}–${end}`
 }
@@ -298,32 +302,4 @@ export function buildDifferingAyahSummary(rows, leftSystemId, rightSystemId) {
       internal: internalPoints
     }
   }
-}
-
-export function loadSurahViewer(surah) {
-  const numericSurah = Number(surah)
-
-  if (!Number.isInteger(numericSurah) || numericSurah < 1 || numericSurah > 114) {
-    return Promise.resolve(null)
-  }
-
-  if (!viewerCache.has(numericSurah)) {
-    const path = `${import.meta.env.BASE_URL}generated/mushaf/surah-${padSurahNumber(numericSurah)}.json`
-    const promise = fetch(path)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`Failed to load mushaf viewer data for surah ${numericSurah}`)
-        }
-
-        return response.json()
-      })
-      .catch(error => {
-        console.error(error)
-        return null
-      })
-
-    viewerCache.set(numericSurah, promise)
-  }
-
-  return viewerCache.get(numericSurah)
 }
