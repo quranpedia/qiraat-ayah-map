@@ -46,6 +46,7 @@ Everything about using it lives on the site. This repository is the source.
 |---|---|
 | `data/` | the boundary primitives, the evidence sidecar, the counting madhhabs, and the measured printed editions |
 | `dist/` | the mapping tables `npm run generate` produces from `data/` |
+| `docs/` | [what code gets wrong about those tables](docs/consuming-the-mappings.md), with the entries that prove it |
 | `sources/` | the works each claim is cited from |
 | `scripts/` | `data/` → `dist/`, reproducible |
 | `tests/` | the gates that must stay green, including the public-terminology guardrail |
