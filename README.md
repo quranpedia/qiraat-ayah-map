@@ -9,7 +9,11 @@
 
 </div>
 
-> بيانات مفتوحة لربط ترقيم آيات القرآن بين مذاهب العدّ الستة المعتمدة في القراءات العشر.
+Use it when building for a riwayah other than Hafs and you need to connect its ayahs to Tafsir, translations, recitations, or other resources indexed by Hafs numbering, or whenever you need to convert between ayah-counting systems.
+
+> خريطة تربط الآيات بين مذاهب عدّ الآي الستة، وتوثّق اختلافات الترقيم ومواضع فصل الآيات وضمّها.
+>
+> استخدمها عندما تعمل على تطبيق برواية غير حفص وتحتاج ربط الآيات بمصادر مبنية على ترقيم حفص، مثل التفاسير والترجمات والتلاوات، أو عندما تحتاج التحويل بين أنظمة عدّ الآي المختلفة.
 
 | | |
 |---|---|
