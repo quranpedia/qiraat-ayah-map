@@ -21,7 +21,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/quranpedia/qiraat-ayah-map.git"
+    "url": "https://github.com/quran-ws/qiraat-ayah-map.git"
   },
   "devDependencies": {
     "@wuchale/svelte": "^0.19.3",
