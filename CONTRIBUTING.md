@@ -129,7 +129,7 @@ Rules:
 - `counted_by` names the counting madhhabs that count that point as a ra's ayah
 - ordinary undisputed Kufan ends are implicit and omitted
 
-See the schema doc at `https://quran.ws/blocks/qiraat-ayah-map/docs/schema-book-boundary-primitives-v1/` for the full schema contract.
+See the schema doc at `https://quran.ws/docs/reference/qiraat-ayah-map/source-files/` for the full schema contract.
 
 ## Word-level compatibility format
 
@@ -211,7 +211,5 @@ When sources conflict or remain unclear, use `disputed` or `unresolved` instead 
 
 See also:
 
-- `https://quran.ws/blocks/qiraat-ayah-map/docs/editorial-policy/`
-- `https://quran.ws/blocks/qiraat-ayah-map/docs/methodology/`
-- `https://quran.ws/blocks/qiraat-ayah-map/docs/source-catalog/`
-- `https://quran.ws/blocks/qiraat-ayah-map/docs/reviewer-guide-ar/`
+- `https://quran.ws/docs/reference/qiraat-ayah-map/method/` — the editorial method, the evidence tiers, and what each documentation state means
+- `https://quran.ws/docs/reference/qiraat-ayah-map/source-files/` — the file contracts, and where the transcribed witnesses live
