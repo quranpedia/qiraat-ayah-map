@@ -2,34 +2,88 @@
 
 Thank you for contributing.
 
+## Two counting fields, and which one to join on
+
+A counting madhhab is **attributed** to a qāriʾ. A numbering is **printed** by an
+edition. These are two different questions, and this repository answers them in
+two different files with two different field names:
+
+| question | field | where it lives |
+|---|---|---|
+| which madhhab of ʿadd al-āy is this qāriʾ associated with? | `counting_system_associated_with_qari` | `data/qiraat.json`, one per qāriʾ |
+| which numbering does this printed muṣḥaf actually carry? | `counting_system_printed` | `data/printed-editions.json`, one per measured printing |
+
+Both appear on every generated rāwī file under `dist/rawis/` as
+`_counting_system_associated_with_qari` and `_counting_system_printed`, beside
+`_mapping_file_associated_with_qari` and `_mapping_file_printed`.
+
+**The worked example, which is why the two fields exist.** Abū ʿAmr al-Baṣrī is
+attributed the Baṣrī count, and `qiraat.json` says so. Both King Fahd Complex
+muṣḥafs of his rāwīs measure onto the First Madinan count instead — al-Dūrī at
+distance 0, al-Sūsī at distance 1, against 97 and 98 from Baṣrī. Neither figure
+is an error. The attribution is a fact about the qāriʾ; the measurement is a
+fact about a printing. Before the split there was one field, so anything joining
+this repository to one that published the other answer got a contradiction with
+nothing in either file saying the two were answering different questions.
+
+Rules:
+
+- **Never derive one from the other.** An attribution is a scholarly claim and
+  is changed only with a source. A printed value is a measurement and is changed
+  only by re-measuring.
+- **Absence means unmeasured.** A rāwī with no entry in `printed-editions.json`
+  has `_counting_system_printed: null`. That is not a statement that its printing
+  follows the attributed count; it is a statement that nobody has measured one.
+- **A printed value is tied to the package it was measured from.** Every entry
+  names its `source_package` and `release_year`, because printings of the same
+  muṣḥaf disagree with each other — three King Fahd al-Dūrī printings carry two
+  different āyah divisions and three different colophons. A new release is a new
+  measurement, not an update to an old one.
+- **`_counting_system` and `_mapping_file` are deprecated aliases** of the
+  attributed pair. Their values and meaning are unchanged, so nothing that reads
+  them breaks; they are kept only so consumers can move at their own pace. New
+  code should read the explicit names. `dist/rawis/*.json` lists them under
+  `_deprecated`.
+
+The matching fields in [`quran-ws/quran-text`](https://github.com/quran-ws/quran-text)
+are deliberately the same words: `counting.system_associated_with_qari` and
+`counting.system_printed` on each edition, with `differs_from_association`.
+
 ## Understand the source and generated layers first
 
-This repository now has six related but distinct layers:
+This repository now has seven related but distinct layers:
 
 1. **Book-aligned boundary primitives** — `data/book-boundary-primitives.json`
    - canonical authored scholarly claim layer
    - groups disputed boundary points by location and word
    - lists the counting madhhabs that count that point as a ra's ayah
 
-2. **Boundary evidence sidecar** — `data/book-boundary-evidence.json`
+2. **Printed-edition measurements** — `data/printed-editions.json`
+   - canonical authored measurement layer
+   - one entry per printed muṣḥaf that has actually been measured
+   - records `counting_system_printed`, the distance to it, the distance to the
+     count attributed to the qāriʾ, and the package and year measured from
+   - never populated by inference from `qiraat.json`
+
+3. **Boundary evidence sidecar** — `data/book-boundary-evidence.json`
    - canonical authored evidence and review layer
    - tracks verification status, citations, and reviewer state for each primitive point
 
-3. **Word-level compatibility view** — `dist/differences.json`
+4. **Word-level compatibility view** — `dist/differences.json`
    - generated from the canonical primitive layer
    - preserves the legacy word-level compatibility shape
 
-4. **Operational forward mappings** — `dist/mappings/by-counting-system/kufi-to-*.json`
+5. **Operational forward mappings** — `dist/mappings/by-counting-system/kufi-to-*.json`
    - generated runtime artifacts
    - all reverse mappings, rawi aliases, surah counts, and generated audits are derived from these
 
-5. **Generated review and audit layers**
+6. **Generated review and audit layers**
    - `dist/review/`
    - `dist/boundary-events.json`
    - `dist/differences-reconciliation.json`
    - do not edit these by hand; regenerate them
 
-6. **Curated classical-count attestations** — `dist/classical-count-attestations.json`
+7. **Curated classical-count attestations** — `dist/classical-count-attestations.json`
    - records explicit primary-riwaya total decisions for disputed aggregate counts
    - do not edit generated fields by hand; regenerate them
 
@@ -73,7 +127,27 @@ Use this path when the shipped mapping itself is wrong or incomplete, regardless
    - what was wrong in the generated mapping behavior
    - whether the correction also needs a follow-up scholarly update in `data/book-boundary-primitives.json`
 
-### 3) Evidence and reviewer-state update
+### 3) A printed-edition measurement
+
+Use this path when a printed muṣḥaf has been measured, or re-measured against a
+newer release.
+
+1. Measure the edition's own āyah ends against every madhhab's boundaries in
+   this repository. Do not assume, and do not copy the qāriʾ's attribution.
+2. Add or update the entry in `data/printed-editions.json`, naming the exact
+   `source_package` and `release_year` the measurement was taken from
+3. Regenerate and test:
+   ```bash
+   npm run generate
+   npm test
+   ```
+4. In your pull request, include the distances to all six madhhabs, not only the
+   winning one, and say plainly whether it differs from the attribution
+
+A newer release of a muṣḥaf is a **new measurement**, never an edit to an old
+one with the package name changed.
+
+### 4) Evidence and reviewer-state update
 
 Use this path when the primitive claim stays the same but the scholarly support gets stronger or clearer.
 

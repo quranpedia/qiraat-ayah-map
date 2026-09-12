@@ -44,11 +44,21 @@ Everything about using it lives on the site. This repository is the source.
 
 | | |
 |---|---|
-| `data/` | the boundary primitives, the evidence sidecar, and the counting madhhabs |
+| `data/` | the boundary primitives, the evidence sidecar, the counting madhhabs, and the measured printed editions |
 | `dist/` | the mapping tables `npm run generate` produces from `data/` |
 | `sources/` | the works each claim is cited from |
 | `scripts/` | `data/` → `dist/`, reproducible |
 | `tests/` | the gates that must stay green, including the public-terminology guardrail |
 | `LICENSES/` | per-file licence texts |
+
+## The count attributed to a qāriʾ is not the count a muṣḥaf prints
+
+`data/qiraat.json` carries `counting_system_associated_with_qari` — the madhhab
+of ʿadd al-āy a qāriʾ is associated with. `data/printed-editions.json` carries
+`counting_system_printed` — what a printed muṣḥaf we have actually measured
+carries. Abū ʿAmr is attributed the Baṣrī count; both King Fahd Complex muṣḥafs
+of his rāwīs measure onto the First Madinan count. Both facts are true, and a
+join that reads one as the other gets a contradiction, so the two never share a
+field. See [CONTRIBUTING.md](CONTRIBUTING.md#two-counting-fields-and-which-one-to-join-on).
 
 Issues and pull requests are welcome here. Everything that is not about *changing* this repository is on the site.
