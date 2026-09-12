@@ -232,6 +232,7 @@ function section(label) {
 const pkg = JSON.parse(readFileSync(join(repoDir, 'package.json'), 'utf-8'));
 const countingSystems = loadSource('counting-systems.json');
 const qiraat = loadSource('qiraat.json');
+const printedEditions = loadSource('printed-editions.json');
 const differences = loadDist('differences.json');
 const boundaryEvents = loadDist('boundary-events.json');
 const bookBoundaryPrimitives = loadSource('book-boundary-primitives.json');
@@ -259,9 +260,10 @@ const allRawis = Object.entries(qiraat)
   .flatMap(([qiraaSlug, qiraa]) => Object.keys(qiraa.rawis).map(rawiSlug => ({
     rawiSlug,
     qiraaSlug,
-    countingSystem: qiraa.counting_system
+    countingSystem: qiraa.counting_system_associated_with_qari
   })));
 const nonKufiRawis = allRawis.filter(item => item.countingSystem !== 'kufi');
+const printedEditionByRawi = new Map(printedEditions.editions.map(edition => [edition.rawi, edition]));
 const knownMushafIds = new Map([
   ['hafs', 1],
   ['warsh', 4],
@@ -384,12 +386,47 @@ assert(existsSync(distReviewSystemsDir), 'dist/review/systems exists');
 assert(existsSync(distMushafDir), 'dist/mushaf exists');
 
 const sourceFilesOnDisk = readdirSync(sourceDataDir).filter(filename => filename.endsWith('.json')).sort();
-assert(JSON.stringify(sourceFilesOnDisk) === JSON.stringify(['book-boundary-evidence.json', 'book-boundary-primitives.json', 'classical-count-attestations.json', 'counting-systems.json', 'qiraat.json']), 'data/ contains only the 5 canonical source JSON files');
+assert(JSON.stringify(sourceFilesOnDisk) === JSON.stringify(['book-boundary-evidence.json', 'book-boundary-primitives.json', 'classical-count-attestations.json', 'counting-systems.json', 'printed-editions.json', 'qiraat.json']), 'data/ contains only the 6 canonical source JSON files');
 
 section('Cross-Reference Integrity');
 
 for (const [slug, qiraa] of Object.entries(qiraat)) {
-  assert(systemIds.includes(qiraa.counting_system), `"${slug}".counting_system exists`);
+  assert(systemIds.includes(qiraa.counting_system_associated_with_qari), `"${slug}".counting_system_associated_with_qari exists`);
+  assert(!('counting_system' in qiraa), `"${slug}" no longer carries the ambiguous counting_system`);
+}
+
+// The count attributed to a qāriʾ and the count a printing carries are two
+// different questions. printed-editions.json answers only the second, and only
+// where a printing has been measured.
+const rawiSlugs = new Set(allRawis.map(item => item.rawiSlug));
+const seenEditionIds = new Set();
+for (const edition of printedEditions.editions) {
+  assert(!seenEditionIds.has(edition.id), `printed-editions.json: "${edition.id}" is a unique edition id`);
+  seenEditionIds.add(edition.id);
+  assert(rawiSlugs.has(edition.rawi), `printed-editions.json: "${edition.id}" names a known rawi "${edition.rawi}"`);
+  assert(edition.qiraa in qiraat, `printed-editions.json: "${edition.id}" names a known qiraa "${edition.qiraa}"`);
+  const qiraaOfRawi = allRawis.find(item => item.rawiSlug === edition.rawi);
+  assert(qiraaOfRawi.qiraaSlug === edition.qiraa, `printed-editions.json: "${edition.id}" puts its rawi under the right qiraa`);
+  assert(systemIds.includes(edition.counting_system_printed), `printed-editions.json: "${edition.id}".counting_system_printed exists`);
+  assert(Number.isInteger(edition.distance_to_printed_system) && edition.distance_to_printed_system >= 0, `printed-editions.json: "${edition.id}" records a measured distance to the printed system`);
+  assert(Number.isInteger(edition.distance_to_system_associated_with_qari) && edition.distance_to_system_associated_with_qari >= 0, `printed-editions.json: "${edition.id}" records a measured distance to the attributed system`);
+  assert(Number.isInteger(edition.ayah_count), `printed-editions.json: "${edition.id}" records an ayah count`);
+  assert(typeof edition.source_package === 'string' && edition.source_package.length > 0, `printed-editions.json: "${edition.id}" names the package it was measured from`);
+  assert(Number.isInteger(edition.release_year), `printed-editions.json: "${edition.id}" names the release year it was measured from`);
+  const expectedDiffers = edition.counting_system_printed !== qiraat[edition.qiraa].counting_system_associated_with_qari;
+  assert(edition.differs_from_association === expectedDiffers, `printed-editions.json: "${edition.id}".differs_from_association agrees with the two systems it names`);
+  assert(edition.distance_to_printed_system <= edition.distance_to_system_associated_with_qari, `printed-editions.json: "${edition.id}" is nearer the system it prints than the system attributed to its qāriʾ`);
+}
+
+// The worked example. Abū ʿAmr is attributed Baṣrī; both of his measured
+// printings carry First Madani. If this ever stops being true in the data, the
+// two fields have collapsed back into one.
+assert(qiraat['abu-amr'].counting_system_associated_with_qari === 'basri', 'abu-amr is still attributed the Basran count');
+for (const rawiSlug of ['duri', 'susi']) {
+  const edition = printedEditionByRawi.get(rawiSlug);
+  assert(edition !== undefined, `printed-editions.json measures the ${rawiSlug} printing`);
+  assert(edition.counting_system_printed === 'madani-first', `${rawiSlug}: the measured printing carries the First Madinan count`);
+  assert(edition.differs_from_association === true, `${rawiSlug}: the measured printing differs from the count attributed to Abu Amr`);
 }
 
 for (const [systemId, system] of Object.entries(countingSystems)) {
@@ -1190,7 +1227,27 @@ for (const { rawiSlug, qiraaSlug, countingSystem } of allRawis) {
   const rawi = loadDist(`rawis/${filename}`);
   assert(rawi._rawi === rawiSlug, `${filename}: _rawi matches slug`);
   assert(rawi._qiraa === qiraaSlug, `${filename}: _qiraa matches qiraat.json`);
-  assert(rawi._counting_system === countingSystem, `${filename}: _counting_system matches qiraat.json`);
+  assert(rawi._counting_system_associated_with_qari === countingSystem, `${filename}: _counting_system_associated_with_qari matches qiraat.json`);
+  assert(rawi._counting_system === countingSystem, `${filename}: deprecated _counting_system still carries the attributed count`);
+  assert(typeof rawi._deprecated === 'object' && rawi._deprecated !== null, `${filename}: names its deprecated keys`);
+
+  const printedEdition = printedEditionByRawi.get(rawiSlug) ?? null;
+  if (printedEdition === null) {
+    assert(rawi._counting_system_printed === null, `${filename}: unmeasured printing leaves _counting_system_printed null`);
+    assert(rawi._printed_edition === null, `${filename}: unmeasured printing leaves _printed_edition null`);
+    assert(rawi._differs_from_association === null, `${filename}: unmeasured printing cannot say whether it differs`);
+    assert(rawi._mapping_file_printed === null, `${filename}: unmeasured printing has no printed mapping file`);
+    assert(typeof rawi._printed_note === 'string', `${filename}: says why the printed count is absent`);
+  } else {
+    assert(rawi._counting_system_printed === printedEdition.counting_system_printed, `${filename}: _counting_system_printed matches printed-editions.json`);
+    assert(rawi._printed_edition === printedEdition.id, `${filename}: _printed_edition names the measured edition`);
+    assert(rawi._differs_from_association === printedEdition.differs_from_association, `${filename}: _differs_from_association matches printed-editions.json`);
+    const expectedPrinted = printedEdition.counting_system_printed === 'kufi'
+      ? null
+      : `mappings/by-counting-system/kufi-to-${printedEdition.counting_system_printed}.json`;
+    assert(rawi._mapping_file_printed === expectedPrinted, `${filename}: _mapping_file_printed points at the printed system's mapping`);
+    assert(rawi._printed_note === undefined, `${filename}: a measured printing carries no absence note`);
+  }
 
   if (knownMushafIds.has(rawiSlug)) {
     assert(rawi._mushaf_id === knownMushafIds.get(rawiSlug), `${filename}: known _mushaf_id is correct`);
@@ -1200,9 +1257,11 @@ for (const { rawiSlug, qiraaSlug, countingSystem } of allRawis) {
 
   if (countingSystem === 'kufi') {
     assert(rawi._mapping_file === null, `${filename}: kufi rawi has no external mapping file`);
+    assert(rawi._mapping_file_associated_with_qari === null, `${filename}: kufi rawi has no attributed mapping file`);
   } else {
     const expectedPath = `mappings/by-counting-system/kufi-to-${countingSystem}.json`;
     assert(rawi._mapping_file === expectedPath, `${filename}: _mapping_file points at counting-system mapping`);
+    assert(rawi._mapping_file_associated_with_qari === expectedPath, `${filename}: _mapping_file_associated_with_qari points at the attributed system's mapping`);
     assert(existsSync(distPath(rawi._mapping_file)), `${filename}: _mapping_file exists`);
   }
 }
