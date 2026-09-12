@@ -280,9 +280,14 @@ const differenceBlocks = new Map(differences.differences.map(block => [block.cou
 
 section('Public terminology guardrails');
 
+// Every file a consumer reads without leaving the repository. docs/ is on this
+// list from the day it exists: the guardrail's whole point is public-facing
+// wording, and a consumer-facing page that escaped it would be the one place
+// the banned terms could come back unnoticed.
 const publicTerminologyFiles = [
   'README.md',
   'CONTRIBUTING.md',
+  'docs/consuming-the-mappings.md',
   'data/book-boundary-primitives.json'
 ];
 
