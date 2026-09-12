@@ -384,7 +384,7 @@ assert(existsSync(distReviewSystemsDir), 'dist/review/systems exists');
 assert(existsSync(distMushafDir), 'dist/mushaf exists');
 
 const sourceFilesOnDisk = readdirSync(sourceDataDir).filter(filename => filename.endsWith('.json')).sort();
-assert(JSON.stringify(sourceFilesOnDisk) === JSON.stringify(['book-boundary-evidence.json', 'book-boundary-primitives.json', 'counting-systems.json', 'qiraat.json']), 'data/ contains only the 4 canonical source JSON files');
+assert(JSON.stringify(sourceFilesOnDisk) === JSON.stringify(['book-boundary-evidence.json', 'book-boundary-primitives.json', 'classical-count-attestations.json', 'counting-systems.json', 'qiraat.json']), 'data/ contains only the 5 canonical source JSON files');
 
 section('Cross-Reference Integrity');
 
@@ -911,6 +911,79 @@ section('Classical count attestation file');
   assert(boundaries.get('91:14:فعقروها')?.current_mapping_decision === 'excluded', 'classical-count-attestations.json: makki 91:14 currently excluded');
 }
 
+{
+  const allowedStatuses = new Set(Object.keys(classicalCountAttestations._status_descriptions ?? {}));
+  const allowedRoles = new Set(Object.keys(classicalCountAttestations._role_descriptions ?? {}));
+  const allowedVerificationStatuses = new Set(Object.keys(bookBoundaryEvidence._verification_status_descriptions));
+
+  assert(allowedStatuses.size > 0, 'classical-count-attestations.json: declares status descriptions');
+  assert(allowedRoles.size > 0, 'classical-count-attestations.json: declares role descriptions');
+
+  for (const id of systemIds) {
+    const record = classicalCountAttestations.systems[id];
+
+    assert(Boolean(record), `classical-count-attestations.json: "${id}" has an attestation record`);
+    assert(allowedStatuses.has(record.status), `classical-count-attestations.json: "${id}" status is declared`);
+    assert(
+      allowedVerificationStatuses.has(record.verification_status),
+      `classical-count-attestations.json: "${id}" verification_status uses the shared vocabulary`
+    );
+    assert(
+      record.registry_total_ayahs === countingSystems[id].total_ayahs,
+      `classical-count-attestations.json: "${id}" registry total matches counting-systems.json`
+    );
+    assert(
+      record.mapping_total_ayahs === record.registry_total_ayahs,
+      `classical-count-attestations.json: "${id}" generated mapping reproduces the declared registry total`
+    );
+    assert(
+      record.delta_from_primary === record.mapping_total_ayahs - record.primary_classical_total_ayahs,
+      `classical-count-attestations.json: "${id}" delta is consistent with its totals`
+    );
+    assert(
+      typeof record.policy_en === 'string' && typeof record.policy_ar === 'string',
+      `classical-count-attestations.json: "${id}" states its policy in both languages`
+    );
+
+    const attested = record.attested_totals ?? [];
+    assert(attested.length > 0, `classical-count-attestations.json: "${id}" records at least one attested total`);
+    assert(
+      attested.filter(item => item.role === 'primary').length === 1,
+      `classical-count-attestations.json: "${id}" has exactly one primary attested total`
+    );
+    assert(
+      attested.some(item => item.role === 'primary' && item.total_ayahs === record.primary_classical_total_ayahs),
+      `classical-count-attestations.json: "${id}" primary total appears in attested_totals`
+    );
+
+    for (const item of attested) {
+      assert(allowedRoles.has(item.role), `classical-count-attestations.json: "${id}" attested total role "${item.role}" is declared`);
+      assert(Number.isInteger(item.total_ayahs), `classical-count-attestations.json: "${id}" attested total is an integer`);
+    }
+
+    // A system whose mapping does not reproduce its adopted primary total must
+    // say so out loud. This is the check that keeps an unexplained number from
+    // shipping as if it were settled.
+    if (record.status !== 'resolved_to_primary_riwaya') {
+      assert(
+        typeof record.open_question_en === 'string' && typeof record.open_question_ar === 'string',
+        `classical-count-attestations.json: "${id}" documents why its mapping total differs from the primary total`
+      );
+    }
+
+    if (record.verification_status === 'disputed') {
+      assert(
+        typeof record.open_question_en === 'string' && typeof record.open_question_ar === 'string',
+        `classical-count-attestations.json: "${id}" documents the open dispute`
+      );
+      assert(
+        attested.some(item => item.role === 'conflicting'),
+        `classical-count-attestations.json: "${id}" records the conflicting total behind its disputed status`
+      );
+    }
+  }
+}
+
 section('الم surahs — الم merged in all non-Kufan systems');
 
 for (const systemId of nonKufiIds) {
@@ -1232,7 +1305,7 @@ assert(!existsSync(sourcePath('hafs-surah-ayah-counts.json')), 'Deprecated hafs-
 assert(!existsSync(sourcePath('differences.json')), 'Source data omits generated differences.json');
 assert(!existsSync(sourcePath('boundary-events.json')), 'Source data omits generated boundary-events.json');
 assert(!existsSync(sourcePath('differences-reconciliation.json')), 'Source data omits generated differences-reconciliation.json');
-assert(!existsSync(sourcePath('classical-count-attestations.json')), 'Source data omits generated classical-count-attestations.json');
+assert(existsSync(sourcePath('classical-count-attestations.json')), 'Source data authors classical-count-attestations.json');
 assert(!existsSync(sourcePath('rawis')), 'Source data omits generated rawis directory');
 assert(!existsSync(sourcePath('mappings')), 'Source data omits generated mappings directory');
 assert(!existsSync(sourcePath('surah-counts')), 'Source data omits generated surah-counts directory');
