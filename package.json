@@ -1,10 +1,21 @@
 {
-  "name": "qiraat-ayah-map",
+  "name": "@quran.ws/qiraat-ayah-map",
   "version": "0.1.0",
-  "private": true,
   "description": "Open dataset linking Quran ayah numbers across the six counting madhhabs used by the ten Qiraat.",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "data/",
+    "dist/",
+    "!dist/review/",
+    "LICENSES/",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "generate": "node scripts/clean-dist.mjs && node scripts/sync-rawi-metadata.mjs && node scripts/normalize-book-boundary-primitives.mjs && node scripts/normalize-book-boundary-evidence.mjs && node scripts/generate-differences-from-book-boundary-primitives.mjs && node scripts/generate-mappings.mjs && node scripts/normalize-forward-mappings.mjs && node scripts/generate-reverse-mappings.mjs && node scripts/generate-boundary-events.mjs && node scripts/generate-differences-reconciliation.mjs && node scripts/generate-classical-count-attestations.mjs && node scripts/generate-review-artifacts.mjs && node scripts/generate-source-cross-references.mjs && node scripts/generate-site-data.mjs && node scripts/generate-mushaf-viewer-data.mjs",
+    "prepack": "npm run generate",
     "test": "node tests/validate.mjs",
     "test:api": "node tests/validate-against-api.mjs",
     "evidence:import:supplied-books": "node scripts/source-bundles/import-evidence-from-supplied-bundles.mjs"
