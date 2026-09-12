@@ -1,5 +1,10 @@
 node_modules/
-dist/
+# dist/ is generated, and mostly not committed. Two artefacts are the exception:
+# quran.ws reads dist/site-data.json and dist/mushaf/ directly at a pinned commit,
+# so they are tracked and a newly generated one must not be silently ignored.
+dist/*
+!dist/site-data.json
+!dist/mushaf/
 coverage/
 *.tsbuildinfo
 .DS_Store
