@@ -20,7 +20,7 @@ Use it when building for a riwayah other than Hafs and you need to connect its a
 | **Package** | `@quran.ws/qiraat-ayah-map` · `0.1.0` |
 | **Counting systems** | 6 madhhabs |
 | **Qiraat covered** | The ten |
-| **Licence** | MIT |
+| **Licence** | CC BY 4.0 (the data) · MIT (the tooling) |
 
 ```sh
 # not published yet — read data/*.json, or `npm run generate` to build dist/
