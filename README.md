@@ -14,9 +14,9 @@ The verse numbered 7:206 in the muṣḥaf most of the world prints is numbered 
 
 ## What it provides
 
-**The six counting systems, with their totals and who follows them.** `data/counting-systems.json`.
+**The six counting madhhabs, with their totals and who follows them.** `data/counting-systems.json`.
 
-**Every disputed boundary in the Qurʾān, anchored by the word it turns on** — 246 points across 75 surahs, in `data/book-boundary-primitives.json`. The other 39 surahs are counted identically by all six systems. Each point records the Arabic word and which systems end a verse there, so a claim can be checked against a printed muṣḥaf rather than taken on trust:
+**Every disputed boundary in the Qurʾān, anchored by the word it turns on** — 246 points across 75 surahs, in `data/book-boundary-primitives.json`. The other 39 surahs are counted identically by all six madhhabs. Each point records the Arabic word and which madhhabs end a verse there, so a claim can be checked against a printed muṣḥaf rather than taken on trust:
 
 ```json
 { "word": "عليهم", "counted_by": ["madani-first", "madani-last", "basri", "dimashqi"] }
@@ -43,7 +43,7 @@ Kufan is the hub. Every mapping goes to or from it, so there are ten mapping fil
 
 | You want | Use |
 |---|---|
-| The Arabic text of a verse — this repository contains no Qurʾānic text beyond the anchor words | [Quran Text](https://quran.ws/blocks/quran-text/) |
+| The Arabic text of a verse — this repository contains no Qurʾānic text beyond the words a boundary turns on | [Quran Text](https://quran.ws/blocks/quran-text/) |
 | A page number, or where a verse sits on a printed page | [Quran SVG](https://quran.ws/blocks/quran-svg/) |
 | Word-level addressing inside a page | [Quran SVG Elements](https://quran.ws/blocks/quran-svg-elements/) |
 | The readings themselves — their rules, their chains, their pronunciation | Nothing here. This is verse *numbering* only. |
@@ -59,7 +59,7 @@ here, so there is one reference rather than two that drift apart.
 
 ## Supported systems and readings
 
-All ten canonical readings and their twenty transmitters are covered, mapped onto six counting systems.
+All ten canonical readings and their twenty transmitters are covered, mapped onto six counting madhhabs.
 
 | Counting system | Total verses | Readings that follow it |
 |---|---:|---|
